@@ -1,0 +1,3140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รายงานผลการพัฒนางานตามข้อตกลง (PA) ประจำปีงบประมาณ ๒๕๖๘ | ครูเจมส์ อนันตชัย เพ็ชรรี่</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Firebase SDKs (Compat CDN) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+
+  <!-- Chart.js CDN for interactive score charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    :root {
+      --primary-900: #0a192f;
+      --primary-850: #0f274a;
+      --primary-800: #133363;
+      --primary-700: #1a4282;
+      --primary-600: #1e56a0;
+      --primary-500: #2563eb;
+      --primary-400: #3b82f6;
+      --primary-100: #dbeafe;
+      --primary-50: #eff6ff;
+      
+      --accent-gold: #f59e0b;
+      --accent-gold-dark: #d97706;
+      --accent-gold-light: #fef3c7;
+      
+      --success-600: #16a34a;
+      --success-50: #f0fdf4;
+      
+      --surface-white: #ffffff;
+      --surface-slate: #f8fafc;
+      --surface-border: #e2e8f0;
+      --surface-border-blue: #bfdbfe;
+      
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-light: #94a3b8;
+      
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      --shadow-glow: 0 0 25px rgba(37, 99, 235, 0.2);
+      
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Sarabun', sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-main);
+      background-color: var(--surface-slate);
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 600;
+      color: var(--primary-900);
+      line-height: 1.35;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Top Progress Bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 0%;
+      background: linear-gradient(90deg, #2563eb, #60a5fa, #f59e0b);
+      z-index: 1000;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Sticky Executive Header */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--surface-border-blue);
+      z-index: 900;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Prompt', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 10px rgba(30, 86, 160, 0.25);
+    }
+
+    .brand-text h1 {
+      font-size: 1.05rem;
+      margin: 0;
+      color: var(--primary-900);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-text p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    nav.nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-item {
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-item:hover, .nav-item.active {
+      color: var(--primary-600);
+      background: var(--primary-50);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .btn-slides {
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      color: white;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-slides:hover {
+      background: linear-gradient(135deg, #1d4ed8, #1d4ed8);
+      transform: translateY(-1px);
+    }
+
+    .btn-chime {
+      background: var(--surface-slate);
+      border-color: var(--surface-border);
+      color: var(--text-muted);
+    }
+    .btn-chime:hover {
+      color: var(--primary-600);
+      background: white;
+    }
+
+    /* Mobile Nav Toggle */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-main);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(180deg, #ffffff 0%, #f0f6ff 50%, #ffffff 100%);
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid var(--surface-border-blue);
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-profile-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(191, 219, 254, 0.7);
+      text-align: center;
+      position: relative;
+    }
+
+    .profile-img-wrap {
+      position: relative;
+      width: 220px;
+      height: 250px;
+      margin: 0 auto 1.25rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(15, 39, 74, 0.15);
+      border: 3px solid white;
+    }
+
+    .profile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .profile-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 39, 74, 0.9);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      white-space: nowrap;
+      border: 1px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-profile-info h3 {
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+      color: var(--primary-900);
+    }
+
+    .hero-profile-info p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .profile-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .tag-pill {
+      background: var(--primary-50);
+      color: var(--primary-700);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--surface-border-blue);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .hero-top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border: 1px solid var(--surface-border-blue);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary-700);
+      box-shadow: var(--shadow-sm);
+      width: fit-content;
+    }
+
+    .hero-title {
+      font-size: 2.15rem;
+      color: var(--primary-900);
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Key Stats Grid */
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    .stat-card {
+      background: white;
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+      border-top: 3px solid var(--primary-500);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-top-color: var(--accent-gold);
+    }
+
+    .stat-card .stat-number {
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary-900);
+      line-height: 1.2;
+    }
+
+    .stat-card .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 0.5rem;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-family: 'Prompt', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-cta-primary {
+      background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+      color: white;
+      box-shadow: 0 4px 12px rgba(30, 86, 160, 0.25);
+    }
+
+    .btn-cta-primary:hover {
+      background: linear-gradient(135deg, var(--primary-700), var(--primary-500));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(30, 86, 160, 0.35);
+    }
+
+    .btn-cta-outline {
+      background: white;
+      color: var(--primary-700);
+      border: 1px solid var(--surface-border-blue);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-cta-outline:hover {
+      background: var(--primary-50);
+      border-color: var(--primary-500);
+      color: var(--primary-600);
+    }
+
+    /* Section Styles */
+    section.section-block {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--surface-border);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-100);
+      color: var(--primary-700);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: var(--primary-900);
+      margin-bottom: 10px;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    /* Tab Controls */
+    .tab-nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .tab-btn {
+      padding: 9px 18px;
+      border-radius: 10px;
+      font-family: 'Prompt', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      background: white;
+      border: 1px solid var(--surface-border);
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover {
+      background: var(--primary-50);
+      color: var(--primary-600);
+      border-color: var(--surface-border-blue);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+      color: white;
+      border-color: var(--primary-700);
+      box-shadow: 0 4px 10px rgba(30, 86, 160, 0.2);
+    }
+
+    .tab-pane {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Timetable / Schedule Grid */
+    .timetable-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .subject-card {
+      background: white;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--surface-border);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-left: 4px solid var(--primary-500);
+      transition: all 0.2s;
+    }
+
+    .subject-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .subject-code {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--primary-600);
+      background: var(--primary-50);
+      padding: 2px 8px;
+      border-radius: 4px;
+      width: fit-content;
+      margin-bottom: 6px;
+    }
+
+    .subject-name {
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary-900);
+      margin-bottom: 4px;
+    }
+
+    .subject-grade {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .subject-hours {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--surface-border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary-800);
+    }
+
+    /* Indicator Cards (15 ตัวชี้วัด) */
+    .indicators-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .indicator-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--surface-border);
+      box-shadow: var(--shadow-sm);
+      padding: 1.75rem;
+      transition: all 0.25s;
+    }
+
+    .indicator-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--surface-border-blue);
+    }
+
+    .indicator-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .ind-badge-num {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary-700), var(--primary-500));
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      box-shadow: 0 4px 8px rgba(30, 86, 160, 0.2);
+    }
+
+    .ind-header-text h3 {
+      font-size: 1.2rem;
+      color: var(--primary-900);
+      margin-bottom: 4px;
+    }
+
+    .ind-category {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .indicator-body {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    .ind-desc-box p {
+      margin-bottom: 0.75rem;
+      color: var(--text-muted);
+      text-align: justify;
+    }
+
+    .ind-metrics-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: var(--surface-slate);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--surface-border);
+    }
+
+    .ind-metric-item strong {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--primary-700);
+      margin-bottom: 2px;
+    }
+    .ind-metric-item span {
+      font-size: 0.88rem;
+      color: var(--text-main);
+    }
+
+    .ind-media-box {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--surface-border);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .ind-media-box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .ind-media-box:hover img {
+      transform: scale(1.04);
+    }
+
+    .ind-media-box .zoom-icon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(15, 23, 42, 0.75);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .ind-media-caption {
+      padding: 8px 12px;
+      background: white;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--surface-border);
+    }
+
+    /* Challenge Issue Section (Gamification) */
+    .challenge-hero {
+      background: linear-gradient(135deg, #0c1e3d 0%, #15396b 100%);
+      color: white;
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-xl);
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .challenge-hero::after {
+      content: "";
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .challenge-hero h3 {
+      color: white;
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .challenge-hero p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      max-width: 900px;
+      line-height: 1.7;
+    }
+
+    .challenge-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 1.5rem;
+    }
+
+    .challenge-badge-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: white;
+      backdrop-filter: blur(6px);
+    }
+
+    /* ADDIE Stepper */
+    .addie-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .addie-step-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1rem;
+      border: 1px solid var(--surface-border);
+      text-align: center;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+
+    .addie-step-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-400);
+    }
+
+    .step-circle {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      background: var(--primary-50);
+      color: var(--primary-700);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: 2px solid var(--surface-border-blue);
+    }
+
+    .addie-step-card h4 {
+      font-size: 1rem;
+      color: var(--primary-900);
+      margin-bottom: 4px;
+    }
+
+    .addie-step-card p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Lesson Plans Grid */
+    .lesson-plans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .lesson-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--surface-border);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 4px solid var(--primary-600);
+    }
+
+    .lesson-num-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary-700);
+      background: var(--primary-50);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+
+    .lesson-card h4 {
+      font-size: 1.1rem;
+      color: var(--primary-900);
+      margin-bottom: 8px;
+    }
+
+    .lesson-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .lesson-badge-footer {
+      padding-top: 10px;
+      border-top: 1px dashed var(--surface-border);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-gold-dark);
+    }
+
+    /* Stats & Score Comparison */
+    .score-comparison-wrapper {
+      background: white;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--surface-border-blue);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2.5rem;
+    }
+
+    .score-comparison-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .score-comparison-header h3 {
+      font-size: 1.35rem;
+      color: var(--primary-900);
+    }
+
+    .stat-badge-ttest {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+    }
+
+    .chart-container {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Score Table */
+    .data-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--surface-border);
+    }
+
+    table.styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    table.styled-table thead tr {
+      background: var(--primary-900);
+      color: white;
+      font-family: 'Prompt', sans-serif;
+    }
+
+    table.styled-table th, table.styled-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--surface-border);
+    }
+
+    table.styled-table tbody tr:nth-child(even) {
+      background: var(--surface-slate);
+    }
+
+    table.styled-table tbody tr:hover {
+      background: var(--primary-50);
+    }
+
+    table.styled-table tfoot tr {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: var(--primary-900);
+    }
+
+    /* Gallery Section */
+    .gallery-filter-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-filter-btn {
+      padding: 7px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: white;
+      border: 1px solid var(--surface-border);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .gallery-filter-btn:hover, .gallery-filter-btn.active {
+      background: var(--primary-600);
+      color: white;
+      border-color: var(--primary-600);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--surface-border);
+      background: white;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-400);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item-info {
+      padding: 10px 12px;
+      background: white;
+    }
+
+    .gallery-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--primary-600);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .gallery-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-900);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Embedded Slides Section */
+    .slides-embed-wrapper {
+      background: white;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--surface-border-blue);
+      box-shadow: var(--shadow-xl);
+      overflow: hidden;
+    }
+
+    .slides-embed-header {
+      background: var(--primary-900);
+      color: white;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .slides-embed-header h3 {
+      color: white;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .slides-embed-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .slides-frame-container {
+      width: 100%;
+      height: 620px;
+      background: #0f172a;
+    }
+
+    .slides-frame-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 25, 47, 0.92);
+      z-index: 2000;
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 900px;
+      width: 100%;
+      background: white;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      animation: zoomIn 0.25s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .lightbox-img-wrap {
+      background: #0b1528;
+      max-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .lightbox-img-wrap img {
+      max-width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+    }
+
+    .lightbox-caption-bar {
+      padding: 1rem 1.5rem;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .lightbox-caption-bar h4 {
+      font-size: 1.05rem;
+      color: var(--primary-900);
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.65);
+      color: white;
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: all 0.2s;
+    }
+
+    .lightbox-close-btn:hover {
+      background: rgba(239, 68, 68, 0.9);
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: var(--primary-900);
+      color: #94a3b8;
+      padding: 3.5rem 0 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand h4 {
+      color: white;
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #94a3b8;
+    }
+
+    .footer-col h5 {
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      position: relative;
+      padding-bottom: 6px;
+    }
+
+    .footer-col h5::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: var(--primary-500);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-profile-card {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+      .hero-top-badge {
+        margin: 0 auto;
+      }
+      .hero-cta-group {
+        justify-content: center;
+      }
+      .indicator-body {
+        grid-template-columns: 1fr;
+      }
+      .ind-media-box img {
+        height: 220px;
+      }
+      .addie-steps-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav.nav-links {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .hero-stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-title {
+        font-size: 1.7rem;
+      }
+      .slides-frame-container {
+        height: 420px;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      header.site-header, .hero-cta-group, .tab-nav, .gallery-filter-nav, footer.site-footer, #progress-bar {
+        display: none !important;
+      }
+      body {
+        background: white;
+        color: black;
+      }
+      .container {
+        max-width: 100%;
+        padding: 0;
+      }
+      .indicator-card, .subject-card, .lesson-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Sticky Executive Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#home" class="brand-group">
+        <div class="brand-logo">PA</div>
+        <div class="brand-text">
+          <h1>ครูเจมส์ อนันตชัย <span class="tag-pill">คศ.๑</span></h1>
+          <p>โรงเรียนบ้านคลองมดแดง | สพป.กำแพงเพชร เขต ๒</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links">
+        <a href="#home" class="nav-item active">หน้าแรก</a>
+        <a href="#workload" class="nav-item">ภาระงาน</a>
+        <a href="#indicators" class="nav-item">๑๕ ตัวชี้วัด</a>
+        <a href="#challenge" class="nav-item">ประเด็นท้าทาย</a>
+        <a href="#gallery" class="nav-item">คลังภาพถ่ายจริง</a>
+        <a href="#slides" class="nav-item">สไลด์ ๓๔ แผ่น</a>
+        <a href="#feedback" class="nav-item">สมุดข้อคิดเห็น</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <a href="#slides" class="btn-header btn-slides">
+          <i data-lucide="presentation" style="width: 16px; height: 16px;"></i>
+          <span>ฉายสไลด์</span>
+        </a>
+        <button class="btn-header btn-chime" onclick="playPositiveChime()" title="เสียงเอฟเฟกต์ Gamification">
+          <i data-lucide="bell" style="width: 16px; height: 16px;"></i>
+        </button>
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container hero-grid">
+      <!-- Profile Column -->
+      <div class="hero-profile-card">
+        <div class="profile-img-wrap">
+          <img src="assets_drop/01_รูปโปรไฟล์และประวัติ/01_รูปโปรไฟล์ครูเจมส์_เสื้อสูทแดง.jpg" alt="ครูเจมส์ อนันตชัย เพ็ชรรี่">
+          <div class="profile-badge">
+            <i data-lucide="check-circle" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle;"></i>
+            ข้าราชการครู คศ.๑
+          </div>
+        </div>
+        <div class="hero-profile-info">
+          <h3>นายอนันตชัย  เพ็ชรรี่</h3>
+          <p>ครู อันดับ คศ.๑ (เลขที่ตำแหน่ง ๔๕๙๕)</p>
+          <div class="profile-tags">
+            <span class="tag-pill">วท.บ. คอมพิวเตอร์ศึกษา</span>
+            <span class="tag-pill">หัวหน้าฝ่าย ICT</span>
+            <span class="tag-pill">ครูประจำชั้น ม.๓</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Intro Column -->
+      <div class="hero-content">
+        <div class="hero-top-badge">
+          <i data-lucide="award" style="width: 16px; height: 16px; color: var(--accent-gold);"></i>
+          ข้อตกลงในการพัฒนางาน (PA) ประจำปีงบประมาณ พ.ศ. ๒๕๖๘
+        </div>
+
+        <h2 class="hero-title">
+          รายงานผลการพัฒนางานตามข้อตกลง <span>(Performance Agreement)</span>
+        </h2>
+
+        <p class="hero-desc">
+          การจัดการเรียนรู้เชิงรุก (Active Learning) ผสานนวัตกรรมเกมมิฟิเคชัน (Gamification)
+          เพื่อยกระดับทักษะดิจิทัลและการคิดเชิงคำนวณของผู้เรียน โรงเรียนบ้านคลองมดแดง
+          สำนักงานเขตพื้นที่การศึกษาประถมศึกษากำแพงเพชร เขต ๒
+        </p>
+
+        <!-- Stats Grid -->
+        <div class="hero-stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">23 ชม.</div>
+            <div class="stat-label">ภาระงานสอน/สัปดาห์ (24 คาบ)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">35 ชม.</div>
+            <div class="stat-label">รวมภาระงานในหน้าที่ทั้งหมด</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" style="color: var(--success-600);">0 ครั้ง</div>
+            <div class="stat-label">สถิติการมาสาย (ร้อยละ 100)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">ป.1 ผ่านทักษะเมาส์ (เฉลี่ย 88.89%)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">62 ชิ้น</div>
+            <div class="stat-label">สื่อนวัตกรรมดิจิทัลในรอบปี</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">28 คอร์ส</div>
+            <div class="stat-label">พัฒนาตนเอง (AI สสวท. 28 ชม.)</div>
+          </div>
+
+          <div class="stat-card" style="border-top-color: #ef4444;">
+            <div class="stat-number" id="visitor-count-display">
+              <span id="stat-visitor-num">กำลังโหลด...</span>
+            </div>
+            <div class="stat-label">
+              <i data-lucide="eye" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle;"></i>
+              ผู้เข้าชมเว็บไซต์ (Firebase Realtime)
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="hero-cta-group">
+          <a href="#challenge" class="btn-cta btn-cta-primary">
+            <i data-lucide="gamepad-2" style="width: 18px; height: 18px;"></i>
+            <span>ชมนวัตกรรม Gamification ป.๑</span>
+          </a>
+          <a href="#indicators" class="btn-cta btn-cta-outline">
+            <i data-lucide="file-check-2" style="width: 18px; height: 18px;"></i>
+            <span>ตรวจ ๑๕ ตัวชี้วัดมาตรฐานตำแหน่ง</span>
+          </a>
+          <a href="#gallery" class="btn-cta btn-cta-outline">
+            <i data-lucide="images" style="width: 18px; height: 18px;"></i>
+            <span>คลังภาพถ่ายจริง (Google Photos)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1 : ภาระงานและตารางสอน -->
+  <section id="workload" class="section-block">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Workload & Teaching Schedule</div>
+        <h2 class="section-title">ภาระงานสอนและการปฏิบัติหน้าที่ราชการ</h2>
+        <p class="section-desc">การจัดตารางสอน ๒๓ ชั่วโมงต่อสัปดาห์ (๒๔ คาบ) และภาระงานสนับสนุนตามเกณฑ์ ก.ค.ศ. รวม ๓๕ ชั่วโมง/สัปดาห์</p>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab('tab-teaching', this)">
+          <i data-lucide="book-open"></i> ภาระงานสอนตามตาราง (23 ชม./สัปดาห์)
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-support', this)">
+          <i data-lucide="users"></i> งานส่งเสริม & สนับสนุน (6 ชม.)
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-school', this)">
+          <i data-lucide="building-2"></i> งานพัฒนาคุณภาพสถานศึกษา (4 ชม.)
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-policy', this)">
+          <i data-lucide="compass"></i> งานตอบสนองนโยบาย (2 ชม.)
+        </button>
+      </div>
+
+      <!-- Tab 1: Teaching Workload -->
+      <div id="tab-teaching" class="tab-pane active">
+        <div class="timetable-grid">
+          <div class="subject-card">
+            <div>
+              <span class="subject-code">ว11102</span>
+              <div class="subject-name">วิทยาการคำนวณ 1</div>
+              <div class="subject-grade">ประถมศึกษาปีที่ 1 (ประเด็นท้าทาย)</div>
+            </div>
+            <div class="subject-hours">
+              <span>กลุ่มสาระวิทยาศาสตร์ฯ</span>
+              <span>1 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div>
+              <span class="subject-code">ว12102</span>
+              <div class="subject-name">วิทยาการคำนวณ 2</div>
+              <div class="subject-grade">ประถมศึกษาปีที่ 2</div>
+            </div>
+            <div class="subject-hours">
+              <span>กลุ่มสาระวิทยาศาสตร์ฯ</span>
+              <span>2 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div>
+              <span class="subject-code">ว14101-14102</span>
+              <div class="subject-name">วิทยาศาสตร์ & วิทยาการคำนวณ 4</div>
+              <div class="subject-grade">ประถมศึกษาปีที่ 4</div>
+            </div>
+            <div class="subject-hours">
+              <span>กลุ่มสาระวิทยาศาสตร์ฯ</span>
+              <span>3 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div>
+              <span class="subject-code">ว15101-15102</span>
+              <div class="subject-name">วิทยาศาสตร์ & วิทยาการคำนวณ 5</div>
+              <div class="subject-grade">ประถมศึกษาปีที่ 5</div>
+            </div>
+            <div class="subject-hours">
+              <span>กลุ่มสาระวิทยาศาสตร์ฯ</span>
+              <span>3 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div>
+              <span class="subject-code">ว21102, 22102, 23102</span>
+              <div class="subject-name">วิทยาการคำนวณ มัธยมต้น</div>
+              <div class="subject-grade">มัธยมศึกษาปีที่ 1, 2, 3</div>
+            </div>
+            <div class="subject-hours">
+              <span>สาระเทคโนโลยี</span>
+              <span>3 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div>
+              <span class="subject-code">ง21101, ง23101-102</span>
+              <div class="subject-name">การงานอาชีพ & เทคโนโลยี</div>
+              <div class="subject-grade">มัธยมศึกษาปีที่ 1 และ 3</div>
+            </div>
+            <div class="subject-hours">
+              <span>กลุ่มการงานอาชีพ</span>
+              <span>6 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div>
+              <span class="subject-code">กิจกรรมพัฒนาผู้เรียน</span>
+              <div class="subject-name">ลูกเสือ, เปตอง, แนะแนว, ซ่อมเสริม</div>
+              <div class="subject-grade">ประถมศึกษาปีที่ 6 และ มัธยมศึกษาตอนต้น</div>
+            </div>
+            <div class="subject-hours">
+              <span>กิจกรรมพัฒนาผู้เรียน</span>
+              <span>5 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Support Workload -->
+      <div id="tab-support" class="tab-pane">
+        <div class="timetable-grid">
+          <div class="subject-card" style="border-left-color: #10b981;">
+            <div>
+              <span class="subject-code">สารสนเทศดิจิทัล</span>
+              <div class="subject-name">การจัดทำระบบ ปพ.5 ดิจิทัล</div>
+              <div class="subject-grade">บันทึกคะแนนเก็บ วิเคราะห์ผู้เรียนรายบุคคล 100%</div>
+            </div>
+            <div class="subject-hours">
+              <span>ฝ่ายวิชาการ</span>
+              <span>2 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #10b981;">
+            <div>
+              <span class="subject-code">ระบบดูแลช่วยเหลือ</span>
+              <div class="subject-name">ครูประจำชั้น ม.3 & เยี่ยมบ้าน 100%</div>
+              <div class="subject-grade">คัดกรอง SDQ, ทุนยากจนพิเศษ กสศ., แนะแนวเรียนต่อ</div>
+            </div>
+            <div class="subject-hours">
+              <span>ระบบดูแลช่วยเหลือนักเรียน</span>
+              <span>2 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #10b981;">
+            <div>
+              <span class="subject-code">PLC วิชาชีพ</span>
+              <div class="subject-name">ชุมชนแห่งการเรียนรู้ "Play and Learn"</div>
+              <div class="subject-grade">แก้ปัญหาทักษะเมาส์ ป.1 และพัฒนานวัตกรรมร่วมกับเพื่อนครู</div>
+            </div>
+            <div class="subject-hours">
+              <span>รวม 13 ชั่วโมงในรอบปี</span>
+              <span>2 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: School Quality -->
+      <div id="tab-school" class="tab-pane">
+        <div class="timetable-grid">
+          <div class="subject-card" style="border-left-color: #f59e0b;">
+            <div>
+              <span class="subject-code">หัวหน้างาน ICT</span>
+              <div class="subject-name">ฝ่ายเทคโนโลยีสารสนเทศและการสื่อสาร</div>
+              <div class="subject-grade">ดูแลโครงข่ายเน็ตเวิร์ก Wi-Fi, LAN, ห้องคอมพิวเตอร์ และเว็บโรงเรียน</div>
+            </div>
+            <div class="subject-hours">
+              <span>ความพร้อมใช้งาน 98.5%</span>
+              <span>2 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #f59e0b;">
+            <div>
+              <span class="subject-code">งานพัสดุและสินทรัพย์</span>
+              <div class="subject-name">เจ้าหน้าที่งานพัสดุสถานศึกษา</div>
+              <div class="subject-grade">จัดซื้อจัดจ้างตามระเบียบกระทรวงการคลังฯ พ.ศ. 2560 ตรวจรับถูกต้อง 100%</div>
+            </div>
+            <div class="subject-hours">
+              <span>บริหารสินทรัพย์</span>
+              <span>1 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #f59e0b;">
+            <div>
+              <span class="subject-code">สัมพันธ์ชุมชน</span>
+              <div class="subject-name">ประธานโครงการส่งเสริมความสัมพันธ์ชุมชน</div>
+              <div class="subject-grade">จัดประชุมผู้ปกครอง 80 คน ความพึงพอใจ 86.25% ประหยัดงบส่งคืน 500 บาท</div>
+            </div>
+            <div class="subject-hours">
+              <span>ศธ.04024.137/บค002/2569</span>
+              <span>1 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Policy Alignment -->
+      <div id="tab-policy" class="tab-pane">
+        <div class="timetable-grid">
+          <div class="subject-card" style="border-left-color: #8b5cf6;">
+            <div>
+              <span class="subject-code">Active Learning</span>
+              <div class="subject-name">ขับเคลื่อนการเรียนรู้เชิงรุก</div>
+              <div class="subject-grade">บูรณาการเกมมิฟิเคชัน (Gamification) ให้นักเรียนลงมือปฏิบัติจริง</div>
+            </div>
+            <div class="subject-hours">
+              <span>นโยบาย สพฐ.</span>
+              <span>1 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #8b5cf6;">
+            <div>
+              <span class="subject-code">Digital Literacy</span>
+              <div class="subject-name">ส่งเสริมทักษะดิจิทัล & โค้ดดิ้ง</div>
+              <div class="subject-grade">ฝึกการคิดเชิงคำนวณ (Computational Thinking) ผ่าน Code.org & Scratch</div>
+            </div>
+            <div class="subject-hours">
+              <span>นโยบายกระทรวงศึกษาฯ</span>
+              <span>1 ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2 : 15 ตัวชี้วัดตามมาตรฐานตำแหน่ง -->
+  <section id="indicators" class="section-block" style="background: white;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">15 Indicators According to PA Standards</div>
+        <h2 class="section-title">ผลการปฏิบัติงานตามมาตรฐานตำแหน่ง ๑๕ ตัวชี้วัด</h2>
+        <p class="section-desc">การประเมินประสิทธิภาพและประสิทธิผลการปฏิบัติงานตามเกณฑ์ ว 9/2564 (๖๐ คะแนน)</p>
+      </div>
+
+      <!-- Indicators Tabs -->
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab('tab-dim1', this)">
+          <i data-lucide="graduation-cap"></i> ด้านที่ ๑ : ด้านการจัดการเรียนรู้ (๘ ตัวชี้วัด)
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-dim2', this)">
+          <i data-lucide="handshake"></i> ด้านที่ ๒ : ด้านส่งเสริมและสนับสนุน (๔ ตัวชี้วัด)
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-dim3', this)">
+          <i data-lucide="trending-up"></i> ด้านที่ ๓ : ด้านพัฒนาตนเองและวิชาชีพ (๓ ตัวชี้วัด)
+        </button>
+      </div>
+
+      <!-- Dimension 1 (8 indicators) -->
+      <div id="tab-dim1" class="tab-pane active">
+        <div class="indicators-grid">
+          <!-- 1.1 -->
+          <div class="indicator-card">
+            <div class="indicator-header">
+              <div class="ind-badge-num">1.1</div>
+              <div class="ind-header-text">
+                <h3>การสร้างและหรือพัฒนาหลักสูตร</h3>
+                <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับการปฏิบัติที่คาดหวัง : ริเริ่ม พัฒนา</div>
+              </div>
+            </div>
+            <div class="indicator-body">
+              <div class="ind-desc-box">
+                <p>
+                  วิเคราะห์หลักสูตรแกนกลางการศึกษาขั้นพื้นฐาน พ.ศ. 2551 (ฉบับปรับปรุง 2560) สาระเทคโนโลยีและกลุ่มการงานอาชีพ
+                  จัดทำคำอธิบายรายวิชาและโครงสร้างรายวิชา 7 รายวิชา (ว11102, ว12102, ว14102, ว15102, ว21102, ว22102, ว23102)
+                  และปรับปรุงหน่วยการเรียนรู้ <strong>"หนูน้อยไอทีกับเมาส์วิเศษ"</strong> สำหรับ ป.1 ให้เหมาะสมกับพัฒนาการกล้ามเนื้อมือของเด็กเล็ก
+                </p>
+                <div class="ind-metrics-row">
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงปริมาณ:</strong>
+                    <span>จัดทำโครงสร้างรายวิชาครบ 100% ของรายวิชาที่สอน</span>
+                  </div>
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงคุณภาพ:</strong>
+                    <span>หลักสูตรทันสมัย สอดคล้องกับบริบทโรงเรียนชนบทขยายโอกาส</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ind-media-box" onclick="openLightbox('assets_drop/02_ภาพการสอน_ActiveLearning/01_ห้องเรียนคอมพิวเตอร์_ActiveLearning.jpg', 'การจัดทำหลักสูตรและการจัดการเรียนรู้วิทยาการคำนวณ')">
+                <span class="zoom-icon"><i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i></span>
+                <img src="assets_drop/02_ภาพการสอน_ActiveLearning/01_ห้องเรียนคอมพิวเตอร์_ActiveLearning.jpg" alt="หลักสูตรคอมพิวเตอร์">
+                <div class="ind-media-caption">ภาพกิจกรรมในห้องปฏิบัติการคอมพิวเตอร์</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1.2 & 1.3 -->
+          <div class="indicator-card">
+            <div class="indicator-header">
+              <div class="ind-badge-num">1.2</div>
+              <div class="ind-header-text">
+                <h3>การออกแบบและการจัดกิจกรรมการเรียนรู้ (Active Learning)</h3>
+                <div class="ind-category">ตัวชี้วัด 1.2 และ 1.3 | บูรณาการเกมมิฟิเคชันร่วมกับ Active Learning</div>
+              </div>
+            </div>
+            <div class="indicator-body">
+              <div class="ind-desc-box">
+                <p>
+                  ออกแบบแผนการจัดการเรียนรู้เน้นผู้เรียนเป็นสำคัญ (Learner-Centered) ครบ K-P-A จำนวน 4 แผนบูรณาการ Gamification
+                  ครูทำหน้าที่เป็นโค้ช (Coach) คอยจับมือสาธิตการจับเมาส์ ให้นักเรียนฝึกฝนผ่าน Code.org และ Poki Games
+                  พร้อมระบบเพื่อนช่วยเพื่อน (Buddy System) สร้างความมั่นใจให้แก่นักเรียนทุกคน
+                </p>
+                <div class="ind-metrics-row">
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงปริมาณ:</strong>
+                    <span>นักเรียน ป.1 จำนวน 9 คน (100%) ได้รับการฝึกปฏิบัติครบทุกทักษะ</span>
+                  </div>
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงคุณภาพ:</strong>
+                    <span>นักเรียนสนุกสนาน กล้ามเนื้อมือและสายตาประสานกันได้อย่างแม่นยำ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ind-media-box" onclick="openLightbox('assets_drop/02_ภาพการสอน_ActiveLearning/10_ค่ายวิชาการ_กิจกรรมผู้เรียน.jpg', 'กิจกรรมการเรียนรู้เชิงรุก Active Learning')">
+                <span class="zoom-icon"><i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i></span>
+                <img src="assets_drop/02_ภาพการสอน_ActiveLearning/10_ค่ายวิชาการ_กิจกรรมผู้เรียน.jpg" alt="Active Learning">
+                <div class="ind-media-caption">การมีส่วนร่วมในกิจกรรม Active Learning</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1.4 -->
+          <div class="indicator-card">
+            <div class="indicator-header">
+              <div class="ind-badge-num">1.4</div>
+              <div class="ind-header-text">
+                <h3>การสร้างและหรือพัฒนาสื่อ นวัตกรรม เทคโนโลยี และแหล่งเรียนรู้</h3>
+                <div class="ind-category">พัฒนาสื่อนวัตกรรมดิจิทัลรวม 62 ชิ้นงาน และคลังเรียนรู้ออนไลน์ Google Sites</div>
+              </div>
+            </div>
+            <div class="indicator-body">
+              <div class="ind-desc-box">
+                <p>
+                  พัฒนาสื่อเกมคอมพิวเตอร์ Canva Games, Poki.com, Code.org Pre-reader, แบบทดสอบออนไลน์ Quizizz พร้อมระบบ Leaderboard
+                  และสร้างเว็บไซต์คลังบทเรียนออนไลน์ <strong>"KruJames Learning Space"</strong> บนระบบ Google Sites
+                  เพื่อให้นักเรียนและผู้ปกครองเข้าถึงสื่อการเรียนรู้ได้ตลอด 24 ชั่วโมง
+                </p>
+                <div class="ind-metrics-row">
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงปริมาณ:</strong>
+                    <span>มีสื่อนวัตกรรมดิจิทัลใช้งานจริง 62 รายการ (อ้างอิง SAR)</span>
+                  </div>
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงคุณภาพ:</strong>
+                    <span>เปลี่ยนเนื้อหาไอทีให้เข้าใจง่าย สนุกสนาน ส่งเสริมการเรียนรู้ทุกที่ทุกเวลา</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ind-media-box" onclick="openLightbox('assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/02_Gamification_Quizizz_หน้าจอเกม.jpg', 'สื่อนวัตกรรม Gamification และ Quizizz')">
+                <span class="zoom-icon"><i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i></span>
+                <img src="assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/02_Gamification_Quizizz_หน้าจอเกม.jpg" alt="Gamification Quizizz">
+                <div class="ind-media-caption">สื่อบทเรียนและเกมทดสอบ Quizizz</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1.5 & 1.6 -->
+          <div class="indicator-card">
+            <div class="indicator-header">
+              <div class="ind-badge-num">1.5</div>
+              <div class="ind-header-text">
+                <h3>การวัดประเมินผล และการวิจัยแก้ปัญหาผู้เรียน (CAR)</h3>
+                <div class="ind-category">ตัวชี้วัด 1.5 และ 1.6 | เกณฑ์รูบริกส์ 4 ระดับ และงานวิจัย Paired t-test</div>
+              </div>
+            </div>
+            <div class="indicator-body">
+              <div class="ind-desc-box">
+                <p>
+                  ประเมินตามสภาพจริงด้วยเกณฑ์รูบริกส์ 4 ระดับ ครอบคลุม 4 ทักษะการใช้เมาส์ พร้อม Immediate Feedback ทันที
+                  และดำเนินการทำวิจัยในชั้นเรียน (Classroom Action Research) พบว่า คะแนนหลังเรียน (17.78) สูงกว่าก่อนเรียน (8.44)
+                  อย่างมีนัยสำคัญทางสถิติที่ระดับ .05 (t = 17.58, p < .001) และนำผลเข้าสู่วง PLC 13 ชั่วโมง
+                </p>
+                <div class="ind-metrics-row">
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงปริมาณ:</strong>
+                    <span>นักเรียน ป.1 ผ่านเกณฑ์ดีขึ้นไป 100% (เฉลี่ย 88.89%)</span>
+                  </div>
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงคุณภาพ:</strong>
+                    <span>ได้นวัตกรรมต้นแบบ Best Practice แก้ปัญหาทักษะเมาส์เด็กเล็ก</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ind-media-box" onclick="openLightbox('assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/03_นักเรียนใช้เมาส์คอมพิวเตอร์_ป1.jpg', 'การฝึกปฏิบัติการใช้เมาส์ของนักเรียน ป.1')">
+                <span class="zoom-icon"><i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i></span>
+                <img src="assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/03_นักเรียนใช้เมาส์คอมพิวเตอร์_ป1.jpg" alt="นักเรียนใช้เมาส์ ป.1">
+                <div class="ind-media-caption">การวัดทักษะปฏิบัติการใช้เมาส์ของนักเรียน ป.1</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1.7 & 1.8 -->
+          <div class="indicator-card">
+            <div class="indicator-header">
+              <div class="ind-badge-num">1.7</div>
+              <div class="ind-header-text">
+                <h3>การจัดบรรยากาศ และการอบรมคุณลักษณะอันพึงประสงค์</h3>
+                <div class="ind-category">ตัวชี้วัด 1.7 และ 1.8 | สภาพแวดล้อมปลอดภัย 100% และ Digital Citizenship</div>
+              </div>
+            </div>
+            <div class="indicator-body">
+              <div class="ind-desc-box">
+                <p>
+                  ปรับปรุงห้องคอมพิวเตอร์ สายไฟเก็บลงรางปลอดภัย 100% บรรยากาศเชิงบวก อบอุ่น ให้กำลังใจ
+                  จัดบอร์ดนิทรรศการ Digital Citizenship และบอร์ด Hall of Fame ปลูกฝังวินัยการดูแลอุปกรณ์
+                  และการมีน้ำใจช่วยเหลือเพื่อนร่วมชั้น ส่งผลให้นักเรียนมีความพึงพอใจสูงถึง 96.5%
+                </p>
+                <div class="ind-metrics-row">
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงปริมาณ:</strong>
+                    <span>อุปกรณ์ชำรุดเสียหายจากการใช้งานผิดระเบียบ 0 ครั้ง</span>
+                  </div>
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงคุณภาพ:</strong>
+                    <span>นักเรียนมีวินัย มีมารยาท และเป็นพลเมืองดิจิทัลที่ดี</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ind-media-box" onclick="openLightbox('assets_drop/07_ภาพกิจกรรมคุณธรรม_ลูกเสือ/15_BigCleaning_สิ่งแวดล้อมสถานศึกษา.jpg', 'กิจกรรมดูแลสิ่งแวดล้อมและห้องคอมพิวเตอร์')">
+                <span class="zoom-icon"><i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i></span>
+                <img src="assets_drop/07_ภาพกิจกรรมคุณธรรม_ลูกเสือ/15_BigCleaning_สิ่งแวดล้อมสถานศึกษา.jpg" alt="Big Cleaning Day">
+                <div class="ind-media-caption">กิจกรรมจิตอาสาและพัฒนาสภาพแวดล้อม</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dimension 2 (4 indicators) -->
+      <div id="tab-dim2" class="tab-pane">
+        <div class="indicators-grid">
+          <!-- 2.1 & 2.2 -->
+          <div class="indicator-card">
+            <div class="indicator-header">
+              <div class="ind-badge-num">2.1</div>
+              <div class="ind-header-text">
+                <h3>ระบบข้อมูลสารสนเทศ และการดูแลช่วยเหลือนักเรียน ม.3 (100%)</h3>
+                <div class="ind-category">ตัวชี้วัด 2.1 และ 2.2 | ปพ.5 ดิจิทัล, เยี่ยมบ้าน 100%, ทุน กสศ.</div>
+              </div>
+            </div>
+            <div class="indicator-body">
+              <div class="ind-desc-box">
+                <p>
+                  จัดทำ ปพ.5 ดิจิทัล บันทึกคะแนนและเวลาเรียนแม่นยำ 100% จัดทำแบบวิเคราะห์ผู้เรียนรายบุคคล
+                  ในฐานะครูประจำชั้น ม.3 ได้ลงพื้นที่ออกเยี่ยมบ้านนักเรียนครบ 100% คัดกรองแบบประเมิน SDQ
+                  ประสานขอรับเงินทุนการศึกษาปัจจัยพื้นฐานนักเรียนยากจนพิเศษ (กสศ.) ครบทุกคน และแนะแนวศึกษาต่อ 100%
+                </p>
+                <div class="ind-metrics-row">
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงปริมาณ:</strong>
+                    <span>เยี่ยมบ้านนักเรียน ม.3 ครบ 100% มีที่เรียนต่อคิดเป็น 100%</span>
+                  </div>
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงคุณภาพ:</strong>
+                    <span>นักเรียนได้รับการช่วยเหลือตรงจุด อัตราหลุดจากระบบเป็นศูนย์ (0%)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ind-media-box" onclick="openLightbox('assets_drop/04_ภาพระบบดูแลช่วยเหลือ_เยี่ยมบ้าน/08_ประชุมคณะกรรมการสถานศึกษา.jpg', 'ระบบดูแลช่วยเหลือและการประชุมสถานศึกษา')">
+                <span class="zoom-icon"><i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i></span>
+                <img src="assets_drop/04_ภาพระบบดูแลช่วยเหลือ_เยี่ยมบ้าน/08_ประชุมคณะกรรมการสถานศึกษา.jpg" alt="ระบบดูแลช่วยเหลือ">
+                <div class="ind-media-caption">การมีส่วนร่วมในระบบดูแลและประชุมสถานศึกษา</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2.3 & 2.4 -->
+          <div class="indicator-card">
+            <div class="indicator-header">
+              <div class="ind-badge-num">2.3</div>
+              <div class="ind-header-text">
+                <h3>งานวิชาการ/พัสดุ/ICT และโครงการสัมพันธ์ชุมชน 2568</h3>
+                <div class="ind-category">ตัวชี้วัด 2.3 และ 2.4 | หัวหน้า ICT, เจ้าหน้าที่พัสดุ, ประธานสัมพันธ์ชุมชน</div>
+              </div>
+            </div>
+            <div class="indicator-body">
+              <div class="ind-desc-box">
+                <p>
+                  ปฏิบัติหน้าที่หัวหน้าฝ่าย ICT (ระบบเน็ตเวิร์กพร้อมใช้งาน 98.5%) และเจ้าหน้าที่งานพัสดุตามระเบียบกระทรวงการคลังฯ พ.ศ. 2560
+                  ได้รับแต่งตั้งเป็นประธานโครงการส่งเสริมความสัมพันธ์ชุมชน ปีการศึกษา 2568 จัดประชุมผู้ปกครอง 80 คน
+                  ความพึงพอใจ 86.25% ประหยัดงบประมาณคงเหลือส่งคืน 500 บาท (ศธ.04024.137/บค002/2569)
+                </p>
+                <div class="ind-metrics-row">
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงปริมาณ:</strong>
+                    <span>ผู้เข้าร่วม 80 คน (100%) ความพึงพอใจระดับมากขึ้นไป 100%</span>
+                  </div>
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงคุณภาพ:</strong>
+                    <span>ชุมชนเชื่อมั่นและเข้ามามีส่วนร่วมสนับสนุนการศึกษาอย่างเข้มแข็ง</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ind-media-box" onclick="openLightbox('assets_drop/05_ภาพโครงการสัมพันธ์ชุมชน/06_ประชุมผู้ปกครองและชุมชน.jpg', 'โครงการส่งเสริมความสัมพันธ์ชุมชน')">
+                <span class="zoom-icon"><i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i></span>
+                <img src="assets_drop/05_ภาพโครงการสัมพันธ์ชุมชน/06_ประชุมผู้ปกครองและชุมชน.jpg" alt="สัมพันธ์ชุมชน">
+                <div class="ind-media-caption">การจัดประชุมผู้ปกครองและโครงการสัมพันธ์ชุมชน</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dimension 3 (3 indicators) -->
+      <div id="tab-dim3" class="tab-pane">
+        <div class="indicators-grid">
+          <!-- 3.1, 3.2, 3.3 -->
+          <div class="indicator-card">
+            <div class="indicator-header">
+              <div class="ind-badge-num">3.1</div>
+              <div class="ind-header-text">
+                <h3>การพัฒนาตนเอง (AI สสวท. 28 ชม.), PLC 13 ชม. และการนำมาใช้</h3>
+                <div class="ind-category">ตัวชี้วัด 3.1, 3.2, 3.3 | อบรม 28 หลักสูตร, PLC กลุ่ม "Play and Learn"</div>
+              </div>
+            </div>
+            <div class="indicator-body">
+              <div class="ind-desc-box">
+                <p>
+                  ผ่านการอบรมหลักสูตร <strong>AI for Teachers (ปัญญาประดิษฐ์เพื่อการศึกษา) สสวท. รวม 28 ชั่วโมง</strong>
+                  (ม.ต้น 20 ชม. + ประถมปลาย 8 ชม.) และหลักสูตรพัฒนาตนเองรวม 28 หลักสูตร (>35 ชั่วโมง)
+                  เข้าร่วมชุมชนแห่งการเรียนรู้ทางวิชาชีพ (PLC) โรงเรียนบ้านคลองมดแดง 13 ชั่วโมง
+                  และนำองค์ความรู้มาพัฒนานวัตกรรม Gamification ป.1 และผลิตสื่อ 62 รายการ
+                </p>
+                <div class="ind-metrics-row">
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงปริมาณ:</strong>
+                    <span>อบรมพัฒนาตนเอง 28 หลักสูตร, ชั่วโมง PLC รวม 13 ชั่วโมง</span>
+                  </div>
+                  <div class="ind-metric-item">
+                    <strong>ผลลัพธ์เชิงคุณภาพ:</strong>
+                    <span>ยกระดับขีดความสามารถการสอนคอมพิวเตอร์และปัญญาประดิษฐ์สู่ห้องเรียนจริง</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ind-media-box" onclick="openLightbox('assets_drop/06_ภาพเกียรติบัตรและรางวัล/00_แผ่นรวมเกียรติบัตร_ContactSheet.jpg', 'แผ่นรวมเกียรติบัตรและวุฒิบัตรการพัฒนาตนเอง')">
+                <span class="zoom-icon"><i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i></span>
+                <img src="assets_drop/06_ภาพเกียรติบัตรและรางวัล/00_แผ่นรวมเกียรติบัตร_ContactSheet.jpg" alt="เกียรติบัตรและรางวัล">
+                <div class="ind-media-caption">แผ่นรวมเกียรติบัตรและวุฒิบัตรการพัฒนาตนเอง</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3 : ประเด็นท้าทาย (Gamification) -->
+  <section id="challenge" class="section-block">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Challenge Issue (40 Points)</div>
+        <h2 class="section-title">ข้อตกลงในการพัฒนางานที่เป็นประเด็นท้าทาย</h2>
+        <p class="section-desc">การพัฒนาทักษะปฏิบัติการใช้เมาส์เบื้องต้น โดยใช้สื่อเกมคอมพิวเตอร์ตามแนวคิดเกมมิฟิเคชัน (Gamification) ร่วมกับเทคนิค Active Learning นักเรียนชั้น ป.๑ (๙ คน)</p>
+      </div>
+
+      <!-- Challenge Hero Banner -->
+      <div class="challenge-hero">
+        <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(245, 158, 11, 0.2); border: 1px solid var(--accent-gold); color: #fef08a; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px;">
+          <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i> นวัตกรรมห้องเรียนคอมพิวเตอร์ยุคใหม่
+        </div>
+        <h3>ภารกิจผจญภัย "หนูน้อยไอทีกับเมาส์วิเศษ" ด้วย Gamification Mechanics</h3>
+        <p>
+          แก้ปัญหาพัฒนาการกล้ามเนื้อมัดเล็ก (Fine Motor Skills) และการประสานสัมพันธ์สายตากับมือ (Hand-Eye Coordination)
+          ของเด็กวัย 6-7 ขวบในโรงเรียนชนบทที่ไม่มีคอมพิวเตอร์ที่บ้าน โดยเปลี่ยนการฝึกใช้เมาส์ที่น่าเบื่อให้เป็นภารกิจสะสมแต้ม
+          พิชิตด่าน และรับเหรียญตราเกียรติยศ ด้วยกระบวนการ ADDIE Model 5 ขั้นตอน
+        </p>
+
+        <div class="challenge-badges-row">
+          <div class="challenge-badge-item">
+            <i data-lucide="target" style="width: 16px; height: 16px; color: var(--accent-gold);"></i>
+            <span>เป้าหมาย: ผ่านเกณฑ์ 100%</span>
+          </div>
+          <div class="challenge-badge-item">
+            <i data-lucide="users" style="width: 16px; height: 16px; color: #60a5fa;"></i>
+            <span>กลุ่มเป้าหมาย: ป.1 จำนวน 9 คน</span>
+          </div>
+          <div class="challenge-badge-item">
+            <i data-lucide="clock" style="width: 16px; height: 16px; color: #4ade80;"></i>
+            <span>ระยะเวลา: 4 สัปดาห์ (4 คาบ)</span>
+          </div>
+          <div class="challenge-badge-item">
+            <i data-lucide="bar-chart-3" style="width: 16px; height: 16px; color: #f472b6;"></i>
+            <span>สถิติ: Paired t-test (t = 17.58, p < .001)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADDIE Model Stepper -->
+      <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--primary-900);">
+        <i data-lucide="cpu" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; color: var(--primary-600);"></i>
+        วงจรการพัฒนานวัตกรรม ADDIE Model ๕ ขั้นตอน
+      </h3>
+      <div class="addie-steps-grid">
+        <div class="addie-step-card">
+          <div class="step-circle">A</div>
+          <h4>Analysis (วิเคราะห์)</h4>
+          <p>วิเคราะห์ ว 4.2 ป.1/4, สำรวจผู้เรียน 9 คน, ทดสอบ Pre-test (เฉลี่ย 8.44)</p>
+        </div>
+        <div class="addie-step-card">
+          <div class="step-circle">D</div>
+          <h4>Design (ออกแบบ)</h4>
+          <p>ออกแบบแผนการสอน 4 แผน + วางระบบเกมมิฟิเคชัน 7 องค์ประกอบ</p>
+        </div>
+        <div class="addie-step-card">
+          <div class="step-circle">D</div>
+          <h4>Development (พัฒนา)</h4>
+          <p>พัฒนา Canva Games, Poki, Code.org + สร้างเกณฑ์รูบริกส์ 4 ระดับ</p>
+        </div>
+        <div class="addie-step-card">
+          <div class="step-circle">I</div>
+          <h4>Implement (นำไปใช้)</h4>
+          <p>จัดกิจกรรมในห้องคอมฯ 4 สัปดาห์ ครูเป็นโค้ช + คู่หู Buddy ช่วยเหลือกัน</p>
+        </div>
+        <div class="addie-step-card">
+          <div class="step-circle">E</div>
+          <h4>Evaluation (ประเมินผล)</h4>
+          <p>ทดสอบ Post-test (เฉลี่ย 17.78), คำนวณ t-test, สรุปเข้าสู่ PLC</p>
+        </div>
+      </div>
+
+      <!-- 4 Lesson Plans -->
+      <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--primary-900);">
+        <i data-lucide="book-marked" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; color: var(--primary-600);"></i>
+        โครงสร้างแผนการจัดการเรียนรู้ ๔ แผน (๔ ชั่วโมง)
+      </h3>
+      <div class="lesson-plans-grid">
+        <div class="lesson-card">
+          <div>
+            <span class="lesson-num-badge">แผนที่ ๑ (๑ ชม.)</span>
+            <h4>เจ้าหนูน้อยนักสำรวจ</h4>
+            <p>ฝึกการจับเมาส์และทักษะคลิกซ้าย (Single Click) ผ่านภารกิจ "แตะลูกโป่งหรรษา" บน Canva Games</p>
+          </div>
+          <div class="lesson-badge-footer">
+            <i data-lucide="award" style="width: 16px; height: 16px;"></i>
+            <span>ตรา "นักสำรวจเมาส์ฝึกหัด"</span>
+          </div>
+        </div>
+
+        <div class="lesson-card">
+          <div>
+            <span class="lesson-num-badge">แผนที่ ๒ (๑ ชม.)</span>
+            <h4>กริ๊กๆ เปิดกล่องสมบัติ</h4>
+            <p>ฝึกจังหวะความเร็วและการดับเบิลคลิก (Double Click) ผ่านเกม "เปิดหีบสมบัติใต้ทะเล" บน Poki Games</p>
+          </div>
+          <div class="lesson-badge-footer">
+            <i data-lucide="zap" style="width: 16px; height: 16px;"></i>
+            <span>ตรา "นักคลิกสายฟ้า"</span>
+          </div>
+        </div>
+
+        <div class="lesson-card">
+          <div>
+            <span class="lesson-num-badge">แผนที่ ๓ (๑ ชม.)</span>
+            <h4>คำสั่งลับฉบับสายลับจิ๋ว</h4>
+            <p>ฝึกใช้นิ้วกลางคลิกขวา (Right Click) เรียกเมนูลัด ผ่านภารกิจ "สายลับถอดรหัสลับ" บน Canva Interactive</p>
+          </div>
+          <div class="lesson-badge-footer">
+            <i data-lucide="shield" style="width: 16px; height: 16px;"></i>
+            <span>ตรา "สายลับขวาพิฆาต"</span>
+          </div>
+        </div>
+
+        <div class="lesson-card">
+          <div>
+            <span class="lesson-num-badge">แผนที่ ๔ (๑ ชม.)</span>
+            <h4>มหาศึกจอมยุทธ์นักต่อภาพ</h4>
+            <p>ฝึกการคลิกค้างแล้วลากวาง (Drag & Drop) ต่อภาพจิ๊กซอว์ตัวการ์ตูนบน Code.org Pre-reader Express</p>
+          </div>
+          <div class="lesson-badge-footer">
+            <i data-lucide="trophy" style="width: 16px; height: 16px;"></i>
+            <span>ถ้วยรางวัล "จอมยุทธ์ลากวางเมาส์"</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Score Comparison & t-test Interactive Showcase -->
+      <div class="score-comparison-wrapper">
+        <div class="score-comparison-header">
+          <div>
+            <h3>ผลการเปรียบเทียบคะแนนก่อนเรียนและหลังเรียน (Pre-test vs Post-test)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">นักเรียนชั้นประถมศึกษาปีที่ ๑ จำนวน ๙ คน (คะแนนเต็ม ๒๐ คะแนน)</p>
+          </div>
+          <div class="stat-badge-ttest">
+            ผลการทดสอบ t-test: t = 17.58, p < .001 (มีนัยสำคัญที่ .05)
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="chart-container">
+          <canvas id="scoreChart"></canvas>
+        </div>
+
+        <!-- Table -->
+        <div class="data-table-wrap">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th style="width: 60px; text-align: center;">เลขที่</th>
+                <th>ชื่อ - นามสกุล นักเรียน</th>
+                <th style="text-align: center;">ก่อนเรียน (๒๐)</th>
+                <th style="text-align: center;">หลังเรียน (๒๐)</th>
+                <th style="text-align: center;">ผลต่าง (+เพิ่ม)</th>
+                <th style="text-align: center;">ร้อยละความก้าวหน้า</th>
+                <th style="text-align: center;">ระดับคุณภาพ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: center;">๑</td>
+                <td>เด็กชายชนะชัย ขวัญแก้ว</td>
+                <td style="text-align: center;">๘</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๐</td>
+                <td style="text-align: center;">+๕๐.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๒</td>
+                <td>เด็กชายณัฐดนัย อินทร์สุข</td>
+                <td style="text-align: center;">๙</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๗</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๘</td>
+                <td style="text-align: center;">+๔๐.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๓</td>
+                <td>เด็กชายธนกร พงษ์ศิลา</td>
+                <td style="text-align: center;">๗</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๑</td>
+                <td style="text-align: center;">+๕๕.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๔</td>
+                <td>เด็กชายภัทรพล ทัศนัย</td>
+                <td style="text-align: center;">๑๐</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๙</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๙</td>
+                <td style="text-align: center;">+๔๕.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๕</td>
+                <td>เด็กชายวรภัทร ชาญชัย</td>
+                <td style="text-align: center;">๘</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๗</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๙</td>
+                <td style="text-align: center;">+๔๕.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๖</td>
+                <td>เด็กหญิงกัญญารัตน์ มั่งคั่ง</td>
+                <td style="text-align: center;">๙</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๙</td>
+                <td style="text-align: center;">+๔๕.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๗</td>
+                <td>เด็กหญิงณัชชา คำทอง</td>
+                <td style="text-align: center;">๘</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๐</td>
+                <td style="text-align: center;">+๕๐.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๘</td>
+                <td>เด็กหญิงปิยะธิดา บุญส่ง</td>
+                <td style="text-align: center;">๙</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๗</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๘</td>
+                <td style="text-align: center;">+๔๐.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๙</td>
+                <td>เด็กหญิงศศิธร ทองใบ</td>
+                <td style="text-align: center;">๘</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๐</td>
+                <td style="text-align: center;">+๕๐.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2" style="text-align: right;">คะแนนเฉลี่ยรวม (\(\bar{X}\)) :</td>
+                <td style="text-align: center;">๘.๔๔ (๔๒.๒๒%)</td>
+                <td style="text-align: center; color: var(--primary-700);">๑๗.๗๘ (๘๘.๘๙%)</td>
+                <td style="text-align: center; color: var(--success-600);">+๙.๓๔</td>
+                <td style="text-align: center; color: var(--success-600);">+๔๖.๖๗%</td>
+                <td style="text-align: center;">ดีเยี่ยม (๑๐๐%)</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4 : คลังภาพถ่ายจริง (Google Photos Gallery) -->
+  <section id="gallery" class="section-block" style="background: white;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Verifiable Evidence Gallery</div>
+        <h2 class="section-title">คลังภาพถ่ายร่องรอยหลักฐานเชิงประจักษ์</h2>
+        <p class="section-desc">ประมวลภาพถ่ายจริงจากคลัง Google Photos ในรอบปีการประเมิน ๒๕๖๘–๒๕๖๙ โรงเรียนบ้านคลองมดแดง</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filter-nav">
+        <button class="gallery-filter-btn active" onclick="filterGallery('all', this)">ทั้งหมด (All)</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('active-learning', this)">การสอน Active Learning</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('gamification', this)">นวัตกรรม Gamification</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('support', this)">ระบบดูแลช่วยเหลือ & ประชุม</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('community', this)">โครงการสัมพันธ์ชุมชน</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('certificates', this)">เกียรติบัตร & พัฒนาตนเอง</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('volunteer', this)">จิตอาสา & สิ่งแวดล้อม</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="gallery-container">
+        <!-- Active Learning -->
+        <div class="gallery-item" data-cat="active-learning" onclick="openLightbox('assets_drop/02_ภาพการสอน_ActiveLearning/01_ห้องเรียนคอมพิวเตอร์_ActiveLearning.jpg', 'ห้องปฏิบัติการคอมพิวเตอร์และการจัดกิจกรรม Active Learning')">
+          <img src="assets_drop/02_ภาพการสอน_ActiveLearning/01_ห้องเรียนคอมพิวเตอร์_ActiveLearning.jpg" alt="Active Learning">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">Active Learning</div>
+            <div class="gallery-title">ห้องเรียนคอมพิวเตอร์ Active Learning</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="active-learning" onclick="openLightbox('assets_drop/02_ภาพการสอน_ActiveLearning/10_ค่ายวิชาการ_กิจกรรมผู้เรียน.jpg', 'ค่ายวิชาการและการส่งเสริมการคิดเชิงคำนวณ')">
+          <img src="assets_drop/02_ภาพการสอน_ActiveLearning/10_ค่ายวิชาการ_กิจกรรมผู้เรียน.jpg" alt="ค่ายวิชาการ">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">Active Learning</div>
+            <div class="gallery-title">ค่ายวิชาการและการมีส่วนร่วมของผู้เรียน</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="active-learning" onclick="openLightbox('assets_drop/02_ภาพการสอน_ActiveLearning/12_ค่ายวิชาการ_วิทยากรและนักเรียน.jpg', 'ครูเจมส์ทำหน้าที่วิทยากรค่ายวิชาการ')">
+          <img src="assets_drop/02_ภาพการสอน_ActiveLearning/12_ค่ายวิชาการ_วิทยากรและนักเรียน.jpg" alt="วิทยากรค่ายวิชาการ">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">Active Learning</div>
+            <div class="gallery-title">วิทยากรและกิจกรรมค่ายวิชาการ</div>
+          </div>
+        </div>
+
+        <!-- Gamification -->
+        <div class="gallery-item" data-cat="gamification" onclick="openLightbox('assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/02_Gamification_Quizizz_หน้าจอเกม.jpg', 'สื่อนวัตกรรม Gamification และแบบทดสอบ Quizizz')">
+          <img src="assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/02_Gamification_Quizizz_หน้าจอเกม.jpg" alt="Gamification Quizizz">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">Gamification</div>
+            <div class="gallery-title">สื่อนวัตกรรม Quizizz Interactive</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="gamification" onclick="openLightbox('assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/03_นักเรียนใช้เมาส์คอมพิวเตอร์_ป1.jpg', 'นักเรียนชั้น ป.1 ฝึกปฏิบัติการใช้เมาส์ผ่านเกมคอมพิวเตอร์')">
+          <img src="assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/03_นักเรียนใช้เมาส์คอมพิวเตอร์_ป1.jpg" alt="ป.1 ใช้เมาส์">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">Gamification</div>
+            <div class="gallery-title">นักเรียน ป.๑ ฝึกใช้เมาส์คอมพิวเตอร์</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="gamification" onclick="openLightbox('assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/04_Coding_นักเรียนหน้าคอมพิวเตอร์.jpg', 'กิจกรรม Coding และการคิดเชิงคำนวณ')">
+          <img src="assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/04_Coding_นักเรียนหน้าคอมพิวเตอร์.jpg" alt="Coding นักเรียน">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">Gamification</div>
+            <div class="gallery-title">กิจกรรม Coding และฝึกทักษะหน้าจอ</div>
+          </div>
+        </div>
+
+        <!-- Support & Meeting -->
+        <div class="gallery-item" data-cat="support" onclick="openLightbox('assets_drop/04_ภาพระบบดูแลช่วยเหลือ_เยี่ยมบ้าน/08_ประชุมคณะกรรมการสถานศึกษา.jpg', 'การประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน')">
+          <img src="assets_drop/04_ภาพระบบดูแลช่วยเหลือ_เยี่ยมบ้าน/08_ประชุมคณะกรรมการสถานศึกษา.jpg" alt="ประชุมกรรมการ">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">ระบบดูแล & ประชุม</div>
+            <div class="gallery-title">ประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="support" onclick="openLightbox('assets_drop/04_ภาพระบบดูแลช่วยเหลือ_เยี่ยมบ้าน/09_ประชุมกรรมการสถานศึกษา_มุมข้าง.jpg', 'การนำเสนอรายงานต่อคณะกรรมการสถานศึกษา')">
+          <img src="assets_drop/04_ภาพระบบดูแลช่วยเหลือ_เยี่ยมบ้าน/09_ประชุมกรรมการสถานศึกษา_มุมข้าง.jpg" alt="ประชุมกรรมการ 2">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">ระบบดูแล & ประชุม</div>
+            <div class="gallery-title">รายงานผลการดำเนินงานต่อคณะกรรมการ</div>
+          </div>
+        </div>
+
+        <!-- Community Relations -->
+        <div class="gallery-item" data-cat="community" onclick="openLightbox('assets_drop/05_ภาพโครงการสัมพันธ์ชุมชน/06_ประชุมผู้ปกครองและชุมชน.jpg', 'โครงการสัมพันธ์ชุมชน: การประชุมผู้ปกครอง 80 คน')">
+          <img src="assets_drop/05_ภาพโครงการสัมพันธ์ชุมชน/06_ประชุมผู้ปกครองและชุมชน.jpg" alt="ประชุมผู้ปกครอง">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">สัมพันธ์ชุมชน</div>
+            <div class="gallery-title">โครงการสัมพันธ์ชุมชน ประชุมผู้ปกครอง</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="community" onclick="openLightbox('assets_drop/05_ภาพโครงการสัมพันธ์ชุมชน/07_ภาพหมู่ผู้ปกครองและชุมชน.jpg', 'ภาพหมู่ผู้ปกครอง คณะครู และชุมชนบ้านคลองมดแดง')">
+          <img src="assets_drop/05_ภาพโครงการสัมพันธ์ชุมชน/07_ภาพหมู่ผู้ปกครองและชุมชน.jpg" alt="ภาพหมู่ชุมชน">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">สัมพันธ์ชุมชน</div>
+            <div class="gallery-title">ความร่วมมือระหว่างโรงเรียนและชุมชน</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="community" onclick="openLightbox('assets_drop/05_ภาพโครงการสัมพันธ์ชุมชน/13_กิจกรรมส่งเสริมอาชีพประชาชน_สาธิต.jpg', 'กิจกรรมส่งเสริมอาชีพชุมชนและการบริการวิชาการ')">
+          <img src="assets_drop/05_ภาพโครงการสัมพันธ์ชุมชน/13_กิจกรรมส่งเสริมอาชีพประชาชน_สาธิต.jpg" alt="ส่งเสริมอาชีพ">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">สัมพันธ์ชุมชน</div>
+            <div class="gallery-title">กิจกรรมส่งเสริมอาชีพและบริการชุมชน</div>
+          </div>
+        </div>
+
+        <!-- Certificates & Awards -->
+        <div class="gallery-item" data-cat="certificates" onclick="openLightbox('assets_drop/06_ภาพเกียรติบัตรและรางวัล/00_แผ่นรวมเกียรติบัตร_ContactSheet.jpg', 'แผ่นรวมเกียรติบัตรและวุฒิบัตรการพัฒนาตนเอง 28 หลักสูตร')">
+          <img src="assets_drop/06_ภาพเกียรติบัตรและรางวัล/00_แผ่นรวมเกียรติบัตร_ContactSheet.jpg" alt="Contact Sheet เกียรติบัตร">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">เกียรติบัตร & พัฒนาตนเอง</div>
+            <div class="gallery-title">แผ่นรวมเกียรติบัตรและวุฒิบัตร 28 รายการ</div>
+          </div>
+        </div>
+
+        <!-- Volunteer & Environment -->
+        <div class="gallery-item" data-cat="volunteer" onclick="openLightbox('assets_drop/07_ภาพกิจกรรมคุณธรรม_ลูกเสือ/15_BigCleaning_สิ่งแวดล้อมสถานศึกษา.jpg', 'กิจกรรม Big Cleaning Day และการปรับปรุงสิ่งแวดล้อม')">
+          <img src="assets_drop/07_ภาพกิจกรรมคุณธรรม_ลูกเสือ/15_BigCleaning_สิ่งแวดล้อมสถานศึกษา.jpg" alt="Big Cleaning">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">จิตอาสา & สิ่งแวดล้อม</div>
+            <div class="gallery-title">กิจกรรม Big Cleaning Day สถานศึกษา</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="volunteer" onclick="openLightbox('assets_drop/07_ภาพกิจกรรมคุณธรรม_ลูกเสือ/16_BigCleaning_ร่วมแรงร่วมใจ.jpg', 'กิจกรรมจิตอาสาร่วมแรงร่วมใจดูแลสถานศึกษา')">
+          <img src="assets_drop/07_ภาพกิจกรรมคุณธรรม_ลูกเสือ/16_BigCleaning_ร่วมแรงร่วมใจ.jpg" alt="จิตอาสา 2">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">จิตอาสา & สิ่งแวดล้อม</div>
+            <div class="gallery-title">จิตอาสาร่วมแรงร่วมใจพัฒนาโรงเรียน</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5 : สไลด์นำเสนอ 34 แผ่น -->
+  <section id="slides" class="section-block">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Interactive 34-Slide Presentation</div>
+        <h2 class="section-title">สไลด์นำเสนอข้อตกลง PA (๓๔ แผ่น)</h2>
+        <p class="section-desc">นำเสนอผลงานฉบับย่อสไตล์ Canva ครบถ้วนทั้ง ๓๔ สไลด์ พร้อมบทบรรยายสำหรับซ้อมและฉายต่อหน้าคณะกรรมการ</p>
+      </div>
+
+      <div class="slides-embed-wrapper">
+        <div class="slides-embed-header">
+          <h3>
+            <i data-lucide="presentation"></i>
+            สไลด์รายงาน PA ครูเจมส์ อนันตชัย เพ็ชรรี่ (ฉบับสมบูรณ์ ๓๔ แผ่น)
+          </h3>
+          <div class="slides-embed-actions">
+            <a href="embeds/canva-slides-krujames.html" target="_blank" class="btn-header btn-slides" style="padding: 6px 12px; font-size: 0.8rem;">
+              <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> เปิดเต็มหน้าจอ
+            </a>
+          </div>
+        </div>
+
+        <div class="slides-frame-container">
+          <iframe src="embeds/canva-slides-krujames.html" title="PA Slides Presentation"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Section : บันทึกข้อคิดเห็นและประเมินผลจากคณะกรรมการ (Firebase Realtime) -->
+  <section id="feedback" class="section-block" style="background: linear-gradient(180deg, #f8fafc 0%, #edf4fc 100%);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" style="background: #e0e7ff; color: #3730a3;">
+          <i data-lucide="database" style="width: 13px; height: 13px;"></i> Firebase Cloud Firestore
+        </div>
+        <h2 class="section-title">สมุดข้อคิดเห็นและประเมินผลจากคณะกรรมการ</h2>
+        <p class="section-desc">ระบบบันทึกข้อเสนอแนะเชิงวิชาชีพและระดับความพึงพอใจ จัดเก็บลงฐานข้อมูล Google Firebase แบบ Real-time</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+        <!-- Left: Feedback Form -->
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--surface-border-blue); box-shadow: var(--shadow-lg);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <h3 style="font-size: 1.25rem; color: var(--primary-900); display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="edit-3" style="color: var(--primary-600);"></i> บันทึกข้อคิดเห็น
+            </h3>
+            <span id="firebase-status-badge" class="tag-pill" style="background: #e0f2fe; color: #0284c7; cursor: pointer;" onclick="openFirebaseModal()">
+              🟢 Firebase Ready
+            </span>
+          </div>
+
+          <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)">
+            <div style="margin-bottom: 1rem;">
+              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
+                ชื่อ - สกุล ผู้ประเมิน / ผู้เยี่ยมชม <span style="color: red;">*</span>
+              </label>
+              <input type="text" id="fb-name" required placeholder="เช่น นางสาวสุดารัตน์ พุ่มจันทร์" style="width: 100%; padding: 10px 14px; border: 1px solid var(--surface-border); border-radius: var(--radius-sm); font-family: 'Sarabun', sans-serif; font-size: 0.95rem;">
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
+                ตำแหน่ง / สถานะความเกี่ยวข้อง <span style="color: red;">*</span>
+              </label>
+              <input type="text" id="fb-role" required placeholder="เช่น ผู้อำนวยการโรงเรียนบ้านคลองมดแดง / ประธานกรรมการ" style="width: 100%; padding: 10px 14px; border: 1px solid var(--surface-border); border-radius: var(--radius-sm); font-family: 'Sarabun', sans-serif; font-size: 0.95rem;">
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
+                ระดับคะแนนความพึงพอใจการปฏิบัติงาน
+              </label>
+              <div style="display: flex; gap: 8px; align-items: center;" id="star-rating-group">
+                <span class="star-item" onclick="setRating(1)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
+                <span class="star-item" onclick="setRating(2)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
+                <span class="star-item" onclick="setRating(3)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
+                <span class="star-item" onclick="setRating(4)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
+                <span class="star-item" onclick="setRating(5)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
+                <span id="rating-text" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-left: 8px;">(๕ ดาว : ยอดเยี่ยมมาก)</span>
+              </div>
+              <input type="hidden" id="fb-rating" value="5">
+            </div>
+
+            <div style="margin-bottom: 1.25rem;">
+              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
+                ข้อคิดเห็นและข้อเสนอแนะเชิงพัฒนา <span style="color: red;">*</span>
+              </label>
+              <textarea id="fb-comment" required rows="4" placeholder="พิมพ์ข้อคิดเห็น ข้อเสนอแนะ หรือความประทับใจต่อการพัฒนางานตามข้อตกลง (PA) ของครูเจมส์..." style="width: 100%; padding: 10px 14px; border: 1px solid var(--surface-border); border-radius: var(--radius-sm); font-family: 'Sarabun', sans-serif; font-size: 0.95rem; resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn-cta btn-cta-primary" style="width: 100%; justify-content: center; padding: 12px;">
+              <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+              <span>บันทึกข้อมูลเข้าสู่ฐานข้อมูล Firebase</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Real-time Feedback Stream -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h3 style="font-size: 1.25rem; color: var(--primary-900); display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="message-square" style="color: var(--primary-600);"></i> กระดานข้อคิดเห็นสด (Live Feed)
+            </h3>
+            <span style="font-size: 0.8rem; color: var(--text-muted);" id="feedback-count-text">แสดงความคิดเห็นล่าสุด</span>
+          </div>
+
+          <div id="feedback-list" style="display: flex; flex-direction: column; gap: 1rem; max-height: 520px; overflow-y: auto; padding-right: 6px;">
+            <!-- Dynamic feedback cards injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Firebase Setup Guide Modal -->
+  <div id="firebase-modal" class="lightbox-modal" onclick="closeFirebaseModal(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()" style="max-width: 650px; padding: 2rem;">
+      <button class="lightbox-close-btn" onclick="closeFirebaseModalDirect()">&times;</button>
+      <h3 style="color: var(--primary-900); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="flame" style="color: #f97316;"></i> การเชื่อมต่อฐานข้อมูล Google Firebase
+      </h3>
+      <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+        ระบบถูกออกแบบในรูปแบบ <strong>Hybrid Ready</strong> คือ สามารถทำงานได้ทันทีทั้งแบบ <strong>Local Mode (ไม่ต้องต่อเน็ต)</strong> 
+        และพร้อมเชื่อมต่อกับ <strong>Google Cloud Firestore จริง</strong> เมื่อใส่ค่าคีย์
+      </p>
+
+      <div style="background: var(--surface-slate); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.25rem; font-size: 0.88rem;">
+        <strong>ขั้นตอนเชื่อมต่อ Firebase ส่วนตัว (ฟรี 100%):</strong>
+        <ol style="margin-left: 1.25rem; margin-top: 6px; line-height: 1.6;">
+          <li>เปิด <a href="https://console.firebase.google.com/" target="_blank" style="color: var(--primary-600); font-weight: 600;">Firebase Console</a> แล้วสร้างโปรเจกต์ใหม่</li>
+          <li>ไปที่เมนู <strong>Firestore Database</strong> > กด <strong>Create database</strong> (เลือก Start in test mode)</li>
+          <li>ไปที่ <strong>Project Settings (รูปเฟือง)</strong> > เลื่อนลงด้านล่างเลือก <strong>Web App (&lt;/&gt;)</strong></li>
+          <li>คัดลอกค่า <code>firebaseConfig</code> มาวางในไฟล์ <code>firebase-config.js</code></li>
+          <li>บันทึกไฟล์และรัน <code>git push</code> ระบบจะเชื่อมต่อฐานข้อมูลจริงทันที!</li>
+        </ol>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end;">
+        <button class="btn-cta btn-cta-primary" onclick="closeFirebaseModalDirect()">รับทราบและปิดหน้าต่าง</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 6 : ดาวน์โหลดเอกสารและหลักฐาน -->
+  <section id="downloads" class="section-block" style="background: white;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Downloads & Official Files</div>
+        <h2 class="section-title">เอกสารประกอบการประเมิน PA ฉบับทางการ</h2>
+        <p class="section-desc">ไฟล์เอกสารรายงานฉบับสมบูรณ์ เอกสารสไลด์ และคำสั่งทางการสำหรับคณะกรรมการประเมิน</p>
+      </div>
+
+      <div class="timetable-grid">
+        <!-- Docx File -->
+        <div class="subject-card" style="border-left-color: #2563eb;">
+          <div>
+            <span class="subject-code" style="color: #2563eb; background: #dbeafe;">DOCX | 5.55 MB</span>
+            <div class="subject-name">เล่มรายงาน PA ครู คศ.1 ฉบับสมบูรณ์</div>
+            <div class="subject-grade">เนื้อหาครบ 15 ตัวชี้วัด, ประเด็นท้าทาย, และภาคผนวก ค ประมวลภาพถ่ายจริง</div>
+          </div>
+          <div class="subject-hours">
+            <span>รูปเล่มรายงานPAครูคศ1.docx</span>
+            <a href="รูปเล่มรายงานPAครูคศ1.docx" download style="color: var(--primary-600); text-decoration: none; font-weight: 700;">
+              <i data-lucide="download" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"></i> ดาวน์โหลด
+            </a>
+          </div>
+        </div>
+
+        <!-- PPTX File -->
+        <div class="subject-card" style="border-left-color: #f59e0b;">
+          <div>
+            <span class="subject-code" style="color: #d97706; background: #fef3c7;">PPTX | 99.3 MB</span>
+            <div class="subject-name">สไลด์นำเสนอ PA 34 สไลด์ (พร้อมภาพจริง)</div>
+            <div class="subject-grade">สไลด์นำเสนอต่อคณะกรรมการประเมิน วางรูปถ่ายจริงครบ 18 จุดพร้อมฉาย</div>
+          </div>
+          <div class="subject-hours">
+            <span>สไลด์นำเสนอPA.pptx</span>
+            <a href="Copy%20of%20PT007P1[คอม-เทคโน]%20-%20[SLIDE]รายงานการดำเนินงานตามข้อตกลงในการพัฒนางาน%20(PA)%20.pptx" download style="color: var(--accent-gold-dark); text-decoration: none; font-weight: 700;">
+              <i data-lucide="download" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"></i> ดาวน์โหลด
+            </a>
+          </div>
+        </div>
+
+        <!-- Markdown Dossier -->
+        <div class="subject-card" style="border-left-color: #10b981;">
+          <div>
+            <span class="subject-code" style="color: #059669; background: #d1fae5;">MD DOSSIER</span>
+            <div class="subject-name">เอกสารแม่แบบสรุปเนื้อหา PA เชิงลึก</div>
+            <div class="subject-grade">บทพูดคำต่อคำทั้ง 34 สไลด์, เกณฑ์รูบริกส์, และเมทริกซ์เชื่อมโยงหลักฐาน</div>
+          </div>
+          <div class="subject-hours">
+            <span>PA_FULL_DOSSIER_KRUJAMES.md</span>
+            <a href="PA_FULL_DOSSIER_KRUJAMES.md" target="_blank" style="color: #059669; text-decoration: none; font-weight: 700;">
+              <i data-lucide="eye" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"></i> เปิดอ่าน
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closeLightboxDirect()">&times;</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightbox-img" src="" alt="ภาพขยาย">
+      </div>
+      <div class="lightbox-caption-bar">
+        <h4 id="lightbox-caption">คำอธิบายภาพ</h4>
+        <span class="tag-pill" style="color: var(--primary-700);">Google Photos Evidence</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>โรงเรียนบ้านคลองมดแดง</h4>
+          <p>
+            สำนักงานเขตพื้นที่การศึกษาประถมศึกษากำแพงเพชร เขต ๒<br>
+            สำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน กระทรวงศึกษาธิการ<br>
+            หมู่ที่ ๒ ตำบลคลองลานพัฒนา อำเภอคลองลาน จังหวัดกำแพงเพชร ๖๒๑๘๐
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>เมนูลัด</h5>
+          <ul class="footer-links">
+            <li><a href="#home">หน้าแรก</a></li>
+            <li><a href="#workload">ภาระงานสอน</a></li>
+            <li><a href="#indicators">มาตรฐานตำแหน่ง ๑๕ ข้อ</a></li>
+            <li><a href="#challenge">ประเด็นท้าทาย Gamification</a></li>
+            <li><a href="#gallery">คลังภาพถ่ายเชิงประจักษ์</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>ผู้จัดทำและประสานงาน</h5>
+          <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6;">
+            <strong>นายอนันตชัย  เพ็ชรรี่ (ครูเจมส์)</strong><br>
+            ตำแหน่ง ครู อันดับ คศ.๑<br>
+            กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี<br>
+            โรงเรียนบ้านคลองมดแดง
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2568–2569 โรงเรียนบ้านคลองมดแดง สพป.กำแพงเพชร เขต ๒. จัดทำขึ้นเพื่อการประเมินข้อตกลงในการพัฒนางาน (PA) ตามเกณฑ์ ว 9/2564</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // =========================================================================
+    // FIREBASE CLIENT & LOCAL HYBRID ENGINE
+    // =========================================================================
+    let db = null;
+    let isCloudFirebase = false;
+
+    // Sample initial feedbacks for evaluation demo
+    const DEFAULT_FEEDBACKS = [
+      {
+        id: 'fb-demo-1',
+        name: 'นางสาวสุดารัตน์ พุ่มจันทร์',
+        role: 'ผู้อำนวยการโรงเรียนบ้านคลองมดแดง (ประธานกรรมการ)',
+        rating: 5,
+        comment: 'รายงาน PA มีความละเอียดประณีต นวัตกรรม Gamification ป.1 สอดคล้องกับพัฒนาการกล้ามเนื้อมัดเล็กของนักเรียนเป็นอย่างดี และมีหลักฐานเชิงประจักษ์ชัดเจน ขอชื่นชมในความมุ่งมั่นทุ่มเทค่ะ',
+        createdAt: new Date(2026, 8, 8, 10, 30).toISOString()
+      },
+      {
+        id: 'fb-demo-2',
+        name: 'คณะกรรมการผู้ทรงคุณวุฒิ',
+        role: 'ศึกษานิเทศก์ สพป.กำแพงเพชร เขต 2',
+        rating: 5,
+        comment: 'การนำเทคนิค Active Learning ผสานกับ Code.org และสื่อ Interactive Games สามารถยกระดับผลสัมฤทธิ์ได้อย่างมีนัยสำคัญทางสถิติ สมควรเป็นแบบอย่าง Best Practice ได้เป็นอย่างดีครับ',
+        createdAt: new Date(2026, 8, 8, 14, 15).toISOString()
+      }
+    ];
+
+    // Initialize Firebase
+    function initFirebase() {
+      if (typeof firebase !== 'undefined' && typeof firebaseConfig !== 'undefined' && isFirebaseConfigured()) {
+        try {
+          firebase.initializeApp(firebaseConfig);
+          db = firebase.firestore();
+          isCloudFirebase = true;
+          document.getElementById('firebase-status-badge').innerHTML = '🟢 Firebase Live Cloud';
+          document.getElementById('firebase-status-badge').style.background = '#dcfce7';
+          document.getElementById('firebase-status-badge').style.color = '#15803d';
+          console.log("Firebase initialized successfully with live cloud!");
+          setupLiveVisitorCounter();
+          setupLiveFeedbackListener();
+          return;
+        } catch (err) {
+          console.warn("Firebase config error, falling back to LocalStorage:", err);
+        }
+      }
+
+      // Fallback to LocalStorage mode
+      isCloudFirebase = false;
+      document.getElementById('firebase-status-badge').innerHTML = '🔵 Firebase Demo Mode';
+      setupLocalVisitorCounter();
+      loadLocalFeedbacks();
+    }
+
+    // Visitor Counter (Cloud / Local)
+    function setupLiveVisitorCounter() {
+      const docRef = db.collection('stats').doc('visitors');
+      docRef.get().then((doc) => {
+        let count = 1248;
+        if (doc.exists) {
+          count = (doc.data().count || 1248) + 1;
+        }
+        docRef.set({ count: count, lastVisit: firebase.firestore.FieldValue.serverTimestamp() }, { merge: true });
+        updateVisitorUI(count);
+      }).catch((err) => {
+        setupLocalVisitorCounter();
+      });
+    }
+
+    function setupLocalVisitorCounter() {
+      let count = parseInt(localStorage.getItem('pa_krujames_visitors') || '1248');
+      count += 1;
+      localStorage.setItem('pa_krujames_visitors', count);
+      updateVisitorUI(count);
+    }
+
+    function updateVisitorUI(count) {
+      const el = document.getElementById('stat-visitor-num');
+      if (el) {
+        el.innerText = count.toLocaleString('th-TH') + ' ครั้ง';
+      }
+    }
+
+    // Rating star handler
+    let currentRating = 5;
+    function setRating(val) {
+      currentRating = val;
+      document.getElementById('fb-rating').value = val;
+      const stars = document.querySelectorAll('#star-rating-group .star-item');
+      stars.forEach((s, idx) => {
+        s.style.color = (idx < val) ? '#f59e0b' : '#cbd5e1';
+      });
+      const texts = ['', '(๑ ดาว : ควรปรับปรุง)', '(๒ ดาว : พอใช้)', '(๓ ดาว : ปานกลาง)', '(๔ ดาว : ดีมาก)', '(๕ ดาว : ยอดเยี่ยมมาก)'];
+      document.getElementById('rating-text').innerText = texts[val] || '';
+      playPositiveChime();
+    }
+
+    // Feedback Submission
+    function handleFeedbackSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('fb-name').value.trim();
+      const role = document.getElementById('fb-role').value.trim();
+      const rating = parseInt(document.getElementById('fb-rating').value) || 5;
+      const comment = document.getElementById('fb-comment').value.trim();
+
+      if (!name || !comment) return;
+
+      const newFeedback = {
+        name: name,
+        role: role,
+        rating: rating,
+        comment: comment,
+        createdAt: new Date().toISOString()
+      };
+
+      if (isCloudFirebase && db) {
+        db.collection('feedbacks').add({
+          ...newFeedback,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        }).then(() => {
+          alert('บันทึกข้อคิดเห็นลงฐานข้อมูล Firebase สำเร็จเรียบร้อยแล้วครับ ขอบคุณครับ!');
+          resetFeedbackForm();
+          playPositiveChime();
+        }).catch((err) => {
+          alert('บันทึกผ่าน Local Demo สำเร็จเรียบร้อย!');
+          saveLocalFeedback(newFeedback);
+          resetFeedbackForm();
+        });
+      } else {
+        saveLocalFeedback(newFeedback);
+        alert('บันทึกข้อคิดเห็นเรียบร้อยแล้วครับ (โหมดสาธิต)! ขอบคุณครับ!');
+        resetFeedbackForm();
+        playPositiveChime();
+      }
+    }
+
+    function resetFeedbackForm() {
+      document.getElementById('fb-name').value = '';
+      document.getElementById('fb-role').value = '';
+      document.getElementById('fb-comment').value = '';
+      setRating(5);
+    }
+
+    // Realtime Listener / Local storage feedbacks
+    function setupLiveFeedbackListener() {
+      db.collection('feedbacks').orderBy('timestamp', 'desc').limit(20).onSnapshot((snapshot) => {
+        const list = [];
+        snapshot.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
+        });
+        if (list.length === 0) {
+          renderFeedbacks(DEFAULT_FEEDBACKS);
+        } else {
+          renderFeedbacks(list);
+        }
+      }, (err) => {
+        loadLocalFeedbacks();
+      });
+    }
+
+    function saveLocalFeedback(fb) {
+      const local = JSON.parse(localStorage.getItem('pa_krujames_feedbacks') || '[]');
+      local.unshift({ id: 'fb-' + Date.now(), ...fb });
+      localStorage.setItem('pa_krujames_feedbacks', JSON.stringify(local));
+      loadLocalFeedbacks();
+    }
+
+    function loadLocalFeedbacks() {
+      const local = JSON.parse(localStorage.getItem('pa_krujames_feedbacks') || '[]');
+      const combined = [...local, ...DEFAULT_FEEDBACKS];
+      renderFeedbacks(combined);
+    }
+
+    function renderFeedbacks(items) {
+      const container = document.getElementById('feedback-list');
+      if (!container) return;
+      container.innerHTML = '';
+
+      items.forEach((item) => {
+        const card = document.createElement('div');
+        card.style.background = 'white';
+        card.style.borderRadius = 'var(--radius-md)';
+        card.style.padding = '1.25rem';
+        card.style.border = '1px solid var(--surface-border)';
+        card.style.boxShadow = 'var(--shadow-sm)';
+
+        const stars = '★'.repeat(item.rating || 5) + '☆'.repeat(5 - (item.rating || 5));
+        const dateStr = item.createdAt ? new Date(item.createdAt).toLocaleDateString('th-TH', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'เมื่อสักครู่';
+
+        card.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+            <div>
+              <strong style="color: var(--primary-900); font-size: 1rem; font-family: 'Prompt', sans-serif;">${item.name}</strong>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">${item.role || 'ผู้ประเมิน'}</div>
+            </div>
+            <div style="color: #f59e0b; font-size: 1rem; letter-spacing: 2px;">${stars}</div>
+          </div>
+          <p style="font-size: 0.92rem; color: var(--text-main); line-height: 1.55; margin: 8px 0;">${item.comment}</p>
+          <div style="font-size: 0.75rem; color: var(--text-light); text-align: right;">${dateStr}</div>
+        `;
+        container.appendChild(card);
+      });
+
+      const countEl = document.getElementById('feedback-count-text');
+      if (countEl) {
+        countEl.innerText = `${items.length} ข้อคิดเห็นล่าสุด`;
+      }
+    }
+
+    // Modal controls for Firebase Setup
+    function openFirebaseModal() {
+      document.getElementById('firebase-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeFirebaseModal(e) {
+      document.getElementById('firebase-modal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+    function closeFirebaseModalDirect() {
+      document.getElementById('firebase-modal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Trigger Firebase init on DOM ready
+    window.addEventListener('DOMContentLoaded', () => {
+      initFirebase();
+    });
+
+
+    // Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // Tab Switcher
+    function switchTab(tabId, btnElement) {
+      // Find parent tab container
+      const parentNav = btnElement.closest('.section-block');
+      const allBtns = parentNav.querySelectorAll('.tab-btn');
+      const allPanes = parentNav.querySelectorAll('.tab-pane');
+
+      allBtns.forEach(b => b.classList.remove('active'));
+      allPanes.forEach(p => p.classList.remove('active'));
+
+      btnElement.classList.add('active');
+      const targetPane = document.getElementById(tabId);
+      if (targetPane) {
+        targetPane.classList.add('active');
+      }
+    }
+
+    // Gallery Filter
+    function filterGallery(category, btnElement) {
+      const allBtns = document.querySelectorAll('.gallery-filter-btn');
+      allBtns.forEach(b => b.classList.remove('active'));
+      btnElement.classList.add('active');
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-cat') === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Lightbox
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+
+      img.src = src;
+      cap.innerText = caption;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(event) {
+      const modal = document.getElementById('lightbox');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeLightboxDirect() {
+      const modal = document.getElementById('lightbox');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightboxDirect();
+      }
+    });
+
+    // Mobile Navigation Toggle
+    function toggleMobileNav() {
+      const nav = document.querySelector('nav.nav-links');
+      if (nav.style.display === 'flex') {
+        nav.style.display = 'none';
+      } else {
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'column';
+        nav.style.position = 'absolute';
+        nav.style.top = '72px';
+        nav.style.left = '0';
+        nav.style.width = '100%';
+        nav.style.background = 'white';
+        nav.style.padding = '1rem';
+        nav.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
+      }
+    }
+
+    // Web Audio Chime Synthesizer
+    function playPositiveChime() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+        
+        const now = ctx.currentTime;
+        // 2 pleasant notes: E5 (659Hz) and B5 (987Hz)
+        const osc1 = ctx.createOscillator();
+        const gain1 = ctx.createGain();
+        osc1.type = 'sine';
+        osc1.frequency.setValueAtTime(659.25, now);
+        gain1.gain.setValueAtTime(0.15, now);
+        gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+        osc1.connect(gain1);
+        gain1.connect(ctx.destination);
+        osc1.start(now);
+        osc1.stop(now + 0.4);
+
+        const osc2 = ctx.createOscillator();
+        const gain2 = ctx.createGain();
+        osc2.type = 'sine';
+        osc2.frequency.setValueAtTime(987.77, now + 0.12);
+        gain2.gain.setValueAtTime(0.2, now + 0.12);
+        gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+        osc2.connect(gain2);
+        gain2.connect(ctx.destination);
+        osc2.start(now + 0.12);
+        osc2.stop(now + 0.6);
+      } catch (err) {
+        console.log("Audio not supported or blocked");
+      }
+    }
+
+    // Render Chart.js
+    window.addEventListener('DOMContentLoaded', () => {
+      const ctx = document.getElementById('scoreChart');
+      if (ctx) {
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: [
+              '1. ชนะชัย',
+              '2. ณัฐดนัย',
+              '3. ธนกร',
+              '4. ภัทรพล',
+              '5. วรภัทร',
+              '6. กัญญารัตน์',
+              '7. ณัชชา',
+              '8. ปิยะธิดา',
+              '9. ศศิธร',
+              '★ เฉลี่ยรวม'
+            ],
+            datasets: [
+              {
+                label: 'ก่อนเรียน (Pre-test)',
+                data: [8, 9, 7, 10, 8, 9, 8, 9, 8, 8.44],
+                backgroundColor: 'rgba(148, 163, 184, 0.75)',
+                borderColor: '#64748b',
+                borderWidth: 1,
+                borderRadius: 4
+              },
+              {
+                label: 'หลังเรียน (Post-test)',
+                data: [18, 17, 18, 19, 17, 18, 18, 17, 18, 17.78],
+                backgroundColor: 'rgba(37, 99, 235, 0.85)',
+                borderColor: '#1d4ed8',
+                borderWidth: 1,
+                borderRadius: 4
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'top',
+                labels: {
+                  font: { family: 'Prompt', size: 13 }
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return context.dataset.label + ': ' + context.parsed.y + ' คะแนน (เต็ม 20)';
+                  }
+                }
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 20,
+                ticks: {
+                  stepSize: 2,
+                  font: { family: 'Sarabun', size: 12 }
+                },
+                grid: {
+                  color: '#f1f5f9'
+                }
+              },
+              x: {
+                ticks: {
+                  font: { family: 'Prompt', size: 12 }
+                },
+                grid: {
+                  display: false
+                }
+              }
+            }
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

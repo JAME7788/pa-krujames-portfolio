@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px;color:#43302e}
+  .wrap{max-width:940px;margin:0 auto}
+  .head{background:linear-gradient(135deg,#4a1220,#5f1b29 40%,#8a2333);color:#fff;border-radius:18px;
+    padding:22px 28px;margin-bottom:16px;position:relative;overflow:hidden}
+  .head::after{content:'📋';position:absolute;right:18px;bottom:-14px;font-size:74px;opacity:.16;transform:rotate(-12deg)}
+  .head h2{font-family:'Prompt';font-size:22px;position:relative;z-index:1}
+  .head p{font-size:13.5px;color:#f0d5c9;margin-top:5px;line-height:1.6;position:relative;z-index:1}
+  .sum{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:16px}
+  .s{background:#fff;border-radius:13px;padding:14px 10px;text-align:center;position:relative;overflow:hidden;
+    box-shadow:0 3px 11px rgba(95,27,41,.08)}
+  .s::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#8a2333,#c9a227)}
+  .s .n{font-family:'Prompt';font-weight:700;font-size:21px;color:#5f1b29}
+  .s .t{font-size:12px;color:#6f5651;line-height:1.4;margin-top:3px}
+  .dsec{font-family:'Prompt';font-weight:600;font-size:15.5px;color:#fff;background:linear-gradient(90deg,#8a2333,#a53446);
+    padding:10px 18px;border-radius:11px;margin:18px 0 11px;display:flex;align-items:center;gap:10px}
+  .dsec span{margin-left:auto;font-size:12.5px;background:rgba(255,255,255,.2);padding:3px 12px;border-radius:999px}
+  .i{background:#fff;border-radius:14px;margin-bottom:10px;overflow:hidden;box-shadow:0 3px 11px rgba(95,27,41,.08);
+    opacity:0;transform:translateY(14px);transition:.5s ease}
+  .i.in{opacity:1;transform:none}
+  .ih{display:flex;gap:11px;align-items:center;padding:13px 17px;background:linear-gradient(90deg,#fdf6f1,#fff);
+    border-bottom:1px solid #f5e8e2}
+  .ih .code{font-family:'Prompt';font-weight:700;font-size:13px;color:#fff;background:#8a2333;
+    padding:3px 10px;border-radius:7px;flex-shrink:0}
+  .ih h3{font-family:'Prompt';font-size:14.5px;color:#5f1b29;line-height:1.35;flex:1}
+  .lv{flex-shrink:0;font-family:'Prompt';font-weight:700;font-size:12.5px;padding:4px 12px;border-radius:999px;white-space:nowrap}
+  .l4{background:linear-gradient(90deg,#1d7a3f,#2fa055);color:#fff}
+  .l3{background:#fff3d1;color:#8a6d1a;border:1px solid #e8cf8a}
+  .ib{padding:13px 17px;display:grid;grid-template-columns:1fr 1fr;gap:13px}
+  .box h4{font-family:'Prompt';font-size:12.5px;color:#9b7c74;margin-bottom:5px;letter-spacing:.3px}
+  .box ol{margin:0;padding-left:17px}
+  .box li{font-size:12.3px;line-height:1.5;color:#6f5651;margin-bottom:2px}
+  .box li.hit{color:#1d7a3f;font-weight:600}
+  .ev{font-size:13px;line-height:1.6;color:#5f4a46}
+  .ev b{color:#8a2333}
+  .gap{margin-top:7px;font-size:12.3px;line-height:1.55;color:#a8323b;background:#fdeaea;
+    padding:7px 11px;border-radius:9px}
+  .gap b{color:#8a2333}
+  @media(max-width:700px){.ib{grid-template-columns:1fr}.sum{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h2>📋 ตารางประเมินตนเอง 15 ตัวชี้วัด · องค์ประกอบที่ 1 ตอนที่ 1 (60 คะแนน)</h2>
+    <p>เกณฑ์: ระดับ 1 = ต่ำกว่าที่คาดหวังมาก · ระดับ 2 = ต่ำกว่าที่คาดหวัง · ระดับ 3 = ตามที่คาดหวัง · ระดับ 4 = สูงกว่าที่คาดหวัง — แถบเขียวคือระดับที่มีหลักฐานรองรับแล้ว</p>
+  </div>
+
+  <div class="sum">
+    <div class="s"><div class="n">15</div><div class="t">ตัวชี้วัด<br>3 ด้าน</div></div>
+    <div class="s"><div class="n">10</div><div class="t">ตัวชี้วัดที่มีหลักฐาน<br>ถึงระดับ 4</div></div>
+    <div class="s"><div class="n">5</div><div class="t">ตัวชี้วัดที่ควร<br>เติมหลักฐานเพิ่ม</div></div>
+    <div class="s"><div class="n">60</div><div class="t">คะแนนเต็ม<br>ตอนที่ 1</div></div>
+  </div>
+
+  <div class="dsec">📘 ด้านที่ 1 · การจัดการเรียนรู้ <span>8 ตัวชี้วัด</span></div>
+
+  <div class="i"><div class="ih"><span class="code">1.1</span><h3>สร้างและหรือพัฒนาหลักสูตร</h3><span class="lv l4">ระดับ 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>วิเคราะห์หลักสูตร มาตรฐานการเรียนรู้และตัวชี้วัด</li>
+        <li>มีรายวิชาหรือคำอธิบายรายวิชา</li>
+        <li>มีหน่วยการเรียนรู้ครอบคลุมเนื้อหาหลักสูตร</li>
+        <li class="hit">นำไปใช้กับผู้เรียนและบริบทสถานศึกษาได้เหมาะสม</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">จัดทำหน่วยการเรียนรู้สอดคล้องมาตรฐานและตัวชี้วัด · หน่วยบูรณาการ <b>"ทักษะอาชีพ"</b> ตามบริบทท้องถิ่น · วิเคราะห์หลักสูตร <b>ว 4.2</b> ในการออกแบบนวัตกรรม ป.1 · นำไปใช้จริงครบทุกระดับชั้น ป.1–ม.3</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">1.2</span><h3>ออกแบบการจัดการเรียนรู้</h3><span class="lv l4">ระดับ 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>ออกแบบหน่วยสอดคล้องธรรมชาติของสาระ</li>
+        <li>มีหน่วยการเรียนรู้</li>
+        <li>มีกิจกรรมการเรียนรู้ที่มีวิธีปฏิบัติหลากหลาย</li>
+        <li class="hit">พัฒนากิจกรรมสอดคล้องธรรมชาติสาระ อำนวยความสะดวก ส่งเสริมผู้เรียนเต็มศักยภาพ</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">ใช้เทคนิคการสอน <b>15 รูปแบบ</b> (สาธิต/ทดลอง เกม สถานการณ์จำลอง บทบาทสมมุติ โครงงาน คอมพิวเตอร์ช่วยสอน ทัศนศึกษา ฯลฯ) · ออกแบบเน้นผู้เรียนเป็นสำคัญตามข้อตกลง PA</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">1.3</span><h3>จัดกิจกรรมการเรียนรู้</h3><span class="lv l4">ระดับ 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>วิเคราะห์ผู้เรียนรายบุคคล</li>
+        <li>จัดการเรียนรู้เน้นกระบวนการ Active Learning</li>
+        <li>มีแผนการจัดการเรียนรู้ครบองค์ประกอบ นำไปปฏิบัติได้จริง</li>
+        <li class="hit">มีบันทึกหลังการสอนและนำผลมาพัฒนาแผนตามข้อเสนอแนะ</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">มี<b>แผนการจัดการเรียนรู้</b>และ<b>บันทึกหลังแผนการจัดการเรียนรู้</b> (แนบในหน้าเอกสารการประเมิน) · จัดการเรียนรู้แบบ Active Learning · ผ่านการอบรมออกแบบกิจกรรม Active Learning (สพป.กพ.2)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">1.4</span><h3>สร้างและหรือพัฒนาสื่อ นวัตกรรม เทคโนโลยี และแหล่งเรียนรู้</h3><span class="lv l4">ระดับ 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>เลือกสื่อ นวัตกรรม เทคโนโลยีมาใช้</li>
+        <li>ใช้สื่อที่คัดเลือกให้สอดคล้องกับแผน</li>
+        <li>พัฒนาสื่อให้สอดคล้องกับผู้เรียนและมีการเผยแพร่</li>
+        <li class="hit">สร้างหรือจัดทำสื่อ นวัตกรรม เทคโนโลยี แหล่งเรียนรู้ และมีการเผยแพร่</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev"><b>สร้างสื่อ/นวัตกรรม 62 ชิ้น</b> ครอบคลุมบัตรคำ เกมการเรียนรู้ แบบจำลอง สื่อความปลอดภัยไซเบอร์ · <b>เผยแพร่ผ่านเว็บไซต์ E-Portfolio</b> และสื่อออนไลน์ของโรงเรียน — ตรงเกณฑ์ระดับ 4 ทั้งการสร้างและการเผยแพร่</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">1.5</span><h3>วัดและประเมินผลการเรียนรู้</h3><span class="lv l4">ระดับ 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>กำหนดและออกแบบเครื่องมือวัดสอดคล้องมาตรฐานและตัวชี้วัด</li>
+        <li>มีเกณฑ์การวัดและประเมินผลของเครื่องมือ</li>
+        <li>มีการใช้เครื่องมือวัดและประเมินผล</li>
+        <li class="hit">ใช้เครื่องมือวัดและประเมินผลที่หลากหลาย</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">ใช้เครื่องมือหลากหลาย: <b>Pre-test/Post-test</b>, แบบสังเกตพฤติกรรม, แบบประเมินความพึงพอใจ, <b>คลังข้อสอบออนไลน์</b>, รายงานผลจากระบบ Quizizz · วัดผลก่อนเรียน–ระหว่างเรียน–หลังเรียน แล้วนำผลมาพัฒนาผู้เรียน</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">1.6</span><h3>ศึกษา วิเคราะห์ สังเคราะห์ เพื่อแก้ปัญหาหรือพัฒนาการเรียนรู้</h3><span class="lv l3">ระดับ 3 → 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>ศึกษา วิเคราะห์ สังเคราะห์ปัญหาการจัดการเรียนรู้</li>
+        <li>ออกแบบการแก้ปัญหาการจัดการเรียนรู้</li>
+        <li class="hit">ดำเนินการแก้ปัญหาให้เหมาะสมกับผู้เรียนและบริบท</li>
+        <li>นำรูปแบบการจัดการเรียนรู้ที่กำหนด <b>และมีการสรุปผล</b>การแก้ปัญหา</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">วิเคราะห์ปัญหาและดำเนินการแก้ด้วยนวัตกรรม <b>Gamification (ป.1)</b> และ <b>Quizizz (ม.3)</b> ตามกระบวนการ ADDIE</div>
+        <div class="gap">⚠️ <b>ขาดการสรุปผล</b> — ต้องเติมคะแนน Pre/Post-test และสรุปผลการแก้ปัญหาเมื่อสิ้นภาคเรียน จึงจะได้ระดับ 4</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">1.7</span><h3>จัดบรรยากาศที่ส่งเสริมและพัฒนาผู้เรียน</h3><span class="lv l3">ต้องนับกิจกรรม</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์นับจำนวนกิจกรรม + หลักฐาน</h4><ol>
+        <li>1–2 กิจกรรม</li>
+        <li>3–4 กิจกรรม</li>
+        <li>5–6 กิจกรรม</li>
+        <li>7 กิจกรรมขึ้นไป</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">กิจกรรมที่นับได้: ① ห้องเรียนคอมพิวเตอร์ ② ป้ายนิเทศ/สื่อแขวนข้อตกลงในชั้นเรียน ③ เกมการเรียนรู้ ④ ชุมนุมเทคโนโลยี ⑤ ทัศนศึกษาน้ำตกคลองลาน ⑥ สวนเศรษฐกิจพอเพียง ⑦ ระบบคะแนนออนไลน์</div>
+        <div class="gap">⚠️ <b>ต้องมีรูปหลักฐานครบ 7 กิจกรรม</b>จึงได้ระดับ 4 — แนบภาพกิจกรรมละ 1 รูปในหน้านี้</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">1.8</span><h3>อบรมและพัฒนาคุณลักษณะที่ดีของผู้เรียน</h3><span class="lv l4">ระดับ 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์นับจำนวนกิจกรรมอบรมบ่มนิสัย</h4><ol>
+        <li>2 กิจกรรม</li>
+        <li>3 กิจกรรม</li>
+        <li>4 กิจกรรม</li>
+        <li class="hit">5 กิจกรรมขึ้นไป</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">① <b>กิจกรรมสวดมนต์</b> ② <b>กิจกรรมคุณธรรม</b> ป.1–ม.3 ③ <b>ลูกเสือ-เนตรนารี</b> ④ <b>กิจกรรมเพื่อสังคมและสาธารณประโยชน์</b> ⑤ <b>แนะแนว</b> ⑥ สอดแทรกค่านิยม 12 ประการในวิชาที่สอน — <b>รวม 6 กิจกรรม เกินเกณฑ์ระดับ 4</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dsec">🤝 ด้านที่ 2 · การส่งเสริมและสนับสนุนการจัดการเรียนรู้ <span>4 ตัวชี้วัด</span></div>
+
+  <div class="i"><div class="ih"><span class="code">2.1</span><h3>จัดทำข้อมูลสารสนเทศของผู้เรียนและรายวิชา</h3><span class="lv l4">ระดับ 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์นับจำนวนงานที่มีเอกสารปรากฏ</h4><ol>
+        <li>อย่างน้อย 1 งาน</li><li>อย่างน้อย 2 งาน</li><li>อย่างน้อย 3 งาน</li>
+        <li class="hit">อย่างน้อย 4 งานขึ้นไป</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">① <b>ระบบรายงานคะแนนออนไลน์</b> ② ข้อมูลผู้เรียนรายบุคคล/คัดกรอง ③ บันทึกผลคุณลักษณะอันพึงประสงค์และการอ่าน คิด วิเคราะห์ เขียน ④ ข้อมูลรายวิชาที่สอน ⑤ รายงาน SAR — <b>เกิน 4 งาน</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">2.2</span><h3>ดำเนินการตามระบบดูแลช่วยเหลือผู้เรียน</h3><span class="lv l3">ระดับ 3 → 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>จัดทำข้อมูลผู้เรียนตามระบบดูแลช่วยเหลือ</li>
+        <li>มีโครงการ/กิจกรรมแก้ปัญหาสอดคล้องกับความจำเป็น</li>
+        <li class="hit">มีโครงการ/กิจกรรมที่สร้างสรรค์และหลากหลาย</li>
+        <li>มี<b>ผลการแก้ปัญหาหรือพัฒนาผู้เรียนเห็นได้ชัดเจน</b></li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">เยี่ยมบ้าน<b>ครบทุกคน</b> · คัดกรองกลุ่มปกติ/เสี่ยง/มีปัญหา · สอนซ่อมเสริม ป.6 และ ม.3 · กิจกรรมแนะแนว</div>
+        <div class="gap">⚠️ <b>ต้องแสดงผลการช่วยเหลือที่ชัดเจน</b> — เช่น กรณีศึกษานักเรียน 1–2 คนที่ดีขึ้นหลังได้รับการช่วยเหลือ พร้อมข้อมูลก่อน–หลัง</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">2.3</span><h3>ปฏิบัติงานวิชาการและงานอื่น ๆ ของสถานศึกษา</h3><span class="lv l3">ระดับ 3</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>ส่งผลงาน/นักเรียนเข้าร่วมการแข่งขัน</li>
+        <li>ผลงานวิชาการระดับกลุ่มโรงเรียน</li>
+        <li class="hit">ผลงานวิชาการ<b>ระดับเขตพื้นที่การศึกษา/อบจ.</b> และปฏิบัติงานได้ผลดี รวดเร็ว</li>
+        <li>ผลงานวิชาการ<b>ระดับจังหวัด</b> และมีกระบวนการโปร่งใสตรวจสอบได้</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">รางวัลผู้ฝึกสอน<b>ระดับเขตพื้นที่ (สพป.กำแพงเพชร เขต 2)</b> — ชนะเลิศแอนิเมชัน 2D และเหรียญทองการ์ตูนคอมมิค · รางวัลระดับกลุ่มโรงเรียนอีก 4 รายการ · กรรมการตัดสิน Web Page Editor</div>
+        <div class="gap">💡 <b>ระดับ 4 ต้องมีผลงานระดับจังหวัด</b> — หากปีนี้ส่งแข่งศิลปหัตถกรรมระดับจังหวัดหรือสูงกว่า จะยกระดับตัวชี้วัดนี้ได้</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">2.4</span><h3>ประสานความร่วมมือกับผู้ปกครองและภาคีเครือข่าย</h3><span class="lv l4">ระดับ 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>มีช่องทางติดต่อประสานงานกับผู้ปกครอง (เบอร์/ไลน์กลุ่ม)</li>
+        <li>มีกิจกรรมประสานความร่วมมือ (เยี่ยมบ้าน)</li>
+        <li>มีบันทึกรายงานการประสานความร่วมมือ</li>
+        <li class="hit">มี<b>ผลงานที่เกิดจากความร่วมมือ</b>กับผู้ปกครองหรือผู้เกี่ยวข้อง</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev"><b>ประธานโครงการส่งเสริมความสัมพันธ์ชุมชน</b> — มีรายงานผลฉบับสมบูรณ์ ความสำเร็จ <b>ร้อยละ 100</b> ความพึงพอใจของผู้ปกครองระดับมากที่สุด <b>ร้อยละ 86.25</b> (ผู้ตอบ 80 คน) · เยี่ยมบ้านครบทุกคน · ประชุมผู้ปกครองภาคเรียนละ 1 ครั้ง — <b>เป็นผลงานที่เกิดจากความร่วมมือชัดเจน</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dsec">🚀 ด้านที่ 3 · การพัฒนาตนเองและวิชาชีพ <span>3 ตัวชี้วัด</span></div>
+
+  <div class="i"><div class="ih"><span class="code">3.1</span><h3>พัฒนาตนเองอย่างเป็นระบบและต่อเนื่อง</h3><span class="lv l4">ระดับ 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>อบรมด้านภาษาหรือเทคโนโลยี</li>
+        <li>นำความรู้ด้านภาษาและเทคโนโลยีมาใช้ในการปฏิบัติงาน</li>
+        <li>สร้างสื่อหรือนวัตกรรมด้านภาษาและเทคโนโลยี</li>
+        <li class="hit">เป็น<b>แบบอย่างที่ดี</b>ในด้านการใช้ภาษาและเทคโนโลยีในการปฏิบัติงาน</li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">พัฒนาตนเอง <b>179+ ชั่วโมง</b> (2567–2569) · <b>AI for Teachers ครบทุกโมดูล</b> · อบรม CEFR ภาษาอังกฤษ · ดูแลระบบ ICT ทั้งโรงเรียน · เป็นผู้ผลิตสื่อกราฟิก/วิดีโอให้โรงเรียน — <b>เป็นแบบอย่างด้านเทคโนโลยีของสถานศึกษา</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">3.2</span><h3>มีส่วนร่วมในการแลกเปลี่ยนเรียนรู้ทางวิชาชีพ (PLC)</h3><span class="lv l3">ระดับ 3 → 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>เข้าร่วมกลุ่มพัฒนาวิชาชีพครู</li>
+        <li>ร่วมแลกเปลี่ยนเรียนรู้กิจกรรมทางวิชาการใน PLC</li>
+        <li class="hit">สร้างและพัฒนานวัตกรรมจากการเข้าร่วม PLC</li>
+        <li><b>นำนวัตกรรมจาก PLC มาจัดการเรียนรู้เพื่อพัฒนาผู้เรียน</b></li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">ร่วมชุมชนการเรียนรู้ทางวิชาชีพ <b>13 ชั่วโมง/ปี</b> ตาม ID Plan · พัฒนานวัตกรรม Gamification และ Quizizz</div>
+        <div class="gap">⚠️ <b>ต้องเชื่อมโยงให้ชัด</b> — แนบบันทึกกิจกรรม PLC (Logbook) ที่ระบุว่านวัตกรรมเกิดจากการแลกเปลี่ยนใน PLC แล้วนำไปใช้กับผู้เรียนจริง</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i"><div class="ih"><span class="code">3.3</span><h3>นำความรู้จากการพัฒนาตนเองและวิชาชีพมาใช้</h3><span class="lv l4">ระดับ 4</span></div>
+    <div class="ib">
+      <div class="box"><h4>เกณฑ์ระดับ 1–4</h4><ol>
+        <li>มีแผนพัฒนาตนเอง (ID Plan) สอดคล้องกับตนเองและสภาพปัญหา</li>
+        <li>ID Plan สอดคล้องแผนกลยุทธ์สถานศึกษา โดยความเห็นชอบของผู้บริหาร</li>
+        <li>มีการพัฒนาตามแผนพัฒนาตนเอง</li>
+        <li class="hit">นำความรู้ทักษะที่ได้มา<b>พัฒนานวัตกรรมที่ส่งผลต่อคุณภาพผู้เรียน</b></li>
+      </ol></div>
+      <div class="box"><h4>หลักฐานของครูเจมส์</h4>
+        <div class="ev">มี <b>ID Plan 2567 และ 2568</b> ผ่านความเห็นชอบของผู้อำนวยการ · พัฒนาตนเองตามแผนครบถ้วน · <b>นำความรู้จาก AI for Teachers และ Unplugged Coding มาสร้างนวัตกรรม Gamification และ Quizizz ใช้กับผู้เรียนจริง</b> — เส้นทางจากแผน → อบรม → นวัตกรรม → ผู้เรียน ชัดเจน</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const items=[...document.querySelectorAll('.i')];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),50*(items.indexOf(e.target)%5));io.unobserve(e.target)}
+  }),{threshold:.08});
+  items.forEach(el=>io.observe(el));
+  setTimeout(()=>items.forEach(el=>el.classList.add('in')),3000);
+</script>
+</body>
+</html>

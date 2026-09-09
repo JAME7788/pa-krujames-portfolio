@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KruJames Awards Evidence Board</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800&display=swap');
+
+    :root {
+      --red-950: #180106;
+      --red-900: #33040b;
+      --red-800: #640815;
+      --red-700: #9e0c1e;
+      --red-600: #d71930;
+      --gold: #f5c451;
+      --cream: #fff7e8;
+      --paper: #ffffff;
+      --ink: #26080d;
+      --muted: rgba(255, 247, 232, .76);
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      background: transparent;
+      font-family: "Noto Sans Thai", Tahoma, Arial, sans-serif;
+      color: var(--paper);
+    }
+
+    body { padding: 0; }
+
+    .board {
+      position: relative;
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background:
+        radial-gradient(circle at 84% 14%, rgba(245, 196, 81, .23), transparent 28%),
+        linear-gradient(135deg, var(--red-950) 0%, var(--red-800) 48%, #250207 100%);
+      box-shadow: 0 18px 42px rgba(80, 0, 10, .22);
+      isolation: isolate;
+    }
+
+    .board::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, .07) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+      background-size: 42px 42px;
+    }
+
+    .board::after {
+      content: "AWARDS";
+      position: absolute;
+      right: -24px;
+      top: 10px;
+      z-index: -1;
+      color: rgba(255, 255, 255, .055);
+      font-size: 110px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .inner { padding: 24px; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 270px;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 14px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 34px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 18px rgba(245, 196, 81, .66);
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: clamp(28px, 4.2vw, 44px);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 780px;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .score {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .score div {
+      min-height: 82px;
+      padding: 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .17);
+    }
+
+    .score b {
+      display: block;
+      color: var(--gold);
+      font-size: 27px;
+      line-height: 1.05;
+      font-weight: 800;
+    }
+
+    .score span {
+      display: block;
+      margin-top: 5px;
+      color: rgba(255, 247, 232, .82);
+      font-size: 11px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .panel {
+      padding: 14px;
+      border-radius: 8px;
+      background: rgba(30, 1, 7, .72);
+      border: 1px solid rgba(255, 255, 255, .17);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14);
+    }
+
+    .panel.light {
+      background: rgba(255, 250, 238, .97);
+      color: var(--ink);
+    }
+
+    .panel h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .award-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .award {
+      min-height: 100px;
+      padding: 10px;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      border: 2px solid rgba(245, 196, 81, .78);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .award.win {
+      border-color: var(--gold);
+      background: linear-gradient(180deg, #fffdf5, #fff);
+    }
+
+    .award.win::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -80%;
+      width: 52%;
+      height: 100%;
+      background: linear-gradient(100deg, transparent, rgba(245, 196, 81, .22), transparent);
+      animation: sweep 3.6s ease-in-out infinite;
+    }
+
+    @keyframes sweep {
+      0%, 55% { left: -80%; }
+      85%, 100% { left: 130%; }
+    }
+
+    .rank {
+      display: inline-flex;
+      min-height: 24px;
+      align-items: center;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--red-600);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      position: relative;
+      z-index: 1;
+    }
+
+    .award.win .rank {
+      background: linear-gradient(90deg, var(--red-700), var(--red-600));
+      color: #ffe28a;
+    }
+
+    .award strong {
+      display: block;
+      margin-top: 7px;
+      font-size: 12.4px;
+      line-height: 1.35;
+      font-weight: 800;
+      position: relative;
+      z-index: 1;
+    }
+
+    .award small {
+      display: block;
+      margin-top: 5px;
+      color: rgba(38, 8, 13, .7);
+      font-size: 10.4px;
+      line-height: 1.35;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+    }
+
+    .evidence {
+      display: grid;
+      gap: 8px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .slot {
+      min-height: 105px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 2px dashed rgba(158, 12, 30, .32);
+      background:
+        linear-gradient(135deg, rgba(215, 25, 48, .08), rgba(245, 196, 81, .16)),
+        #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: var(--ink);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slot::before {
+      content: "";
+      position: absolute;
+      right: -18px;
+      bottom: -18px;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      border: 12px solid rgba(215, 25, 48, .1);
+    }
+
+    .slot b {
+      font-size: 12.5px;
+      line-height: 1.35;
+      font-weight: 800;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slot span {
+      color: rgba(38, 8, 13, .66);
+      font-size: 10px;
+      line-height: 1.35;
+      font-weight: 800;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slot.wide { grid-column: 1 / -1; min-height: 88px; }
+
+    .impact {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .impact div {
+      min-height: 68px;
+      padding: 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .16);
+    }
+
+    .impact b {
+      display: block;
+      color: var(--gold);
+      font-size: 13px;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .impact span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 247, 232, .78);
+      font-size: 10.4px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: rgba(245, 196, 81, .14);
+      border: 1px solid rgba(245, 196, 81, .28);
+      color: #fff4cf;
+      font-size: 11px;
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .score,
+      .award-grid,
+      .photo-grid,
+      .impact {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="board" aria-label="รางวัลและหลักฐานภาพถ่าย">
+    <div class="inner">
+      <div class="hero">
+        <div>
+          <div class="kicker">Award Evidence Board</div>
+          <h1>รางวัลผู้ฝึกสอนและหลักฐานภาพถ่าย</h1>
+          <p class="lead">เพิ่มส่วนนี้เพื่อให้หน้าเว็บประกวดมีน้ำหนักด้านผลงานจริง เห็นชื่อรางวัล ระดับ หน่วยงาน วันที่ และมีพื้นที่ระบุภาพหลักฐานที่ควรแนบต่อท้ายใน Google Sites</p>
+        </div>
+        <div class="score">
+          <div><b>6</b><span>รางวัลผู้ฝึกสอนนักเรียน ปีการศึกษา 2567</span></div>
+          <div><b>2</b><span>ชนะเลิศ / ชนะเลิศเหรียญทอง</span></div>
+          <div><b>4</b><span>เหรียญทองด้านคอมพิวเตอร์</span></div>
+          <div><b>2</b><span>ระดับกลุ่มโรงเรียนและเขตพื้นที่</span></div>
+        </div>
+      </div>
+
+      <div class="layout">
+        <div class="panel">
+          <h2>หัวข้อรางวัลที่ควรแสดง</h2>
+          <div class="award-grid">
+            <article class="award win">
+              <span class="rank">ชนะเลิศอันดับ 1</span>
+              <strong>ผู้ฝึกสอนนักเรียน การสร้างแอนิเมชันเรื่องสั้น</strong>
+              <small>กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</small>
+            </article>
+            <article class="award win">
+              <span class="rank">ชนะเลิศ เหรียญทอง</span>
+              <strong>ผู้ฝึกสอนนักเรียน แอนิเมชัน 2D</strong>
+              <small>สพป.กำแพงเพชร เขต 2 · 31 ส.ค. 2567</small>
+            </article>
+            <article class="award">
+              <span class="rank">เหรียญทอง</span>
+              <strong>ผู้ฝึกสอนนักเรียน การนำเสนอด้วยโปรแกรม PowerPoint</strong>
+              <small>กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</small>
+            </article>
+            <article class="award">
+              <span class="rank">เหรียญทอง</span>
+              <strong>ผู้ฝึกสอนนักเรียน คอมพิวเตอร์กราฟิก</strong>
+              <small>กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</small>
+            </article>
+            <article class="award">
+              <span class="rank">เหรียญทอง ระดับกลุ่ม</span>
+              <strong>ผู้ฝึกสอนนักเรียน การสร้างการ์ตูนคอมมิค</strong>
+              <small>กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</small>
+            </article>
+            <article class="award">
+              <span class="rank">เหรียญทอง ระดับเขต</span>
+              <strong>ผู้ฝึกสอนนักเรียน การสร้างการ์ตูนคอมมิค</strong>
+              <small>สพป.กำแพงเพชร เขต 2 · 31 ส.ค. 2567</small>
+            </article>
+          </div>
+
+          <div class="impact">
+            <div><b>คุณค่าต่อผู้เรียน</b><span>พัฒนาทักษะดิจิทัล การออกแบบ การนำเสนอ และการสร้างสรรค์สื่อ</span></div>
+            <div><b>คุณค่าต่อ PA</b><span>เชื่อมด้านที่ 1 การจัดการเรียนรู้ และด้านที่ 3 การพัฒนาวิชาชีพ</span></div>
+            <div><b>คุณค่าต่อเว็บประกวด</b><span>ทำให้เว็บมีหลักฐานเชิงประจักษ์ ไม่ใช่เพียงหน้าแนะนำตัว</span></div>
+          </div>
+        </div>
+
+        <aside class="panel light evidence">
+          <h2>ช่องแนบรูปหลักฐาน</h2>
+          <div class="photo-grid">
+            <div class="slot">
+              <b>เกียรติบัตรรางวัลผู้ฝึกสอน 6 ใบ</b>
+              <span>แนะนำใช้ภาพสไลด์หรือวางเป็นกริด 2 x 3</span>
+            </div>
+            <div class="slot">
+              <b>รูปนักเรียนแข่งขัน / รับรางวัล</b>
+              <span>เลือก 2-4 รูปที่เห็นกิจกรรมจริงและไม่เปิดเผยข้อมูลส่วนบุคคลเกินจำเป็น</span>
+            </div>
+            <div class="slot">
+              <b>ตัวอย่างผลงานนักเรียน</b>
+              <span>แอนิเมชัน กราฟิก PowerPoint หรือการ์ตูนคอมมิค</span>
+            </div>
+            <div class="slot">
+              <b>ภาพบทบาทครูผู้ฝึกสอน</b>
+              <span>ภาพเตรียมทีม ให้คำปรึกษา หรือสรุปผลหลังแข่งขัน</span>
+            </div>
+            <div class="slot wide">
+              <b>ลิงก์แฟ้มรวม Google Drive</b>
+              <span>แนบแฟ้มเกียรติบัตรและภาพกิจกรรมแบบ “ทุกคนที่มีลิงก์ดูได้” เพื่อให้กรรมการตรวจซ้ำได้เร็ว</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="note">หมายเหตุ: ชื่อรางวัลควรตรวจให้ตรงกับเกียรติบัตรจริงก่อนส่งประกวด หากมีภาพผู้เรียนให้ใช้ภาพที่เหมาะสม เบลอข้อมูลส่วนบุคคล และใส่ caption ระบุ “กิจกรรม/รางวัล/ปีการศึกษา” ใต้ภาพ</div>
+    </div>
+  </section>
+</body>
+</html>

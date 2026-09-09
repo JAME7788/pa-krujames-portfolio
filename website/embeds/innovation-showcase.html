@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px;color:#43302e}
+  .wrap{max-width:900px;margin:0 auto}
+  .head{background:linear-gradient(135deg,#4a1220,#5f1b29 40%,#8a2333);color:#fff;border-radius:18px;
+    padding:22px 28px;margin-bottom:18px;position:relative;overflow:hidden}
+  .head::after{content:'💡';position:absolute;right:18px;bottom:-14px;font-size:74px;opacity:.16;transform:rotate(-12deg)}
+  .head h2{font-family:'Prompt';font-size:23px;position:relative;z-index:1}
+  .head p{font-size:14px;color:#f0d5c9;margin-top:5px;position:relative;z-index:1}
+  .innov{background:#fff;border-radius:18px;margin-bottom:18px;overflow:hidden;
+    box-shadow:0 3px 12px rgba(95,27,41,.08);opacity:0;transform:translateY(22px);
+    transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.3,1)}
+  .innov.in{opacity:1;transform:none}
+  .ihead{display:flex;gap:14px;align-items:center;padding:20px 24px;
+    background:linear-gradient(90deg,#fdf6f1,#fff);border-bottom:1px solid #f5e8e2}
+  .ihead .em{width:52px;height:52px;border-radius:15px;flex-shrink:0;font-size:26px;display:flex;
+    align-items:center;justify-content:center;background:linear-gradient(135deg,#8a2333,#a53446)}
+  .ihead h3{font-family:'Prompt';font-size:17.5px;color:#5f1b29;line-height:1.4}
+  .ihead .lvl{display:inline-block;font-family:'Prompt';font-weight:600;font-size:12px;color:#4a1220;
+    background:linear-gradient(90deg,#c9a227,#e8c757);padding:2px 11px;border-radius:999px;margin-top:4px}
+  .ibody{padding:20px 24px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+  .step{background:#fdf6f1;border-radius:12px;padding:14px 12px;position:relative;transition:.3s}
+  .step:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(95,27,41,.13);background:#fff}
+  .step .no{font-family:'Prompt';font-weight:700;font-size:13px;color:#fff;background:#8a2333;
+    width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+  .step b{display:block;font-family:'Prompt';font-weight:600;font-size:13.5px;color:#5f1b29;margin-bottom:4px}
+  .step p{font-size:12.5px;line-height:1.55;color:#5f4a46}
+  .result{display:flex;gap:10px;align-items:flex-start;background:#fffaec;border:1px solid #ecdba3;
+    border-radius:12px;padding:12px 16px;font-size:13.5px;line-height:1.6}
+  .result b{color:#8a6d1a}
+  .fill{color:#b0862a;font-style:italic}
+  .results{background:#fff;border-radius:18px;margin-bottom:18px;box-shadow:0 3px 12px rgba(95,27,41,.08);
+    overflow:hidden;border:1px solid #f2e1da;opacity:0;transform:translateY(22px);transition:.6s ease}
+  .results.in{opacity:1;transform:none}
+  .rhead{padding:18px 22px;background:linear-gradient(90deg,#fff8e6,#fff,#f8ebe4);border-bottom:1px solid #f2e1da}
+  .rhead h3{font-family:'Prompt';font-size:17px;color:#5f1b29;margin-bottom:4px}
+  .rhead p{font-size:13px;color:#725c56;line-height:1.5}
+  .table{display:grid;grid-template-columns:1.3fr .65fr .75fr .75fr .75fr 1fr}
+  .cell{padding:11px 12px;border-bottom:1px solid #f3e6df;border-right:1px solid #f3e6df;font-size:12.8px;line-height:1.45}
+  .cell:nth-child(6n){border-right:none}
+  .th{font-family:'Prompt';font-weight:600;color:#5f1b29;background:#fffaf4}
+  .wait{color:#b0862a;font-style:italic}
+  .proof{padding:12px 16px;font-size:12.8px;color:#5f4a46;background:#fffcf9}
+  @media(max-width:760px){.table{grid-template-columns:1fr 1fr}.cell:nth-child(6n){border-right:1px solid #f3e6df}}
+  @media(max-width:640px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:430px){.steps,.table{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h2>💡 นวัตกรรมและวิจัยในชั้นเรียน · ปีการศึกษา 2568–2569</h2>
+    <p>แก้ปัญหาผู้เรียนด้วยกระบวนการวิจัย ตามข้อตกลงในการพัฒนางาน (PA) ด้านการจัดการเรียนรู้</p>
+  </div>
+
+  <div class="innov">
+    <div class="ihead">
+      <div class="em">🖱️</div>
+      <div>
+        <h3>เกมมิฟิเคชัน (Gamification) พัฒนาทักษะการใช้เมาส์</h3>
+        <span class="lvl">ชั้นประถมศึกษาปีที่ 1 · วิชาวิทยาการคำนวณ</span>
+      </div>
+    </div>
+    <div class="ibody">
+      <div class="steps">
+        <div class="step"><span class="no">1</span><b>ปัญหาที่พบ</b><p>นักเรียน ป.1 ไม่ชำนาญการใช้เมาส์ ทั้งการคลิก ดับเบิลคลิก และลากวาง ทำให้เรียนคอมพิวเตอร์ได้ช้า</p></div>
+        <div class="step"><span class="no">2</span><b>แนวคิด/นวัตกรรม</b><p>นำเทคนิคเกมมิฟิเคชันมาสร้างสื่อเกมคอมพิวเตอร์ ให้ฝึกผ่านการเล่นที่มีเป้าหมาย คะแนน และรางวัล</p></div>
+        <div class="step"><span class="no">3</span><b>การดำเนินการ</b><p>ฝึกทักษะคลิกซ้าย คลิกขวา ดับเบิลคลิก ลากวาง ผ่านเกม ร่วมกับการสอนแบบ Active Learning</p></div>
+        <div class="step"><span class="no">4</span><b>การวัดผล</b><p>ประเมินทักษะการใช้เมาส์ก่อน–หลังเรียน เทียบเกณฑ์ที่สถานศึกษากำหนด</p></div>
+      </div>
+      <div class="result">📊 <span><b>เป้าหมาย:</b> ร้อยละ 85 ของผู้เรียนมีทักษะการใช้เมาส์ผ่านเกณฑ์ · <span class="fill">[ผลการทดลองใช้ — เติมเมื่อสรุปผลสิ้นภาคเรียน]</span></span></div>
+    </div>
+  </div>
+
+  <div class="innov">
+    <div class="ihead">
+      <div class="em">❓</div>
+      <div>
+        <h3>การใช้แอปพลิเคชัน Quizizz พัฒนาผลการเรียนรู้เรื่องการเขียนอัลกอริทึม</h3>
+        <span class="lvl">ชั้นมัธยมศึกษาปีที่ 3 · วิชาวิทยาการคำนวณ</span>
+      </div>
+    </div>
+    <div class="ibody">
+      <div class="steps">
+        <div class="step"><span class="no">1</span><b>ปัญหาที่พบ</b><p>นักเรียน ม.3 เบื่อหน่ายเนื้อหาการเขียนอัลกอริทึม ผลการเรียนรู้ไม่เป็นไปตามเป้า</p></div>
+        <div class="step"><span class="no">2</span><b>แนวคิด/นวัตกรรม</b><p>ใช้ Quizizz เกมตอบคำถามแบบแข่งขันเรียลไทม์ สร้างแรงจูงใจและบรรยากาศสนุกในการเรียน</p></div>
+        <div class="step"><span class="no">3</span><b>การดำเนินการ</b><p>ออกแบบชุดคำถามอัลกอริทึมเรียงจากง่ายไปยาก ให้เล่นท้ายคาบทุกหน่วย พร้อมสรุปผลรายคน</p></div>
+        <div class="step"><span class="no">4</span><b>การวัดผล</b><p>เปรียบเทียบคะแนนก่อน–หลังใช้ Quizizz และติดตามพัฒนาการรายบุคคลจากระบบรายงานของแอป</p></div>
+      </div>
+      <div class="result">📊 <span><b>เป้าหมาย:</b> ร้อยละ 85 ของผู้เรียนมีผลการเรียนรู้เรื่องอัลกอริทึมสูงขึ้น · <span class="fill">[ผลการทดลองใช้ — เติมเมื่อสรุปผลสิ้นภาคเรียน]</span></span></div>
+    </div>
+  </div>
+
+  <div class="results">
+    <div class="rhead">
+      <h3>📈 ตารางผลก่อน–หลังที่ต้องแนบ</h3>
+      <p>กรอกตัวเลขจริงหลังสรุปผลภาคเรียนที่ 1/2569 เพื่อใช้เป็นหลักฐานผลลัพธ์ผู้เรียนตาม PA</p>
+    </div>
+    <div class="table">
+      <div class="cell th">นวัตกรรม</div><div class="cell th">ผู้เรียน</div><div class="cell th">ก่อนเรียน</div><div class="cell th">หลังเรียน</div><div class="cell th">ผ่านเกณฑ์</div><div class="cell th">หลักฐาน</div>
+      <div class="cell">Gamification ทักษะใช้เมาส์ ป.1</div><div class="cell wait">[เติม]</div><div class="cell wait">[เติม]</div><div class="cell wait">[เติม]</div><div class="cell wait">[เติม]</div><div class="cell">แบบประเมินทักษะ / ภาพกิจกรรม</div>
+      <div class="cell">Quizizz การเขียนอัลกอริทึม ม.3</div><div class="cell wait">[เติม]</div><div class="cell wait">[เติม]</div><div class="cell wait">[เติม]</div><div class="cell wait">[เติม]</div><div class="cell">รายงาน Quizizz / แบบทดสอบ</div>
+    </div>
+    <div class="proof">รูปหลักฐานที่ควรแนบคู่กัน: ภาพกิจกรรมในห้องเรียน, หน้าจอ Gamification/Quizizz, ผลงานผู้เรียน และภาพหน้าปกรายงานวิจัยในชั้นเรียน</div>
+  </div>
+</div>
+<script>
+  const items=[...document.querySelectorAll('.innov,.results')];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+  }),{threshold:.1});
+  items.forEach(el=>io.observe(el));
+  // กันเหนียว: ถ้าอีเวนต์ไม่ทำงาน ให้แสดงทุกอย่างเองใน 3 วินาที
+  setTimeout(()=>items.forEach(el=>el.classList.add('in')),3000);
+</script>
+</body>
+</html>

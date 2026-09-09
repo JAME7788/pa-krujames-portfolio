@@ -1,0 +1,25 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencies & Build Outputs
+node_modules/
+.vercel/
+dist/
+build/
+
+# IDE & Tool Cache
+.claude/
+.gemini/
+
+# Temporary & Cache
+tmp/
+__pycache__/
+*.pyc
+*.tmp
+*.log
+
+# Large Presentation Files (ป้องกัน Git Push ช้า หรือติดลิมิต 100MB ของ GitHub - สไลด์มีฉบับ Interactive Web ในระบบแล้ว)
+*.pptx
+

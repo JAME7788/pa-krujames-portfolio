@@ -1,0 +1,19 @@
+{
+  "name": "pa-krujames-portfolio",
+  "version": "1.0.0",
+  "description": "เว็บไซต์รายงานผลการพัฒนางานตามข้อตกลง (PA) ครูเจมส์ อนันตชัย เพ็ชรรี่ โรงเรียนบ้านคลองมดแดง",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "pa",
+    "krujames",
+    "education",
+    "gamification",
+    "active-learning",
+    "portfolio"
+  ],
+  "author": "Anantachai Phetcharee (Kru James)",
+  "license": "MIT"
+}

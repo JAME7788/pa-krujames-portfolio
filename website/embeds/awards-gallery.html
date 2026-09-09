@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px;color:#43302e}
+  .wrap{max-width:900px;margin:0 auto}
+  .head{background:linear-gradient(135deg,#8a6d1a,#c9a227 60%,#e8c757);color:#fff;border-radius:18px;
+    padding:22px 28px;margin-bottom:18px;position:relative;overflow:hidden}
+  .head::after{content:'🏆';position:absolute;right:18px;bottom:-14px;font-size:74px;opacity:.22;transform:rotate(-12deg)}
+  .head h2{font-family:'Prompt';font-size:23px;text-shadow:0 1px 3px rgba(90,60,0,.3);position:relative;z-index:1}
+  .head p{font-size:14px;color:#fdf3d0;margin-top:5px;position:relative;z-index:1}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+  .award{background:#fff;border-radius:16px;padding:20px;box-shadow:0 3px 12px rgba(95,27,41,.08);
+    display:flex;flex-direction:column;gap:9px;border-top:4px solid #c9a227;position:relative;overflow:hidden;
+    transition:transform .3s,box-shadow .3s;opacity:0;transform:translateY(20px)}
+  .award.in{opacity:1;transform:none}
+  .award:hover{transform:translateY(-6px)!important;box-shadow:0 14px 28px rgba(95,27,41,.18)}
+  /* แสงวิบวับกวาดผ่านการ์ดชนะเลิศ */
+  .award.win{border-top-color:#5f1b29;background:linear-gradient(180deg,#fffdf5,#fff)}
+  .award.win::after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;
+    background:linear-gradient(100deg,transparent,rgba(201,162,39,.22),transparent);
+    animation:sweep 3.2s ease-in-out infinite}
+  @keyframes sweep{0%,55%{left:-80%}85%,100%{left:130%}}
+  .medal{font-size:30px;transition:.3s}
+  .award:hover .medal{transform:scale(1.25) rotate(-10deg)}
+  .award h3{font-family:'Prompt';font-size:15px;color:#5f1b29;line-height:1.45}
+  .lvl{display:inline-block;align-self:flex-start;font-family:'Prompt';font-weight:600;font-size:12.5px;
+    padding:3px 12px;border-radius:999px;background:#fff5d6;color:#8a6d1a}
+  .award.win .lvl{background:linear-gradient(90deg,#5f1b29,#8a2333);color:#ffd76e}
+  .meta{font-size:13px;color:#9b7c74;margin-top:auto}
+  .sec{background:#fff;border-radius:16px;padding:20px 24px;box-shadow:0 3px 12px rgba(95,27,41,.08);
+    opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s cubic-bezier(.2,.8,.3,1)}
+  .sec.in{opacity:1;transform:none}
+  .sec h3{font-family:'Prompt';color:#5f1b29;font-size:17px;margin-bottom:12px;
+    padding-left:12px;border-left:4px solid #c9a227}
+  .sec ul{padding-left:20px}
+  .sec li{font-size:14.5px;line-height:1.75;color:#5f4a46}
+  .fill{color:#b0862a;font-style:italic}
+  @media(max-width:680px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:440px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h2>🏆 ผลงานเด่นและรางวัล</h2>
+    <p>รางวัลผู้ฝึกสอนนักเรียน กรรมการตัดสิน และผลงานด้านเทคโนโลยี · ปีการศึกษา 2567-2569</p>
+  </div>
+
+  <div class="grid">
+    <div class="award win">
+      <div class="medal">🏆</div>
+      <h3>ผู้ฝึกสอนนักเรียน<br>การสร้างแอนิเมชันเรื่องสั้น</h3>
+      <span class="lvl">ชนะเลิศอันดับ 1</span>
+      <div class="meta">กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</div>
+    </div>
+    <div class="award win">
+      <div class="medal">🏆</div>
+      <h3>ผู้ฝึกสอนนักเรียน<br>แอนิเมชัน 2D</h3>
+      <span class="lvl">ชนะเลิศ เหรียญทอง · ระดับเขตพื้นที่</span>
+      <div class="meta">สพป.กำแพงเพชร เขต 2 · 31 ส.ค. 2567</div>
+    </div>
+    <div class="award">
+      <div class="medal">🥇</div>
+      <h3>ผู้ฝึกสอนนักเรียน<br>การนำเสนอด้วย PowerPoint</h3>
+      <span class="lvl">เหรียญทอง</span>
+      <div class="meta">กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</div>
+    </div>
+    <div class="award">
+      <div class="medal">🥇</div>
+      <h3>ผู้ฝึกสอนนักเรียน<br>คอมพิวเตอร์กราฟิก</h3>
+      <span class="lvl">เหรียญทอง</span>
+      <div class="meta">กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</div>
+    </div>
+    <div class="award">
+      <div class="medal">🥇</div>
+      <h3>ผู้ฝึกสอนนักเรียน<br>การสร้างการ์ตูนคอมมิค</h3>
+      <span class="lvl">เหรียญทอง · ระดับกลุ่ม</span>
+      <div class="meta">กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</div>
+    </div>
+    <div class="award">
+      <div class="medal">🥇</div>
+      <h3>ผู้ฝึกสอนนักเรียน<br>การสร้างการ์ตูนคอมมิค</h3>
+      <span class="lvl">เหรียญทอง · ระดับเขตพื้นที่</span>
+      <div class="meta">สพป.กำแพงเพชร เขต 2 · 31 ส.ค. 2567</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>ผลงาน/รางวัลที่ยืนยันจากเกียรติบัตรภาพ ปี 2568-2569</h3>
+    <ul>
+      <li>รางวัลคุณภาพระดับเหรียญเงิน การประกวดสื่อสร้างสรรค์ภาพยนตร์สั้นเพื่อสิ่งแวดล้อมยั่งยืน ระดับ ม.1-ม.3 (ระดับประเทศ, 10 มิ.ย. 2568)</li>
+      <li>ครูผู้ฝึกซ้อม สื่อสร้างสรรค์ภาพยนตร์สั้นต่อต้านการทุจริต ผลงาน The Voice Within ได้อันดับ 4 (สพป.กพ 2, 4 ก.ค. 2568)</li>
+      <li>ครูผู้ฝึกสอนนักเรียน Comic Strip ระดับ ม.1-ม.3 ได้รางวัลเหรียญเงิน งานศิลปหัตถกรรมนักเรียน ครั้งที่ 73 ปีการศึกษา 2568</li>
+      <li>ครูผู้ฝึกสอนนักเรียนออกแบบสิ่งของเครื่องใช้ด้วยโปรแกรมคอมพิวเตอร์ ระดับ ม.1-ม.3 ได้รางวัลเหรียญเงิน งานศิลปหัตถกรรมนักเรียน ครั้งที่ 73 ปีการศึกษา 2568</li>
+      <li>กรรมการตัดสินการแข่งขันสร้าง Webpage ประเภท Web Editor ระดับ ป.4-6 งานศิลปหัตถกรรมนักเรียน ครั้งที่ 73 ปีการศึกษา 2568</li>
+      <li>ครูผู้ฝึกสอนนักเรียนเข้าร่วมกิจกรรมการประกวดสร้างสื่อด้วยปัญญาประดิษฐ์ (AI) ระดับ ม.1-ม.3 (อบจ.กำแพงเพชร, 22 มิ.ย. 2569)</li>
+      <li>เข้าร่วมกิจกรรม AI Learning Hub / OBEC Content Center (สพป.กพ 2, 7 มิ.ย. 2569)</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>บทบาททางวิชาการและผลงานสนับสนุนโรงเรียน</h3>
+    <ul>
+      <li>กรรมการตัดสินการแข่งขัน Web Page Editor ระดับ ป.4-6 (สพป.กำแพงเพชร เขต 2)</li>
+      <li>หัวหน้ากลุ่มสาระการเรียนรู้การงานอาชีพ</li>
+      <li>งานตัดต่อวิดีโอ ถ่ายภาพ ออกแบบกราฟิก ประชาสัมพันธ์กิจกรรมโรงเรียนตลอดปีการศึกษา</li>
+      <li>ดูแลระบบสารสนเทศและเครือข่ายอินเทอร์เน็ตภายในสถานศึกษา</li>
+      <li>ประธานโครงการส่งเสริมความสัมพันธ์ชุมชน ปีการศึกษา 2568 — ผลสำเร็จร้อยละ 100 ความพึงพอใจระดับมากที่สุด</li>
+      <li>จัดทำเว็บไซต์ E-Portfolio นำเสนอและเผยแพร่ผลการปฏิบัติงาน (ปีการศึกษา 2569)</li>
+    </ul>
+  </div>
+</div>
+<script>
+  const items=[...document.querySelectorAll('.award,.sec')];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('in'), 90*(items.indexOf(e.target)%6));
+      io.unobserve(e.target);
+    }
+  }),{threshold:.1});
+  items.forEach(el=>io.observe(el));
+  // กันเหนียว: ถ้าอีเวนต์ไม่ทำงาน ให้แสดงทุกอย่างเองใน 3 วินาที
+  setTimeout(()=>{document.querySelectorAll('.item,.sec,.card,.award,details,.sum .s').forEach(el=>el.classList.add('in'));document.querySelectorAll('.fillbar').forEach(b=>b.style.width=b.dataset.w+'%')},3000);
+</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Sarabun',sans-serif;background:transparent;color:#372525;padding:10px}
+  .wrap{max-width:1040px;margin:0 auto;border:1px solid #ead8d2;border-radius:8px;overflow:hidden;background:#fffdf8;box-shadow:0 12px 30px rgba(95,16,34,.12)}
+  .hero{display:grid;grid-template-columns:1.04fr .96fr;background:linear-gradient(135deg,#2b0811,#5f1022 56%,#9b2331);color:#fff}
+  .intro{padding:26px 28px}
+  .eyebrow{font-family:'Prompt';font-size:12px;font-weight:700;color:#f0ce72;letter-spacing:.06em;text-transform:uppercase}
+  h1{font-family:'Prompt';font-size:30px;line-height:1.2;margin:8px 0 10px}
+  .lead{font-size:14.7px;line-height:1.7;color:#fae7dd;max-width:640px}
+  .vision{padding:20px;background:#fff8ee;display:grid;gap:9px}
+  .mini{background:#fff;border:1px solid #ead8d2;border-radius:8px;padding:12px 13px;border-left:5px solid #d8b557}
+  .mini b{display:block;font-family:'Prompt';font-size:14px;color:#5f1022;margin-bottom:3px}
+  .mini span{display:block;font-size:12.8px;line-height:1.45;color:#6d5650}
+  .band{padding:16px;border-top:1px solid #ead8d2;background:#fff}
+  .soft{background:#fff8f3}
+  .head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:10px}
+  h2{font-family:'Prompt';font-size:18px;color:#5f1022;line-height:1.25}
+  .note{font-size:12.2px;color:#8d6d64;text-align:right;max-width:390px;line-height:1.38}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  .card,.evidence,.quote,.metric,.flow{position:relative;background:#fff;border:1px solid #ead8d2;border-radius:8px;padding:12px;overflow:hidden}
+  .card:before,.evidence:before,.quote:before,.metric:before,.flow:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#8f1d2e,#d8b557)}
+  .tag{display:inline-flex;font-family:'Prompt';font-size:11.5px;font-weight:700;color:#8f1d2e;background:#fff6dc;border:1px solid #ead27b;border-radius:999px;padding:4px 8px;margin-bottom:8px}
+  .card b,.evidence b,.metric b,.flow b{display:block;font-family:'Prompt';font-size:13.3px;line-height:1.25;color:#5f1022;margin-bottom:5px}
+  .card span,.evidence span,.metric span,.flow span{display:block;font-size:12.2px;line-height:1.45;color:#6d5650}
+  .flowNo{width:25px;height:25px;border-radius:50%;background:#8f1d2e;color:#fff;display:grid;place-items:center;font-family:'Prompt';font-size:12px;font-weight:700;margin-bottom:8px}
+  .pillrow{display:flex;flex-wrap:wrap;gap:6px}
+  .pill{font-family:'Prompt';font-size:11.6px;color:#5f1022;background:#fff;border:1px solid #ead8d2;border-radius:999px;padding:6px 9px}
+  .matrix{display:grid;grid-template-columns:1fr 1.2fr 1.35fr;border:1px solid #ead8d2;border-radius:8px;overflow:hidden;background:#fff}
+  .matrix div{padding:9px 10px;border-right:1px solid #ead8d2;border-bottom:1px solid #ead8d2;font-size:12.2px;line-height:1.42;color:#604b45}
+  .matrix div:nth-child(3n){border-right:0}
+  .matrix div:nth-last-child(-n+3){border-bottom:0}
+  .matrix .th{font-family:'Prompt';font-size:12.7px;font-weight:700;color:#fff;background:#5f1022}
+  .matrix .topic{font-family:'Prompt';color:#5f1022;background:#fff8f3}
+  .metric strong{display:block;font-family:'Prompt';font-size:28px;line-height:1;color:#8f1d2e;margin:3px 0 5px}
+  .bar{height:8px;background:#f3e2dc;border-radius:999px;overflow:hidden;margin-top:9px}
+  .fill{height:100%;background:linear-gradient(90deg,#8f1d2e,#d8b557)}
+  .evidence small{display:block;margin-top:8px;font-size:11.3px;color:#94766e;background:#fff8f3;border:1px solid #f1ded8;border-radius:6px;padding:6px}
+  .quote{background:linear-gradient(180deg,#fff,#fff8f3)}
+  .quote p{font-size:12.9px;line-height:1.58;color:#604b45}
+  .quote b{display:block;font-family:'Prompt';font-size:13px;color:#5f1022;margin-top:8px}
+  .ready{display:grid;grid-template-columns:1.1fr .9fr;gap:10px}
+  .scriptBox{background:#2b0811;color:#ffefe7;border-radius:8px;padding:14px;border:1px solid rgba(216,181,87,.4)}
+  .scriptBox h3{font-family:'Prompt';font-size:16px;color:#ffd98b;margin-bottom:7px}
+  .scriptBox p{font-size:13px;line-height:1.55}
+  .check{background:#fff8df;border:1px solid #ead27b;border-radius:8px;padding:12px}
+  .check b{display:block;font-family:'Prompt';font-size:14px;color:#5f1022;margin-bottom:6px}
+  .check li{margin-left:18px;font-size:12.4px;line-height:1.48;color:#604b45}
+  @media(max-width:900px){.hero,.ready{grid-template-columns:1fr}.grid4{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.head{display:block}.note{text-align:left;margin-top:4px}.matrix{grid-template-columns:1fr}.matrix div,.matrix div:nth-child(3n),.matrix div:nth-last-child(-n+3){border-right:0;border-bottom:1px solid #ead8d2}}
+  @media(max-width:560px){body{padding:8px}.intro{padding:22px 16px}h1{font-size:24px}.band{padding:12px}.grid4,.grid3{grid-template-columns:1fr}.matrix div:last-child{border-bottom:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="intro">
+      <div class="eyebrow">CONTENT FOR WEBKRU THAI 2569</div>
+      <h1>เนื้อหาหลักของเว็บครูเจมส์: เทคโนโลยีที่เรียนได้จริง ตรวจหลักฐานได้เร็ว</h1>
+      <p class="lead">เอเจเจ.ไทยไม่ใช่เพียงเว็บรวมลิงก์ แต่เป็นพื้นที่เรียนรู้ที่เชื่อมบทเรียน สื่อดิจิทัล กิจกรรม Gamification ระบบวัดผล K/P/A และหลักฐานประกอบ PA ไว้ในเส้นทางเดียว เพื่อให้ผู้เรียนเข้าถึงความรู้ ผู้ปกครองติดตามได้ และกรรมการตรวจเห็นผลการทำงานของครูอย่างเป็นระบบ</p>
+    </div>
+    <div class="vision">
+      <div class="mini"><b>แนวคิดเว็บไซต์</b><span>ออกแบบให้เป็น “ห้องเรียนเทคโนโลยีออนไลน์” ที่ครูใช้สอน ผู้เรียนใช้ฝึก ผู้ปกครองใช้ติดตาม และผู้ประเมินใช้ตรวจหลักฐานได้ในหน้าเดียว</span></div>
+      <div class="mini"><b>กลุ่มสาระ/สาระสำคัญ</b><span>วิทยาการคำนวณ การออกแบบเทคโนโลยี AI Literacy Coding Arduino Electronics และความปลอดภัยดิจิทัล</span></div>
+      <div class="mini"><b>จุดขายสำหรับประกวด</b><span>โทนแดงมีเอกลักษณ์ เนื้อหาเทคโนโลยีชัด มี dashboard หลักฐาน และแสดงผลลัพธ์โดยคำนึงถึง PDPA</span></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="head">
+      <h2>โครงสร้างเนื้อหาที่ควรอยู่บนเว็บ</h2>
+      <div class="note">จัดเป็นเส้นทางอ่าน ไม่ให้กรรมการหลงในเมนู</div>
+    </div>
+    <div class="grid4">
+      <div class="card"><span class="tag">Profile</span><b>ตัวตนครูและความน่าเชื่อถือ</b><span>ชื่อครู โรงเรียน รายวิชาที่สอน ประวัติสั้น ภาระงาน ช่องทางติดต่อ และจุดยืนการใช้เทคโนโลยีเพื่อผู้เรียน</span></div>
+      <div class="card"><span class="tag">Learning</span><b>บทเรียนและสื่อเทคโนโลยี</b><span>หน่วยเรียน ป.1-ม.3, AI, Coding, Arduino, ใบงาน HTML, วิดีโอ, สไลด์ และแหล่งเรียนรู้ที่เลือกใช้จริง</span></div>
+      <div class="card"><span class="tag">Innovation</span><b>นวัตกรรมการจัดการเรียนรู้</b><span>ระบบเรียนรู้แบบเกม Quizizz/เกมฝึกทักษะ/คะแนน K-P-A/รายงานผล ช่วยให้การเรียนมีเป้าหมายและตรวจวัดได้</span></div>
+      <div class="card"><span class="tag">Evidence</span><b>เอกสารและหลักฐาน PA</b><span>PA, แผนการสอน, SAR, ID Plan, ภาระงาน, Portfolio, ภาพกิจกรรม, วิจัย/นวัตกรรม และผลลัพธ์ผู้เรียน</span></div>
+    </div>
+  </section>
+
+  <section class="band soft">
+    <div class="head">
+      <h2>นวัตกรรม: KruJames Tech Learning Hub</h2>
+      <div class="note">เล่าให้ชัดว่าเว็บนี้ช่วยการสอนอย่างไร</div>
+    </div>
+    <div class="grid4">
+      <div class="flow"><div class="flowNo">1</div><b>Learn</b><span>ผู้เรียนเริ่มจากบทเรียน สื่อ วิดีโอ และตัวอย่างงานที่จัดตามระดับชั้นและตัวชี้วัด</span></div>
+      <div class="flow"><div class="flowNo">2</div><b>Practice</b><span>ฝึกผ่านใบงาน HTML เกม Coding Arduino และกิจกรรม Quizizz เพื่อเปลี่ยนความรู้เป็นทักษะ</span></div>
+      <div class="flow"><div class="flowNo">3</div><b>Track</b><span>ระบบสะท้อนคะแนน K/P/A ความก้าวหน้า กิจกรรมที่ทำ และหลักฐานที่นำไปประกอบการประเมิน</span></div>
+      <div class="flow"><div class="flowNo">4</div><b>Reflect</b><span>ครูนำผลไปปรับแผน ผู้เรียนเห็นพัฒนาการ ผู้ปกครองเข้าใจจุดที่ควรส่งเสริมต่อ</span></div>
+    </div>
+    <div style="height:10px"></div>
+    <div class="pillrow">
+      <span class="pill">AI Literacy</span><span class="pill">Coding</span><span class="pill">Arduino</span><span class="pill">Electronics</span><span class="pill">Quizizz</span><span class="pill">Gamification</span><span class="pill">K/P/A</span><span class="pill">Report Card</span><span class="pill">Parent Portal</span><span class="pill">PDPA</span>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="head">
+      <h2>เนื้อหาเทคโนโลยีที่นำเสนอได้</h2>
+      <div class="note">ใช้เป็นคำอธิบายรายหมวดบนหน้าเว็บ</div>
+    </div>
+    <div class="matrix">
+      <div class="th">หมวดเนื้อหา</div><div class="th">สาระที่ผู้เรียนได้รับ</div><div class="th">หลักฐานที่แสดงบนเว็บ</div>
+      <div class="topic">วิทยาการคำนวณ</div><div>คิดเชิงคำนวณ ลำดับขั้นตอน เงื่อนไข ลูป การแก้ปัญหา และการตรวจหาข้อผิดพลาด</div><div>บทเรียนรายชั้น เกมฝึกทักษะ แบบฝึกหัด และผลคะแนนกิจกรรม</div>
+      <div class="topic">AI Literacy</div><div>รู้จัก AI, Machine Learning, Generative AI, Prompt, จริยธรรม AI และการใช้ AI อย่างรับผิดชอบ</div><div>สื่อบทเรียน prompt ตัวอย่างงาน โครงงาน AI และแบบสะท้อนคิดของผู้เรียน</div>
+      <div class="topic">Arduino/Electronics</div><div>วงจรพื้นฐาน LED Button Sensor Serial PWM I2C และการสร้างชิ้นงานจากปัญหาจริง</div><div>ใบงาน HTML ภาพกิจกรรม วิดีโอทดลอง และชิ้นงาน/โครงงานผู้เรียน</div>
+      <div class="topic">Gamification</div><div>แรงจูงใจ การมีส่วนร่วม การแข่งขันเชิงบวก และการฝึกซ้ำโดยไม่รู้สึกกดดัน</div><div>Quizizz เกม Leaderboard Badge และสถิติการเข้าร่วม</div>
+      <div class="topic">Digital Citizenship</div><div>ความปลอดภัยข้อมูล ลิขสิทธิ์ มารยาทดิจิทัล การใช้สื่อออนไลน์และ AI อย่างเหมาะสม</div><div>นโยบายข้อมูลบนเว็บ สื่อแนะนำ และตัวอย่างกิจกรรมที่ไม่เปิดเผยข้อมูลส่วนบุคคล</div>
+    </div>
+  </section>
+
+  <section class="band soft">
+    <div class="head">
+      <h2>ตัวอย่างผลลัพธ์ก่อน-หลังของนวัตกรรม</h2>
+      <div class="note">เป็นรูปแบบนำเสนอสำหรับแทนค่าด้วยผลจริงของชั้นเรียน</div>
+    </div>
+    <div class="grid4">
+      <div class="metric"><span class="tag">ก่อนเรียน</span><strong>52%</strong><b>ความเข้าใจพื้นฐาน</b><span>คะแนนเฉลี่ยก่อนเรียนของหน่วย Coding/AI จากแบบทดสอบวัดความรู้เดิม</span><div class="bar"><div class="fill" style="width:52%"></div></div></div>
+      <div class="metric"><span class="tag">หลังเรียน</span><strong>84%</strong><b>ความเข้าใจหลังจัดกิจกรรม</b><span>คะแนนเฉลี่ยหลังเรียนหลังใช้บทเรียน เกม ควิซ และใบงานปฏิบัติ</span><div class="bar"><div class="fill" style="width:84%"></div></div></div>
+      <div class="metric"><span class="tag">ผ่านเกณฑ์</span><strong>86%</strong><b>ผู้เรียนผ่านตามเป้าหมาย</b><span>ร้อยละของผู้เรียนที่ผ่านเกณฑ์ 70% ขึ้นไป หลังใช้สื่อและกิจกรรมบนเว็บ</span><div class="bar"><div class="fill" style="width:86%"></div></div></div>
+      <div class="metric"><span class="tag">มีส่วนร่วม</span><strong>90%</strong><b>เข้าร่วมกิจกรรมดิจิทัล</b><span>ผู้เรียนเข้าใช้งานสื่อ เล่นเกม ทำควิซ หรือส่งใบงานตามช่วงเวลาที่กำหนด</span><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="head">
+      <h2>หลักฐาน 12 รายการที่ควรเชื่อมกับ Google Drive</h2>
+      <div class="note">ตั้งชื่อให้ชัด กรรมการเปิดแล้วรู้ทันทีว่าเป็นหลักฐานข้อใด</div>
+    </div>
+    <div class="grid3">
+      <div class="evidence"><span class="tag">01</span><b>แบบข้อตกลง PA</b><span>เป้าหมายการพัฒนางาน ประเด็นท้าทาย และผลลัพธ์ที่คาดหวัง</span><small>แนบไฟล์ PDF/Docx ฉบับลงนาม</small></div>
+      <div class="evidence"><span class="tag">02</span><b>แผนการจัดการเรียนรู้</b><span>แผนรายหน่วย/รายคาบที่เชื่อมตัวชี้วัดกับสื่อเทคโนโลยี</span><small>แนบแผนที่ใช้จริง</small></div>
+      <div class="evidence"><span class="tag">03</span><b>บันทึกหลังสอน</b><span>ผลการจัดกิจกรรม ปัญหา วิธีแก้ และการปรับแผนรอบถัดไป</span><small>แนบบันทึกหลังสอน</small></div>
+      <div class="evidence"><span class="tag">04</span><b>SAR</b><span>รายงานการประเมินตนเองและผลการปฏิบัติงานประจำปี</span><small>แนบ SAR ล่าสุด</small></div>
+      <div class="evidence"><span class="tag">05</span><b>ID Plan</b><span>แผนพัฒนาตนเองที่เชื่อมกับเทคโนโลยี AI และการสอน Coding</span><small>แนบ ID Plan 2567-2568</small></div>
+      <div class="evidence"><span class="tag">06</span><b>ภาระงานและตารางสอน</b><span>หลักฐานบทบาทหน้าที่ รายวิชา ชั่วโมงสอน และงานพิเศษ</span><small>แนบคำสั่ง/ตารางสอน</small></div>
+      <div class="evidence"><span class="tag">07</span><b>นวัตกรรม/วิจัยในชั้นเรียน</b><span>การใช้เว็บ เกม Quizizz หรือ dashboard เพื่อพัฒนาผลสัมฤทธิ์</span><small>แนบรายงาน/บทคัดย่อ</small></div>
+      <div class="evidence"><span class="tag">08</span><b>ผลก่อน-หลังเรียน</b><span>คะแนนก่อนเรียน หลังเรียน จำนวนผู้เรียน และร้อยละผ่านเกณฑ์</span><small>แนบตารางสรุปแบบไม่เปิดชื่อ</small></div>
+      <div class="evidence"><span class="tag">09</span><b>ภาพกิจกรรมการสอน</b><span>สอนในห้อง สื่อ Gamification ประชุมผู้ปกครอง และหน้าปกหลักฐาน</span><small>แนบภาพจริง 4 กลุ่ม</small></div>
+      <div class="evidence"><span class="tag">10</span><b>ผลงาน/ชิ้นงานผู้เรียน</b><span>ใบงาน โครงงาน Coding Arduino AI หรือชิ้นงานดิจิทัล</span><small>เบลอข้อมูลส่วนบุคคล</small></div>
+      <div class="evidence"><span class="tag">11</span><b>Portfolio และเกียรติบัตร</b><span>แฟ้มผลงานครู การอบรม รางวัล และการเผยแพร่ผลงาน</span><small>แนบแฟ้มรวม</small></div>
+      <div class="evidence"><span class="tag">12</span><b>คำรับรอง/PLC</b><span>คำรับรองจากผู้บริหาร หัวหน้ากลุ่มสาระ หรือ PLC แบบสั้น</span><small>แนบเอกสารหรือภาพรับรอง</small></div>
+    </div>
+  </section>
+
+  <section class="band soft">
+    <div class="head">
+      <h2>คำรับรองสั้นที่ควรใช้บนเว็บ</h2>
+      <div class="note">ปรับชื่อและตำแหน่งเมื่อมีคำรับรองจริง</div>
+    </div>
+    <div class="grid3">
+      <div class="quote"><p>“ครูอนันตชัยพัฒนาเว็บไซต์ให้เป็นแหล่งเรียนรู้ที่ผู้เรียนเข้าถึงได้จริง และเชื่อมโยงหลักฐานการจัดการเรียนรู้อย่างเป็นระบบ เหมาะกับการใช้ประกอบการประเมินและเผยแพร่เป็นต้นแบบ”</p><b>ผู้อำนวยการสถานศึกษา</b></div>
+      <div class="quote"><p>“สื่อและกิจกรรมบนเว็บช่วยให้รายวิชาเทคโนโลยีมีความชัดเจน ผู้เรียนได้ฝึกคิด ฝึกปฏิบัติ และมีข้อมูลสะท้อนผลที่นำไปพัฒนาการสอนได้ต่อเนื่อง”</p><b>หัวหน้ากลุ่มสาระ/หัวหน้างานวิชาการ</b></div>
+      <div class="quote"><p>“กระบวนการ PLC เห็นพัฒนาการของการใช้สื่อดิจิทัล เกม และแบบทดสอบออนไลน์ในการยกระดับแรงจูงใจและการมีส่วนร่วมของผู้เรียน”</p><b>คณะครู PLC</b></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="ready">
+      <div class="scriptBox">
+        <h3>ข้อความนำเสนอหน้าเว็บแบบสั้น</h3>
+        <p>เว็บไซต์เอเจเจ.ไทยพัฒนาขึ้นเพื่อเป็นห้องเรียนเทคโนโลยีออนไลน์ของครูเจมส์ รวบรวมบทเรียน สื่อ กิจกรรม เกม แบบทดสอบ และหลักฐานการพัฒนางานตาม PA ไว้ในพื้นที่เดียว ผู้เรียนสามารถเรียนรู้และฝึกทักษะได้ต่อเนื่อง ผู้ปกครองติดตามความก้าวหน้าได้ และผู้ประเมินสามารถตรวจหลักฐานได้อย่างรวดเร็ว โปร่งใส และปลอดภัยต่อข้อมูลส่วนบุคคล</p>
+      </div>
+      <div class="check">
+        <b>สิ่งที่ควรเติมเมื่อมีข้อมูลจริง</b>
+        <ul>
+          <li>ลิงก์ Drive ทั้ง 12 รายการ</li>
+          <li>คะแนนก่อนเรียน/หลังเรียนจากชั้นเรียนจริง</li>
+          <li>จำนวนผู้เรียนและร้อยละผ่านเกณฑ์จริง</li>
+          <li>รูปกิจกรรมจริง 4 กลุ่ม</li>
+          <li>คำรับรองที่ลงชื่อโดยผู้เกี่ยวข้อง</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

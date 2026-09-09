@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px;color:#43302e}
+  .wrap{max-width:900px;margin:0 auto;border-radius:18px;overflow:hidden;background:#fff;border:1px solid #f0e0d8;box-shadow:0 8px 26px rgba(95,27,41,.10)}
+  .top{padding:18px 22px;background:linear-gradient(135deg,#fff8e6,#fff,#f8ebe4);border-bottom:1px solid #f0e0d8}
+  .badge{display:inline-block;font-family:'Prompt';font-size:12px;font-weight:700;color:#4a1220;background:#e8c757;padding:4px 11px;border-radius:999px;margin-bottom:8px}
+  h2{font-family:'Prompt';font-size:21px;color:#5f1b29;line-height:1.25}
+  .lead{font-size:13.5px;color:#6f5651;line-height:1.55;margin-top:5px;max-width:760px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px}
+  .step{background:#fff;border:1px solid #f1e2dc;border-radius:14px;padding:13px;box-shadow:0 3px 12px rgba(95,27,41,.06);opacity:0;transform:translateY(14px);transition:.45s ease}
+  .step.in{opacity:1;transform:none}
+  .step:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(95,27,41,.13)}
+  .num{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#8a2333;color:#fff;font-family:'Prompt';font-weight:700;font-size:13px;margin-bottom:7px}
+  .step h3{font-family:'Prompt';font-size:14px;color:#5f1b29;margin-bottom:4px}
+  .step p{font-size:12.7px;color:#6f5651;line-height:1.48}
+  @media(max-width:620px){.steps{grid-template-columns:1fr}.top{padding:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="top">
+    <span class="badge">ASSESSMENT FLOW</span>
+    <h2>เส้นทางตรวจหลักฐาน 3 นาที</h2>
+    <p class="lead">ใช้เป็นลำดับตรวจหลักฐานแบบสั้น หลังจากอ่านสรุป PA แล้ว</p>
+  </section>
+  <section class="steps">
+    <article class="step"><div class="num">1</div><h3>อ่านสรุป PA</h3><p>เริ่มจากข้อมูลหลัก ภาระงาน ผลงาน และประเด็นท้าทาย</p></article>
+    <article class="step"><div class="num">2</div><h3>เปิดเอกสารหลักฐาน</h3><p>ตรวจ PA แผน บันทึกหลังสอน SAR ID Plan ภาระงาน และ Portfolio</p></article>
+    <article class="step"><div class="num">3</div><h3>ดูผลลัพธ์ผู้เรียน</h3><p>ตรวจนวัตกรรม ผลก่อน-หลัง รูปกิจกรรม และหลักฐานประกอบ</p></article>
+  </section>
+</div>
+<script>
+  const steps=[...document.querySelectorAll('.step')];
+  const io=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('in'), steps.indexOf(entry.target)*100);io.unobserve(entry.target);}
+  }),{threshold:.12});
+  steps.forEach(step=>io.observe(step));
+  setTimeout(()=>steps.forEach(step=>step.classList.add('in')),1800);
+</script>
+</body>
+</html>

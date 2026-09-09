@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700;800&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ===== แผงนี้ออกแบบให้วางในคอลัมน์ครึ่งหน้า คู่กับบล็อกรูปภาพของ Google Sites ทางซ้าย =====
+     วิธีใช้: ใน Google Sites สร้างส่วน 2 คอลัมน์ → ซ้ายใส่รูปภาพ (แทรก > รูปภาพ) → ขวาฝังโค้ดนี้ */
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Sarabun',sans-serif;background:transparent;padding:8px;color:#43302e}
+  .p{max-width:560px;margin:0 auto}
+  .tag{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(90deg,#c9a227,#e8c757);
+    color:#3a0e18;font-family:'Prompt';font-weight:700;font-size:11.5px;letter-spacing:.4px;
+    padding:4px 13px;border-radius:999px;margin-bottom:11px}
+  .dot{width:6px;height:6px;border-radius:50%;background:#3a0e18;animation:bl 1.5s ease-in-out infinite}
+  @keyframes bl{50%{opacity:.25}}
+  h1{font-family:'Prompt';font-weight:800;font-size:26px;line-height:1.28;color:#5f1b29;margin-bottom:6px}
+  h1 .g{background:linear-gradient(90deg,#8a2333,#c9a227);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:13.5px;color:#9b7c74;margin-bottom:14px;line-height:1.5}
+  .lead{font-size:14px;line-height:1.75;color:#5f4a46;margin-bottom:16px}
+  .lead b{color:#8a2333}
+  .flow{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+  .st{flex:1;min-width:110px;background:#fdf6f1;border-left:3px solid #c9a227;border-radius:9px;padding:10px 11px}
+  .st b{display:block;font-family:'Prompt';font-weight:600;font-size:12px;color:#8a2333;margin-bottom:2px}
+  .st span{font-size:11.8px;line-height:1.5;color:#6f5651}
+  .kpi{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
+  .k{background:linear-gradient(135deg,#5f1b29,#8a2333);color:#fff;border-radius:12px;padding:13px 12px;text-align:center}
+  .k .n{font-family:'Prompt';font-weight:700;font-size:21px;color:#ffd76e;line-height:1.1}
+  .k .t{font-size:11.5px;color:#f0d5c9;line-height:1.4;margin-top:3px}
+  .k.pre{background:#fff;border:1.5px solid #eed7cd}
+  .k.pre .n{color:#a8323b}
+  .k.pre .t{color:#6f5651}
+  .k.post{background:linear-gradient(135deg,#1d7a3f,#2fa055)}
+  .k.post .n{color:#fff}
+  .k.post .t{color:#d9f0e1}
+  .arrow{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:9px;
+    font-family:'Prompt';font-weight:700;font-size:14px;color:#1d7a3f;background:#e8f3ec;
+    border-radius:10px;padding:8px}
+  .tools{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .tl{background:#f8ebe4;color:#8a2333;font-size:12px;padding:4px 11px;border-radius:999px;border:1px solid #eed7cd}
+  .note{background:#fffaec;border:1px solid #ecdba3;border-radius:11px;padding:11px 14px;
+    font-size:12.5px;line-height:1.65;color:#5f4a46}
+  .note b{color:#8a6d1a}
+</style>
+</head>
+<body>
+<div class="p">
+  <span class="tag"><span class="dot"></span>BEST PRACTICE · ปีการศึกษา 2569</span>
+  <h1>เกมมิฟิเคชันพัฒนา<span class="g">ทักษะการใช้เมาส์</span></h1>
+  <div class="sub">ชั้นประถมศึกษาปีที่ 1 · วิชาวิทยาการคำนวณ · กลุ่มเป้าหมาย 9 คน</div>
+
+  <p class="lead">จากการวิเคราะห์ผู้เรียนพบว่านักเรียน ป.1 ยังไม่ชำนาญการ<b>คลิกซ้าย คลิกขวา ดับเบิลคลิก และลากวาง</b> ทำให้เรียนวิทยาการคำนวณได้ช้า จึงออกแบบสื่อเกมคอมพิวเตอร์ตามแนวคิด Gamification ร่วมกับ Active Learning โดยใช้กระบวนการ <b>ADDIE Model</b></p>
+
+  <div class="flow">
+    <div class="st"><b>A · วิเคราะห์</b><span>หลักสูตร ว 4.2 และสำรวจพื้นฐานเดิมของผู้เรียน</span></div>
+    <div class="st"><b>D · ออกแบบ</b><span>แผนการจัดการเรียนรู้ 4 ชั่วโมง พร้อมกลไกเกม</span></div>
+    <div class="st"><b>D · พัฒนา</b><span>เลือกและปรับสื่อเกมให้เหมาะกับวัย</span></div>
+    <div class="st"><b>I · นำไปใช้</b><span>ผู้เรียนฝึกปฏิบัติจริงทุกคน</span></div>
+    <div class="st"><b>E · ประเมิน</b><span>Pre/Post-test สังเกตพฤติกรรม ความพึงพอใจ</span></div>
+  </div>
+
+  <div class="tools">
+    <span class="tl">🧩 Code.org (Pre-reader)</span>
+    <span class="tl">🎮 Poki.com</span>
+    <span class="tl">🎨 Canva Games</span>
+    <span class="tl">🏅 เหรียญตรา/ระดับ</span>
+    <span class="tl">⏱️ แข่งขันจับเวลา</span>
+  </div>
+
+  <div class="kpi">
+    <div class="k"><div class="n">9 คน</div><div class="t">กลุ่มเป้าหมาย<br>นักเรียน ป.1</div></div>
+    <div class="k"><div class="n">100%</div><div class="t">ค่าเป้าหมายตาม<br>ข้อตกลง PA</div></div>
+    <div class="k w"><div class="n">[รอเติม]</div><div class="t">ค่าเฉลี่ย<br>ก่อนเรียน</div></div>
+    <div class="k w"><div class="n">[รอเติม]</div><div class="t">ค่าเฉลี่ย<br>หลังเรียน</div></div>
+  </div>
+
+  <div class="note"><b>📌 หลักฐานประกอบ:</b> แผนการจัดการเรียนรู้ 4 ชั่วโมง · บันทึกหลังสอน · แบบทดสอบก่อน–หลังเรียน · แบบสังเกตพฤติกรรม · แบบประเมินความพึงพอใจ · ภาพนักเรียนขณะฝึกปฏิบัติ</div>
+</div>
+</body>
+</html>
