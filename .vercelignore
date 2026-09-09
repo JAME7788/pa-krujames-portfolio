@@ -1,0 +1,19 @@
+﻿# Temporary & Scratch Folders
+tmp/
+.claude/
+.gemini/
+__pycache__/
+
+# Raw Office Documents & Large PDFs
+*.pptx
+*.docx
+*.pdf
+
+# Markdown Docs
+*.md
+website/*.md
+website/content/
+
+# Python scripts
+*.py
+website/*.py
