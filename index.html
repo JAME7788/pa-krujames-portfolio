@@ -1432,6 +1432,22 @@
           สำนักงานเขตพื้นที่การศึกษาประถมศึกษากำแพงเพชร เขต ๒
         </p>
 
+        <!-- Committee Banner in Hero -->
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 1.5rem; padding: 10px 16px; background: rgba(37, 99, 235, 0.07); border-radius: var(--radius-md); border: 1px solid rgba(37, 99, 235, 0.2);">
+          <span style="font-size: 0.88rem; font-weight: 700; color: var(--primary-900); display: flex; align-items: center; gap: 5px;">
+            <i data-lucide="users" style="width: 15px; height: 15px; color: var(--primary-600);"></i> คณะกรรมการประเมิน PA :
+          </span>
+          <span style="font-size: 0.86rem; font-weight: 600; color: #1d4ed8; background: #eff6ff; padding: 3px 10px; border-radius: 9999px; border: 1px solid #bfdbfe;">
+            👔 นายปรัชญา ปรางค์ชัยภูมิ (ผอ./ประธาน)
+          </span>
+          <span style="font-size: 0.86rem; font-weight: 600; color: #047857; background: #ecfdf5; padding: 3px 10px; border-radius: 9999px; border: 1px solid #a7f3d0;">
+            👩‍🏫 ครูตรัสมา ปัญญาญาณ (กรรมการ)
+          </span>
+          <span style="font-size: 0.86rem; font-weight: 600; color: #6d28d9; background: #f5f3ff; padding: 3px 10px; border-radius: 9999px; border: 1px solid #ddd6fe;">
+            👩‍🏫 ครูชญานี ดวงต๋า (กรรมการ)
+          </span>
+        </div>
+
         <!-- Stats Grid -->
         <div class="hero-stats-grid">
           <div class="stat-card">
@@ -2516,6 +2532,65 @@
         <p class="section-desc">ระบบบันทึกข้อเสนอแนะเชิงวิชาชีพและระดับความพึงพอใจ จัดเก็บลงฐานข้อมูล Google Firebase แบบ Real-time</p>
       </div>
 
+      <!-- Committee Showcase Panel (3 ท่าน) -->
+      <div style="margin-bottom: 2.5rem;">
+        <h3 style="text-align: center; font-size: 1.15rem; color: var(--primary-900); margin-bottom: 1.25rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <i data-lucide="award" style="color: var(--accent-gold); width: 20px; height: 20px;"></i>
+          คณะกรรมการการประเมินผลการพัฒนางานตามข้อตกลง (PA)
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+          
+          <!-- กรรมการท่านที่ 1: ผอ. ปรัชญา ปรางค์ชัยภูมิ -->
+          <div style="background: white; border-radius: var(--radius-xl); padding: 1.75rem 1.25rem; border: 2px solid #2563eb; box-shadow: var(--shadow-md); text-align: center; position: relative;">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #2563eb; color: white; padding: 3px 16px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; white-space: nowrap;">
+              ประธานกรรมการประเมิน
+            </div>
+            <div style="width: 64px; height: 64px; margin: 0.5rem auto 0.75rem; background: #eff6ff; color: #1d4ed8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border: 2px solid #bfdbfe;">
+              👔
+            </div>
+            <h4 style="font-size: 1.15rem; color: var(--primary-900); font-weight: 700; margin-bottom: 4px;">นายปรัชญา ปรางค์ชัยภูมิ</h4>
+            <p style="font-size: 0.88rem; color: #1d4ed8; font-weight: 600; margin-bottom: 2px;">ผู้อำนวยการโรงเรียนบ้านคลองมดแดง</p>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px;">ประธานคณะกรรมการประเมินผลการพัฒนางาน (PA)</p>
+            <button type="button" onclick="selectCommittee('นายปรัชญา ปรางค์ชัยภูมิ', 'ผู้อำนวยการโรงเรียนบ้านคลองมดแดง (ประธานกรรมการ)')" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; padding: 8px 18px; border-radius: var(--radius-sm); font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#2563eb'; this.style.color='white';" onmouseout="this.style.background='#eff6ff'; this.style.color='#1d4ed8';">
+              ✍️ ประเมินในนาม ผอ.ปรัชญา
+            </button>
+          </div>
+
+          <!-- กรรมการท่านที่ 2: ครูตรัสมา ปัญญาญาณ -->
+          <div style="background: white; border-radius: var(--radius-xl); padding: 1.75rem 1.25rem; border: 2px solid #059669; box-shadow: var(--shadow-md); text-align: center; position: relative;">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #059669; color: white; padding: 3px 16px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; white-space: nowrap;">
+              กรรมการประเมิน
+            </div>
+            <div style="width: 64px; height: 64px; margin: 0.5rem auto 0.75rem; background: #ecfdf5; color: #047857; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border: 2px solid #a7f3d0;">
+              👩‍🏫
+            </div>
+            <h4 style="font-size: 1.15rem; color: var(--primary-900); font-weight: 700; margin-bottom: 4px;">ครูตรัสมา ปัญญาญาณ</h4>
+            <p style="font-size: 0.88rem; color: #047857; font-weight: 600; margin-bottom: 2px;">ครู โรงเรียนบ้านคลองมดแดง</p>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px;">คณะกรรมการประเมินผลการพัฒนางานตามข้อตกลง (PA)</p>
+            <button type="button" onclick="selectCommittee('ครูตรัสมา ปัญญาญาณ', 'ครู โรงเรียนบ้านคลองมดแดง (กรรมการประเมิน)')" style="background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; padding: 8px 18px; border-radius: var(--radius-sm); font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#059669'; this.style.color='white';" onmouseout="this.style.background='#ecfdf5'; this.style.color='#047857';">
+              ✍️ ประเมินในนาม ครูตรัสมา
+            </button>
+          </div>
+
+          <!-- กรรมการท่านที่ 3: ครูชญานี ดวงต๋า -->
+          <div style="background: white; border-radius: var(--radius-xl); padding: 1.75rem 1.25rem; border: 2px solid #7c3aed; box-shadow: var(--shadow-md); text-align: center; position: relative;">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #7c3aed; color: white; padding: 3px 16px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; white-space: nowrap;">
+              กรรมการประเมิน
+            </div>
+            <div style="width: 64px; height: 64px; margin: 0.5rem auto 0.75rem; background: #f5f3ff; color: #6d28d9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border: 2px solid #ddd6fe;">
+              👩‍🏫
+            </div>
+            <h4 style="font-size: 1.15rem; color: var(--primary-900); font-weight: 700; margin-bottom: 4px;">ครูชญานี ดวงต๋า</h4>
+            <p style="font-size: 0.88rem; color: #6d28d9; font-weight: 600; margin-bottom: 2px;">ครู โรงเรียนบ้านคลองมดแดง</p>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px;">คณะกรรมการประเมินผลการพัฒนางานตามข้อตกลง (PA)</p>
+            <button type="button" onclick="selectCommittee('ครูชญานี ดวงต๋า', 'ครู โรงเรียนบ้านคลองมดแดง (กรรมการประเมิน)')" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; padding: 8px 18px; border-radius: var(--radius-sm); font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#7c3aed'; this.style.color='white';" onmouseout="this.style.background='#f5f3ff'; this.style.color='#6d28d9';">
+              ✍️ ประเมินในนาม ครูชญานี
+            </button>
+          </div>
+
+        </div>
+      </div>
+
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
         <!-- Left: Feedback Form -->
         <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--surface-border-blue); box-shadow: var(--shadow-lg);">
@@ -2944,6 +3019,21 @@
     }
 
     // Modal controls for Firebase Setup
+    
+    // Function to prefill committee data
+    function selectCommittee(name, role) {
+      const nameInput = document.getElementById('fb-name');
+      const roleInput = document.getElementById('fb-role');
+      const commentInput = document.getElementById('fb-comment');
+      if (nameInput) nameInput.value = name;
+      if (roleInput) roleInput.value = role;
+      if (typeof setRating === 'function') setRating(5);
+      if (commentInput) {
+        commentInput.focus();
+        commentInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
     function openFirebaseModal() {
       document.getElementById('firebase-modal').classList.add('active');
       document.body.style.overflow = 'hidden';
