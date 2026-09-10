@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px;color:#43302e}
+  .wrap{max-width:900px;margin:0 auto}
+  h2{font-family:'Prompt';color:#5f1b29;font-size:21px;margin-bottom:4px;text-align:center}
+  .sub{text-align:center;color:#9b7c74;font-size:14px;margin-bottom:20px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+  /* ===== วิธีใส่ลิงก์: แก้ href="#" ของแต่ละการ์ดเป็นลิงก์แชร์ Google Drive ของเอกสารนั้น ===== */
+  a.doc{display:flex;flex-direction:column;gap:8px;background:#fff;border-radius:15px;padding:18px;
+    text-decoration:none;color:inherit;border:1.5px solid #f0e0d8;position:relative;overflow:hidden;
+    box-shadow:0 3px 10px rgba(95,27,41,.07);transition:transform .3s,box-shadow .3s,border-color .3s;
+    opacity:0;transform:translateY(16px)}
+  a.doc.in{opacity:1;transform:none}
+  a.doc:hover{transform:translateY(-5px)!important;box-shadow:0 12px 24px rgba(95,27,41,.16);border-color:#c9a227}
+  .ic{width:44px;height:44px;border-radius:12px;font-size:22px;display:flex;align-items:center;
+    justify-content:center;background:linear-gradient(135deg,#f8ebe4,#fdf6f1);transition:.3s}
+  a.doc:hover .ic{background:linear-gradient(135deg,#8a2333,#a53446);transform:rotate(-8deg) scale(1.1)}
+  .t{font-family:'Prompt';font-weight:600;font-size:14.5px;color:#5f1b29;line-height:1.4}
+  .y{font-size:12.5px;color:#9b7c74}
+  .open{margin-top:auto;align-self:flex-start;font-family:'Prompt';font-weight:600;font-size:12.5px;
+    color:#8a2333;background:#f8ebe4;padding:5px 13px;border-radius:999px;transition:.25s}
+  a.doc:hover .open{background:#8a2333;color:#fff}
+  .star{position:absolute;top:12px;right:12px;font-size:15px}
+  @media(max-width:680px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:430px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h2>📁 เอกสารหลักฐานประกอบการประเมิน</h2>
+  <div class="sub">คลิกการ์ดเพื่อเปิดเอกสารฉบับเต็ม (Google Drive)</div>
+  <div class="grid">
+    <!-- ✏️ แก้ href="#" เป็นลิงก์แชร์ Google Drive ของแต่ละไฟล์ (แชร์แบบ "ทุกคนที่มีลิงก์ – ดูได้") -->
+    <a class="doc" href="#" target="_blank">
+      <span class="star">⭐</span><div class="ic">🤝</div>
+      <div class="t">แบบข้อตกลงในการพัฒนางาน (PA)</div><div class="y">ช่วง 1 ต.ค. 2568 - 30 ก.ย. 2569</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <span class="star">⭐</span><div class="ic">📝</div>
+      <div class="t">แผนการจัดการเรียนรู้</div><div class="y">วิทยาการคำนวณ · วิทยาศาสตร์ · ออกแบบ (2569)</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <span class="star">⭐</span><div class="ic">✍️</div>
+      <div class="t">บันทึกหลังแผนการจัดการเรียนรู้</div><div class="y">บันทึกหลังการสอน (2569)</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <div class="ic">📊</div>
+      <div class="t">รายงานการประเมินตนเอง (SAR)</div><div class="y">ปีการศึกษา 2567</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <div class="ic">📊</div>
+      <div class="t">รายงานการประเมินตนเอง (SAR)</div><div class="y">ปีการศึกษา 2566</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <div class="ic">🎯</div>
+      <div class="t">แผนพัฒนาตนเอง (ID Plan)</div><div class="y">ปีการศึกษา 2568</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <div class="ic">🎯</div>
+      <div class="t">แผนพัฒนาตนเอง (ID Plan)</div><div class="y">ปีการศึกษา 2567</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <div class="ic">📋</div>
+      <div class="t">ภาระงาน ประจำปี 2568</div><div class="y">คำสั่ง/ตารางสอน</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <div class="ic">🏘️</div>
+      <div class="t">รายงานโครงการส่งเสริมความสัมพันธ์ชุมชน</div><div class="y">ปี 2568</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <div class="ic">💼</div>
+      <div class="t">แฟ้มสะสมผลงาน (Portfolio)</div><div class="y">ฉบับรวม</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <div class="ic">🎓</div>
+      <div class="t">รวมเกียรติบัตรการอบรม</div><div class="y">2567 – 2569</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+    <a class="doc" href="#" target="_blank">
+      <div class="ic">🏅</div>
+      <div class="t">รวมเกียรติบัตรรางวัลผู้ฝึกสอน</div><div class="y">ปีการศึกษา 2567</div>
+      <span class="open">เปิดเอกสาร →</span>
+    </a>
+  </div>
+</div>
+<script>
+  const items=[...document.querySelectorAll('a.doc')];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('in'), 70*(items.indexOf(e.target)%6));
+      io.unobserve(e.target);
+    }
+  }),{threshold:.1});
+  items.forEach(el=>io.observe(el));
+  // กันเหนียว: ถ้าอีเวนต์ไม่ทำงาน ให้แสดงทุกอย่างเองใน 3 วินาที
+  setTimeout(()=>items.forEach(el=>el.classList.add('in')),3000);
+  // การ์ดที่ยังไม่ใส่ลิงก์ ให้ขึ้นเตือนแทนการเปิดหน้าว่าง
+  items.forEach(a=>a.addEventListener('click',e=>{
+    if(a.getAttribute('href')==='#'){e.preventDefault();
+      const o=a.querySelector('.open'),t=o.textContent;
+      o.textContent='ยังไม่แนบลิงก์เอกสาร';setTimeout(()=>o.textContent=t,1500);}
+  }));
+</script>
+</body>
+</html>

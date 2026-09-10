@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Sarabun',sans-serif;background:transparent;color:#332728;padding:12px}
+  .wrap{max-width:980px;margin:0 auto;background:#fff;border:1px solid #eadbd6;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(87,18,31,.13)}
+  .hero{background:#6f1d2d;color:#fff;padding:22px 24px;border-bottom:5px solid #d7aa3c}
+  .tag{display:inline-block;background:#f2d568;color:#581625;border-radius:8px;padding:4px 10px;font-family:'Prompt';font-size:12px;font-weight:700;margin-bottom:8px}
+  h2{font-family:'Prompt';font-size:24px;line-height:1.28}
+  .lead{margin-top:6px;max-width:780px;color:#ffe8df;font-size:14px;line-height:1.6}
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:#fff8f3;padding:14px;border-bottom:1px solid #eadbd6}
+  .fact{background:#fff;border:1px solid #eadbd6;border-radius:8px;padding:12px;min-height:88px}
+  .fact b{display:block;font-family:'Prompt';font-size:18px;color:#751f31;line-height:1.2;margin-bottom:4px}
+  .fact span{display:block;font-size:12.8px;color:#67524d;line-height:1.45}
+  .body{padding:16px}
+  .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:12px}
+  table{width:100%;border-collapse:collapse;border:1px solid #eadbd6;border-radius:8px;overflow:hidden;background:#fff}
+  th,td{padding:10px 11px;border-bottom:1px solid #eadbd6;text-align:left;vertical-align:top;font-size:13px;line-height:1.45}
+  th{font-family:'Prompt';font-size:13px;color:#5b1423;background:#fff3ec}
+  tr:last-child td{border-bottom:0}
+  .panel{border:1px solid #eadbd6;border-radius:8px;background:#fcfaf6;padding:13px}
+  .panel h3{font-family:'Prompt';font-size:16px;color:#5b1423;margin-bottom:8px}
+  .todo{display:grid;gap:8px}
+  .todo div{border-left:4px solid #d7aa3c;background:#fff;padding:8px 9px;border-radius:6px;font-size:12.8px;color:#604d49;line-height:1.45}
+  .score{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+  .box{border:1px solid #eadbd6;border-radius:8px;padding:12px;background:#fff}
+  .box b{display:block;font-family:'Prompt';font-size:24px;color:#761f31;margin-bottom:4px}
+  .box h3{font-family:'Prompt';font-size:14px;color:#5b1423;margin-bottom:5px}
+  .box p{font-size:12.8px;color:#65504c;line-height:1.5}
+  .note{margin-top:12px;background:#f4f9f5;border:1px solid #d5e8d9;border-radius:8px;color:#34513b;padding:10px 12px;font-size:12.8px;line-height:1.55}
+  @media(max-width:760px){.facts,.score{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}h2{font-size:21px}}
+  @media(max-width:460px){.facts,.score{grid-template-columns:1fr}.hero{padding:20px 18px}.body{padding:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <span class="tag">รายงานตามตัวประเมิน</span>
+    <h2>ข้อมูลที่พบจากหลักฐาน ใช้กรอกและอธิบายผลการประเมิน</h2>
+    <p class="lead">จัดตามแบบประเมินเลื่อนเงินเดือน ตำแหน่งครูยังไม่มีวิทยฐานะ โดยแยกข้อมูลที่ยืนยันได้แล้วออกจากรายการที่ต้องรอหลักฐานจริง</p>
+  </section>
+
+  <section class="facts">
+    <div class="fact"><b>นายอนันตชัย เพ็ชรรี่</b><span>ครู อันดับ คศ.1 ตามแบบ PA โรงเรียนบ้านคลองมดแดง</span></div>
+    <div class="fact"><b>20,250 บาท</b><span>เงินเดือนตามแบบข้อตกลง PA</span></div>
+    <div class="fact"><b>23 ชม./สัปดาห์</b><span>ภาระงานสอนตาม PA และภาระงาน 2568</span></div>
+    <div class="fact"><b>ป.1 จำนวน 9 คน</b><span>กลุ่มเป้าหมายประเด็นท้าทาย Gamification</span></div>
+  </section>
+
+  <section class="body">
+    <div class="grid">
+      <table>
+        <thead><tr><th>ส่วนประเมิน</th><th>ข้อมูลที่มีหลักฐานแล้ว</th></tr></thead>
+        <tbody>
+          <tr><td>องค์ประกอบที่ 1</td><td>PA ครบ 3 ด้าน 15 ตัวชี้วัด และมีประเด็นท้าทายใช้ ADDIE, Active Learning, Code.org, Poki.com, Canva Games, Pre-test/Post-test</td></tr>
+          <tr><td>องค์ประกอบที่ 2</td><td>งานมอบหมาย: เทคโนโลยีเพื่อการเรียนการสอน, อาคารสถานที่, ชุมชนสัมพันธ์, ICT และรายงานโครงการชุมชนสัมพันธ์สำเร็จร้อยละ 100</td></tr>
+          <tr><td>องค์ประกอบที่ 3</td><td>ID Plan, PLC 13 ชั่วโมง, อบรม AI/ICT, ระบบดูแลช่วยเหลือ, งานผู้ปกครองและชุมชน ใช้ประกอบพฤติกรรมจรรยาบรรณ</td></tr>
+        </tbody>
+      </table>
+      <aside class="panel">
+        <h3>ต้องเติมก่อนส่งจริง</h3>
+        <div class="todo">
+          <div>วันลาในรอบประเมินจากงานธุรการ</div>
+          <div>คะแนนประเมินตนเองและคะแนนผู้บังคับบัญชา</div>
+          <div>คะแนนก่อนเรียน/หลังเรียนจริง และร้อยละผ่านเกณฑ์จริง</div>
+          <div>ลิงก์ Google Drive 12 รายการที่เปิดดูได้</div>
+          <div>รูปจริง 4 กลุ่ม และคำรับรองสั้นจากผู้บริหาร/PLC</div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="score">
+      <div class="box"><b>80</b><h3>มาตรฐานตำแหน่ง</h3><p>ด้านที่ 1-3 และประเด็นท้าทายผลลัพธ์ผู้เรียน</p></div>
+      <div class="box"><b>10</b><h3>พัฒนาการศึกษา</h3><p>งานมอบหมาย โครงการ คำสั่ง รายงาน และผลสำเร็จ</p></div>
+      <div class="box"><b>10</b><h3>จรรยาบรรณ</h3><p>พฤติกรรมครู วินัย จิตสาธารณะ ความรับผิดชอบ และความเป็นธรรม</p></div>
+    </div>
+    <div class="note">ตัวเลขโครงการชุมชนสัมพันธ์ที่ยืนยันได้: ผู้ตอบแบบสอบถาม 80 คน มากที่สุด 69 คน ร้อยละ 86.25 ระดับมาก 11 คน ร้อยละ 13.75 รวมระดับมากขึ้นไปร้อยละ 100</div>
+    <div class="note">ตรวจทานจาก maiyakyoo: เริ่มรับราชการ 17 ม.ค. 2567, PA ระบุครู คศ.1 เงินเดือน 20,250 บาท, ภาระงานสอน 23 ชม./สัปดาห์ และปี 2569 มีวุฒิบัตร AI สสวท. ที่ระบุชั่วโมงแล้ว 28 ชม.</div>
+  </section>
+</div>
+</body>
+</html>

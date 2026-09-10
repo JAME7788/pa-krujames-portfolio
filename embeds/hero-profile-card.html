@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px}
+  .card{max-width:900px;margin:0 auto;background:linear-gradient(135deg,#4a1220 0%,#5f1b29 35%,#8a2333 100%);
+    border-radius:22px;padding:36px 38px;position:relative;overflow:hidden;color:#fff;
+    box-shadow:0 12px 34px rgba(95,27,41,.30);animation:pop .7s cubic-bezier(.2,.8,.3,1) both}
+  @keyframes pop{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:none}}
+  /* วงกลมตกแต่ง */
+  .card::before,.card::after{content:'';position:absolute;border-radius:50%}
+  .card::before{right:-70px;top:-70px;width:240px;height:240px;background:rgba(201,162,39,.16);
+    animation:float 6s ease-in-out infinite}
+  .card::after{left:-50px;bottom:-90px;width:200px;height:200px;background:rgba(255,255,255,.05);
+    animation:float 7s ease-in-out infinite reverse}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(14px)}}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#c9a227,#e8c757,#c9a227);
+    background-size:200% 100%;color:#4a1220;font-family:'Prompt';font-weight:600;font-size:13px;
+    padding:5px 16px;border-radius:999px;margin-bottom:14px;animation:shine 3.5s linear infinite;z-index:1;position:relative}
+  @keyframes shine{to{background-position:200% 0}}
+  h1{font-family:'Prompt',sans-serif;font-weight:700;font-size:34px;line-height:1.2;position:relative;z-index:1;
+    animation:slide .8s .15s cubic-bezier(.2,.8,.3,1) both}
+  .nick{color:#ffd76e;font-family:'Prompt';font-weight:500;font-size:19px;margin:4px 0 6px;position:relative;z-index:1;
+    animation:slide .8s .25s cubic-bezier(.2,.8,.3,1) both}
+  @keyframes slide{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:none}}
+  .line{width:84px;height:4px;border-radius:4px;background:linear-gradient(90deg,#c9a227,#ffd76e);
+    margin:10px 0 18px;position:relative;z-index:1;transform-origin:left;animation:grow .9s .35s cubic-bezier(.2,.8,.3,1) both}
+  @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 26px;position:relative;z-index:1;
+    animation:slide .8s .4s cubic-bezier(.2,.8,.3,1) both}
+  .row{display:flex;gap:9px;align-items:flex-start;font-size:15px;line-height:1.55}
+  .row .ic{flex-shrink:0}
+  .row b{color:#ffd76e;font-weight:600}
+  .tags{margin-top:20px;display:flex;gap:9px;flex-wrap:wrap;position:relative;z-index:1;
+    animation:slide .8s .55s cubic-bezier(.2,.8,.3,1) both}
+  .tag{background:rgba(255,255,255,.13);border:1px solid rgba(255,215,110,.4);color:#fff;
+    font-size:13.5px;padding:5px 14px;border-radius:999px;transition:.25s}
+  .tag:hover{background:#c9a227;color:#4a1220;transform:translateY(-3px)}
+  @media(max-width:600px){.card{padding:26px 22px}h1{font-size:26px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="badge">✨ E-PORTFOLIO · แฟ้มผลงานอิเล็กทรอนิกส์</span>
+    <h1>นายอนันตชัย เพ็ชรรี่</h1>
+    <div class="nick">ครูเจมส์ · ครู อันดับ คศ.1</div>
+    <div class="line"></div>
+    <div class="grid">
+      <div class="row"><span class="ic">🏫</span><span><b>สถานศึกษา</b><br>โรงเรียนบ้านคลองมดแดง อ.คลองลาน จ.กำแพงเพชร</span></div>
+      <div class="row"><span class="ic">📍</span><span><b>สังกัด</b><br>สพป.กำแพงเพชร เขต 2</span></div>
+      <div class="row"><span class="ic">🎓</span><span><b>วุฒิการศึกษา</b><br>ค.บ. (คอมพิวเตอร์) มหาวิทยาลัยราชภัฏอุตรดิตถ์</span></div>
+      <div class="row"><span class="ic">📚</span><span><b>กลุ่มสาระ</b><br>วิทยาศาสตร์และเทคโนโลยี · การงานอาชีพ</span></div>
+    </div>
+    <div class="tags">
+      <span class="tag">💻 วิทยาการคำนวณ</span>
+      <span class="tag">🔬 วิทยาศาสตร์</span>
+      <span class="tag">🎬 ตัดต่อวิดีโอ/กราฟิก</span>
+      <span class="tag">🤖 AI เพื่อการสอน</span>
+    </div>
+  </div>
+</body>
+</html>

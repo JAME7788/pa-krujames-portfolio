@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px;color:#43302e}
+  .wrap{max-width:920px;margin:0 auto}
+  .head{background:linear-gradient(135deg,#8a6d1a,#c9a227 65%,#e8c757);color:#fff;border-radius:18px;
+    padding:22px 28px;margin-bottom:16px;position:relative;overflow:hidden}
+  .head::after{content:'🤲';position:absolute;right:18px;bottom:-14px;font-size:74px;opacity:.22;transform:rotate(-12deg)}
+  .head h2{font-family:'Prompt';font-size:22px;text-shadow:0 1px 3px rgba(90,60,0,.3);position:relative;z-index:1}
+  .head p{font-size:13.5px;color:#fdf3d0;margin-top:5px;line-height:1.6;position:relative;z-index:1}
+  .item{background:#fff;border-radius:14px;margin-bottom:11px;padding:16px 20px;
+    box-shadow:0 3px 11px rgba(95,27,41,.08);display:flex;gap:14px;align-items:flex-start;
+    border-left:4px solid #c9a227;opacity:0;transform:translateY(16px);transition:.55s ease}
+  .item.in{opacity:1;transform:none}
+  .item:hover{box-shadow:0 9px 22px rgba(95,27,41,.15)}
+  .n{width:32px;height:32px;flex-shrink:0;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-family:'Prompt';font-weight:700;font-size:14px;color:#fff;background:linear-gradient(135deg,#8a2333,#a53446)}
+  .body{flex:1}
+  .body h3{font-family:'Prompt';font-size:15.5px;color:#5f1b29;margin-bottom:3px}
+  .crit{font-size:12.5px;color:#9b7c74;margin-bottom:7px;line-height:1.5}
+  .ev{font-size:13.5px;line-height:1.65;color:#5f4a46}
+  .ev b{color:#8a2333}
+  .tag{display:inline-block;font-family:'Prompt';font-weight:600;font-size:11px;padding:2px 10px;
+    border-radius:999px;margin-top:7px}
+  .ok{background:#e8f3ec;color:#1d7a3f}
+  .wait{background:#fdeaea;color:#a8323b}
+  .fill{color:#b0862a;font-style:italic}
+  .foot{background:#fffaec;border:1px solid #ecdba3;border-radius:14px;padding:14px 20px;
+    font-size:13px;line-height:1.7;margin-top:14px}
+  .foot b{color:#8a6d1a}
+  @media(max-width:520px){.item{padding:14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h2>🤲 องค์ประกอบที่ 2 · การมีส่วนร่วมในการพัฒนาการศึกษา (10 คะแนน)</h2>
+    <p>พิจารณาจากปริมาณงานที่ได้รับมอบหมายจากผู้บังคับบัญชาแล้วเสร็จ — ระดับ 5 คือแล้วเสร็จร้อยละ 80 ขึ้นไป (คะแนน = ระดับ × ค่าน้ำหนัก 2)</p>
+  </div>
+
+  <div class="item"><span class="n">1</span><div class="body">
+    <h3>ปฏิบัติงานตามคำสั่งที่ได้รับมอบหมาย</h3>
+    <div class="crit">เกณฑ์: ดำเนินงานครบถ้วน ถูกต้อง แล้วเสร็จภายในเวลาที่กำหนด</div>
+    <div class="ev">ปฏิบัติหน้าที่<b>ครูเวรประจำวัน</b>ตามคำสั่งโรงเรียน · ปฏิบัติงานเสริมตามคำสั่งผู้อำนวยการและรองผู้อำนวยการ · งานฝ่ายบริหารวิชาการ ฝ่ายบริหารงานทั่วไป และงาน ICT ครบตามที่ได้รับมอบหมาย</div>
+    <span class="tag ok">มีหลักฐานแล้ว</span>
+  </div></div>
+
+  <div class="item"><span class="n">2</span><div class="body">
+    <h3>รับผิดชอบโครงการหรือกิจกรรมของโรงเรียน</h3>
+    <div class="crit">เกณฑ์: โครงการสำเร็จตามวัตถุประสงค์ มีรายงานและหลักฐานครบถ้วน</div>
+    <div class="ev"><b>ประธานคณะกรรมการดำเนินงานโครงการส่งเสริมความสัมพันธ์ชุมชน</b> ปีการศึกษา 2568 — ความสำเร็จ<b>ร้อยละ 100</b> ความพึงพอใจระดับมากที่สุด ร้อยละ 86.25 (ผู้ตอบ 80 คน) · โครงการเทคโนโลยีสารสนเทศเพื่อการจัดการเรียนการสอน · โครงการอาคารสถานที่และสิ่งแวดล้อม</div>
+    <span class="tag ok">มีรายงานฉบับสมบูรณ์</span>
+  </div></div>
+
+  <div class="item"><span class="n">3</span><div class="body">
+    <h3>ปฏิบัติหน้าที่คณะกรรมการต่าง ๆ และร่วมกิจกรรมชุมชน บ้าน วัด โรงเรียน</h3>
+    <div class="crit">เกณฑ์: เข้าร่วมประชุมและปฏิบัติหน้าที่สม่ำเสมอ ส่งมอบงานครบถ้วน</div>
+    <div class="ev"><b>หัวหน้ากลุ่มสาระการเรียนรู้การงานอาชีพ</b> · จัดประชุมผู้ปกครองและคณะกรรมการสถานศึกษาขั้นพื้นฐาน ภาคเรียนละ 1 ครั้ง · เข้าร่วมกิจกรรมกับชุมชนและบันทึกภาพประชาสัมพันธ์ · ร่วมโครงการปฏิบัติธรรม วิปัสสนา ตามโครงการแผ่นดินธรรมแผ่นดินทอง (วัดหนองปลิง)</div>
+    <span class="tag ok">มีหลักฐานแล้ว</span>
+  </div></div>
+
+  <div class="item"><span class="n">4</span><div class="body">
+    <h3>จัดทำเอกสารราชการและรายงาน พร้อมนำไปใช้</h3>
+    <div class="crit">เกณฑ์: เอกสารถูกต้อง ครบถ้วน เป็นปัจจุบัน ส่งตามกำหนดเวลา</div>
+    <div class="ev">จัดทำ<b>รายงานการประเมินตนเอง (SAR)</b> ปีการศึกษา 2566 และ 2567 · <b>แผนพัฒนาตนเองรายบุคคล (ID Plan)</b> 2567–2568 · <b>ข้อตกลงในการพัฒนางาน (PA)</b> · รายงานผลโครงการชุมชนสัมพันธ์ (บันทึกข้อความที่ ศธ 04024.137/บค002/2569 ลงวันที่ 26 มีนาคม 2569) · ขออนุญาตไปราชการและรายงานผลการอบรมทุกครั้ง</div>
+    <span class="tag ok">มีหลักฐานแล้ว</span>
+  </div></div>
+
+  <div class="item"><span class="n">5</span><div class="body">
+    <h3>สนับสนุนงานนโยบายของหน่วยงาน</h3>
+    <div class="crit">เกณฑ์: ดำเนินงานตามนโยบาย สพฐ. เขตพื้นที่ และโรงเรียน เช่น ปีทองของการอ่าน อ่านออกเขียนได้</div>
+    <div class="ev">ดำเนินงานตามนโยบายด้านดิจิทัลและ AI ของ สพฐ./สสวท. · สอนซ่อมเสริม ป.6 และ ม.3 สัปดาห์ละ 1 ชั่วโมง<br><span class="fill">[เติมข้อมูล — กิจกรรมที่ร่วมตามนโยบาย "ปีทองของการอ่าน / อ่านออกเขียนได้" ของโรงเรียน]</span></div>
+    <span class="tag wait">ต้องเติมข้อมูล</span>
+  </div></div>
+
+  <div class="item"><span class="n">6</span><div class="body">
+    <h3>ประสานงานและทำงานเป็นทีม</h3>
+    <div class="crit">เกณฑ์: ร่วมมือกับผู้บริหาร ครู บุคลากร มีการประชุมทั้งก่อนและหลังดำเนินงาน</div>
+    <div class="ev">ร่วม<b>ชุมชนการเรียนรู้ทางวิชาชีพ (PLC) 13 ชั่วโมง/ปี</b> · ประชุมคณะกรรมการวางแผนก่อนดำเนินโครงการและสรุปผลหลังดำเนินการตามวงจร PDCA · ประสานงานฝ่ายวิชาการ ฝ่ายบริหารทั่วไป และชุมชน</div>
+    <span class="tag ok">มีหลักฐานแล้ว</span>
+  </div></div>
+
+  <div class="item"><span class="n">7</span><div class="body">
+    <h3>แก้ไขปัญหาและพัฒนางานที่ได้รับมอบหมาย</h3>
+    <div class="crit">เกณฑ์: วิเคราะห์ปัญหา เสนอแนวทาง และปรับปรุงงานให้เกิดประสิทธิภาพ</div>
+    <div class="ev">วิเคราะห์จุดควรพัฒนาของโครงการสารสนเทศ พบปัญหาบุคลากรบางส่วนขาดความชำนาญและระบบเครือข่ายไม่เสถียร จึง<b>เสนอแนวทางพัฒนาทักษะ ICT ให้บุคลากรและปรับปรุงระบบเครือข่าย</b> · แก้ปัญหาผู้เรียนด้วยกระบวนการวิจัยในชั้นเรียน (Gamification / Quizizz)</div>
+    <span class="tag ok">มีหลักฐานแล้ว</span>
+  </div></div>
+
+  <div class="item"><span class="n">8</span><div class="body">
+    <h3>มีความคิดริเริ่มสร้างสรรค์ในการปฏิบัติงาน</h3>
+    <div class="crit">เกณฑ์: พัฒนานวัตกรรม วิธีการ หรือสื่อที่ช่วยให้งานมีคุณภาพและลดขั้นตอน</div>
+    <div class="ev">ผลิต<b>สื่อและนวัตกรรมการเรียนรู้ 62 ชิ้น</b> · พัฒนานวัตกรรม Gamification (ป.1) และ Quizizz (ม.3) · จัดทำ<b>ระบบรายงานคะแนนออนไลน์</b>ให้นักเรียนตรวจสอบผลด้วยตนเอง ลดขั้นตอนการแจ้งผล · งานตัดต่อวิดีโอ ถ่ายภาพ กราฟิก · จัดทำ<b>เว็บไซต์ E-Portfolio</b> เผยแพร่ผลงานสู่สาธารณะ</div>
+    <span class="tag ok">จุดแข็งที่สุด</span>
+  </div></div>
+
+  <div class="item"><span class="n">9</span><div class="body">
+    <h3>ผลสัมฤทธิ์ของงานที่ได้รับมอบหมาย</h3>
+    <div class="crit">เกณฑ์: งานบรรลุเป้าหมาย ได้รับการยอมรับจากผู้บังคับบัญชา และไม่พบข้อร้องเรียน</div>
+    <div class="ev">โครงการที่รับผิดชอบสำเร็จ<b>ร้อยละ 100</b> · ผลการประเมินคุณภาพการปฏิบัติงานทุกฝ่ายใน SAR อยู่ในระดับ<b>ดี</b> · ผลการประเมินการสอนโดยนักเรียนอยู่ในระดับ<b>มากที่สุด</b> · <b>ไม่พบข้อร้องเรียน</b>ในรอบการประเมิน</div>
+    <span class="tag ok">มีหลักฐานแล้ว</span>
+  </div></div>
+
+  <div class="item"><span class="n">10</span><div class="body">
+    <h3>ร่วมดูแลแปลงเกษตรในความรับผิดชอบ</h3>
+    <div class="crit">เกณฑ์: ครูประจำชั้นและนักเรียนมีส่วนร่วมกันดูแลแปลงเกษตรให้มีความอุดมสมบูรณ์</div>
+    <div class="ev">ปฏิบัติหน้าที่ดูแลบริเวณและ<b>สวนเศรษฐกิจพอเพียง</b>ตามที่ได้รับมอบหมาย (ปรากฏในรายงาน SAR ฝ่ายบริหารงานทั่วไป)<br><span class="fill">[เติมข้อมูล — แปลงเกษตรที่รับผิดชอบปี 2569 พืชที่ปลูก และภาพนักเรียนร่วมดูแล]</span></div>
+    <span class="tag wait">ต้องเติมข้อมูล + รูป</span>
+  </div></div>
+
+  <div class="foot">
+    <b>📌 สิ่งที่ต้องเตรียมเพิ่มสำหรับองค์ประกอบนี้:</b><br>
+    1) ภาพกิจกรรมแปลงเกษตร/สวนเศรษฐกิจพอเพียงพร้อมนักเรียน &nbsp;2) หลักฐานการร่วมกิจกรรมนโยบาย "ปีทองของการอ่าน" &nbsp;3) สำเนาคำสั่งแต่งตั้งคณะกรรมการชุดต่าง ๆ &nbsp;4) ภาพการประชุมทีมก่อน–หลังดำเนินโครงการ
+  </div>
+</div>
+<script>
+  const items=[...document.querySelectorAll('.item')];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),60*(items.indexOf(e.target)%6));io.unobserve(e.target)}
+  }),{threshold:.1});
+  items.forEach(el=>io.observe(el));
+  setTimeout(()=>items.forEach(el=>el.classList.add('in')),3000);
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>รางวัลและหลักฐานภาพถ่าย</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: transparent; font-family: Tahoma, Arial, sans-serif; color: #fff; }
+    .wrap {
+      max-width: 1120px;
+      height: 380px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: linear-gradient(135deg, #210106 0%, #9e0c1e 52%, #180105 100%);
+      box-shadow: 0 14px 34px rgba(88,0,12,.22);
+    }
+    .inner { padding: 14px; height: 100%; display: grid; grid-template-rows: auto 1fr auto; gap: 8px; }
+    .top { display: grid; grid-template-columns: 1fr 250px; gap: 10px; align-items: stretch; }
+    .kicker { color: #f6c85a; font-size: 10px; font-weight: 800; }
+    h1 { margin: 3px 0 0; font-size: 28px; line-height: 1.12; font-weight: 800; letter-spacing: 0; }
+    .lead { margin: 4px 0 0; color: rgba(255,247,232,.82); font-size: 11px; line-height: 1.35; font-weight: 700; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+    .stat { min-height: 48px; padding: 7px; border-radius: 8px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16); }
+    .stat b { display: block; color: #f6c85a; font-size: 20px; line-height: 1; font-weight: 800; }
+    .stat span { display: block; margin-top: 3px; color: rgba(255,247,232,.82); font-size: 8.5px; line-height: 1.2; font-weight: 800; }
+    .main { display: grid; grid-template-columns: 1.1fr .9fr; gap: 8px; min-height: 0; }
+    .panel { padding: 9px; border-radius: 8px; background: rgba(28,1,7,.68); border: 1px solid rgba(255,255,255,.15); min-height: 0; }
+    .panel.light { background: #fffaf0; color: #27080d; }
+    h2 { margin: 0 0 6px; font-size: 15px; line-height: 1.2; font-weight: 800; letter-spacing: 0; }
+    .awards { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 5px; }
+    .award { min-height: 50px; padding: 6px; border-radius: 7px; background: #fff; color: #27080d; border: 1px solid rgba(246,200,90,.9); }
+    .award.win { background: linear-gradient(180deg, #fff8df, #fff); border-color: #f6c85a; }
+    .tag { display: inline-block; padding: 2px 6px; border-radius: 999px; background: #d71930; color: #fff; font-size: 8px; line-height: 1.2; font-weight: 800; }
+    .win .tag { background: #8f0d1d; color: #ffe294; }
+    .award strong { display: block; margin-top: 3px; font-size: 9.2px; line-height: 1.22; font-weight: 800; }
+    .award small { display: block; margin-top: 2px; color: rgba(39,8,13,.66); font-size: 7.8px; line-height: 1.2; font-weight: 700; }
+    .slots { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 5px; }
+    .slot { min-height: 51px; padding: 6px; border-radius: 7px; border: 1px dashed rgba(143,13,29,.42); background: linear-gradient(135deg, rgba(215,25,48,.08), rgba(246,200,90,.18)), #fff; }
+    .slot b { display: block; font-size: 9.3px; line-height: 1.25; font-weight: 800; }
+    .slot span { display: block; margin-top: 3px; color: rgba(39,8,13,.68); font-size: 7.8px; line-height: 1.2; font-weight: 700; }
+    .slot.wide { grid-column: 1 / -1; min-height: 43px; }
+    .impact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 6px; }
+    .impact div { min-height: 42px; padding: 6px; border-radius: 7px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.14); }
+    .impact b { display: block; color: #f6c85a; font-size: 8.7px; line-height: 1.18; font-weight: 800; }
+    .impact span { display: block; margin-top: 2px; color: rgba(255,247,232,.78); font-size: 7.4px; line-height: 1.16; font-weight: 700; }
+    .note { padding: 6px 8px; border-radius: 8px; background: rgba(246,200,90,.14); border: 1px solid rgba(246,200,90,.28); color: #fff3cd; font-size: 9px; line-height: 1.28; font-weight: 700; }
+    @media (max-width: 760px) {
+      .wrap { height: auto; min-height: 380px; }
+      .top, .main { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2,1fr); }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="inner">
+      <div class="top">
+        <div>
+          <div class="kicker">AWARD EVIDENCE BOARD</div>
+          <h1>รางวัลผู้ฝึกสอนและหลักฐานภาพถ่าย</h1>
+          <p class="lead">สรุปชื่อรางวัล ระดับ หน่วยงาน วันที่ และจุดแนบภาพหลักฐาน เพื่อให้กรรมการตรวจผลงานได้เร็ว</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>6</b><span>รางวัลผู้ฝึกสอน</span></div>
+          <div class="stat"><b>2</b><span>ชนะเลิศ</span></div>
+          <div class="stat"><b>4</b><span>เหรียญทอง</span></div>
+          <div class="stat"><b>2</b><span>ระดับเวที</span></div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="panel">
+          <h2>หัวข้อรางวัลที่ควรแสดง</h2>
+          <div class="awards">
+            <div class="award win"><span class="tag">ชนะเลิศอันดับ 1</span><strong>การสร้างแอนิเมชันเรื่องสั้น</strong><small>กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</small></div>
+            <div class="award win"><span class="tag">ชนะเลิศ เหรียญทอง</span><strong>แอนิเมชัน 2D</strong><small>สพป.กำแพงเพชร เขต 2 · 31 ส.ค. 2567</small></div>
+            <div class="award"><span class="tag">เหรียญทอง</span><strong>นำเสนอด้วย PowerPoint</strong><small>กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</small></div>
+            <div class="award"><span class="tag">เหรียญทอง</span><strong>คอมพิวเตอร์กราฟิก</strong><small>กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</small></div>
+            <div class="award"><span class="tag">เหรียญทอง กลุ่ม</span><strong>การ์ตูนคอมมิค</strong><small>กลุ่มโรงเรียนคลองสวนหมาก · 21 ส.ค. 2567</small></div>
+            <div class="award"><span class="tag">เหรียญทอง เขต</span><strong>การ์ตูนคอมมิค</strong><small>สพป.กำแพงเพชร เขต 2 · 31 ส.ค. 2567</small></div>
+          </div>
+          <div class="impact">
+            <div><b>ต่อผู้เรียน</b><span>ทักษะดิจิทัล ออกแบบ นำเสนอ</span></div>
+            <div><b>ต่อ PA</b><span>เชื่อมด้าน 1 และด้าน 3</span></div>
+            <div><b>ต่อเว็บประกวด</b><span>เพิ่มหลักฐานเชิงประจักษ์</span></div>
+          </div>
+        </div>
+        <div class="panel light">
+          <h2>ช่องแนบรูปหลักฐาน</h2>
+          <div class="slots">
+            <div class="slot"><b>เกียรติบัตร 6 ใบ</b><span>ใช้ภาพสไลด์หรือกริด 2 x 3</span></div>
+            <div class="slot"><b>รูปแข่งขัน / รับรางวัล</b><span>เลือก 2-4 รูปที่เหมาะสมตาม PDPA</span></div>
+            <div class="slot"><b>ผลงานนักเรียน</b><span>แอนิเมชัน กราฟิก PowerPoint คอมมิค</span></div>
+            <div class="slot"><b>บทบาทครูผู้ฝึกสอน</b><span>เตรียมทีม ให้คำปรึกษา สรุปผล</span></div>
+            <div class="slot wide"><b>ลิงก์แฟ้มรวม Google Drive</b><span>แนบแฟ้มเกียรติบัตรและภาพกิจกรรมแบบทุกคนที่มีลิงก์ดูได้</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="note">ควรตรวจชื่อรางวัลให้ตรงกับเกียรติบัตรจริง และเลือกภาพผู้เรียนที่เหมาะสมหรือเบลอข้อมูลส่วนบุคคลก่อนส่งประกวด</div>
+    </div>
+  </div>
+</body>
+</html>

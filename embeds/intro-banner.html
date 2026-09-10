@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700;800&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px}
+  .hero{max-width:960px;margin:0 auto;background:linear-gradient(120deg,#3a0e18 0%,#5f1b29 45%,#8a2333 100%);
+    border-radius:22px;padding:34px 40px;position:relative;overflow:hidden;color:#fff;
+    box-shadow:0 14px 38px rgba(95,27,41,.30)}
+  .hero::before{content:'';position:absolute;right:-90px;top:-90px;width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle,rgba(201,162,39,.30),transparent 70%)}
+  .hero::after{content:'';position:absolute;right:8%;bottom:-40%;width:70%;height:120%;
+    background:repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 26px)}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#c9a227,#e8c757,#c9a227);
+    background-size:200% 100%;color:#3a0e18;font-family:'Prompt';font-weight:700;font-size:12.5px;letter-spacing:.5px;
+    padding:5px 15px;border-radius:999px;animation:sh 3.5s linear infinite;position:relative;z-index:1}
+  @keyframes sh{to{background-position:200% 0}}
+  .dot{width:7px;height:7px;border-radius:50%;background:#3a0e18;animation:bl 1.4s ease-in-out infinite}
+  @keyframes bl{50%{opacity:.25}}
+  h1{font-family:'Prompt',sans-serif;font-weight:800;font-size:33px;line-height:1.25;margin:14px 0 6px;
+    position:relative;z-index:1;animation:up .7s cubic-bezier(.2,.8,.3,1) both}
+  h1 .g{background:linear-gradient(90deg,#ffd76e,#f0b429);-webkit-background-clip:text;background-clip:text;color:transparent}
+  @keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .lead{font-size:15px;line-height:1.7;color:#f3d9cf;max-width:640px;position:relative;z-index:1;
+    animation:up .7s .12s cubic-bezier(.2,.8,.3,1) both}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px;position:relative;z-index:1}
+  .st{background:rgba(255,255,255,.09);border:1px solid rgba(255,215,110,.28);border-radius:14px;
+    padding:14px 12px;text-align:center;backdrop-filter:blur(2px);animation:up .7s cubic-bezier(.2,.8,.3,1) both}
+  .st:nth-child(1){animation-delay:.20s}.st:nth-child(2){animation-delay:.28s}
+  .st:nth-child(3){animation-delay:.36s}.st:nth-child(4){animation-delay:.44s}
+  .st .n{font-family:'Prompt';font-weight:700;font-size:24px;color:#ffd76e;line-height:1.1}
+  .st .t{font-size:12px;color:#f0d5c9;line-height:1.4;margin-top:3px}
+  .chips{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap;position:relative;z-index:1;
+    animation:up .7s .5s cubic-bezier(.2,.8,.3,1) both}
+  .chip{background:rgba(0,0,0,.20);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:12.5px;
+    padding:5px 13px;border-radius:999px;transition:.25s}
+  .chip:hover{background:#c9a227;color:#3a0e18;border-color:#c9a227;transform:translateY(-2px)}
+  @media(max-width:640px){.hero{padding:26px 22px}h1{font-size:25px}.stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+  <div class="hero">
+    <span class="badge"><span class="dot"></span>E-PORTFOLIO · ตามข้อตกลง ว.PA ประจำปี 2569</span>
+    <h1>ห้องเรียนเทคโนโลยีที่มี<span class="g">หลักฐาน</span><br>ใช้งานจริง และต่อยอดได้</h1>
+    <p class="lead">ออกแบบการจัดการเรียนรู้ให้เห็นตัวครู กระบวนการเรียนรู้ดิจิทัล และหลักฐานเชิงประจักษ์ตามมาตรฐานตำแหน่ง ครบทั้ง 3 ด้าน — เชื่อมโยงบทเรียนวิทยาการคำนวณ ออกแบบเทคโนโลยี AI เกมฝึกทักษะ และแฟ้มผลงานไว้ในที่เดียว</p>
+    <div class="stats">
+      <div class="st"><div class="n">17</div><div class="t">รายวิชา/กิจกรรม<br>ป.1 – ม.3</div></div>
+      <div class="st"><div class="n">62<span style="font-size:15px">+</span></div><div class="t">สื่อและนวัตกรรม<br>การเรียนรู้</div></div>
+      <div class="st"><div class="n">139<span style="font-size:15px">+</span></div><div class="t">ชั่วโมงพัฒนาตนเอง<br>ยืนยันปี 2567–68</div></div>
+      <div class="st"><div class="n">K-P-A</div><div class="t">วัดผลตามตัวชี้วัด<br>ข้อตกลง PA</div></div>
+    </div>
+    <div class="chips">
+      <span class="chip">🤖 AI Literacy</span>
+      <span class="chip">💻 Coding / Unplugged</span>
+      <span class="chip">🎮 Gamification</span>
+      <span class="chip">❓ Quizizz</span>
+      <span class="chip">📊 Data Dashboard</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px;color:#3f302c}
+  .wrap{max-width:940px;margin:0 auto;background:#fff;border:1px solid #eadfd8;border-radius:18px;
+    box-shadow:0 8px 28px rgba(76,32,42,.10);overflow:hidden}
+  .hero{position:relative;padding:24px 26px;background:linear-gradient(135deg,#4b1422 0%,#7d2234 58%,#b58b2a 100%);
+    color:#fff;overflow:hidden}
+  .hero:after{content:'PA';position:absolute;right:20px;bottom:-31px;font-family:'Prompt';font-size:118px;
+    font-weight:700;color:rgba(255,255,255,.10);letter-spacing:0}
+  .kicker{display:inline-flex;align-items:center;gap:7px;font-family:'Prompt';font-size:12px;font-weight:700;
+    color:#4b1422;background:#f2cf5a;border-radius:999px;padding:5px 12px;margin-bottom:9px;position:relative;z-index:1}
+  h2{font-family:'Prompt';font-size:25px;line-height:1.25;position:relative;z-index:1}
+  .lead{max-width:720px;margin-top:7px;color:#f6ddd4;font-size:14px;line-height:1.65;position:relative;z-index:1}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px;background:#fff8f2;border-bottom:1px solid #eadfd8}
+  .stat{background:#fff;border:1px solid #eadfd8;border-radius:14px;padding:13px;min-height:88px;opacity:0;
+    transform:translateY(14px);transition:.45s ease}
+  .stat.in{opacity:1;transform:none}
+  .stat b{display:block;font-family:'Prompt';font-size:18px;color:#6e1f31;margin-bottom:3px}
+  .stat span{font-size:12.5px;color:#6d5852;line-height:1.45}
+  .body{padding:16px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .card{border:1px solid #eadfd8;border-radius:14px;background:#fff;padding:15px;box-shadow:0 4px 14px rgba(76,32,42,.05);
+    opacity:0;transform:translateY(14px);transition:.45s ease}
+  .card.in{opacity:1;transform:none}
+  .card h3{font-family:'Prompt';font-size:16px;color:#5d1b2b;margin-bottom:9px;display:flex;align-items:center;gap:7px}
+  ul{padding-left:18px}
+  li{font-size:13.5px;color:#584743;line-height:1.62;margin-bottom:5px}
+  .domain{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+  .box{background:#fcfaf6;border:1px solid #eadfd8;border-radius:14px;padding:13px;opacity:0;transform:translateY(14px);transition:.45s ease}
+  .box.in{opacity:1;transform:none}
+  .box h4{font-family:'Prompt';font-size:14px;color:#5d1b2b;margin-bottom:6px}
+  .box p{font-size:12.8px;color:#62504b;line-height:1.55}
+  .evidence{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+  .ev{border-radius:12px;padding:10px;background:#f4f8f5;border:1px solid #dbe8d9;color:#405340;font-size:12.5px;line-height:1.45}
+  .ev b{display:block;font-family:'Prompt';font-size:12.8px;color:#2f5b40;margin-bottom:2px}
+  .note{margin-top:12px;padding:11px 13px;border-radius:12px;background:#fff7dc;border:1px solid #ead289;
+    color:#65511a;font-size:12.8px;line-height:1.5}
+  @media(max-width:720px){.stats,.grid,.domain,.evidence{grid-template-columns:1fr 1fr}.hero{padding:22px 20px}h2{font-size:22px}}
+  @media(max-width:460px){.stats,.grid,.domain,.evidence{grid-template-columns:1fr}.body{padding:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="kicker">ข้อมูลหลักสำหรับการประเมิน PA</div>
+    <h2>สรุปภาระงาน ผลงาน และหลักฐานที่ใช้ประกอบการประเมิน</h2>
+    <p class="lead">รวบรวมจากแบบข้อตกลง PA, SAR, ID Plan, ภาระงาน และรายงานโครงการ เพื่อให้ผู้ประเมินเห็นภาพรวมครบทั้ง 3 ด้านก่อนเปิดเอกสารหลักฐานรายชิ้น</p>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><b>23 ชม./สัปดาห์</b><span>ภาระงานสอนตามเอกสารภาระงานและข้อตกลง PA</span></div>
+    <div class="stat"><b>คศ.1</b><span>ตำแหน่งครู อันดับ คศ.1 เงินเดือน 20,250 บาท ตามแบบ PA</span></div>
+    <div class="stat"><b>13 ชม.</b><span>การมีส่วนร่วมใน PLC ตาม ID Plan</span></div>
+    <div class="stat"><b>100%</b><span>ผลโครงการชุมชนสัมพันธ์ระดับมากขึ้นไป</span></div>
+  </section>
+
+  <section class="body">
+    <div class="grid">
+      <article class="card">
+        <h3>ข้อมูลทั่วไป</h3>
+        <ul>
+          <li>นายอนันตชัย เพ็ชรรี่ ตำแหน่งครู โรงเรียนบ้านคลองมดแดง</li>
+          <li>สังกัดสำนักงานเขตพื้นที่การศึกษาประถมศึกษากำแพงเพชร เขต 2</li>
+          <li>บรรจุเข้ารับราชการวันที่ 17 มกราคม 2567 ตำแหน่งครูผู้ช่วย</li>
+          <li>ปฏิบัติการสอนกลุ่มสาระวิทยาศาสตร์และเทคโนโลยี และการงานอาชีพ</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>ภาระงานสอนและงานพิเศษ</h3>
+        <ul>
+          <li>วิทยาการคำนวณ ป.1, ป.2, ป.4, ป.5 และวิทยาศาสตร์ ป.4, ป.5</li>
+          <li>ออกแบบ ม.1-ม.3, งานอาชีพ/การตลาด ม.1 และ ม.3, ซ่อมเสริม ป.6 และ ม.3</li>
+          <li>กิจกรรมแนะแนว ชุมนุม ลูกเสือ-เนตรนารี และกิจกรรมคุณธรรม</li>
+          <li>งาน ICT ประชาสัมพันธ์ อาคารสถานที่ และโครงการส่งเสริมความสัมพันธ์ชุมชน</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="domain">
+      <div class="box">
+        <h4>ด้านที่ 1 การจัดการเรียนรู้</h4>
+        <p>ออกแบบการเรียนรู้ตามมาตรฐาน ใช้ Active Learning วัดผลก่อน-ระหว่าง-หลังเรียน และพัฒนานวัตกรรมจากปัญหาจริงของผู้เรียน</p>
+      </div>
+      <div class="box">
+        <h4>ด้านที่ 2 ส่งเสริม/สนับสนุน</h4>
+        <p>จัดทำสารสนเทศผู้เรียน ระบบดูแลช่วยเหลือ ประสานผู้ปกครองและชุมชน พร้อมผลโครงการชุมชนสัมพันธ์ที่มีความพึงพอใจสูง</p>
+      </div>
+      <div class="box">
+        <h4>ด้านที่ 3 พัฒนาตนเอง</h4>
+        <p>จัดทำ ID Plan เข้าร่วม PLC และพัฒนาสมรรถนะด้าน AI/เทคโนโลยี เพื่อนำกลับมาใช้กับสื่อและนวัตกรรมในชั้นเรียน</p>
+      </div>
+    </div>
+
+    <div class="evidence">
+      <div class="ev"><b>ประเด็นท้าทาย</b>Gamification พัฒนาทักษะใช้เมาส์ ป.1 ร่วมกับ Active Learning</div>
+      <div class="ev"><b>นวัตกรรมเสริม</b>Quizizz พัฒนาการเรียนรู้อัลกอริทึม ม.3 และลดความเบื่อหน่ายในการเรียน</div>
+      <div class="ev"><b>ผลโครงการ</b>ผู้ตอบ 80 คน มากที่สุด 86.25% มาก 13.75% รวมมากขึ้นไป 100%</div>
+      <div class="ev"><b>หลักฐานหลัก</b>PA, แผน/บันทึกหลังสอน, SAR, ID Plan, ภาระงาน, Portfolio และเกียรติบัตร</div>
+    </div>
+
+    <div class="note">แบบ PA ระบุสถานะปัจจุบันเป็นครู อันดับ คศ.1 และเงินเดือน 20,250 บาทแล้ว แต่ยังไม่พบคำสั่งแต่งตั้ง คศ.1 ในโฟลเดอร์ที่ตรวจ จึงไม่ควรระบุวันที่แต่งตั้งจนกว่าจะมีคำสั่งจริง</div>
+  </section>
+</div>
+<script>
+  const items=[...document.querySelectorAll('.stat,.card,.box')];
+  const io=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      setTimeout(()=>entry.target.classList.add('in'), items.indexOf(entry.target)*80);
+      io.unobserve(entry.target);
+    }
+  }),{threshold:.12});
+  items.forEach(item=>io.observe(item));
+  setTimeout(()=>items.forEach(item=>item.classList.add('in')),2200);
+</script>
+</body>
+</html>
