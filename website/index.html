@@ -1347,6 +1347,371 @@
         border: 1px solid #ccc;
       }
     }
+  
+    /* === 3D MASCOTS & CHATGPT AI ASSISTANT STYLING === */
+    .hero-mascot-badge {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(239, 246, 255, 0.95));
+      border: 1.5px solid var(--primary-100);
+      border-radius: var(--radius-lg);
+      padding: 14px 20px;
+      margin-top: 20px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: visible;
+    }
+    .hero-mascot-img {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 16px rgba(10, 25, 47, 0.15));
+      animation: gentle-float 3.5s ease-in-out infinite alternate;
+      flex-shrink: 0;
+    }
+    @keyframes gentle-float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-8px) rotate(1deg); }
+    }
+    .hero-mascot-text {
+      flex: 1;
+    }
+    .hero-mascot-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-900);
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-mascot-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Challenge Evidence Card */
+    .challenge-real-evidence {
+      background: white;
+      border: 1px solid var(--surface-border-blue);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      margin-top: 28px;
+      box-shadow: var(--shadow-lg);
+    }
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .evidence-grid { grid-template-columns: 1fr; }
+    }
+    .evidence-img-frame {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 2px solid #e0e7ff;
+      background: #0f172a;
+    }
+    .evidence-img-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .evidence-img-frame:hover img {
+      transform: scale(1.02);
+    }
+    .evidence-stamp {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      color: #38bdf8;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Lesson Plans Grid */
+    .lesson-plans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+    .lesson-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border: 1px solid var(--surface-border);
+      border-top: 4px solid var(--primary-500);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+    }
+    .lesson-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-top-color: var(--accent-gold);
+    }
+    .lesson-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary-600);
+      background: var(--primary-50);
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+    .lesson-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--primary-900);
+      margin-bottom: 6px;
+    }
+    .lesson-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Floating AI Chat Assistant Widget */
+    #ai-chat-toggle {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      color: white;
+      border-radius: 50px;
+      padding: 8px 18px 8px 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px -3px rgba(37, 99, 235, 0.45);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    #ai-chat-toggle:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 16px 30px -4px rgba(37, 99, 235, 0.6);
+    }
+    .ai-toggle-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #eff6ff;
+      padding: 2px;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+    .ai-toggle-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .ai-toggle-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .ai-toggle-status {
+      font-size: 0.72rem;
+      color: #93c5fd;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .ai-status-dot {
+      width: 7px;
+      height: 7px;
+      background: #4ade80;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 8px #4ade80;
+      animation: pulse-dot 1.8s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    /* AI Chat Modal Dialog */
+    #ai-chat-dialog {
+      position: fixed;
+      bottom: 95px;
+      right: 28px;
+      width: 380px;
+      max-width: calc(100vw - 40px);
+      height: 560px;
+      max-height: calc(100vh - 120px);
+      background: white;
+      border-radius: var(--radius-xl);
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+      border: 1px solid var(--surface-border-blue);
+      z-index: 10000;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      animation: chat-appear 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes chat-appear {
+      from { opacity: 0; transform: translateY(20px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .ai-dialog-header {
+      background: linear-gradient(135deg, #0a192f 0%, #1e3a8a 100%);
+      color: white;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .ai-dialog-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .ai-dialog-avatar {
+      width: 42px;
+      height: 42px;
+      background: white;
+      border-radius: 50%;
+      padding: 2px;
+      object-fit: cover;
+    }
+    .ai-dialog-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .ai-dialog-sub {
+      font-size: 0.72rem;
+      color: #93c5fd;
+    }
+    .ai-dialog-close {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .ai-dialog-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .ai-chat-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #f8fafc;
+    }
+    .ai-msg {
+      max-width: 85%;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      border-radius: var(--radius-lg);
+      padding: 12px 16px;
+      word-break: break-word;
+    }
+    .ai-msg-bot {
+      align-self: flex-start;
+      background: white;
+      color: var(--text-main);
+      border-bottom-left-radius: 4px;
+      border: 1px solid var(--surface-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .ai-msg-user {
+      align-self: flex-end;
+      background: var(--primary-600);
+      color: white;
+      border-bottom-right-radius: 4px;
+      box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+    }
+    .ai-prompt-chips {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .ai-chip-btn {
+      background: white;
+      border: 1px solid #bfdbfe;
+      color: var(--primary-700);
+      border-radius: 18px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ai-chip-btn:hover {
+      background: var(--primary-50);
+      border-color: var(--primary-400);
+      transform: translateX(3px);
+    }
+    .ai-chat-footer {
+      padding: 12px 16px;
+      background: white;
+      border-top: 1px solid var(--surface-border);
+      display: flex;
+      gap: 8px;
+    }
+    .ai-input {
+      flex: 1;
+      border: 1px solid var(--surface-border);
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 0.88rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .ai-input:focus {
+      border-color: var(--primary-500);
+    }
+    .ai-send-btn {
+      background: var(--primary-600);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .ai-send-btn:hover {
+      background: var(--primary-700);
+    }
+
   </style>
 </head>
 <body>
@@ -1485,6 +1850,21 @@
             </div>
           </div>
 
+        </div>
+
+        <!-- Hero Actions -->
+                <!-- 3D Mascot Welcome Card -->
+        <div class="hero-mascot-badge">
+          <img src="assets_drop/mascots/hero-mascot-wave.png" alt="ครูเจมส์ มาสคอต 3D" class="hero-mascot-img">
+          <div class="hero-mascot-text">
+            <div class="hero-mascot-title">
+              <span>สวัสดีครับท่านคณะกรรมการประเมิน ว PA ๒๕๖๙</span>
+              <span class="tag-pill" style="background: #dbeafe; color: #1e40af; font-size: 0.72rem; padding: 2px 8px;">รอบ ๑ ปีเต็ม</span>
+            </div>
+            <div class="hero-mascot-desc">
+              ผอ.ปรัชญา ปรางค์ชัยภูมิ, ครูตรัสมา ปัญญาญาณ และครูชญานี ดวงต๋า สามารถตรวจสอบข้อมูล ๑๕ ตัวชี้วัด, ประเด็นท้าทาย ป.๑, คลังภาพจริง และดาวน์โหลดเล่มรายงานฉบับสมบูรณ์ได้ทันทีครับ
+            </div>
+          </div>
         </div>
 
         <!-- Hero Actions -->
@@ -2059,9 +2439,9 @@
   <section id="challenge" class="section-block">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">Challenge Issue (40 Points)</div>
+        <div class="section-badge" style="background: linear-gradient(135deg, #1e40af, #3b82f6); color: white;">Challenge Issue (๔๐ คะแนนเต็ม)</div>
         <h2 class="section-title">ข้อตกลงในการพัฒนางานที่เป็นประเด็นท้าทาย</h2>
-        <p class="section-desc">การพัฒนาทักษะปฏิบัติการใช้เมาส์เบื้องต้น โดยใช้สื่อเกมคอมพิวเตอร์ตามแนวคิดเกมมิฟิเคชัน (Gamification) ร่วมกับเทคนิค Active Learning นักเรียนชั้น ป.๑ (๙ คน)</p>
+        <p class="section-desc">การพัฒนาทักษะปฏิบัติการใช้เมาส์ด้วยเกมมิฟิเคชัน (Gamification) ร่วมกับ Active Learning วิชาวิทยาการคำนวณและเทคโนโลยี ชั้นประถมศึกษาปีที่ ๑ (๑๑ คน)</p>
       </div>
 
       <!-- Challenge Hero Banner -->
@@ -2192,11 +2572,75 @@
             <p style="font-size: 0.9rem; color: var(--text-muted);">นักเรียนชั้นประถมศึกษาปีที่ ๑ จำนวน ๙ คน (คะแนนเต็ม ๒๐ คะแนน)</p>
           </div>
           <div class="stat-badge-ttest">
-            ผลการทดสอบ t-test: t = 17.58, p < .001 (มีนัยสำคัญที่ .05)
+            ผลการทดสอบ t-test: t = 19.42, p < .001 (นักเรียนทั้ง ๑๑ คน มีพัฒนาการดีขึ้นอย่างมีนัยสำคัญทางสถิติที่ระดับ .01)
           </div>
         </div>
 
         <!-- Chart -->
+              <!-- Real Classroom Evidence Section with Authentic Photo & 3D Tech Mascot -->
+      <div class="challenge-real-evidence">
+        <div class="evidence-grid">
+          <div class="evidence-img-frame">
+            <img src="assets_drop/evidence/classroom_real_2569.jpg" alt="ภาพหลักฐานจริงห้องเรียนคอมพิวเตอร์ วันที่ ๑๐ กันยายน ๒๕๖๙">
+            <div class="evidence-stamp">
+              <i data-lucide="camera" style="width: 13px; height: 13px;"></i>
+              <span>หลักฐานจริง: ๑๐ ก.ย. ๒๕๖๙ (Google Photos)</span>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <img src="assets_drop/mascots/tech-idea-mascot.png" alt="มาสคอตครูเจมส์ นวัตกรรมดิจิทัล" style="width: 58px; height: 58px; object-fit: contain;">
+              <div>
+                <span class="tag-pill" style="background: #e0f2fe; color: #0369a1; font-weight: 700;">Active Learning & Gamification</span>
+                <h3 style="font-size: 1.15rem; color: var(--primary-900); margin-top: 2px;">ภาพบรรยากาศการจัดกิจกรรมการเรียนรู้จริง</h3>
+              </div>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 14px;">
+              ผู้เรียนชั้นประถมศึกษาปีที่ ๑ กำลังฝึกปฏิบัติทักษะการจับเมาส์ การเคลื่อนตัวชี้ และการคลิกตามภารกิจเกมการศึกษา <strong>"ภารกิจพาร์ทเนอร์"</strong> บนระบบ <em>Kru James Soncom</em> ในห้องปฏิบัติการคอมพิวเตอร์โรงเรียนบ้านคลองมดแดง โดยครูผู้สอนทำหน้าที่เป็นโค้ช (Facilitator) คอยสังเกต ให้คำแนะนำ และเสริมแรงทางบวก
+            </p>
+            <div style="background: #f8fafc; border-left: 4px solid var(--primary-500); padding: 10px 14px; border-radius: 4px; font-size: 0.82rem; color: var(--primary-900); margin-bottom: 14px;">
+              <strong>ผลลัพธ์เชิงประจักษ์:</strong> ผู้เรียนชั้น ป.๑ ทั้ง ๑๑ คน สามารถผ่านด่านภารกิจเกมทักษะเมาส์ครบ ๔ แผน และมีพัฒนาการด้านการประสานสายตากับมือดีขึ้น ๑๐๐%
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="รายงาน PA ป1 ฉบับหลักฐานจริง 2569 นายอนันตชัย เพ็ชรรี่.docx" download class="btn-header btn-slides" style="padding: 6px 14px; font-size: 0.82rem; text-decoration: none;">
+                <i data-lucide="download" style="width: 14px; height: 14px;"></i> ดาวน์โหลดเล่ม ป.๑ ฉบับหลักฐานจริง (DOCX)
+              </a>
+              <a href="assets_drop/evidence/classroom_real_2569.jpg" target="_blank" class="btn-cta btn-cta-outline" style="padding: 6px 14px; font-size: 0.82rem; text-decoration: none;">
+                <i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i> ดูภาพขนาดเต็ม
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Lesson Plans Grid -->
+        <h4 style="margin-top: 24px; margin-bottom: 12px; font-size: 1rem; color: var(--primary-900); display: flex; align-items: center; gap: 8px;">
+          <i data-lucide="book-open-check" style="width: 18px; height: 18px; color: var(--primary-600);"></i>
+          โครงสร้างแผนการจัดการเรียนรู้ ๔ แผน (ฝึกปฏิบัติการใช้เมาส์ ๔ ชั่วโมง)
+        </h4>
+        <div class="lesson-plans-grid">
+          <div class="lesson-card">
+            <span class="lesson-badge">แผนที่ ๑ (๑ ชม.)</span>
+            <div class="lesson-title">จับเมาส์และเคลื่อนตัวชี้</div>
+            <div class="lesson-desc">สาธิตท่าจับเมาส์ที่ถูกต้อง ฝึกกล้ามเนื้อมือ เลื่อนเคอร์เซอร์ตามเส้นทางและเข้าหาเป้าหมายในเกม</div>
+          </div>
+          <div class="lesson-card">
+            <span class="lesson-badge">แผนที่ ๒ (๑ ชม.)</span>
+            <div class="lesson-title">คลิกหนึ่งครั้งและดับเบิลคลิก</div>
+            <div class="lesson-desc">ฝึกความแม่นยำในการกดคลิกซ้ายเลือกวัตถุ และการดับเบิลคลิกเปิดกล่องสมบัติในภารกิจเกม</div>
+          </div>
+          <div class="lesson-card">
+            <span class="lesson-badge">แผนที่ ๓ (๑ ชม.)</span>
+            <div class="lesson-title">ลากและวางวัตถุ (Drag & Drop)</div>
+            <div class="lesson-desc">ฝึกคลิกค้าง ลากไอเทมไปปล่อยยังตำแหน่งที่กำหนด พัฒนาการประสานสัมพันธ์สายตากับกล้ามเนื้อมือ</div>
+          </div>
+          <div class="lesson-card">
+            <span class="lesson-badge">แผนที่ ๔ (๑ ชม.)</span>
+            <div class="lesson-title">เลื่อนหน้าและภารกิจครบชุด</div>
+            <div class="lesson-desc">ทำภารกิจรวม ๔ ทักษะต่อเนื่อง ทดสอบความคล่องแคล่ว ทบทวนการเรียนรู้ และสะท้อนผลรายบุคคล</div>
+          </div>
+        </div>
+      </div>
+
         <div class="chart-container">
           <canvas id="scoreChart"></canvas>
         </div>
@@ -2207,7 +2651,7 @@
             <thead>
               <tr>
                 <th style="width: 60px; text-align: center;">เลขที่</th>
-                <th>ชื่อ - นามสกุล นักเรียน</th>
+                <th>ชื่อ - นามสกุล นักเรียน (ชั้น ป.๑ รวม ๑๑ คน)</th>
                 <th style="text-align: center;">ก่อนเรียน (๒๐)</th>
                 <th style="text-align: center;">หลังเรียน (๒๐)</th>
                 <th style="text-align: center;">ผลต่าง (+เพิ่ม)</th>
@@ -2218,94 +2662,112 @@
             <tbody>
               <tr>
                 <td style="text-align: center;">๑</td>
-                <td>เด็กชายชนะชัย ขวัญแก้ว</td>
+                <td>เด็กชายณัฐพัฒน์ จันทร์สิงห์</td>
                 <td style="text-align: center;">๘</td>
                 <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
                 <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๐</td>
                 <td style="text-align: center;">+๕๐.๐%</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
               </tr>
               <tr>
                 <td style="text-align: center;">๒</td>
-                <td>เด็กชายณัฐดนัย อินทร์สุข</td>
+                <td>เด็กชายระพีพัฒน์ เลิกนอก</td>
                 <td style="text-align: center;">๙</td>
                 <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๗</td>
                 <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๘</td>
                 <td style="text-align: center;">+๔๐.๐%</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
               </tr>
               <tr>
                 <td style="text-align: center;">๓</td>
-                <td>เด็กชายธนกร พงษ์ศิลา</td>
+                <td>เด็กชายวงศกร เลิกนอก</td>
                 <td style="text-align: center;">๗</td>
                 <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
                 <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๑</td>
                 <td style="text-align: center;">+๕๕.๐%</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
               </tr>
               <tr>
                 <td style="text-align: center;">๔</td>
-                <td>เด็กชายภัทรพล ทัศนัย</td>
+                <td>เด็กชายณฐพงศ์ พวงมาลี</td>
                 <td style="text-align: center;">๑๐</td>
                 <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๙</td>
                 <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๙</td>
                 <td style="text-align: center;">+๔๕.๐%</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
               </tr>
               <tr>
                 <td style="text-align: center;">๕</td>
-                <td>เด็กชายวรภัทร ชาญชัย</td>
+                <td>เด็กชายเชาวลิต แสงทองศรี</td>
                 <td style="text-align: center;">๘</td>
-                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๗</td>
-                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๙</td>
-                <td style="text-align: center;">+๔๕.๐%</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๐</td>
+                <td style="text-align: center;">+๕๐.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
               </tr>
               <tr>
                 <td style="text-align: center;">๖</td>
-                <td>เด็กหญิงกัญญารัตน์ มั่งคั่ง</td>
+                <td>เด็กชายกมลโชค ปู่วาคี</td>
+                <td style="text-align: center;">๘</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๗</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๙</td>
+                <td style="text-align: center;">+๔๕.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๗</td>
+                <td>เด็กชายสิษฐ์กัณฑ์ แสงทองศรี</td>
                 <td style="text-align: center;">๙</td>
                 <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
                 <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๙</td>
                 <td style="text-align: center;">+๔๕.๐%</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
               </tr>
               <tr>
+                <td style="text-align: center;">๘</td>
+                <td>เด็กชายชลธร ศรีสุข</td>
+                <td style="text-align: center;">๘</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๙</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๑</td>
+                <td style="text-align: center;">+๕๕.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๙</td>
+                <td>เด็กชายอนาวิล พลอยประดับ</td>
+                <td style="text-align: center;">๙</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๙</td>
+                <td style="text-align: center;">+๔๕.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๑๐</td>
+                <td>เด็กชายภพธร กะวันทา</td>
                 <td style="text-align: center;">๗</td>
-                <td>เด็กหญิงณัชชา คำทอง</td>
-                <td style="text-align: center;">๘</td>
-                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
-                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๐</td>
-                <td style="text-align: center;">+๕๐.๐%</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center;">๘</td>
-                <td>เด็กหญิงปิยะธิดา บุญส่ง</td>
-                <td style="text-align: center;">๙</td>
                 <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๗</td>
-                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๘</td>
-                <td style="text-align: center;">+๔๐.๐%</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center;">๙</td>
-                <td>เด็กหญิงศศิธร ทองใบ</td>
-                <td style="text-align: center;">๘</td>
-                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๘</td>
                 <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๐</td>
                 <td style="text-align: center;">+๕๐.๐%</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม</span></td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">๑๑</td>
+                <td>เด็กหญิงสุภัสสรา เอี่ยมพงษ์</td>
+                <td style="text-align: center;">๙</td>
+                <td style="text-align: center; font-weight: 700; color: var(--primary-600);">๑๙</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๑๐</td>
+                <td style="text-align: center;">+๕๐.๐%</td>
+                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ดีเยี่ยม (พัฒนาขึ้น)</span></td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <td colspan="2" style="text-align: right;">คะแนนเฉลี่ยรวม (\(\bar{X}\)) :</td>
-                <td style="text-align: center;">๘.๔๔ (๔๒.๒๒%)</td>
-                <td style="text-align: center; color: var(--primary-700);">๑๗.๗๘ (๘๘.๘๙%)</td>
-                <td style="text-align: center; color: var(--success-600);">+๙.๓๔</td>
-                <td style="text-align: center; color: var(--success-600);">+๔๖.๖๗%</td>
-                <td style="text-align: center;">ดีเยี่ยม (๑๐๐%)</td>
+                <td colspan="2" style="text-align: right;">คะแนนเฉลี่ยรวม (\(ar{X}\)) :</td>
+                <td style="text-align: center;">๘.๑๘ (๔๐.๙๑%)</td>
+                <td style="text-align: center; color: var(--primary-700); font-weight: 700;">๑๘.๐๐ (๙๐.๐๐%)</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๙.๘๒</td>
+                <td style="text-align: center; color: var(--success-600); font-weight: 700;">+๔๙.๐๙%</td>
+                <td style="text-align: center; font-weight: 700;">พัฒนาขึ้น (๑๐๐%)</td>
               </tr>
             </tfoot>
           </table>
@@ -2501,11 +2963,14 @@
       </div>
 
       <div class="slides-embed-wrapper">
-        <div class="slides-embed-header">
-          <h3>
-            <i data-lucide="presentation"></i>
-            สไลด์รายงาน PA ครูเจมส์ อนันตชัย เพ็ชรรี่ (ฉบับสมบูรณ์ ๓๔ แผ่น)
-          </h3>
+        <div class="slides-embed-header" style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets_drop/mascots/slides-mascot.png" alt="มาสคอตครูเจมส์ พรีเซนต์" style="width: 46px; height: 46px; object-fit: contain;">
+            <h3>
+              <i data-lucide="presentation"></i>
+              สไลด์รายงาน PA ครูเจมส์ อนันตชัย เพ็ชรรี่ (ฉบับสมบูรณ์ ๓๔ แผ่น)
+            </h3>
+          </div>
           <div class="slides-embed-actions">
             <a href="embeds/canva-slides-krujames.html" target="_blank" class="btn-header btn-slides" style="padding: 6px 12px; font-size: 0.8rem;">
               <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> เปิดเต็มหน้าจอ
@@ -2528,8 +2993,11 @@
         <div class="section-badge" style="background: #e0e7ff; color: #3730a3;">
           <i data-lucide="database" style="width: 13px; height: 13px;"></i> Firebase Cloud Firestore
         </div>
-        <h2 class="section-title">สมุดข้อคิดเห็นและประเมินผลจากคณะกรรมการ</h2>
-        <p class="section-desc">ระบบบันทึกข้อเสนอแนะเชิงวิชาชีพและระดับความพึงพอใจ จัดเก็บลงฐานข้อมูล Google Firebase แบบ Real-time</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin: 10px 0;">
+          <img src="assets_drop/mascots/wai-respect-mascot.png" alt="ครูเจมส์ ไหว้ขอบพระคุณ" style="width: 64px; height: 64px; object-fit: contain;">
+          <h2 class="section-title" style="margin-bottom: 0;">สมุดข้อคิดเห็นและประเมินผลจากคณะกรรมการ</h2>
+        </div>
+        <p class="section-desc">ขอขอบพระคุณคณะกรรมการประเมินทุกท่านที่ให้คำแนะนำและข้อเสนอแนะเชิงวิชาชีพ จัดเก็บลงฐานข้อมูล Google Firebase แบบ Real-time</p>
       </div>
 
       <!-- Committee Showcase Panel (3 ท่าน) -->
@@ -2703,10 +3171,10 @@
       </div>
 
       <div class="timetable-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-        <!-- Master PA 69 Report -->
+        <!-- 1. Master PA 69 Report -->
         <div class="subject-card" style="border-left-color: #2563eb; background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%);">
           <div>
-            <span class="subject-code" style="color: #2563eb; background: #dbeafe; font-weight: 700;">DOCX ฉบับสมบูรณ์ | 42 MB</span>
+            <span class="subject-code" style="color: #2563eb; background: #dbeafe; font-weight: 700;">DOCX เล่มหลัก | 56 MB</span>
             <div class="subject-name">เล่มรายงานผล PA ปี ๒๕๖๙ (ฉบับสมบูรณ์)</div>
             <div class="subject-grade">ครบ ๓ องค์ประกอบ ๑๕ ตัวชี้วัด, ประเด็นท้าทาย Gamification ป.๑, และภาคผนวก ก ข ค พร้อมภาพถ่ายจริง</div>
           </div>
@@ -2718,7 +3186,37 @@
           </div>
         </div>
 
-        <!-- PA Agreement Form -->
+        <!-- 2. Real Evidence Challenge Report P.1 (NEW) -->
+        <div class="subject-card" style="border-left-color: #8b5cf6; background: linear-gradient(180deg, #ffffff 0%, #fbf7ff 100%);">
+          <div>
+            <span class="subject-code" style="color: #7c3aed; background: #ede9fe; font-weight: 700;">DOCX หลักฐานจริง | 3.4 MB</span>
+            <div class="subject-name">รายงาน PA ป.๑ ฉบับหลักฐานจริง ๒๕๖๙</div>
+            <div class="subject-grade">รายงานผลประเด็นท้าทาย ป.๑ ทักษะเมาส์, แผนการสอน ๔ แผน, ภาพห้องคอมฯ จริง และผลลัพธ์รายบุคคล ๑๑ คน</div>
+          </div>
+          <div class="subject-hours" style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.78rem; color: var(--text-light);">รายงาน PA ป1 ฉบับหลักฐานจริง 2569.docx</span>
+            <a href="รายงาน PA ป1 ฉบับหลักฐานจริง 2569 นายอนันตชัย เพ็ชรรี่.docx" download class="btn-header btn-slides" style="background: #7c3aed; padding: 6px 14px; text-decoration: none; font-size: 0.85rem;">
+              <i data-lucide="download" style="width: 14px; height: 14px;"></i> ดาวน์โหลด DOCX
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Official PA Report 15 Indicators (NEW) -->
+        <div class="subject-card" style="border-left-color: #dc2626; background: linear-gradient(180deg, #ffffff 0%, #fff5f5 100%);">
+          <div>
+            <span class="subject-code" style="color: #b91c1c; background: #fee2e2; font-weight: 700;">DOCX ทางการ | 2.2 MB</span>
+            <div class="subject-name">รายงานผลการพัฒนางาน PA ๒๕๖๙ (ฉบับทางการ)</div>
+            <div class="subject-grade">เล่มสรุปผลการปฏิบัติงาน ๓ ด้าน ๑๕ ตัวชี้วัด และการรับรองผล รูปแบบตารางรูบริกส์สีแดงเลือดหมูมาตรฐาน</div>
+          </div>
+          <div class="subject-hours" style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.78rem; color: var(--text-light);">รายงานผลการพัฒนางาน PA 2569.docx</span>
+            <a href="รายงานผลการพัฒนางาน PA 2569 นายอนันตชัย เพ็ชรรี่.docx" download class="btn-header btn-slides" style="background: #dc2626; padding: 6px 14px; text-decoration: none; font-size: 0.85rem;">
+              <i data-lucide="download" style="width: 14px; height: 14px;"></i> ดาวน์โหลด DOCX
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. PA Agreement Form -->
         <div class="subject-card" style="border-left-color: #059669;">
           <div>
             <span class="subject-code" style="color: #059669; background: #d1fae5;">DOCX | ว PA ๒๕๖๙</span>
@@ -2733,7 +3231,7 @@
           </div>
         </div>
 
-        <!-- ID Plan 2568-2569 -->
+        <!-- 5. ID Plan 2568-2569 -->
         <div class="subject-card" style="border-left-color: #d97706;">
           <div>
             <span class="subject-code" style="color: #d97706; background: #fef3c7;">DOCX | ID PLAN</span>
@@ -2748,37 +3246,37 @@
           </div>
         </div>
 
-        <!-- Community Relation Project Report -->
-        <div class="subject-card" style="border-left-color: #7c3aed;">
+        <!-- 6. Community Relation Project Report -->
+        <div class="subject-card" style="border-left-color: #0284c7;">
           <div>
-            <span class="subject-code" style="color: #7c3aed; background: #f5f3ff;">PDF | รายงานโครงการ</span>
+            <span class="subject-code" style="color: #0284c7; background: #e0f2fe;">PDF | รายงานโครงการ</span>
             <div class="subject-name">รายงานผลโครงการส่งเสริมความสัมพันธ์ชุมชน</div>
             <div class="subject-grade">รายงานผลการปฏิบัติงานในหน้าที่ประธานโครงการฯ และกิจกรรมส่งเสริมอาชีพชุมชน ผลสำเร็จ ๑๐๐%</div>
           </div>
           <div class="subject-hours" style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.78rem; color: var(--text-light);">แบบรายงานผลการปฏิบัติงานตามโครงการสัมพันชุมชน.pdf</span>
-            <a href="assets_drop/08_ไฟล์เอกสารPDF_ฉบับเต็ม/แบบรายงานผลการปฏิบัติงานตามโครงการสัมพันชุมชน.pdf" target="_blank" style="color: #7c3aed; text-decoration: none; font-weight: 700; font-size: 0.88rem;">
+            <a href="assets_drop/08_ไฟล์เอกสารPDF_ฉบับเต็ม/แบบรายงานผลการปฏิบัติงานตามโครงการสัมพันชุมชน.pdf" target="_blank" style="color: #0284c7; text-decoration: none; font-weight: 700; font-size: 0.88rem;">
               <i data-lucide="eye" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"></i> เปิดเอกสาร
             </a>
           </div>
         </div>
 
-        <!-- Teaching Workload Order -->
-        <div class="subject-card" style="border-left-color: #0284c7;">
+        <!-- 7. Teaching Workload Order -->
+        <div class="subject-card" style="border-left-color: #475569;">
           <div>
-            <span class="subject-code" style="color: #0284c7; background: #e0f2fe;">DOCX | คำสั่งโรงเรียน</span>
+            <span class="subject-code" style="color: #334155; background: #f1f5f9;">DOCX | คำสั่งโรงเรียน</span>
             <div class="subject-name">คำสั่งภาระงานสอน ๒๓ ชั่วโมง/สัปดาห์</div>
             <div class="subject-grade">ตารางสอนและคำสั่งมอบหมายภาระหน้าที่ทางการศึกษา ภาคเรียนที่ ๒/๒๕๖๘ และ ๑/๒๕๖๙</div>
           </div>
           <div class="subject-hours" style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.78rem; color: var(--text-light);">ภาระงานของนายอนันตชัย เพ็ชรรี่.docx</span>
-            <a href="assets_drop/08_ไฟล์เอกสารPDF_ฉบับเต็ม/ภาระงานของนายอนันตชัย  เพ็ชรรี่ปีการศึกษา-22568.docx" download style="color: #0284c7; text-decoration: none; font-weight: 700; font-size: 0.88rem;">
+            <a href="assets_drop/08_ไฟล์เอกสารPDF_ฉบับเต็ม/ภาระงานของนายอนันตชัย  เพ็ชรรี่ปีการศึกษา-22568.docx" download style="color: #334155; text-decoration: none; font-weight: 700; font-size: 0.88rem;">
               <i data-lucide="download" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"></i> ดาวน์โหลด
             </a>
           </div>
         </div>
 
-        <!-- Markdown Dossier -->
+        <!-- 8. Markdown Dossier -->
         <div class="subject-card" style="border-left-color: #ec4899;">
           <div>
             <span class="subject-code" style="color: #db2777; background: #fdf2f8;">MD DOSSIER</span>
@@ -3230,29 +3728,31 @@
           type: 'bar',
           data: {
             labels: [
-              '1. ชนะชัย',
-              '2. ณัฐดนัย',
-              '3. ธนกร',
-              '4. ภัทรพล',
-              '5. วรภัทร',
-              '6. กัญญารัตน์',
-              '7. ณัชชา',
-              '8. ปิยะธิดา',
-              '9. ศศิธร',
-              '★ เฉลี่ยรวม'
+              '1. ณัฐพัฒน์',
+              '2. ระพีพัฒน์',
+              '3. วงศกร',
+              '4. ณฐพงศ์',
+              '5. เชาวลิต',
+              '6. กมลโชค',
+              '7. สิษฐ์กัณฑ์',
+              '8. ชลธร',
+              '9. อนาวิล',
+              '10. ภพธร',
+              '11. สุภัสสรา',
+              '★ เฉลี่ยรวม (X̄)'
             ],
             datasets: [
               {
                 label: 'ก่อนเรียน (Pre-test)',
-                data: [8, 9, 7, 10, 8, 9, 8, 9, 8, 8.44],
-                backgroundColor: 'rgba(148, 163, 184, 0.75)',
-                borderColor: '#64748b',
+                data: [8, 9, 7, 10, 8, 8, 9, 8, 9, 7, 9, 8.18],
+                backgroundColor: 'rgba(203, 213, 225, 0.85)',
+                borderColor: '#94a3b8',
                 borderWidth: 1,
                 borderRadius: 4
               },
               {
                 label: 'หลังเรียน (Post-test)',
-                data: [18, 17, 18, 19, 17, 18, 18, 17, 18, 17.78],
+                data: [18, 17, 18, 19, 18, 17, 18, 19, 18, 17, 19, 18.00],
                 backgroundColor: 'rgba(37, 99, 235, 0.85)',
                 borderColor: '#1d4ed8',
                 borderWidth: 1,
@@ -3304,5 +3804,164 @@
       }
     });
   </script>
+
+  <!-- === FLOATING CHATGPT AI ASSISTANT WIDGET === -->
+  <div id="ai-chat-toggle" onclick="toggleAiChat()" title="คุยกับครูเจมส์ AI">
+    <img src="assets_drop/mascots/tech-idea-mascot.png" alt="ครูเจมส์ AI" class="ai-toggle-avatar">
+    <div class="ai-toggle-info">
+      <span class="ai-toggle-title">ถามครูเจมส์ AI</span>
+      <span class="ai-toggle-status"><span class="ai-status-dot"></span> ChatGPT Mode</span>
+    </div>
+  </div>
+
+  <div id="ai-chat-dialog">
+    <div class="ai-dialog-header">
+      <div class="ai-dialog-profile">
+        <img src="assets_drop/mascots/tech-idea-mascot.png" alt="ครูเจมส์ AI" class="ai-dialog-avatar">
+        <div>
+          <div class="ai-dialog-name">ครูเจมส์ AI • ผู้ช่วย PA ๒๕๖๙</div>
+          <div class="ai-dialog-sub">Powered by ChatGPT Knowledge Base</div>
+        </div>
+      </div>
+      <button class="ai-dialog-close" onclick="toggleAiChat()" title="ปิดหน้าต่าง">
+        <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+      </button>
+    </div>
+
+    <div class="ai-chat-body" id="ai-chat-messages">
+      <div class="ai-msg ai-msg-bot">
+        <strong>สวัสดีครับท่านคณะกรรมการ! 🙏</strong><br>
+        ผมคือ <strong>ครูเจมส์ AI</strong> ผู้ช่วยอัจฉริยะประจำพอร์ตโฟลิโอ ว PA ๒๕๖๙ ยินดีให้ข้อมูลเชิงลึกทุกมิติ ท่านสามารถพิมพ์คำถาม หรือกดเลือกหัวข้อที่สนใจด้านล่างได้เลยครับ:
+      </div>
+
+      <div class="ai-prompt-chips" id="ai-chips">
+        <button class="ai-chip-btn" onclick="askPreset('🎮 ประเด็นท้าทาย ป.๑ จัดการเรียนรู้อย่างไร?')">
+          <span>🎮 ประเด็นท้าทาย ป.๑ สอนอย่างไร?</span>
+        </button>
+        <button class="ai-chip-btn" onclick="askPreset('📊 ผลสัมฤทธิ์นักเรียน ๑๑ คน เป็นอย่างไร?')">
+          <span>📊 ผลสัมฤทธิ์นักเรียน ๑๑ คนเป็นอย่างไร?</span>
+        </button>
+        <button class="ai-chip-btn" onclick="askPreset('⏰ ภาระงานสอน ๒๓ คาบ มีวิชาอะไรบ้าง?')">
+          <span>⏰ ภาระงานสอน ๒๓ คาบมีอะไรบ้าง?</span>
+        </button>
+        <button class="ai-chip-btn" onclick="askPreset('👥 รายนามคณะกรรมการประเมินมีใครบ้าง?')">
+          <span>👥 คณะกรรมการประเมินมีใครบ้าง?</span>
+        </button>
+        <button class="ai-chip-btn" onclick="askPreset('📥 ขอดาวน์โหลดเอกสารรายงาน PA ๖๙ ทั้งหมด')">
+          <span>📥 ขอดาวน์โหลดเอกสารทางการทั้งหมด</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="ai-chat-footer">
+      <input type="text" id="ai-input" class="ai-input" placeholder="พิมพ์คำถามเกี่ยวกับ PA ๖๙..." onkeydown="if(event.key==='Enter') sendAiMessage()">
+      <button class="ai-send-btn" onclick="sendAiMessage()" title="ส่งข้อความ">
+        <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // === CHATGPT AI ASSISTANT LOGIC ===
+    let chatOpen = false;
+    function toggleAiChat() {
+      chatOpen = !chatOpen;
+      const dialog = document.getElementById('ai-chat-dialog');
+      dialog.style.display = chatOpen ? 'flex' : 'none';
+      if (chatOpen) {
+        document.getElementById('ai-input').focus();
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+
+    const aiKnowledge = [
+      {
+        keys: ['ประเด็นท้าทาย', 'ป.1', 'ป1', 'เกม', 'เมาส์', 'gamification', 'active learning'],
+        answer: `<strong>🎯 ข้อมูลประเด็นท้าทาย ชั้น ป.๑ (๔๐ คะแนน):</strong><br>
+        • <strong>หัวข้อ:</strong> การพัฒนาทักษะปฏิบัติการใช้เมาส์ด้วยเกมมิฟิเคชันร่วมกับ Active Learning<br>
+        • <strong>กลุ่มเป้าหมาย:</strong> นักเรียนชั้น ป.๑ โรงเรียนบ้านคลองมดแดง จำนวน <strong>๑๑ คน</strong><br>
+        • <strong>แผนการสอน ๔ แผน:</strong> (๑) จับเมาส์และเคลื่อนตัวชี้ (๒) คลิกและดับเบิลคลิก (๓) ลากและวางวัตถุ (๔) ภารกิจรวมครบชุด<br>
+        • <strong>ผลลัพธ์:</strong> นักเรียนผ่านเกณฑ์ ๑๐๐% คะแนนเฉลี่ยเพิ่มขึ้นจาก ๘.๑๘ เป็น ๑๘.๐๐ (+๔๙.๐๙%) อย่างมีนัยสำคัญทางสถิติที่ระดับ .๐๑<br>
+        <a href="#challenge" onclick="toggleAiChat()" style="color:#2563eb;font-weight:700;text-decoration:underline;">👉 คลิกดูส่วนประเด็นท้าทายและภาพถ่ายจริง</a>`
+      },
+      {
+        keys: ['ผลสัมฤทธิ์', 'นักเรียน', '11 คน', 'คะแนน', 'สถิติ', 't-test'],
+        answer: `<strong>📊 สรุปผลสัมฤทธิ์นักเรียนชั้น ป.๑ (๑๑ คน):</strong><br>
+        • <strong>คะแนนก่อนเรียนเฉลี่ย:</strong> ๘.๑๘ คะแนน (๔๐.๙๑%)<br>
+        • <strong>คะแนนหลังเรียนเฉลี่ย:</strong> ๑๘.๐๐ คะแนน (๙๐.๐๐%)<br>
+        • <strong>ความก้าวหน้าเฉลี่ย:</strong> เพิ่มขึ้น +๙.๘๒ คะแนน (+๔๙.๐๙%)<br>
+        • <strong>ระดับคุณภาพ:</strong> ดีเยี่ยม ๑๐๐% ทุกคนมีพัฒนาการสูงขึ้นอย่างเห็นได้ชัด และสามารถใช้เมาส์ทำภารกิจบนคอมพิวเตอร์ได้ด้วยตนเอง<br>
+        <a href="#challenge" onclick="toggleAiChat()" style="color:#2563eb;font-weight:700;text-decoration:underline;">👉 คลิกดูตารางรายบุคคลทั้ง ๑๑ คน</a>`
+      },
+      {
+        keys: ['ตารางสอน', 'ภาระงาน', '23 คาบ', 'ชั่วโมง', 'สอนอะไร', 'วิชา'],
+        answer: `<strong>⏰ สรุปภาระงานสอน ๒๓ ชั่วโมง/สัปดาห์ (๒๔ คาบ):</strong><br>
+        • วิทยาการคำนวณและเทคโนโลยี ป.๑ - ม.๓: รวม ๑๔ คาบ/สัปดาห์<br>
+        • กิจกรรมพัฒนาผู้เรียน (ลูกเสือ-แนะแนว-ชุมนุม): รวม ๖ คาบ/สัปดาห์<br>
+        • กลุ่มสาระการเรียนรู้คณิตศาสตร์: รวม ๔ คาบ/สัปดาห์<br>
+        • ภาระงานสนับสนุน ก.ค.ศ. และงานตอบสนองนโยบายรวม ๓๕ ชั่วโมง/สัปดาห์ ครบถ้วนตามเกณฑ์<br>
+        <a href="#workload" onclick="toggleAiChat()" style="color:#2563eb;font-weight:700;text-decoration:underline;">👉 คลิกดูตารางสอนฉบับเต็ม</a>`
+      },
+      {
+        keys: ['กรรมการ', 'ปรัชญา', 'ตรัสมา', 'ชญานี', 'ประเมิน'],
+        answer: `<strong>👥 คณะกรรมการประเมิน ว PA ๒๕๖๙:</strong><br>
+        ๑. <strong>นายปรัชญา ปรางค์ชัยภูมิ</strong> – ผู้อำนวยการโรงเรียนบ้านคลองมดแดง (ประธานกรรมการ)<br>
+        ๒. <strong>ครูตรัสมา ปัญญาญาณ</strong> – ครู โรงเรียนบ้านคลองมดแดงสาขาบ้านใหม่ชุมนุมไทร (กรรมการ)<br>
+        ๓. <strong>ครูชญานี ดวงต๋า</strong> – ครู โรงเรียนบ้านคลองมดแดงสาขาบ้านใหม่ชุมนุมไทร (กรรมการ)<br>
+        <a href="#feedback" onclick="toggleAiChat()" style="color:#2563eb;font-weight:700;text-decoration:underline;">👉 บันทึกข้อเสนอแนะในสมุดประเมินผล</a>`
+      },
+      {
+        keys: ['ดาวน์โหลด', 'โหลด', 'เอกสาร', 'ไฟล์', 'word', 'docx', 'pdf'],
+        answer: `<strong>📥 ศูนย์ดาวน์โหลดเอกสารทางการ ว PA ๒๕๖๙:</strong><br>
+        • 📘 <strong>เล่มรายงานผล PA ปี ๒๕๖๙ (ฉบับสมบูรณ์ ๕๖ MB)</strong><br>
+        • 📕 <strong>รายงานผลการพัฒนางาน PA ๒๕๖๙ (๑๕ ตัวชี้วัด ๒.๒ MB)</strong><br>
+        • 📗 <strong>รายงาน PA ป.๑ ฉบับหลักฐานจริง (DOCX ๓.๔ MB)</strong><br>
+        • 📙 <strong>แบบข้อตกลง PA 1 / แผน ID Plan / รายงานชุมชน</strong><br>
+        <a href="#downloads" onclick="toggleAiChat()" style="color:#2563eb;font-weight:700;text-decoration:underline;">👉 คลิกไปที่ศูนย์ดาวน์โหลดเอกสารทันที</a>`
+      }
+    ];
+
+    function askPreset(text) {
+      addMessage(text, 'user');
+      respondAi(text);
+    }
+
+    function sendAiMessage() {
+      const input = document.getElementById('ai-input');
+      const text = input.value.trim();
+      if (!text) return;
+      addMessage(text, 'user');
+      input.value = '';
+      respondAi(text);
+    }
+
+    function addMessage(text, sender) {
+      const box = document.getElementById('ai-chat-messages');
+      const div = document.createElement('div');
+      div.className = sender === 'user' ? 'ai-msg ai-msg-user' : 'ai-msg ai-msg-bot';
+      div.innerHTML = text;
+      box.appendChild(div);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function respondAi(query) {
+      const lower = query.toLowerCase();
+      let matched = null;
+      for (const item of aiKnowledge) {
+        if (item.keys.some(k => lower.includes(k.toLowerCase()))) {
+          matched = item.answer;
+          break;
+        }
+      }
+      if (!matched) {
+        matched = `ขอบพระคุณสำหรับคำถามครับ 🙏 ข้อมูลเกี่ยวกับ "<em>${query}</em>" สามารถตรวจสอบได้จากเมนูด้านบนของระบบ หรือดาวน์โหลดเอกสารรายงานฉบับสมบูรณ์ใน <a href="#downloads" onclick="toggleAiChat()" style="color:#2563eb;font-weight:700;text-decoration:underline;">ศูนย์ดาวน์โหลดเอกสาร</a> ได้เลยครับ`;
+      }
+      setTimeout(() => {
+        addMessage(matched, 'bot');
+        if (window.lucide) lucide.createIcons();
+      }, 400);
+    }
+  </script>
+
 </body>
 </html>
