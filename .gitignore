@@ -22,5 +22,7 @@ __pycache__/
 
 # Large Presentation Files (ป้องกัน Git Push ช้า หรือติดลิมิต 100MB ของ GitHub - สไลด์มีฉบับ Interactive Web ในระบบแล้ว)
 *.pptx
+รายงานผล ตามข้อตกลง(PA)69 (1).docx
+รูปเล่มรายงานPAครูคศ1_ต้นฉบับเดิม.docx
 
 .vercel

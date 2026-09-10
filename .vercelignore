@@ -1,19 +1,25 @@
-﻿# Temporary & Scratch Folders
+# Temporary & Scratch Folders
 tmp/
 .claude/
 .gemini/
 __pycache__/
 
-# Raw Office Documents & Large PDFs
+# Large Presentation Files (>90MB)
 *.pptx
-*.docx
-*.pdf
+
+# Raw User Input & Backup Docs
+รายงานผล ตามข้อตกลง(PA)69 (1).docx
+รูปเล่มรายงานPAครูคศ1_ต้นฉบับเดิม.docx
+แบบรายงานผลการปฏิบัติงานตามโครงการสัมพันชุมชน.docx
 
 # Markdown Docs
-*.md
+README.md
+google-*.md
+ประวัติส่วนตัวครูเจมส์-ฉบับรวบรวม.md
 website/*.md
 website/content/
 
 # Python scripts
 *.py
 website/*.py
+
