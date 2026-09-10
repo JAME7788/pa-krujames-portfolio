@@ -549,6 +549,90 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Chronological Evidence Timeline */
+    .timeline-track {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .timeline-card {
+      background: white;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--surface-border);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 4px solid var(--primary-500);
+      transition: all 0.25s ease;
+    }
+    .timeline-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+      border-top-color: #2563eb;
+    }
+    .timeline-date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #1e40af;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      width: fit-content;
+      margin-bottom: 8px;
+    }
+    .timeline-badge-start {
+      background: #fef2f2;
+      color: #b91c1c;
+      border-color: #fecaca;
+    }
+    .timeline-card-title {
+      font-family: 'Prompt', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-900);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .timeline-card-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+      flex-grow: 1;
+    }
+    .timeline-card-loc {
+      font-size: 0.78rem;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+    .timeline-thumb-box {
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      border: 1px solid #e2e8f0;
+    }
+    .timeline-thumb {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s;
+    }
+    .timeline-thumb:hover {
+      transform: scale(1.03);
+    }
+
     /* Timetable / Schedule Grid */
     .timetable-grid {
       display: grid;
@@ -1733,6 +1817,7 @@
       <!-- Desktop Nav -->
       <nav class="nav-links">
         <a href="#home" class="nav-item active">หน้าแรก</a>
+        <a href="#timeline" class="nav-item">ไทม์ไลน์ ๒๕๖๘–๖๙</a>
         <a href="#workload" class="nav-item">ภาระงาน</a>
         <a href="#indicators" class="nav-item">๑๕ ตัวชี้วัด</a>
         <a href="#challenge" class="nav-item">ประเด็นท้าทาย</a>
@@ -1881,6 +1966,173 @@
             <i data-lucide="images" style="width: 18px; height: 18px;"></i>
             <span>คลังภาพถ่ายจริง (Google Photos)</span>
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 0.5 : ลำดับเหตุการณ์และไทม์ไลน์การปฏิบัติงานจริง (เริ่มต้น ๔ ต.ค. ๒๕๖๘) -->
+  <section id="timeline" class="section-block" style="background: linear-gradient(180deg, #f8fafc 0%, #edf4fc 100%); border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" style="background: #e0e7ff; color: #3730a3;">
+          <i data-lucide="calendar-range" style="width: 13px; height: 13px;"></i> Chronological Performance Timeline
+        </div>
+        <h2 class="section-title">ไทม์ไลน์การปฏิบัติงานและพัฒนาวิชาชีพ (เริ่มต้น ๔ ตุลาคม ๒๕๖๘)</h2>
+        <p class="section-desc">ประมวลร่องรอยกิจกรรมเชิงประจักษ์ตลอดรอบการประเมิน ๓๐ กันยายน ๒๕๖๘ – ๑ ตุลาคม ๒๕๖๙ โรงเรียนบ้านคลองมดแดง</p>
+      </div>
+
+      <div class="timeline-track">
+        <!-- Milestone 1: 4-9 ต.ค. 2568 (A.L.T.C. Scout Training) -->
+        <div class="timeline-card" style="border-top-color: #ef4444;">
+          <div>
+            <div class="timeline-date-badge timeline-badge-start">
+              <i data-lucide="flag" style="width: 12px; height: 12px;"></i> ๔ – ๙ ต.ค. ๒๕๖๘ (เริ่มต้นรอบประเมิน)
+            </div>
+            <div class="timeline-card-title">อบรมบุคลากรลูกเสือ ขั้นผู้ช่วยผู้ให้การฝึกอบรม (A.L.T.C.)</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ต.บ้านแดน อ.บรรพตพิสัย จ.นครสวรรค์
+            </div>
+            <div class="timeline-card-desc">
+              เข้ารับการฝึกอบรมพัฒนาวิชาชีพทางการลูกเสือระดับสูง (Assistant Leader Trainers Training Course : A.L.T.C.) เพื่อนำกระบวนการลูกเสือมาพัฒนาคุณลักษณะอันพึงประสงค์ วินัย และทักษะชีวิตของผู้เรียน
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2568_การฝึกอบรมลูกเสือ_ALTC/scout_altc_01.jpg', 'การฝึกอบรมลูกเสือ A.L.T.C. ๔–๙ ต.ค. ๒๕๖๘ ณ ต.บ้านแดน อ.บรรพตพิสัย จ.นครสวรรค์')">
+            <img src="assets_drop/2568_การฝึกอบรมลูกเสือ_ALTC/scout_altc_01.jpg" alt="อบรมลูกเสือ A.L.T.C." class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 2: พ.ย. 68 - ม.ค. 69 -->
+        <div class="timeline-card">
+          <div>
+            <div class="timeline-date-badge">
+              <i data-lucide="calendar" style="width: 12px; height: 12px;"></i> พ.ย. ๒๕๖๘ – ม.ค. ๒๕๖๙
+            </div>
+            <div class="timeline-card-title">ริเริ่มนวัตกรรม Gamification ป.๑ & เยี่ยมบ้าน ม.๓</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> โรงเรียนบ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              วิเคราะห์ผู้เรียนรายบุคคล ป.๑ (๑๑ คน) เพื่อสร้างเกมฝึกเมาส์ "Kru James Soncom" และลงพื้นที่ออกเยี่ยมบ้านนักเรียน ม.๓ ครบ ๑๐๐% ประสานขอรับทุน กสศ.
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/evidence/classroom_real_2569.jpg', 'ประเด็นท้าทาย Gamification: นักเรียนชั้น ป.1 ฝึกทักษะการใช้เมาส์ผ่าน Kru James Soncom')">
+            <img src="assets_drop/evidence/classroom_real_2569.jpg" alt="ฝึกทักษะเมาส์ ป.1" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 3: 20 ก.พ. 69 -->
+        <div class="timeline-card">
+          <div>
+            <div class="timeline-date-badge">
+              <i data-lucide="calendar" style="width: 12px; height: 12px;"></i> ๒๐ ก.พ. ๒๕๖๙
+            </div>
+            <div class="timeline-card-title">โครงการส่งเสริมอาชีพและสัมพันธ์ชุมชน ๒๕๖๘</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> อาคารอเนกประสงค์ รร.บ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              จัดกิจกรรมสาธิตการทำสลัดโรลและอาหารเพื่อสุขภาพ แก่ผู้ปกครองและประชาชน ๘๐ คน ความพึงพอใจ ๘๖.๒๕% ประหยัดงบประมาณส่งคืน ๕๐๐ บาท
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_05.jpg', 'กิจกรรมส่งเสริมอาชีพและสัมพันธ์ชุมชน: สาธิตการทำสลัดโรลเพื่อสุขภาพ')">
+            <img src="assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_05.jpg" alt="สาธิตการทำสลัดโรล" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 4: 2 พ.ค. 69 -->
+        <div class="timeline-card">
+          <div>
+            <div class="timeline-date-badge">
+              <i data-lucide="calendar" style="width: 12px; height: 12px;"></i> ๒ พ.ค. ๒๕๖๙
+            </div>
+            <div class="timeline-card-title">กิจกรรมจิตอาสา Big Cleaning Day</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ลานอเนกประสงค์ & หอประชุม
+            </div>
+            <div class="timeline-card-desc">
+              ร่วมแรงร่วมใจคณะครูและนักเรียนขัดล้างทำความสะอาดลานอเนกประสงค์ หอประชุม และดูแลความพร้อมของอาคารสถานที่ก่อนเปิดภาคเรียน
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_06.jpg', 'Big Cleaning Day: คณะครูและนักเรียนร่วมฉีดน้ำและขัดทำความสะอาดพื้นอาคารหอประชุม')">
+            <img src="assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_06.jpg" alt="Big Cleaning Day" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 5: 7 มิ.ย. 69 -->
+        <div class="timeline-card">
+          <div>
+            <div class="timeline-date-badge">
+              <i data-lucide="calendar" style="width: 12px; height: 12px;"></i> ๗ มิ.ย. ๒๕๖๙
+            </div>
+            <div class="timeline-card-title">แลกเปลี่ยนเรียนรู้ AI Learning Hub สพป.กพ.๒</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ระบบออนไลน์ สพป.กำแพงเพชร เขต ๒
+            </div>
+            <div class="timeline-card-desc">
+              ผ่านการแลกเปลี่ยนเรียนรู้การใช้ปัญญาประดิษฐ์ (AI) และการเผยแพร่ระบบคลังสื่อเทคโนโลยีขั้นพื้นฐาน OBEC Content Center (เกียรติบัตรเลขที่ ๑๒๐๙/๒๕๖๙)
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg', 'เกียรติบัตร AI Learning Hub สพป.กำแพงเพชร เขต ๒ (๗ มิ.ย. ๒๕๖๙)')">
+            <img src="assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg" alt="เกียรติบัตร AI Learning Hub" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 6: 18 มิ.ย. 69 -->
+        <div class="timeline-card">
+          <div>
+            <div class="timeline-date-badge">
+              <i data-lucide="calendar" style="width: 12px; height: 12px;"></i> ๑๘ มิ.ย. ๒๕๖๙
+            </div>
+            <div class="timeline-card-title">ประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องประชุม รร.บ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              ร่วมรายงานผลการพัฒนาการศึกษา และวางแผนยุทธศาสตร์สถานศึกษาร่วมกับ นายปรัชญา ปรางค์ชัยภูมิ ผอ., คณะครู และกรรมการผู้ทรงคุณวุฒิ
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_04.jpg', 'การประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน (18 มิ.ย. 2569)')">
+            <img src="assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_04.jpg" alt="ประชุมกรรมการสถานศึกษา" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 7: 17 ก.ค. 69 -->
+        <div class="timeline-card">
+          <div>
+            <div class="timeline-date-badge">
+              <i data-lucide="calendar" style="width: 12px; height: 12px;"></i> ๑๗ ก.ค. ๒๕๖๙
+            </div>
+            <div class="timeline-card-title">ค่ายวิชาการ Active Learning Academic Camp</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> รร.บ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              จัดกิจกรรมฐานการเรียนรู้ Active Learning บูรณาการเกมวิทยาการคำนวณและทักษะดิจิทัล สร้างแรงจูงใจและความสุขในการเรียนรู้
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_01.jpg', 'ค่ายวิชาการ Active Learning (17 ก.ค. 2569)')">
+            <img src="assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_01.jpg" alt="ค่ายวิชาการ 2569" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 8: ส.ค. - ก.ย. 69 -->
+        <div class="timeline-card" style="border-top-color: #10b981;">
+          <div>
+            <div class="timeline-date-badge" style="background: #ecfdf5; color: #047857; border-color: #a7f3d0;">
+              <i data-lucide="award" style="width: 12px; height: 12px;"></i> ส.ค. – ก.ย. ๒๕๖๙ (สรุปผลสำเร็จ)
+            </div>
+            <div class="timeline-card-title">ประเมินประเด็นท้าทาย ป.๑ & สรุปเล่ม PA</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> รร.บ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              นักเรียน ป.๑ ทั้ง ๑๑ คน มีทักษะการใช้เมาส์ผ่านเกณฑ์ร้อยละ ๗๐ คิดเป็น ๑๐๐% (ดีเยี่ยม ๙๐.๙๑%) สรุปเล่ม PA และสไลด์ ๓๔ แผ่นสมบูรณ์
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_10.jpg', 'ผลสัมฤทธิ์การจัดกิจกรรมการเรียนรู้และสรุปข้อตกลง PA ๒๕๖๙')">
+            <img src="assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_10.jpg" alt="สรุปผลสำเร็จ PA" class="timeline-thumb">
+          </div>
         </div>
       </div>
     </div>
@@ -2406,10 +2658,9 @@
             <div class="indicator-body">
               <div class="ind-desc-box">
                 <p>
-                  ผ่านการอบรมหลักสูตร <strong>AI for Teachers (ปัญญาประดิษฐ์เพื่อการศึกษา) สสวท. รวม 28 ชั่วโมง</strong>
-                  (ม.ต้น 20 ชม. + ประถมปลาย 8 ชม.) และหลักสูตรพัฒนาตนเองรวม 28 หลักสูตร (>35 ชั่วโมง)
-                  เข้าร่วมชุมชนแห่งการเรียนรู้ทางวิชาชีพ (PLC) โรงเรียนบ้านคลองมดแดง 13 ชั่วโมง
-                  และนำองค์ความรู้มาพัฒนานวัตกรรม Gamification ป.1 และผลิตสื่อ 62 รายการ
+                  <strong>๑. การฝึกอบรมบุคลากรทางการลูกเสือขั้นสูง (A.L.T.C.):</strong> เข้ารับการฝึกอบรมบุคลากรทางการลูกเสือ <strong>ขั้นผู้ช่วยผู้ให้การฝึกอบรมผู้กำกับลูกเสือ (Assistant Leader Trainers Training Course : A.L.T.C.)</strong> ระหว่างวันที่ ๔ – ๙ ตุลาคม ๒๕๖๘ ณ ตำบลบ้านแดน อำเภอบรรพตพิสัย จังหวัดนครสวรรค์ เพื่อยกระดับภาวะผู้นำและกระบวนการลูกเสือสู่การพัฒนาวินัยและทักษะชีวิตผู้เรียน<br>
+                  <strong>๒. การอบรมด้านเทคโนโลยีดิจิทัล & AI:</strong> ผ่านหลักสูตร <strong>AI for Teachers (ปัญญาประดิษฐ์เพื่อการศึกษา) สสวท. รวม ๒๘ ชั่วโมง</strong> (ม.ต้น ๒๐ ชม. + ประถมปลาย ๘ ชม.), กิจกรรม AI Learning Hub สพป.กพ.๒ (๗ มิ.ย. ๖๙) และหลักสูตรพัฒนาตนเองรวม ๒๙ หลักสูตร (>๗๕ ชั่วโมง)<br>
+                  <strong>๓. ชุมชนแห่งการเรียนรู้ทางวิชาชีพ (PLC):</strong> เข้าร่วม PLC โรงเรียนบ้านคลองมดแดง กลุ่ม "Play and Learn" ๑๓ ชั่วโมง นำองค์ความรู้มาสร้างนวัตกรรม Gamification ป.๑ และผลิตสื่อ ๖๒ รายการ
                 </p>
                 <div class="ind-metrics-row">
                   <div class="ind-metric-item">
@@ -2958,6 +3209,32 @@
         </div>
 
         <!-- หมวดที่ ๖ : พัฒนาตนเองและวิชาชีพ & เกียรติบัตร (2568-2569) - เกียรติบัตรจริง -->
+        <!-- หมวดการฝึกอบรมลูกเสือ A.L.T.C. ๔–๙ ต.ค. ๒๕๖๘ (เริ่มต้นรอบประเมิน) -->
+        <div class="gallery-item" data-cat="certificates" onclick="openLightbox('assets_drop/2568_การฝึกอบรมลูกเสือ_ALTC/scout_altc_01.jpg', 'การฝึกอบรมบุคลากรทางการลูกเสือ ขั้นผู้ช่วยผู้ให้การฝึกอบรมผู้กำกับลูกเสือ (A.L.T.C.) วันที่ ๔–๙ ต.ค. ๒๕๖๘ ณ ตำบลบ้านแดน อำเภอบรรพตพิสัย จังหวัดนครสวรรค์')">
+          <img src="assets_drop/2568_การฝึกอบรมลูกเสือ_ALTC/scout_altc_01.jpg" alt="อบรมลูกเสือ A.L.T.C.">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">พัฒนาตนเอง & ลูกเสือ (ต.ค. 68)</div>
+            <div class="gallery-title">การฝึกอบรมบุคลากรลูกเสือ ขั้นผู้ช่วยผู้ให้การฝึกอบรม (A.L.T.C.)</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="certificates" onclick="openLightbox('assets_drop/2568_การฝึกอบรมลูกเสือ_ALTC/scout_altc_02.jpg', 'คณะครูผู้เข้ารับการอบรมลูกเสือ A.L.T.C. ร่วมทำความเคารพลูกเสือ (๔–๙ ต.ค. ๒๕๖๘ ณ สโมสรลูกเสือ อ.บรรพตพิสัย จ.นครสวรรค์)')">
+          <img src="assets_drop/2568_การฝึกอบรมลูกเสือ_ALTC/scout_altc_02.jpg" alt="ทำความเคารพลูกเสือ ALTC">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">พัฒนาตนเอง & ลูกเสือ (ต.ค. 68)</div>
+            <div class="gallery-title">กิจกรรมฝึกอบรมผู้กำกับลูกเสือขั้นสูง ณ นครสวรรค์</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-cat="certificates" onclick="openLightbox('assets_drop/2568_การฝึกอบรมลูกเสือ_ALTC/scout_altc_evidence_full.jpg', 'หลักฐานบันทึกภาพถ่าย Google Photos วันที่ ๔–๙ ตุลาคม ๒๕๖๘ ณ ตำบลบ้านแดน อำเภอบรรพตพิสัย จังหวัดนครสวรรค์')">
+          <img src="assets_drop/2568_การฝึกอบรมลูกเสือ_ALTC/scout_altc_evidence_full.jpg" alt="หลักฐานวันเวลา Google Photos">
+          <div class="gallery-item-info">
+            <div class="gallery-tag">หลักฐานวันเวลา (๔–๙ ต.ค. ๖๘)</div>
+            <div class="gallery-title">บันทึกวันเวลาการอบรมลูกเสือ A.L.T.C. จาก Google Photos</div>
+          </div>
+        </div>
+
+
         <div class="gallery-item" data-cat="certificates" onclick="openLightbox('assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg', 'เกียรติบัตร AI Learning Hub แลกเปลี่ยนเรียนรู้การใช้ AI และ OBEC Content Center (7 มิ.ย. 2569) สพป.กำแพงเพชร เขต 2')">
           <img src="assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg" alt="เกียรติบัตร AI Learning Hub สพป.กพ.2">
           <div class="gallery-item-info">
