@@ -18,6 +18,23 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="firebase-config.js"></script>
 
+  <!-- Anti-Stale Cache Auto-Purge -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('pa_krujames_custom_timeline');
+        if (t && (t.indexOf('05_ผลิตสื่อ') !== -1 || t.indexOf('04_Coding') !== -1 || t.indexOf('03_นักเรียนใช้เมาส์') !== -1 || t.indexOf('ฮาร์ดแวร์ประกอบคอมพิวเตอร์') !== -1)) {
+          localStorage.removeItem('pa_krujames_custom_timeline');
+        }
+        var g = localStorage.getItem('pa_krujames_custom_gallery');
+        if (g && (g.indexOf('05_ผลิตสื่อ') !== -1 || g.indexOf('04_Coding') !== -1 || g.indexOf('03_นักเรียนใช้เมาส์') !== -1)) {
+          localStorage.removeItem('pa_krujames_custom_gallery');
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
   <!-- Chart.js CDN for interactive score charts -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -4992,6 +5009,18 @@
       const img = document.getElementById('lightbox-img');
       const cap = document.getElementById('lightbox-caption');
 
+      // Intercept and sanitize any outdated images / titles
+      if (src && (src.includes('05_ผลิตสื่อ') || (caption && caption.includes('ฮาร์ดแวร์ประกอบคอมพิวเตอร์')))) {
+        src = 'assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg';
+        caption = 'สตูดิโอบันทึกสื่อวิดีโอ Active Learning และการผลิตนวัตกรรมดิจิทัล (๑๙ มิถุนายน ๒๕๖๙)';
+      } else if (src && (src.includes('04_Coding') || (caption && caption.includes('Coding_นักเรียน')))) {
+        src = 'assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_01.jpg';
+        caption = 'กิจกรรมค่ายวิชาการ Active Learning ประจำปีการศึกษา ๒๕๖๙ โรงเรียนบ้านคลองมดแดง (๑๗ ก.ค. ๒๕๖๙)';
+      } else if (src && src.includes('03_นักเรียนใช้เมาส์')) {
+        src = 'assets/evidence/crop_student_active_focus.jpg';
+        caption = 'การจัดการเรียนรู้ Active Learning การฝึกทักษะการใช้เมาส์คอมพิวเตอร์ ป.๑ (๑๐ ก.ย. ๒๕๖๙)';
+      }
+
       img.src = src;
       cap.innerText = caption;
       modal.classList.add('active');
@@ -5300,11 +5329,31 @@
       
       let html = '';
       items.forEach((item, idx) => {
-        const date = escapeHtmlText(item.date || '');
-        const title = escapeHtmlText(item.title || '');
-        const loc = escapeHtmlText(item.location || 'โรงเรียนบ้านคลองมดแดง');
-        const desc = escapeHtmlText(item.desc || '');
-        const img = item.src ? escapeHtmlAttr(item.src) : (item.image ? escapeHtmlAttr(item.image) : '');
+        let date = escapeHtmlText(item.date || '');
+        let title = escapeHtmlText(item.title || '');
+        let loc = escapeHtmlText(item.location || 'โรงเรียนบ้านคลองมดแดง');
+        let desc = escapeHtmlText(item.desc || '');
+        let img = item.src ? escapeHtmlAttr(item.src) : (item.image ? escapeHtmlAttr(item.image) : '');
+        
+        // Automatic runtime sanitization of outdated items
+        if ((img && img.includes('05_ผลิตสื่อ')) || (title && title.includes('ฮาร์ดแวร์ประกอบคอมพิวเตอร์'))) {
+          img = 'assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg';
+          title = 'PLC วิชาชีพ & สตูดิโอผลิตสื่อนวัตกรรมดิจิทัล Active Learning';
+          loc = 'สตูดิโอสื่อการเรียนรู้ รร.บ้านคลองมดแดง';
+          desc = 'จัดกิจกรรม PLC แลกเปลี่ยนการสอนเทคโนโลยี พร้อมจัดเตรียมระบบไฟ สตูดิโอบันทึกภาพ และอุปกรณ์ผลิตสื่อดิจิทัลเชิงรุก (Active Learning Media Production) เพื่อนำมาใช้ในการจัดการเรียนรู้และเผยแพร่สู่ผู้เรียน (๑๙ มิ.ย. ๒๕๖๙)';
+          date = 'มิ.ย. ๒๕๖๙ (PLC & นวัตกรรมดิจิทัล)';
+        } else if ((img && img.includes('04_Coding')) || (title && title.includes('Coding_นักเรียน'))) {
+          img = 'assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_01.jpg';
+          title = 'กิจกรรมค่ายวิชาการ Active Learning ๒๕๖๙ ฐานเรียนรู้เทคโนโลยีดิจิทัล';
+          loc = 'ค่ายวิชาการ รร.บ้านคลองมดแดง';
+          desc = 'รับผิดชอบจัดกิจกรรมฐานเรียนรู้เชิงรุกในค่ายวิชาการ Active Learning ประจำปีการศึกษา ๒๕๖๙ ของโรงเรียนบ้านคลองมดแดง ส่งเสริมทักษะความคิดสร้างสรรค์ การคิดเชิงคำนวณ และการลงมือปฏิบัติจริงแก่ผู้เรียน';
+          date = '๑๗ ก.ค. ๒๕๖๙ (ค่ายวิชาการ)';
+        } else if (img && img.includes('03_นักเรียนใช้เมาส์')) {
+          img = 'assets/evidence/crop_student_active_focus.jpg';
+          title = 'การจัดการเรียนรู้ Active Learning การฝึกทักษะการใช้เมาส์คอมพิวเตอร์ ป.๑';
+          desc = 'จัดกิจกรรมการเรียนรู้วิชาวิทยาการคำนวณและเทคโนโลยี ฝึกทักษะการคลิก ดับเบิลคลิก และลากวาง (Drag & Drop) ผ่านบอร์ดเกมและเกมฝึกทักษะ';
+        }
+
         const badgeClass = idx === 0 ? 'timeline-date-badge timeline-badge-start' : 'timeline-date-badge';
         const iconName = idx === 0 ? 'flag' : 'calendar';
         
@@ -5339,21 +5388,34 @@
       try {
         const localGallery = localStorage.getItem('pa_krujames_custom_gallery');
         if (localGallery) {
-          const gItems = JSON.parse(localGallery);
-          if (Array.isArray(gItems)) {
-            const hasNewGooglePhotos = gItems.some(x => x.id === 'img_g1');
-            if (hasNewGooglePhotos) {
-              hydrateCustomGallery(gItems);
-            } else {
-              // Stale cache detected: clear old cache so full 37 authentic photos render from static HTML
-              localStorage.removeItem('pa_krujames_custom_gallery');
+          const gRaw = localGallery;
+          if (gRaw.includes('05_ผลิตสื่อ') || gRaw.includes('04_Coding') || gRaw.includes('03_นักเรียนใช้เมาส์')) {
+            localStorage.removeItem('pa_krujames_custom_gallery');
+          } else {
+            const gItems = JSON.parse(localGallery);
+            if (Array.isArray(gItems)) {
+              const hasNewGooglePhotos = gItems.some(x => x.id === 'img_g1');
+              if (hasNewGooglePhotos) {
+                hydrateCustomGallery(gItems);
+              } else {
+                localStorage.removeItem('pa_krujames_custom_gallery');
+              }
             }
           }
         }
+        
         const localTimeline = localStorage.getItem('pa_krujames_custom_timeline');
         if (localTimeline) {
-          const tItems = JSON.parse(localTimeline);
-          hydrateCustomTimeline(tItems);
+          const tRaw = localTimeline;
+          if (tRaw.includes('05_ผลิตสื่อ') || tRaw.includes('04_Coding') || tRaw.includes('03_นักเรียนใช้เมาส์') || tRaw.includes('ฮาร์ดแวร์ประกอบคอมพิวเตอร์')) {
+            console.log('Stale timeline detected in localStorage, purging...');
+            localStorage.removeItem('pa_krujames_custom_timeline');
+          } else {
+            const tItems = JSON.parse(localTimeline);
+            if (Array.isArray(tItems) && tItems.length > 0) {
+              hydrateCustomTimeline(tItems);
+            }
+          }
         }
       } catch (e) {
         console.warn('Local CMS hydration warning:', e);
@@ -5365,15 +5427,29 @@
       if (typeof db !== 'undefined' && db) {
         db.collection('pa_cms').doc('gallery').get().then(doc => {
           if (doc.exists && doc.data() && doc.data().items) {
-            hydrateCustomGallery(doc.data().items);
-            localStorage.setItem('pa_krujames_custom_gallery', JSON.stringify(doc.data().items));
+            const items = doc.data().items;
+            const raw = JSON.stringify(items);
+            if (raw.includes('05_ผลิตสื่อ') || raw.includes('04_Coding') || raw.includes('03_นักเรียนใช้เมาส์')) {
+              console.log('Stale cloud gallery detected, keeping authentic static gallery.');
+              localStorage.removeItem('pa_krujames_custom_gallery');
+            } else {
+              hydrateCustomGallery(items);
+              localStorage.setItem('pa_krujames_custom_gallery', JSON.stringify(items));
+            }
           }
         }).catch(e => console.log('Firestore gallery sync note:', e));
 
         db.collection('pa_cms').doc('timeline').get().then(doc => {
           if (doc.exists && doc.data() && doc.data().items) {
-            hydrateCustomTimeline(doc.data().items);
-            localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(doc.data().items));
+            const items = doc.data().items;
+            const raw = JSON.stringify(items);
+            if (raw.includes('05_ผลิตสื่อ') || raw.includes('04_Coding') || raw.includes('03_นักเรียนใช้เมาส์') || raw.includes('ฮาร์ดแวร์ประกอบคอมพิวเตอร์')) {
+              console.log('Stale cloud timeline detected. Purging local storage so authentic 2569 static timeline renders.');
+              localStorage.removeItem('pa_krujames_custom_timeline');
+            } else {
+              hydrateCustomTimeline(items);
+              localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(items));
+            }
           }
         }).catch(e => console.log('Firestore timeline sync note:', e));
       }

@@ -19,6 +19,23 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="firebase-config.js"></script>
 
+  <!-- Anti-Stale Cache Auto-Purge -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('pa_krujames_custom_timeline');
+        if (t && (t.indexOf('05_ผลิตสื่อ') !== -1 || t.indexOf('04_Coding') !== -1 || t.indexOf('03_นักเรียนใช้เมาส์') !== -1 || t.indexOf('ฮาร์ดแวร์ประกอบคอมพิวเตอร์') !== -1)) {
+          localStorage.removeItem('pa_krujames_custom_timeline');
+        }
+        var g = localStorage.getItem('pa_krujames_custom_gallery');
+        if (g && (g.indexOf('05_ผลิตสื่อ') !== -1 || g.indexOf('04_Coding') !== -1 || g.indexOf('03_นักเรียนใช้เมาส์') !== -1)) {
+          localStorage.removeItem('pa_krujames_custom_gallery');
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
   <style>
     :root {
       --primary-dark: #0a192f;
@@ -1221,7 +1238,27 @@
 
       const savedTl = localStorage.getItem('pa_krujames_custom_timeline');
       if (savedTl) {
-        try { timelineItems = JSON.parse(savedTl); } catch(e) { timelineItems = [...DEFAULT_TIMELINE]; }
+        try { 
+          timelineItems = JSON.parse(savedTl);
+          const hasOldPhotos = Array.isArray(timelineItems) && timelineItems.some(x => {
+            const s = JSON.stringify(x);
+            return s.includes('05_ผลิตสื่อ') || s.includes('04_Coding') || s.includes('03_นักเรียนใช้เมาส์') || s.includes('ฮาร์ดแวร์ประกอบคอมพิวเตอร์');
+          });
+          if (hasOldPhotos) {
+            console.log('Resetting outdated timeline in admin...');
+            timelineItems = [...DEFAULT_TIMELINE];
+            localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(timelineItems));
+            if (typeof db !== 'undefined' && db) {
+              db.collection('pa_cms').doc('timeline').set({
+                items: timelineItems,
+                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+              }).catch(err => console.warn(err));
+            }
+          }
+        } catch(e) { 
+          timelineItems = [...DEFAULT_TIMELINE]; 
+          localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(timelineItems));
+        }
       } else {
         timelineItems = [...DEFAULT_TIMELINE];
         localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(timelineItems));
