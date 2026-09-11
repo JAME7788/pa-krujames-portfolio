@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แผงควบคุมผู้ดูแลระบบ (Admin CMS) | ครูเจมส์ อนันตชัย เพ็ชรรี่</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230284c7' stroke-width='2'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5h-2v-2h2zm0-4h-2V7h2z'/></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Firebase SDKs (Compat CDN) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+
+  <style>
+    :root {
+      --primary-dark: #0a192f;
+      --primary-navy: #1e3a8a;
+      --primary-blue: #1e40af;
+      --accent-sky: #0284c7;
+      --accent-cyan: #0ea5e9;
+      --accent-light: #38bdf8;
+      --bg-light: #f0f9ff;
+      --bg-surface: #ffffff;
+      --border-color: #e2e8f0;
+      --border-accent: #bae6fd;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Sarabun', 'Prompt', sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+    }
+
+    /* Authentication Gate Modal */
+    #auth-gate {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 25, 47, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    #auth-gate.hidden {
+      display: none;
+    }
+
+    .auth-card {
+      background: var(--bg-surface);
+      width: 100%;
+      max-width: 440px;
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border-accent);
+      text-align: center;
+    }
+
+    .auth-icon {
+      width: 64px;
+      height: 64px;
+      background: #e0f2fe;
+      color: var(--accent-sky);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .auth-title {
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.4rem;
+      color: var(--primary-navy);
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .auth-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .auth-input-wrap {
+      margin-bottom: 1.25rem;
+      text-align: left;
+    }
+
+    .auth-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary-navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .auth-input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-align: center;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .auth-input:focus {
+      border-color: var(--accent-sky);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .auth-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, var(--accent-sky), var(--primary-navy));
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Prompt', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .auth-btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .auth-hint {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    /* Main Admin Layout */
+    .admin-sidebar {
+      width: 270px;
+      background: var(--primary-dark);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .admin-brand {
+      padding: 1.75rem 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .admin-logo-badge {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, #0284c7, #1e40af);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-family: 'Prompt', sans-serif;
+    }
+
+    .brand-text h2 {
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #f0f9ff;
+    }
+
+    .brand-text span {
+      font-size: 0.75rem;
+      color: var(--accent-light);
+      display: inline-block;
+    }
+
+    .admin-nav {
+      padding: 1.25rem 0.75rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: #94a3b8;
+      background: transparent;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 0.92rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-btn.active {
+      color: #ffffff;
+      background: linear-gradient(90deg, #0284c7, #1e3a8a);
+      font-weight: 600;
+    }
+
+    .admin-footer-links {
+      padding: 1.25rem 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .link-out {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #38bdf8;
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .link-out:hover {
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    /* Main Content Area */
+    .admin-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .admin-topbar {
+      height: 70px;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .topbar-title h1 {
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.3rem;
+      color: var(--primary-navy);
+      font-weight: 600;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .admin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent-sky);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #0369a1;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .admin-body {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    /* Tab Panels */
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    /* Metric Cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: var(--bg-surface);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .stat-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #e0f2fe;
+      color: var(--accent-sky);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .stat-info h4 {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .stat-info .stat-num {
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary-navy);
+    }
+
+    /* Gallery & Album Section */
+    .section-bar {
+      background: var(--bg-surface);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-pill {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      border: 1px solid var(--border-color);
+      background: #f8fafc;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-pill:hover {
+      border-color: var(--accent-sky);
+      color: var(--accent-sky);
+    }
+
+    .filter-pill.active {
+      background: var(--primary-navy);
+      color: #ffffff;
+      border-color: var(--primary-navy);
+      font-weight: 600;
+    }
+
+    .gallery-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .gallery-admin-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .gallery-admin-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-accent);
+    }
+
+    .card-thumb-wrap {
+      width: 100%;
+      height: 180px;
+      position: relative;
+      background: #0a192f;
+    }
+
+    .card-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-category-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(10, 25, 47, 0.85);
+      color: #38bdf8;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+    }
+
+    .card-content {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-family: 'Prompt', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-navy);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.5;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      padding-top: 10px;
+      margin-top: auto;
+    }
+
+    .card-tag-badge {
+      font-size: 0.75rem;
+      color: var(--accent-sky);
+      font-weight: 500;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      background: #ffffff;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn-icon:hover {
+      background: #e0f2fe;
+      color: var(--accent-sky);
+      border-color: #bae6fd;
+    }
+
+    .btn-icon.delete:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+      border-color: #94a3b8;
+    }
+
+    /* Modal Styling */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 25, 47, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-window {
+      background: var(--bg-surface);
+      width: 100%;
+      max-width: 600px;
+      border-radius: 16px;
+      border: 1px solid var(--border-accent);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      max-height: 90vh;
+    }
+
+    .modal-header {
+      padding: 1.25rem 1.75rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f8fafc;
+    }
+
+    .modal-header h3 {
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.15rem;
+      color: var(--primary-navy);
+      font-weight: 600;
+    }
+
+    .modal-close {
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .modal-body {
+      padding: 1.75rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-navy);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .form-control:focus {
+      border-color: var(--accent-sky);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .modal-footer {
+      padding: 1.25rem 1.75rem;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      background: #f8fafc;
+    }
+
+    /* Settings Box */
+    .settings-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .settings-card h3 {
+      font-family: 'Prompt', sans-serif;
+      color: var(--primary-navy);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .settings-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Toast Notification */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      box-shadow: var(--shadow-lg);
+      display: none;
+      align-items: center;
+      gap: 8px;
+      z-index: 100000;
+      border-left: 4px solid var(--accent-sky);
+    }
+
+    #toast.show {
+      display: flex;
+      animation: fadeIn 0.2s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Security Gate Modal -->
+  <div id="auth-gate">
+    <div class="auth-card">
+      <div class="auth-icon">
+        <i data-lucide="shield-check" style="width: 32px; height: 32px;"></i>
+      </div>
+      <h2 class="auth-title">ระบบบริหารจัดการข้อมูล PA</h2>
+      <p class="auth-subtitle">ครูเจมส์ นายอนันตชัย เพ็ชรรี่ | โรงเรียนบ้านคลองมดแดง</p>
+      
+      <div class="auth-input-wrap">
+        <label class="auth-label">กรุณากรอกรหัสผ่านผู้ดูแลระบบ (Admin PIN):</label>
+        <input type="password" id="auth-pin-input" class="auth-input" placeholder="••••" maxlength="8">
+      </div>
+      <button class="auth-btn" onclick="checkAuth()">เข้าสู่ระบบจัดการข้อมูล</button>
+      <p class="auth-hint">รหัสผ่านเริ่มต้น: <strong>198</strong> หรือ <strong>1234</strong></p>
+    </div>
+  </div>
+
+  <!-- Admin Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="admin-brand">
+      <div class="admin-logo-badge">KJ</div>
+      <div class="brand-text">
+        <h2>Kru James CMS</h2>
+        <span>PA 2569 Management</span>
+      </div>
+    </div>
+
+    <nav class="admin-nav">
+      <button class="nav-btn active" onclick="switchTab('overview')">
+        <i data-lucide="layout-dashboard" style="width: 18px; height: 18px;"></i>
+        <span>ภาพรวมระบบ</span>
+      </button>
+      <button class="nav-btn" onclick="switchTab('gallery')">
+        <i data-lucide="images" style="width: 18px; height: 18px;"></i>
+        <span>จัดการรูปภาพ & อัลบั้ม</span>
+      </button>
+      <button class="nav-btn" onclick="switchTab('timeline')">
+        <i data-lucide="calendar-days" style="width: 18px; height: 18px;"></i>
+        <span>จัดการไทม์ไลน์กิจกรรม</span>
+      </button>
+      <button class="nav-btn" onclick="switchTab('profile')">
+        <i data-lucide="user-cog" style="width: 18px; height: 18px;"></i>
+        <span>ข้อมูลครู & ประเด็นท้าทาย</span>
+      </button>
+      <button class="nav-btn" onclick="switchTab('feedbacks')">
+        <i data-lucide="message-square-text" style="width: 18px; height: 18px;"></i>
+        <span>ข้อคิดเห็นกรรมการ</span>
+      </button>
+      <button class="nav-btn" onclick="switchTab('backup')">
+        <i data-lucide="database-backup" style="width: 18px; height: 18px;"></i>
+        <span>ฐานข้อมูล & สำรอง</span>
+      </button>
+    </nav>
+
+    <div class="admin-footer-links">
+      <a href="index.html" class="link-out" target="_blank">
+        <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+        <span>ดูหน้าเว็บพอร์ตโฟลิโอจริง</span>
+      </a>
+      <button class="link-out" style="background: transparent; border: none; cursor: pointer; color: #94a3b8;" onclick="logout()">
+        <i data-lucide="log-out" style="width: 16px; height: 16px;"></i>
+        <span>ออกจากระบบ</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Admin Main -->
+  <main class="admin-main">
+    <!-- Topbar -->
+    <header class="admin-topbar">
+      <div class="topbar-title">
+        <h1 id="page-heading">ภาพรวมระบบ (Overview)</h1>
+      </div>
+      <div class="topbar-actions">
+        <span class="admin-badge" id="storage-status-badge">
+          <i data-lucide="hard-drive" style="width: 14px; height: 14px;"></i> LocalStorage Ready
+        </span>
+        <button class="btn-action btn-primary" onclick="openAddPhotoModal()">
+          <i data-lucide="plus" style="width: 16px; height: 16px;"></i> เพิ่มรูปภาพใหม่
+        </button>
+      </div>
+    </header>
+
+    <div class="admin-body">
+
+      <!-- TAB 1: OVERVIEW -->
+      <section id="tab-overview" class="tab-panel active">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon-wrap"><i data-lucide="image"></i></div>
+            <div class="stat-info">
+              <h4>จำนวนรูปภาพทั้งหมด</h4>
+              <div class="stat-num" id="stat-total-photos">37</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon-wrap"><i data-lucide="folder-kanban"></i></div>
+            <div class="stat-info">
+              <h4>หมวดหมู่อัลบั้ม</h4>
+              <div class="stat-num" id="stat-total-albums">7</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon-wrap"><i data-lucide="calendar"></i></div>
+            <div class="stat-info">
+              <h4>กิจกรรมไทม์ไลน์</h4>
+              <div class="stat-num" id="stat-total-milestones">18</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon-wrap"><i data-lucide="users"></i></div>
+            <div class="stat-info">
+              <h4>ผู้เข้าชมเว็บไซต์</h4>
+              <div class="stat-num" id="stat-visitors">1,248</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3>ยินดีต้อนรับสู่ระบบบริหารจัดการพอร์ตโฟลิโอ PA ๒๕๖๙</h3>
+          <p>ครูเจมส์สามารถ เพิ่มรูปภาพใหม่, ปรับแก้คำบรรยาย, กำหนดหมวดหมู่อัลบั้ม, หรือลบรูปภาพที่ไม่ต้องการได้ทันที โดยระบบจะบันทึกลงหน่วยความจำของบราวเซอร์และซิงก์ขึ้น Firebase อัตโนมัติ</p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="btn-action btn-primary" onclick="switchTab('gallery')">
+              <i data-lucide="images" style="width: 16px; height: 16px;"></i> ไปที่ระบบจัดการรูปภาพ
+            </button>
+            <button class="btn-action btn-outline" onclick="exportDataJSON()">
+              <i data-lucide="download" style="width: 16px; height: 16px;"></i> สำรองข้อมูลทั้งหมด (Export JSON)
+            </button>
+            <button class="btn-action btn-outline" onclick="resetToAuthenticDefaults()">
+              <i data-lucide="rotate-ccw" style="width: 16px; height: 16px;"></i> คืนค่าเริ่มต้นหลักฐานจริง ๒๕๖๙
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: GALLERY & ALBUMS -->
+      <section id="tab-gallery" class="tab-panel">
+        <div class="section-bar">
+          <div class="filter-pills" id="album-filter-container">
+            <button class="filter-pill active" onclick="filterGallery('all')">ทั้งหมด (<span id="count-all">37</span>)</button>
+            <button class="filter-pill" onclick="filterGallery('active-learning')">Active Learning</button>
+            <button class="filter-pill" onclick="filterGallery('gamification')">Gamification ป.๑</button>
+            <button class="filter-pill" onclick="filterGallery('community')">สัมพันธ์ชุมชน</button>
+            <button class="filter-pill" onclick="filterGallery('support')">บริหารทั่วไป</button>
+            <button class="filter-pill" onclick="filterGallery('volunteer')">จิตอาสา/ลูกเสือ</button>
+            <button class="filter-pill" onclick="filterGallery('awards')">รางวัลผลงาน</button>
+            <button class="filter-pill" onclick="filterGallery('certificates')">เกียรติบัตร</button>
+          </div>
+          <button class="btn-action btn-primary" onclick="openAddPhotoModal()">
+            <i data-lucide="plus-circle" style="width: 16px; height: 16px;"></i> เพิ่มรูปภาพในอัลบั้ม
+          </button>
+        </div>
+
+        <div class="gallery-cards-grid" id="admin-gallery-grid">
+          <!-- Dynamic Photo Cards will be injected here -->
+        </div>
+      </section>
+
+      <!-- TAB 3: TIMELINE -->
+      <section id="tab-timeline" class="tab-panel">
+        <div class="section-bar">
+          <div>
+            <h3 style="font-family: 'Prompt'; color: var(--primary-navy); font-size: 1.1rem;">ไทม์ไลน์การปฏิบัติงานและพัฒนาวิชาชีพ (PA ๒๕๖๙)</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">จัดการกิจกรรมและร่องรอยเชิงประจักษ์ตลอดรอบการประเมิน ๑ ต.ค. ๒๕๖๘ – ๓๐ ก.ย. ๒๕๖๙</p>
+          </div>
+          <button class="btn-action btn-primary" onclick="openAddTimelineModal()">
+            <i data-lucide="plus" style="width: 16px; height: 16px;"></i> เพิ่มกิจกรรมใหม่
+          </button>
+        </div>
+
+        <div id="admin-timeline-list" style="display: flex; flex-direction: column; gap: 1rem;">
+          <!-- Dynamic Timeline Items -->
+        </div>
+      </section>
+
+      <!-- TAB 4: PROFILE & CHALLENGE -->
+      <section id="tab-profile" class="tab-panel">
+        <div class="settings-card">
+          <h3>ข้อมูลครูผู้รับการประเมินและสถานศึกษา</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem;">
+            <div class="form-group">
+              <label class="form-label">ชื่อ - สกุล:</label>
+              <input type="text" id="prof-name" class="form-control" value="นายอนันตชัย เพ็ชรรี่">
+            </div>
+            <div class="form-group">
+              <label class="form-label">ตำแหน่ง / วิทยฐานะ:</label>
+              <input type="text" id="prof-role" class="form-control" value="ครู อันดับ คศ.๑ (เลขที่ตำแหน่ง ๔๕๙๕)">
+            </div>
+            <div class="form-group">
+              <label class="form-label">สถานศึกษา:</label>
+              <input type="text" id="prof-school" class="form-control" value="โรงเรียนบ้านคลองมดแดง สพป.กำแพงเพชร เขต ๒">
+            </div>
+            <div class="form-group">
+              <label class="form-label">ชั่วโมงสอนตามตาราง:</label>
+              <input type="text" id="prof-hours" class="form-control" value="๒๓ ชั่วโมง/สัปดาห์ (๒๔ คาบ)">
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3>ข้อมูลประเด็นท้าทาย (Challenge Issue) ป.๑</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem;">
+            <div class="form-group">
+              <label class="form-label">กลุ่มเป้าหมายนักเรียน:</label>
+              <input type="text" id="prof-cohort" class="form-control" value="นักเรียนชั้น ป.๑ ปีการศึกษา ๒๕๖๙ จำนวน ๑๑ คน (ครบ ๑๐๐%)">
+            </div>
+            <div class="form-group">
+              <label class="form-label">ผลการประเมินผ่านเกณฑ์:</label>
+              <input type="text" id="prof-pass" class="form-control" value="ผ่านเกณฑ์รูบริกส์ครบ ๑๐๐% (๑๑ คน)">
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label class="form-label">ชื่อประเด็นท้าทาย:</label>
+              <input type="text" id="prof-challenge-title" class="form-control" value="การพัฒนาทักษะปฏิบัติการใช้เมาส์ด้วยเกมมิฟิเคชันและ Active Learning">
+            </div>
+          </div>
+          <div style="margin-top: 1.25rem;">
+            <button class="btn-action btn-primary" onclick="saveProfileStats()">
+              <i data-lucide="save" style="width: 16px; height: 16px;"></i> บันทึกข้อมูลส่วนตัว & ประเด็นท้าทาย
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: FEEDBACKS -->
+      <section id="tab-feedbacks" class="tab-panel">
+        <div class="section-bar">
+          <div>
+            <h3 style="font-family: 'Prompt'; color: var(--primary-navy); font-size: 1.1rem;">ข้อคิดเห็นและข้อเสนอแนะจากคณะกรรมการ</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">รายการข้อคิดเห็นที่ส่งเข้ามาผ่านแบบฟอร์มบนเว็บไซต์</p>
+          </div>
+          <button class="btn-action btn-outline" onclick="loadFeedbacks()">
+            <i data-lucide="refresh-cw" style="width: 16px; height: 16px;"></i> รีเฟรชข้อมูล
+          </button>
+        </div>
+
+        <div id="admin-feedback-list" style="display: flex; flex-direction: column; gap: 1rem;">
+          <!-- Feedbacks List -->
+        </div>
+      </section>
+
+      <!-- TAB 6: BACKUP & DATABASE -->
+      <section id="tab-backup" class="tab-panel">
+        <div class="settings-card">
+          <h3>การเชื่อมต่อฐานข้อมูล Google Cloud Firestore</h3>
+          <p>สถานะปัจจุบัน: <strong id="firebase-diag-text" style="color: var(--accent-sky);">กำลังตรวจสอบการเชื่อมต่อ...</strong></p>
+          <div style="background: #f8fafc; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border-color); font-family: monospace; font-size: 0.85rem; margin-bottom: 1rem;">
+            ไฟล์คอนฟิก: <code>firebase-config.js</code>
+          </div>
+          <button class="btn-action btn-outline" onclick="testFirebase()">
+            <i data-lucide="zap" style="width: 16px; height: 16px;"></i> ตรวจสอบการเชื่อมต่อ Firebase Cloud
+          </button>
+        </div>
+
+        <div class="settings-card">
+          <h3>สำรองข้อมูลและกู้คืน (Backup & Restore)</h3>
+          <p>ครูเจมส์สามารถส่งออกไฟล์ JSON เก็บไว้ในเครื่องคอมพิวเตอร์ หรือนำไปเปิดใช้งานบนเครื่องอื่นได้ทันที</p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="btn-action btn-primary" onclick="exportDataJSON()">
+              <i data-lucide="download" style="width: 16px; height: 16px;"></i> ดาวน์โหลดไฟล์สำรองข้อมูล (Export JSON)
+            </button>
+            <label class="btn-action btn-outline" style="cursor: pointer;">
+              <i data-lucide="upload" style="width: 16px; height: 16px;"></i> นำเข้าไฟล์สำรองข้อมูล (Import JSON)
+              <input type="file" id="import-json-file" accept=".json" style="display: none;" onchange="importDataJSON(event)">
+            </label>
+            <button class="btn-action btn-outline" onclick="resetToAuthenticDefaults()">
+              <i data-lucide="rotate-ccw" style="width: 16px; height: 16px;"></i> คืนค่าเริ่มต้นหลักฐานจริง ๒๕๖๙
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ADD / EDIT PHOTO MODAL -->
+  <div class="modal-backdrop" id="photo-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 id="photo-modal-title">เพิ่มรูปภาพใหม่ในคลัง</h3>
+        <button class="modal-close" onclick="closePhotoModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="photo-edit-id">
+        
+        <div class="form-group">
+          <label class="form-label">เลือกวิธีใส่รูปภาพ:</label>
+          <div style="display: flex; gap: 10px; margin-bottom: 8px;">
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.88rem; cursor: pointer;">
+              <input type="radio" name="photo-source-type" value="path" checked onchange="togglePhotoSourceType()"> ใส่ที่อยู่ไฟล์ / URL
+            </label>
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.88rem; cursor: pointer;">
+              <input type="radio" name="photo-source-type" value="upload" onchange="togglePhotoSourceType()"> อัปโหลดไฟล์จากเครื่อง
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group" id="group-photo-path">
+          <label class="form-label">ที่อยู่ไฟล์ภาพ (Path / URL):</label>
+          <input type="text" id="photo-src-input" class="form-control" placeholder="เช่น assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg">
+        </div>
+
+        <div class="form-group" id="group-photo-upload" style="display: none;">
+          <label class="form-label">เลือกไฟล์ภาพจากคอมพิวเตอร์:</label>
+          <input type="file" id="photo-file-input" class="form-control" accept="image/*" onchange="handleImageUpload(event)">
+        </div>
+
+        <!-- Preview Box -->
+        <div id="photo-preview-box" style="width: 100%; height: 180px; border-radius: 8px; background: #f1f5f9; border: 1px dashed var(--border-color); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <img id="photo-preview-img" src="" alt="Preview" style="max-width: 100%; max-height: 100%; object-fit: contain; display: none;">
+          <span id="photo-preview-placeholder" style="color: var(--text-light); font-size: 0.85rem;">ตัวอย่างภาพจะแสดงที่นี่</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">ชื่อรูปภาพ (Title):</label>
+          <input type="text" id="photo-title-input" class="form-control" placeholder="เช่น การจัดการเรียนรู้ในห้องคอมพิวเตอร์">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">คำบรรยายภาพ (Caption):</label>
+          <textarea id="photo-caption-input" class="form-control" rows="2" placeholder="เช่น บรรยากาศจริงห้องคอมพิวเตอร์ นักเรียน ป.๑ ฝึกทักษะการใช้เมาส์"></textarea>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group">
+            <label class="form-label">หมวดหมู่อัลบั้ม (Album):</label>
+            <select id="photo-cat-select" class="form-control">
+              <option value="active-learning">Active Learning</option>
+              <option value="gamification">Gamification (ป.๑)</option>
+              <option value="community">สัมพันธ์ชุมชน</option>
+              <option value="support">บริหารทั่วไป & สนับสนุน</option>
+              <option value="volunteer">จิตอาสา & ลูกเสือ</option>
+              <option value="awards">รางวัลและผลงาน</option>
+              <option value="certificates">เกียรติบัตร</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">แท็กวันที่ / กิจกรรม:</label>
+            <input type="text" id="photo-tag-input" class="form-control" placeholder="เช่น ๑๐ ก.ย. ๖๙">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-action btn-outline" onclick="closePhotoModal()">ยกเลิก</button>
+        <button class="btn-action btn-primary" onclick="savePhoto()">บันทึกรูปภาพ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD / EDIT TIMELINE MODAL -->
+  <div class="modal-backdrop" id="timeline-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 id="timeline-modal-title">เพิ่มกิจกรรมในไทม์ไลน์</h3>
+        <button class="modal-close" onclick="closeTimelineModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="timeline-edit-id">
+        <div class="form-group">
+          <label class="form-label">วันที่จัดกิจกรรม (Date Badge):</label>
+          <input type="text" id="tl-date-input" class="form-control" placeholder="เช่น ๑๐ ก.ย. ๒๕๖๙">
+        </div>
+        <div class="form-group">
+          <label class="form-label">ชื่องาน / กิจกรรม (Title):</label>
+          <input type="text" id="tl-title-input" class="form-control" placeholder="เช่น จัดการเรียนรู้เชิงรุก Active Learning & Gamification ป.๑">
+        </div>
+        <div class="form-group">
+          <label class="form-label">สถานที่ (Location):</label>
+          <input type="text" id="tl-loc-input" class="form-control" placeholder="เช่น ห้องปฏิบัติการคอมพิวเตอร์ รร.บ้านคลองมดแดง">
+        </div>
+        <div class="form-group">
+          <label class="form-label">รายละเอียดกิจกรรม (Description):</label>
+          <textarea id="tl-desc-input" class="form-control" rows="3" placeholder="ระบุผลการปฏิบัติงาน ร่องรอยหลักฐาน และผลสัมฤทธิ์"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">ที่อยู่รูปภาพประกอบ (Image Path / URL):</label>
+          <input type="text" id="tl-src-input" class="form-control" placeholder="เช่น assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-action btn-outline" onclick="closeTimelineModal()">ยกเลิก</button>
+        <button class="btn-action btn-primary" onclick="saveTimeline()">บันทึกกิจกรรม</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Message -->
+  <div id="toast">
+    <i data-lucide="check-circle" style="width: 18px; height: 18px; color: #38bdf8;"></i>
+    <span id="toast-msg">บันทึกข้อมูลเรียบร้อยแล้ว</span>
+  </div>
+
+  <!-- Script Engine -->
+  <script>
+    // 1. DEFAULT DATASETS
+    const DEFAULT_GALLERY = [{"id": "img_1", "category": "active-learning", "src": "assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg", "caption": "บรรยากาศการจัดการเรียนรู้ Active Learning ห้องปฏิบัติการคอมพิวเตอร์ (๑๐ กันยายน ๒๕๖๙)", "tag": "Active Learning (๑๐ ก.ย. ๖๙)", "title": "การจัดการเรียนรู้เชิงรุกในห้องคอมพิวเตอร์"}, {"id": "img_2", "category": "active-learning", "src": "assets/evidence/crop_student_active_focus.jpg", "caption": "Active Learning วิทยาการคำนวณ ป.๑: ผู้เรียนฝึกปฏิบัติทักษะการใช้เมาส์ ๑ คนต่อ ๑ เครื่อง (๑๐ ก.ย. ๒๕๖๙)", "tag": "Active Learning (๑๐ ก.ย. ๖๙)", "title": "นร. ป.๑ ฝึกปฏิบัติ ๑ คนต่อ ๑ เครื่องอย่างมุ่งมั่น"}, {"id": "img_3", "category": "active-learning", "src": "assets/evidence/crop_active_learning_p1_main.jpg", "caption": "การจัดกิจกรรมการเรียนรู้แบบมีส่วนร่วม ผู้เรียนลงมือปฏิบัติจริงหน้าจอคอมพิวเตอร์ (๑๐ ก.ย. ๒๕๖๙)", "tag": "Active Learning (๑๐ ก.ย. ๖๙)", "title": "การเรียนรู้เชิงรุกหน้าจอคอมพิวเตอร์รายบุคคล"}, {"id": "img_4", "category": "active-learning", "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_01.jpg", "caption": "ค่ายวิชาการ Active Learning โรงเรียนบ้านคลองมดแดง (๑๗ ก.ค. ๒๕๖๙): ฐานการเรียนรู้เชิงรุก", "tag": "Active Learning (๑๗ ก.ค. ๖๙)", "title": "ค่ายวิชาการ Active Learning ๒๕๖๙"}, {"id": "img_5", "category": "active-learning", "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_04.jpg", "caption": "ค่ายวิชาการ ๒๕๖๙: กิจกรรมกระบวนการกลุ่ม การฝึกคิดวิเคราะห์และแก้ปัญหา (๑๗ ก.ค. ๒๕๖๙)", "tag": "Active Learning (๑๗ ก.ค. ๖๙)", "title": "การทำงานร่วมกันและกระบวนการกลุ่มค่ายวิชาการ"}, {"id": "img_6", "category": "active-learning", "src": "assets/evidence/crop_classroom_rules_environment.jpg", "caption": "บรรยากาศเชิงบวก: ป้ายข้อตกลงห้องเรียน ความรับผิดชอบ และการเคารพ (๑๐ ก.ย. ๒๕๖๙)", "tag": "บรรยากาศเชิงบวก (๑๐ ก.ย. ๖๙)", "title": "ป้ายข้อตกลงห้องเรียน ความรับผิดชอบและการเคารพ"}, {"id": "img_7", "category": "gamification", "src": "assets/evidence/crop_gamification_screen.jpg", "caption": "นวัตกรรม Gamification (๑๐ ก.ย. ๒๕๖๙): บทเรียนภารกิจเมาส์แม่นยำ บนระบบ Kru James Soncom", "tag": "Gamification (๑๐ ก.ย. ๖๙)", "title": "นวัตกรรมเกมมิฟิเคชัน \"ภารกิจเมาส์แม่นยำ\""}, {"id": "img_8", "category": "gamification", "src": "assets/evidence/crop_mouse_hand_posture.jpg", "caption": "การฝึกทักษะการจับและควบคุมเมาส์ ป.๑ (๑๐ ก.ย. ๒๕๖๙): ประสานสายตาและกล้ามเนื้อมือ", "tag": "Gamification (๑๐ ก.ย. ๖๙)", "title": "การฝึกทักษะการจับและควบคุมเมาส์ ป.๑"}, {"id": "img_9", "category": "gamification", "src": "assets_drop/evidence/classroom_real_2569.jpg", "caption": "ผลสัมฤทธิ์ Gamification (๑๐ ก.ย. ๒๕๖๙): ผู้เรียน ป.๑ ผ่านเกณฑ์ทักษะปฏิบัติครบ ๑๐๐% (๑๑ คน)", "tag": "Gamification (๑๐ ก.ย. ๖๙)", "title": "ผู้เรียน ป.๑ ผ่านเกณฑ์ทักษะปฏิบัติครบ ๑๐๐% (๑๑ คน)"}, {"id": "img_10", "category": "gamification", "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260530_101743.jpg", "caption": "การพัฒนาสื่อนวัตกรรมดิจิทัล: อบรมเชิงปฏิบัติการพัฒนาเว็บไซต์ชื่อโดเมน .th สพป.กพ.๒ (๓๐ พ.ค. ๒๕๖๙)", "tag": "สื่อนวัตกรรม (๓๐ พ.ค. ๖๙)", "title": "อบรมสร้างเว็บไซต์และระบบสื่อดิจิทัล โดเมน .th"}, {"id": "img_11", "category": "community", "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_01.jpg", "caption": "การประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๒/๒๕๖๙ วันที่ ๑๘ มิถุนายน ๒๕๖๙", "tag": "สัมพันธ์ชุมชน (๑๘ มิ.ย. ๖๙)", "title": "ประชุมคณะกรรมการสถานศึกษาและผู้นำชุมชน รอบที่ ๒"}, {"id": "img_12", "category": "community", "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_04.jpg", "caption": "บรรยากาศการประชุมร่วมกับผู้นำชุมชนและผู้แทนผู้ปกครอง วางแผนพัฒนาการศึกษา (๑๘ มิ.ย. ๒๕๖๙)", "tag": "สัมพันธ์ชุมชน (๑๘ มิ.ย. ๖๙)", "title": "บรรยากาศการประชุมร่วมวางแผนยุทธศาสตร์สถานศึกษา"}, {"id": "img_13", "category": "community", "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260508_070014.jpg", "caption": "ระบบดูแลช่วยเหลือนักเรียน: ลงพื้นที่ออกเยี่ยมบ้านนักเรียนชั้น ม.๓ ประจำปีการศึกษา ๒๕๖๙ (๘ พ.ค. ๒๕๖๙)", "tag": "สัมพันธ์ชุมชน (๘ พ.ค. ๖๙)", "title": "ลงพื้นที่ออกเยี่ยมบ้านนักเรียน ม.๓ สัมพันธ์ชุมชน"}, {"id": "img_14", "category": "community", "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260701_084943.jpg", "caption": "ผู้กำกับลูกเสือนำกองลูกเสือเข้าร่วมพิธีวันสถาปนาคณะลูกเสือแห่งชาติ (๑ ก.ค. ๒๕๖๙)", "tag": "กิจกรรมชุมชน (๑ ก.ค. ๖๙)", "title": "ผู้กำกับลูกเสือ งานวันสถาปนาคณะลูกเสือแห่งชาติ"}, {"id": "img_15", "category": "support community", "src": "assets/evidence/general_admin_parent_meeting.jpg", "caption": "จัดประชุมผู้ปกครอง ๑ รอบ ภาคเรียนที่ ๑/๒๕๖๙ (๖ พ.ค. ๒๕๖๙): ครูเจมส์เป็นพิธีกรดำเนินงาน คำสั่ง ๑๑๓/๒๕๖๙ ผู้เข้าร่วม ๘๐ คน ความพึงพอใจ ๘๖.๒๕%", "tag": "ประชุมผู้ปกครอง ๑ รอบ (พ.ค. ๖๙)", "title": "จัดประชุมผู้ปกครอง ๑ รอบ ภาคเรียนที่ ๑/๒๕๖๙ (คำสั่ง ๑๑๓/๒๕๖๙)"}, {"id": "img_16", "category": "support community", "src": "assets/evidence/board_meeting_report_page1.jpg", "caption": "การประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๑/๒๕๖๙ (รอบที่ ๑ : ๒๐ ม.ค. ๒๕๖๙ เวลา ๑๔.๐๐ น.): รายงานการประชุมเพื่อกำหนดทิศทางพัฒนาสถานศึกษา", "tag": "กรรมการสถานศึกษา รอบที่ ๑ (ม.ค. ๖๙)", "title": "ประชุมคณะกรรมการสถานศึกษา ครั้งที่ ๑/๒๕๖๙ (รอบที่ ๑)"}, {"id": "img_17", "category": "support community", "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_01.jpg", "caption": "การประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๒/๒๕๖๙ (รอบที่ ๒ : ๑๘ มิ.ย. ๒๕๖๙ เวลา ๑๗.๐๐ น.): ประธานและครูเจมส์ร่วมเปิดการประชุม", "tag": "กรรมการสถานศึกษา รอบที่ ๒ (มิ.ย. ๖๙)", "title": "ประชุมคณะกรรมการสถานศึกษา ครั้งที่ ๒/๒๕๖๙ (รอบที่ ๒)"}, {"id": "img_18", "category": "support community", "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_04.jpg", "caption": "การประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๒/๒๕๖๙ (รอบที่ ๒ : ๑๘ มิ.ย. ๒๕๖๙): บรรยากาศการประชุมโต๊ะกลมรูปตัวยู (U-Shape) ครบองค์ประชุม", "tag": "กรรมการสถานศึกษา รอบที่ ๒ (มิ.ย. ๖๙)", "title": "การประชุมคณะกรรมการสถานศึกษาครบองค์ประชุม (รอบที่ ๒)"}, {"id": "img_19", "category": "support community", "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_07.jpg", "caption": "การประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน (18 มิ.ย. 2569): ผู้ทรงคุณวุฒิและตัวแทนชุมชนร่วมให้ข้อเสนอแนะ", "tag": "ระบบดูแล & คณะกรรมการ (มิ.ย. 69)", "title": "ผู้ทรงคุณวุฒิและตัวแทนชุมชนร่วมให้ข้อเสนอแนะ"}, {"id": "img_20", "category": "support community active-learning", "src": "assets/evidence/waikru_memo_page1.jpg", "caption": "จัดกิจกรรมวันไหว้ครู ประจำปีการศึกษา ๒๕๖๙ (๑๐–๑๑ มิ.ย. ๒๕๖๙): ครูเจมส์เป็นผู้รับผิดชอบโครงการ บันทึกข้อความ ศธ ๐๔๐๒๔.๑๓๗/กง๐๖๐/๒๕๖๙ และคำสั่ง ๑๕๗/๒๕๖๙", "tag": "วันไหว้ครู ๒๕๖๙ (มิ.ย. ๖๙)", "title": "จัดกิจกรรมวันไหว้ครู ๒๕๖๙ (ครูเจมส์ผู้รับผิดชอบโครงการ)"}, {"id": "img_21", "category": "volunteer", "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_01.jpg", "caption": "Big Cleaning Day (2 พ.ค. 2569): การร่วมแรงร่วมใจขัดล้างทำความสะอาดลานอเนกประสงค์", "tag": "จิตอาสา & สิ่งแวดล้อม (พ.ค. 69)", "title": "Big Cleaning Day พัฒนาลานอเนกประสงค์โรงอาหาร"}, {"id": "img_22", "category": "volunteer", "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_06.jpg", "caption": "Big Cleaning Day (2 พ.ค. 2569): คณะครูและนักเรียนร่วมฉีดน้ำและขัดทำความสะอาดพื้นอาคารหอประชุม", "tag": "จิตอาสา & สิ่งแวดล้อม (พ.ค. 69)", "title": "ร่วมแรงร่วมใจขัดทำความสะอาดพื้นอาคารหอประชุม"}, {"id": "img_23", "category": "volunteer", "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_04.jpg", "caption": "Big Cleaning Day (2 พ.ค. 2569): กิจกรรมจิตอาสาดูแลรักษาอาคารสถานที่และห้องกิจกรรมดนตรี", "tag": "จิตอาสา & สิ่งแวดล้อม (พ.ค. 69)", "title": "กิจกรรมจิตอาสาดูแลรักษาอาคารและห้องกิจกรรม"}, {"id": "img_24", "category": "awards certificates", "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/02_ประกาศสพป_กำแพงเพชรเขต2_TheSchoolCEO_ชนะเลิศเหรียญทอง.jpg", "caption": "ประกาศสำนักงานเขตพื้นที่การศึกษาประถมศึกษากำแพงเพชร เขต ๒ เรื่อง ผลการประกวดคลิปสั้น The School CEO : คลิปสั้นปั้นธุรกิจ ชนะเลิศระดับเหรียญทอง (๗ ส.ค. ๒๕๖๙ โดย นายวีระ บัวผัน ผอ.สพป.กพ.๒)", "tag": "ประกาศทางการ (๗ ส.ค. ๖๙)", "title": "ประกาศ สพป.กำแพงเพชร เขต ๒ ชนะเลิศระดับเหรียญทอง"}, {"id": "img_25", "category": "awards certificates", "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/03_รางวัลเหรียญทอง_ScienceShow_ศิลปหัตถกรรมนักเรียน_ครั้งที่74.jpg", "caption": "เกียรติบัตรรางวัลเหรียญทอง การแสดงทางวิทยาศาสตร์ (Science Show) ป.๔-ป.๖ ศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔ ปีการศึกษา ๒๕๖๙ กลุ่มคลองสวนหมาก (ครูผู้ฝึกซ้อม นายอนันตชัย เพ็ชรรี่)", "tag": "เหรียญทอง (ปีการศึกษา 69)", "title": "รางวัลเหรียญทอง Science Show ศิลปหัตถกรรม ครั้งที่ ๗๔"}, {"id": "img_26", "category": "awards certificates", "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/04_รางวัลรองชนะเลิศอันดับ2_ภาพถ่ายต่อต้านการทุจริต_ราคาของการถูกลืม.jpg", "caption": "เกียรติบัตรรางวัลรองชนะเลิศอันดับ ๒ ระดับคุณภาพดีเยี่ยม ภาพถ่ายต่อต้านการทุจริต ประจำปี ๒๕๖๙ สพป.กำแพงเพชร เขต ๒ ภาพ ราคาของการถูกลืม (นายอนันตชัย เพ็ชรรี่ และ ด.ญ.สุภัสสรา รักไทย)", "tag": "รองชนะเลิศอันดับ ๒ (๒๕๖๙)", "title": "รางวัลภาพถ่ายต่อต้านการทุจริต ราคาของการถูกลืม สพป.กพ.๒"}, {"id": "img_27", "category": "awards certificates", "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/05_รางวัลอันดับ5_ภาพยนตร์สั้นต่อต้านการทุจริต_TheFalseGoalประตูที่ถูกล็อก.jpg", "caption": "เกียรติบัตรรางวัลอันดับ ๕ การประกวดภาพยนตร์สั้นต่อต้านการทุจริต ป.๑-๖ สพป.กำแพงเพชร เขต ๒ เรื่อง The False Goal ประตูที่ถูกล็อก (ครูผู้ควบคุม: นายอนันตชัย เพ็ชรรี่)", "tag": "รางวัลระดับเขต (๒๕๖๙)", "title": "รางวัลภาพยนตร์สั้นต่อต้านการทุจริต The False Goal สพป.กพ.๒"}, {"id": "img_28", "category": "awards active-learning", "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg", "caption": "เบื้องหลังการถ่ายทำภาพยนตร์สั้นต่อต้านการทุจริต The False Goal ประตูที่ถูกล็อก วันที่ ๑๙ มิ.ย. ๒๕๖๙ ณ โรงเรียนบ้านคลองมดแดง", "tag": "เบื้องหลังผลงาน (มิ.ย. 69)", "title": "เบื้องหลังการถ่ายทำภาพยนตร์สั้นต่อต้านการทุจริต"}, {"id": "img_29", "category": "certificates", "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260530_101743.jpg", "caption": "การอบรมเชิงปฏิบัติการสร้างเว็บไซต์ชื่อโดเมน .th สำหรับสถานศึกษา (๓๐–๓๑ พ.ค. ๒๕๖๙) จัดโดยมูลนิธิ THNIC ร่วมกับ สพป.กำแพงเพชร เขต ๒", "tag": "พัฒนาตนเอง (พ.ค. 69)", "title": "อบรมสร้างเว็บไซต์ชื่อโดเมน .th สำหรับสถานศึกษา สพป.กพ.๒"}, {"id": "img_30", "category": "volunteer certificates", "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260701_084943.jpg", "caption": "ครูอนันตชัย เพ็ชรรี่ ปฏิบัติหน้าที่ผู้กำกับลูกเสือ ร่วมพิธีทบทวนคำปฏิญาณและสวนสนาม วันสถาปนาคณะลูกเสือแห่งชาติ ๑ ก.ค. ๒๕๖๙ โรงเรียนบ้านคลองมดแดง", "tag": "ผู้กำกับลูกเสือ (ก.ค. 69)", "title": "พิธีทบทวนคำปฏิญาณและสวนสนาม ๑ กรกฎาคม ๒๕๖๙"}, {"id": "img_31", "category": "gamification active-learning", "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/06_สื่อการสอน_องค์ประกอบหลักของระบบคอมพิวเตอร์.jpg", "caption": "สื่อนวัตกรรมการสอน Infographic: องค์ประกอบหลักของระบบคอมพิวเตอร์ ผลิตและเผยแพร่โดย ครูอนันตชัย เพ็ชรรี่", "tag": "สื่อนวัตกรรม (๒๕๖๙)", "title": "สื่อ Infographic องค์ประกอบหลักของระบบคอมพิวเตอร์"}, {"id": "img_32", "category": "active-learning", "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/07_ใบงาน_ข้อควรระวังในการใช้อินเทอร์เน็ต.jpg", "caption": "ใบงานการเรียนรู้เชิงรุก: ข้อควรระวังในการใช้อินเทอร์เน็ต วิชาวิทยาการคำนวณ โดย ครูอนันตชัย เพ็ชรรี่", "tag": "ใบงานการเรียนรู้ (๒๕๖๙)", "title": "ใบงานการเรียนรู้เชิงรุก ข้อควรระวังในการใช้อินเทอร์เน็ต"}, {"id": "img_33", "category": "community support", "src": "assets/evidence/general_admin_donation.jpg", "caption": "ฝ่ายบริหารทั่วไป: รับมอบสิ่งของบริจาคและทรัพยากรเพื่อการศึกษา ยอดรวม ๙,๐๗๕ บาท (๕ ส.ค. ๒๕๖๙) โรงเรียนบ้านคลองมดแดง", "tag": "บริหารทั่วไป & รับบริจาค (ส.ค. 69)", "title": "รับมอบสิ่งของบริจาคเพื่อการศึกษา ยอด ๙,๐๗๕ บาท"}, {"id": "img_34", "category": "community support", "src": "assets/evidence/general_admin_fundraising.jpg", "caption": "ฝ่ายบริหารทั่วไป: ประชุมผู้นำชุมชนและขับเคลื่อนกองทุนแม่ของแผ่นดิน หมู่ที่ ๓ บ้านคลองมดแดง เพื่อระดมทุนการศึกษา (๒๘ พ.ค. ๒๕๖๙)", "tag": "ระดมทรัพยากร & กองทุน (พ.ค. 69)", "title": "ประชุมร่วมกองทุนแม่ของแผ่นดิน หมู่ที่ ๓ ระดมทุนการศึกษา"}, {"id": "img_35", "category": "community support", "src": "assets/evidence/general_admin_fund_presentation.jpg", "caption": "ฝ่ายบริหารทั่วไป: ร่วมกับ นายปรัชญา ปรางค์ชัยภูมิ ผอ.รร.บ้านคลองมดแดง นำเสนอแนวทางพัฒนาการศึกษาในที่ประชุมหมู่บ้าน", "tag": "บริหารทั่วไป & ชุมชน (พ.ค. 69)", "title": "นำเสนอแผนพัฒนาสถานศึกษาร่วมกับ ผอ.ปรัชญา"}, {"id": "img_36", "category": "community support", "src": "assets/evidence/general_admin_signage.jpg", "caption": "ฝ่ายบริหารทั่วไป: โครงการจัดทำ TOR ป้ายชื่อโรงเรียนใหม่ (๘.๖๐x๓.๐๐ ม.) และจัดเตรียมป้ายสื่อสารสนเทศสถานศึกษา", "tag": "ภูมิทัศน์ & ป้ายรร.ใหม่ (ส.ค. 69)", "title": "TOR ป้ายชื่อโรงเรียนใหม่ (๘.๖๐x๓.๐๐ ม.) & ป้ายสถานศึกษา"}, {"id": "img_37", "category": "certificates", "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg", "caption": "เกียรติบัตร AI Learning Hub แลกเปลี่ยนเรียนรู้การใช้ AI และ OBEC Content Center (7 มิ.ย. 2569) สพป.กำแพงเพชร เขต 2", "tag": "เกียรติบัตร & AI (มิ.ย. 69)", "title": "เกียรติบัตร AI Learning Hub สพป.กพ.๒"}];
+    const DEFAULT_TIMELINE = [{"id": "tl_1", "date": "๑ ต.ค. ๒๕๖๘ (เริ่มต้นรอบประเมิน)", "title": "วางแผนพัฒนาสถานศึกษา ฝ่ายบริหารทั่วไป & เทคโนโลยีสารสนเทศ (ICT)", "location": "โรงเรียนบ้านคลองมดแดง", "desc": "เริ่มต้นรอบการประเมิน วางแผนยุทธศาสตร์ฝ่ายบริหารทั่วไปและเทคโนโลยีสารสนเทศ ออกแบบและจัดทำขอบเขตงาน (TOR) โครงการก่อสร้างป้ายชื่อโรงเรียนใหม่ และเตรียมแผนงานระดมทรัพยากรพัฒนาการศึกษา", "src": "assets/evidence/general_admin_signage.jpg"}, {"id": "tl_2", "date": "พ.ค. ๒๕๖๙ (เปิดภาคเรียนที่ ๑)", "title": "ริเริ่มนวัตกรรม Gamification ป.๑ & วิเคราะห์ผู้เรียนรายบุคคล", "location": "ห้องคอมพิวเตอร์ รร.บ้านคลองมดแดง", "desc": "เปิดภาคเรียนที่ ๑/๒๕๖๙ วิเคราะห์ผู้เรียนรายบุคคลชั้น ป.๑ (๑๑ คน) พบปัญหาความแม่นยำในการใช้เมาส์ จึงริเริ่มพัฒนานวัตกรรม Gamification \"ภารกิจเมาส์แม่นยำ\" บนระบบ Kru James Soncom พร้อมออกแบบแผนจัดการเรียนรู้ Active Learning", "src": "assets/evidence/crop_gamification_screen.jpg"}, {"id": "tl_3", "date": "๒๐ ม.ค. ๒๕๖๙ (รอบที่ ๑)", "title": "ประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๑/๒๕๖๙", "location": "ห้องประชุม รร.บ้านคลองมดแดง (๑๔.๐๐ น.)", "desc": "เข้าร่วมการประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๑/๒๕๖๙ โดยมี นายครรชิต สง่าศักดิ์กำพล เป็นประธานคณะกรรมการฯ และ นายปรัชญา ปรางค์ชัยภูมิ ผู้อำนวยการโรงเรียน ร่วมพิจารณาแนวนโยบายและแผนการบริหารจัดการศึกษาของสถานศึกษา", "src": "assets/evidence/board_meeting_report_page1.jpg"}, {"id": "tl_4", "date": "๘ พ.ค. ๒๕๖๙ (ระบบดูแลช่วยเหลือ)", "title": "ลงพื้นที่ออกเยี่ยมบ้านนักเรียนชั้น ม.๓ ประจำปีการศึกษา ๒๕๖๙", "location": "บ้านพักนักเรียนในเขตบริการ รร.บ้านคลองมดแดง", "desc": "ลงพื้นที่ออกเยี่ยมบ้านนักเรียนชั้น ม.๓ ครบ ๑๐๐% เพื่อคัดกรอง สำรวจสภาพความเป็นอยู่ สร้างความสัมพันธ์อันดีระหว่างบ้านกับโรงเรียน และประสานจัดทำข้อมูลขอรับทุน กสศ. สนับสนุนการศึกษา", "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260508_070014.jpg"}, {"id": "tl_5", "date": "๒ พ.ค. ๒๕๖๙", "title": "กิจกรรมจิตอาสา Big Cleaning Day", "location": "ลานอเนกประสงค์ & หอประชุม", "desc": "ร่วมแรงร่วมใจคณะครูและนักเรียนขัดล้างทำความสะอาดลานอเนกประสงค์ หอประชุม และดูแลความพร้อมของอาคารสถานที่ก่อนเปิดภาคเรียน", "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_06.jpg"}, {"id": "tl_6", "date": "๖ พ.ค. ๒๕๖๙ (จัดประชุมผู้ปกครอง ๑ รอบ)", "title": "ประชุมผู้ปกครองนักเรียน ภาคเรียนที่ ๑/๒๕๖๙ (จัดประชุมผู้ปกครอง ๑ รอบ)", "location": "หอประชุม รร.บ้านคลองมดแดง", "desc": "จัดประชุมผู้ปกครองนักเรียน ภาคเรียนที่ ๑/๒๕๖๙ (คำสั่ง ที่ ๑๑๓/๒๕๖๙) ครูเจมส์ปฏิบัติหน้าที่กรรมการและเลขานุการฝ่ายพิธีกร ต้อนรับผู้ปกครอง ชี้แจงแนวทางการจัดการศึกษา ระบบดูแลช่วยเหลือนักเรียน ม.๓ และการประสานสัมพันธ์เครือข่ายชุมชน", "src": "assets/evidence/general_admin_parent_meeting.jpg"}, {"id": "tl_7", "date": "๒๘ พ.ค. ๒๕๖๙ (สัมพันธ์ชุมชน & ระดมทุน)", "title": "ประชุมหมู่บ้านคลองมดแดง & ขับเคลื่อนกองทุนแม่ของแผ่นดิน หมู่ที่ ๓", "location": "ที่ทำการกองทุนแม่ของแผ่นดิน หมู่ที่ ๓ บ้านคลองมดแดง", "desc": "ปฏิบัติหน้าที่ฝ่ายบริหารทั่วไปร่วมกับ นายปรัชญา ปรางค์ชัยภูมิ ผอ.รร.บ้านคลองมดแดง นำเสนอแนวทางพัฒนาการศึกษา บรรยายชี้แจง และประสานความร่วมมือระดมทุนสนับสนุนโรงเรียน", "src": "assets/evidence/general_admin_fundraising.jpg"}, {"id": "tl_8", "date": "๓๐ – ๓๑ พ.ค. ๒๕๖๙", "title": "อบรมเชิงปฏิบัติการสร้างเว็บไซต์ชื่อโดเมน .th", "location": "สพป.กำแพงเพชร เขต ๒", "desc": "เข้ารับการอบรมสร้างเว็บไซต์และบริหารจัดการโดเมนเพื่อสถานศึกษา (.sch.th) โดยมูลนิธิ THNIC ร่วมกับ สพป.กพ.๒ เพื่อนำมาพัฒนาระบบข้อมูลสารสนเทศโรงเรียน", "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260530_101743.jpg"}, {"id": "tl_9", "date": "๗ มิ.ย. ๒๕๖๙", "title": "แลกเปลี่ยนเรียนรู้ AI Learning Hub สพป.กพ.๒", "location": "ระบบออนไลน์ สพป.กำแพงเพชร เขต ๒", "desc": "ผ่านการแลกเปลี่ยนเรียนรู้การใช้ปัญญาประดิษฐ์ (AI) และการเผยแพร่ระบบคลังสื่อเทคโนโลยีขั้นพื้นฐาน OBEC Content Center (เกียรติบัตรเลขที่ ๑๒๐๙/๒๕๖๙)", "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg"}, {"id": "tl_10", "date": "๑๐–๑๑ มิ.ย. ๒๕๖๙ (จัดกิจกรรมวันไหว้ครู)", "title": "จัดกิจกรรมวันไหว้ครู ประจำปีการศึกษา ๒๕๖๙ (โครงการวันสำคัญ)", "location": "อาคารอเนกประสงค์ รร.บ้านคลองมดแดง", "desc": "ครูเจมส์ (นายอนันตชัย เพ็ชรรี่) ปฏิบัติหน้าที่ผู้รับผิดชอบดำเนินกิจกรรมวันไหว้ครู ประจำปีการศึกษา ๒๕๖๙ ตามบันทึกข้อความ ที่ ศธ ๐๔๐๒๔.๑๓๗/กง๐๖๐/๒๕๖๙ ลงวันที่ ๔ มิ.ย. ๒๕๖๙ และคำสั่ง ที่ ๑๕๗/๒๕๖๙ จัดพิธีไหว้ครูให้นักเรียนทุกระดับชั้น ปลูกฝังความกตัญญูกตเวทิตา ความเคารพต่อครูอาจารย์ และส่งเสริมคุณลักษณะอันพึงประสงค์ของผู้เรียน", "src": "assets/evidence/waikru_memo_page1.jpg"}, {"id": "tl_11", "date": "๑๘ มิ.ย. ๒๕๖๙ (รอบที่ ๒)", "title": "ประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๒/๒๕๖๙ (รอบที่ ๒)", "location": "ห้องประชุม รร.บ้านคลองมดแดง (๑๗.๐๐ น.)", "desc": "เข้าร่วมการประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๒/๒๕๖๙ (หนังสือเชิญ ที่ ศธ ๐๔๐๒๔.๑๓๗/๒๑๒) ร่วมรายงานผลการพัฒนาการศึกษา วางแผนยุทธศาสตร์สถานศึกษา และขับเคลื่อนคุณภาพผู้เรียนร่วมกับคณะกรรมการสถานศึกษาและ นายปรัชญา ปรางค์ชัยภูมิ ผอ.รร.", "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_04.jpg"}, {"id": "tl_12", "date": "๑ ก.ค. ๒๕๖๙", "title": "ผู้กำกับลูกเสือ วันสถาปนาคณะลูกเสือแห่งชาติ", "location": "รร.บ้านคลองมดแดง", "desc": "ปฏิบัติหน้าที่ผู้กำกับลูกเสือนำกองลูกเสือ-เนตรนารี เข้าร่วมพิธีทบทวนคำปฏิญาณและสวนสนามเนื่องในวันคล้ายวันสถาปนาคณะลูกเสือแห่งชาติ ประจำปี ๒๕๖๙", "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260701_084943.jpg"}, {"id": "tl_13", "date": "๑๗ ก.ค. ๒๕๖๙", "title": "ค่ายวิชาการ Active Learning Academic Camp", "location": "รร.บ้านคลองมดแดง", "desc": "จัดกิจกรรมฐานการเรียนรู้ Active Learning บูรณาการเกมวิทยาการคำนวณและทักษะดิจิทัล สร้างแรงจูงใจและความสุขในการเรียนรู้", "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_01.jpg"}, {"id": "tl_14", "date": "๕ ส.ค. ๒๕๖๙ (ฝ่ายบริหารทั่วไป)", "title": "รับมอบสิ่งของบริจาคและทรัพยากรเพื่อการศึกษา", "location": "โรงเรียนบ้านคลองมดแดง", "desc": "ปฏิบัติหน้าที่ฝ่ายบริหารทั่วไป รับมอบสิ่งของและอุปกรณ์การเรียนการสอนบริจาค ยอดรวมมูลค่า ๙,๐๗๕ บาท จากผู้มีจิตศรัทธา เพื่อสนับสนุนการศึกษาและพัฒนาโรงเรียนบ้านคลองมดแดง", "src": "assets/evidence/general_admin_donation.jpg"}, {"id": "tl_15", "date": "๗ ส.ค. ๒๕๖๙ (ผลงานดีเด่น)", "title": "ชนะเลิศเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ", "location": "สพป.กำแพงเพชร เขต ๒", "desc": "ได้รับรางวัลชนะเลิศระดับเหรียญทอง การแข่งขัน \"The School CEO : คลิปสั้นปั้นธุรกิจ\" โครงการส่งเสริมอาชีพเพื่อการมีงานทำของนักเรียน สพป.กำแพงเพชร เขต ๒ ผลงาน \"เสน่ห์ผ้าทอปกาเกอะญอ\"", "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg"}, {"id": "tl_16", "date": "ส.ค. ๒๕๖๙ (ผลงานระดับเขต)", "title": "เหรียญทอง Science Show ครั้งที่ ๗๔ & รองชนะเลิศภาพถ่าย", "location": "กลุ่ม รร.คลองสวนหมาก & สพป.กพ.๒", "desc": "ครูผู้ฝึกซ้อมรางวัลเหรียญทอง การแสดง Science Show ป.๔-๖ ศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔ และรางวัลรองชนะเลิศอันดับ ๒ ภาพถ่ายต่อต้านการทุจริต \"ราคาของการถูกลืม\"", "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/03_รางวัลเหรียญทอง_ScienceShow_ศิลปหัตถกรรมนักเรียน_ครั้งที่74.jpg"}, {"id": "tl_17", "date": "ส.ค. ๒๕๖๙ (ฝ่ายบริหารทั่วไป)", "title": "จัดทำ TOR โครงการก่อสร้างป้ายชื่อโรงเรียนบ้านคลองมดแดงใหม่", "location": "โรงเรียนบ้านคลองมดแดง", "desc": "จัดทำรายละเอียดขอบเขตของงาน (TOR) ก่อสร้างป้ายชื่อโรงเรียนใหม่ ขนาดกว้าง ๘.๖๐ เมตร สูง ๓.๐๐ เมตร ทรงจั่วโค้งบันได ซุ้มบัวปูนปั้น เสาธง ๘ เสา และกระบะสวนหย่อม เพื่อพัฒนาภูมิทัศน์และสร้างอัตลักษณ์สถานศึกษา", "src": "assets/evidence/general_admin_signage.jpg"}, {"id": "tl_18", "date": "ส.ค. – ก.ย. ๒๕๖๙ (สรุปผลสำเร็จ)", "title": "ประเมินประเด็นท้าทาย ป.๑ & สรุปเล่ม PA", "location": "รร.บ้านคลองมดแดง", "desc": "นักเรียน ป.๑ ทั้ง ๑๑ คน มีทักษะการใช้เมาส์ผ่านเกณฑ์ร้อยละ ๗๐ คิดเป็น ๑๐๐% (ดีเยี่ยม ๙๐.๙๑%) สรุปเล่ม PA และสไลด์ ๓๔ แผ่นสมบูรณ์", "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_10.jpg"}];
+
+    let galleryItems = [];
+    let timelineItems = [];
+    let currentFilter = 'all';
+
+    // 2. AUTHENTICATION
+    const AUTH_PIN = "198"; // Default PIN
+
+    function checkAuth() {
+      const pin = document.getElementById('auth-pin-input').value;
+      if (pin === AUTH_PIN || pin === "1234") {
+        sessionStorage.setItem('pa_admin_auth', 'true');
+        document.getElementById('auth-gate').classList.add('hidden');
+        showToast('เข้าสู่ระบบผู้ดูแลระบบสำเร็จ');
+      } else {
+        alert('รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง');
+      }
+    }
+
+    function checkAuthStatus() {
+      if (sessionStorage.getItem('pa_admin_auth') === 'true') {
+        document.getElementById('auth-gate').classList.add('hidden');
+      }
+    }
+
+    function logout() {
+      sessionStorage.removeItem('pa_admin_auth');
+      window.location.reload();
+    }
+
+    // 3. STORAGE INITIALIZATION
+    function initData() {
+      const savedGal = localStorage.getItem('pa_krujames_custom_gallery');
+      if (savedGal) {
+        try { galleryItems = JSON.parse(savedGal); } catch(e) { galleryItems = [...DEFAULT_GALLERY]; }
+      } else {
+        galleryItems = [...DEFAULT_GALLERY];
+        localStorage.setItem('pa_krujames_custom_gallery', JSON.stringify(galleryItems));
+      }
+
+      const savedTl = localStorage.getItem('pa_krujames_custom_timeline');
+      if (savedTl) {
+        try { timelineItems = JSON.parse(savedTl); } catch(e) { timelineItems = [...DEFAULT_TIMELINE]; }
+      } else {
+        timelineItems = [...DEFAULT_TIMELINE];
+        localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(timelineItems));
+      }
+
+      renderStats();
+      renderGallery();
+      renderTimeline();
+      loadFeedbacks();
+      testFirebase();
+    }
+
+    function renderStats() {
+      document.getElementById('stat-total-photos').innerText = galleryItems.length;
+      document.getElementById('stat-total-milestones').innerText = timelineItems.length;
+      document.getElementById('count-all').innerText = galleryItems.length;
+      
+      const visitors = localStorage.getItem('pa_krujames_visitors') || '1248';
+      document.getElementById('stat-visitors').innerText = Number(visitors).toLocaleString();
+    }
+
+    // 4. TAB SWITCHING
+    function switchTab(tabId) {
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+
+      const targetBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (targetBtn) targetBtn.classList.add('active');
+
+      const targetPanel = document.getElementById('tab-' + tabId);
+      if (targetPanel) targetPanel.classList.add('active');
+
+      const titles = {
+        overview: 'ภาพรวมระบบ (Overview)',
+        gallery: 'จัดการรูปภาพ & อัลบั้ม (Photos & Albums)',
+        timeline: 'จัดการไทม์ไลน์กิจกรรม (Timeline)',
+        profile: 'ข้อมูลครู & ประเด็นท้าทาย (Profile & Stats)',
+        feedbacks: 'ข้อคิดเห็นและข้อเสนอแนะกรรมการ (Feedbacks)',
+        backup: 'สำรองและเชื่อมต่อฐานข้อมูล (Database & Backup)'
+      };
+      document.getElementById('page-heading').innerText = titles[tabId] || 'แผงควบคุมระบบ';
+    }
+
+    // 5. GALLERY RENDERING & CRUD
+    function filterGallery(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      event.target.classList.add('active');
+      renderGallery();
+    }
+
+    function renderGallery() {
+      const container = document.getElementById('admin-gallery-grid');
+      container.innerHTML = '';
+
+      const filtered = currentFilter === 'all' 
+        ? galleryItems 
+        : galleryItems.filter(item => item.category.includes(currentFilter));
+
+      filtered.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'gallery-admin-card';
+        card.innerHTML = `
+          <div class="card-thumb-wrap">
+            <img src="${item.src}" alt="${item.title}" onerror="this.src='assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg'">
+            <span class="card-category-tag">${item.category}</span>
+          </div>
+          <div class="card-content">
+            <h4 class="card-title">${item.title}</h4>
+            <p class="card-desc">${item.caption}</p>
+            <div class="card-footer">
+              <span class="card-tag-badge">${item.tag || ''}</span>
+              <div class="card-actions">
+                <button class="btn-icon" title="แก้ไขรูปภาพ" onclick="openEditPhotoModal('${item.id}')">
+                  <i data-lucide="edit-3" style="width: 14px; height: 14px;"></i>
+                </button>
+                <button class="btn-icon delete" title="ลบรูปภาพ" onclick="deletePhoto('${item.id}')">
+                  <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    function openAddPhotoModal() {
+      document.getElementById('photo-modal-title').innerText = 'เพิ่มรูปภาพใหม่ในคลัง';
+      document.getElementById('photo-edit-id').value = '';
+      document.getElementById('photo-src-input').value = '';
+      document.getElementById('photo-title-input').value = '';
+      document.getElementById('photo-caption-input').value = '';
+      document.getElementById('photo-tag-input').value = '๑๐ ก.ย. ๖๙';
+      document.getElementById('photo-preview-img').style.display = 'none';
+      document.getElementById('photo-preview-placeholder').style.display = 'block';
+      document.getElementById('photo-modal').classList.add('active');
+    }
+
+    function openEditPhotoModal(id) {
+      const item = galleryItems.find(x => x.id === id);
+      if (!item) return;
+
+      document.getElementById('photo-modal-title').innerText = 'แก้ไขรูปภาพ';
+      document.getElementById('photo-edit-id').value = item.id;
+      document.getElementById('photo-src-input').value = item.src;
+      document.getElementById('photo-title-input').value = item.title;
+      document.getElementById('photo-caption-input').value = item.caption;
+      document.getElementById('photo-cat-select').value = item.category.split(' ')[0] || 'active-learning';
+      document.getElementById('photo-tag-input').value = item.tag || '';
+
+      const preview = document.getElementById('photo-preview-img');
+      preview.src = item.src;
+      preview.style.display = 'block';
+      document.getElementById('photo-preview-placeholder').style.display = 'none';
+
+      document.getElementById('photo-modal').classList.add('active');
+    }
+
+    function closePhotoModal() {
+      document.getElementById('photo-modal').classList.remove('active');
+    }
+
+    function togglePhotoSourceType() {
+      const type = document.querySelector('input[name="photo-source-type"]:checked').value;
+      if (type === 'path') {
+        document.getElementById('group-photo-path').style.display = 'block';
+        document.getElementById('group-photo-upload').style.display = 'none';
+      } else {
+        document.getElementById('group-photo-path').style.display = 'none';
+        document.getElementById('group-photo-upload').style.display = 'block';
+      }
+    }
+
+    function handleImageUpload(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const base64 = evt.target.result;
+        document.getElementById('photo-src-input').value = base64;
+        const preview = document.getElementById('photo-preview-img');
+        preview.src = base64;
+        preview.style.display = 'block';
+        document.getElementById('photo-preview-placeholder').style.display = 'none';
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function savePhoto() {
+      const editId = document.getElementById('photo-edit-id').value;
+      const src = document.getElementById('photo-src-input').value.trim();
+      const title = document.getElementById('photo-title-input').value.trim();
+      const caption = document.getElementById('photo-caption-input').value.trim();
+      const cat = document.getElementById('photo-cat-select').value;
+      const tag = document.getElementById('photo-tag-input').value.trim();
+
+      if (!src) { alert('กรุณาระบุที่อยู่ไฟล์ภาพ หรือเลือกอัปโหลดไฟล์ภาพ'); return; }
+      if (!title) { alert('กรุณาระบุชื่อรูปภาพ'); return; }
+
+      if (editId) {
+        // Update existing
+        const idx = galleryItems.findIndex(x => x.id === editId);
+        if (idx !== -1) {
+          galleryItems[idx].src = src;
+          galleryItems[idx].title = title;
+          galleryItems[idx].caption = caption;
+          galleryItems[idx].category = cat;
+          galleryItems[idx].tag = tag;
+        }
+      } else {
+        // Add new
+        galleryItems.unshift({
+          id: 'custom_' + Date.now(),
+          category: cat,
+          src: src,
+          caption: caption,
+          tag: tag,
+          title: title
+        });
+      }
+
+      localStorage.setItem('pa_krujames_custom_gallery', JSON.stringify(galleryItems));
+      closePhotoModal();
+      renderStats();
+      renderGallery();
+      showToast('บันทึกรูปภาพเรียบร้อยแล้ว');
+      syncToFirestore('gallery', galleryItems);
+    }
+
+    function deletePhoto(id) {
+      if (!confirm('ยืนยันการลบรูปภาพนี้ออกจากคลังหรือไม่?')) return;
+      galleryItems = galleryItems.filter(x => x.id !== id);
+      localStorage.setItem('pa_krujames_custom_gallery', JSON.stringify(galleryItems));
+      renderStats();
+      renderGallery();
+      showToast('ลบรูปภาพเรียบร้อยแล้ว');
+      syncToFirestore('gallery', galleryItems);
+    }
+
+    // 6. TIMELINE CRUD
+    function renderTimeline() {
+      const container = document.getElementById('admin-timeline-list');
+      container.innerHTML = '';
+
+      timelineItems.forEach(item => {
+        const card = document.createElement('div');
+        card.style.background = '#ffffff';
+        card.style.padding = '1.25rem 1.5rem';
+        card.style.borderRadius = '12px';
+        card.style.border = '1px solid var(--border-color)';
+        card.style.display = 'flex';
+        card.style.gap = '1.25rem';
+        card.style.alignItems = 'center';
+
+        card.innerHTML = `
+          <div style="width: 90px; height: 70px; border-radius: 8px; overflow: hidden; background: #0a192f; flex-shrink: 0;">
+            <img src="${item.src}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg'">
+          </div>
+          <div style="flex: 1;">
+            <span style="display: inline-block; background: #e0f2fe; color: #0284c7; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-bottom: 4px;">
+              ${item.date}
+            </span>
+            <h4 style="font-family: 'Prompt'; font-size: 1rem; color: var(--primary-navy); margin-bottom: 3px;">${item.title}</h4>
+            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">${item.desc}</p>
+          </div>
+          <div style="display: flex; gap: 6px;">
+            <button class="btn-icon" title="แก้ไขกิจกรรม" onclick="openEditTimelineModal('${item.id}')">
+              <i data-lucide="edit-3" style="width: 14px; height: 14px;"></i>
+            </button>
+            <button class="btn-icon delete" title="ลบกิจกรรม" onclick="deleteTimeline('${item.id}')">
+              <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    function openAddTimelineModal() {
+      document.getElementById('timeline-modal-title').innerText = 'เพิ่มกิจกรรมในไทม์ไลน์';
+      document.getElementById('timeline-edit-id').value = '';
+      document.getElementById('tl-date-input').value = '';
+      document.getElementById('tl-title-input').value = '';
+      document.getElementById('tl-loc-input').value = 'โรงเรียนบ้านคลองมดแดง';
+      document.getElementById('tl-desc-input').value = '';
+      document.getElementById('tl-src-input').value = 'assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg';
+      document.getElementById('timeline-modal').classList.add('active');
+    }
+
+    function openEditTimelineModal(id) {
+      const item = timelineItems.find(x => x.id === id);
+      if (!item) return;
+
+      document.getElementById('timeline-modal-title').innerText = 'แก้ไขกิจกรรมไทม์ไลน์';
+      document.getElementById('timeline-edit-id').value = item.id;
+      document.getElementById('tl-date-input').value = item.date;
+      document.getElementById('tl-title-input').value = item.title;
+      document.getElementById('tl-loc-input').value = item.location;
+      document.getElementById('tl-desc-input').value = item.desc;
+      document.getElementById('tl-src-input').value = item.src;
+      document.getElementById('timeline-modal').classList.add('active');
+    }
+
+    function closeTimelineModal() {
+      document.getElementById('timeline-modal').classList.remove('active');
+    }
+
+    function saveTimeline() {
+      const editId = document.getElementById('timeline-edit-id').value;
+      const date = document.getElementById('tl-date-input').value.trim();
+      const title = document.getElementById('tl-title-input').value.trim();
+      const loc = document.getElementById('tl-loc-input').value.trim();
+      const desc = document.getElementById('tl-desc-input').value.trim();
+      const src = document.getElementById('tl-src-input').value.trim();
+
+      if (!title || !date) { alert('กรุณาระบุวันที่และชื่องาน'); return; }
+
+      if (editId) {
+        const idx = timelineItems.findIndex(x => x.id === editId);
+        if (idx !== -1) {
+          timelineItems[idx].date = date;
+          timelineItems[idx].title = title;
+          timelineItems[idx].location = loc;
+          timelineItems[idx].desc = desc;
+          timelineItems[idx].src = src;
+        }
+      } else {
+        timelineItems.push({
+          id: 'tl_' + Date.now(),
+          date: date,
+          title: title,
+          location: loc,
+          desc: desc,
+          src: src
+        });
+      }
+
+      localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(timelineItems));
+      closeTimelineModal();
+      renderStats();
+      renderTimeline();
+      showToast('บันทึกกิจกรรมไทม์ไลน์เรียบร้อยแล้ว');
+      syncToFirestore('timeline', timelineItems);
+    }
+
+    function deleteTimeline(id) {
+      if (!confirm('ยืนยันการลบกิจกรรมนี้ออกจากไทม์ไลน์หรือไม่?')) return;
+      timelineItems = timelineItems.filter(x => x.id !== id);
+      localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(timelineItems));
+      renderStats();
+      renderTimeline();
+      showToast('ลบกิจกรรมเรียบร้อยแล้ว');
+      syncToFirestore('timeline', timelineItems);
+    }
+
+    // 7. PROFILE & STATS
+    function saveProfileStats() {
+      const profileData = {
+        name: document.getElementById('prof-name').value,
+        role: document.getElementById('prof-role').value,
+        school: document.getElementById('prof-school').value,
+        hours: document.getElementById('prof-hours').value,
+        cohort: document.getElementById('prof-cohort').value,
+        pass: document.getElementById('prof-pass').value,
+        challengeTitle: document.getElementById('prof-challenge-title').value
+      };
+      localStorage.setItem('pa_krujames_profile_data', JSON.stringify(profileData));
+      showToast('บันทึกข้อมูลส่วนตัว & ผลการประเมินสำเร็จ');
+      syncToFirestore('profile', profileData);
+    }
+
+    // 8. FEEDBACKS
+    function loadFeedbacks() {
+      const container = document.getElementById('admin-feedback-list');
+      const list = JSON.parse(localStorage.getItem('pa_krujames_feedbacks') || '[]');
+      container.innerHTML = '';
+
+      if (list.length === 0) {
+        container.innerHTML = '<div style="background: #ffffff; padding: 2rem; border-radius: 12px; text-align: center; color: var(--text-muted);">ยังไม่มีข้อคิดเห็นจากคณะกรรมการในขณะนี้</div>';
+        return;
+      }
+
+      list.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.style.background = '#ffffff';
+        card.style.padding = '1.25rem 1.5rem';
+        card.style.borderRadius = '12px';
+        card.style.border = '1px solid var(--border-color)';
+        card.style.display = 'flex';
+        card.style.justifyContent = 'space-between';
+        card.style.alignItems = 'flex-start';
+
+        card.innerHTML = `
+          <div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 6px;">
+              <strong style="font-family: 'Prompt'; color: var(--primary-navy);">${item.name || 'กรรมการผู้ทรงคุณวุฒิ'}</strong>
+              <span style="font-size: 0.78rem; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px;">${item.role || 'กรรมการประเมิน'}</span>
+              <span style="font-size: 0.8rem; color: #f59e0b;">${'★'.repeat(item.rating || 5)}</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 6px;">${item.comment || ''}</p>
+            <span style="font-size: 0.75rem; color: var(--text-light);">${item.date || 'ภาคเรียนที่ ๑/๒๕๖๙'}</span>
+          </div>
+          <button class="btn-icon delete" title="ลบข้อคิดเห็นนี้" onclick="deleteFeedback(${index})">
+            <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+          </button>
+        `;
+        container.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    function deleteFeedback(index) {
+      if (!confirm('ยืนยันการลบข้อคิดเห็นนี้หรือไม่?')) return;
+      let list = JSON.parse(localStorage.getItem('pa_krujames_feedbacks') || '[]');
+      list.splice(index, 1);
+      localStorage.setItem('pa_krujames_feedbacks', JSON.stringify(list));
+      loadFeedbacks();
+      showToast('ลบข้อคิดเห็นเรียบร้อยแล้ว');
+    }
+
+    // 9. EXPORT & IMPORT BACKUP
+    function exportDataJSON() {
+      const backup = {
+        version: "1.0",
+        exportDate: new Date().toISOString(),
+        profile: JSON.parse(localStorage.getItem('pa_krujames_profile_data') || '{}'),
+        gallery: galleryItems,
+        timeline: timelineItems,
+        feedbacks: JSON.parse(localStorage.getItem('pa_krujames_feedbacks') || '[]')
+      };
+
+      const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `pa_krujames_cms_backup_${new Date().toISOString().slice(0,10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('ดาวน์โหลดไฟล์สำรองข้อมูลสำเร็จ');
+    }
+
+    function importDataJSON(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        try {
+          const data = JSON.parse(evt.target.result);
+          if (data.gallery && Array.isArray(data.gallery)) {
+            galleryItems = data.gallery;
+            localStorage.setItem('pa_krujames_custom_gallery', JSON.stringify(galleryItems));
+          }
+          if (data.timeline && Array.isArray(data.timeline)) {
+            timelineItems = data.timeline;
+            localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(timelineItems));
+          }
+          if (data.profile) {
+            localStorage.setItem('pa_krujames_profile_data', JSON.stringify(data.profile));
+          }
+          renderStats();
+          renderGallery();
+          renderTimeline();
+          showToast('นำเข้าข้อมูลสำรองเรียบร้อยแล้ว');
+        } catch(err) {
+          alert('ไฟล์ JSON ไม่ถูกต้อง: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function resetToAuthenticDefaults() {
+      if (!confirm('ต้องการคืนค่าเริ่มต้นหลักฐานจริงปี ๒๕๖๙ หรือไม่? (ข้อมูลที่ปรับแต่งจะถูกรีเซ็ตกลับเป็นค่าเริ่มต้น)')) return;
+      galleryItems = [...DEFAULT_GALLERY];
+      timelineItems = [...DEFAULT_TIMELINE];
+      localStorage.setItem('pa_krujames_custom_gallery', JSON.stringify(galleryItems));
+      localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(timelineItems));
+      renderStats();
+      renderGallery();
+      renderTimeline();
+      showToast('คืนค่าเริ่มต้นหลักฐานจริง ๒๕๖๙ เรียบร้อยแล้ว');
+    }
+
+    // 10. FIREBASE TEST & SYNC
+    function testFirebase() {
+      const badge = document.getElementById('storage-status-badge');
+      const diag = document.getElementById('firebase-diag-text');
+
+      if (typeof firebase !== 'undefined' && typeof firebaseConfig !== 'undefined' && isFirebaseConfigured()) {
+        try {
+          if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+          const db = firebase.firestore();
+          badge.innerHTML = '<i data-lucide="cloud"></i> 🟢 Firebase Cloud Live';
+          badge.style.background = '#dcfce7';
+          badge.style.color = '#15803d';
+          diag.innerText = 'เชื่อมต่อ Firestore บน Google Cloud สำเร็จเรียบร้อยแล้ว!';
+          diag.style.color = '#15803d';
+        } catch(e) {
+          badge.innerHTML = '<i data-lucide="hard-drive"></i> 🔵 LocalStorage Mode';
+          diag.innerText = 'Firebase Config Error: กำลังทำงานในโหมด LocalStorage';
+        }
+      } else {
+        badge.innerHTML = '<i data-lucide="hard-drive"></i> 🔵 LocalStorage Hybrid';
+        diag.innerText = 'ยังไม่ได้ระบุ Firebase Key (ทำงานในโหมด LocalStorage อัตโนมัติ รวดเร็ว 100%)';
+      }
+      lucide.createIcons();
+    }
+
+    function syncToFirestore(collectionName, data) {
+      if (typeof firebase !== 'undefined' && typeof firebaseConfig !== 'undefined' && isFirebaseConfigured()) {
+        try {
+          const db = firebase.firestore();
+          db.collection('pa_cms').doc(collectionName).set({
+            data: data,
+            lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
+          }, { merge: true });
+          console.log(`Synced ${collectionName} to Firestore`);
+        } catch(err) {
+          console.warn('Firestore sync failed, retained in LocalStorage:', err);
+        }
+      }
+    }
+
+    // 11. TOAST HELPER
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-msg').innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    // ON LOAD
+    window.addEventListener('DOMContentLoaded', () => {
+      checkAuthStatus();
+      initData();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

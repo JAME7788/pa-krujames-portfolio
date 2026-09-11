@@ -1915,10 +1915,15 @@
         <a href="#gallery" class="nav-item">คลังภาพถ่ายจริง</a>
         <a href="#slides" class="nav-item">สไลด์ ๓๔ แผ่น</a>
         <a href="#feedback" class="nav-item">สมุดข้อคิดเห็น</a>
+        <a href="admin.html" class="nav-item" style="color: #0284c7; font-weight: 600;"><i data-lucide="shield" style="width: 13px; height: 13px; display: inline-block; vertical-align: middle; margin-right: 3px;"></i> แอดมิน (Admin)</a>
       </nav>
 
       <!-- Header Action Buttons -->
       <div class="header-actions">
+        <a href="admin.html" class="btn-header" style="background: linear-gradient(135deg, #1e3a8a, #0284c7); color: white; border: 1px solid rgba(255,255,255,0.25); text-decoration: none;" title="เข้าสู่ระบบจัดการข้อมูล PA (Admin CMS)">
+          <i data-lucide="settings" style="width: 15px; height: 15px;"></i>
+          <span>แอดมิน (Admin)</span>
+        </a>
         <a href="#slides" class="btn-header btn-slides">
           <i data-lucide="presentation" style="width: 16px; height: 16px;"></i>
           <span>ฉายสไลด์</span>
@@ -4204,6 +4209,7 @@
             <li><a href="#indicators">มาตรฐานตำแหน่ง ๑๕ ข้อ</a></li>
             <li><a href="#challenge">ประเด็นท้าทาย Gamification</a></li>
             <li><a href="#gallery">คลังภาพถ่ายเชิงประจักษ์</a></li>
+            <li><a href="admin.html" style="color: #38bdf8; font-weight: 600;"><i data-lucide="shield" style="width: 13px; height: 13px; display: inline-block; vertical-align: middle; margin-right: 3px;"></i> เข้าสู่ระบบแอดมิน (Admin CMS)</a></li>
           </ul>
         </div>
 
@@ -4780,5 +4786,128 @@
     }
   </script>
 
+
+  <!-- CMS Dynamic Hydration Script -->
+  <script>
+    function escapeHtmlAttr(str) {
+      if (!str) return '';
+      return String(str).replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    }
+    function escapeHtmlText(str) {
+      if (!str) return '';
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function hydrateCustomGallery(items) {
+      if (!Array.isArray(items) || items.length === 0) return;
+      const container = document.getElementById('gallery-container');
+      if (!container) return;
+      
+      let html = '';
+      items.forEach(item => {
+        const cat = item.category || 'active-learning';
+        const tag = item.tag || 'หลักฐานเชิงประจักษ์';
+        const title = item.title || '';
+        const cap = item.caption || title;
+        const src = item.src || '';
+        const safeSrc = src.replace(/'/g, "\\'");
+        const safeCap = cap.replace(/'/g, "\\'");
+        
+        html += `
+          <div class="gallery-item" data-cat="${escapeHtmlAttr(cat)}" onclick="openLightbox('${safeSrc}', '${safeCap}')">
+            <img src="${escapeHtmlAttr(src)}" alt="${escapeHtmlAttr(title)}" loading="lazy" onerror="this.src='assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg'">
+            <div class="gallery-item-info">
+              <div class="gallery-tag">${escapeHtmlText(tag)}</div>
+              <div class="gallery-title">${escapeHtmlText(title)}</div>
+            </div>
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function hydrateCustomTimeline(items) {
+      if (!Array.isArray(items) || items.length === 0) return;
+      const container = document.querySelector('.timeline-track');
+      if (!container) return;
+      
+      let html = '';
+      items.forEach((item, idx) => {
+        const date = escapeHtmlText(item.date || '');
+        const title = escapeHtmlText(item.title || '');
+        const loc = escapeHtmlText(item.location || 'โรงเรียนบ้านคลองมดแดง');
+        const desc = escapeHtmlText(item.desc || '');
+        const img = item.image ? escapeHtmlAttr(item.image) : '';
+        const badgeClass = idx === 0 ? 'timeline-date-badge timeline-badge-start' : 'timeline-date-badge';
+        const iconName = idx === 0 ? 'flag' : 'calendar';
+        
+        const thumbHtml = img ? `
+          <div class="timeline-thumb-box" onclick="openLightbox('${img.replace(/'/g, "\\'")}', '${title.replace(/'/g, "\\'")}')">
+            <img src="${img}" alt="${title}" class="timeline-thumb" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        ` : '';
+
+        html += `
+          <div class="timeline-card" style="border-top-color: #2563eb;">
+            <div>
+              <div class="${badgeClass}">
+                <i data-lucide="${iconName}" style="width: 12px; height: 12px;"></i> ${date}
+              </div>
+              <div class="timeline-card-title">${title}</div>
+              <div class="timeline-card-loc">
+                <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ${loc}
+              </div>
+              <div class="timeline-card-desc">${desc}</div>
+            </div>
+            ${thumbHtml}
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // Hydrate on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        const localGallery = localStorage.getItem('pa_krujames_custom_gallery');
+        if (localGallery) {
+          const gItems = JSON.parse(localGallery);
+          hydrateCustomGallery(gItems);
+        }
+        const localTimeline = localStorage.getItem('pa_krujames_custom_timeline');
+        if (localTimeline) {
+          const tItems = JSON.parse(localTimeline);
+          hydrateCustomTimeline(tItems);
+        }
+      } catch (e) {
+        console.warn('Local CMS hydration warning:', e);
+      }
+    });
+
+    // Cloud Firestore CMS sync if connected
+    function checkCloudCmsSync() {
+      if (typeof db !== 'undefined' && db) {
+        db.collection('pa_cms').doc('gallery').get().then(doc => {
+          if (doc.exists && doc.data() && doc.data().items) {
+            hydrateCustomGallery(doc.data().items);
+            localStorage.setItem('pa_krujames_custom_gallery', JSON.stringify(doc.data().items));
+          }
+        }).catch(e => console.log('Firestore gallery sync note:', e));
+
+        db.collection('pa_cms').doc('timeline').get().then(doc => {
+          if (doc.exists && doc.data() && doc.data().items) {
+            hydrateCustomTimeline(doc.data().items);
+            localStorage.setItem('pa_krujames_custom_timeline', JSON.stringify(doc.data().items));
+          }
+        }).catch(e => console.log('Firestore timeline sync note:', e));
+      }
+    }
+    window.addEventListener('load', () => {
+      setTimeout(checkCloudCmsSync, 1000);
+    });
+  </script>
 </body>
+
 </html>
