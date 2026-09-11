@@ -963,20 +963,36 @@
           <h4 style="font-size: 0.95rem; color: #334155; margin-bottom: 0.5rem;">ข้อมูลครูผู้รับการประเมินและสถานศึกษา</h4>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem;">
             <div class="form-group">
-              <label class="form-label">ชื่อ - สกุล:</label>
-              <input type="text" id="prof-name" class="form-control" value="นายอนันตชัย เพ็ชรรี่">
+              <label class="form-label">ชื่อ - สกุล (ชื่อเล่น):</label>
+              <input type="text" id="prof-name" class="form-control" value="นายอนันตชัย เพ็ชรรี่ (ครูเจมส์)">
             </div>
             <div class="form-group">
               <label class="form-label">ตำแหน่ง / วิทยฐานะ:</label>
               <input type="text" id="prof-role" class="form-control" value="ครู อันดับ คศ.๑ (เลขที่ตำแหน่ง ๔๕๙๕)">
             </div>
             <div class="form-group">
-              <label class="form-label">สถานศึกษา:</label>
+              <label class="form-label">วุฒิการศึกษาระดับปริญญาตรี:</label>
+              <input type="text" id="prof-degree" class="form-control" value="ค.บ. คอมพิวเตอร์ศึกษา มหาวิทยาลัยราชภัฏอุตรดิตถ์">
+            </div>
+            <div class="form-group">
+              <label class="form-label">วันเกิด & อายุ:</label>
+              <input type="text" id="prof-birth" class="form-control" value="๓๐ มีนาคม ๒๕๔๔ (อายุ ๒๕ ปี)">
+            </div>
+            <div class="form-group">
+              <label class="form-label">วันเริ่มรับราชการ & เงินเดือน:</label>
+              <input type="text" id="prof-service" class="form-control" value="๑๗ มกราคม ๒๕๖๗ (เงินเดือน ๒๐,๒๕๐ บาท)">
+            </div>
+            <div class="form-group">
+              <label class="form-label">สถานศึกษา & สังกัด:</label>
               <input type="text" id="prof-school" class="form-control" value="โรงเรียนบ้านคลองมดแดง สพป.กำแพงเพชร เขต ๒">
             </div>
             <div class="form-group">
-              <label class="form-label">ชั่วโมงสอนตามตาราง:</label>
-              <input type="text" id="prof-hours" class="form-control" value="๒๕ คาบ/สัปดาห์ (ภาคเรียนที่ ๑/๒๕๖๙)">
+              <label class="form-label">ชั่วโมงสอนตามตารางจริง:</label>
+              <input type="text" id="prof-hours" class="form-control" value="๒๕ คาบ/สัปดาห์ (รวมภาระงาน ๓๕ ชม./สัปดาห์)">
+            </div>
+            <div class="form-group">
+              <label class="form-label">เว็บไซต์ทางการ / Google Sites:</label>
+              <input type="text" id="prof-website" class="form-control" value="https://www.ajj.in.th (เอเจเจ.ไทย)">
             </div>
           </div>
         </div>
@@ -1267,6 +1283,7 @@
       renderStats();
       renderGallery();
       renderTimeline();
+      loadProfileStats();
       loadFeedbacks();
       testFirebase();
     }
@@ -1585,6 +1602,10 @@
       const profileData = {
         name: document.getElementById('prof-name').value,
         role: document.getElementById('prof-role').value,
+        degree: document.getElementById('prof-degree') ? document.getElementById('prof-degree').value : 'ค.บ. คอมพิวเตอร์ศึกษา มรภ.อุตรดิตถ์',
+        birth: document.getElementById('prof-birth') ? document.getElementById('prof-birth').value : '๓๐ มีนาคม ๒๕๔๔',
+        service: document.getElementById('prof-service') ? document.getElementById('prof-service').value : '๑๗ ม.ค. ๒๕๖๗',
+        website: document.getElementById('prof-website') ? document.getElementById('prof-website').value : 'https://www.ajj.in.th',
         school: document.getElementById('prof-school').value,
         hours: document.getElementById('prof-hours').value,
         cohort: document.getElementById('prof-cohort').value,
@@ -1594,6 +1615,25 @@
       localStorage.setItem('pa_krujames_profile_data', JSON.stringify(profileData));
       showToast('บันทึกข้อมูลส่วนตัว & ผลการประเมินสำเร็จ');
       syncToFirestore('profile', profileData);
+    }
+
+    function loadProfileStats() {
+      const saved = localStorage.getItem('pa_krujames_profile_data');
+      if (!saved) return;
+      try {
+        const d = JSON.parse(saved);
+        if (d.name && document.getElementById('prof-name')) document.getElementById('prof-name').value = d.name;
+        if (d.role && document.getElementById('prof-role')) document.getElementById('prof-role').value = d.role;
+        if (d.degree && document.getElementById('prof-degree')) document.getElementById('prof-degree').value = d.degree;
+        if (d.birth && document.getElementById('prof-birth')) document.getElementById('prof-birth').value = d.birth;
+        if (d.service && document.getElementById('prof-service')) document.getElementById('prof-service').value = d.service;
+        if (d.website && document.getElementById('prof-website')) document.getElementById('prof-website').value = d.website;
+        if (d.school && document.getElementById('prof-school')) document.getElementById('prof-school').value = d.school;
+        if (d.hours && document.getElementById('prof-hours')) document.getElementById('prof-hours').value = d.hours;
+        if (d.cohort && document.getElementById('prof-cohort')) document.getElementById('prof-cohort').value = d.cohort;
+        if (d.pass && document.getElementById('prof-pass')) document.getElementById('prof-pass').value = d.pass;
+        if (d.challengeTitle && document.getElementById('prof-challenge-title')) document.getElementById('prof-challenge-title').value = d.challengeTitle;
+      } catch(e) {}
     }
 
     // 8. FEEDBACKS

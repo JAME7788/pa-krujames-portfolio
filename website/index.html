@@ -2727,6 +2727,14 @@
       }
     }
 
+  
+    /* Profile Modal Responsive */
+    @media (max-width: 768px) {
+      .profile-modal-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -2801,7 +2809,7 @@
       <!-- Profile Column -->
       <div class="hero-profile-card">
         <div class="profile-img-wrap">
-          <img src="assets/images/profile-krujames.jpg" alt="ครูเจมส์ อนันตชัย เพ็ชรรี่">
+          <img src="assets/images/profile-krujames.jpg" alt="ครูเจมส์ อนันตชัย เพ็ชรรี่" id="hero-profile-avatar">
           <div class="profile-badge">
             <i data-lucide="check-circle" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle;"></i>
             ข้าราชการครู คศ.๑
@@ -2810,6 +2818,12 @@
         <div class="hero-profile-info">
           <h3>นายอนันตชัย  เพ็ชรรี่</h3>
           <p>ครู อันดับ คศ.๑ (เลขที่ตำแหน่ง ๔๕๙๕)</p>
+          <p style="font-size: 0.8rem; color: #1e40af; font-weight: 600; margin-top: 4px; display: flex; align-items: center; justify-content: center; gap: 4px;">
+            <i data-lucide="graduation-cap" style="width: 14px; height: 14px;"></i> ค.บ. คอมพิวเตอร์ มรภ.อุตรดิตถ์
+          </p>
+          <button type="button" onclick="openProfileModal()" class="btn-profile-details" style="margin-top: 10px; width: 100%; padding: 7px 12px; font-size: 0.82rem; font-weight: 600; background: linear-gradient(135deg, #1e40af, #2563eb); color: white; border: none; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 2px 6px rgba(37,99,235,0.25); transition: all 0.2s ease;">
+            <i data-lucide="id-card" style="width: 15px; height: 15px;"></i> ข้อมูลส่วนตัว & ประวัติทางการ
+          </button>
         </div>
       </div>
 
@@ -5095,6 +5109,187 @@
     </div>
   </div>
 
+
+  <!-- Teacher Profile & Credentials Modal (ข้อมูลส่วนตัวจาก Google Sites & ว PA) -->
+  <div id="profile-modal" class="lightbox-modal" onclick="closeProfileModal(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()" style="max-width: 860px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; border-radius: 18px; box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.4); border: 1px solid rgba(226, 232, 240, 0.8);">
+      
+      <!-- Modal Header -->
+      <div style="padding: 18px 24px; background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); color: white; display: flex; justify-content: space-between; align-items: center; position: relative;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+            🎓
+          </div>
+          <div>
+            <h3 style="margin: 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em;">ประวัติส่วนตัวและข้อมูลทางการ</h3>
+            <p style="margin: 2px 0 0 0; font-size: 0.82rem; color: #bfdbfe;">
+              นายอนันตชัย เพ็ชรรี่ (ครูเจมส์) • ข้อมูลทางการจาก Google Sites เอเจเจ.ไทย & เอกสาร ว PA
+            </p>
+          </div>
+        </div>
+        <button class="lightbox-close-btn" onclick="closeProfileModalDirect()" style="position: static; font-size: 1.75rem; color: rgba(255,255,255,0.8); background: none; border: none; cursor: pointer; padding: 4px 8px; line-height: 1;">&times;</button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div style="padding: 24px; overflow-y: auto; background: #f8fafc; flex: 1;">
+        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 24px;" class="profile-modal-grid">
+          
+          <!-- Left Column: Photo & Key Badges -->
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <!-- Portrait Frame -->
+            <div style="background: white; padding: 12px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; text-align: center;">
+              <div style="position: relative; width: 100%; aspect-ratio: 3/4; border-radius: 10px; overflow: hidden; background: #0f172a; margin-bottom: 12px; box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);">
+                <img id="modal-profile-photo" src="assets/images/profile-suit-krujames.jpg" alt="ครูเจมส์ อนันตชัย เพ็ชรรี่" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.3s ease;">
+                <div id="modal-photo-badge" style="position: absolute; bottom: 8px; left: 8px; right: 8px; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(4px); color: white; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px; font-weight: 500;">
+                  👔 ชุดสูทสากล (จาก Google Sites)
+                </div>
+              </div>
+
+              <!-- Photo Switcher Buttons -->
+              <div style="display: flex; gap: 6px; justify-content: center;">
+                <button type="button" id="btn-photo-suit" onclick="switchProfilePhoto('suit')" style="flex: 1; padding: 6px 4px; font-size: 0.76rem; font-weight: 600; background: #1e40af; color: white; border: none; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                  สูทสากล
+                </button>
+                <button type="button" id="btn-photo-white" onclick="switchProfilePhoto('white')" style="flex: 1; padding: 6px 4px; font-size: 0.76rem; font-weight: 600; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                  ปกติขาว คศ.๑
+                </button>
+              </div>
+            </div>
+
+            <!-- Position Status Card -->
+            <div style="background: white; padding: 16px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; font-size: 0.85rem;">
+              <div style="font-weight: 700; color: #1e3a8a; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                <i data-lucide="shield-check" style="width: 16px; height: 16px; color: #2563eb;"></i> ข้อมูลวิทยฐานะ & เงินเดือน
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px; color: #334155;">
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 4px;">
+                  <span style="color: #64748b;">ตำแหน่ง:</span>
+                  <span style="font-weight: 600; color: #0f172a;">ครู คศ.๑</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 4px;">
+                  <span style="color: #64748b;">วิทยฐานะ:</span>
+                  <span style="font-weight: 600; color: #047857; background: #ecfdf5; padding: 1px 6px; border-radius: 4px;">ยังไม่มีวิทยฐานะ</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 4px;">
+                  <span style="color: #64748b;">เลขที่ตำแหน่ง:</span>
+                  <span style="font-weight: 700; color: #1e40af;">๔๕๙๕</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 4px;">
+                  <span style="color: #64748b;">อัตราเงินเดือน:</span>
+                  <span style="font-weight: 700; color: #0284c7;">๒๐,๒๕๐ บาท</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding-top: 2px;">
+                  <span style="color: #64748b;">เริ่มรับราชการ:</span>
+                  <span style="font-weight: 600; color: #0f172a;">๑๗ ม.ค. ๒๕๖๗</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- External Links -->
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <a href="https://www.ajj.in.th" target="_blank" style="text-decoration: none; padding: 8px 12px; background: #0284c7; color: white; border-radius: 8px; font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 2px 4px rgba(2,132,199,0.25);">
+                <i data-lucide="globe" style="width: 14px; height: 14px;"></i> เยี่ยมชมเว็บส่วนตัว (เอเจเจ.ไทย)
+              </a>
+              <a href="https://krujamesoncom-website.vercel.app" target="_blank" style="text-decoration: none; padding: 8px 12px; background: white; color: #1e40af; border: 1px solid #bfdbfe; border-radius: 8px; font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                <i data-lucide="monitor" style="width: 14px; height: 14px;"></i> ห้องเรียนเทคโนโลยีครูเจมส์
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Structured Information Cards -->
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            
+            <!-- 1. ข้อมูลส่วนตัว & ประวัติการศึกษา -->
+            <div style="background: white; padding: 18px 20px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;">
+              <div style="font-size: 0.95rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <i data-lucide="user" style="width: 18px; height: 18px; color: #2563eb;"></i> ๑. ข้อมูลทั่วไป & ประวัติการศึกษา
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 0.88rem;">
+                <div style="background: #f8fafc; padding: 10px 14px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                  <span style="font-size: 0.78rem; color: #64748b; display: block;">ชื่อ-สกุล (ชื่อเรียก)</span>
+                  <strong style="color: #0f172a;">นายอนันตชัย เพ็ชรรี่ (ครูเจมส์)</strong>
+                </div>
+                <div style="background: #f8fafc; padding: 10px 14px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                  <span style="font-size: 0.78rem; color: #64748b; display: block;">วัน/เดือน/ปีเกิด & อายุ</span>
+                  <strong style="color: #0f172a;">๓๐ มีนาคม ๒๕๔๔ (อายุ ๒๕ ปี)</strong>
+                </div>
+                <div style="background: #f8fafc; padding: 10px 14px; border-radius: 8px; border-left: 3px solid #10b981; grid-column: span 2;">
+                  <span style="font-size: 0.78rem; color: #64748b; display: block;">วุฒิการศึกษาระดับปริญญาตรี</span>
+                  <strong style="color: #047857;">ครุศาสตรบัณฑิต (ค.บ. ๔ ปี) สาขาวิชาคอมพิวเตอร์ศึกษา</strong>
+                  <div style="font-size: 0.82rem; color: #475569; margin-top: 2px;">คณะครุศาสตร์ มหาวิทยาลัยราชภัฏอุตรดิตถ์</div>
+                </div>
+                <div style="background: #f8fafc; padding: 10px 14px; border-radius: 8px; border-left: 3px solid #6366f1; grid-column: span 2;">
+                  <span style="font-size: 0.78rem; color: #64748b; display: block;">สถานศึกษา & สังกัด</span>
+                  <strong style="color: #0f172a;">โรงเรียนบ้านคลองมดแดง</strong>
+                  <div style="font-size: 0.82rem; color: #475569; margin-top: 2px;">สำนักงานเขตพื้นที่การศึกษาประถมศึกษากำแพงเพชร เขต ๒ • สพฐ. กระทรวงศึกษาธิการ</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. ภาระหน้าที่และความรับผิดชอบในสถานศึกษา ๒๕๖๙ -->
+            <div style="background: white; padding: 18px 20px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;">
+              <div style="font-size: 0.95rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <i data-lucide="briefcase" style="width: 18px; height: 18px; color: #2563eb;"></i> ๒. ภาระหน้าที่รับผิดชอบตามคำสั่งสถานศึกษา
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.86rem; color: #334155;">
+                <div style="display: flex; gap: 10px; align-items: flex-start;">
+                  <span style="background: #dbeafe; color: #1e40af; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; white-space: nowrap; margin-top: 2px;">การสอน</span>
+                  <div><strong>ภาระงานสอน ๒๕ คาบ/สัปดาห์</strong> (รวมภาระงานทั้งหมด ๓๕ ชม./สัปดาห์) สอนวิทยาการคำนวณ ป.๑–ม.๓, วิทยาศาสตร์ ป.๔–๕, ทักษะอาชีพ ม.๑–๓</div>
+                </div>
+                <div style="display: flex; gap: 10px; align-items: flex-start;">
+                  <span style="background: #fef3c7; color: #92400e; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; white-space: nowrap; margin-top: 2px;">บริหารทั่วไป</span>
+                  <div><strong>ฝ่ายบริหารงานทั่วไป & งานพัสดุ OBEC Asset</strong> ดูแลระบบลงทะเบียนครุภัณฑ์ ระบบสารสนเทศทรัพย์สิน และเอกสารพัสดุโรงเรียน</div>
+                </div>
+                <div style="display: flex; gap: 10px; align-items: flex-start;">
+                  <span style="background: #e0f2fe; color: #0369a1; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; white-space: nowrap; margin-top: 2px;">ไอซีที & สื่อ</span>
+                  <div><strong>ผู้ดูแลระบบ ICT, โครงข่ายอินเทอร์เน็ต & เว็บไซต์โรงเรียน</strong> วางระบบ Network ภายในอาคาร, บันทึกภาพนิ่ง วิดีโอ และผลิตสื่อประชาสัมพันธ์</div>
+                </div>
+                <div style="display: flex; gap: 10px; align-items: flex-start;">
+                  <span style="background: #ecfdf5; color: #065f46; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; white-space: nowrap; margin-top: 2px;">ดูแลผู้เรียน</span>
+                  <div><strong>ครูประจำชั้น ม.๓ & ระบบดูแลช่วยเหลือนักเรียน</strong> บันทึก ปพ.๕ ดิจิทัล, คัดกรองทุน กสศ. ๑๐๐%, เยี่ยมบ้านครบ ๑๐๐% และร่วมกิจกรรม PLC สม่ำเสมอ</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. ความเชี่ยวชาญ & นวัตกรรมเด่นตามข้อตกลง PA -->
+            <div style="background: white; padding: 18px 20px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;">
+              <div style="font-size: 0.95rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <i data-lucide="sparkles" style="width: 18px; height: 18px; color: #f59e0b;"></i> ๓. นวัตกรรมเด่นและทักษะความเชี่ยวชาญ
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.84rem;">
+                <div style="padding: 8px 12px; background: #f8fafc; border-radius: 8px; border: 1px solid #f1f5f9;">
+                  🎯 <strong>ประเด็นท้าทาย ป.๑:</strong> พัฒนาทักษะเมาส์ด้วย Gamification + Active Learning สำเร็จ ๑๐๐% (๑๑ คน)
+                </div>
+                <div style="padding: 8px 12px; background: #f8fafc; border-radius: 8px; border: 1px solid #f1f5f9;">
+                  🤖 <strong>AI for Education:</strong> ผ่านการอบรม AI for Teachers สสวท. รวม ๒๘ ชั่วโมง (ม.ต้น ๒๐ ชม., ป.ปลาย ๘ ชม.)
+                </div>
+                <div style="padding: 8px 12px; background: #f8fafc; border-radius: 8px; border: 1px solid #f1f5f9;">
+                  📦 <strong>การผลิตสื่อดิจิทัล:</strong> ผลิตสื่อนวัตกรรมและการจัดการเรียนรู้รวม ๖๒ ชิ้น เผยแพร่บนเว็บและคลังสื่อ
+                </div>
+                <div style="padding: 8px 12px; background: #f8fafc; border-radius: 8px; border: 1px solid #f1f5f9;">
+                  🌐 <strong>พัฒนาเว็บ & โดเมนเนม:</strong> จดทะเบียนโดเมนภาษาไทย <code>เอเจเจ.ไทย</code> กับมูลนิธิ THNIC Foundation
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div style="padding: 12px 24px; background: #f1f5f9; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8rem; color: #64748b;">
+          อัปเดตข้อมูลตรงตามฐานข้อมูล ว PA โรงเรียนบ้านคลองมดแดง ๒๕๖๙
+        </span>
+        <button type="button" onclick="closeProfileModalDirect()" style="padding: 6px 16px; font-size: 0.85rem; font-weight: 600; background: #334155; color: white; border: none; border-radius: 6px; cursor: pointer;">
+          ปิดหน้าต่าง
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
   <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
@@ -5126,7 +5321,10 @@
             <strong>นายอนันตชัย  เพ็ชรรี่ (ครูเจมส์)</strong><br>
             ตำแหน่ง ครู อันดับ คศ.๑<br>
             กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี<br>
-            โรงเรียนบ้านคลองมดแดง
+            โรงเรียนบ้านคลองมดแดง<br>
+            <button type="button" onclick="openProfileModal()" style="margin-top: 8px; background: rgba(37, 99, 235, 0.2); border: 1px solid rgba(147, 197, 253, 0.4); color: #bfdbfe; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s;">
+              <i data-lucide="user-check" style="width: 13px; height: 13px;"></i> ดูประวัติส่วนตัว & วุฒิการศึกษา
+            </button>
           </p>
         </div>
       </div>
@@ -5360,6 +5558,66 @@
       if (commentInput) {
         commentInput.focus();
         commentInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    // Profile Modal Handlers
+    function openProfileModal() {
+      const m = document.getElementById('profile-modal');
+      if (m) {
+        m.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      }
+    }
+    function closeProfileModal(e) {
+      const m = document.getElementById('profile-modal');
+      if (m) {
+        m.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+    function closeProfileModalDirect() {
+      const m = document.getElementById('profile-modal');
+      if (m) {
+        m.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+    function switchProfilePhoto(photoType) {
+      const img = document.getElementById('modal-profile-photo');
+      const badge = document.getElementById('modal-photo-badge');
+      const btnSuit = document.getElementById('btn-photo-suit');
+      const btnWhite = document.getElementById('btn-photo-white');
+      
+      if (!img || !badge) return;
+      
+      if (photoType === 'white') {
+        img.src = 'assets/images/profile-krujames.jpg';
+        badge.innerHTML = '🏛️ ชุดปกติขาว คศ.๑ (ข้าราชการครู)';
+        if (btnSuit) {
+          btnSuit.style.background = '#f1f5f9';
+          btnSuit.style.color = '#475569';
+          btnSuit.style.border = '1px solid #cbd5e1';
+        }
+        if (btnWhite) {
+          btnWhite.style.background = '#1e40af';
+          btnWhite.style.color = 'white';
+          btnWhite.style.border = 'none';
+        }
+      } else {
+        img.src = 'assets/images/profile-suit-krujames.jpg';
+        badge.innerHTML = '👔 ชุดสูทสากล (จาก Google Sites)';
+        if (btnSuit) {
+          btnSuit.style.background = '#1e40af';
+          btnSuit.style.color = 'white';
+          btnSuit.style.border = 'none';
+        }
+        if (btnWhite) {
+          btnWhite.style.background = '#f1f5f9';
+          btnWhite.style.color = '#475569';
+          btnWhite.style.border = '1px solid #cbd5e1';
+        }
       }
     }
 
