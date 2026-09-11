@@ -236,7 +236,7 @@
     .hero-section {
       position: relative;
       background: linear-gradient(180deg, #ffffff 0%, #f0f6ff 50%, #ffffff 100%);
-      padding: 3rem 0 2.5rem;
+      padding: 1.5rem 0 2rem;
       border-bottom: 1px solid var(--surface-border-blue);
       overflow: hidden;
     }
@@ -255,9 +255,9 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 2.5rem;
-      align-items: center;
+      grid-template-columns: 320px 1fr;
+      gap: 2rem;
+      align-items: flex-start;
       position: relative;
       z-index: 1;
     }
@@ -274,10 +274,10 @@
 
     .profile-img-wrap {
       position: relative;
-      width: 220px;
-      height: 250px;
-      margin: 0 auto 1.25rem;
-      border-radius: var(--radius-lg);
+      width: 210px;
+      height: 245px;
+      margin: 0 auto 0.85rem;
+      border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 12px 28px rgba(2, 132, 199, 0.22), 0 0 0 2px #bae6fd;
       border: 3px solid white;
@@ -287,7 +287,9 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top center;
+      object-position: center top;
+      transform: translateY(-8px) scale(1.06);
+      transform-origin: top center;
     }
 
     .profile-badge {
@@ -2056,16 +2058,21 @@
       background: radial-gradient(at 10% 20%, rgba(37, 99, 235, 0.08) 0px, transparent 50%),
                   radial-gradient(at 90% 80%, rgba(2, 132, 199, 0.07) 0px, transparent 50%),
                   linear-gradient(180deg, #ffffff 0%, #f0f7ff 50%, #ffffff 100%);
+      padding: 1.5rem 0 2rem;
       position: relative;
+    }
+    .hero-grid {
+      align-items: flex-start;
     }
     .hero-profile-card {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(12px);
       border-radius: var(--radius-xl);
-      padding: 1.75rem 1.5rem;
-      box-shadow: 0 20px 45px -10px rgba(10, 25, 47, 0.12), 0 0 0 1px rgba(191, 219, 254, 0.85);
+      padding: 1.25rem 1.15rem;
+      box-shadow: 0 16px 35px -8px rgba(10, 25, 47, 0.12), 0 0 0 1px rgba(191, 219, 254, 0.85);
       position: relative;
       overflow: hidden;
+      margin-top: 0;
     }
     .hero-profile-card::before {
       content: "";
@@ -2077,11 +2084,21 @@
       background: linear-gradient(90deg, #0a192f, #1e40af, #0284c7, #38bdf8);
     }
     .profile-img-wrap {
-      width: 220px;
-      height: 260px;
-      border-radius: 18px;
+      width: 210px;
+      height: 245px;
+      border-radius: 16px;
       box-shadow: 0 16px 32px rgba(2, 132, 199, 0.24), 0 0 0 3px #ffffff, 0 0 0 5px #bae6fd;
       position: relative;
+      overflow: hidden;
+      margin: 0 auto 0.85rem;
+    }
+    .profile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transform: translateY(-8px) scale(1.06);
+      transform-origin: top center;
     }
     .profile-badge {
       background: rgba(10, 25, 47, 0.92);
