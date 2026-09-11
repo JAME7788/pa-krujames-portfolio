@@ -19,6 +19,8 @@ __pycache__/
 *.pyc
 *.tmp
 *.log
+qa-pa/updated-render/
+deliverables/
 
 # Large Presentation Files (ป้องกัน Git Push ช้า หรือติดลิมิต 100MB ของ GitHub - สไลด์มีฉบับ Interactive Web ในระบบแล้ว)
 *.pptx
