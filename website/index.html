@@ -712,6 +712,161 @@
       color: var(--primary-800);
     }
 
+    
+    /* Interactive Weekly Timetable Component */
+    .timetable-schedule-wrapper {
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--surface-border);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .timetable-schedule-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #0284c7 100%);
+      color: white;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .timetable-schedule-header h3 {
+      margin: 0;
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .timetable-schedule-header .tt-meta-pill {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .tt-table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .tt-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      min-width: 820px;
+      font-size: 0.85rem;
+    }
+    .tt-table th {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 11px 8px;
+      font-family: 'Prompt', sans-serif;
+      font-weight: 600;
+      border: 1px solid #334155;
+      font-size: 0.88rem;
+    }
+    .tt-table th.col-period {
+      background: #0284c7;
+      color: white;
+      width: 140px;
+      border-color: #0369a1;
+    }
+    .tt-table td {
+      padding: 10px 8px;
+      border: 1px solid #e2e8f0;
+      vertical-align: middle;
+      line-height: 1.35;
+    }
+    .tt-table tr:hover td {
+      filter: brightness(0.97);
+    }
+    .tt-period-lbl {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 0.9rem;
+    }
+    .tt-period-time {
+      font-size: 0.74rem;
+      color: #64748b;
+      margin-top: 2px;
+    }
+    
+    /* Cell Types Matching Kru James Timetable */
+    .cell-comp-sec {
+      background: #fdf2f8 !important;
+      color: #9d174d !important;
+      border: 1px solid #fbcfe8 !important;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    .cell-tech-pri {
+      background: #f0fdfa !important;
+      color: #0f766e !important;
+      border: 1px solid #99f6e4 !important;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    .cell-career {
+      background: #eff6ff !important;
+      color: #1d4ed8 !important;
+      border: 1px solid #bfdbfe !important;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    .cell-interest {
+      background: #f0f9ff !important;
+      color: #0369a1 !important;
+      border: 1px solid #bae6fd !important;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    .cell-activities {
+      background: #fefce8 !important;
+      color: #854d0e !important;
+      border: 1px solid #fef08a !important;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    .cell-lunch {
+      background: #f8fafc !important;
+      color: #64748b !important;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.5px;
+    }
+    .cell-empty {
+      background: #ffffff;
+      color: #cbd5e1;
+    }
+
+    /* Timetable Legend */
+    .tt-legend-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px 18px;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+    .tt-legend-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-weight: 600;
+      border: 1px solid transparent;
+    }
+
     /* Indicator Cards (15 ตัวชี้วัด) */
     .indicators-grid {
       display: grid;
@@ -2699,8 +2854,8 @@
         <!-- Stats Grid -->
         <div class="hero-stats-grid">
           <div class="stat-card">
-            <div class="stat-number">23 ชม.</div>
-            <div class="stat-label">ภาระงานสอน/สัปดาห์ (24 คาบ)</div>
+            <div class="stat-number">25 คาบ</div>
+            <div class="stat-label">ภาระงานสอน/สัปดาห์ (ตารางสอนจริง)</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">35 ชม.</div>
@@ -2940,226 +3095,498 @@
     </div>
   </section>
 
-  <!-- Section 1 : ภาระงานและตารางสอน -->
+    <!-- Section 1 : ภาระงานและตารางสอน -->
   <section id="workload" class="section-block">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">Workload & Teaching Schedule</div>
+        <div class="section-badge"><i data-lucide="clock" style="width: 13px; height: 13px;"></i> ข้อมูลภาระงานสอนตามมาตรฐาน ก.ค.ศ. (Workload)</div>
         <h2 class="section-title">ภาระงานสอนและการปฏิบัติหน้าที่ราชการ</h2>
-        <p class="section-desc">การจัดตารางสอน ๒๓ ชั่วโมงต่อสัปดาห์ (๒๔ คาบ) และภาระงานสนับสนุนตามเกณฑ์ ก.ค.ศ. รวม ๓๕ ชั่วโมง/สัปดาห์</p>
+        <p class="section-desc">การจัดตารางสอนจริง ๒๕ คาบต่อสัปดาห์ (ภาคเรียนที่ ๑/๒๕๖๙) และภาระงานฝ่ายบริหารทั่วไป งานสารสนเทศ ICT งานประชาสัมพันธ์ และงานตอบสนองนโยบาย รวม ๓๕ ชั่วโมง/สัปดาห์</p>
       </div>
 
       <!-- Tab Navigation -->
       <div class="tab-nav">
         <button class="tab-btn active" onclick="switchTab('tab-teaching', this)">
-          <i data-lucide="book-open"></i> ภาระงานสอนตามตาราง (23 ชม./สัปดาห์)
+          <i data-lucide="calendar-check"></i> ตารางสอนจริง (๒๕ คาบ/สัปดาห์)
         </button>
-        <button class="tab-btn" onclick="switchTab('tab-support', this)">
-          <i data-lucide="users"></i> งานส่งเสริม & สนับสนุน (6 ชม.)
+        <button class="tab-btn" onclick="switchTab('tab-general-admin', this)">
+          <i data-lucide="archive"></i> ฝ่ายบริหารทั่วไป & OBEC Asset
         </button>
-        <button class="tab-btn" onclick="switchTab('tab-school', this)">
-          <i data-lucide="building-2"></i> งานพัฒนาคุณภาพสถานศึกษา (4 ชม.)
+        <button class="tab-btn" onclick="switchTab('tab-ict-system', this)">
+          <i data-lucide="network"></i> พัฒนาระบบไอซีที & อินเทอร์เน็ตรร.
         </button>
-        <button class="tab-btn" onclick="switchTab('tab-policy', this)">
-          <i data-lucide="compass"></i> งานตอบสนองนโยบาย (2 ชม.)
+        <button class="tab-btn" onclick="switchTab('tab-pr-video', this)">
+          <i data-lucide="video"></i> งานประชาสัมพันธ์, วิดีโอ & เว็บไซต์
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-support-care', this)">
+          <i data-lucide="heart-handshake"></i> ระบบดูแลช่วยเหลือ & PLC
         </button>
       </div>
 
-      <!-- Tab 1: Teaching Workload -->
+      <!-- Tab 1: Teaching Workload & Timetable -->
       <div id="tab-teaching" class="tab-pane active">
+        
+        <!-- Interactive Weekly Timetable Card -->
+        <div class="timetable-schedule-wrapper">
+          <div class="timetable-schedule-header">
+            <h3><i data-lucide="calendar"></i> ตารางสอน ภาคเรียนที่ ๑ ปีการศึกษา ๒๕๖๙</h3>
+            <div class="tt-meta-pill">นายอนันตชัย เพ็ชรรี่ · โรงเรียนบ้านคลองมดแดง · รวม ๒๕ คาบ/สัปดาห์</div>
+          </div>
+          
+          <div class="tt-table-responsive">
+            <table class="tt-table">
+              <thead>
+                <tr>
+                  <th class="col-period">คาบ / วัน</th>
+                  <th>วันจันทร์</th>
+                  <th>วันอังคาร</th>
+                  <th>วันพุธ</th>
+                  <th>วันพฤหัสบดี</th>
+                  <th>วันศุกร์</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Period 1 -->
+                <tr>
+                  <td>
+                    <div class="tt-period-lbl">คาบที่ ๑</div>
+                    <div class="tt-period-time">08:30–09:20</div>
+                  </td>
+                  <td class="cell-comp-sec">
+                    วิทยาการคำนวณ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ม.1/1</span>
+                  </td>
+                  <td class="cell-empty">—</td>
+                  <td class="cell-tech-pri">
+                    เทคโนโลยี 1<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.1/1 (ประเด็นท้าทาย)</span>
+                  </td>
+                  <td class="cell-empty">—</td>
+                  <td class="cell-empty">—</td>
+                </tr>
+
+                <!-- Period 2 -->
+                <tr>
+                  <td>
+                    <div class="tt-period-lbl">คาบที่ ๒</div>
+                    <div class="tt-period-time">09:20–10:10</div>
+                  </td>
+                  <td class="cell-empty">—</td>
+                  <td class="cell-empty">—</td>
+                  <td class="cell-tech-pri">
+                    เทคโนโลยี 4<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.4/1</span>
+                  </td>
+                  <td class="cell-comp-sec">
+                    วิทยาการคำนวณ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ม.3/1</span>
+                  </td>
+                  <td class="cell-interest">
+                    กิจกรรมตามความสนใจ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.2/1</span>
+                  </td>
+                </tr>
+
+                <!-- Period 3 -->
+                <tr>
+                  <td>
+                    <div class="tt-period-lbl">คาบที่ ๓</div>
+                    <div class="tt-period-time">10:10–11:00</div>
+                  </td>
+                  <td class="cell-empty">—</td>
+                  <td class="cell-career">
+                    การงานอาชีพ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ม.2/1</span>
+                  </td>
+                  <td class="cell-empty">—</td>
+                  <td class="cell-interest">
+                    กิจกรรมตามความสนใจ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.3/1</span>
+                  </td>
+                  <td class="cell-comp-sec">
+                    วิทยาการคำนวณ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ม.2/1</span>
+                  </td>
+                </tr>
+
+                <!-- Period 4 -->
+                <tr>
+                  <td>
+                    <div class="tt-period-lbl">คาบที่ ๔</div>
+                    <div class="tt-period-time">11:00–11:50</div>
+                  </td>
+                  <td class="cell-empty">—</td>
+                  <td class="cell-career">
+                    การงานอาชีพ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ม.2/1</span>
+                  </td>
+                  <td class="cell-empty">—</td>
+                  <td class="cell-tech-pri">
+                    เทคโนโลยี 6<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.6/1</span>
+                  </td>
+                  <td class="cell-tech-pri">
+                    เทคโนโลยี 3<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.3/1</span>
+                  </td>
+                </tr>
+
+                <!-- Lunch Break -->
+                <tr>
+                  <td style="background: #f1f5f9;">
+                    <div class="tt-period-lbl" style="color: #64748b; font-size: 0.8rem;">พักกลางวัน</div>
+                    <div class="tt-period-time">11:50–13:00</div>
+                  </td>
+                  <td colspan="5" class="cell-lunch">
+                    <i data-lucide="utensils" style="width: 14px; height: 14px; vertical-align: middle;"></i> พักรับประทานอาหารกลางวัน (๑๑:๕๐ – ๑๓:๐๐ น.)
+                  </td>
+                </tr>
+
+                <!-- Period 5 -->
+                <tr>
+                  <td>
+                    <div class="tt-period-lbl">คาบที่ ๕</div>
+                    <div class="tt-period-time">13:00–13:50</div>
+                  </td>
+                  <td class="cell-activities">
+                    แนะแนว<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">กิจกรรมพัฒนาผู้เรียน</span>
+                  </td>
+                  <td class="cell-empty">—</td>
+                  <td class="cell-interest">
+                    กิจกรรมตามความสนใจ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.2/1</span>
+                  </td>
+                  <td class="cell-interest">
+                    กิจกรรมตามความสนใจ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.1/1</span>
+                  </td>
+                  <td class="cell-career">
+                    ตลาดนัดอาชีพ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ทักษะอาชีพ</span>
+                  </td>
+                </tr>
+
+                <!-- Period 6 -->
+                <tr>
+                  <td>
+                    <div class="tt-period-lbl">คาบที่ ๖</div>
+                    <div class="tt-period-time">13:50–14:40</div>
+                  </td>
+                  <td class="cell-tech-pri">
+                    เทคโนโลยี 2<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.2/1</span>
+                  </td>
+                  <td class="cell-career">
+                    ทักษะอาชีพ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ม.1/1</span>
+                  </td>
+                  <td class="cell-tech-pri">
+                    เทคโนโลยี 5<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.5/1</span>
+                  </td>
+                  <td class="cell-interest">
+                    กิจกรรมตามความสนใจ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ม.1/1</span>
+                  </td>
+                  <td class="cell-career">
+                    ตลาดนัดอาชีพ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ทักษะอาชีพ</span>
+                  </td>
+                </tr>
+
+                <!-- Period 7 -->
+                <tr>
+                  <td>
+                    <div class="tt-period-lbl">คาบที่ ๗</div>
+                    <div class="tt-period-time">14:40–15:30</div>
+                  </td>
+                  <td class="cell-interest">
+                    กิจกรรมตามความสนใจ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ป.5/1</span>
+                  </td>
+                  <td class="cell-career">
+                    ทักษะอาชีพ<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">ม.1/1</span>
+                  </td>
+                  <td class="cell-activities">
+                    ลูกเสือ-เนตรนารี<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">กิจกรรมพัฒนาผู้เรียน</span>
+                  </td>
+                  <td class="cell-activities">
+                    ชุมนุมเทคโนโลยี<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">กิจกรรมพัฒนาผู้เรียน</span>
+                  </td>
+                  <td class="cell-activities">
+                    สวดมนต์<br>
+                    <span style="font-size:0.75rem;font-weight:normal;">กิจกรรมคุณธรรม</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Legend Bar Matching Image -->
+          <div class="tt-legend-bar">
+            <span style="font-weight: 700; color: #334155; margin-right: 6px;">หมวดหมู่วิชา:</span>
+            <div class="tt-legend-pill cell-comp-sec">
+              <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#db2777;"></span>
+              วิทยาการคำนวณ (มัธยม) ๓ คาบ
+            </div>
+            <div class="tt-legend-pill cell-tech-pri">
+              <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#0d9488;"></span>
+              เทคโนโลยี (ประถม) ๖ คาบ
+            </div>
+            <div class="tt-legend-pill cell-career">
+              <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#2563eb;"></span>
+              การงานอาชีพ / ทักษะอาชีพ ๖ คาบ
+            </div>
+            <div class="tt-legend-pill cell-interest">
+              <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#0284c7;"></span>
+              กิจกรรมตามความสนใจ ๖ คาบ
+            </div>
+            <div class="tt-legend-pill cell-activities">
+              <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#d97706;"></span>
+              กิจกรรมพัฒนาผู้เรียน / คุณธรรม ๔ คาบ
+            </div>
+          </div>
+        </div>
+
+        <!-- Subject Course Cards Breakdown -->
         <div class="timetable-grid">
-          <div class="subject-card">
+          <div class="subject-card" style="border-left-color: #0d9488;">
             <div>
-              <span class="subject-code">ว11102</span>
-              <div class="subject-name">วิทยาการคำนวณ 1</div>
-              <div class="subject-grade">ประถมศึกษาปีที่ 1 (ประเด็นท้าทาย)</div>
+              <span class="subject-code" style="background:#ccfbf1; color:#0f766e;">ว11102 (ประเด็นท้าทาย)</span>
+              <div class="subject-name">เทคโนโลยี 1 (วิทยาการคำนวณ 1)</div>
+              <div class="subject-grade">ประถมศึกษาปีที่ 1/1 (เน้นทักษะการใช้เมาส์ Gamification)</div>
             </div>
             <div class="subject-hours">
-              <span>กลุ่มสาระวิทยาศาสตร์ฯ</span>
-              <span>1 ชั่วโมง/สัปดาห์</span>
+              <span>กลุ่มสาระวิทยาศาสตร์และเทคโนโลยี</span>
+              <span>1 คาบ/สัปดาห์ (พุธ คาบ 1)</span>
             </div>
           </div>
 
-          <div class="subject-card">
+          <div class="subject-card" style="border-left-color: #0d9488;">
             <div>
-              <span class="subject-code">ว12102</span>
-              <div class="subject-name">วิทยาการคำนวณ 2</div>
-              <div class="subject-grade">ประถมศึกษาปีที่ 2</div>
+              <span class="subject-code" style="background:#ccfbf1; color:#0f766e;">ว12102 - ว16102</span>
+              <div class="subject-name">เทคโนโลยี 2 – 6 (วิทยาการคำนวณ ประถม)</div>
+              <div class="subject-grade">ประถมศึกษาปีที่ 2, 3, 4, 5, 6 (ชั้นละ 1 คาบ)</div>
             </div>
             <div class="subject-hours">
-              <span>กลุ่มสาระวิทยาศาสตร์ฯ</span>
-              <span>2 ชั่วโมง/สัปดาห์</span>
+              <span>กลุ่มสาระวิทยาศาสตร์และเทคโนโลยี</span>
+              <span>5 คาบ/สัปดาห์</span>
             </div>
           </div>
 
-          <div class="subject-card">
+          <div class="subject-card" style="border-left-color: #db2777;">
             <div>
-              <span class="subject-code">ว14101-14102</span>
-              <div class="subject-name">วิทยาศาสตร์ & วิทยาการคำนวณ 4</div>
-              <div class="subject-grade">ประถมศึกษาปีที่ 4</div>
+              <span class="subject-code" style="background:#fce7f3; color:#9d174d;">ว21102, ว22102, ว23102</span>
+              <div class="subject-name">วิทยาการคำนวณ มัธยมศึกษาตอนต้น</div>
+              <div class="subject-grade">มัธยมศึกษาปีที่ 1/1, 2/1, 3/1 (ชั้นละ 1 คาบ)</div>
             </div>
             <div class="subject-hours">
-              <span>กลุ่มสาระวิทยาศาสตร์ฯ</span>
-              <span>3 ชั่วโมง/สัปดาห์</span>
+              <span>กลุ่มสาระวิทยาศาสตร์และเทคโนโลยี</span>
+              <span>3 คาบ/สัปดาห์</span>
             </div>
           </div>
 
-          <div class="subject-card">
+          <div class="subject-card" style="border-left-color: #2563eb;">
             <div>
-              <span class="subject-code">ว15101-15102</span>
-              <div class="subject-name">วิทยาศาสตร์ & วิทยาการคำนวณ 5</div>
-              <div class="subject-grade">ประถมศึกษาปีที่ 5</div>
+              <span class="subject-code" style="background:#dbeafe; color:#1e40af;">กลุ่มการงานอาชีพ</span>
+              <div class="subject-name">การงานอาชีพ & ทักษะอาชีพ</div>
+              <div class="subject-grade">การงาน ม.2/1 (2 คาบ), ทักษะอาชีพ ม.1/1 (2 คาบ), ตลาดนัดอาชีพ (2 คาบ)</div>
             </div>
             <div class="subject-hours">
-              <span>กลุ่มสาระวิทยาศาสตร์ฯ</span>
-              <span>3 ชั่วโมง/สัปดาห์</span>
+              <span>กลุ่มสาระการงานอาชีพ</span>
+              <span>6 คาบ/สัปดาห์</span>
             </div>
           </div>
 
-          <div class="subject-card">
+          <div class="subject-card" style="border-left-color: #0284c7;">
             <div>
-              <span class="subject-code">ว21102, 22102, 23102</span>
-              <div class="subject-name">วิทยาการคำนวณ มัธยมต้น</div>
-              <div class="subject-grade">มัธยมศึกษาปีที่ 1, 2, 3</div>
+              <span class="subject-code" style="background:#e0f2fe; color:#0369a1;">ทักษะชีวิตและผู้เรียน</span>
+              <div class="subject-name">กิจกรรมตามความสนใจ</div>
+              <div class="subject-grade">ส่งเสริมทักษะการเรียนรู้ ป.1, ป.2, ป.3, ป.5, ม.1</div>
             </div>
             <div class="subject-hours">
-              <span>สาระเทคโนโลยี</span>
-              <span>3 ชั่วโมง/สัปดาห์</span>
+              <span>กิจกรรมตามความสนใจ</span>
+              <span>6 คาบ/สัปดาห์</span>
             </div>
           </div>
 
-          <div class="subject-card">
+          <div class="subject-card" style="border-left-color: #d97706;">
             <div>
-              <span class="subject-code">ง21101, ง23101-102</span>
-              <div class="subject-name">การงานอาชีพ & เทคโนโลยี</div>
-              <div class="subject-grade">มัธยมศึกษาปีที่ 1 และ 3</div>
-            </div>
-            <div class="subject-hours">
-              <span>กลุ่มการงานอาชีพ</span>
-              <span>6 ชั่วโมง/สัปดาห์</span>
-            </div>
-          </div>
-
-          <div class="subject-card">
-            <div>
-              <span class="subject-code">กิจกรรมพัฒนาผู้เรียน</span>
-              <div class="subject-name">ลูกเสือ, เปตอง, แนะแนว, ซ่อมเสริม</div>
-              <div class="subject-grade">ประถมศึกษาปีที่ 6 และ มัธยมศึกษาตอนต้น</div>
+              <span class="subject-code" style="background:#fef3c7; color:#92400e;">กิจกรรมพัฒนาผู้เรียน</span>
+              <div class="subject-name">แนะแนว, ลูกเสือ, ชุมนุมเทคโนโลยี, สวดมนต์</div>
+              <div class="subject-grade">กิจกรรมพัฒนาผู้เรียนและคุณธรรม จริยธรรม</div>
             </div>
             <div class="subject-hours">
               <span>กิจกรรมพัฒนาผู้เรียน</span>
-              <span>5 ชั่วโมง/สัปดาห์</span>
+              <span>4 คาบ/สัปดาห์</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Tab 2: Support Workload -->
-      <div id="tab-support" class="tab-pane">
+      <!-- Tab 2: General Admin & OBEC Asset -->
+      <div id="tab-general-admin" class="tab-pane">
         <div class="timetable-grid">
-          <div class="subject-card" style="border-left-color: #10b981;">
+          <div class="subject-card" style="border-left-color: #0284c7;">
             <div>
-              <span class="subject-code">สารสนเทศดิจิทัล</span>
-              <div class="subject-name">การจัดทำระบบ ปพ.5 ดิจิทัล</div>
-              <div class="subject-grade">บันทึกคะแนนเก็บ วิเคราะห์ผู้เรียนรายบุคคล 100%</div>
+              <span class="subject-code" style="background:#e0f2fe; color:#0369a1;">งานพัสดุและสินทรัพย์</span>
+              <div class="subject-name">ผู้ดูแลระบบสารสนเทศสินทรัพย์สถานศึกษา (OBEC Asset)</div>
+              <div class="subject-grade">บริหารจัดการและควบคุมทะเบียนครุภัณฑ์ ทรัพย์สินโรงเรียน และอุปกรณ์เทคโนโลยีทางการศึกษาผ่านระบบ OBEC Asset สพฐ. ตรวจสอบสถานะและรายงานเป็นปัจจุบัน ๑๐๐%</div>
             </div>
             <div class="subject-hours">
-              <span>ฝ่ายวิชาการ</span>
-              <span>2 ชั่วโมง/สัปดาห์</span>
+              <span>ฝ่ายบริหารทั่วไป</span>
+              <span>ผู้ดูแลระบบหลัก (Admin)</span>
             </div>
           </div>
 
-          <div class="subject-card" style="border-left-color: #10b981;">
+          <div class="subject-card" style="border-left-color: #0284c7;">
             <div>
-              <span class="subject-code">ระบบดูแลช่วยเหลือ</span>
-              <div class="subject-name">ครูประจำชั้น ม.3 & เยี่ยมบ้าน 100%</div>
-              <div class="subject-grade">คัดกรอง SDQ, ทุนยากจนพิเศษ กสศ., แนะแนวเรียนต่อ</div>
+              <span class="subject-code" style="background:#e0f2fe; color:#0369a1;">อาคารสถานที่ & ความปลอดภัย</span>
+              <div class="subject-name">งานบริหารอาคารสถานที่และห้องปฏิบัติการคอมพิวเตอร์</div>
+              <div class="subject-grade">ดูแลระบบไฟฟ้า แสงสว่าง ระบบสำรองไฟ (UPS) การจัดวางเครื่องคอมพิวเตอร์ตามหลักสรีรศาสตร์ และมาตรการความปลอดภัยในห้องคอมพิวเตอร์</div>
             </div>
             <div class="subject-hours">
-              <span>ระบบดูแลช่วยเหลือนักเรียน</span>
-              <span>2 ชั่วโมง/สัปดาห์</span>
-            </div>
-          </div>
-
-          <div class="subject-card" style="border-left-color: #10b981;">
-            <div>
-              <span class="subject-code">PLC วิชาชีพ</span>
-              <div class="subject-name">ชุมชนแห่งการเรียนรู้ "Play and Learn"</div>
-              <div class="subject-grade">แก้ปัญหาทักษะเมาส์ ป.1 และพัฒนานวัตกรรมร่วมกับเพื่อนครู</div>
-            </div>
-            <div class="subject-hours">
-              <span>รวม 13 ชั่วโมงในรอบปี</span>
-              <span>2 ชั่วโมง/สัปดาห์</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tab 3: School Quality -->
-      <div id="tab-school" class="tab-pane">
-        <div class="timetable-grid">
-          <div class="subject-card" style="border-left-color: #2563eb;">
-            <div>
-              <span class="subject-code">หัวหน้างานสารสนเทศ ICT</span>
-              <div class="subject-name">บริหารจัดการห้องปฏิบัติการคอมพิวเตอร์และระบบเครือข่าย</div>
-              <div class="subject-grade">ดูแลโครงข่ายสัญญาณ Wi-Fi, LAN, เครื่องคอมพิวเตอร์ลูกข่าย ๒๕ เครื่อง และระบบสารสนเทศสถานศึกษา</div>
-            </div>
-            <div class="subject-hours">
-              <span>ความพร้อมใช้งาน ๙๘.๕%</span>
+              <span>ฝ่ายบริหารทั่วไป</span>
               <span>๒ ชั่วโมง/สัปดาห์</span>
             </div>
           </div>
 
           <div class="subject-card" style="border-left-color: #0284c7;">
             <div>
-              <span class="subject-code">วิทยากรแกนนำ ICT</span>
-              <div class="subject-name">อบรมเชิงปฏิบัติการพัฒนาเว็บไซต์ชื่อโดเมน .th สำหรับบุคลากร</div>
-              <div class="subject-grade">จัดอบรมการสร้างเว็บไซต์และบริหารจัดการโดเมนเพื่อสถานศึกษา (.sch.th) ร่วมกับมูลนิธิ THNIC และ สพป.กพ.๒ ณ ห้องคอมพิวเตอร์</div>
+              <span class="subject-code" style="background:#e0f2fe; color:#0369a1;">งานธุรการ & สารบรรณ</span>
+              <div class="subject-name">งานสารบรรณฝ่ายบริหารทั่วไปและประสานงานองค์กร</div>
+              <div class="subject-grade">จัดทำหนังสือราชการ คำสั่ง บันทึกข้อความ และประสานงานภายนอกกับสำนักงานเขตพื้นที่การศึกษาประถมศึกษากำแพงเพชร เขต ๒ และชุมชน</div>
             </div>
             <div class="subject-hours">
-              <span>สารสนเทศสถานศึกษา</span>
-              <span>๑ ชั่วโมง/สัปดาห์</span>
-            </div>
-          </div>
-
-          <div class="subject-card" style="border-left-color: #10b981;">
-            <div>
-              <span class="subject-code">สัมพันธ์ชุมชน & เครือข่าย</span>
-              <div class="subject-name">โครงการส่งเสริมความสัมพันธ์ชุมชน & ประชุมคณะกรรมการสถานศึกษา</div>
-              <div class="subject-grade">ประธานดำเนินโครงการส่งเสริมความสัมพันธ์ชุมชน ปีการศึกษา ๒๕๖๘ (สรุป ๒๖ มี.ค. ๖๙ ผู้ตอบ ๘๐ คน พึงพอใจ ๑๐๐%) และร่วมประชุมคณะกรรมการสถานศึกษา ๒ รอบ</div>
-            </div>
-            <div class="subject-hours">
-              <span>รายงานโครงการ E04</span>
-              <span>๑ ชั่วโมง/สัปดาห์</span>
+              <span>ฝ่ายบริหารทั่วไป</span>
+              <span>๒ ชั่วโมง/สัปดาห์</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Tab 4: Policy Alignment -->
-      <div id="tab-policy" class="tab-pane">
+      <!-- Tab 3: School ICT & Internet Network -->
+      <div id="tab-ict-system" class="tab-pane">
+        <div class="timetable-grid">
+          <div class="subject-card" style="border-left-color: #2563eb;">
+            <div>
+              <span class="subject-code" style="background:#eff6ff; color:#1d4ed8;">หัวหน้างานสารสนเทศ ICT</span>
+              <div class="subject-name">พัฒนาระบบไอซีทีและฐานข้อมูลสารสนเทศโรงเรียน</div>
+              <div class="subject-grade">ออกแบบ วางแผน และพัฒนาระบบเทคโนโลยีสารสนเทศเพื่อการบริหารจัดการและการศึกษา บูรณาการระบบ DMC, EMIS, B-OBEC และระบบ ปพ.5 ดิจิทัล</div>
+            </div>
+            <div class="subject-hours">
+              <span>งานเทคโนโลยีสารสนเทศ</span>
+              <span>หัวหน้างาน ICT</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #2563eb;">
+            <div>
+              <span class="subject-code" style="background:#eff6ff; color:#1d4ed8;">โครงสร้างพื้นฐานดิจิทัล</span>
+              <div class="subject-name">บริหารจัดการระบบอินเทอร์เน็ตและเครือข่ายโรงเรียน</div>
+              <div class="subject-grade">ควบคุมดูแลโครงข่ายสัญญาณอินเทอร์เน็ตความเร็วสูง ระบบสายสัญญาณ LAN และจุดกระจายสัญญาณ Wi-Fi ครอบคลุมทุกอาคารเรียน ความพร้อมใช้งาน ๙๘.๕%</div>
+            </div>
+            <div class="subject-hours">
+              <span>งานเครือข่ายอินเทอร์เน็ต</span>
+              <span>ผู้ดูแลระบบเน็ตเวิร์ก</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #2563eb;">
+            <div>
+              <span class="subject-code" style="background:#eff6ff; color:#1d4ed8;">งานเทคโนโลยีภายในโรงเรียน</span>
+              <div class="subject-name">บำรุงรักษาคอมพิวเตอร์และอุปกรณ์เทคโนโลยีในสถานศึกษา</div>
+              <div class="subject-grade">ดูแล บำรุงรักษา และซ่อมบำรุงเชิงรุกเครื่องคอมพิวเตอร์แม่ข่ายและลูกข่าย ๒๕ เครื่อง รวมถึงจอโปรเจกเตอร์ สมาร์ททีวี และอุปกรณ์เทคโนโลยีในทุกห้องเรียน</div>
+            </div>
+            <div class="subject-hours">
+              <span>งานโสตทัศนูปกรณ์ & คอมพิวเตอร์</span>
+              <span>พร้อมใช้งาน ๑๐๐%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: PR, Video & Website -->
+      <div id="tab-pr-video" class="tab-pane">
+        <div class="timetable-grid">
+          <div class="subject-card" style="border-left-color: #059669;">
+            <div>
+              <span class="subject-code" style="background:#ecfdf5; color:#047857;">งานสื่อและประชาสัมพันธ์</span>
+              <div class="subject-name">งานถ่ายภาพและบันทึกวิดีโอกิจกรรมโรงเรียน</div>
+              <div class="subject-grade">บันทึกภาพนิ่งและภาพเคลื่อนไหวคุณภาพสูงในทุกกิจกรรมราชการ วันสำคัญ กิจกรรมวิชาการ ค่ายการเรียนรู้ และพิธีการต่างๆ เพื่อจัดทำคลังข้อมูลสารสนเทศ</div>
+            </div>
+            <div class="subject-hours">
+              <span>งานประชาสัมพันธ์โรงเรียน</span>
+              <span>ช่างภาพ & ฝ่ายบันทึกภาพ</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #059669;">
+            <div>
+              <span class="subject-code" style="background:#ecfdf5; color:#047857;">งานวิดีโอ & สื่อมัลติมีเดีย</span>
+              <div class="subject-name">ผลิตและตัดต่อวิดีโอนำเสนอโรงเรียนและสื่อดิจิทัล</div>
+              <div class="subject-grade">ผลิต ตัดต่อ และเผยแพร่วิดีโอสรุปผลการปฏิบัติงาน วิดีทัศน์แนะนำโรงเรียน และสื่อวิดีโอเพื่อการจัดการเรียนรู้ Active Learning เผยแพร่ผ่านสื่อออนไลน์</div>
+            </div>
+            <div class="subject-hours">
+              <span>งานวิดีโอ & โปรดักชัน</span>
+              <span>ผู้ผลิตสื่อดิจิทัล</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #059669;">
+            <div>
+              <span class="subject-code" style="background:#ecfdf5; color:#047857;">School Webmaster</span>
+              <div class="subject-name">จัดทำและพัฒนาเว็บไซต์โรงเรียนบ้านคลองมดแดง</div>
+              <div class="subject-grade">ออกแบบ พัฒนา และดูแลเว็บไซต์โรงเรียนภายใต้ชื่อโดเมนทางการ (.sch.th) ร่วมกับมูลนิธิ THNIC อัปเดตข้อมูลข่าวสาร ประกาศ และผลงานผู้เรียนสู่สาธารณะ</div>
+            </div>
+            <div class="subject-hours">
+              <span>งานพัฒนาเว็บไซต์</span>
+              <span>Webmaster ประจำโรงเรียน</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 5: Student Care & PLC -->
+      <div id="tab-support-care" class="tab-pane">
         <div class="timetable-grid">
           <div class="subject-card" style="border-left-color: #8b5cf6;">
             <div>
-              <span class="subject-code">Active Learning</span>
-              <div class="subject-name">ขับเคลื่อนการเรียนรู้เชิงรุก</div>
-              <div class="subject-grade">บูรณาการเกมมิฟิเคชัน (Gamification) ให้นักเรียนลงมือปฏิบัติจริง</div>
+              <span class="subject-code" style="background:#f5f3ff; color:#6d28d9;">ระบบดูแลช่วยเหลือ</span>
+              <div class="subject-name">ครูประจำชั้น มัธยมศึกษาปีที่ 3 & เยี่ยมบ้าน 100%</div>
+              <div class="subject-grade">คัดกรอง SDQ รายบุคคล เยี่ยมบ้านนักเรียนครบ ๑๐๐% ประสานงานทุนการศึกษายากจนพิเศษ กสศ. และจัดกิจกรรมแนะแนวการศึกษาต่อ</div>
             </div>
             <div class="subject-hours">
-              <span>นโยบาย สพฐ.</span>
-              <span>1 ชั่วโมง/สัปดาห์</span>
+              <span>ระบบดูแลช่วยเหลือนักเรียน</span>
+              <span>๒ ชั่วโมง/สัปดาห์</span>
             </div>
           </div>
 
           <div class="subject-card" style="border-left-color: #8b5cf6;">
             <div>
-              <span class="subject-code">Digital Literacy</span>
-              <div class="subject-name">ส่งเสริมทักษะดิจิทัล & โค้ดดิ้ง</div>
-              <div class="subject-grade">ฝึกการคิดเชิงคำนวณ (Computational Thinking) ผ่าน Code.org & Scratch</div>
+              <span class="subject-code" style="background:#f5f3ff; color:#6d28d9;">PLC วิชาชีพ</span>
+              <div class="subject-name">ชุมชนแห่งการเรียนรู้ทางวิชาชีพ "Play and Learn"</div>
+              <div class="subject-grade">จัดกิจกรรม PLC ร่วมกับคณะครู แลกเปลี่ยนแนวทางการแก้ปัญหาทักษะคอมพิวเตอร์ และพัฒนานวัตกรรม Gamification (รวม ๑๓ ชั่วโมงในรอบปี)</div>
             </div>
             <div class="subject-hours">
-              <span>นโยบายกระทรวงศึกษาฯ</span>
-              <span>1 ชั่วโมง/สัปดาห์</span>
+              <span>การพัฒนาวิชาชีพครู</span>
+              <span>๒ ชั่วโมง/สัปดาห์</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #8b5cf6;">
+            <div>
+              <span class="subject-code" style="background:#f5f3ff; color:#6d28d9;">นโยบายการศึกษา</span>
+              <div class="subject-name">ขับเคลื่อน Active Learning & Digital Literacy</div>
+              <div class="subject-grade">ตอบสนองนโยบาย สพฐ. และกระทรวงศึกษาธิการ ในการจัดการเรียนรู้เชิงรุก เสริมสร้างสมรรถนะการคิดเชิงคำนวณและทักษะดิจิทัลแก่ผู้เรียน</div>
+            </div>
+            <div class="subject-hours">
+              <span>งานตอบสนองนโยบาย</span>
+              <span>๑ ชั่วโมง/สัปดาห์</span>
             </div>
           </div>
         </div>
@@ -4630,7 +5057,7 @@
         <div class="subject-card" style="border-left-color: #475569;">
           <div>
             <span class="subject-code" style="color: #334155; background: #f1f5f9;">DOCX | คำสั่งโรงเรียน</span>
-            <div class="subject-name">คำสั่งภาระงานสอน ๒๓ ชั่วโมง/สัปดาห์</div>
+            <div class="subject-name">คำสั่งภาระงานสอนและตารางสอน ๒๕ คาบ/สัปดาห์</div>
             <div class="subject-grade">ตารางสอนและคำสั่งมอบหมายภาระหน้าที่ทางการศึกษา ภาคเรียนที่ ๒/๒๕๖๘ และ ๑/๒๕๖๙</div>
           </div>
           <div class="subject-hours" style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
