@@ -15,15 +15,15 @@
   th{background:linear-gradient(135deg,#4a1220,#8a2333);color:#fff;font-family:'Prompt';
     font-weight:600;font-size:13px;padding:10px 8px;text-align:center}
   th:first-child{width:92px}
-  td{padding:8px 7px;border:1px solid #f5e8e2;text-align:center;vertical-align:middle;height:58px;transition:.2s}
-  td:hover{transform:scale(1.03);box-shadow:0 4px 12px rgba(95,27,41,.18);position:relative;z-index:1}
-  .period{background:#fdf6f1;font-family:'Prompt';font-weight:600;color:#5f1b29;font-size:12.5px}
+  td{padding:8px 7px;border:1px solid #f5e8e2;text-align:center;vertical-align:middle;height:48px;transition:.2s}
+  td:hover{transform:scale(1.02);box-shadow:0 4px 12px rgba(95,27,41,.18);position:relative;z-index:1}
+  .period{background:#fdf6f1;font-family:'Prompt';font-weight:600;color:#5f1b29;font-size:13px}
   .period small{display:block;font-family:'Sarabun';font-weight:400;color:#9b7c74;font-size:11px}
   .s b{display:block;font-weight:600;font-size:12.5px;line-height:1.35;color:#43302e}
   .s span{color:#8a6a5e;font-size:11px}
   /* หมวดวิชา */
   .com{background:#fde7ef}      /* วิทยาการคำนวณ (มัธยม) */
-  .tech{background:#e0f5f3}     /* เทคโนโลยี (ประถม) */
+  .tech{background:#e0f5f3}     /* เทคโนโลยี / วิทยาศาสตร์ (ประถม) */
   .work{background:#e3edfb}     /* การงานอาชีพ / ทักษะอาชีพ */
   .interest{background:#eef3fe} /* กิจกรรมตามความสนใจ */
   .act{background:#fff3d1}      /* กิจกรรมพัฒนาผู้เรียน */
@@ -33,32 +33,42 @@
     background:#fff;border:1px solid #f0e0d8;border-radius:999px;padding:4px 12px}
   .dot{width:12px;height:12px;border-radius:4px;display:inline-block}
   .note{text-align:center;font-size:12px;color:#9b7c74;margin-top:8px}
+  .duties-box{background:#fdf6f1; border:1px solid #f0e0d8; border-radius:12px; padding:12px 16px; margin-top:16px; font-size:12.5px; line-height:1.6; color:#5f4a46}
+  .duties-box b{color:#5f1b29}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h2>📅 สรุปภาระงานสอนตามแบบ PA</h2>
-  <div class="sub">นายอนันตชัย เพ็ชรรี่ · โรงเรียนบ้านคลองมดแดง · ข้อมูลที่ยืนยันจาก PA และภาระงาน 2568 รวม 23 ชั่วโมง/สัปดาห์</div>
+  <h2>📅 สรุปภาระงานสอนตามตารางสอนและหน้าที่ในสถานศึกษา</h2>
+  <div class="sub">นายอนันตชัย เพ็ชรรี่ · โรงเรียนบ้านคลองมดแดง · ภาระงานสอนตามตารางสอน ๒๕ คาบ/สัปดาห์ (ภาระงานรวม ๓๗ ชั่วโมง/สัปดาห์)</div>
   <div class="scroll">
   <table>
-    <tr><th>หมวดภาระงาน</th><th>รายวิชา/กิจกรรม</th><th>ระดับชั้น</th><th style="width:140px">ชั่วโมง/สัปดาห์</th></tr>
-    <tr><td class="s tech"><b>ประถมศึกษา</b></td><td>วิทยาศาสตร์</td><td>ป.4, ป.5</td><td class="s"><b>4</b></td></tr>
-    <tr><td class="s tech"><b>ประถมศึกษา</b></td><td>วิทยาการคำนวณ</td><td>ป.1, ป.2, ป.4, ป.5</td><td class="s"><b>5</b></td></tr>
-    <tr><td class="s tech"><b>ประถมศึกษา</b></td><td>ซ่อมเสริม</td><td>ป.6</td><td class="s"><b>1</b></td></tr>
-    <tr><td class="s com"><b>มัธยมศึกษา</b></td><td>ออกแบบและเทคโนโลยี</td><td>ม.1, ม.2, ม.3</td><td class="s"><b>3</b></td></tr>
-    <tr><td class="s work"><b>มัธยมศึกษา</b></td><td>งานอาชีพ/ทักษะอาชีพ/ส่งเสริมทักษะอาชีพ</td><td>ม.1, ม.3</td><td class="s"><b>6</b></td></tr>
-    <tr><td class="s work"><b>มัธยมศึกษา</b></td><td>ซ่อมเสริม</td><td>ม.3</td><td class="s"><b>1</b></td></tr>
-    <tr><td class="s act"><b>กิจกรรมพัฒนาผู้เรียน</b></td><td>แนะแนว, ชุมนุมเปตอง, ลูกเสือ-เนตรนารี</td><td>ม.3 / ตามแผนกิจกรรม</td><td class="s"><b>3</b></td></tr>
-    <tr><td class="period" colspan="3">รวมชั่วโมงสอนตามตารางสอนในแบบ PA</td><td class="period"><b>23</b></td></tr>
+    <tr><th>ระดับชั้น</th><th>กลุ่มสาระ / รายวิชา</th><th>ระดับชั้น</th><th style="width:140px">คาบ/สัปดาห์</th></tr>
+    <tr><td class="s tech"><b>ประถมศึกษา</b></td><td>วิทยาการคำนวณ (ว ๑๑๑๐๑, ว ๑๒๑๐๑, ว ๑๔๑๐๑, ว ๑๕๑๐๑)</td><td>ป.๑, ป.๒, ป.๔, ป.๕</td><td class="s"><b>๕</b></td></tr>
+    <tr><td class="s tech"><b>ประถมศึกษา</b></td><td>วิทยาศาสตร์พื้นฐาน (ว ๑๔๑๐๑, ว ๑๕๑๐๑)</td><td>ป.๔, ป.๕</td><td class="s"><b>๔</b></td></tr>
+    <tr><td class="s tech"><b>ประถมศึกษา</b></td><td>กิจกรรมซ่อมเสริม</td><td>ป.๖</td><td class="s"><b>๑</b></td></tr>
+    <tr><td class="s com"><b>มัธยมศึกษา</b></td><td>วิทยาการคำนวณ / ออกแบบและเทคโนโลยี (ว ๒๑๑๐๑, ว ๒๒๑๐๑, ว ๒๓๑๐๑)</td><td>ม.๑, ม.๒, ม.๓</td><td class="s"><b>๓</b></td></tr>
+    <tr><td class="s work"><b>มัธยมศึกษา</b></td><td>การงานอาชีพ (ง ๒๑๑๐๑, ง ๒๓๑๐๑)</td><td>ม.๑, ม.๓</td><td class="s"><b>๔</b></td></tr>
+    <tr><td class="s work"><b>มัธยมศึกษา</b></td><td>ส่งเสริมทักษะอาชีพ / ซ่อมเสริม</td><td>ม.๑, ม.๓</td><td class="s"><b>๔</b></td></tr>
+    <tr><td class="s act"><b>กิจกรรมพัฒนาผู้เรียน</b></td><td>แนะแนว (ม.๑), ชุมนุมคอมพิวเตอร์และเทคโนโลยี, ลูกเสือ-เนตรนารี, เพื่อสังคมฯ</td><td>ม.๑–๓ (ครูประจำชั้น ม.๑)</td><td class="s"><b>๔</b></td></tr>
+    <tr><td class="period" colspan="3">รวมชั่วโมงสอนตามตารางสอน (เป็นไปตามเกณฑ์ ก.ค.ศ. กำหนด)</td><td class="period"><b>๒๕ คาบ/สัปดาห์</b></td></tr>
   </table>
   </div>
   <div class="legend">
-    <span class="lg"><span class="dot" style="background:#fde7ef"></span>วิทยาการคำนวณ (มัธยม)</span>
-    <span class="lg"><span class="dot" style="background:#e0f5f3"></span>เทคโนโลยี (ประถม)</span>
-    <span class="lg"><span class="dot" style="background:#e3edfb"></span>การงานอาชีพ/ทักษะอาชีพ</span>
-    <span class="lg"><span class="dot" style="background:#fff3d1"></span>กิจกรรมพัฒนาผู้เรียน/คุณธรรม</span>
+    <span class="lg"><span class="dot" style="background:#fde7ef"></span>วิทยาการคำนวณ / ออกแบบ (มัธยม)</span>
+    <span class="lg"><span class="dot" style="background:#e0f5f3"></span>เทคโนโลยี / วิทยาศาสตร์ (ประถม)</span>
+    <span class="lg"><span class="dot" style="background:#e3edfb"></span>การงานอาชีพ / ส่งเสริมทักษะอาชีพ</span>
+    <span class="lg"><span class="dot" style="background:#fff3d1"></span>กิจกรรมพัฒนาผู้เรียน / ประจำชั้น ม.๑</span>
   </div>
-  <div class="note">หากต้องการแสดงตารางรายคาบปีการศึกษา 2569 ให้แนบรูป/ไฟล์ตารางสอนจริงจากโรงเรียนก่อน แล้วค่อยเปลี่ยน embed นี้เป็นตารางรายวัน</div>
+
+  <div class="duties-box">
+    <b>หน้าที่พิเศษและภาระงานที่ได้รับมอบหมาย:</b><br>
+    • <b>ครูประจำชั้นมัธยมศึกษาปีที่ ๑ (ม.๑):</b> เยี่ยมบ้าน ๑๐๐%, คัดกรอง SDQ ๑๐๐%, ทุนการศึกษา กสศ. (ทุนเสมอภาค) ๑๐๐%<br>
+    • <b>ฝ่ายบริหารทั่วไป (OBEC Asset):</b> ดูแลและบันทึกระบบสารสนเทศทรัพย์สินราชการ <b>เฉพาะ "อาคารเรียน"</b> ให้เป็นปัจจุบัน<br>
+    • <b>หัวหน้างาน ICT & อินเทอร์เน็ตโรงเรียน:</b> ดูแลระบบ LAN/Wi-Fi ความพร้อมใช้งาน ๙๘.๕%, ห้องคอมพิวเตอร์, Smart TV, เว็บไซต์โรงเรียน (.sch.th)<br>
+    • <b>งานประชาสัมพันธ์และวิดีโอ:</b> ถ่ายภาพนิ่ง วิดีโอ โดรนถ่ายภาพมุมสูง ตัดต่อสื่อประชาสัมพันธ์ แอดมินเพจ Facebook โรงเรียน<br>
+    • <b>งานโสตทัศนูปกรณ์:</b> ควบคุมระบบเครื่องเสียงหน้าเสาธง พิธีการ งานลูกเสือ และงานชุมชนสัมพันธ์
+  </div>
 </div>
 </body>
 </html>
