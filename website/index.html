@@ -18,6 +18,18 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="firebase-config.js"></script>
 
+    <!-- Site Access Passcode Pre-Check (Anti-Flicker Gate) -->
+  <script>
+    (function() {
+      try {
+        var isUnlocked = sessionStorage.getItem('pa_site_unlocked') === 'true' || localStorage.getItem('pa_site_unlocked') === 'true';
+        if (!isUnlocked) {
+          document.documentElement.classList.add('site-locked');
+        }
+      } catch(e) {}
+    })();
+  </script>
+
   <!-- Anti-Stale Cache Auto-Purge -->
   <script>
     (function() {
@@ -2735,9 +2747,178 @@
       }
     }
 
+  
+    /* === SITE ACCESS PASSCODE GATE (SECURITY PROTECTION) === */
+    html.site-locked, body.site-locked {
+      overflow: hidden !important;
+      height: 100vh !important;
+      touch-action: none !important;
+    }
+    body.site-locked > *:not(#site-lock-overlay) {
+      filter: blur(24px) brightness(0.65) !important;
+      pointer-events: none !important;
+      user-select: none !important;
+      -webkit-user-select: none !important;
+      transition: filter 0.4s ease;
+    }
+    #site-lock-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999999;
+      background: radial-gradient(circle at 50% 35%, rgba(15, 39, 74, 0.96) 0%, rgba(10, 25, 47, 0.98) 100%);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    #site-lock-overlay.unlocked {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .site-lock-card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2);
+      width: 100%;
+      max-width: 440px;
+      padding: 36px 30px 28px;
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+      animation: lockCardPop 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes lockCardPop {
+      0% { transform: scale(0.92) translateY(12px); opacity: 0; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .site-lock-card.shake {
+      animation: lockCardShake 0.45s ease;
+    }
+    @keyframes lockCardShake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-9px); }
+      40%, 80% { transform: translateX(9px); }
+    }
+    .lock-input-group {
+      text-align: left;
+      margin-bottom: 16px;
+    }
+    .lock-input-group label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+    .lock-input-wrap {
+      position: relative;
+    }
+    .lock-input-field {
+      width: 100%;
+      padding: 12px 42px 12px 14px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 12px;
+      font-size: 0.96rem;
+      font-family: inherit;
+      transition: all 0.2s;
+      outline: none;
+      box-sizing: border-box;
+      background: #f8fafc;
+    }
+    .lock-input-field:focus {
+      background: #ffffff;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+    .lock-btn-submit {
+      width: 100%;
+      padding: 13px;
+      background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 0.96rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .lock-btn-submit:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+      background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+    }
+    .lock-btn-submit:active {
+      transform: translateY(1px);
+    }
+
   </style>
 </head>
 <body>
+
+  <!-- Site Passcode Protection Overlay Modal (Hashed SHA-256) -->
+  <div id="site-lock-overlay">
+    <div class="site-lock-card">
+      <div style="margin-bottom: 14px; position: relative; display: inline-block;">
+        <img src="assets/images/profile-krujames.jpg" alt="ครูเจมส์ นายอนันตชัย เพ็ชรรี่" style="width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 3.5px solid #38bdf8; box-shadow: 0 8px 24px rgba(37, 99, 235, 0.32);">
+        <span style="position: absolute; bottom: 2px; right: 2px; background: #2563eb; color: white; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+          <i data-lucide="lock" style="width: 13px; height: 13px;"></i>
+        </span>
+      </div>
+      
+      <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #eff6ff; color: #1d4ed8; border-radius: 20px; font-size: 0.78rem; font-weight: 700; margin-bottom: 12px; border: 1px solid #bfdbfe;">
+        <i data-lucide="shield-check" style="width: 14px; height: 14px;"></i> ระบบความปลอดภัย PA Portfolio
+      </div>
+      
+      <h2 style="font-size: 1.35rem; font-weight: 700; color: #0a192f; margin-bottom: 4px; font-family: 'Prompt', sans-serif;">รายงานผลการพัฒนางาน PA</h2>
+      <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 22px;">ครูเจมส์ นายอนันตชัย เพ็ชรรี่ | โรงเรียนบ้านคลองมดแดง</p>
+
+      <div class="lock-input-group">
+        <label for="site-passcode-input">
+          กรุณากรอกรหัสผ่านเพื่อเข้าชมเว็บไซต์:
+        </label>
+        <div class="lock-input-wrap">
+          <input type="password" id="site-passcode-input" class="lock-input-field" placeholder="กรอกรหัสผ่านเข้าชมเว็บไซต์" maxlength="40" onkeydown="if(event.key==='Enter') unlockSite()">
+          <button type="button" onclick="toggleSitePasswordVisibility()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #64748b; cursor: pointer; padding: 4px;" title="แสดง/ซ่อนรหัสผ่าน">
+            <i data-lucide="eye" id="site-pwd-eye" style="width: 18px; height: 18px;"></i>
+          </button>
+        </div>
+        <div id="site-auth-error" style="display: none; color: #dc2626; font-size: 0.82rem; margin-top: 6px; align-items: center; gap: 4px;">
+          <i data-lucide="alert-circle" style="width: 14px; height: 14px;"></i> <span>รหัสผ่านไม่ถูกต้อง กรุณาตรวจสอบอีกครั้ง</span>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; font-size: 0.82rem; color: #64748b;">
+        <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer; user-select: none;">
+          <input type="checkbox" id="site-remember-device" checked style="accent-color: #2563eb; width: 15px; height: 15px; cursor: pointer;">
+          <span>จดจำการเข้าสู่ระบบในอุปกรณ์นี้</span>
+        </label>
+      </div>
+
+      <button type="button" id="site-unlock-btn" class="lock-btn-submit" onclick="unlockSite()">
+        <i data-lucide="unlock" style="width: 16px; height: 16px;"></i> ปลดล็อกและเข้าชมเว็บไซต์
+      </button>
+
+      <div style="margin-top: 18px; font-size: 0.76rem; color: #64748b; display: flex; align-items: center; justify-content: center; gap: 4px;">
+        <i data-lucide="shield" style="width: 12px; height: 12px; color: #10b981;"></i> รหัสผ่านเข้ารหัสความปลอดภัยด้วยอัลกอริทึม SHA-256
+      </div>
+
+      <div style="margin-top: 14px; padding-top: 14px; border-top: 1px solid #f1f5f9; display: flex; align-items: center; justify-content: center; gap: 6px;">
+        <a href="admin.html" style="color: #2563eb; font-size: 0.82rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+          <i data-lucide="settings" style="width: 13px; height: 13px;"></i> เข้าสู่ระบบผู้ดูแลระบบ (Admin Portal)
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Top Progress Bar -->
   <div id="progress-bar"></div>
@@ -2757,9 +2938,15 @@
         <a href="assets/docs/รายงาน PA 2569 ครูอนันตชัย ป1 11คน ฉบับปรับปรุง.pdf" target="_blank" class="gov-link-item" title="เปิดอ่านเล่มรายงาน PDF ๓๕ หน้า">
           <i data-lucide="file-text" style="width: 12px; height: 12px;"></i> เล่ม PA (๓๕ หน้า)
         </a>
-        <a href="https://krujamesoncom-website.vercel.app/admin" target="_blank" class="gov-link-item" title="เข้าสู่ระบบบริหารวิชาการ แผน หลักสูตร บันทึกหลังแผน และ ปพ.๕ ดิจิทัล">
-          <i data-lucide="shield-check" style="width: 12px; height: 12px; color: #60a5fa;"></i> ระบบวิชาการ & ปพ.๕ (Admin)
+        <a href="admin.html" class="gov-link-item" title="เข้าสู่ระบบบริหารจัดการข้อมูล PA (Admin Portal)">
+          <i data-lucide="settings" style="width: 12px; height: 12px; color: #38bdf8;"></i> ระบบจัดการ PA (Admin)
         </a>
+        <a href="https://krujamesoncom-website.vercel.app/admin" target="_blank" class="gov-link-item" title="เข้าสู่ระบบบริหารวิชาการ แผน หลักสูตร บันทึกหลังแผน และ ปพ.๕ ดิจิทัล">
+          <i data-lucide="shield-check" style="width: 12px; height: 12px; color: #60a5fa;"></i> ระบบวิชาการ & ปพ.๕
+        </a>
+        <button type="button" onclick="lockSiteNow()" class="gov-link-item" style="background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.35); border-radius: 6px; cursor: pointer; color: #fca5a5; font-family: inherit; font-size: 0.78rem; padding: 2px 8px; display: inline-flex; align-items: center; gap: 4px;" title="ออกจากระบบและล็อกหน้าเว็บทันที">
+          <i data-lucide="lock" style="width: 12px; height: 12px; color: #f87171;"></i> ล็อกหน้าเว็บ
+        </button>
 
       </div>
     </div>
@@ -2798,6 +2985,9 @@
         </a>
         <button class="btn-header btn-chime" onclick="playPositiveChime()" title="เสียงเอฟเฟกต์ Gamification">
           <i data-lucide="bell" style="width: 16px; height: 16px;"></i>
+        </button>
+        <button class="btn-header btn-lock" onclick="lockSiteNow()" title="ล็อกหน้าเว็บ (ออกจากระบบ)" style="background: rgba(239, 68, 68, 0.08); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.25);">
+          <i data-lucide="lock" style="width: 16px; height: 16px;"></i>
         </button>
         <button class="mobile-menu-btn" onclick="toggleMobileNav()">
           <i data-lucide="menu"></i>
@@ -6352,6 +6542,196 @@
     window.addEventListener('load', () => {
       setTimeout(checkCloudCmsSync, 1000);
     });
+  </script>
+
+
+  <!-- Floating Quick Control Bar (Admin & Lock) -->
+  <div id="floating-control-bar" style="position: fixed; bottom: 24px; left: 24px; z-index: 9999; display: flex; align-items: center; gap: 8px;">
+    <a href="admin.html" class="floating-admin-btn" title="เข้าสู่ระบบจัดการข้อมูล PA (Admin)">
+      <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
+      <span>จัดการข้อมูล (Admin)</span>
+    </a>
+    <button type="button" onclick="lockSiteNow()" title="ล็อกหน้าเว็บทันที" style="background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); color: #f87171; border: 1.5px solid rgba(248, 113, 113, 0.4); border-radius: 50%; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: all 0.2s;">
+      <i data-lucide="lock" style="width: 18px; height: 18px;"></i>
+    </button>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- CRYPTOGRAPHIC SITE SECURITY (SHA-256 HASHED) -->
+  <!-- ========================================== -->
+  <script>
+    // Passwords are encrypted with SHA-256 cryptographic hashes - zero plaintext passwords in source code!
+    const SITE_PASS_HASH = "6a0718739ef0458e303caf10b2c71d2aa3791ea369929630306010763906091d";
+
+    function sha256Fallback(ascii) {
+      function rightRotate(value, amount) { return (value >>> amount) | (value << (32 - amount)); }
+      var mathPow = Math.pow, maxWord = mathPow(2, 32), lengthProperty = 'length', i, j, result = '', words = [];
+      var asciiBitLength = ascii[lengthProperty] * 8;
+      var hash = sha256Fallback.h = sha256Fallback.h || [], k = sha256Fallback.k = sha256Fallback.k || [];
+      var primeCounter = k[lengthProperty], isComposite = {};
+      for (var candidate = 2; primeCounter < 64; candidate++) {
+        if (!isComposite[candidate]) {
+          for (i = 0; i < 313; i += candidate) { isComposite[i] = candidate; }
+          hash[primeCounter] = (mathPow(candidate, .5) * maxWord) | 0;
+          k[primeCounter++] = (mathPow(candidate, 1/3) * maxWord) | 0;
+        }
+      }
+      ascii += '\x80';
+      while (ascii[lengthProperty] % 64 - 56) ascii += '\x00';
+      for (i = 0; i < ascii[lengthProperty]; i++) {
+        j = ascii.charCodeAt(i);
+        if (j >> 8) return;
+        words[i >> 2] |= j << ((3 - i % 4) * 8);
+      }
+      words[words[lengthProperty]] = ((asciiBitLength / maxWord) | 0);
+      words[words[lengthProperty]] = (asciiBitLength);
+      for (j = 0; j < words[lengthProperty];) {
+        var w = words.slice(j, j += 16), oldHash = hash;
+        hash = hash.slice(0, 8);
+        for (i = 0; i < 64; i++) {
+          var i2 = i + j, w15 = w[i - 15], w2 = w[i - 2], a = hash[0], e = hash[4];
+          var temp1 = hash[7] + (rightRotate(e, 6) ^ rightRotate(e, 11) ^ rightRotate(e, 25)) + ((e & hash[5]) ^ ((~e) & hash[6])) + k[i]
+            + (w[i] = (i < 16) ? w[i] : (w[i - 16] + (rightRotate(w15, 7) ^ rightRotate(w15, 18) ^ (w15 >>> 3)) + w[i - 7] + (rightRotate(w2, 17) ^ rightRotate(w2, 19) ^ (w2 >>> 10))) | 0);
+          var temp2 = (rightRotate(a, 2) ^ rightRotate(a, 13) ^ rightRotate(a, 22)) + ((a & hash[1]) ^ (a & hash[2]) ^ (hash[1] & hash[2]));
+          hash = [(temp1 + temp2) | 0].concat(hash);
+          hash[4] = (hash[4] + temp1) | 0;
+        }
+        for (i = 0; i < 8; i++) { hash[i] = (hash[i] + oldHash[i]) | 0; }
+      }
+      for (i = 0; i < 8; i++) {
+        for (j = 3; j + 1; j--) {
+          var b = (hash[i] >> (j * 8)) & 255;
+          result += ((b < 16) ? 0 : '') + b.toString(16);
+        }
+      }
+      return result;
+    }
+
+    async function computeSHA256(str) {
+      if (typeof crypto !== 'undefined' && crypto.subtle) {
+        try {
+          const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+          return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        } catch (e) {}
+      }
+      return sha256Fallback(str);
+    }
+
+    function toggleSitePasswordVisibility() {
+      const inp = document.getElementById('site-passcode-input');
+      const eye = document.getElementById('site-pwd-eye');
+      if (inp.type === 'password') {
+        inp.type = 'text';
+        if (eye) eye.setAttribute('data-lucide', 'eye-off');
+      } else {
+        inp.type = 'password';
+        if (eye) eye.setAttribute('data-lucide', 'eye');
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    async function unlockSite() {
+      const inp = document.getElementById('site-passcode-input');
+      const err = document.getElementById('site-auth-error');
+      const btn = document.getElementById('site-unlock-btn');
+      const remember = document.getElementById('site-remember-device').checked;
+      const val = inp.value.trim();
+
+      if (!val) {
+        if (err) {
+          err.style.display = 'flex';
+          err.querySelector('span').innerText = 'กรุณากรอกรหัสผ่าน';
+        }
+        inp.focus();
+        return;
+      }
+
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<i data-lucide="loader" style="width:16px;height:16px;"></i> กำลังตรวจสอบรหัสผ่าน...';
+        if (window.lucide) lucide.createIcons();
+      }
+
+      const hashed = await computeSHA256(val);
+
+      if (hashed === SITE_PASS_HASH) {
+        sessionStorage.setItem('pa_site_unlocked', 'true');
+        if (remember) {
+          localStorage.setItem('pa_site_unlocked', 'true');
+        }
+        if (err) err.style.display = 'none';
+        if (btn) {
+          btn.style.background = '#059669';
+          btn.innerHTML = '<i data-lucide="check" style="width:16px;height:16px;"></i> ยืนยันสำเร็จ!';
+          if (window.lucide) lucide.createIcons();
+        }
+        setTimeout(() => {
+          const overlay = document.getElementById('site-lock-overlay');
+          if (overlay) overlay.classList.add('unlocked');
+          document.documentElement.classList.remove('site-locked');
+          document.body.classList.remove('site-locked');
+          setTimeout(() => {
+            if (overlay) overlay.style.display = 'none';
+          }, 400);
+          if (typeof playPositiveChime === 'function') {
+            playPositiveChime();
+          }
+        }, 300);
+      } else {
+        if (btn) {
+          btn.disabled = false;
+          btn.style.background = '';
+          btn.innerHTML = '<i data-lucide="unlock" style="width: 16px; height: 16px;"></i> ปลดล็อกและเข้าชมเว็บไซต์';
+          if (window.lucide) lucide.createIcons();
+        }
+        if (err) {
+          err.style.display = 'flex';
+          err.querySelector('span').innerText = 'รหัสผ่านไม่ถูกต้อง กรุณาตรวจสอบอีกครั้ง';
+        }
+        const card = document.querySelector('.site-lock-card');
+        if (card) {
+          card.classList.add('shake');
+          setTimeout(() => card.classList.remove('shake'), 450);
+        }
+        inp.value = '';
+        inp.focus();
+      }
+    }
+
+    function lockSiteNow() {
+      sessionStorage.removeItem('pa_site_unlocked');
+      localStorage.removeItem('pa_site_unlocked');
+      window.location.reload();
+    }
+
+    function checkSiteLockStatus() {
+      const isUnlocked = sessionStorage.getItem('pa_site_unlocked') === 'true' || localStorage.getItem('pa_site_unlocked') === 'true';
+      const overlay = document.getElementById('site-lock-overlay');
+      if (isUnlocked) {
+        document.documentElement.classList.remove('site-locked');
+        if (document.body) document.body.classList.remove('site-locked');
+        if (overlay) {
+          overlay.classList.add('unlocked');
+          overlay.style.display = 'none';
+        }
+      } else {
+        document.documentElement.classList.add('site-locked');
+        if (document.body) document.body.classList.add('site-locked');
+        if (overlay) {
+          overlay.classList.remove('unlocked');
+          overlay.style.display = 'flex';
+          const inp = document.getElementById('site-passcode-input');
+          if (inp) {
+            setTimeout(() => inp.focus(), 100);
+          }
+        }
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // Initialize check on DOM and window ready
+    document.addEventListener('DOMContentLoaded', checkSiteLockStatus);
+    window.addEventListener('load', checkSiteLockStatus);
   </script>
 
 </body>
