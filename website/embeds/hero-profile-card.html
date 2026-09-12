@@ -7,9 +7,9 @@
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px}
-  .card{max-width:900px;margin:0 auto;background:linear-gradient(135deg,#4a1220 0%,#5f1b29 35%,#8a2333 100%);
+  .card{max-width:900px;margin:0 auto;background:linear-gradient(135deg,#0a192f 0%,#0f274a 35%,#1e40af 100%);
     border-radius:22px;padding:36px 38px;position:relative;overflow:hidden;color:#fff;
-    box-shadow:0 12px 34px rgba(95,27,41,.30);animation:pop .7s cubic-bezier(.2,.8,.3,1) both}
+    box-shadow:0 12px 34px rgba(15,39,74,.35);animation:pop .7s cubic-bezier(.2,.8,.3,1) both}
   @keyframes pop{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:none}}
   /* วงกลมตกแต่ง */
   .card::before,.card::after{content:'';position:absolute;border-radius:50%}
@@ -19,7 +19,7 @@
     animation:float 7s ease-in-out infinite reverse}
   @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(14px)}}
   .badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#c9a227,#e8c757,#c9a227);
-    background-size:200% 100%;color:#4a1220;font-family:'Prompt';font-weight:600;font-size:13px;
+    background-size:200% 100%;color:#0a192f;font-family:'Prompt';font-weight:600;font-size:13px;
     padding:5px 16px;border-radius:999px;margin-bottom:14px;animation:shine 3.5s linear infinite;z-index:1;position:relative}
   @keyframes shine{to{background-position:200% 0}}
   h1{font-family:'Prompt',sans-serif;font-weight:700;font-size:34px;line-height:1.2;position:relative;z-index:1;
@@ -39,7 +39,7 @@
     animation:slide .8s .55s cubic-bezier(.2,.8,.3,1) both}
   .tag{background:rgba(255,255,255,.13);border:1px solid rgba(255,215,110,.4);color:#fff;
     font-size:13.5px;padding:5px 14px;border-radius:999px;transition:.25s}
-  .tag:hover{background:#c9a227;color:#4a1220;transform:translateY(-3px)}
+  .tag:hover{background:#c9a227;color:#0a192f;transform:translateY(-3px)}
   @media(max-width:600px){.card{padding:26px 22px}h1{font-size:26px}.grid{grid-template-columns:1fr}}
 </style>
 </head>
