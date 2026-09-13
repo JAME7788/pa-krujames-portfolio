@@ -1,0 +1,14 @@
+[
+  {
+    "file": "index.html",
+    "images": 21,
+    "verified_placements": 12,
+    "scripts": "syntax passed"
+  },
+  {
+    "file": "embeds/canva-slides-krujames.html",
+    "images": 6,
+    "verified_placements": 5,
+    "scripts": "syntax passed"
+  }
+]

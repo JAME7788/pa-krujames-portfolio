@@ -1,0 +1,151 @@
+{
+  "verified": [
+    {
+      "id": "p1-code",
+      "src": "assets/evidence/media_pa/IMG_20260910_133441_1_.jpg",
+      "date": "2026-09-10",
+      "time": "13:34:41",
+      "day": "10 กันยายน 2569",
+      "category": "active-learning",
+      "indicators": [
+        "1.3"
+      ],
+      "title": "ฝึกใช้เมาส์กับบล็อกคำสั่ง Code.org",
+      "caption": "ผู้เรียนฝึกควบคุมเมาส์และจัดเรียงบล็อกคำสั่งบน Code.org ในห้องคอมพิวเตอร์ ภาพนี้เป็นการใช้สื่อภายนอก ไม่ใช่หลักฐานการสร้าง Code.org ขึ้นเอง"
+    },
+    {
+      "id": "p1-media",
+      "src": "assets/evidence/media_pa/IMG_20260910_133646.jpg",
+      "date": "2026-09-10",
+      "time": "13:36:46",
+      "day": "10 กันยายน 2569",
+      "category": "gamification",
+      "indicators": [
+        "1.4"
+      ],
+      "title": "ใช้สื่อเกมฝึกเมาส์ Kru James Soncom",
+      "caption": "หน้าจอเกมฝึกเมาส์บนเว็บไซต์ห้องเรียนครูเจมส์ขณะผู้เรียนใช้งาน ใช้ประกอบการรายงานการนำสื่อดิจิทัลไปใช้จัดกิจกรรม"
+    },
+    {
+      "id": "p1-practice",
+      "src": "assets/evidence/media_pa/IMG_20260910_133655.jpg",
+      "date": "2026-09-10",
+      "time": "13:36:55",
+      "day": "10 กันยายน 2569",
+      "category": "active-learning gamification",
+      "indicators": [
+        "1.3",
+        "1.7"
+      ],
+      "title": "ติดตามการใช้เมาส์ผ่านภารกิจดิจิทัล",
+      "caption": "ผู้เรียนใช้เมาส์ทำกิจกรรมหน้าจอคอมพิวเตอร์ เป็นภาพการฝึกและติดตามทักษะวันที่ 10 กันยายน ไม่ใช่ภาพยืนยันคะแนนรายบุคคลหรือผลผ่านทั้งชั้น"
+    },
+    {
+      "id": "board-june",
+      "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_04.jpg",
+      "date": "2026-06-18",
+      "time": "17:34:16",
+      "day": "18 มิถุนายน 2569",
+      "category": "community",
+      "indicators": [
+        "2.4"
+      ],
+      "title": "ประชุมคณะกรรมการสถานศึกษา",
+      "caption": "การประชุมคณะกรรมการสถานศึกษา ณ โรงเรียนบ้านคลองมดแดง ใช้ประกอบการรายงานการประสานความร่วมมือกับเครือข่าย ไม่ใช้แทนภาพประชุมผู้ปกครองหรือเยี่ยมบ้าน"
+    },
+    {
+      "id": "clean-may",
+      "src": "assets/evidence/current-2569/volunteer-20260502.jpg",
+      "date": "2026-05-02",
+      "time": "09:46:01",
+      "day": "2 พฤษภาคม 2569",
+      "category": "volunteer",
+      "indicators": [
+        "2.3"
+      ],
+      "title": "ร่วมทำความสะอาดอาคารสถานศึกษา",
+      "caption": "ผู้ร่วมกิจกรรมช่วยกันล้างและทำความสะอาดพื้นที่อาคาร ใช้ประกอบงานสนับสนุนสถานศึกษาและจิตอาสา ไม่ใช้แทนการประชุม PLC"
+    }
+  ],
+  "removed_from_display": {
+    "index.html": [
+      "assets/evidence/board_meeting_report_page1.jpg",
+      "assets/evidence/comlab_atmosphere_rules.jpg",
+      "assets/evidence/comlab_eval_mouse100_boy.jpg",
+      "assets/evidence/comlab_eval_mouse100_girl.jpg",
+      "assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg",
+      "assets/evidence/comlab_renovation_safety.jpg",
+      "assets/evidence/dev_certificates_sheet.jpg",
+      "assets/evidence/dev_gold_award.jpg",
+      "assets/evidence/dev_thnic_domain.jpg",
+      "assets/evidence/general_admin_parent_meeting.jpg",
+      "assets/evidence/media_pa/IMG_20260202_104526.jpg",
+      "assets/evidence/media_pa/IMG_20260202_104528.jpg",
+      "assets/evidence/media_pa/IMG_20260223_105728.jpg",
+      "assets/evidence/media_pa/IMG_20260223_105749.jpg",
+      "assets/evidence/media_pa/IMG_20260223_105753.jpg",
+      "assets/evidence/media_pa/IMG_20260223_105753_1.jpg",
+      "assets/evidence/media_pa/IMG_20260223_105814.jpg",
+      "assets/evidence/media_pa/IMG_20260223_105940.jpg",
+      "assets/evidence/media_pa/IMG_20260223_112748.jpg",
+      "assets/evidence/media_pa/IMG_20260611_132434.jpg",
+      "assets/evidence/media_pa/IMG_20260611_132439.jpg",
+      "assets/evidence/media_pa/IMG_20260611_132439_1_.jpg",
+      "assets/evidence/media_pa/IMG_20260611_132444.jpg",
+      "assets/evidence/media_pa/IMG_20260611_132449.jpg",
+      "assets/evidence/media_pa/IMG_20260611_132452.jpg",
+      "assets/evidence/media_pa/IMG_20260611_132457.jpg",
+      "assets/evidence/media_pa/IMG_20260611_132501.jpg",
+      "assets/evidence/media_pa/IMG_20260611_132506.jpg",
+      "assets/evidence/media_pa/IMG_20260910_133436.jpg",
+      "assets/evidence/media_pa/IMG_20260910_133441.jpg",
+      "assets/evidence/student_care_supervision.jpg",
+      "assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/02_Gamification_Quizizz_หน้าจอเกม.jpg",
+      "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg",
+      "assets_drop/06_ภาพเกียรติบัตรและรางวัล/Picture1.png",
+      "assets_drop/06_ภาพเกียรติบัตรและรางวัล/Picture2.png",
+      "assets_drop/06_ภาพเกียรติบัตรและรางวัล/messageImage_1783918653571.jpg",
+      "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_02.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260508_070014.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260530_101743.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260603_134008.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260624_170332.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260721_095340.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260728_210402.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260802_152819.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260701_084943.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260728_073911_1.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260817_180451.jpg",
+      "assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg",
+      "assets_drop/2569_รางวัลและผลงานดีเด่น/02_ประกาศสพป_กำแพงเพชรเขต2_TheSchoolCEO_ชนะเลิศเหรียญทอง.jpg",
+      "assets_drop/2569_รางวัลและผลงานดีเด่น/03_รางวัลเหรียญทอง_ScienceShow_ศิลปหัตถกรรมนักเรียน_ครั้งที่74.jpg",
+      "assets_drop/2569_รางวัลและผลงานดีเด่น/04_รางวัลรองชนะเลิศอันดับ2_ภาพถ่ายต่อต้านการทุจริต_ราคาของการถูกลืม.jpg",
+      "assets_drop/2569_รางวัลและผลงานดีเด่น/05_รางวัลอันดับ5_ภาพยนตร์สั้นต่อต้านการทุจริต_TheFalseGoalประตูที่ถูกล็อก.jpg",
+      "assets_drop/2569_รางวัลและผลงานดีเด่น/06_สื่อการสอน_องค์ประกอบหลักของระบบคอมพิวเตอร์.jpg"
+    ],
+    "embeds\\canva-slides-krujames.html": [
+      "assets/evidence/board_meeting_report_page1.jpg",
+      "assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg",
+      "assets/evidence/general_admin_parent_meeting.jpg",
+      "assets/evidence/waikru_memo_page1.jpg",
+      "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg",
+      "assets_drop/08_ไฟล์เอกสารPDF_ฉบับเต็ม/evaluation-evidence-report.png",
+      "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_01.jpg",
+      "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_02.jpg",
+      "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_01.jpg",
+      "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_01.jpg",
+      "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_03.jpg",
+      "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_06.jpg",
+      "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_07.jpg",
+      "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_08.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260508_070014.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg",
+      "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260701_084943.jpg",
+      "assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg",
+      "assets_drop/2569_รางวัลและผลงานดีเด่น/03_รางวัลเหรียญทอง_ScienceShow_ศิลปหัตถกรรมนักเรียน_ครั้งที่74.jpg",
+      "assets_drop/2569_รางวัลและผลงานดีเด่น/04_รางวัลรองชนะเลิศอันดับ2_ภาพถ่ายต่อต้านการทุจริต_ราคาของการถูกลืม.jpg"
+    ]
+  }
+}

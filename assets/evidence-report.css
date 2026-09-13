@@ -1,0 +1,27 @@
+/* Dated evidence is shown un-cropped, with captions that travel with the photo. */
+.reviewed-photo-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin:24px 0; }
+.reviewed-photo { margin:0; min-width:0; background:#fff; border:1px solid #dedede; border-radius:6px; overflow:hidden; }
+.reviewed-photo .evidence-zoom { display:block; width:100%; padding:0; border:0; background:#f4f4f4; cursor:zoom-in; }
+.reviewed-photo img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:contain; transform:none !important; }
+.reviewed-photo figcaption { padding:16px; color:#292929; line-height:1.7; }
+.reviewed-photo strong { display:block; font-size:17px; color:#991b1b; }
+.reviewed-photo time { display:block; font-size:13px; color:#626262; }
+.reviewed-photo p { margin:8px 0; font-size:15px; }
+.reviewed-photo small { color:#626262; }
+.evidence-source { border-left:3px solid #b91c1c; padding:12px 16px; margin:20px 0; color:#515151; background:#fafafa; line-height:1.75; }
+.reviewed-learning { line-height:1.8; }
+.reviewed-learning h3 { margin:24px 0 12px; font-size:21px; }
+.evidence-table-scroll { overflow:auto; }
+.evidence-table-scroll table { width:100%; border-collapse:collapse; min-width:560px; }
+.evidence-table-scroll th,.evidence-table-scroll td { padding:12px; border-bottom:1px solid #ddd; text-align:left; }
+.learning-facts { margin:20px 0; }
+.learning-facts>div { display:grid; grid-template-columns:minmax(150px,1fr) 2fr; gap:18px; padding:14px 0; border-bottom:1px solid #ddd; }
+.learning-facts dt { font-weight:600; }.learning-facts dd { margin:0; }
+.reviewed-learning a { color:#991b1b; text-decoration:underline; }
+.slide-page .reviewed-photo-grid { gap:14px; }.slide-page .reviewed-photo p { font-size:14px; }
+.evidence-empty { padding:16px; color:#666; border-left:3px solid #b91c1c; }
+.grid-3col:empty,.ind-gallery-3:empty,.hero-thumb-strip:empty { display:none; }
+.indicator-card .reviewed-photo-grid { grid-template-columns:minmax(0,1fr); }
+.indicator-card .reviewed-photo { max-width:640px; }
+@media(max-width:640px) { .reviewed-photo-grid { grid-template-columns:minmax(0,1fr); gap:18px; }.learning-facts>div { grid-template-columns:1fr; gap:4px; }.reviewed-learning h3 { font-size:19px; } }
+@media print { .reviewed-photo { break-inside:avoid; }.evidence-zoom { cursor:default; } }
