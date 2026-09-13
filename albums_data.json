@@ -663,7 +663,7 @@
     "category": "comp2",
     "badge": "องค์ประกอบที่ ๒ · สารสนเทศ & ICT",
     "title": "โครงการICT",
-    "desc": "การดูแลพัฒนาระบบเครือข่าย เซิร์ฟเวอร์ เว็บไซต์ kmd.ac.th เพจ Facebook, TikTok @kmdschool198, YouTube @KMDSchool และ LINE ทางการ",
+    "desc": "การดูแลพัฒนาระบบเครือข่าย เซิร์ฟเวอร์ เว็บไซต์ kmd.ac.th เพจ Facebook, TikTok @kmdschool198, YouTube @KMDSchool, LINE ทางการ และ TikTok การสอน @anantachaiphetrri (๑๔ รายการ)",
     "cover": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg",
     "shared": true,
     "items": [
@@ -705,6 +705,36 @@
       {
         "src": "assets/evidence/kmd_tiktok_channel_proof.png",
         "caption": "ช่องทางการเผยแพร่คลิปวิดีโอกิจกรรมสถานศึกษา TikTok KMDSchool (@kmdschool198) ผลิตและเผยแพร่วิดีโอการเรียนรู้",
+        "date": "๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/tiktok/tiktok_thumb_7607325599224384789.jpg",
+        "caption": "คลิป TikTok: เริ่มเขียนโค้ดกานน - การจัดกิจกรรม Coding & วิทยาการคำนวณ Active Learning (@anantachaiphetrri)",
+        "date": "๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/tiktok/tiktok_thumb_7606317585637920020.jpg",
+        "caption": "คลิป TikTok: ฝึกพิมพ์ ค่อยๆเป็นค่อยๆไปเด็กๆ - ฝึกทักษะการพิมพ์สัมผัสและการใช้เมาส์ (@anantachaiphetrri)",
+        "date": "๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/tiktok/tiktok_thumb_7678716067157413138.jpg",
+        "caption": "คลิป TikTok: MINI • VLOG | Today Activity บรรยากาศกิจกรรมการเรียนรู้และการปฏิบัติงานวิชาชีพครู (@anantachaiphetrri)",
+        "date": "๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/tiktok/tiktok_thumb_7665629104816868615.jpg",
+        "caption": "คลิป TikTok: บรรยากาศการสอนในห้องปฏิบัติการคอมพิวเตอร์และสภาพแวดล้อมการเรียนรู้เชิงบวก (@anantachaiphetrri)",
+        "date": "๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/tiktok/tiktok_thumb_7669739865117936903.jpg",
+        "caption": "คลิป TikTok: Do Hard มุ่งมั่นพัฒนาการศึกษา - ปฏิบัติงานและการสนับสนุนการจัดการเรียนรู้ (@anantachaiphetrri)",
+        "date": "๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/tiktok/tiktok_thumb_7653159745699794183.jpg",
+        "caption": "คลิป TikTok: Mini | VLOG | November Recap ประมวลภาพรวมกิจกรรมการเรียนการสอน (@anantachaiphetrri)",
         "date": "๒๕๖๙"
       }
     ]
