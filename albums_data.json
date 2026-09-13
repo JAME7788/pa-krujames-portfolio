@@ -4,7 +4,7 @@
     "category": "comp1-dev",
     "badge": "เกียรติประวัติ & ผลงานดีเด่น",
     "title": "รางวัลและผลงานดีเด่น ๒๕๖๙",
-    "desc": "ประมวลโล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO, รางวัลเหรียญทองออกแบบสิ่งของเครื่องใช้ด้วยคอมพิวเตอร์ ม.๑–ม.๓ และเหรียญทอง Science Show ศิลปหัตถกรรม ครั้งที่ ๗๔",
+    "desc": "ประมวลโล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO, รางวัลระดับประเทศวุฒิสภา Green Culture, รางวัลเหรียญทองคอมพิวเตอร์ และ Science Show ศิลปหัตถกรรม ครั้งที่ ๗๔",
     "cover": "assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg",
     "shared": true,
     "items": [
@@ -52,6 +52,16 @@
         "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg",
         "caption": "เกียรติบัตร AI Learning Hub และคลังสื่อ OBEC Content Center สพป.กำแพงเพชร เขต ๒ (๗ มิ.ย. ๖๙)",
         "date": "๗ มิ.ย. ๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/award_green_culture_poster.jpg",
+        "caption": "โปสเตอร์ผลงาน 'ถ้าโลกพูดได้...' ได้รับรางวัลชมเชยระดับประเทศ การประกวดคลิปวิดีโอ Green Culture วุฒิสภา",
+        "date": "๕ ส.ค. ๒๕๖๗"
+      },
+      {
+        "src": "assets/evidence/award_green_culture_certificate.jpg",
+        "caption": "เกียรติบัตรวุฒิสภา รางวัลชมเชยการประกวดคลิปวิดีโอ Green Culture: Caring for Our Common Home ลงนามโดยประธานคณะกรรมาธิการฯ วุฒิสภา",
+        "date": "๕ ส.ค. ๒๕๖๗"
       }
     ]
   },
