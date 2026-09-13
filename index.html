@@ -189,66 +189,283 @@
       margin: 0;
     }
 
-    nav.nav-links {
+    /* =========================================================================
+       MODERN EXECUTIVE UNIFIED HEADER & SEGMENTED NAV (2026 EDITION)
+       ========================================================================= */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+    section {
+      scroll-margin-top: 85px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 12px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Prompt', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28);
+      transition: transform 0.2s ease;
+    }
+    .brand-group:hover .brand-logo {
+      transform: scale(1.04);
+    }
+
+    .brand-text h1 {
+      font-size: 1.02rem;
+      margin: 0;
+      color: #0f172a;
       display: flex;
       align-items: center;
       gap: 6px;
+      font-weight: 700;
     }
 
-    .nav-item {
+    .brand-text p {
+      font-size: 0.75rem;
+      color: #64748b;
+      margin: 0;
+    }
+
+    /* Segmented Navigation Bar */
+    nav.nav-segmented {
+      display: inline-flex;
+      align-items: center;
+      background: #f1f5f9;
+      padding: 4px;
+      border-radius: 9999px;
+      border: 1px solid #e2e8f0;
+      gap: 2px;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+      flex-shrink: 1;
+    }
+
+    .seg-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 0.88rem;
+      border-radius: 9999px;
+      font-family: 'Prompt', sans-serif;
+      font-size: 0.82rem;
       font-weight: 500;
-      color: var(--text-muted);
+      color: #475569;
       text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .seg-item:hover {
+      color: #1e40af;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .seg-item.active {
+      background: #ffffff;
+      color: #1e40af;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(37, 99, 235, 0.12);
+    }
+
+    .seg-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      color: #475569;
+      font-size: 0.72rem;
+      font-weight: 700;
       transition: all 0.2s ease;
     }
 
-    .nav-item:hover, .nav-item.active {
-      color: var(--primary-600);
-      background: var(--primary-50);
+    .seg-item:hover .seg-badge {
+      background: #dbeafe;
+      color: #1e40af;
     }
 
+    .seg-item.active .seg-badge {
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      color: #ffffff;
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Action Buttons */
     .header-actions {
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-shrink: 0;
     }
 
-    .btn-header {
+    .btn-primary-doc {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 7px 14px;
-      border-radius: 8px;
-      font-size: 0.84rem;
-      font-weight: 500;
+      padding: 7px 15px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
       text-decoration: none;
-      cursor: pointer;
-      border: 1px solid transparent;
-      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.2s ease;
+      white-space: nowrap;
     }
 
-    .btn-slides {
-      background: linear-gradient(135deg, #1e40af, #2563eb);
-      color: white;
-      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
-    }
-
-    .btn-slides:hover {
-      background: linear-gradient(135deg, #1d4ed8, #1d4ed8);
+    .btn-primary-doc:hover {
+      background: linear-gradient(135deg, #1d4ed8 0%, #1d4ed8 100%);
       transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
     }
 
-    .btn-chime {
-      background: var(--surface-slate);
-      border-color: var(--surface-border);
-      color: var(--text-muted);
+    .btn-icon-action {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
-    .btn-chime:hover {
-      color: var(--primary-600);
-      background: white;
+
+    .btn-icon-action:hover {
+      background: #ffffff;
+      color: #1e40af;
+      border-color: #cbd5e1;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+    }
+
+    .btn-lock-action {
+      background: #fef2f2;
+      border-color: #fee2e2;
+      color: #ef4444;
+    }
+
+    .btn-lock-action:hover {
+      background: #fee2e2;
+      color: #dc2626;
+      border-color: #fca5a5;
+    }
+
+    /* Mobile menu drawer */
+    .mobile-nav-drawer {
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      padding: 16px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      animation: slideDown 0.25s ease;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .mobile-drawer-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+
+    .mobile-drawer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .mobile-drawer-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #334155;
+      text-decoration: none;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+
+    .mobile-drawer-item:hover, .mobile-drawer-item.active {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border-color: #bfdbfe;
+    }
+
+    @media (max-width: 1100px) {
+      nav.nav-segmented {
+        display: none !important;
+      }
+      .mobile-menu-btn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        color: #334155;
+        cursor: pointer;
+      }
+    }
+    @media (min-width: 1101px) {
+      .mobile-menu-btn {
+        display: none !important;
+      }
+      .mobile-nav-drawer {
+        display: none !important;
+      }
     }
 
     /* Mobile Nav Toggle */
@@ -3287,119 +3504,7 @@
    PA EVALUATION FLOW & INTERACTIVE UX ENHANCEMENTS
    ========================================================================== */
 
-/* 1. PA Sticky Evaluation Stepper Bar */
-.pa-stepper-wrapper {
-  position: sticky;
-  top: 70px;
-  z-index: 95;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e2e8f0;
-  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.05);
-  transition: all 0.3s ease;
-}
-
-.pa-stepper-container {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 8px 16px;
-  max-width: 1320px;
-  margin: 0 auto;
-}
-
-.pa-stepper-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Prompt', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #1e3a8a;
-  white-space: nowrap;
-  padding-right: 12px;
-  border-right: 2px solid #e2e8f0;
-}
-
-.stepper-pulse {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #2563eb;
-  box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
-  animation: stepperPulse 2s infinite;
-}
-
-@keyframes stepperPulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(37, 99, 235, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
-}
-
-.pa-stepper-track {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding: 2px 0;
-  width: 100%;
-}
-
-.pa-stepper-track::-webkit-scrollbar {
-  display: none;
-}
-
-.stepper-step {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  border-radius: 9999px;
-  font-family: 'Prompt', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #475569;
-  text-decoration: none;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  white-space: nowrap;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-.stepper-step:hover {
-  background: #eff6ff;
-  color: #1d4ed8;
-  border-color: #bfdbfe;
-  transform: translateY(-1px);
-}
-
-.stepper-step.active {
-  background: linear-gradient(135deg, #1e40af, #2563eb);
-  color: #ffffff;
-  border-color: #1d4ed8;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.28);
-}
-
-.stepper-step .step-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.08);
-  font-size: 0.72rem;
-  font-weight: 700;
-}
-
-.stepper-step.active .step-num {
-  background: rgba(255, 255, 255, 0.25);
-  color: #ffffff;
-}
+/* 1. PA Unified Navigation Active */
 
 /* 2. Interactive Before & After Showcase */
 .before-after-card-wrapper {
@@ -3799,89 +3904,89 @@
   <div id="progress-bar"></div>
 
 
-  <!-- Sticky Executive Header -->
+  <!-- Modern Executive Header (Unified PA Stepper Navigation) -->
   <header class="site-header">
     <div class="container header-content">
-      <a href="#home" class="brand-group">
+      <!-- Brand & Identity -->
+      <a href="#home" class="brand-group" title="หน้าหลัก - ข้อมูลครูเจมส์">
         <div class="brand-logo">PA</div>
         <div class="brand-text">
           <h1>ครูเจมส์ อนันตชัย <span class="tag-pill">คศ.๑</span></h1>
-          <p>โรงเรียนบ้านคลองมดแดง | สพป.กำแพงเพชร เขต ๒</p>
+          <p>ร.ร.บ้านคลองมดแดง | สพป.กพ.๒</p>
         </div>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="nav-links">
-        <a href="#home" class="nav-item active">ส่วนนำ &amp; ประวัติ</a>
-        <a href="#workload" class="nav-item">ภาระงานสอน ๒๕ คาบ</a>
-        <a href="#indicators" class="nav-item">องค์ประกอบ ๑ (๑๕ ตัวชี้วัด)</a>
-        <a href="#challenge" class="nav-item">องค์ประกอบ ๒ (ประเด็นท้าทาย)</a>
-        <a href="#component-2" class="nav-item">องค์ประกอบ ๓ (มีส่วนร่วม)</a>
-        <a href="#component-3" class="nav-item">วินัยและจรรยาบรรณ</a>
-        <a href="#awards" class="nav-item">🏆 รางวัลและผลงาน</a>
-        <a href="#timeline" class="nav-item">ไทม์ไลน์ ๒๕๖๙</a>
-        <a href="#gallery" class="nav-item">คลังหลักฐาน &amp; TikTok</a>
-        <a href="#downloads" class="nav-item">ดาวน์โหลดเอกสาร</a>
+      <!-- Unified Modern Segmented Nav (PA Stepper) -->
+      <nav class="nav-segmented" aria-label="ลำดับการประเมิน PA ๒๕๖๙">
+        <a href="#home" class="seg-item active" data-target="home">
+          <span class="seg-badge">๑</span>
+          <span class="seg-label">ข้อมูล &amp; ภาระงาน</span>
+        </a>
+        <a href="#indicators" class="seg-item" data-target="indicators">
+          <span class="seg-badge">๒</span>
+          <span class="seg-label">๑๕ ตัวชี้วัด</span>
+        </a>
+        <a href="#challenge" class="seg-item" data-target="challenge">
+          <span class="seg-badge">๓</span>
+          <span class="seg-label">ประเด็นท้าทาย</span>
+        </a>
+        <a href="#component-2" class="seg-item" data-target="component-2">
+          <span class="seg-badge">๔</span>
+          <span class="seg-label">มีส่วนร่วม &amp; วินัย</span>
+        </a>
+        <a href="#awards" class="seg-item" data-target="awards">
+          <span class="seg-badge">๕</span>
+          <span class="seg-label">ผลงาน &amp; สื่อ</span>
+        </a>
+        <a href="#downloads" class="seg-item" data-target="downloads">
+          <span class="seg-badge">๖</span>
+          <span class="seg-label">เอกสาร PA</span>
+        </a>
       </nav>
 
-      <!-- Header Action Buttons -->
+      <!-- Executive Actions -->
       <div class="header-actions">
-        <a href="assets/docs/รายงาน PA 2569 ครูอนันตชัย ป1 11คน ฉบับปรับปรุง.pdf" target="_blank" class="btn-header" title="เปิดอ่านเล่มรายงาน PDF ๓๕ หน้า" style="color: #1e40af; background: #eff6ff; border: 1.5px solid #bfdbfe;">
+        <a href="assets/docs/รายงาน PA 2569 ครูอนันตชัย ป1 11คน ฉบับปรับปรุง.pdf" target="_blank" class="btn-primary-doc" title="เปิดอ่านเล่มรายงาน PDF ๓๕ หน้า">
           <i data-lucide="file-text" style="width: 15px; height: 15px;"></i>
           <span>เล่ม PA (๓๕ หน้า)</span>
         </a>
-        <button class="btn-header btn-chime" onclick="playPositiveChime()" title="เสียงเอฟเฟกต์ Gamification">
+        <button type="button" class="btn-icon-action" onclick="playPositiveChime()" title="เสียงเอฟเฟกต์ส่งเสริมการเรียนรู้ (Chime)">
           <i data-lucide="bell" style="width: 16px; height: 16px;"></i>
         </button>
-        <button class="btn-header btn-lock" onclick="lockSiteNow()" title="ล็อกหน้าเว็บ (ออกจากระบบ)" style="background: rgba(239, 68, 68, 0.08); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.25);">
+        <button type="button" class="btn-icon-action btn-lock-action" onclick="lockSiteNow()" title="ล็อกหน้าเว็บ (ออกจากระบบ)">
           <i data-lucide="lock" style="width: 16px; height: 16px;"></i>
         </button>
-        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="เปิดหรือปิดเมนูนำทาง">
+        <button type="button" class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="เปิดเมนูนำทาง">
           <i data-lucide="menu"></i>
         </button>
       </div>
     </div>
-  </header>
 
-  <!-- PA Evaluation Sticky Stepper Bar -->
-  <aside class="pa-stepper-wrapper" aria-label="แถบนำทางด่วนตามหัวข้อประเมิน PA">
-    <div class="container pa-stepper-container">
-      <div class="pa-stepper-title">
-        <span class="stepper-pulse"></span>
-        <span>ลำดับการประเมิน PA:</span>
-      </div>
-      <div class="pa-stepper-track">
-        <a href="#home" class="stepper-step active" data-target="home">
-          <span class="step-num">๑</span>
-          <span class="step-label">ข้อมูล &amp; ภาระงาน</span>
+    <!-- Mobile Drawer Nav -->
+    <div id="mobileNavDrawer" class="mobile-nav-drawer" style="display: none;">
+      <div class="mobile-drawer-title">ลำดับการประเมิน PA ๒๕๖๙:</div>
+      <div class="mobile-drawer-grid">
+        <a href="#home" class="mobile-drawer-item active" onclick="toggleMobileNav()">
+          <span class="seg-badge">๑</span> ข้อมูล &amp; ภาระงาน
         </a>
-        <a href="#indicators" class="stepper-step" data-target="indicators">
-          <span class="step-num">๒</span>
-          <span class="step-label">๑๕ ตัวชี้วัด (๖๐%)</span>
+        <a href="#indicators" class="mobile-drawer-item" onclick="toggleMobileNav()">
+          <span class="seg-badge">๒</span> ๑๕ ตัวชี้วัด (๓ ด้าน)
         </a>
-        <a href="#challenge" class="stepper-step" data-target="challenge">
-          <span class="step-num">๓</span>
-          <span class="step-label">ประเด็นท้าทาย (๔๐%)</span>
+        <a href="#challenge" class="mobile-drawer-item" onclick="toggleMobileNav()">
+          <span class="seg-badge">๓</span> ประเด็นท้าทาย ป.๑
         </a>
-        <a href="#component-2" class="stepper-step" data-target="component-2">
-          <span class="step-num">๔</span>
-          <span class="step-label">การมีส่วนร่วม &amp; วินัย</span>
+        <a href="#component-2" class="mobile-drawer-item" onclick="toggleMobileNav()">
+          <span class="seg-badge">๔</span> การมีส่วนร่วม &amp; วินัย
         </a>
-        <a href="#awards" class="stepper-step" data-target="awards">
-          <span class="step-num">๕</span>
-          <span class="step-label">รางวัล &amp; ไทม์ไลน์</span>
+        <a href="#awards" class="mobile-drawer-item" onclick="toggleMobileNav()">
+          <span class="seg-badge">๕</span> รางวัล &amp; สื่อ TikTok
         </a>
-        <a href="#gallery" class="stepper-step" data-target="gallery">
-          <span class="step-num">๖</span>
-          <span class="step-label">หลักฐาน &amp; TikTok</span>
-        </a>
-        <a href="#downloads" class="stepper-step" data-target="downloads">
-          <span class="step-num">๗</span>
-          <span class="step-label">เอกสาร &amp; ประเมิน</span>
+        <a href="#downloads" class="mobile-drawer-item" onclick="toggleMobileNav()">
+          <span class="seg-badge">๖</span> เอกสารประกอบการประเมิน
         </a>
       </div>
     </div>
-  </aside>
+  </header>
 
 
   <!-- Hero Section -->
@@ -9080,19 +9185,12 @@
 
     // Mobile Navigation Toggle
     function toggleMobileNav() {
-      const nav = document.querySelector('nav.nav-links');
-      if (nav.style.display === 'flex') {
-        nav.style.display = 'none';
+      const drawer = document.getElementById('mobileNavDrawer');
+      if (!drawer) return;
+      if (drawer.style.display === 'none' || drawer.style.display === '') {
+        drawer.style.display = 'block';
       } else {
-        nav.style.display = 'flex';
-        nav.style.flexDirection = 'column';
-        nav.style.position = 'absolute';
-        nav.style.top = '72px';
-        nav.style.left = '0';
-        nav.style.width = '100%';
-        nav.style.background = 'white';
-        nav.style.padding = '1rem';
-        nav.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
+        drawer.style.display = 'none';
       }
     }
 
@@ -9649,10 +9747,10 @@
       }
     }
 
-    // Sticky PA Evaluation Stepper Scroll Observer
+    // Sticky PA Evaluation Segmented Nav Scroll Observer
     document.addEventListener('DOMContentLoaded', () => {
-      const stepperSteps = document.querySelectorAll('.pa-stepper-track .stepper-step');
-      const observedSectionIds = ['home', 'workload', 'indicators', 'challenge', 'component-2', 'component-3', 'awards', 'timeline', 'gallery', 'downloads', 'feedback'];
+      const segItems = document.querySelectorAll('.nav-segmented .seg-item, .mobile-nav-drawer .mobile-drawer-item');
+      const observedSectionIds = ['home', 'workload', 'indicators', 'challenge', 'component-2', 'component-3', 'awards', 'timeline', 'gallery', 'downloads', 'feedback-section'];
       
       const sectionToStepMap = {
         'home': 'home',
@@ -9663,22 +9761,22 @@
         'component-3': 'component-2',
         'awards': 'awards',
         'timeline': 'awards',
-        'gallery': 'gallery',
+        'gallery': 'awards',
         'downloads': 'downloads',
-        'feedback': 'downloads'
+        'feedback-section': 'downloads'
       };
 
-      if ('IntersectionObserver' in window && stepperSteps.length > 0) {
+      if ('IntersectionObserver' in window && segItems.length > 0) {
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               const secId = entry.target.id;
               const targetStepId = sectionToStepMap[secId] || secId;
-              stepperSteps.forEach(step => {
-                if (step.getAttribute('data-target') === targetStepId) {
-                  step.classList.add('active');
+              segItems.forEach(item => {
+                if (item.getAttribute('data-target') === targetStepId || item.getAttribute('href') === '#' + targetStepId) {
+                  item.classList.add('active');
                 } else {
-                  step.classList.remove('active');
+                  item.classList.remove('active');
                 }
               });
             }
