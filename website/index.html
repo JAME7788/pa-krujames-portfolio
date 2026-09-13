@@ -3282,7 +3282,457 @@
       transform: translateY(-1px);
     }
 
-</style>
+
+/* ==========================================================================
+   PA EVALUATION FLOW & INTERACTIVE UX ENHANCEMENTS
+   ========================================================================== */
+
+/* 1. PA Sticky Evaluation Stepper Bar */
+.pa-stepper-wrapper {
+  position: sticky;
+  top: 70px;
+  z-index: 95;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+  transition: all 0.3s ease;
+}
+
+.pa-stepper-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.pa-stepper-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  white-space: nowrap;
+  padding-right: 12px;
+  border-right: 2px solid #e2e8f0;
+}
+
+.stepper-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+  box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+  animation: stepperPulse 2s infinite;
+}
+
+@keyframes stepperPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(37, 99, 235, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+.pa-stepper-track {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 2px 0;
+  width: 100%;
+}
+
+.pa-stepper-track::-webkit-scrollbar {
+  display: none;
+}
+
+.stepper-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.stepper-step:hover {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+  transform: translateY(-1px);
+}
+
+.stepper-step.active {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  color: #ffffff;
+  border-color: #1d4ed8;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.28);
+}
+
+.stepper-step .step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.08);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.stepper-step.active .step-num {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* 2. Interactive Before & After Showcase */
+.before-after-card-wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+}
+
+.before-after-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.before-after-title-group h3 {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.before-after-title-group p {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.before-after-toggle-group {
+  display: inline-flex;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 10px;
+  gap: 4px;
+}
+
+.ba-toggle-btn {
+  border: none;
+  background: transparent;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ba-toggle-btn.active {
+  background: #ffffff;
+  color: #1e40af;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.ba-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .ba-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ba-panel {
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ba-panel-before {
+  background: #fff5f5;
+  border: 1.5px solid #fed7d7;
+}
+
+.ba-panel-after {
+  background: #f0fdf4;
+  border: 1.5px solid #bbf7d0;
+}
+
+.ba-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.ba-badge-before {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.ba-badge-after {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.ba-img-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ba-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.ba-panel:hover .ba-img-container img {
+  transform: scale(1.03);
+}
+
+.ba-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ba-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: #334155;
+}
+
+/* 3. 4-Mission Roadmap Cards */
+.missions-roadmap-wrapper {
+  margin: 24px 0;
+}
+
+.missions-roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .missions-roadmap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .missions-roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mission-step-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.12);
+  border-color: #bfdbfe;
+}
+
+.mission-top-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.mission-number {
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.mission-skill-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+
+.mission-step-card h4 {
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.mission-step-card p {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0 0 10px 0;
+  flex-grow: 1;
+}
+
+.mission-footer {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  color: #475569;
+}
+
+/* 4. Voices of Classroom & Community */
+.voices-section-wrapper {
+  margin: 24px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.voices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .voices-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.voice-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid #2563eb;
+  position: relative;
+}
+
+.voice-card-quote {
+  font-size: 0.86rem;
+  color: #334155;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.voice-card-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 10px;
+}
+
+.voice-avatar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.voice-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.voice-author-name {
+  font-family: 'Prompt', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.voice-author-role {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+  </style>
 <link rel="stylesheet" href="assets/evidence-report.css" data-curation-version="2026-09-13">
 <script defer src="assets/evidence-report.js"></script>
 </head>
@@ -3360,15 +3810,16 @@
 
       <!-- Desktop Nav -->
       <nav class="nav-links">
-        <a href="#home" class="nav-item active">หน้าแรก</a>
+        <a href="#home" class="nav-item active">ส่วนนำ &amp; ประวัติ</a>
+        <a href="#workload" class="nav-item">ภาระงานสอน ๒๕ คาบ</a>
         <a href="#indicators" class="nav-item">องค์ประกอบ ๑ (๑๕ ตัวชี้วัด)</a>
+        <a href="#challenge" class="nav-item">องค์ประกอบ ๒ (ประเด็นท้าทาย)</a>
+        <a href="#component-2" class="nav-item">องค์ประกอบ ๓ (มีส่วนร่วม)</a>
+        <a href="#component-3" class="nav-item">วินัยและจรรยาบรรณ</a>
         <a href="#awards" class="nav-item">🏆 รางวัลและผลงาน</a>
-        <a href="#challenge" class="nav-item">ประเด็นท้าทาย</a>
-        <a href="#component-2" class="nav-item">องค์ประกอบ ๒ (มีส่วนร่วม)</a>
-        <a href="#component-3" class="nav-item">องค์ประกอบ ๓ (วินัย/จรรยาบรรณ)</a>
-        <a href="#workload" class="nav-item">ภาระงาน</a>
-        <a href="#gallery" class="nav-item">คลังภาพถ่ายจริง</a>
-        <a href="#downloads" class="nav-item">เอกสารดาวน์โหลด</a>
+        <a href="#timeline" class="nav-item">ไทม์ไลน์ ๒๕๖๙</a>
+        <a href="#gallery" class="nav-item">คลังหลักฐาน &amp; TikTok</a>
+        <a href="#downloads" class="nav-item">ดาวน์โหลดเอกสาร</a>
       </nav>
 
       <!-- Header Action Buttons -->
@@ -3394,7 +3845,50 @@
     </div>
   </header>
 
+  <!-- PA Evaluation Sticky Stepper Bar -->
+  <aside class="pa-stepper-wrapper" aria-label="แถบนำทางด่วนตามหัวข้อประเมิน PA">
+    <div class="container pa-stepper-container">
+      <div class="pa-stepper-title">
+        <span class="stepper-pulse"></span>
+        <span>ลำดับการประเมิน PA:</span>
+      </div>
+      <div class="pa-stepper-track">
+        <a href="#home" class="stepper-step active" data-target="home">
+          <span class="step-num">๑</span>
+          <span class="step-label">ข้อมูล &amp; ภาระงาน</span>
+        </a>
+        <a href="#indicators" class="stepper-step" data-target="indicators">
+          <span class="step-num">๒</span>
+          <span class="step-label">๑๕ ตัวชี้วัด (๖๐%)</span>
+        </a>
+        <a href="#challenge" class="stepper-step" data-target="challenge">
+          <span class="step-num">๓</span>
+          <span class="step-label">ประเด็นท้าทาย (๔๐%)</span>
+        </a>
+        <a href="#component-2" class="stepper-step" data-target="component-2">
+          <span class="step-num">๔</span>
+          <span class="step-label">การมีส่วนร่วม &amp; วินัย</span>
+        </a>
+        <a href="#awards" class="stepper-step" data-target="awards">
+          <span class="step-num">๕</span>
+          <span class="step-label">รางวัล &amp; ไทม์ไลน์</span>
+        </a>
+        <a href="#gallery" class="stepper-step" data-target="gallery">
+          <span class="step-num">๖</span>
+          <span class="step-label">หลักฐาน &amp; TikTok</span>
+        </a>
+        <a href="#downloads" class="stepper-step" data-target="downloads">
+          <span class="step-num">๗</span>
+          <span class="step-label">เอกสาร &amp; ประเมิน</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+
   <!-- Hero Section -->
+  
+  <!-- Section : ข้อมูลผู้ขอรับการประเมิน -->
   <section id="home" class="hero-section">
     <div class="container hero-grid">
       <!-- Profile Column -->
@@ -3520,431 +4014,7 @@
     </div>
   </section>
 
-  <!-- Section 0.5 : ลำดับเหตุการณ์และไทม์ไลน์การปฏิบัติงานจริง (เริ่มต้น ๔ ต.ค. ๒๕๖๘) -->
-  <section id="timeline" class="section-block" style="background: linear-gradient(180deg, #f8fafc 0%, #edf4fc 100%); border-bottom: 1px solid #e2e8f0;">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;">
-          <i data-lucide="calendar-range" style="width: 13px; height: 13px;"></i> Chronological Performance Timeline
-        </div>
-        <h2 class="section-title">ไทม์ไลน์การปฏิบัติงานและพัฒนาวิชาชีพ (เริ่มต้น ๔ ตุลาคม ๒๕๖๘)</h2>
-        <p class="section-desc">ประมวลร่องรอยกิจกรรมเชิงประจักษ์ตลอดรอบการประเมิน ๑ ตุลาคม ๒๕๖๘ – ๓๐ กันยายน ๒๕๖๙ โรงเรียนบ้านคลองมดแดง</p>
-      </div>
-
-      <div class="timeline-track">
-        <!-- Milestone 1: 15-22 ต.ค. 68 (AI for Teachers & เตรียมห้องคอมพิวเตอร์) -->
-        <div class="timeline-card" style="border-top-color: #2563eb;">
-          <div>
-            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๑/๘</div>
-            <div class="timeline-date-badge" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe;">
-              <i data-lucide="cpu" style="width: 12px; height: 12px;"></i> ๑๕–๒๒ ต.ค. ๒๕๖๘ (เริ่มต้นรอบประเมิน)
-            </div>
-            <div class="timeline-card-title">พัฒนาทักษะ AI for Teachers & จัดเตรียมระบบห้องปฏิบัติการคอมพิวเตอร์</div>
-            <div class="timeline-card-loc">
-              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องปฏิบัติการคอมพิวเตอร์ รร.บ้านคลองมดแดง
-            </div>
-            <div class="timeline-card-desc">
-              เข้ารับการพัฒนาตนเองหลักสูตรรวมทักษะดิจิทัลและ AI for Teachers (๑๘ ชั่วโมง) พร้อมดำเนินการปรับปรุงระบบโครงข่าย LAN จัดเก็บสายไฟลงรางร้อยท่อปลอดภัย ๑๐๐% และเตรียมเครื่องคอมพิวเตอร์ลูกข่ายให้พร้อมจัดการเรียนรู้ Active Learning
-            </div>
-          </div>
-          <div class="timeline-thumb-box" onclick="openLightbox('assets/evidence/comlab_renovation_safety.jpg', 'การจัดระบบความปลอดภัยและบำรุงรักษาห้องปฏิบัติการคอมพิวเตอร์ (๑๕–๒๒ ต.ค. ๒๕๖๘)')">
-            <img src="assets/evidence/comlab_renovation_safety.jpg" alt="เตรียมความพร้อมห้องคอมพิวเตอร์" class="timeline-thumb">
-          </div>
-        </div>
-
-        <!-- Milestone 2: 20 ม.ค. 69 (ประชุมคณะกรรมการสถานศึกษา นำเสนอแผน ICT) -->
-        <div class="timeline-card" style="border-top-color: #0284c7;">
-          <div>
-            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๒/๘</div>
-            <div class="timeline-date-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">
-              <i data-lucide="users" style="width: 12px; height: 12px;"></i> ๒๐ ม.ค. ๒๕๖๙ (รอบที่ ๑)
-            </div>
-            <div class="timeline-card-title">ประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน นำเสนอแผนพัฒนาสารสนเทศ ICT</div>
-            <div class="timeline-card-loc">
-              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องประชุม รร.บ้านคลองมดแดง (๑๔.๐๐ น.)
-            </div>
-            <div class="timeline-card-desc">
-              เข้าร่วมการประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๑/๒๕๖๙ ร่วมกับ ผอ.ปรัชญา ปรางค์ชัยภูมิ นำเสนอแผนยกระดับห้องปฏิบัติการคอมพิวเตอร์และแนวทางการจัดสรรงบประมาณด้านสื่อดิจิทัลเพื่อการเรียนรู้
-            </div>
-          </div>
-          <div class="timeline-thumb-box" onclick="openLightbox('assets/evidence/board_meeting_report_page1.jpg', 'รายงานการประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๑/๒๕๖๙ (๒๐ มกราคม ๒๕๖๙)')">
-            <img src="assets/evidence/board_meeting_report_page1.jpg" alt="ประชุมกรรมการสถานศึกษา ครั้งที่ 1/2569" class="timeline-thumb">
-          </div>
-        </div>
-
-        <!-- Milestone 3: พ.ค. 69 (วิเคราะห์ผู้เรียนรายบุคคล ป.1 ในห้องคอมฯ) -->
-        <div class="timeline-card" style="border-top-color: #2563eb;">
-          <div>
-            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๓/๘</div>
-            <div class="timeline-date-badge" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe;">
-              <i data-lucide="search" style="width: 12px; height: 12px;"></i> พ.ค. ๒๕๖๙ (เปิดภาคเรียนที่ ๑)
-            </div>
-            <div class="timeline-card-title">สำรวจความพร้อม & วิเคราะห์ทักษะดิจิทัล ป.๑ (๑๑ คน) ในห้องคอมพิวเตอร์</div>
-            <div class="timeline-card-loc">
-              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องปฏิบัติการคอมพิวเตอร์ รร.บ้านคลองมดแดง
-            </div>
-            <div class="timeline-card-desc">
-              สำรวจและคัดกรองความพร้อมด้านกล้ามเนื้อมัดเล็กและการประสานสายตากับมือในการจับเมาส์ของนักเรียนชั้น ป.๑ จำนวน ๑๑ คน ณ ห้องปฏิบัติการคอมพิวเตอร์ พบปัญหาการควบคุมตัวชี้ จึงออกแบบนวัตกรรม Gamification เพื่อฝึกฝนรายบุคคล
-            </div>
-          </div>
-          <div class="timeline-thumb-box" onclick="openLightbox('assets/evidence/media_pa/IMG_20260910_133436.jpg', 'การฝึกปฏิบัติการใช้เมาส์และโค้ดดิ้งรายบุคคล ๑ คนต่อ ๑ เครื่อง ในห้องคอมพิวเตอร์ (๑๐ ก.ย. ๒๕๖๙)')">
-            <img src="assets/evidence/media_pa/IMG_20260910_133436.jpg" alt="นักเรียน ป.๑ ฝึกปฏิบัติรายบุคคล ๑ คนต่อ ๑ เครื่อง ในห้องคอมพิวเตอร์" class="timeline-thumb">
-          </div>
-        </div>
-
-        <!-- Milestone 4: 30-31 พ.ค. 69 (อบรมเชิงปฏิบัติการพัฒนาเว็บไซต์ .th ในห้องคอมฯ) -->
-        <div class="timeline-card" style="border-top-color: #0284c7;">
-          <div>
-            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๔/๘</div>
-            <div class="timeline-date-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">
-              <i data-lucide="globe" style="width: 12px; height: 12px;"></i> ๓๐ – ๓๑ พ.ค. ๒๕๖๙
-            </div>
-            <div class="timeline-card-title">อบรมเชิงปฏิบัติการพัฒนาเว็บไซต์ชื่อโดเมน .th สำหรับครูและบุคลากร</div>
-            <div class="timeline-card-loc">
-              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องปฏิบัติการคอมพิวเตอร์ รร.บ้านคลองมดแดง
-            </div>
-            <div class="timeline-card-desc">
-              ปฏิบัติหน้าที่ครูแกนนำ ICT จัดการอบรมเชิงปฏิบัติการสร้างเว็บไซต์และบริหารจัดการชื่อโดเมนเพื่อสถานศึกษา (.sch.th) โดยมูลนิธิ THNIC ร่วมกับ สพป.กพ.๒ ให้แก่ครูและบุคลากร ณ ห้องปฏิบัติการคอมพิวเตอร์ ยกระดับระบบสารสนเทศโรงเรียน
-            </div>
-          </div>
-          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260530_101743.jpg', 'การอบรมเชิงปฏิบัติการสร้างเว็บไซต์ชื่อโดเมน .th สำหรับบุคลากรทางการศึกษา ณ ห้องคอมพิวเตอร์ (๓๐–๓๑ พ.ค. ๒๕๖๙)')">
-            <img src="assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260530_101743.jpg" alt="อบรมสร้างเว็บไซต์ .th ในห้องคอมพิวเตอร์" class="timeline-thumb">
-          </div>
-        </div>
-
-        <!-- Milestone 5: มิ.ย. 69 (PLC วิชาชีพ & สตูดิโอผลิตสื่อนวัตกรรมดิจิทัล ๒๕๖๙) -->
-        <div class="timeline-card" style="border-top-color: #2563eb;">
-          <div>
-            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๕/๘</div>
-            <div class="timeline-date-badge" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe;">
-              <i data-lucide="video" style="width: 12px; height: 12px;"></i> มิ.ย. ๒๕๖๙ (PLC & นวัตกรรมดิจิทัล)
-            </div>
-            <div class="timeline-card-title">PLC วิชาชีพ & สตูดิโอผลิตสื่อนวัตกรรมดิจิทัล Active Learning</div>
-            <div class="timeline-card-loc">
-              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> สตูดิโอสื่อการเรียนรู้ รร.บ้านคลองมดแดง
-            </div>
-            <div class="timeline-card-desc">
-              จัดกิจกรรม PLC แลกเปลี่ยนการสอนเทคโนโลยี พร้อมจัดเตรียมระบบไฟ สตูดิโอบันทึกภาพ และอุปกรณ์ผลิตสื่อดิจิทัลเชิงรุก (Active Learning Media Production) เพื่อนำมาใช้ในการจัดการเรียนรู้และเผยแพร่สู่ผู้เรียน (๑๙ มิ.ย. ๒๕๖๙)
-            </div>
-          </div>
-          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg', 'สตูดิโอบันทึกสื่อวิดีโอ Active Learning และการผลิตนวัตกรรมดิจิทัล (๑๙ มิถุนายน ๒๕๖๙)')">
-            <img src="assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg" alt="สตูดิโอผลิตสื่อนวัตกรรมดิจิทัล" class="timeline-thumb">
-          </div>
-        </div>
-
-        <!-- Milestone 6: 17 ก.ค. 69 (กิจกรรมวันวิทยาศาสตร์ บูรณาการวิทยาศาสตร์และเทคโนโลยี ๒๕๖๙) -->
-        <div class="timeline-card" style="border-top-color: #0284c7;">
-          <div>
-            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๖/๘</div>
-            <div class="timeline-date-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">
-              <i data-lucide="award" style="width: 12px; height: 12px;"></i> ๑๗ ก.ค. ๒๕๖๙ (วันวิทยาศาสตร์)
-            </div>
-            <div class="timeline-card-title">กิจกรรมวันวิทยาศาสตร์ บูรณาการวิทยาศาสตร์และเทคโนโลยี ๒๕๖๙</div>
-            <div class="timeline-card-loc">
-              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ลานกิจกรรมและห้องคอมพิวเตอร์ รร.บ้านคลองมดแดง
-            </div>
-            <div class="timeline-card-desc">
-              ครูเจมส์ร่วมจัดและปฏิบัติหน้าที่วิทยากรประจำฐานการเรียนรู้ ในกิจกรรมวันวิทยาศาสตร์ ประจำปีการศึกษา ๒๕๖๙ (๑๗ ก.ค. ๒๕๖๙) ของโรงเรียนบ้านคลองมดแดง โดยบูรณาการกลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ส่งเสริมทักษะกระบวนการคิด การคิดเชิงคำนวณ วิทยาการคำนวณ และการลงมือปฏิบัติจริงแก่นักเรียนอย่างสร้างสรรค์
-            </div>
-          </div>
-          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_02.jpg', 'ครูเจมส์ปฏิบัติหน้าที่วิทยากรประจำฐานการเรียนรู้ กิจกรรมวันวิทยาศาสตร์ บูรณาการวิทยาศาสตร์และเทคโนโลยี โรงเรียนบ้านคลองมดแดง (๑๗ ก.ค. ๒๕๖๙)')">
-            <img src="assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_02.jpg" alt="ครูเจมส์ วิทยากรประจำฐานการเรียนรู้ กิจกรรมวันวิทยาศาสตร์ (๑๗ ก.ค. ๒๕๖๙)" class="timeline-thumb">
-          </div>
-        </div>
-
-        <!-- Milestone 7: 2-3 ก.ย. 69 (ชนะเลิศระดับเหรียญทอง The School CEO) -->
-        <div class="timeline-card" style="border-top-color: #f59e0b; background: linear-gradient(to bottom, #fffbeb, #ffffff);">
-          <div>
-            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๗/๘</div>
-            <div class="timeline-date-badge" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">
-              <i data-lucide="award" style="width: 12px; height: 12px;"></i> ๒–๓ ก.ย. ๒๕๖๙ (ผลงานดีเด่นระดับเขต)
-            </div>
-            <div class="timeline-card-title" style="color: #b45309;">ชนะเลิศเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ สพป.กพ.๒</div>
-            <div class="timeline-card-loc">
-              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> สพป.กำแพงเพชร เขต ๒
-            </div>
-            <div class="timeline-card-desc">
-              นำทักษะสื่อดิจิทัลและเทคโนโลยีสารสนเทศที่ฝึกซ้อมในห้องคอมพิวเตอร์ นำนักเรียนคว้า "รางวัลชนะเลิศระดับเหรียญทอง" การแข่งขัน The School CEO : คลิปสั้นปั้นธุรกิจ (ผลงาน เสน่ห์ผ้าทอปกาเกอะญอ) ประกาศทางการโดย สพป.กำแพงเพชร เขต ๒
-            </div>
-          </div>
-          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg', 'ครูเจมส์ถือโล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ สพป.กำแพงเพชร เขต ๒ (๓ ก.ย. ๒๕๖๙)')">
-            <img src="assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg" alt="รางวัลชนะเลิศเหรียญทอง The School CEO" class="timeline-thumb">
-          </div>
-        </div>
-
-        <!-- Milestone 8: 10 ก.ย. 69 (วันประเมินสรุปผลสัมฤทธิ์ประเด็นท้าทาย ป.1 ครบ 11 คน) -->
-        <div class="timeline-card" style="border-top-color: #10b981; background: linear-gradient(to bottom, #f0fdf4, #ffffff);">
-          <div>
-            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๘/๘</div>
-            <div class="timeline-date-badge" style="background: #dcfce7; color: #15803d; border-color: #bbf7d0;">
-              <i data-lucide="check-circle" style="width: 12px; height: 12px;"></i> ๑๐ ก.ย. ๒๕๖๙ (ประเมินสรุปผลสำเร็จ PA)
-            </div>
-            <div class="timeline-card-title" style="color: #15803d;">ประเมินผลสัมฤทธิ์ทักษะการใช้เมาส์ ๔ ด้าน ป.๑ ครบ ๑๑ คน (๑๐๐%)</div>
-            <div class="timeline-card-loc">
-              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องปฏิบัติการคอมพิวเตอร์ รร.บ้านคลองมดแดง
-            </div>
-            <div class="timeline-card-desc">
-              ดำเนินการประเมินผลสัมฤทธิ์ทักษะการใช้เมาส์ ๔ ด้าน (คลิก, ดับเบิลคลิก, ลากวาง, เลื่อนหน้าจอ) ของนักเรียน ป.๑ ครบ ๑๑ คน ผ่านสื่อนวัตกรรม Gamification ในห้องคอมพิวเตอร์ ผลสัมฤทธิ์ผ่านเกณฑ์ดีและปานกลางครบ ๑๐๐% ไม่มีนักเรียนตกเกณฑ์
-            </div>
-          </div>
-          <div class="timeline-thumb-box" onclick="openLightbox('assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg', 'ภาพรวมการประเมินทักษะการใช้เมาส์ ป.๑ ครบทั้ง ๑๑ คน ณ ห้องปฏิบัติการคอมพิวเตอร์ (๑๐ กันยายน ๒๕๖๙)')">
-            <img src="assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg" alt="ประเมินทักษะเมาส์ ป.1 ครบ 11 คน 10 ก.ย. 2569" class="timeline-thumb">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    
-  <!-- Section: รางวัลและผลงานดีเด่นแห่งความภาคภูมิใจ -->
-  <section id="awards" class="section-block" style="background: linear-gradient(180deg, #ffffff 0%, #fffbeb 50%, #ffffff 100%); border-bottom: 1.5px solid #fef3c7;">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border: none; box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);">
-          <i data-lucide="trophy" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Outstanding Honors & Awards 2569
-        </div>
-        <h2 class="section-title">รางวัลและเกียรติยศแห่งความภาคภูมิใจ</h2>
-        <p class="section-desc">
-          ประมวลผลงานรางวัลชนะเลิศระดับเหรียญทอง เกียรติบัตรดีเด่น และผลสัมฤทธิ์จากการจัดการเรียนรู้เชิงรุก นวัตกรรมดิจิทัล และการพัฒนาตนเองอย่างต่อเนื่อง รอบปีงบประมาณ ๒๕๖๙
-        </p>
-      </div>
-
-      <!-- Featured Grand Award Card: The School CEO ชนะเลิศเหรียญทอง -->
-      <div style="background: linear-gradient(135deg, #1e3a8a 0%, #0f274a 60%, #0a192f 100%); border-radius: 20px; color: white; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 16px 36px -6px rgba(30, 58, 138, 0.35); border: 2px solid #f59e0b; position: relative; overflow: hidden;">
-        <!-- Background Trophy Watermark -->
-        <div style="position: absolute; right: -20px; bottom: -30px; opacity: 0.08; font-size: 16rem; pointer-events: none; user-select: none;">🏆</div>
-
-        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
-          <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; font-size: 0.82rem; font-weight: 700; padding: 4px 14px; border-radius: 9999px; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);">
-            🏆 รางวัลชนะเลิศระดับเหรียญทอง (สพป.กำแพงเพชร เขต ๒)
-          </span>
-          <span style="background: rgba(255, 255, 255, 0.15); color: #fde68a; font-size: 0.8rem; font-weight: 600; padding: 3px 12px; border-radius: 9999px; border: 1px solid rgba(253, 230, 138, 0.3);">
-            ประกาศผลทางการ ๗ ส.ค. ๖๙ · มอบโล่ ๒–๓ ก.ย. ๖๙
-          </span>
-        </div>
-
-        <h3 style="font-size: 1.5rem; font-weight: 700; color: #ffffff; line-height: 1.35; margin-bottom: 8px;">
-          การประกวดคลิปสั้น "The School CEO : คลิปสั้นปั้นธุรกิจ" ชนะเลิศระดับเหรียญทอง
-        </h3>
-        <p style="font-size: 0.95rem; color: #e2e8f0; line-height: 1.6; margin-bottom: 1.5rem; max-width: 900px;">
-          ผลงานสร้างสรรค์คลิปสั้นดิจิทัล <strong>"เสน่ห์ผ้าทอปกาเกอะญอ"</strong> ที่ครูเจมส์ฝึกซ้อมและควบคุมการตัดต่อด้วยคอมพิวเตอร์และเทคโนโลยีมัลติมีเดีย ชูอัตลักษณ์ภูมิปัญญาท้องถิ่นของนักเรียนโรงเรียนบ้านคลองมดแดง จนสามารถคว้า <strong>"รางวัลชนะเลิศระดับเหรียญทอง"</strong> อันดับ ๑ ของเขตพื้นที่การศึกษา โดย นายวีระ บัวผัน ผู้อำนวยการ สพป.กำแพงเพชร เขต ๒
-        </p>
-
-        <!-- 3-Image Triad Showcase -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-          <!-- Image 1: โล่รางวัล -->
-          <div style="border-radius: 12px; overflow: hidden; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); cursor: pointer; transition: all 0.3s ease;" onclick="openLightbox('assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg', 'โล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ สพป.กำแพงเพชร เขต ๒')">
-            <div style="height: 220px; overflow: hidden; position: relative;">
-              <img src="assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg" alt="โล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-              <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(15,23,42,0.85); color: white; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px;">🔍 คลิกดูภาพขยาย</span>
-            </div>
-            <div style="padding: 10px 12px; font-size: 0.84rem; color: #fef3c7; font-weight: 600;">
-              🥇 โล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO
-            </div>
-          </div>
-
-          <!-- Image 2: ประกาศทางการ สพป.กพ.๒ -->
-          <div style="border-radius: 12px; overflow: hidden; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); cursor: pointer; transition: all 0.3s ease;" onclick="openLightbox('assets_drop/2569_รางวัลและผลงานดีเด่น/02_ประกาศสพป_กำแพงเพชรเขต2_TheSchoolCEO_ชนะเลิศเหรียญทอง.jpg', 'ประกาศผลการประกวด The School CEO ชนะเลิศระดับเหรียญทอง โดย นายวีระ บัวผัน ผอ.สพป.กำแพงเพชร เขต ๒')">
-            <div style="height: 220px; overflow: hidden; position: relative;">
-              <img src="assets_drop/2569_รางวัลและผลงานดีเด่น/02_ประกาศสพป_กำแพงเพชรเขต2_TheSchoolCEO_ชนะเลิศเหรียญทอง.jpg" alt="ประกาศ สพป.กำแพงเพชร เขต ๒ ชนะเลิศระดับเหรียญทอง" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-              <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(15,23,42,0.85); color: white; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px;">🔍 คลิกดูภาพขยาย</span>
-            </div>
-            <div style="padding: 10px 12px; font-size: 0.84rem; color: #fef3c7; font-weight: 600;">
-              📜 ประกาศทางการ สพป.กำแพงเพชร เขต ๒ (๗ ส.ค. ๖๙)
-            </div>
-          </div>
-
-          <!-- Image 3: ครูเจมส์ถือโล่รางวัลจริง -->
-          <div style="border-radius: 12px; overflow: hidden; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); cursor: pointer; transition: all 0.3s ease;" onclick="openLightbox('assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg', 'ครูเจมส์ถือโล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ ณ วันรับมอบรางวัล (๓ ก.ย. ๒๕๖๙)')">
-            <div style="height: 220px; overflow: hidden; position: relative;">
-              <img src="assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg" alt="ครูเจมส์ถือโล่รางวัลชนะเลิศเหรียญทอง" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-              <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(15,23,42,0.85); color: white; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px;">🔍 คลิกดูภาพขยาย</span>
-            </div>
-            <div style="padding: 10px 12px; font-size: 0.84rem; color: #fef3c7; font-weight: 600;">
-              📸 ภาพรับมอบโล่รางวัลเกียรติยศ (๓ ก.ย. ๒๕๖๙)
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Awards Cards Grid -->
-      <h3 style="font-size: 1.25rem; font-weight: 700; color: #1e3a8a; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">
-        <i data-lucide="medal" style="width: 22px; height: 22px; color: #f59e0b;"></i> เกียรติประวัติและรางวัลดีเด่นทั้งหมด
-      </h3>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-        <!-- Card 1: Science Show เหรียญทอง -->
-        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
-          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/2569_รางวัลและผลงานดีเด่น/03_รางวัลเหรียญทอง_ScienceShow_ศิลปหัตถกรรมนักเรียน_ครั้งที่74.jpg', 'เกียรติบัตรครูผู้ฝึกซ้อมรางวัลเหรียญทอง การแสดงทางวิทยาศาสตร์ (Science Show) ป.๔-๖ งานศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔')">
-            <img src="assets_drop/2569_รางวัลและผลงานดีเด่น/03_รางวัลเหรียญทอง_ScienceShow_ศิลปหัตถกรรมนักเรียน_ครั้งที่74.jpg" alt="รางวัลเหรียญทอง Science Show" style="width: 100%; height: 100%; object-fit: cover;">
-            <span style="position: absolute; top: 10px; left: 10px; background: #d97706; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🥇 เหรียญทอง</span>
-          </div>
-          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="font-size: 0.74rem; font-weight: 700; color: #d97706; text-transform: uppercase;">ศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔</div>
-            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">รางวัลเหรียญทอง การแสดงทางวิทยาศาสตร์ (Science Show)</h4>
-            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
-              ครูผู้ฝึกสอนนักเรียนชั้น ป.๔–๖ คว้าเหรียญทอง ระดับกลุ่มโรงเรียนคลองสวนหมาก สพป.กำแพงเพชร เขต ๒
-            </p>
-            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
-              บทบาท: ครูผู้ฝึกสอนนักเรียน
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 1b: ออกแบบสิ่งของเครื่องใช้ด้วยโปรแกรมคอมพิวเตอร์ เหรียญทอง -->
-        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
-          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets/evidence/award_computer_design_gold_m13.jpg', 'ประกาศแสดงความยินดี รางวัลเหรียญทอง การแข่งขันการออกแบบสิ่งของเครื่องใช้ด้วยโปรแกรมคอมพิวเตอร์ ระดับชั้น ม.๑–ม.๓ งานศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔ กลุ่มโรงเรียนคลองสวนหมาก')">
-            <img src="assets/evidence/award_computer_design_gold_m13.jpg" alt="รางวัลเหรียญทอง การแข่งขันการออกแบบสิ่งของเครื่องใช้ด้วยโปรแกรมคอมพิวเตอร์ ม.๑-ม.๓" style="width: 100%; height: 100%; object-fit: cover;">
-            <span style="position: absolute; top: 10px; left: 10px; background: #d97706; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🥇 เหรียญทอง</span>
-          </div>
-          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="font-size: 0.74rem; font-weight: 700; color: #d97706; text-transform: uppercase;">ศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔</div>
-            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">รางวัลเหรียญทอง ออกแบบสิ่งของเครื่องใช้ด้วยคอมพิวเตอร์ ม.๑–ม.๓</h4>
-            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
-              ครูผู้ฝึกซ้อมนักเรียน (ด.ช.พุทธิพงศ์ คงโพธิ์น้อย, ด.ช.อดิเทพ หมู่ทอง) ระดับชั้น ม.๑–ม.๓ คว้าเหรียญทอง กลุ่มโรงเรียนคลองสวนหมาก ประจำปีการศึกษา ๒๕๖๙
-            </p>
-            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
-              บทบาท: ครูผู้ฝึกซ้อม (นายอนันตชัย เพ็ชรรี่, นายนวาพาณิชย์ วังคีรี)
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 1c: รางวัลชมเชยระดับประเทศ วุฒิสภา คลิปวิดีโอ Green Culture -->
-        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
-          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets/evidence/award_green_culture_poster.jpg', 'โปสเตอร์ผลงาน ถ้าโลกพูดได้... รางวัลชมเชยระดับประเทศ การประกวดคลิปวิดีโอ Green Culture วุฒิสภา')">
-            <img src="assets/evidence/award_green_culture_poster.jpg" alt="รางวัลชมเชยระดับประเทศ วุฒิสภา คลิปวิดีโอ Green Culture" style="width: 100%; height: 100%; object-fit: cover;">
-            <span style="position: absolute; top: 10px; left: 10px; background: #15803d; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🌿 รางวัลระดับประเทศ</span>
-          </div>
-          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="font-size: 0.74rem; font-weight: 700; color: #15803d; text-transform: uppercase;">วุฒิสภา & สมาคมคาทอลิกฯ & มูลนิธิ ดร.เทียม โชควัฒนา</div>
-            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">รางวัลชมเชยระดับประเทศ คลิปวิดีโอ "Green Culture"</h4>
-            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
-              ผลงานสร้างสรรค์คลิปวิดีโอ <strong>"ถ้าโลกพูดได้..."</strong> สะท้อนคุณธรรม จริยธรรม และความรับผิดชอบต่อสิ่งแวดล้อม คณะกรรมาธิการการศาสนาฯ วุฒิสภา
-            </p>
-            <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-              <button type="button" class="btn-album-inline" style="font-size: 0.72rem; padding: 3px 8px;" onclick="openLightbox('assets/evidence/award_green_culture_poster.jpg', 'โปสเตอร์ผลงาน ถ้าโลกพูดได้... ได้รับรางวัลชมเชยระดับประเทศ')"><i data-lucide="image" style="width: 12px; height: 12px;"></i> โปสเตอร์</button>
-              <button type="button" class="btn-album-inline" style="font-size: 0.72rem; padding: 3px 8px;" onclick="openLightbox('assets/evidence/award_green_culture_certificate.jpg', 'เกียรติบัตรวุฒิสภา รางวัลชมเชยการประกวดคลิปวิดีโอ Green Culture: Caring for Our Common Home')"><i data-lucide="award" style="width: 12px; height: 12px;"></i> เกียรติบัตร</button>
-            </div>
-            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
-              บทบาท: ครูผู้ผลิต ควบคุมการตัดต่อและฝึกสอนนักเรียน
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 1d: เกียรติบัตรวุฒิสภา รางวัลชมเชยระดับประเทศ -->
-        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
-          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets/evidence/award_green_culture_certificate.jpg', 'เกียรติบัตรวุฒิสภา รางวัลชมเชยการประกวดคลิปวิดีโอ Green Culture: Caring for Our Common Home ลงนามโดย ประธานคณะกรรมาธิการการศาสนา คุณธรรม จริยธรรมฯ วุฒิสภา')">
-            <img src="assets/evidence/award_green_culture_certificate.jpg" alt="เกียรติบัตรวุฒิสภา รางวัลชมเชย Green Culture" style="width: 100%; height: 100%; object-fit: cover;">
-            <span style="position: absolute; top: 10px; left: 10px; background: #047857; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">📜 เกียรติบัตรวุฒิสภา</span>
-          </div>
-          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="font-size: 0.74rem; font-weight: 700; color: #047857; text-transform: uppercase;">วุฒิสภา (๕ สิงหาคม ๒๕๖๗)</div>
-            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">เกียรติบัตรวุฒิสภา รางวัลชมเชย Green Culture</h4>
-            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
-              ลงนามโดย นางเอมอร ศรีกงพาน ประธานคณะกรรมาธิการการศาสนา คุณธรรม จริยธรรม ศิลปะและวัฒนธรรม วุฒิสภา
-            </p>
-            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
-              ระดับ: ระดับประเทศ (วุฒิสภา)
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: ภาพถ่ายต่อต้านทุจริต รองชนะเลิศอันดับ 2 -->
-        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
-          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/2569_รางวัลและผลงานดีเด่น/04_รางวัลรองชนะเลิศอันดับ2_ภาพถ่ายต่อต้านการทุจริต_ราคาของการถูกลืม.jpg', 'เกียรติบัตรรางวัลรองชนะเลิศอันดับ ๒ คุณภาพดีเยี่ยม การประกวดภาพถ่ายต่อต้านการทุจริต ราคาของการถูกลืม สพป.กพ.๒')">
-            <img src="assets_drop/2569_รางวัลและผลงานดีเด่น/04_รางวัลรองชนะเลิศอันดับ2_ภาพถ่ายต่อต้านการทุจริต_ราคาของการถูกลืม.jpg" alt="รางวัลรองชนะเลิศอันดับ ๒ ภาพถ่ายต่อต้านทุจริต" style="width: 100%; height: 100%; object-fit: cover;">
-            <span style="position: absolute; top: 10px; left: 10px; background: #2563eb; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🥈 รองชนะเลิศอันดับ ๒</span>
-          </div>
-          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="font-size: 0.74rem; font-weight: 700; color: #2563eb; text-transform: uppercase;">โครงการโรงเรียนสุจริต สพป.กพ.๒</div>
-            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">รางวัลรองชนะเลิศอันดับ ๒ ประกวดภาพถ่ายต่อต้านการทุจริต</h4>
-            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
-              ผลงาน "ราคาของการถูกลืม" ระดับคุณภาพ "ดีเยี่ยม" ปลูกฝังค่านิยมความซื่อสัตย์สุจริตแก่เยาวชน
-            </p>
-            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
-              ระดับ: เขตพื้นที่การศึกษาประถมศึกษา
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: ภาพยนตร์สั้น อันดับ 5 -->
-        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
-          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/2569_รางวัลและผลงานดีเด่น/05_รางวัลอันดับ5_ภาพยนตร์สั้นต่อต้านการทุจริต_TheFalseGoalประตูที่ถูกล็อก.jpg', 'เกียรติบัตรรางวัลอันดับ ๕ การประกวดภาพยนตร์สั้นต่อต้านการทุจริต The False Goal ประตูที่ถูกล็อก สพป.กพ.๒')">
-            <img src="assets_drop/2569_รางวัลและผลงานดีเด่น/05_รางวัลอันดับ5_ภาพยนตร์สั้นต่อต้านการทุจริต_TheFalseGoalประตูที่ถูกล็อก.jpg" alt="รางวัลอันดับ ๕ ภาพยนตร์สั้นต่อต้านทุจริต" style="width: 100%; height: 100%; object-fit: cover;">
-            <span style="position: absolute; top: 10px; left: 10px; background: #059669; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🏅 อันดับ ๕ ดีเยี่ยม</span>
-          </div>
-          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="font-size: 0.74rem; font-weight: 700; color: #059669; text-transform: uppercase;">โครงการโรงเรียนสุจริต สพป.กพ.๒</div>
-            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">รางวัลอันดับ ๕ ภาพยนตร์สั้นต่อต้านการทุจริต ป.๑–๖</h4>
-            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
-              ผลงาน "The False Goal : ประตูที่ถูกล็อก" ตัดต่อและผลิตด้วยระบบคอมพิวเตอร์ดิจิทัล
-            </p>
-            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
-              บทบาท: ครูผู้ฝึกซ้อมและตัดต่อสื่อ
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4: ครูฝึกสอนสื่อ AI อบจ.กำแพงเพชร -->
-        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
-          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/06_ภาพเกียรติบัตรและรางวัล/messageImage_1783918653571.jpg', 'เกียรติบัตรครูผู้ฝึกสอนนักเรียนสร้างสรรค์สื่อด้วยปัญญาประดิษฐ์ AI ม.๑–๓ อบจ.กำแพงเพชร (๒๖ มิ.ย. ๖๙)')">
-            <img src="assets_drop/06_ภาพเกียรติบัตรและรางวัล/messageImage_1783918653571.jpg" alt="เกียรติบัตรครูผู้ฝึกสอนสื่อ AI อบจ.กำแพงเพชร" style="width: 100%; height: 100%; object-fit: cover;">
-            <span style="position: absolute; top: 10px; left: 10px; background: #7c3aed; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🎖️ ระดับจังหวัด</span>
-          </div>
-          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="font-size: 0.74rem; font-weight: 700; color: #7c3aed; text-transform: uppercase;">อบจ.กำแพงเพชร (๒๖ มิ.ย. ๖๙)</div>
-            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">ครูผู้ฝึกสอนการประกวดสร้างสรรค์สื่อด้วย AI ม.๑–๓</h4>
-            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
-              ฝึกสอนนักเรียนระดับมัธยมศึกษาตอนต้น ในโครงการแข่งขันทักษะทางวิชาการ ประจำปีงบประมาณ ๒๕๖๙
-            </p>
-            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
-              หน่วยงาน: องค์การบริหารส่วนจังหวัดกำแพงเพชร
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5: AI Learning Hub สพป.กพ.๒ -->
-        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
-          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg', 'เกียรติบัตร AI Learning Hub และคลังสื่อ OBEC Content Center สพป.กำแพงเพชร เขต ๒ (๗ มิ.ย. ๖๙)')">
-            <img src="assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg" alt="เกียรติบัตร AI Learning Hub" style="width: 100%; height: 100%; object-fit: cover;">
-            <span style="position: absolute; top: 10px; left: 10px; background: #0284c7; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">📜 แลกเปลี่ยนเรียนรู้</span>
-          </div>
-          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="font-size: 0.74rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">สพป.กำแพงเพชร เขต ๒ (๗ มิ.ย. ๖๙)</div>
-            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">เกียรติบัตร AI Learning Hub & OBEC Content Center</h4>
-            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
-              ผ่านการแลกเปลี่ยนเรียนรู้การใช้ AI และคลังสื่อเทคโนโลยีดิจิทัลเพื่อยกระดับการศึกษาขั้นพื้นฐาน
-            </p>
-            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
-              การพัฒนาวิชาชีพ: สพป.กำแพงเพชร เขต ๒
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6: วุฒิบัตร AI สสวท. ๒๘ ชั่วโมง -->
-        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
-          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/06_ภาพเกียรติบัตรและรางวัล/Picture1.png', 'วุฒิบัตรการจัดการเรียนรู้ปัญญาประดิษฐ์ AI ม.๑–๓ (๒๐ ชม.) และ ป.๔–๖ (๘ ชม.) สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี สสวท.')">
-            <img src="assets_drop/06_ภาพเกียรติบัตรและรางวัล/Picture1.png" alt="วุฒิบัตร AI สสวท." style="width: 100%; height: 100%; object-fit: cover;">
-            <span style="position: absolute; top: 10px; left: 10px; background: #4338ca; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🎓 สสวท. ๒๘ ชม.</span>
-          </div>
-          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
-            <div style="font-size: 0.74rem; font-weight: 700; color: #4338ca; text-transform: uppercase;">สสวท. กระทรวงศึกษาธิการ</div>
-            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">วุฒิบัตรการจัดการเรียนรู้ปัญญาประดิษฐ์ (AI) ๒ หลักสูตร</h4>
-            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
-              ผ่านการอบรมออนไลน์หลักสูตร AI สำหรับมัธยมศึกษาตอนต้น (๒๐ ชม.) และประถมศึกษาตอนปลาย (๘ ชม.) รวม ๒๘ ชม.
-            </p>
-            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
-              หลักสูตร: สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Section 1 : ภาระงานและตารางสอน -->
-
+  <!-- Section 1 : ภาระงานและตารางสอน (๒๕ คาบ/สัปดาห์) -->
   <section id="workload" class="section-block">
     <div class="container">
       <div class="section-header">
@@ -4780,8 +4850,7 @@
     </div>
   </section>
 
-  <!-- Section 2 : 15 ตัวชี้วัดตามมาตรฐานตำแหน่ง -->
-
+  <!-- Section 2 : 15 ตัวชี้วัดตามมาตรฐานตำแหน่ง (องค์ประกอบที่ ๑) -->
   <section id="indicators" class="section-block">
   <div class="container">
     <div class="section-header">
@@ -5968,6 +6037,7 @@
   </div><!-- /.container -->
 </section>
 
+  <!-- Section 3 : ข้อตกลงในการพัฒนางานที่เป็นประเด็นท้าทาย (องค์ประกอบที่ ๒) -->
   <section id="challenge" class="section-block">
     <div class="container">
       <div class="section-header">
@@ -6198,6 +6268,212 @@
           </div>
         </div>
 
+        
+        <!-- Interactive Before & After Showcase -->
+        <div class="before-after-card-wrapper">
+          <div class="before-after-header">
+            <div class="before-after-title-group">
+              <h3 style="display: flex; align-items: center; gap: 8px;">
+                <i data-lucide="split-square-vertical" style="width: 22px; height: 22px; color: #2563eb;"></i>
+                ภาพเชิงประจักษ์เปรียบเทียบพัฒนาการ (Before &amp; After Showcase)
+              </h3>
+              <p>เปรียบเทียบสภาพปัญหาก่อนเรียน กับความคล่องแคล่วในการควบคุมกล้ามเนื้อมัดเล็กหลังใช้นวัตกรรม Gamification</p>
+            </div>
+            <div class="before-after-toggle-group">
+              <button type="button" class="ba-toggle-btn active" onclick="switchBATab('both', this)">⚖️ เปรียบเทียบทั้งคู่</button>
+              <button type="button" class="ba-toggle-btn" onclick="switchBATab('before', this)">🔴 ก่อนเรียน (Before)</button>
+              <button type="button" class="ba-toggle-btn" onclick="switchBATab('after', this)">🟢 หลังเรียน (After)</button>
+            </div>
+          </div>
+
+          <div id="baGrid" class="ba-grid-container">
+            <!-- Before Panel -->
+            <div id="baBeforePanel" class="ba-panel ba-panel-before">
+              <span class="ba-badge ba-badge-before">
+                <i data-lucide="alert-circle" style="width: 14px; height: 14px;"></i> สภาพปัญหาเดิมก่อนเรียน (Initial State)
+              </span>
+              <div class="ba-img-container">
+                <img src="assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/03_นักเรียนใช้เมาส์คอมพิวเตอร์_ป1.jpg" alt="สภาพปัญหาการฝึกใช้เมาส์ก่อนเรียน" loading="lazy">
+              </div>
+              <h4 style="font-family: 'Prompt', sans-serif; font-size: 1.05rem; color: #991b1b; margin: 0 0 10px 0;">
+                ปัญหาการควบคุมกล้ามเนื้อมัดเล็กและการประสานสายตา
+              </h4>
+              <ul class="ba-list">
+                <li>
+                  <span style="color: #ef4444; font-weight: 700;">✕</span>
+                  <span><strong>ขาดความคุ้นเคย:</strong> นักเรียนชนบทส่วนใหญ่ไม่มีคอมพิวเตอร์ที่บ้าน ทำให้ไม่เคยสัมผัสอุปกรณ์เมาส์</span>
+                </li>
+                <li>
+                  <span style="color: #ef4444; font-weight: 700;">✕</span>
+                  <span><strong>จับเมาส์สองมือ &amp; เกร็งข้อมือ:</strong> นักเรียนใช้สองมือประคองเมาส์ ควบคุมทิศทางไม่ได้และเมาส์หลุดขอบโต๊ะ</span>
+                </li>
+                <li>
+                  <span style="color: #ef4444; font-weight: 700;">✕</span>
+                  <span><strong>คลิกผิดพลาด:</strong> ไม่สามารถแยกแยะการคลิกซ้าย ดับเบิลคลิก และการลากวาง (Drag &amp; Drop)</span>
+                </li>
+                <li>
+                  <span style="color: #ef4444; font-weight: 700;">✕</span>
+                  <span><strong>สายตาไม่ประสานกับจอ:</strong> ต้องก้มมองมือตลอดเวลา เกิดความล่าช้า ท้อแท้ และขาดสมาธิ</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- After Panel -->
+            <div id="baAfterPanel" class="ba-panel ba-panel-after">
+              <span class="ba-badge ba-badge-after">
+                <i data-lucide="check-circle-2" style="width: 14px; height: 14px;"></i> ผลสัมฤทธิ์หลังใช้นวัตกรรม (Transformed State)
+              </span>
+              <div class="ba-img-container">
+                <img src="assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/04_Coding_นักเรียนหน้าคอมพิวเตอร์.jpg" alt="ผลสัมฤทธิ์หลังใช้นวัตกรรมเกมมิฟิเคชัน" loading="lazy">
+              </div>
+              <h4 style="font-family: 'Prompt', sans-serif; font-size: 1.05rem; color: #166534; margin: 0 0 10px 0;">
+                ทักษะปฏิบัติการใช้เมาส์คล่องแคล่วและผ่านเกณฑ์ ๑๐๐%
+              </h4>
+              <ul class="ba-list">
+                <li>
+                  <span style="color: #10b981; font-weight: 700;">✓</span>
+                  <span><strong>ผ่านเกณฑ์ครบทุกคน:</strong> นักเรียน ป.๑ ทั้ง ๑๑ คน (๑๐๐%) ผ่านเกณฑ์ประเมินทักษะปฏิบัติระดับดีขึ้นไป</span>
+                </li>
+                <li>
+                  <span style="color: #10b981; font-weight: 700;">✓</span>
+                  <span><strong>จับเมาส์มือเดียวอย่างถูกวิธี:</strong> พัฒนาการกล้ามเนื้อมัดเล็กมั่นคง จับเมาส์มือเดียวอย่างผ่อนคลายและถูกต้อง</span>
+                </li>
+                <li>
+                  <span style="color: #10b981; font-weight: 700;">✓</span>
+                  <span><strong>แม่นยำทั้ง ๔ ทักษะ:</strong> สามารถคลิกเดี่ยว, ดับเบิลคลิก, คลิกขวา และลากวาง (Drag &amp; Drop) ได้อย่างแม่นยำ</span>
+                </li>
+                <li>
+                  <span style="color: #10b981; font-weight: 700;">✓</span>
+                  <span><strong>สายตามองจอ &amp; มีความสุข:</strong> เกิดการประสานสัมพันธ์สายตากับมือ สนุกกับภารกิจเกม และมีเจตคติที่ดีมาก</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Adventure Missions Roadmap -->
+        <div class="missions-roadmap-wrapper">
+          <div style="margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+            <h4 style="margin: 0; font-family: 'Prompt', sans-serif; font-size: 1.1rem; color: #0f172a; display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="compass" style="width: 20px; height: 20px; color: #2563eb;"></i>
+              แผนผัง ๔ ด่านภารกิจผจญภัย "หนูน้อยไอทีกับเมาส์วิเศษ" (Gamification Missions)
+            </h4>
+            <span style="font-size: 0.8rem; background: #eff6ff; color: #1e40af; padding: 4px 10px; border-radius: 9999px; font-weight: 600;">
+              หน่วยที่ ๕–๘ รวม ๒๐๐ นาที (Active Learning)
+            </span>
+          </div>
+
+          <div class="missions-roadmap-grid">
+            <!-- Mission 1 -->
+            <div class="mission-step-card">
+              <div class="mission-top-badge">
+                <span class="mission-number">ด่านที่ ๑</span>
+                <span class="mission-skill-pill">Single Click</span>
+              </div>
+              <h4>เจ้าหนูน้อยนักสำรวจ</h4>
+              <p>ฝึกจับเมาส์ให้ถูกต้อง เคลื่อนเคอร์เซอร์ไปยังเป้าหมาย และคลิกซ้ายเลือกวัตถุ ๑ ครั้งอย่างมั่นคง</p>
+              <div class="mission-footer">
+                <span>สื่อ: Code.org &amp; Canva</span>
+                <strong style="color: #059669;">ผ่าน ๑๐๐% (๑๑ คน)</strong>
+              </div>
+            </div>
+
+            <!-- Mission 2 -->
+            <div class="mission-step-card">
+              <div class="mission-top-badge">
+                <span class="mission-number">ด่านที่ ๒</span>
+                <span class="mission-skill-pill">Double Click</span>
+              </div>
+              <h4>กริ๊กๆ เปิดกล่องสมบัติ</h4>
+              <p>ฝึกจังหวะการกดดับเบิลคลิกอย่างต่อเนื่อง เพื่อปลดล็อกหีบสมบัติและเปิดโปรแกรมคอมพิวเตอร์</p>
+              <div class="mission-footer">
+                <span>สื่อ: Poki Clicker Game</span>
+                <strong style="color: #059669;">ผ่าน ๑๐๐% (๑๑ คน)</strong>
+              </div>
+            </div>
+
+            <!-- Mission 3 -->
+            <div class="mission-step-card">
+              <div class="mission-top-badge">
+                <span class="mission-number">ด่านที่ ๓</span>
+                <span class="mission-skill-pill">Right Click</span>
+              </div>
+              <h4>คำสั่งลับสายลับจิ๋ว</h4>
+              <p>ใช้นิ้วกลางคลิกขวาเพื่อเปิดเมนูลัด (Context Menu) และเลือกไอเทมลับตามคำสั่งภารกิจ</p>
+              <div class="mission-footer">
+                <span>สื่อ: Context Training</span>
+                <strong style="color: #059669;">ผ่าน ๑๐๐% (๑๑ คน)</strong>
+              </div>
+            </div>
+
+            <!-- Mission 4 -->
+            <div class="mission-step-card">
+              <div class="mission-top-badge">
+                <span class="mission-number">ด่านที่ ๔</span>
+                <span class="mission-skill-pill">Drag &amp; Drop</span>
+              </div>
+              <h4>มหาศึกจอมยุทธ์นักต่อภาพ</h4>
+              <p>คลิกค้างเพื่อลากชิ้นส่วนจิ๊กซอว์ภาพการ์ตูนไปวางลงตำแหน่งกรอบที่ถูกต้องอย่างแม่นยำ</p>
+              <div class="mission-footer">
+                <span>สื่อ: Digital Puzzle Block</span>
+                <strong style="color: #059669;">ผ่าน ๑๐๐% (๑๑ คน)</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Voices of Learners & Community -->
+        <div class="voices-section-wrapper">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+            <h4 style="margin: 0; font-family: 'Prompt', sans-serif; font-size: 1.1rem; color: #0f172a; display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="message-square-quote" style="width: 20px; height: 20px; color: #2563eb;"></i>
+              เสียงสะท้อนจากห้องเรียนจริง (Voice of Learners &amp; Community)
+            </h4>
+            <span style="font-size: 0.8rem; color: #64748b;">ผลตอบรับเชิงคุณภาพและการมีส่วนร่วมของผู้มีส่วนได้ส่วนเสีย</span>
+          </div>
+
+          <div class="voices-grid">
+            <div class="voice-card">
+              <div class="voice-card-quote">
+                "หนูชอบด่านเปิดกล่องสมบัติมากค่ะ พอคลิกสองทีติดกัน กล่องสมบัติก็เปิดออก มีดาวขึ้นมาเต็มจอ หนูอยากมาเรียนคอมพิวเตอร์กับครูเจมส์ทุกวันเลยค่ะ"
+              </div>
+              <div class="voice-card-author">
+                <div class="voice-avatar-icon">👧</div>
+                <div class="voice-author-info">
+                  <span class="voice-author-name">เด็กหญิง ป.๑</span>
+                  <span class="voice-author-role">นักเรียนกลุ่มเป้าหมายประเด็นท้าทาย</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="voice-card">
+              <div class="voice-card-quote">
+                "ตอนแรกผมจับเมาส์ไม่ถนัด เมาส์วิ่งหนีตลอดเลยครับ แต่พอครูเจมส์สอนเล่นเกมจับคู่ภาพ ผมลากตัวการ์ตูนเข้าบ้านได้เองแล้วครับ สนุกมากๆ เลยครับ"
+              </div>
+              <div class="voice-card-author">
+                <div class="voice-avatar-icon">👦</div>
+                <div class="voice-author-info">
+                  <span class="voice-author-name">เด็กชาย ป.๑</span>
+                  <span class="voice-author-role">นักเรียนกลุ่มเป้าหมายประเด็นท้าทาย</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="voice-card">
+              <div class="voice-card-quote">
+                "ดีใจมากที่เห็นลูกกลับมาบ้านแล้วเล่าว่าครูเจมส์สอนเล่นเกมคอมพิวเตอร์อย่างสนุกสนาน จากเดิมที่กลัวและไม่เคยจับคอมพิวเตอร์ ตอนนี้มีความมั่นใจและอยากมาโรงเรียนทุกวันค่ะ"
+              </div>
+              <div class="voice-card-author">
+                <div class="voice-avatar-icon">👨‍👩‍👧</div>
+                <div class="voice-author-info">
+                  <span class="voice-author-name">ตัวแทนผู้ปกครองนักเรียน ป.๑</span>
+                  <span class="voice-author-role">การประชุมผู้ปกครองชั้นเรียน ๒๕๖๙</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="data-table-wrap">
           <table class="styled-table">
             <thead>
@@ -6381,9 +6657,7 @@
     </div>
   </section>
 
-  <!-- Section 4 : คลังภาพถ่ายจริง (Google Photos Gallery) -->
-
-  <!-- Section: องค์ประกอบที่ ๒ การมีส่วนร่วมในการพัฒนาการศึกษา -->
+  <!-- Section : องค์ประกอบที่ ๒ การมีส่วนร่วมในการพัฒนาการศึกษา (ว ๒๓/๒๕๖๔) -->
   <section id="component-2" class="section-block">
     <div class="container">
       <div class="section-header">
@@ -6574,7 +6848,7 @@
     </div>
   </section>
 
-  <!-- Section: องค์ประกอบที่ ๓ การปฏิบัติตนในการรักษาวินัย คุณธรรม จริยธรรม และจรรยาบรรณวิชาชีพ -->
+  <!-- Section : องค์ประกอบที่ ๓ การปฏิบัติตนในการรักษาวินัย คุณธรรม จริยธรรม (ว ๒๓/๒๕๖๔) -->
   <section id="component-3" class="section-block" style="background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);">
     <div class="container">
       <div class="section-header">
@@ -6739,7 +7013,430 @@
     </div>
   </section>
 
-    <section id="gallery" class="section-block" style="background: white;">
+  <!-- Section : รางวัลและผลงานดีเด่นแห่งความภาคภูมิใจ -->
+  <section id="awards" class="section-block" style="background: linear-gradient(180deg, #ffffff 0%, #fffbeb 50%, #ffffff 100%); border-bottom: 1.5px solid #fef3c7;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border: none; box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);">
+          <i data-lucide="trophy" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Outstanding Honors & Awards 2569
+        </div>
+        <h2 class="section-title">รางวัลและเกียรติยศแห่งความภาคภูมิใจ</h2>
+        <p class="section-desc">
+          ประมวลผลงานรางวัลชนะเลิศระดับเหรียญทอง เกียรติบัตรดีเด่น และผลสัมฤทธิ์จากการจัดการเรียนรู้เชิงรุก นวัตกรรมดิจิทัล และการพัฒนาตนเองอย่างต่อเนื่อง รอบปีงบประมาณ ๒๕๖๙
+        </p>
+      </div>
+
+      <!-- Featured Grand Award Card: The School CEO ชนะเลิศเหรียญทอง -->
+      <div style="background: linear-gradient(135deg, #1e3a8a 0%, #0f274a 60%, #0a192f 100%); border-radius: 20px; color: white; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 16px 36px -6px rgba(30, 58, 138, 0.35); border: 2px solid #f59e0b; position: relative; overflow: hidden;">
+        <!-- Background Trophy Watermark -->
+        <div style="position: absolute; right: -20px; bottom: -30px; opacity: 0.08; font-size: 16rem; pointer-events: none; user-select: none;">🏆</div>
+
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
+          <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; font-size: 0.82rem; font-weight: 700; padding: 4px 14px; border-radius: 9999px; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);">
+            🏆 รางวัลชนะเลิศระดับเหรียญทอง (สพป.กำแพงเพชร เขต ๒)
+          </span>
+          <span style="background: rgba(255, 255, 255, 0.15); color: #fde68a; font-size: 0.8rem; font-weight: 600; padding: 3px 12px; border-radius: 9999px; border: 1px solid rgba(253, 230, 138, 0.3);">
+            ประกาศผลทางการ ๗ ส.ค. ๖๙ · มอบโล่ ๒–๓ ก.ย. ๖๙
+          </span>
+        </div>
+
+        <h3 style="font-size: 1.5rem; font-weight: 700; color: #ffffff; line-height: 1.35; margin-bottom: 8px;">
+          การประกวดคลิปสั้น "The School CEO : คลิปสั้นปั้นธุรกิจ" ชนะเลิศระดับเหรียญทอง
+        </h3>
+        <p style="font-size: 0.95rem; color: #e2e8f0; line-height: 1.6; margin-bottom: 1.5rem; max-width: 900px;">
+          ผลงานสร้างสรรค์คลิปสั้นดิจิทัล <strong>"เสน่ห์ผ้าทอปกาเกอะญอ"</strong> ที่ครูเจมส์ฝึกซ้อมและควบคุมการตัดต่อด้วยคอมพิวเตอร์และเทคโนโลยีมัลติมีเดีย ชูอัตลักษณ์ภูมิปัญญาท้องถิ่นของนักเรียนโรงเรียนบ้านคลองมดแดง จนสามารถคว้า <strong>"รางวัลชนะเลิศระดับเหรียญทอง"</strong> อันดับ ๑ ของเขตพื้นที่การศึกษา โดย นายวีระ บัวผัน ผู้อำนวยการ สพป.กำแพงเพชร เขต ๒
+        </p>
+
+        <!-- 3-Image Triad Showcase -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+          <!-- Image 1: โล่รางวัล -->
+          <div style="border-radius: 12px; overflow: hidden; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); cursor: pointer; transition: all 0.3s ease;" onclick="openLightbox('assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg', 'โล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ สพป.กำแพงเพชร เขต ๒')">
+            <div style="height: 220px; overflow: hidden; position: relative;">
+              <img src="assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg" alt="โล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(15,23,42,0.85); color: white; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px;">🔍 คลิกดูภาพขยาย</span>
+            </div>
+            <div style="padding: 10px 12px; font-size: 0.84rem; color: #fef3c7; font-weight: 600;">
+              🥇 โล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO
+            </div>
+          </div>
+
+          <!-- Image 2: ประกาศทางการ สพป.กพ.๒ -->
+          <div style="border-radius: 12px; overflow: hidden; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); cursor: pointer; transition: all 0.3s ease;" onclick="openLightbox('assets_drop/2569_รางวัลและผลงานดีเด่น/02_ประกาศสพป_กำแพงเพชรเขต2_TheSchoolCEO_ชนะเลิศเหรียญทอง.jpg', 'ประกาศผลการประกวด The School CEO ชนะเลิศระดับเหรียญทอง โดย นายวีระ บัวผัน ผอ.สพป.กำแพงเพชร เขต ๒')">
+            <div style="height: 220px; overflow: hidden; position: relative;">
+              <img src="assets_drop/2569_รางวัลและผลงานดีเด่น/02_ประกาศสพป_กำแพงเพชรเขต2_TheSchoolCEO_ชนะเลิศเหรียญทอง.jpg" alt="ประกาศ สพป.กำแพงเพชร เขต ๒ ชนะเลิศระดับเหรียญทอง" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(15,23,42,0.85); color: white; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px;">🔍 คลิกดูภาพขยาย</span>
+            </div>
+            <div style="padding: 10px 12px; font-size: 0.84rem; color: #fef3c7; font-weight: 600;">
+              📜 ประกาศทางการ สพป.กำแพงเพชร เขต ๒ (๗ ส.ค. ๖๙)
+            </div>
+          </div>
+
+          <!-- Image 3: ครูเจมส์ถือโล่รางวัลจริง -->
+          <div style="border-radius: 12px; overflow: hidden; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); cursor: pointer; transition: all 0.3s ease;" onclick="openLightbox('assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg', 'ครูเจมส์ถือโล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ ณ วันรับมอบรางวัล (๓ ก.ย. ๒๕๖๙)')">
+            <div style="height: 220px; overflow: hidden; position: relative;">
+              <img src="assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg" alt="ครูเจมส์ถือโล่รางวัลชนะเลิศเหรียญทอง" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(15,23,42,0.85); color: white; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px;">🔍 คลิกดูภาพขยาย</span>
+            </div>
+            <div style="padding: 10px 12px; font-size: 0.84rem; color: #fef3c7; font-weight: 600;">
+              📸 ภาพรับมอบโล่รางวัลเกียรติยศ (๓ ก.ย. ๒๕๖๙)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Awards Cards Grid -->
+      <h3 style="font-size: 1.25rem; font-weight: 700; color: #1e3a8a; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="medal" style="width: 22px; height: 22px; color: #f59e0b;"></i> เกียรติประวัติและรางวัลดีเด่นทั้งหมด
+      </h3>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <!-- Card 1: Science Show เหรียญทอง -->
+        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
+          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/2569_รางวัลและผลงานดีเด่น/03_รางวัลเหรียญทอง_ScienceShow_ศิลปหัตถกรรมนักเรียน_ครั้งที่74.jpg', 'เกียรติบัตรครูผู้ฝึกซ้อมรางวัลเหรียญทอง การแสดงทางวิทยาศาสตร์ (Science Show) ป.๔-๖ งานศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔')">
+            <img src="assets_drop/2569_รางวัลและผลงานดีเด่น/03_รางวัลเหรียญทอง_ScienceShow_ศิลปหัตถกรรมนักเรียน_ครั้งที่74.jpg" alt="รางวัลเหรียญทอง Science Show" style="width: 100%; height: 100%; object-fit: cover;">
+            <span style="position: absolute; top: 10px; left: 10px; background: #d97706; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🥇 เหรียญทอง</span>
+          </div>
+          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="font-size: 0.74rem; font-weight: 700; color: #d97706; text-transform: uppercase;">ศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔</div>
+            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">รางวัลเหรียญทอง การแสดงทางวิทยาศาสตร์ (Science Show)</h4>
+            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
+              ครูผู้ฝึกสอนนักเรียนชั้น ป.๔–๖ คว้าเหรียญทอง ระดับกลุ่มโรงเรียนคลองสวนหมาก สพป.กำแพงเพชร เขต ๒
+            </p>
+            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
+              บทบาท: ครูผู้ฝึกสอนนักเรียน
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 1b: ออกแบบสิ่งของเครื่องใช้ด้วยโปรแกรมคอมพิวเตอร์ เหรียญทอง -->
+        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
+          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets/evidence/award_computer_design_gold_m13.jpg', 'ประกาศแสดงความยินดี รางวัลเหรียญทอง การแข่งขันการออกแบบสิ่งของเครื่องใช้ด้วยโปรแกรมคอมพิวเตอร์ ระดับชั้น ม.๑–ม.๓ งานศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔ กลุ่มโรงเรียนคลองสวนหมาก')">
+            <img src="assets/evidence/award_computer_design_gold_m13.jpg" alt="รางวัลเหรียญทอง การแข่งขันการออกแบบสิ่งของเครื่องใช้ด้วยโปรแกรมคอมพิวเตอร์ ม.๑-ม.๓" style="width: 100%; height: 100%; object-fit: cover;">
+            <span style="position: absolute; top: 10px; left: 10px; background: #d97706; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🥇 เหรียญทอง</span>
+          </div>
+          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="font-size: 0.74rem; font-weight: 700; color: #d97706; text-transform: uppercase;">ศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔</div>
+            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">รางวัลเหรียญทอง ออกแบบสิ่งของเครื่องใช้ด้วยคอมพิวเตอร์ ม.๑–ม.๓</h4>
+            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
+              ครูผู้ฝึกซ้อมนักเรียน (ด.ช.พุทธิพงศ์ คงโพธิ์น้อย, ด.ช.อดิเทพ หมู่ทอง) ระดับชั้น ม.๑–ม.๓ คว้าเหรียญทอง กลุ่มโรงเรียนคลองสวนหมาก ประจำปีการศึกษา ๒๕๖๙
+            </p>
+            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
+              บทบาท: ครูผู้ฝึกซ้อม (นายอนันตชัย เพ็ชรรี่, นายนวาพาณิชย์ วังคีรี)
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 1c: รางวัลชมเชยระดับประเทศ วุฒิสภา คลิปวิดีโอ Green Culture -->
+        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
+          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets/evidence/award_green_culture_poster.jpg', 'โปสเตอร์ผลงาน ถ้าโลกพูดได้... รางวัลชมเชยระดับประเทศ การประกวดคลิปวิดีโอ Green Culture วุฒิสภา')">
+            <img src="assets/evidence/award_green_culture_poster.jpg" alt="รางวัลชมเชยระดับประเทศ วุฒิสภา คลิปวิดีโอ Green Culture" style="width: 100%; height: 100%; object-fit: cover;">
+            <span style="position: absolute; top: 10px; left: 10px; background: #15803d; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🌿 รางวัลระดับประเทศ</span>
+          </div>
+          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="font-size: 0.74rem; font-weight: 700; color: #15803d; text-transform: uppercase;">วุฒิสภา & สมาคมคาทอลิกฯ & มูลนิธิ ดร.เทียม โชควัฒนา</div>
+            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">รางวัลชมเชยระดับประเทศ คลิปวิดีโอ "Green Culture"</h4>
+            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
+              ผลงานสร้างสรรค์คลิปวิดีโอ <strong>"ถ้าโลกพูดได้..."</strong> สะท้อนคุณธรรม จริยธรรม และความรับผิดชอบต่อสิ่งแวดล้อม คณะกรรมาธิการการศาสนาฯ วุฒิสภา
+            </p>
+            <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+              <button type="button" class="btn-album-inline" style="font-size: 0.72rem; padding: 3px 8px;" onclick="openLightbox('assets/evidence/award_green_culture_poster.jpg', 'โปสเตอร์ผลงาน ถ้าโลกพูดได้... ได้รับรางวัลชมเชยระดับประเทศ')"><i data-lucide="image" style="width: 12px; height: 12px;"></i> โปสเตอร์</button>
+              <button type="button" class="btn-album-inline" style="font-size: 0.72rem; padding: 3px 8px;" onclick="openLightbox('assets/evidence/award_green_culture_certificate.jpg', 'เกียรติบัตรวุฒิสภา รางวัลชมเชยการประกวดคลิปวิดีโอ Green Culture: Caring for Our Common Home')"><i data-lucide="award" style="width: 12px; height: 12px;"></i> เกียรติบัตร</button>
+            </div>
+            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
+              บทบาท: ครูผู้ผลิต ควบคุมการตัดต่อและฝึกสอนนักเรียน
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 1d: เกียรติบัตรวุฒิสภา รางวัลชมเชยระดับประเทศ -->
+        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
+          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets/evidence/award_green_culture_certificate.jpg', 'เกียรติบัตรวุฒิสภา รางวัลชมเชยการประกวดคลิปวิดีโอ Green Culture: Caring for Our Common Home ลงนามโดย ประธานคณะกรรมาธิการการศาสนา คุณธรรม จริยธรรมฯ วุฒิสภา')">
+            <img src="assets/evidence/award_green_culture_certificate.jpg" alt="เกียรติบัตรวุฒิสภา รางวัลชมเชย Green Culture" style="width: 100%; height: 100%; object-fit: cover;">
+            <span style="position: absolute; top: 10px; left: 10px; background: #047857; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">📜 เกียรติบัตรวุฒิสภา</span>
+          </div>
+          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="font-size: 0.74rem; font-weight: 700; color: #047857; text-transform: uppercase;">วุฒิสภา (๕ สิงหาคม ๒๕๖๗)</div>
+            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">เกียรติบัตรวุฒิสภา รางวัลชมเชย Green Culture</h4>
+            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
+              ลงนามโดย นางเอมอร ศรีกงพาน ประธานคณะกรรมาธิการการศาสนา คุณธรรม จริยธรรม ศิลปะและวัฒนธรรม วุฒิสภา
+            </p>
+            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
+              ระดับ: ระดับประเทศ (วุฒิสภา)
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: ภาพถ่ายต่อต้านทุจริต รองชนะเลิศอันดับ 2 -->
+        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
+          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/2569_รางวัลและผลงานดีเด่น/04_รางวัลรองชนะเลิศอันดับ2_ภาพถ่ายต่อต้านการทุจริต_ราคาของการถูกลืม.jpg', 'เกียรติบัตรรางวัลรองชนะเลิศอันดับ ๒ คุณภาพดีเยี่ยม การประกวดภาพถ่ายต่อต้านการทุจริต ราคาของการถูกลืม สพป.กพ.๒')">
+            <img src="assets_drop/2569_รางวัลและผลงานดีเด่น/04_รางวัลรองชนะเลิศอันดับ2_ภาพถ่ายต่อต้านการทุจริต_ราคาของการถูกลืม.jpg" alt="รางวัลรองชนะเลิศอันดับ ๒ ภาพถ่ายต่อต้านทุจริต" style="width: 100%; height: 100%; object-fit: cover;">
+            <span style="position: absolute; top: 10px; left: 10px; background: #2563eb; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🥈 รองชนะเลิศอันดับ ๒</span>
+          </div>
+          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="font-size: 0.74rem; font-weight: 700; color: #2563eb; text-transform: uppercase;">โครงการโรงเรียนสุจริต สพป.กพ.๒</div>
+            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">รางวัลรองชนะเลิศอันดับ ๒ ประกวดภาพถ่ายต่อต้านการทุจริต</h4>
+            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
+              ผลงาน "ราคาของการถูกลืม" ระดับคุณภาพ "ดีเยี่ยม" ปลูกฝังค่านิยมความซื่อสัตย์สุจริตแก่เยาวชน
+            </p>
+            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
+              ระดับ: เขตพื้นที่การศึกษาประถมศึกษา
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: ภาพยนตร์สั้น อันดับ 5 -->
+        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
+          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/2569_รางวัลและผลงานดีเด่น/05_รางวัลอันดับ5_ภาพยนตร์สั้นต่อต้านการทุจริต_TheFalseGoalประตูที่ถูกล็อก.jpg', 'เกียรติบัตรรางวัลอันดับ ๕ การประกวดภาพยนตร์สั้นต่อต้านการทุจริต The False Goal ประตูที่ถูกล็อก สพป.กพ.๒')">
+            <img src="assets_drop/2569_รางวัลและผลงานดีเด่น/05_รางวัลอันดับ5_ภาพยนตร์สั้นต่อต้านการทุจริต_TheFalseGoalประตูที่ถูกล็อก.jpg" alt="รางวัลอันดับ ๕ ภาพยนตร์สั้นต่อต้านทุจริต" style="width: 100%; height: 100%; object-fit: cover;">
+            <span style="position: absolute; top: 10px; left: 10px; background: #059669; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🏅 อันดับ ๕ ดีเยี่ยม</span>
+          </div>
+          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="font-size: 0.74rem; font-weight: 700; color: #059669; text-transform: uppercase;">โครงการโรงเรียนสุจริต สพป.กพ.๒</div>
+            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">รางวัลอันดับ ๕ ภาพยนตร์สั้นต่อต้านการทุจริต ป.๑–๖</h4>
+            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
+              ผลงาน "The False Goal : ประตูที่ถูกล็อก" ตัดต่อและผลิตด้วยระบบคอมพิวเตอร์ดิจิทัล
+            </p>
+            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
+              บทบาท: ครูผู้ฝึกซ้อมและตัดต่อสื่อ
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: ครูฝึกสอนสื่อ AI อบจ.กำแพงเพชร -->
+        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
+          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/06_ภาพเกียรติบัตรและรางวัล/messageImage_1783918653571.jpg', 'เกียรติบัตรครูผู้ฝึกสอนนักเรียนสร้างสรรค์สื่อด้วยปัญญาประดิษฐ์ AI ม.๑–๓ อบจ.กำแพงเพชร (๒๖ มิ.ย. ๖๙)')">
+            <img src="assets_drop/06_ภาพเกียรติบัตรและรางวัล/messageImage_1783918653571.jpg" alt="เกียรติบัตรครูผู้ฝึกสอนสื่อ AI อบจ.กำแพงเพชร" style="width: 100%; height: 100%; object-fit: cover;">
+            <span style="position: absolute; top: 10px; left: 10px; background: #7c3aed; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🎖️ ระดับจังหวัด</span>
+          </div>
+          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="font-size: 0.74rem; font-weight: 700; color: #7c3aed; text-transform: uppercase;">อบจ.กำแพงเพชร (๒๖ มิ.ย. ๖๙)</div>
+            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">ครูผู้ฝึกสอนการประกวดสร้างสรรค์สื่อด้วย AI ม.๑–๓</h4>
+            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
+              ฝึกสอนนักเรียนระดับมัธยมศึกษาตอนต้น ในโครงการแข่งขันทักษะทางวิชาการ ประจำปีงบประมาณ ๒๕๖๙
+            </p>
+            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
+              หน่วยงาน: องค์การบริหารส่วนจังหวัดกำแพงเพชร
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: AI Learning Hub สพป.กพ.๒ -->
+        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
+          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg', 'เกียรติบัตร AI Learning Hub และคลังสื่อ OBEC Content Center สพป.กำแพงเพชร เขต ๒ (๗ มิ.ย. ๖๙)')">
+            <img src="assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg" alt="เกียรติบัตร AI Learning Hub" style="width: 100%; height: 100%; object-fit: cover;">
+            <span style="position: absolute; top: 10px; left: 10px; background: #0284c7; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">📜 แลกเปลี่ยนเรียนรู้</span>
+          </div>
+          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="font-size: 0.74rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">สพป.กำแพงเพชร เขต ๒ (๗ มิ.ย. ๖๙)</div>
+            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">เกียรติบัตร AI Learning Hub & OBEC Content Center</h4>
+            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
+              ผ่านการแลกเปลี่ยนเรียนรู้การใช้ AI และคลังสื่อเทคโนโลยีดิจิทัลเพื่อยกระดับการศึกษาขั้นพื้นฐาน
+            </p>
+            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
+              การพัฒนาวิชาชีพ: สพป.กำแพงเพชร เขต ๒
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: วุฒิบัตร AI สสวท. ๒๘ ชั่วโมง -->
+        <div style="background: white; border-radius: 16px; border: 1.5px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#93c5fd'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='#e2e8f0'">
+          <div style="position: relative; height: 180px; overflow: hidden; background: #0f172a; cursor: pointer;" onclick="openLightbox('assets_drop/06_ภาพเกียรติบัตรและรางวัล/Picture1.png', 'วุฒิบัตรการจัดการเรียนรู้ปัญญาประดิษฐ์ AI ม.๑–๓ (๒๐ ชม.) และ ป.๔–๖ (๘ ชม.) สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี สสวท.')">
+            <img src="assets_drop/06_ภาพเกียรติบัตรและรางวัล/Picture1.png" alt="วุฒิบัตร AI สสวท." style="width: 100%; height: 100%; object-fit: cover;">
+            <span style="position: absolute; top: 10px; left: 10px; background: #4338ca; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">🎓 สสวท. ๒๘ ชม.</span>
+          </div>
+          <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="font-size: 0.74rem; font-weight: 700; color: #4338ca; text-transform: uppercase;">สสวท. กระทรวงศึกษาธิการ</div>
+            <h4 style="font-size: 1rem; font-weight: 700; color: #0f172a; margin: 4px 0 6px;">วุฒิบัตรการจัดการเรียนรู้ปัญญาประดิษฐ์ (AI) ๒ หลักสูตร</h4>
+            <p style="font-size: 0.82rem; color: #64748b; line-height: 1.5; margin-bottom: 10px; flex-grow: 1;">
+              ผ่านการอบรมออนไลน์หลักสูตร AI สำหรับมัธยมศึกษาตอนต้น (๒๐ ชม.) และประถมศึกษาตอนปลาย (๘ ชม.) รวม ๒๘ ชม.
+            </p>
+            <div style="font-size: 0.76rem; color: #1e40af; font-weight: 600; padding-top: 8px; border-top: 1px solid #f1f5f9;">
+              หลักสูตร: สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section : ลำดับเหตุการณ์และไทม์ไลน์การปฏิบัติงานจริง -->
+  <section id="timeline" class="section-block" style="background: linear-gradient(180deg, #f8fafc 0%, #edf4fc 100%); border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;">
+          <i data-lucide="calendar-range" style="width: 13px; height: 13px;"></i> Chronological Performance Timeline
+        </div>
+        <h2 class="section-title">ไทม์ไลน์การปฏิบัติงานและพัฒนาวิชาชีพ (เริ่มต้น ๔ ตุลาคม ๒๕๖๘)</h2>
+        <p class="section-desc">ประมวลร่องรอยกิจกรรมเชิงประจักษ์ตลอดรอบการประเมิน ๑ ตุลาคม ๒๕๖๘ – ๓๐ กันยายน ๒๕๖๙ โรงเรียนบ้านคลองมดแดง</p>
+      </div>
+
+      <div class="timeline-track">
+        <!-- Milestone 1: 15-22 ต.ค. 68 (AI for Teachers & เตรียมห้องคอมพิวเตอร์) -->
+        <div class="timeline-card" style="border-top-color: #2563eb;">
+          <div>
+            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๑/๘</div>
+            <div class="timeline-date-badge" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe;">
+              <i data-lucide="cpu" style="width: 12px; height: 12px;"></i> ๑๕–๒๒ ต.ค. ๒๕๖๘ (เริ่มต้นรอบประเมิน)
+            </div>
+            <div class="timeline-card-title">พัฒนาทักษะ AI for Teachers & จัดเตรียมระบบห้องปฏิบัติการคอมพิวเตอร์</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องปฏิบัติการคอมพิวเตอร์ รร.บ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              เข้ารับการพัฒนาตนเองหลักสูตรรวมทักษะดิจิทัลและ AI for Teachers (๑๘ ชั่วโมง) พร้อมดำเนินการปรับปรุงระบบโครงข่าย LAN จัดเก็บสายไฟลงรางร้อยท่อปลอดภัย ๑๐๐% และเตรียมเครื่องคอมพิวเตอร์ลูกข่ายให้พร้อมจัดการเรียนรู้ Active Learning
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets/evidence/comlab_renovation_safety.jpg', 'การจัดระบบความปลอดภัยและบำรุงรักษาห้องปฏิบัติการคอมพิวเตอร์ (๑๕–๒๒ ต.ค. ๒๕๖๘)')">
+            <img src="assets/evidence/comlab_renovation_safety.jpg" alt="เตรียมความพร้อมห้องคอมพิวเตอร์" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 2: 20 ม.ค. 69 (ประชุมคณะกรรมการสถานศึกษา นำเสนอแผน ICT) -->
+        <div class="timeline-card" style="border-top-color: #0284c7;">
+          <div>
+            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๒/๘</div>
+            <div class="timeline-date-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">
+              <i data-lucide="users" style="width: 12px; height: 12px;"></i> ๒๐ ม.ค. ๒๕๖๙ (รอบที่ ๑)
+            </div>
+            <div class="timeline-card-title">ประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน นำเสนอแผนพัฒนาสารสนเทศ ICT</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องประชุม รร.บ้านคลองมดแดง (๑๔.๐๐ น.)
+            </div>
+            <div class="timeline-card-desc">
+              เข้าร่วมการประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๑/๒๕๖๙ ร่วมกับ ผอ.ปรัชญา ปรางค์ชัยภูมิ นำเสนอแผนยกระดับห้องปฏิบัติการคอมพิวเตอร์และแนวทางการจัดสรรงบประมาณด้านสื่อดิจิทัลเพื่อการเรียนรู้
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets/evidence/board_meeting_report_page1.jpg', 'รายงานการประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ครั้งที่ ๑/๒๕๖๙ (๒๐ มกราคม ๒๕๖๙)')">
+            <img src="assets/evidence/board_meeting_report_page1.jpg" alt="ประชุมกรรมการสถานศึกษา ครั้งที่ 1/2569" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 3: พ.ค. 69 (วิเคราะห์ผู้เรียนรายบุคคล ป.1 ในห้องคอมฯ) -->
+        <div class="timeline-card" style="border-top-color: #2563eb;">
+          <div>
+            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๓/๘</div>
+            <div class="timeline-date-badge" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe;">
+              <i data-lucide="search" style="width: 12px; height: 12px;"></i> พ.ค. ๒๕๖๙ (เปิดภาคเรียนที่ ๑)
+            </div>
+            <div class="timeline-card-title">สำรวจความพร้อม & วิเคราะห์ทักษะดิจิทัล ป.๑ (๑๑ คน) ในห้องคอมพิวเตอร์</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องปฏิบัติการคอมพิวเตอร์ รร.บ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              สำรวจและคัดกรองความพร้อมด้านกล้ามเนื้อมัดเล็กและการประสานสายตากับมือในการจับเมาส์ของนักเรียนชั้น ป.๑ จำนวน ๑๑ คน ณ ห้องปฏิบัติการคอมพิวเตอร์ พบปัญหาการควบคุมตัวชี้ จึงออกแบบนวัตกรรม Gamification เพื่อฝึกฝนรายบุคคล
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets/evidence/media_pa/IMG_20260910_133436.jpg', 'การฝึกปฏิบัติการใช้เมาส์และโค้ดดิ้งรายบุคคล ๑ คนต่อ ๑ เครื่อง ในห้องคอมพิวเตอร์ (๑๐ ก.ย. ๒๕๖๙)')">
+            <img src="assets/evidence/media_pa/IMG_20260910_133436.jpg" alt="นักเรียน ป.๑ ฝึกปฏิบัติรายบุคคล ๑ คนต่อ ๑ เครื่อง ในห้องคอมพิวเตอร์" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 4: 30-31 พ.ค. 69 (อบรมเชิงปฏิบัติการพัฒนาเว็บไซต์ .th ในห้องคอมฯ) -->
+        <div class="timeline-card" style="border-top-color: #0284c7;">
+          <div>
+            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๔/๘</div>
+            <div class="timeline-date-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">
+              <i data-lucide="globe" style="width: 12px; height: 12px;"></i> ๓๐ – ๓๑ พ.ค. ๒๕๖๙
+            </div>
+            <div class="timeline-card-title">อบรมเชิงปฏิบัติการพัฒนาเว็บไซต์ชื่อโดเมน .th สำหรับครูและบุคลากร</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องปฏิบัติการคอมพิวเตอร์ รร.บ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              ปฏิบัติหน้าที่ครูแกนนำ ICT จัดการอบรมเชิงปฏิบัติการสร้างเว็บไซต์และบริหารจัดการชื่อโดเมนเพื่อสถานศึกษา (.sch.th) โดยมูลนิธิ THNIC ร่วมกับ สพป.กพ.๒ ให้แก่ครูและบุคลากร ณ ห้องปฏิบัติการคอมพิวเตอร์ ยกระดับระบบสารสนเทศโรงเรียน
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260530_101743.jpg', 'การอบรมเชิงปฏิบัติการสร้างเว็บไซต์ชื่อโดเมน .th สำหรับบุคลากรทางการศึกษา ณ ห้องคอมพิวเตอร์ (๓๐–๓๑ พ.ค. ๒๕๖๙)')">
+            <img src="assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260530_101743.jpg" alt="อบรมสร้างเว็บไซต์ .th ในห้องคอมพิวเตอร์" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 5: มิ.ย. 69 (PLC วิชาชีพ & สตูดิโอผลิตสื่อนวัตกรรมดิจิทัล ๒๕๖๙) -->
+        <div class="timeline-card" style="border-top-color: #2563eb;">
+          <div>
+            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๕/๘</div>
+            <div class="timeline-date-badge" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe;">
+              <i data-lucide="video" style="width: 12px; height: 12px;"></i> มิ.ย. ๒๕๖๙ (PLC & นวัตกรรมดิจิทัล)
+            </div>
+            <div class="timeline-card-title">PLC วิชาชีพ & สตูดิโอผลิตสื่อนวัตกรรมดิจิทัล Active Learning</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> สตูดิโอสื่อการเรียนรู้ รร.บ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              จัดกิจกรรม PLC แลกเปลี่ยนการสอนเทคโนโลยี พร้อมจัดเตรียมระบบไฟ สตูดิโอบันทึกภาพ และอุปกรณ์ผลิตสื่อดิจิทัลเชิงรุก (Active Learning Media Production) เพื่อนำมาใช้ในการจัดการเรียนรู้และเผยแพร่สู่ผู้เรียน (๑๙ มิ.ย. ๒๕๖๙)
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg', 'สตูดิโอบันทึกสื่อวิดีโอ Active Learning และการผลิตนวัตกรรมดิจิทัล (๑๙ มิถุนายน ๒๕๖๙)')">
+            <img src="assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg" alt="สตูดิโอผลิตสื่อนวัตกรรมดิจิทัล" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 6: 17 ก.ค. 69 (กิจกรรมวันวิทยาศาสตร์ บูรณาการวิทยาศาสตร์และเทคโนโลยี ๒๕๖๙) -->
+        <div class="timeline-card" style="border-top-color: #0284c7;">
+          <div>
+            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๖/๘</div>
+            <div class="timeline-date-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">
+              <i data-lucide="award" style="width: 12px; height: 12px;"></i> ๑๗ ก.ค. ๒๕๖๙ (วันวิทยาศาสตร์)
+            </div>
+            <div class="timeline-card-title">กิจกรรมวันวิทยาศาสตร์ บูรณาการวิทยาศาสตร์และเทคโนโลยี ๒๕๖๙</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ลานกิจกรรมและห้องคอมพิวเตอร์ รร.บ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              ครูเจมส์ร่วมจัดและปฏิบัติหน้าที่วิทยากรประจำฐานการเรียนรู้ ในกิจกรรมวันวิทยาศาสตร์ ประจำปีการศึกษา ๒๕๖๙ (๑๗ ก.ค. ๒๕๖๙) ของโรงเรียนบ้านคลองมดแดง โดยบูรณาการกลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ส่งเสริมทักษะกระบวนการคิด การคิดเชิงคำนวณ วิทยาการคำนวณ และการลงมือปฏิบัติจริงแก่นักเรียนอย่างสร้างสรรค์
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_02.jpg', 'ครูเจมส์ปฏิบัติหน้าที่วิทยากรประจำฐานการเรียนรู้ กิจกรรมวันวิทยาศาสตร์ บูรณาการวิทยาศาสตร์และเทคโนโลยี โรงเรียนบ้านคลองมดแดง (๑๗ ก.ค. ๒๕๖๙)')">
+            <img src="assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_02.jpg" alt="ครูเจมส์ วิทยากรประจำฐานการเรียนรู้ กิจกรรมวันวิทยาศาสตร์ (๑๗ ก.ค. ๒๕๖๙)" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 7: 2-3 ก.ย. 69 (ชนะเลิศระดับเหรียญทอง The School CEO) -->
+        <div class="timeline-card" style="border-top-color: #f59e0b; background: linear-gradient(to bottom, #fffbeb, #ffffff);">
+          <div>
+            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๗/๘</div>
+            <div class="timeline-date-badge" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">
+              <i data-lucide="award" style="width: 12px; height: 12px;"></i> ๒–๓ ก.ย. ๒๕๖๙ (ผลงานดีเด่นระดับเขต)
+            </div>
+            <div class="timeline-card-title" style="color: #b45309;">ชนะเลิศเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ สพป.กพ.๒</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> สพป.กำแพงเพชร เขต ๒
+            </div>
+            <div class="timeline-card-desc">
+              นำทักษะสื่อดิจิทัลและเทคโนโลยีสารสนเทศที่ฝึกซ้อมในห้องคอมพิวเตอร์ นำนักเรียนคว้า "รางวัลชนะเลิศระดับเหรียญทอง" การแข่งขัน The School CEO : คลิปสั้นปั้นธุรกิจ (ผลงาน เสน่ห์ผ้าทอปกาเกอะญอ) ประกาศทางการโดย สพป.กำแพงเพชร เขต ๒
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg', 'ครูเจมส์ถือโล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ สพป.กำแพงเพชร เขต ๒ (๓ ก.ย. ๒๕๖๙)')">
+            <img src="assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg" alt="รางวัลชนะเลิศเหรียญทอง The School CEO" class="timeline-thumb">
+          </div>
+        </div>
+
+        <!-- Milestone 8: 10 ก.ย. 69 (วันประเมินสรุปผลสัมฤทธิ์ประเด็นท้าทาย ป.1 ครบ 11 คน) -->
+        <div class="timeline-card" style="border-top-color: #10b981; background: linear-gradient(to bottom, #f0fdf4, #ffffff);">
+          <div>
+            <div class="milestone-step-badge"><i data-lucide="flag" style="width: 11px; height: 11px;"></i> หมุดหมายที่ ๘/๘</div>
+            <div class="timeline-date-badge" style="background: #dcfce7; color: #15803d; border-color: #bbf7d0;">
+              <i data-lucide="check-circle" style="width: 12px; height: 12px;"></i> ๑๐ ก.ย. ๒๕๖๙ (ประเมินสรุปผลสำเร็จ PA)
+            </div>
+            <div class="timeline-card-title" style="color: #15803d;">ประเมินผลสัมฤทธิ์ทักษะการใช้เมาส์ ๔ ด้าน ป.๑ ครบ ๑๑ คน (๑๐๐%)</div>
+            <div class="timeline-card-loc">
+              <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i> ห้องปฏิบัติการคอมพิวเตอร์ รร.บ้านคลองมดแดง
+            </div>
+            <div class="timeline-card-desc">
+              ดำเนินการประเมินผลสัมฤทธิ์ทักษะการใช้เมาส์ ๔ ด้าน (คลิก, ดับเบิลคลิก, ลากวาง, เลื่อนหน้าจอ) ของนักเรียน ป.๑ ครบ ๑๑ คน ผ่านสื่อนวัตกรรม Gamification ในห้องคอมพิวเตอร์ ผลสัมฤทธิ์ผ่านเกณฑ์ดีและปานกลางครบ ๑๐๐% ไม่มีนักเรียนตกเกณฑ์
+            </div>
+          </div>
+          <div class="timeline-thumb-box" onclick="openLightbox('assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg', 'ภาพรวมการประเมินทักษะการใช้เมาส์ ป.๑ ครบทั้ง ๑๑ คน ณ ห้องปฏิบัติการคอมพิวเตอร์ (๑๐ กันยายน ๒๕๖๙)')">
+            <img src="assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg" alt="ประเมินทักษะเมาส์ ป.1 ครบ 11 คน 10 ก.ย. 2569" class="timeline-thumb">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section : คลังภาพถ่ายจริง (Google Photos Gallery & TikTok Showcase) -->
+  <section id="gallery" class="section-block" style="background: white;">
     <div class="container">
       <div class="section-header">
         <div class="section-badge">Verifiable Evidence Gallery & Google Photos Albums</div>
@@ -7724,183 +8421,7 @@
     </div><!-- /.container -->
   </section>
 
-
-  <!-- Section : บันทึกข้อคิดเห็นและประเมินผลจากคณะกรรมการ (Firebase Realtime) -->
-  <section id="feedback" class="section-block" style="background: linear-gradient(180deg, #f8fafc 0%, #edf4fc 100%);">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;">
-          <i data-lucide="database" style="width: 13px; height: 13px;"></i> Firebase Cloud Firestore
-        </div>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin: 10px 0;">
-          <img src="assets_drop/mascots/wai-respect-mascot.png" alt="ครูเจมส์ ไหว้ขอบพระคุณ" style="width: 64px; height: 64px; object-fit: contain;">
-          <h2 class="section-title" style="margin-bottom: 0;">สมุดข้อคิดเห็นและประเมินผลจากคณะกรรมการ</h2>
-        </div>
-        <p class="section-desc">ขอขอบพระคุณคณะกรรมการประเมินทุกท่านที่ให้คำแนะนำและข้อเสนอแนะเชิงวิชาชีพ จัดเก็บลงฐานข้อมูล Google Firebase แบบ Real-time</p>
-      </div>
-
-      <!-- Committee Showcase Panel (3 ท่าน) -->
-      <div style="margin-bottom: 2.5rem;">
-        <h3 style="text-align: center; font-size: 1.15rem; color: var(--primary-900); margin-bottom: 1.25rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px;">
-          <i data-lucide="award" style="color: var(--accent-gold); width: 20px; height: 20px;"></i>
-          คณะกรรมการการประเมินผลการพัฒนางานตามข้อตกลง (PA)
-        </h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-
-          <!-- กรรมการท่านที่ 1: ผอ. ปรัชญา ปรางค์ชัยภูมิ -->
-          <div style="background: white; border-radius: var(--radius-xl); padding: 1.75rem 1.25rem; border: 2px solid #2563eb; box-shadow: var(--shadow-md); text-align: center; position: relative;">
-            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #2563eb; color: white; padding: 3px 16px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; white-space: nowrap;">
-              ประธานกรรมการประเมิน
-            </div>
-            <div style="width: 64px; height: 64px; margin: 0.5rem auto 0.75rem; background: #eff6ff; color: #1d4ed8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border: 2px solid #bfdbfe;">
-              👔
-            </div>
-            <h4 style="font-size: 1.15rem; color: var(--primary-900); font-weight: 700; margin-bottom: 4px;">นายปรัชญา ปรางค์ชัยภูมิ</h4>
-            <p style="font-size: 0.88rem; color: #1d4ed8; font-weight: 600; margin-bottom: 2px;">ผู้อำนวยการโรงเรียนบ้านคลองมดแดง</p>
-            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px;">ประธานคณะกรรมการประเมินผลการพัฒนางาน (PA)</p>
-            <button type="button" onclick="selectCommittee('นายปรัชญา ปรางค์ชัยภูมิ', 'ผู้อำนวยการโรงเรียนบ้านคลองมดแดง (ประธานกรรมการ)')" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; padding: 8px 18px; border-radius: var(--radius-sm); font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#2563eb'; this.style.color='white';" onmouseout="this.style.background='#eff6ff'; this.style.color='#1d4ed8';">
-              ✍️ ประเมินในนาม ผอ.ปรัชญา
-            </button>
-          </div>
-
-          <!-- กรรมการท่านที่ 2: ครูตรัสมา ปัญญาญาณ -->
-          <div style="background: white; border-radius: var(--radius-xl); padding: 1.75rem 1.25rem; border: 2px solid #059669; box-shadow: var(--shadow-md); text-align: center; position: relative;">
-            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #059669; color: white; padding: 3px 16px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; white-space: nowrap;">
-              กรรมการประเมิน
-            </div>
-            <div style="width: 64px; height: 64px; margin: 0.5rem auto 0.75rem; background: #ecfdf5; color: #047857; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border: 2px solid #a7f3d0;">
-              👩‍🏫
-            </div>
-            <h4 style="font-size: 1.15rem; color: var(--primary-900); font-weight: 700; margin-bottom: 4px;">ครูตรัสมา ปัญญาญาณ</h4>
-            <p style="font-size: 0.86rem; color: #047857; font-weight: 600; margin-bottom: 2px;">ครู โรงเรียนบ้านคลองมดแดงสาขาบ้านใหม่ชุมนุมไทร</p>
-            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px;">คณะกรรมการประเมินผลการพัฒนางานตามข้อตกลง (PA)</p>
-            <button type="button" onclick="selectCommittee('ครูตรัสมา ปัญญาญาณ', 'ครู โรงเรียนบ้านคลองมดแดงสาขาบ้านใหม่ชุมนุมไทร (กรรมการประเมิน)')" style="background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; padding: 8px 18px; border-radius: var(--radius-sm); font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#059669'; this.style.color='white';" onmouseout="this.style.background='#ecfdf5'; this.style.color='#047857';">
-              ✍️ ประเมินในนาม ครูตรัสมา
-            </button>
-          </div>
-
-          <!-- กรรมการท่านที่ 3: ครูชญานี ดวงต๋า -->
-          <div style="background: white; border-radius: var(--radius-xl); padding: 1.75rem 1.25rem; border: 2px solid #7c3aed; box-shadow: var(--shadow-md); text-align: center; position: relative;">
-            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #7c3aed; color: white; padding: 3px 16px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; white-space: nowrap;">
-              กรรมการประเมิน
-            </div>
-            <div style="width: 64px; height: 64px; margin: 0.5rem auto 0.75rem; background: #f5f3ff; color: #6d28d9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border: 2px solid #ddd6fe;">
-              👩‍🏫
-            </div>
-            <h4 style="font-size: 1.15rem; color: var(--primary-900); font-weight: 700; margin-bottom: 4px;">ครูชญานี ดวงต๋า</h4>
-            <p style="font-size: 0.86rem; color: #6d28d9; font-weight: 600; margin-bottom: 2px;">ครู โรงเรียนบ้านคลองมดแดงสาขาบ้านใหม่ชุมนุมไทร</p>
-            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px;">คณะกรรมการประเมินผลการพัฒนางานตามข้อตกลง (PA)</p>
-            <button type="button" onclick="selectCommittee('ครูชญานี ดวงต๋า', 'ครู โรงเรียนบ้านคลองมดแดงสาขาบ้านใหม่ชุมนุมไทร (กรรมการประเมิน)')" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; padding: 8px 18px; border-radius: var(--radius-sm); font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#7c3aed'; this.style.color='white';" onmouseout="this.style.background='#f5f3ff'; this.style.color='#6d28d9';">
-              ✍️ ประเมินในนาม ครูชญานี
-            </button>
-          </div>
-
-        </div>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
-        <!-- Left: Feedback Form -->
-        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--surface-border-blue); box-shadow: var(--shadow-lg);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-            <h3 style="font-size: 1.25rem; color: var(--primary-900); display: flex; align-items: center; gap: 8px;">
-              <i data-lucide="edit-3" style="color: var(--primary-600);"></i> บันทึกข้อคิดเห็น
-            </h3>
-            <span id="firebase-status-badge" class="tag-pill" style="background: #e0f2fe; color: #0284c7; cursor: pointer;" onclick="openFirebaseModal()">
-              🟢 Firebase Ready
-            </span>
-          </div>
-
-          <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)">
-            <div style="margin-bottom: 1rem;">
-              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
-                ชื่อ - สกุล ผู้ประเมิน / ผู้เยี่ยมชม <span style="color: #0284c7;">*</span>
-              </label>
-              <input type="text" id="fb-name" required placeholder="เช่น นายปรัชญา ปรางค์ชัยภูมิ" style="width: 100%; padding: 10px 14px; border: 1px solid var(--surface-border); border-radius: var(--radius-sm); font-family: 'Sarabun', sans-serif; font-size: 0.95rem;">
-            </div>
-
-            <div style="margin-bottom: 1rem;">
-              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
-                ตำแหน่ง / สถานะความเกี่ยวข้อง <span style="color: #0284c7;">*</span>
-              </label>
-              <input type="text" id="fb-role" required placeholder="เช่น ผู้อำนวยการโรงเรียนบ้านคลองมดแดง / ประธานกรรมการ" style="width: 100%; padding: 10px 14px; border: 1px solid var(--surface-border); border-radius: var(--radius-sm); font-family: 'Sarabun', sans-serif; font-size: 0.95rem;">
-            </div>
-
-            <div style="margin-bottom: 1rem;">
-              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
-                ระดับความพึงพอใจต่อการปฏิบัติงาน
-              </label>
-              <div style="display: flex; gap: 8px; align-items: center;" id="star-rating-group">
-                <span class="star-item" onclick="setRating(1)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
-                <span class="star-item" onclick="setRating(2)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
-                <span class="star-item" onclick="setRating(3)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
-                <span class="star-item" onclick="setRating(4)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
-                <span class="star-item" onclick="setRating(5)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
-                <span id="rating-text" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-left: 8px;">(๕ ดาว : ยอดเยี่ยมมาก)</span>
-              </div>
-              <input type="hidden" id="fb-rating" value="5">
-            </div>
-
-            <div style="margin-bottom: 1.25rem;">
-              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
-                ข้อคิดเห็นและข้อเสนอแนะเชิงพัฒนา <span style="color: #0284c7;">*</span>
-              </label>
-              <textarea id="fb-comment" required rows="4" placeholder="พิมพ์ข้อคิดเห็น ข้อเสนอแนะ หรือความประทับใจต่อการพัฒนางานตามข้อตกลง (PA) ของครูเจมส์..." style="width: 100%; padding: 10px 14px; border: 1px solid var(--surface-border); border-radius: var(--radius-sm); font-family: 'Sarabun', sans-serif; font-size: 0.95rem; resize: vertical;"></textarea>
-            </div>
-
-            <button type="submit" class="btn-cta btn-cta-primary" style="width: 100%; justify-content: center; padding: 12px;">
-              <i data-lucide="send" style="width: 16px; height: 16px;"></i>
-              <span>บันทึกข้อมูลเข้าสู่ฐานข้อมูล Firebase</span>
-            </button>
-          </form>
-        </div>
-
-        <!-- Right: Real-time Feedback Stream -->
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h3 style="font-size: 1.25rem; color: var(--primary-900); display: flex; align-items: center; gap: 8px;">
-              <i data-lucide="message-square" style="color: var(--primary-600);"></i> กระดานข้อคิดเห็นสด (Live Feed)
-            </h3>
-            <span style="font-size: 0.8rem; color: var(--text-muted);" id="feedback-count-text">แสดงความคิดเห็นล่าสุด</span>
-          </div>
-
-          <div id="feedback-list" style="display: flex; flex-direction: column; gap: 1rem; max-height: 520px; overflow-y: auto; padding-right: 6px;">
-            <!-- Dynamic feedback cards injected here -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Firebase Setup Guide Modal -->
-  <div id="firebase-modal" class="lightbox-modal" onclick="closeFirebaseModal(event)">
-    <div class="lightbox-content" onclick="event.stopPropagation()" style="max-width: 650px; padding: 2rem;">
-      <button class="lightbox-close-btn" onclick="closeFirebaseModalDirect()">&times;</button>
-      <h3 style="color: var(--primary-900); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-        <i data-lucide="flame" style="color: #f97316;"></i> การเชื่อมต่อฐานข้อมูล Google Firebase
-      </h3>
-      <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
-        ระบบถูกออกแบบในรูปแบบ <strong>Hybrid Ready</strong> คือ สามารถทำงานได้ทันทีทั้งแบบ <strong>Local Mode (ไม่ต้องต่อเน็ต)</strong>
-        และพร้อมเชื่อมต่อกับ <strong>Google Cloud Firestore จริง</strong> เมื่อใส่ค่าคีย์
-      </p>
-
-      <div style="background: var(--surface-slate); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.25rem; font-size: 0.88rem;">
-        <strong>ขั้นตอนเชื่อมต่อ Firebase ส่วนตัว (ฟรี 100%):</strong>
-        <ol style="margin-left: 1.25rem; margin-top: 6px; line-height: 1.6;">
-          <li>เปิด <a href="https://console.firebase.google.com/" target="_blank" style="color: var(--primary-600); font-weight: 600;">Firebase Console</a> แล้วสร้างโปรเจกต์ใหม่</li>
-          <li>ไปที่เมนู <strong>Firestore Database</strong> > กด <strong>Create database</strong> (เลือก Start in test mode)</li>
-          <li>ไปที่ <strong>Project Settings (รูปเฟือง)</strong> > เลื่อนลงด้านล่างเลือก <strong>Web App (&lt;/&gt;)</strong></li>
-          <li>คัดลอกค่า <code>firebaseConfig</code> มาวางในไฟล์ <code>firebase-config.js</code></li>
-          <li>บันทึกไฟล์และรัน <code>git push</code> ระบบจะเชื่อมต่อฐานข้อมูลจริงทันที!</li>
-        </ol>
-      </div>
-
-      <div style="display: flex; justify-content: flex-end;">
-        <button class="btn-cta btn-cta-primary" onclick="closeFirebaseModalDirect()">รับทราบและปิดหน้าต่าง</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Section 5 : ดาวน์โหลดเอกสารและหลักฐาน -->
+  <!-- Section : ดาวน์โหลดเอกสารและหลักฐานทางการ -->
   <section id="downloads" class="section-block" style="background: white;">
     <div class="container">
       <div class="section-header">
@@ -8072,6 +8593,182 @@
       </div>
     </div>
   </section>
+
+  <!-- Section : บันทึกข้อคิดเห็นและประเมินผลจากคณะกรรมการ (Firebase Realtime) -->
+  <section id="feedback" class="section-block" style="background: linear-gradient(180deg, #f8fafc 0%, #edf4fc 100%);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;">
+          <i data-lucide="database" style="width: 13px; height: 13px;"></i> Firebase Cloud Firestore
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin: 10px 0;">
+          <img src="assets_drop/mascots/wai-respect-mascot.png" alt="ครูเจมส์ ไหว้ขอบพระคุณ" style="width: 64px; height: 64px; object-fit: contain;">
+          <h2 class="section-title" style="margin-bottom: 0;">สมุดข้อคิดเห็นและประเมินผลจากคณะกรรมการ</h2>
+        </div>
+        <p class="section-desc">ขอขอบพระคุณคณะกรรมการประเมินทุกท่านที่ให้คำแนะนำและข้อเสนอแนะเชิงวิชาชีพ จัดเก็บลงฐานข้อมูล Google Firebase แบบ Real-time</p>
+      </div>
+
+      <!-- Committee Showcase Panel (3 ท่าน) -->
+      <div style="margin-bottom: 2.5rem;">
+        <h3 style="text-align: center; font-size: 1.15rem; color: var(--primary-900); margin-bottom: 1.25rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <i data-lucide="award" style="color: var(--accent-gold); width: 20px; height: 20px;"></i>
+          คณะกรรมการการประเมินผลการพัฒนางานตามข้อตกลง (PA)
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+
+          <!-- กรรมการท่านที่ 1: ผอ. ปรัชญา ปรางค์ชัยภูมิ -->
+          <div style="background: white; border-radius: var(--radius-xl); padding: 1.75rem 1.25rem; border: 2px solid #2563eb; box-shadow: var(--shadow-md); text-align: center; position: relative;">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #2563eb; color: white; padding: 3px 16px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; white-space: nowrap;">
+              ประธานกรรมการประเมิน
+            </div>
+            <div style="width: 64px; height: 64px; margin: 0.5rem auto 0.75rem; background: #eff6ff; color: #1d4ed8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border: 2px solid #bfdbfe;">
+              👔
+            </div>
+            <h4 style="font-size: 1.15rem; color: var(--primary-900); font-weight: 700; margin-bottom: 4px;">นายปรัชญา ปรางค์ชัยภูมิ</h4>
+            <p style="font-size: 0.88rem; color: #1d4ed8; font-weight: 600; margin-bottom: 2px;">ผู้อำนวยการโรงเรียนบ้านคลองมดแดง</p>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px;">ประธานคณะกรรมการประเมินผลการพัฒนางาน (PA)</p>
+            <button type="button" onclick="selectCommittee('นายปรัชญา ปรางค์ชัยภูมิ', 'ผู้อำนวยการโรงเรียนบ้านคลองมดแดง (ประธานกรรมการ)')" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; padding: 8px 18px; border-radius: var(--radius-sm); font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#2563eb'; this.style.color='white';" onmouseout="this.style.background='#eff6ff'; this.style.color='#1d4ed8';">
+              ✍️ ประเมินในนาม ผอ.ปรัชญา
+            </button>
+          </div>
+
+          <!-- กรรมการท่านที่ 2: ครูตรัสมา ปัญญาญาณ -->
+          <div style="background: white; border-radius: var(--radius-xl); padding: 1.75rem 1.25rem; border: 2px solid #059669; box-shadow: var(--shadow-md); text-align: center; position: relative;">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #059669; color: white; padding: 3px 16px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; white-space: nowrap;">
+              กรรมการประเมิน
+            </div>
+            <div style="width: 64px; height: 64px; margin: 0.5rem auto 0.75rem; background: #ecfdf5; color: #047857; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border: 2px solid #a7f3d0;">
+              👩‍🏫
+            </div>
+            <h4 style="font-size: 1.15rem; color: var(--primary-900); font-weight: 700; margin-bottom: 4px;">ครูตรัสมา ปัญญาญาณ</h4>
+            <p style="font-size: 0.86rem; color: #047857; font-weight: 600; margin-bottom: 2px;">ครู โรงเรียนบ้านคลองมดแดงสาขาบ้านใหม่ชุมนุมไทร</p>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px;">คณะกรรมการประเมินผลการพัฒนางานตามข้อตกลง (PA)</p>
+            <button type="button" onclick="selectCommittee('ครูตรัสมา ปัญญาญาณ', 'ครู โรงเรียนบ้านคลองมดแดงสาขาบ้านใหม่ชุมนุมไทร (กรรมการประเมิน)')" style="background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; padding: 8px 18px; border-radius: var(--radius-sm); font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#059669'; this.style.color='white';" onmouseout="this.style.background='#ecfdf5'; this.style.color='#047857';">
+              ✍️ ประเมินในนาม ครูตรัสมา
+            </button>
+          </div>
+
+          <!-- กรรมการท่านที่ 3: ครูชญานี ดวงต๋า -->
+          <div style="background: white; border-radius: var(--radius-xl); padding: 1.75rem 1.25rem; border: 2px solid #7c3aed; box-shadow: var(--shadow-md); text-align: center; position: relative;">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #7c3aed; color: white; padding: 3px 16px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; white-space: nowrap;">
+              กรรมการประเมิน
+            </div>
+            <div style="width: 64px; height: 64px; margin: 0.5rem auto 0.75rem; background: #f5f3ff; color: #6d28d9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; border: 2px solid #ddd6fe;">
+              👩‍🏫
+            </div>
+            <h4 style="font-size: 1.15rem; color: var(--primary-900); font-weight: 700; margin-bottom: 4px;">ครูชญานี ดวงต๋า</h4>
+            <p style="font-size: 0.86rem; color: #6d28d9; font-weight: 600; margin-bottom: 2px;">ครู โรงเรียนบ้านคลองมดแดงสาขาบ้านใหม่ชุมนุมไทร</p>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px;">คณะกรรมการประเมินผลการพัฒนางานตามข้อตกลง (PA)</p>
+            <button type="button" onclick="selectCommittee('ครูชญานี ดวงต๋า', 'ครู โรงเรียนบ้านคลองมดแดงสาขาบ้านใหม่ชุมนุมไทร (กรรมการประเมิน)')" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; padding: 8px 18px; border-radius: var(--radius-sm); font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#7c3aed'; this.style.color='white';" onmouseout="this.style.background='#f5f3ff'; this.style.color='#6d28d9';">
+              ✍️ ประเมินในนาม ครูชญานี
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+        <!-- Left: Feedback Form -->
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--surface-border-blue); box-shadow: var(--shadow-lg);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <h3 style="font-size: 1.25rem; color: var(--primary-900); display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="edit-3" style="color: var(--primary-600);"></i> บันทึกข้อคิดเห็น
+            </h3>
+            <span id="firebase-status-badge" class="tag-pill" style="background: #e0f2fe; color: #0284c7; cursor: pointer;" onclick="openFirebaseModal()">
+              🟢 Firebase Ready
+            </span>
+          </div>
+
+          <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)">
+            <div style="margin-bottom: 1rem;">
+              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
+                ชื่อ - สกุล ผู้ประเมิน / ผู้เยี่ยมชม <span style="color: #0284c7;">*</span>
+              </label>
+              <input type="text" id="fb-name" required placeholder="เช่น นายปรัชญา ปรางค์ชัยภูมิ" style="width: 100%; padding: 10px 14px; border: 1px solid var(--surface-border); border-radius: var(--radius-sm); font-family: 'Sarabun', sans-serif; font-size: 0.95rem;">
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
+                ตำแหน่ง / สถานะความเกี่ยวข้อง <span style="color: #0284c7;">*</span>
+              </label>
+              <input type="text" id="fb-role" required placeholder="เช่น ผู้อำนวยการโรงเรียนบ้านคลองมดแดง / ประธานกรรมการ" style="width: 100%; padding: 10px 14px; border: 1px solid var(--surface-border); border-radius: var(--radius-sm); font-family: 'Sarabun', sans-serif; font-size: 0.95rem;">
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
+                ระดับความพึงพอใจต่อการปฏิบัติงาน
+              </label>
+              <div style="display: flex; gap: 8px; align-items: center;" id="star-rating-group">
+                <span class="star-item" onclick="setRating(1)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
+                <span class="star-item" onclick="setRating(2)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
+                <span class="star-item" onclick="setRating(3)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
+                <span class="star-item" onclick="setRating(4)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
+                <span class="star-item" onclick="setRating(5)" style="font-size: 1.5rem; cursor: pointer; color: #f59e0b;">★</span>
+                <span id="rating-text" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-left: 8px;">(๕ ดาว : ยอดเยี่ยมมาก)</span>
+              </div>
+              <input type="hidden" id="fb-rating" value="5">
+            </div>
+
+            <div style="margin-bottom: 1.25rem;">
+              <label style="display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
+                ข้อคิดเห็นและข้อเสนอแนะเชิงพัฒนา <span style="color: #0284c7;">*</span>
+              </label>
+              <textarea id="fb-comment" required rows="4" placeholder="พิมพ์ข้อคิดเห็น ข้อเสนอแนะ หรือความประทับใจต่อการพัฒนางานตามข้อตกลง (PA) ของครูเจมส์..." style="width: 100%; padding: 10px 14px; border: 1px solid var(--surface-border); border-radius: var(--radius-sm); font-family: 'Sarabun', sans-serif; font-size: 0.95rem; resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn-cta btn-cta-primary" style="width: 100%; justify-content: center; padding: 12px;">
+              <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+              <span>บันทึกข้อมูลเข้าสู่ฐานข้อมูล Firebase</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Real-time Feedback Stream -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h3 style="font-size: 1.25rem; color: var(--primary-900); display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="message-square" style="color: var(--primary-600);"></i> กระดานข้อคิดเห็นสด (Live Feed)
+            </h3>
+            <span style="font-size: 0.8rem; color: var(--text-muted);" id="feedback-count-text">แสดงความคิดเห็นล่าสุด</span>
+          </div>
+
+          <div id="feedback-list" style="display: flex; flex-direction: column; gap: 1rem; max-height: 520px; overflow-y: auto; padding-right: 6px;">
+            <!-- Dynamic feedback cards injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Firebase Setup Guide Modal -->
+  <div id="firebase-modal" class="lightbox-modal" onclick="closeFirebaseModal(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()" style="max-width: 650px; padding: 2rem;">
+      <button class="lightbox-close-btn" onclick="closeFirebaseModalDirect()">&times;</button>
+      <h3 style="color: var(--primary-900); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="flame" style="color: #f97316;"></i> การเชื่อมต่อฐานข้อมูล Google Firebase
+      </h3>
+      <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+        ระบบถูกออกแบบในรูปแบบ <strong>Hybrid Ready</strong> คือ สามารถทำงานได้ทันทีทั้งแบบ <strong>Local Mode (ไม่ต้องต่อเน็ต)</strong>
+        และพร้อมเชื่อมต่อกับ <strong>Google Cloud Firestore จริง</strong> เมื่อใส่ค่าคีย์
+      </p>
+
+      <div style="background: var(--surface-slate); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.25rem; font-size: 0.88rem;">
+        <strong>ขั้นตอนเชื่อมต่อ Firebase ส่วนตัว (ฟรี 100%):</strong>
+        <ol style="margin-left: 1.25rem; margin-top: 6px; line-height: 1.6;">
+          <li>เปิด <a href="https://console.firebase.google.com/" target="_blank" style="color: var(--primary-600); font-weight: 600;">Firebase Console</a> แล้วสร้างโปรเจกต์ใหม่</li>
+          <li>ไปที่เมนู <strong>Firestore Database</strong> > กด <strong>Create database</strong> (เลือก Start in test mode)</li>
+          <li>ไปที่ <strong>Project Settings (รูปเฟือง)</strong> > เลื่อนลงด้านล่างเลือก <strong>Web App (&lt;/&gt;)</strong></li>
+          <li>คัดลอกค่า <code>firebaseConfig</code> มาวางในไฟล์ <code>firebase-config.js</code></li>
+          <li>บันทึกไฟล์และรัน <code>git push</code> ระบบจะเชื่อมต่อฐานข้อมูลจริงทันที!</li>
+        </ol>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end;">
+        <button class="btn-cta btn-cta-primary" onclick="closeFirebaseModalDirect()">รับทราบและปิดหน้าต่าง</button>
+      </div>
+    </div>
+
 
   <!-- Lightbox Modal -->
   <div id="lightbox" class="lightbox-modal" onclick="closeLightbox(event)">
@@ -9240,6 +9937,85 @@
         closeAlbumModal();
       }
     });
+  
+
+    // Interactive Before/After Toggle Function
+    function switchBATab(mode, btn) {
+      const container = document.getElementById('baGrid');
+      const beforePanel = document.getElementById('baBeforePanel');
+      const afterPanel = document.getElementById('baAfterPanel');
+      const buttons = document.querySelectorAll('.ba-toggle-btn');
+      
+      buttons.forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      if (!container || !beforePanel || !afterPanel) return;
+
+      if (mode === 'before') {
+        container.style.gridTemplateColumns = '1fr';
+        beforePanel.style.display = 'flex';
+        afterPanel.style.display = 'none';
+      } else if (mode === 'after') {
+        container.style.gridTemplateColumns = '1fr';
+        beforePanel.style.display = 'none';
+        afterPanel.style.display = 'flex';
+      } else {
+        if (window.innerWidth > 768) {
+          container.style.gridTemplateColumns = 'repeat(2, 1fr)';
+        } else {
+          container.style.gridTemplateColumns = '1fr';
+        }
+        beforePanel.style.display = 'flex';
+        afterPanel.style.display = 'flex';
+      }
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    }
+
+    // Sticky PA Evaluation Stepper Scroll Observer
+    document.addEventListener('DOMContentLoaded', () => {
+      const stepperSteps = document.querySelectorAll('.pa-stepper-track .stepper-step');
+      const observedSectionIds = ['home', 'workload', 'indicators', 'challenge', 'component-2', 'component-3', 'awards', 'timeline', 'gallery', 'downloads', 'feedback'];
+      
+      const sectionToStepMap = {
+        'home': 'home',
+        'workload': 'home',
+        'indicators': 'indicators',
+        'challenge': 'challenge',
+        'component-2': 'component-2',
+        'component-3': 'component-2',
+        'awards': 'awards',
+        'timeline': 'awards',
+        'gallery': 'gallery',
+        'downloads': 'downloads',
+        'feedback': 'downloads'
+      };
+
+      if ('IntersectionObserver' in window && stepperSteps.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const secId = entry.target.id;
+              const targetStepId = sectionToStepMap[secId] || secId;
+              stepperSteps.forEach(step => {
+                if (step.getAttribute('data-target') === targetStepId) {
+                  step.classList.add('active');
+                } else {
+                  step.classList.remove('active');
+                }
+              });
+            }
+          });
+        }, { threshold: 0.15, rootMargin: "-80px 0px -40% 0px" });
+
+        observedSectionIds.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) observer.observe(el);
+        });
+      }
+    });
+
   </script>
 
 </body>
