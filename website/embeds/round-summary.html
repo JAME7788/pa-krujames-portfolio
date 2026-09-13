@@ -8,40 +8,40 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px;color:#43302e}
   .wrap{max-width:860px;margin:0 auto}
-  .head{background:linear-gradient(135deg,#4a1220,#5f1b29 40%,#8a2333);color:#fff;border-radius:18px;
+  .head{background:linear-gradient(135deg,#0f172a,#1e3a8a 40%,#2563eb);color:#fff;border-radius:18px;
     padding:22px 28px;margin-bottom:10px;position:relative;overflow:hidden}
   .head::after{content:'📋';position:absolute;right:18px;bottom:-14px;font-size:74px;opacity:.16;transform:rotate(-12deg)}
   .head h2{font-family:'Prompt';font-size:22px;position:relative;z-index:1}
-  .head p{font-size:14px;color:#f0d5c9;margin-top:5px;line-height:1.6;position:relative;z-index:1}
+  .head p{font-size:14px;color:#bfdbfe;margin-top:5px;line-height:1.6;position:relative;z-index:1}
   .evaluator{background:#fffaec;border:1px solid #ecdba3;border-radius:14px;padding:13px 20px;
     font-size:14px;margin:10px 0 16px;line-height:1.7}
   .evaluator b{color:#8a6d1a}
   details{background:#fff;border-radius:16px;margin-bottom:10px;overflow:hidden;
-    box-shadow:0 3px 12px rgba(95,27,41,.08);transition:box-shadow .3s,transform .3s;
+    box-shadow:0 3px 12px rgba(30,58,138,.08);transition:box-shadow .3s,transform .3s;
     opacity:0;transform:translateY(16px)}
   details.in{opacity:1;transform:none}
-  details:hover{box-shadow:0 8px 20px rgba(95,27,41,.14)}
+  details:hover{box-shadow:0 8px 20px rgba(30,58,138,.14)}
   summary{cursor:pointer;list-style:none;padding:16px 20px;display:flex;gap:13px;align-items:center;
-    font-family:'Prompt';font-weight:600;color:#5f1b29;font-size:15.5px;transition:background .25s}
+    font-family:'Prompt';font-weight:600;color:#1e3a8a;font-size:15.5px;transition:background .25s}
   summary:hover{background:#fdf6f1}
   summary::-webkit-details-marker{display:none}
-  summary .no{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#f8ebe4;color:#8a2333;
+  summary .no{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#f8ebe4;color:#2563eb;
     display:flex;align-items:center;justify-content:center;font-size:15px;transition:.3s}
-  details:hover summary .no{background:#8a2333;color:#fff;transform:scale(1.1)}
+  details:hover summary .no{background:#2563eb;color:#fff;transform:scale(1.1)}
   summary .period{display:block;font-family:'Sarabun';font-weight:400;font-size:13px;color:#9b7c74;margin-top:2px}
   summary .arrow{margin-left:auto;color:#d9b8ac;transition:transform .25s}
   details[open] .arrow{transform:rotate(90deg)}
-  details[open] summary{border-bottom:1px solid #f5e8e2}
+  details[open] summary{border-bottom:1px solid #e2e8f0}
   .body{padding:14px 22px 18px 69px;animation:open .35s ease}
   @keyframes open{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
   .body ul{padding-left:16px}
   .body li{font-size:14px;line-height:1.7;color:#5f4a46;margin-bottom:3px}
   details.now{border:2px solid #c9a227;background:linear-gradient(180deg,#fffdf5,#fff)}
-  details.now summary .no{background:linear-gradient(135deg,#c9a227,#e8c757);color:#4a1220;
+  details.now summary .no{background:linear-gradient(135deg,#c9a227,#e8c757);color:#0f172a;
     animation:glow 2s ease-in-out infinite}
   @keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,.5)}50%{box-shadow:0 0 0 8px rgba(201,162,39,0)}}
   details.now summary::after{content:'รอบปัจจุบัน';font-size:12px;font-family:'Prompt';font-weight:600;
-    background:linear-gradient(90deg,#c9a227,#e8c757);color:#4a1220;padding:3px 11px;border-radius:999px;margin-left:8px}
+    background:linear-gradient(90deg,#c9a227,#e8c757);color:#0f172a;padding:3px 11px;border-radius:999px;margin-left:8px}
   .fill{color:#b0862a;font-style:italic}
   @media(max-width:520px){.body{padding:14px 18px 18px 18px}}
 </style>

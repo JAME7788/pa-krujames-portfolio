@@ -8,24 +8,24 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Sarabun',sans-serif;background:transparent;padding:12px;color:#43302e}
   .wrap{max-width:900px;margin:0 auto}
-  h2{font-family:'Prompt';color:#5f1b29;font-size:21px;margin-bottom:4px;text-align:center}
+  h2{font-family:'Prompt';color:#1e3a8a;font-size:21px;margin-bottom:4px;text-align:center}
   .sub{text-align:center;color:#9b7c74;font-size:14px;margin-bottom:20px}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
   /* ===== วิธีใส่ลิงก์: แก้ href="#" ของแต่ละการ์ดเป็นลิงก์แชร์ Google Drive ของเอกสารนั้น ===== */
   a.doc{display:flex;flex-direction:column;gap:8px;background:#fff;border-radius:15px;padding:18px;
     text-decoration:none;color:inherit;border:1.5px solid #f0e0d8;position:relative;overflow:hidden;
-    box-shadow:0 3px 10px rgba(95,27,41,.07);transition:transform .3s,box-shadow .3s,border-color .3s;
+    box-shadow:0 3px 10px rgba(30,58,138,.07);transition:transform .3s,box-shadow .3s,border-color .3s;
     opacity:0;transform:translateY(16px)}
   a.doc.in{opacity:1;transform:none}
-  a.doc:hover{transform:translateY(-5px)!important;box-shadow:0 12px 24px rgba(95,27,41,.16);border-color:#c9a227}
+  a.doc:hover{transform:translateY(-5px)!important;box-shadow:0 12px 24px rgba(30,58,138,.16);border-color:#c9a227}
   .ic{width:44px;height:44px;border-radius:12px;font-size:22px;display:flex;align-items:center;
     justify-content:center;background:linear-gradient(135deg,#f8ebe4,#fdf6f1);transition:.3s}
-  a.doc:hover .ic{background:linear-gradient(135deg,#8a2333,#a53446);transform:rotate(-8deg) scale(1.1)}
-  .t{font-family:'Prompt';font-weight:600;font-size:14.5px;color:#5f1b29;line-height:1.4}
+  a.doc:hover .ic{background:linear-gradient(135deg,#2563eb,#3b82f6);transform:rotate(-8deg) scale(1.1)}
+  .t{font-family:'Prompt';font-weight:600;font-size:14.5px;color:#1e3a8a;line-height:1.4}
   .y{font-size:12.5px;color:#9b7c74}
   .open{margin-top:auto;align-self:flex-start;font-family:'Prompt';font-weight:600;font-size:12.5px;
-    color:#8a2333;background:#f8ebe4;padding:5px 13px;border-radius:999px;transition:.25s}
-  a.doc:hover .open{background:#8a2333;color:#fff}
+    color:#2563eb;background:#f8ebe4;padding:5px 13px;border-radius:999px;transition:.25s}
+  a.doc:hover .open{background:#2563eb;color:#fff}
   .star{position:absolute;top:12px;right:12px;font-size:15px}
   @media(max-width:680px){.grid{grid-template-columns:1fr 1fr}}
   @media(max-width:430px){.grid{grid-template-columns:1fr}}
