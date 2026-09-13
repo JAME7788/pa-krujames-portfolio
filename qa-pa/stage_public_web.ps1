@@ -3,7 +3,7 @@ $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $stage = Join-Path $root 'tmp\publish-photo-review-20260913'
 New-Item -ItemType Directory -Force -Path $stage | Out-Null
 # Deploy website directories only, never workspace reports, student source data, or QA output.
-foreach ($name in @('index.html', 'admin.html', 'firebase-config.js', 'vercel.json')) {
+foreach ($name in @('index.html', 'admin.html', 'firebase-config.js', 'vercel.json', 'albums_data.json', 'แบบประเมินเลื่อนเงินเดือน-ครูยังไม่มีวิทยะฐานะ.pdf')) {
   Copy-Item -LiteralPath (Join-Path $root $name) -Destination $stage -Force
 }
 foreach ($name in @('assets', 'assets_drop', 'embeds')) {

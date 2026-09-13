@@ -3735,6 +3735,8 @@
   </style>
 <link rel="stylesheet" href="assets/evidence-report.css" data-curation-version="2026-09-13">
 <script defer src="assets/evidence-report.js"></script>
+<link rel="stylesheet" href="assets/portfolio-polish.css">
+<script defer src="assets/portfolio-polish.js"></script>
 </head>
 <body>
 
@@ -3838,7 +3840,7 @@
         <button class="btn-header btn-lock" onclick="lockSiteNow()" title="ล็อกหน้าเว็บ (ออกจากระบบ)" style="background: rgba(239, 68, 68, 0.08); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.25);">
           <i data-lucide="lock" style="width: 16px; height: 16px;"></i>
         </button>
-        <button class="mobile-menu-btn" onclick="toggleMobileNav()">
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="เปิดหรือปิดเมนูนำทาง">
           <i data-lucide="menu"></i>
         </button>
       </div>
@@ -3930,7 +3932,7 @@
         </p>
 
         <!-- Committee Banner in Hero -->
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 1.5rem; padding: 10px 16px; background: rgba(37, 99, 235, 0.07); border-radius: var(--radius-md); border: 1px solid rgba(37, 99, 235, 0.2);">
+        <div class="hero-committee-box" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 1.5rem; padding: 10px 16px; background: rgba(37, 99, 235, 0.07); border-radius: var(--radius-md); border: 1px solid rgba(37, 99, 235, 0.2);">
           <span style="font-size: 0.88rem; font-weight: 700; color: var(--primary-900); display: flex; align-items: center; gap: 5px;">
             <i data-lucide="users" style="width: 15px; height: 15px; color: var(--primary-600);"></i> คณะกรรมการประเมิน PA :
           </span>
@@ -4020,7 +4022,7 @@
       <div class="section-header">
         <div class="section-badge"><i data-lucide="clock" style="width: 13px; height: 13px;"></i> ข้อมูลภาระงานสอนตามมาตรฐาน ก.ค.ศ. (Workload)</div>
         <h2 class="section-title">ภาระงานสอนและการปฏิบัติหน้าที่ราชการ</h2>
-        <p class="section-desc">การจัดตารางสอนจริง ๒๕ คาบต่อสัปดาห์ (ภาคเรียนที่ ๑/๒๕๖๙) และภาระงานฝ่ายบริหารทั่วไป งานสารสนเทศ ICT งานประชาสัมพันธ์ และงานตอบสนองนโยบาย รวม ๓๕ ชั่วโมง/สัปดาห์</p>
+        <p class="section-desc">การจัดตารางสอนจริง ๒๕ คาบต่อสัปดาห์ (ภาคเรียนที่ ๑/๒๕๖๙) พร้อมการปฏิบัติหน้าที่พิเศษ ๔ ด้าน : ดูแลระบบ ICT, งานประชาสัมพันธ์, งานสัมพันธ์ชุมชน และระบบสารสนเทศเพื่อการศึกษา รวม ๓๕ ชั่วโมง/สัปดาห์</p>
       </div>
 
       <!-- Tab Navigation -->
@@ -4028,17 +4030,17 @@
         <button class="tab-btn active" onclick="switchTab('tab-teaching', this)">
           <i data-lucide="calendar-check"></i> ตารางสอนจริง (๒๕ คาบ/สัปดาห์)
         </button>
-        <button class="tab-btn" onclick="switchTab('tab-general-admin', this)">
-          <i data-lucide="archive"></i> ฝ่ายบริหารทั่วไป & OBEC Asset
-        </button>
         <button class="tab-btn" onclick="switchTab('tab-ict-system', this)">
-          <i data-lucide="network"></i> พัฒนาระบบไอซีที & อินเทอร์เน็ตรร.
+          <i data-lucide="network"></i> หน้าที่พิเศษ ๑ : ดูแลระบบ ICT
         </button>
         <button class="tab-btn" onclick="switchTab('tab-pr-video', this)">
-          <i data-lucide="video"></i> งานประชาสัมพันธ์, วิดีโอ & เว็บไซต์
+          <i data-lucide="video"></i> หน้าที่พิเศษ ๒ : งานประชาสัมพันธ์
         </button>
-        <button class="tab-btn" onclick="switchTab('tab-support-care', this)">
-          <i data-lucide="heart-handshake"></i> ระบบดูแลช่วยเหลือ & PLC
+        <button class="tab-btn" onclick="switchTab('tab-community-relation', this)">
+          <i data-lucide="users"></i> หน้าที่พิเศษ ๓ : สัมพันธ์ชุมชน
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-edu-info-system', this)">
+          <i data-lucide="database"></i> หน้าที่พิเศษ ๔ : ระบบสารสนเทศเพื่อการศึกษา
         </button>
       </div>
 
@@ -4347,15 +4349,46 @@
         </div>
       </div>
 
-      <!-- Tab 2: General Admin & OBEC Asset -->
-      <div id="tab-general-admin" class="tab-pane">
+            <!-- Tab: Community Relations (หน้าที่พิเศษ ๓ : สัมพันธ์ชุมชน) -->
+      <div id="tab-community-relation" class="tab-pane">
         <div class="timetable-grid">
           <div class="subject-card" style="border-left-color: #0284c7;">
             <div>
-              <span class="subject-code" style="background:#e0f2fe; color:#0369a1;">งานพัสดุและสินทรัพย์</span>
-              <div class="subject-name">ผู้ดูแลระบบสารสนเทศสินทรัพย์สถานศึกษา (OBEC Asset)</div>
-              <div class="subject-grade">บริหารจัดการและควบคุมทะเบียนครุภัณฑ์ ทรัพย์สินโรงเรียน และอุปกรณ์เทคโนโลยีทางการศึกษาผ่านระบบ OBEC Asset สพฐ. ตรวจสอบสถานะและรายงานเป็นปัจจุบัน ๑๐๐%</div>
+              <span class="subject-code" style="background:#e0f2fe; color:#0369a1;">สัมพันธ์ชุมชน & เครือข่าย</span>
+              <div class="subject-name">งานประสานความร่วมมือกับคณะกรรมการสถานศึกษาขั้นพื้นฐาน</div>
+              <div class="subject-grade">ร่วมประชุมและขับเคลื่อนนโยบายการจัดการศึกษาร่วมกับผู้นำชุมชน คณะกรรมการสถานศึกษาขั้นพื้นฐาน และองค์กรปกครองส่วนท้องถิ่น เพื่อพัฒนาคุณภาพสถานศึกษา</div>
             </div>
+            <div class="subject-hours">
+              <span>งานสัมพันธ์ชุมชน</span>
+              <span>ปฏิบัติงานต่อเนื่อง</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #0284c7;">
+            <div>
+              <span class="subject-code" style="background:#e0f2fe; color:#0369a1;">เครือข่ายผู้ปกครอง</span>
+              <div class="subject-name">งานประชุมผู้ปกครองชั้นเรียน (Classroom Meeting) & LINE สื่อสาร</div>
+              <div class="subject-grade">จัดกิจกรรมประชุมผู้ปกครอง รายงานผลการเรียนรู้และพฤติกรรมผู้เรียน สร้างเครือข่ายสื่อสารผ่านกลุ่ม LINE ผู้ปกครอง ประสานความร่วมมือดูแลช่วยเหลือนักเรียนอย่างใกล้ชิด</div>
+            </div>
+            <div class="subject-hours">
+              <span>งานสัมพันธ์ชุมชน</span>
+              <span>ความพึงพอใจ ๘๖.๒๕%</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #0284c7;">
+            <div>
+              <span class="subject-code" style="background:#e0f2fe; color:#0369a1;">กิจกรรมสังคม & ท้องถิ่น</span>
+              <div class="subject-name">โครงการส่งเสริมความสัมพันธ์ชุมชนและกิจกรรมประเพณีท้องถิ่น</div>
+              <div class="subject-grade">ร่วมกิจกรรมวันสำคัญทางศาสนา ประเพณีท้องถิ่นคลองมดแดง กิจกรรมจิตอาสาพัฒนาโรงเรียนและชุมชน สร้างความสัมพันธ์อันดีระหว่างโรงเรียนและชาวบ้านคลองมดแดง</div>
+            </div>
+            <div class="subject-hours">
+              <span>งานสัมพันธ์ชุมชน</span>
+              <span>สำเร็จ ๑๐๐%</span>
+            </div>
+          </div>
+        </div>
+      </div>
             <div class="subject-hours">
               <span>ฝ่ายบริหารทั่วไป</span>
               <span>ผู้ดูแลระบบหลัก (Admin)</span>
@@ -4807,14 +4840,46 @@
       </div>
 
       <!-- Tab 5: Student Care & PLC -->
-      <div id="tab-support-care" class="tab-pane">
+            <!-- Tab: Educational Information Systems (หน้าที่พิเศษ ๔ : ระบบสารสนเทศเพื่อการศึกษา) -->
+      <div id="tab-edu-info-system" class="tab-pane">
         <div class="timetable-grid">
           <div class="subject-card" style="border-left-color: #8b5cf6;">
             <div>
-              <span class="subject-code" style="background:#f5f3ff; color:#6d28d9;">ระบบดูแลช่วยเหลือ</span>
-              <div class="subject-name">ครูประจำชั้น มัธยมศึกษาปีที่ 1 & เยี่ยมบ้าน 100%</div>
-              <div class="subject-grade">คัดกรอง SDQ รายบุคคล เยี่ยมบ้านนักเรียนครบ ๑๐๐% ประสานงานทุนการศึกษายากจนพิเศษ กสศ. และจัดกิจกรรมแนะแนวการศึกษาต่อ</div>
+              <span class="subject-code" style="background:#f5f3ff; color:#6d28d9;">ระบบข้อมูลรายบุคคล (DMC)</span>
+              <div class="subject-name">ระบบจัดเก็บข้อมูลนักเรียนรายบุคคล (Data Management Center)</div>
+              <div class="subject-grade">จัดทำ ตรวจสอบ และยืนยันข้อมูลสารสนเทศนักเรียนทุกคนผ่านระบบ DMC ของ สพฐ. ครบถ้วน ถูกต้อง และตรงตามกำหนดเวลา ๑๐๐% ทุกภาคเรียน</div>
             </div>
+            <div class="subject-hours">
+              <span>สารสนเทศเพื่อการศึกษา</span>
+              <span>ผู้รับผิดชอบหลัก</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #8b5cf6;">
+            <div>
+              <span class="subject-code" style="background:#f5f3ff; color:#6d28d9;">ระบบทะเบียน & วัดผล (SGS / ปพ.๕)</span>
+              <div class="subject-name">ระบบบริหารจัดการผลการเรียนและทะเบียนวัดผลดิจิทัล</div>
+              <div class="subject-grade">บริหารจัดการระบบ SGS, จัดทำ ปพ.๕ ดิจิทัล, บันทึกเวลาเรียน และประมวลผลการประเมินทักษะ คุณลักษณะอันพึงประสงค์ของผู้เรียนอย่างเป็นระบบและปลอดภัย</div>
+            </div>
+            <div class="subject-hours">
+              <span>สารสนเทศเพื่อการศึกษา</span>
+              <span>ผู้ดูแลระบบ</span>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left-color: #8b5cf6;">
+            <div>
+              <span class="subject-code" style="background:#f5f3ff; color:#6d28d9;">ระบบคัดกรองทุน (CCT / กสศ.)</span>
+              <div class="subject-name">ระบบคัดกรองนักเรียนยากจนและทุนการศึกษา (CCT)</div>
+              <div class="subject-grade">บันทึกข้อมูลคัดกรองนักเรียนยากจนพิเศษแบบมีเงื่อนไข (CCT) ร่วมกับระบบดูแลช่วยเหลือนักเรียน จัดสรรทุนการศึกษาเพื่อความเสมอภาคทางการศึกษาแก่ผู้เรียน</div>
+            </div>
+            <div class="subject-hours">
+              <span>สารสนเทศเพื่อการศึกษา</span>
+              <span>ครอบคลุม ๑๐๐%</span>
+            </div>
+          </div>
+        </div>
+      </div>
             <div class="subject-hours">
               <span>ระบบดูแลช่วยเหลือนักเรียน</span>
               <span>๒ ชั่วโมง/สัปดาห์</span>
@@ -5298,7 +5363,7 @@
               </div>
             </div>
             <div style="margin-bottom: 12px; padding: 10px 14px; background: #fffbeb; border: 1px solid #fef3c7; border-radius: 8px; font-size: 0.88rem; color: #92400e;">
-              <strong><i data-lucide="file-check" style="width: 15px; height: 15px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> ผลการปฏิบัติงานจริงและหลักฐานเชิงประจักษ์:</strong> จัดทำรายงานการวิจัยในชั้นเรียนฉบับสมบูรณ์ ๑ เล่ม ผลการวิเคราะห์พบว่าผลสัมฤทธิ์ทางการเรียนหลังเรียนสูงกว่าก่อนเรียนอย่างมีนัยสำคัญทางสถิติที่ระดับ .๐๕ นักเรียนมีความก้าวหน้าทางการเรียน ๑๐๐%
+              <strong><i data-lucide="file-check" style="width: 15px; height: 15px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> ผลการปฏิบัติงานและหลักฐาน:</strong> มีรายงานการพัฒนาทักษะเมาส์ ป.1 และบันทึกหลังสอนแผนที่ 8 ซึ่งระบุผ่านจุดประสงค์ 11/11 คน ส่วนผลเปรียบเทียบก่อน–หลังและนัยสำคัญทางสถิติยังรอตรวจคะแนนต้นฉบับ จึงยังไม่สรุปผล t-test
             </div>
             <div class="ind-metrics-row">
               <div class="ind-metric-item">
@@ -5307,7 +5372,7 @@
               </div>
               <div class="ind-metric-item">
                 <strong>ผลลัพธ์เชิงคุณภาพ:</strong>
-                <span>ผลสัมฤทธิ์ทางการเรียนหลังเรียนสูงกว่าก่อนเรียนอย่างมีนัยสำคัญทางสถิติที่ระดับ .๐๕</span>
+                <span>ครูผู้สอนรายงานว่าผู้เรียนใช้เมาส์ได้ดีขึ้น ผลเชิงสถิติรอยืนยันคะแนนก่อน–หลัง</span>
               </div>
             </div>
             <div style="margin-top: 12px; padding: 8px 12px; background: #f1f5f9; border-radius: 6px; font-size: 0.82rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
@@ -5660,7 +5725,7 @@
               <ul style="margin: 0; padding-left: 1.5rem; font-size: 0.88rem; color: #475569; line-height: 1.6;">
                 <li>ปฏิบัติหน้าที่หัวหน้ากลุ่มสาระการเรียนรู้การงานอาชีพ ขับเคลื่อนงานวิชาการและกิจกรรมส่งเสริมทักษะอาชีพและทักษะชีวิต</li>
                 <li>ปฏิบัติหน้าที่หัวหน้างานเทคโนโลยีสารสนเทศ (ICT) และผู้ดูแลระบบสื่อสารประชาสัมพันธ์สถานศึกษา (Website: <a href="https://www.kmd.ac.th" target="_blank" style="color:#2563eb;font-weight:bold;">www.kmd.ac.th</a>, แอดมินเพจ Facebook โรงเรียนบ้านคลองมดแดง ๑.๒ พันผู้ติดตาม, ช่อง TikTok โรงเรียน <a href="https://www.tiktok.com/@kmdschool198" target="_blank" style="color:#2563eb;font-weight:bold;">@kmdschool198</a>, TikTok การสอนครูเจมส์ <a href="https://www.tiktok.com/@anantachaiphetrri" target="_blank" style="color:#2563eb;font-weight:bold;">@anantachaiphetrri</a>, YouTube <a href="https://www.youtube.com/@KMDSchool" target="_blank" style="color:#2563eb;font-weight:bold;">@KMDSchool</a> และ LINE สื่อสารสถานศึกษา)</li>
-                <li>ดูแลและบริหารจัดการระบบเครือข่ายคอมพิวเตอร์ อินเทอร์เน็ตโรงเรียน ระบบสินทรัพย์ OBEC Asset และงานโสตทัศนูปกรณ์ในพิธีการต่าง ๆ ครบถ้วน</li>
+                <li>ดูแลและบริหารจัดการระบบเครือข่ายคอมพิวเตอร์ อินเทอร์เน็ตโรงเรียน ระบบสารสนเทศเพื่อการศึกษา (DMC/SGS/CCT) งานประชาสัมพันธ์ และงานสัมพันธ์ชุมชน ครบถ้วน</li>
                 <li>ร่วมกิจกรรมสนับสนุนสถานศึกษา เช่น กิจกรรมจิตอาสา Big Cleaning Day และงานโครงการพิเศษตามนโยบาย</li>
               </ul>
             </div>
@@ -5677,7 +5742,7 @@
               </div>
             </div>
             <div style="margin-bottom: 12px; padding: 10px 14px; background: #fffbeb; border: 1px solid #fef3c7; border-radius: 8px; font-size: 0.88rem; color: #92400e;">
-              <strong><i data-lucide="file-check" style="width: 15px; height: 15px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> ผลการปฏิบัติงานจริงและหลักฐานเชิงประจักษ์:</strong> ปฏิบัติหน้าที่หัวหน้ากลุ่มสาระการงานอาชีพ และหัวหน้างาน ICT ควบคุมดูแลระบบโสตทัศนูปกรณ์ อินเทอร์เน็ตโรงเรียน ระบบสินทรัพย์ OBEC Asset และจัดกิจกรรม Big Cleaning พัฒนาโรงเรียนสำเร็จลุล่วง ๑๐๐%
+              <strong><i data-lucide="file-check" style="width: 15px; height: 15px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> ผลการปฏิบัติงานจริงและหลักฐานเชิงประจักษ์:</strong> ปฏิบัติหน้าที่หัวหน้างาน ICT, งานประชาสัมพันธ์, งานสัมพันธ์ชุมชน และระบบสารสนเทศเพื่อการศึกษา (DMC/SGS/CCT) ควบคุมดูแลระบบโสตทัศนูปกรณ์ อินเทอร์เน็ตโรงเรียน และกิจกรรมพัฒนาสถานศึกษาสำเร็จลุล่วง ๑๐๐%
             </div>
             <div class="ind-metrics-row">
               <div class="ind-metric-item">
@@ -6181,7 +6246,7 @@
               ผู้เรียนชั้นประถมศึกษาปีที่ ๑ (๑๑ คน) ฝึกปฏิบัติทักษะการจับเมาส์ การเคลื่อนตัวชี้ การคลิก ดับเบิลคลิก ลากวาง และเลื่อนหน้าตามภารกิจเกมการศึกษาบนระบบ <em>Kru James Soncom</em> ในห้องปฏิบัติการคอมพิวเตอร์โรงเรียนบ้านคลองมดแดง โดยครูผู้สอนทำหน้าที่เป็นโค้ช (Facilitator) สาธิตทีละขั้นและให้คำแนะนำเฉพาะบุคคล
             </p>
             <div style="background: #f8fafc; border-left: 4px solid var(--primary-500); padding: 10px 14px; border-radius: 4px; font-size: 0.85rem; color: var(--primary-900); margin-bottom: 14px;">
-              <strong>ผลลัพธ์เชิงประจักษ์:</strong> ผู้เรียนชั้น ป.๑ ปีการศึกษา ๒๕๖๙ ทั้ง ๑๑ คน (๑๐๐%) ได้รับการพัฒนาทักษะการใช้เมาส์เบื้องต้น สามารถควบคุมตัวชี้ คลิก ดับเบิลคลิก ลากวาง และเลื่อนหน้าจอในการทำภารกิจบนคอมพิวเตอร์ได้ด้วยตนเองอย่างถูกต้องและปลอดภัย
+              <strong>ผลจากระบบ:</strong> บันทึกหลังสอนแผนที่ 8 ระบุผู้เรียน ป.1 จำนวน 11 คน ผ่านจุดประสงค์ 11 คน (ตรวจ 12 กันยายน 2569) ส่วนระดับคุณภาพรายทักษะและผลก่อน–หลังยังรอแบบประเมินต้นฉบับ
             </div>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.25rem;">
               <a href="https://krujamesoncom-website.vercel.app/admin" target="_blank" class="btn-header btn-slides" style="background: linear-gradient(135deg, #1e3a8a, #0284c7); padding: 7px 16px; font-size: 0.85rem; text-decoration: none; box-shadow: 0 4px 10px rgba(30,58,138,0.25);">
@@ -6205,12 +6270,12 @@
 
         <!-- 3-Photo Authentic Comlab Gallery for Challenge Issue (10 ก.ย. 2569) -->
         <div class="ind-gallery-3" style="margin-bottom: 2rem;">
-          <div class="ind-gallery-item" onclick="openLightbox('assets/evidence/media_pa/IMG_20260910_133441_1_.jpg', 'บรรยากาศจริงในห้องคอมพิวเตอร์ (๑๐ ก.ย. ๒๕๖๙): นักเรียนชั้น ป.๑ ฝึกจับเมาส์ลากวางบล็อกคำสั่งโค้ดดิ้งแบบเพื่อนช่วยเพื่อน (Buddy System)')">
+          <div class="ind-gallery-item" onclick="openLightbox('assets/evidence/media_pa/IMG_20260910_133441_1_.jpg', '10 กันยายน 2569: ผู้เรียนฝึกใช้เมาส์กับบล็อกคำสั่ง Code.org ซึ่งเป็นสื่อของผู้ให้บริการภายนอก')">
             <div class="ind-img-wrap">
               <span class="zoom-icon"><i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i></span>
-              <img src="assets/evidence/media_pa/IMG_20260910_133441_1_.jpg" alt="นักเรียนชั้น ป.๑ ฝึกจับเมาส์ลากวางบล็อกโค้ดดิ้งแบบเพื่อนช่วยเพื่อน ๑๐ ก.ย. ๒๕๖๙">
+              <img src="assets/evidence/media_pa/IMG_20260910_133441_1_.jpg" alt="ฝึกใช้เมาส์กับบล็อกคำสั่ง Code.org วันที่ 10 กันยายน 2569">
             </div>
-            <div class="ind-gallery-caption">ป.๑ ฝึกจับเมาส์โค้ดดิ้งแบบเพื่อนช่วยเพื่อน (๑๐ ก.ย. ๖๙)</div>
+            <div class="ind-gallery-caption">ฝึกใช้เมาส์กับบล็อกคำสั่ง Code.org (10 ก.ย. 2569)</div>
           </div>
           <div class="ind-gallery-item" onclick="openLightbox('assets/evidence/media_pa/IMG_20260910_133646.jpg', 'นวัตกรรมเกมมิฟิเคชัน (๑๐ ก.ย. ๒๕๖๙): หน้าจอภารกิจเมาส์แม่นยำ บนระบบ Kru James Soncom ฝึกควบคุมตัวชี้เมาส์รายบุคคล')">
             <div class="ind-img-wrap">
@@ -6219,440 +6284,72 @@
             </div>
             <div class="ind-gallery-caption">นวัตกรรมเกมมิฟิเคชัน "ภารกิจเมาส์แม่นยำ" (๑๐ ก.ย. ๖๙)</div>
           </div>
-          <div class="ind-gallery-item" onclick="openLightbox('assets/evidence/media_pa/IMG_20260910_133655.jpg', 'ผลสัมฤทธิ์เชิงประจักษ์ (๑๐ ก.ย. ๒๕๖๙): นักเรียนชั้น ป.๑ ทั้ง ๑๑ คน (๑๐๐%) ผ่านเกณฑ์ประเมินทักษะปฏิบัติการใช้เมาส์ ๔ ด้านครบทุกคน')">
+          <div class="ind-gallery-item" onclick="openLightbox('assets/evidence/media_pa/IMG_20260910_133655.jpg', '10 กันยายน 2569: ติดตามการฝึกใช้เมาส์ผ่านภารกิจดิจิทัล ภาพนี้ไม่ใช่หลักฐานคะแนนรายบุคคลหรือผลทั้งห้อง')">
             <div class="ind-img-wrap">
               <span class="zoom-icon"><i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i></span>
-              <img src="assets/evidence/media_pa/IMG_20260910_133655.jpg" alt="ผลสัมฤทธิ์ประเด็นท้าทาย ป.๑ ทั้ง ๑๑ คน ผ่านเกณฑ์ปฏิบัติ ๑๐๐%">
+              <img src="assets/evidence/media_pa/IMG_20260910_133655.jpg" alt="ติดตามการฝึกใช้เมาส์ผ่านภารกิจดิจิทัล 10 กันยายน 2569">
             </div>
-            <div class="ind-gallery-caption">ผลสัมฤทธิ์ ป.๑ ทั้ง ๑๑ คน ผ่านเกณฑ์ปฏิบัติ ๑๐๐% (๑๐ ก.ย. ๖๙)</div>
+            <div class="ind-gallery-caption">ติดตามการฝึกใช้เมาส์ผ่านภารกิจดิจิทัล (10 ก.ย. 2569)</div>
           </div>
         </div>
       </div>
 
       <!-- Rubrics Evaluation Table (Anonymized per PDPA) -->
-      <div class="score-comparison-wrapper">
-        <div class="score-comparison-header">
-          <div>
-            <h3>สรุปผลการประเมินทักษะปฏิบัติการใช้เมาส์ ๔ ด้าน (นักเรียนชั้น ป.๑ รวม ๑๑ คน)</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">รายงานผลการประเมินตามเกณฑ์รูบริกส์ ๓ ระดับ (ระดับ ๓ ดี : ทำได้ด้วยตนเอง | ระดับ ๒ ปานกลาง : ทำได้เมื่อชี้แนะ | ระดับ ๑ พอใช้)</p>
-          </div>
-          <div class="stat-badge-ttest" style="background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0;">
-            ผลการประเมินเชิงประจักษ์: ผู้เรียนชั้น ป.๑ ทั้ง ๑๑ คน ผ่านเกณฑ์ทักษะปฏิบัติครบ ๑๐๐% และมีพัฒนาการดีขึ้นทุกคน
-          </div>
-        </div>
+      <div class="score-comparison-wrapper" data-review="2026-09-13">
+  <div class="score-comparison-header">
+    <div><h3>ผลการเรียนรู้และหลักฐานประกอบ ป.1 จำนวน 11 คน</h3>
+    <p>ข้อมูลระบบห้องเรียนครูเจมส์ ตรวจสอบเมื่อ 12 กันยายน 2569</p></div>
+    <div class="stat-badge-ttest">ระบบแผนที่ 8 บันทึกผ่านจุดประสงค์ 11/11 คน</div>
+  </div>
+  <p class="evidence-source">ผลผ่านจุดประสงค์ในระบบไม่ใช่คะแนนรูบริกรายทักษะ ภาพกิจกรรมใช้ประกอบการจัดการเรียนรู้ ส่วนผลก่อน–หลังต้องอ้างอิงแบบประเมินของผู้เรียนกลุ่มเดียวกัน</p>
 
-        <!-- Table Anonymized with Student Numbers for PDPA Compliance -->
-        
-        <!-- หลักฐานเชิงประจักษ์: การสอบปฏิบัติทักษะเมาส์ ๑๐๐% -->
-        <div style="margin-top: 1.5rem; margin-bottom: 2rem; background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 14px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.06);">
-          <div style="font-weight: 700; color: #1e40af; font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
-            <i data-lucide="award" style="width: 20px; height: 20px; color: #2563eb;"></i>
-            หลักฐานเชิงประจักษ์: ผลการสอบภาคปฏิบัติการใช้เมาส์คอมพิวเตอร์ (Practical Exam ๑๐๐%)
-          </div>
-          <p style="font-size: 0.9rem; color: #334155; margin-bottom: 1.25rem; line-height: 1.6;">
-            ผลการทดสอบภาคปฏิบัติจริงของนักเรียนชั้นประถมศึกษาปีที่ ๑ โรงเรียนบ้านคลองมดแดง จำนวน ๑๑ คน (ครบ ๑๐๐%) ใน ๔ ทักษะหลัก (การเคลื่อนตัวชี้, คลิกและดับเบิลคลิก, ลากและวาง Drag & Drop, เลื่อนหน้าจอ Scroll) ผู้เรียนทุกคนผ่านเกณฑ์การประเมินตามรูบริกส์ ๔ ด้าน ๓ ระดับ โดยสามารถปฏิบัติได้ด้วยตนเองอย่างถูกต้องคล่องแคล่ว (คิดเป็นร้อยละ ๑๐๐)
-          </p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-            <div class="ind-gallery-item" onclick="openLightbox('assets/evidence/comlab_eval_mouse100_boy.jpg', 'การทดสอบภาคปฏิบัติการใช้เมาส์คอมพิวเตอร์ นักเรียนชายชั้น ป.๑ ผ่านเกณฑ์การฝึกปฏิบัติ (๑๐๐%)')">
-              <img src="assets/evidence/comlab_eval_mouse100_boy.jpg" alt="การทดสอบภาคปฏิบัติการใช้เมาส์ นักเรียนชาย ป.๑" style="width: 100%; border-radius: 8px;">
-              <div class="ind-gallery-caption">การทดสอบภาคปฏิบัติทักษะเมาส์ นักเรียนชาย ป.๑ (ผ่านเกณฑ์การฝึกปฏิบัติ ๑๐๐%)</div>
-            </div>
-            <div class="ind-gallery-item" onclick="openLightbox('assets/evidence/comlab_eval_mouse100_girl.jpg', 'การทดสอบภาคปฏิบัติการใช้เมาส์คอมพิวเตอร์ นักเรียนหญิงชั้น ป.๑ ผ่านเกณฑ์การฝึกปฏิบัติ (๑๐๐%)')">
-              <img src="assets/evidence/comlab_eval_mouse100_girl.jpg" alt="การทดสอบภาคปฏิบัติการใช้เมาส์ นักเรียนหญิง ป.๑" style="width: 100%; border-radius: 8px;">
-              <div class="ind-gallery-caption">การทดสอบภาคปฏิบัติทักษะเมาส์ นักเรียนหญิง ป.๑ (ผ่านเกณฑ์การฝึกปฏิบัติ ๑๐๐%)</div>
-            </div>
-            <div class="ind-gallery-item" onclick="openLightbox('assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg', 'บรรยากาศการทดสอบภาคปฏิบัติในห้องปฏิบัติการคอมพิวเตอร์ ๑ คน ๑ เครื่อง (๑๐ ก.ย. ๖๙)')">
-              <img src="assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg" alt="บรรยากาศห้องคอมพิวเตอร์" style="width: 100%; border-radius: 8px;">
-              <div class="ind-gallery-caption">บรรยากาศการทดสอบภาคปฏิบัติในห้องปฏิบัติการคอมพิวเตอร์ (๑๐ ก.ย. ๖๙)</div>
-            </div>
-          </div>
-        </div>
-
-        
-        <!-- Interactive Before & After Showcase -->
-        <div class="before-after-card-wrapper">
-          <div class="before-after-header">
-            <div class="before-after-title-group">
-              <h3 style="display: flex; align-items: center; gap: 8px;">
-                <i data-lucide="split-square-vertical" style="width: 22px; height: 22px; color: #2563eb;"></i>
-                ภาพเชิงประจักษ์เปรียบเทียบพัฒนาการ (Before &amp; After Showcase)
-              </h3>
-              <p>เปรียบเทียบสภาพปัญหาก่อนเรียน กับความคล่องแคล่วในการควบคุมกล้ามเนื้อมัดเล็กหลังใช้นวัตกรรม Gamification</p>
-            </div>
-            <div class="before-after-toggle-group">
-              <button type="button" class="ba-toggle-btn active" onclick="switchBATab('both', this)">⚖️ เปรียบเทียบทั้งคู่</button>
-              <button type="button" class="ba-toggle-btn" onclick="switchBATab('before', this)">🔴 ก่อนเรียน (Before)</button>
-              <button type="button" class="ba-toggle-btn" onclick="switchBATab('after', this)">🟢 หลังเรียน (After)</button>
-            </div>
-          </div>
-
-          <div id="baGrid" class="ba-grid-container">
-            <!-- Before Panel -->
-            <div id="baBeforePanel" class="ba-panel ba-panel-before">
-              <span class="ba-badge ba-badge-before">
-                <i data-lucide="alert-circle" style="width: 14px; height: 14px;"></i> สภาพปัญหาเดิมก่อนเรียน (Initial State)
-              </span>
-              <div class="ba-img-container">
-                <img src="assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/03_นักเรียนใช้เมาส์คอมพิวเตอร์_ป1.jpg" alt="สภาพปัญหาการฝึกใช้เมาส์ก่อนเรียน" loading="lazy">
-              </div>
-              <h4 style="font-family: 'Prompt', sans-serif; font-size: 1.05rem; color: #991b1b; margin: 0 0 10px 0;">
-                ปัญหาการควบคุมกล้ามเนื้อมัดเล็กและการประสานสายตา
-              </h4>
-              <ul class="ba-list">
-                <li>
-                  <span style="color: #ef4444; font-weight: 700;">✕</span>
-                  <span><strong>ขาดความคุ้นเคย:</strong> นักเรียนชนบทส่วนใหญ่ไม่มีคอมพิวเตอร์ที่บ้าน ทำให้ไม่เคยสัมผัสอุปกรณ์เมาส์</span>
-                </li>
-                <li>
-                  <span style="color: #ef4444; font-weight: 700;">✕</span>
-                  <span><strong>จับเมาส์สองมือ &amp; เกร็งข้อมือ:</strong> นักเรียนใช้สองมือประคองเมาส์ ควบคุมทิศทางไม่ได้และเมาส์หลุดขอบโต๊ะ</span>
-                </li>
-                <li>
-                  <span style="color: #ef4444; font-weight: 700;">✕</span>
-                  <span><strong>คลิกผิดพลาด:</strong> ไม่สามารถแยกแยะการคลิกซ้าย ดับเบิลคลิก และการลากวาง (Drag &amp; Drop)</span>
-                </li>
-                <li>
-                  <span style="color: #ef4444; font-weight: 700;">✕</span>
-                  <span><strong>สายตาไม่ประสานกับจอ:</strong> ต้องก้มมองมือตลอดเวลา เกิดความล่าช้า ท้อแท้ และขาดสมาธิ</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- After Panel -->
-            <div id="baAfterPanel" class="ba-panel ba-panel-after">
-              <span class="ba-badge ba-badge-after">
-                <i data-lucide="check-circle-2" style="width: 14px; height: 14px;"></i> ผลสัมฤทธิ์หลังใช้นวัตกรรม (Transformed State)
-              </span>
-              <div class="ba-img-container">
-                <img src="assets_drop/03_ภาพสื่อนวัตกรรม_Gamification/04_Coding_นักเรียนหน้าคอมพิวเตอร์.jpg" alt="ผลสัมฤทธิ์หลังใช้นวัตกรรมเกมมิฟิเคชัน" loading="lazy">
-              </div>
-              <h4 style="font-family: 'Prompt', sans-serif; font-size: 1.05rem; color: #166534; margin: 0 0 10px 0;">
-                ทักษะปฏิบัติการใช้เมาส์คล่องแคล่วและผ่านเกณฑ์ ๑๐๐%
-              </h4>
-              <ul class="ba-list">
-                <li>
-                  <span style="color: #10b981; font-weight: 700;">✓</span>
-                  <span><strong>ผ่านเกณฑ์ครบทุกคน:</strong> นักเรียน ป.๑ ทั้ง ๑๑ คน (๑๐๐%) ผ่านเกณฑ์ประเมินทักษะปฏิบัติระดับดีขึ้นไป</span>
-                </li>
-                <li>
-                  <span style="color: #10b981; font-weight: 700;">✓</span>
-                  <span><strong>จับเมาส์มือเดียวอย่างถูกวิธี:</strong> พัฒนาการกล้ามเนื้อมัดเล็กมั่นคง จับเมาส์มือเดียวอย่างผ่อนคลายและถูกต้อง</span>
-                </li>
-                <li>
-                  <span style="color: #10b981; font-weight: 700;">✓</span>
-                  <span><strong>แม่นยำทั้ง ๔ ทักษะ:</strong> สามารถคลิกเดี่ยว, ดับเบิลคลิก, คลิกขวา และลากวาง (Drag &amp; Drop) ได้อย่างแม่นยำ</span>
-                </li>
-                <li>
-                  <span style="color: #10b981; font-weight: 700;">✓</span>
-                  <span><strong>สายตามองจอ &amp; มีความสุข:</strong> เกิดการประสานสัมพันธ์สายตากับมือ สนุกกับภารกิจเกม และมีเจตคติที่ดีมาก</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4 Adventure Missions Roadmap -->
-        <div class="missions-roadmap-wrapper">
-          <div style="margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-            <h4 style="margin: 0; font-family: 'Prompt', sans-serif; font-size: 1.1rem; color: #0f172a; display: flex; align-items: center; gap: 8px;">
-              <i data-lucide="compass" style="width: 20px; height: 20px; color: #2563eb;"></i>
-              แผนผัง ๔ ด่านภารกิจผจญภัย "หนูน้อยไอทีกับเมาส์วิเศษ" (Gamification Missions)
-            </h4>
-            <span style="font-size: 0.8rem; background: #eff6ff; color: #1e40af; padding: 4px 10px; border-radius: 9999px; font-weight: 600;">
-              หน่วยที่ ๕–๘ รวม ๒๐๐ นาที (Active Learning)
-            </span>
-          </div>
-
-          <div class="missions-roadmap-grid">
-            <!-- Mission 1 -->
-            <div class="mission-step-card">
-              <div class="mission-top-badge">
-                <span class="mission-number">ด่านที่ ๑</span>
-                <span class="mission-skill-pill">Single Click</span>
-              </div>
-              <h4>เจ้าหนูน้อยนักสำรวจ</h4>
-              <p>ฝึกจับเมาส์ให้ถูกต้อง เคลื่อนเคอร์เซอร์ไปยังเป้าหมาย และคลิกซ้ายเลือกวัตถุ ๑ ครั้งอย่างมั่นคง</p>
-              <div class="mission-footer">
-                <span>สื่อ: Code.org &amp; Canva</span>
-                <strong style="color: #059669;">ผ่าน ๑๐๐% (๑๑ คน)</strong>
-              </div>
-            </div>
-
-            <!-- Mission 2 -->
-            <div class="mission-step-card">
-              <div class="mission-top-badge">
-                <span class="mission-number">ด่านที่ ๒</span>
-                <span class="mission-skill-pill">Double Click</span>
-              </div>
-              <h4>กริ๊กๆ เปิดกล่องสมบัติ</h4>
-              <p>ฝึกจังหวะการกดดับเบิลคลิกอย่างต่อเนื่อง เพื่อปลดล็อกหีบสมบัติและเปิดโปรแกรมคอมพิวเตอร์</p>
-              <div class="mission-footer">
-                <span>สื่อ: Poki Clicker Game</span>
-                <strong style="color: #059669;">ผ่าน ๑๐๐% (๑๑ คน)</strong>
-              </div>
-            </div>
-
-            <!-- Mission 3 -->
-            <div class="mission-step-card">
-              <div class="mission-top-badge">
-                <span class="mission-number">ด่านที่ ๓</span>
-                <span class="mission-skill-pill">Right Click</span>
-              </div>
-              <h4>คำสั่งลับสายลับจิ๋ว</h4>
-              <p>ใช้นิ้วกลางคลิกขวาเพื่อเปิดเมนูลัด (Context Menu) และเลือกไอเทมลับตามคำสั่งภารกิจ</p>
-              <div class="mission-footer">
-                <span>สื่อ: Context Training</span>
-                <strong style="color: #059669;">ผ่าน ๑๐๐% (๑๑ คน)</strong>
-              </div>
-            </div>
-
-            <!-- Mission 4 -->
-            <div class="mission-step-card">
-              <div class="mission-top-badge">
-                <span class="mission-number">ด่านที่ ๔</span>
-                <span class="mission-skill-pill">Drag &amp; Drop</span>
-              </div>
-              <h4>มหาศึกจอมยุทธ์นักต่อภาพ</h4>
-              <p>คลิกค้างเพื่อลากชิ้นส่วนจิ๊กซอว์ภาพการ์ตูนไปวางลงตำแหน่งกรอบที่ถูกต้องอย่างแม่นยำ</p>
-              <div class="mission-footer">
-                <span>สื่อ: Digital Puzzle Block</span>
-                <strong style="color: #059669;">ผ่าน ๑๐๐% (๑๑ คน)</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Voices of Learners & Community -->
-        <div class="voices-section-wrapper">
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-            <h4 style="margin: 0; font-family: 'Prompt', sans-serif; font-size: 1.1rem; color: #0f172a; display: flex; align-items: center; gap: 8px;">
-              <i data-lucide="message-square-quote" style="width: 20px; height: 20px; color: #2563eb;"></i>
-              เสียงสะท้อนจากห้องเรียนจริง (Voice of Learners &amp; Community)
-            </h4>
-            <span style="font-size: 0.8rem; color: #64748b;">ผลตอบรับเชิงคุณภาพและการมีส่วนร่วมของผู้มีส่วนได้ส่วนเสีย</span>
-          </div>
-
-          <div class="voices-grid">
-            <div class="voice-card">
-              <div class="voice-card-quote">
-                "หนูชอบด่านเปิดกล่องสมบัติมากค่ะ พอคลิกสองทีติดกัน กล่องสมบัติก็เปิดออก มีดาวขึ้นมาเต็มจอ หนูอยากมาเรียนคอมพิวเตอร์กับครูเจมส์ทุกวันเลยค่ะ"
-              </div>
-              <div class="voice-card-author">
-                <div class="voice-avatar-icon">👧</div>
-                <div class="voice-author-info">
-                  <span class="voice-author-name">เด็กหญิง ป.๑</span>
-                  <span class="voice-author-role">นักเรียนกลุ่มเป้าหมายประเด็นท้าทาย</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="voice-card">
-              <div class="voice-card-quote">
-                "ตอนแรกผมจับเมาส์ไม่ถนัด เมาส์วิ่งหนีตลอดเลยครับ แต่พอครูเจมส์สอนเล่นเกมจับคู่ภาพ ผมลากตัวการ์ตูนเข้าบ้านได้เองแล้วครับ สนุกมากๆ เลยครับ"
-              </div>
-              <div class="voice-card-author">
-                <div class="voice-avatar-icon">👦</div>
-                <div class="voice-author-info">
-                  <span class="voice-author-name">เด็กชาย ป.๑</span>
-                  <span class="voice-author-role">นักเรียนกลุ่มเป้าหมายประเด็นท้าทาย</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="voice-card">
-              <div class="voice-card-quote">
-                "ดีใจมากที่เห็นลูกกลับมาบ้านแล้วเล่าว่าครูเจมส์สอนเล่นเกมคอมพิวเตอร์อย่างสนุกสนาน จากเดิมที่กลัวและไม่เคยจับคอมพิวเตอร์ ตอนนี้มีความมั่นใจและอยากมาโรงเรียนทุกวันค่ะ"
-              </div>
-              <div class="voice-card-author">
-                <div class="voice-avatar-icon">👨‍👩‍👧</div>
-                <div class="voice-author-info">
-                  <span class="voice-author-name">ตัวแทนผู้ปกครองนักเรียน ป.๑</span>
-                  <span class="voice-author-role">การประชุมผู้ปกครองชั้นเรียน ๒๕๖๙</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="data-table-wrap">
-          <table class="styled-table">
-            <thead>
-              <tr>
-                <th style="width: 70px; text-align: center;">เลขที่</th>
-                <th>รหัสผู้เรียน (PDPA)</th>
-                <th style="text-align: center;">๑. เคลื่อนตัวชี้</th>
-                <th style="text-align: center;">๒. คลิก & ดับเบิลคลิก</th>
-                <th style="text-align: center;">๓. ลากและวาง</th>
-                <th style="text-align: center;">๔. เลื่อนหน้าจอ</th>
-                <th style="text-align: center;">ผลการฝึกปฏิบัติ</th>
-                <th style="text-align: center;">สถานะพัฒนาการ</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๑</td>
-                <td>นักเรียน ป.๑ เลขที่ ๑</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๒</td>
-                <td>นักเรียน ป.๑ เลขที่ ๒</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๓</td>
-                <td>นักเรียน ป.๑ เลขที่ ๓</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๔</td>
-                <td>นักเรียน ป.๑ เลขที่ ๔</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๕</td>
-                <td>นักเรียน ป.๑ เลขที่ ๕</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๖</td>
-                <td>นักเรียน ป.๑ เลขที่ ๖</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๗</td>
-                <td>นักเรียน ป.๑ เลขที่ ๗</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๘</td>
-                <td>นักเรียน ป.๑ เลขที่ ๘</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๙</td>
-                <td>นักเรียน ป.๑ เลขที่ ๙</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๑๐</td>
-                <td>นักเรียน ป.๑ เลขที่ ๑๐</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 700;">๑๑</td>
-                <td>นักเรียน ป.๑ เลขที่ ๑๑</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: #047857; background: #ecfdf5;">ปฏิบัติได้ดี</span></td>
-                <td style="text-align: center; font-weight: 700; color: #047857;">ผ่านเกณฑ์ดี</td>
-                <td style="text-align: center;"><span class="tag-pill" style="color: green; background: #e8f5e9;">ผ่านเกณฑ์ (ทำได้เอง)</span></td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="2" style="text-align: right; font-weight: 700;">สรุปผลการประเมินภาพรวม :</td>
-                <td colspan="4" style="text-align: center; color: var(--primary-700); font-weight: 700;">ผู้เรียนผ่านการประเมินทักษะปฏิบัติครบทั้ง ๑๑ คน (๑๐๐%)</td>
-                <td colspan="2" style="text-align: center; font-weight: 700; color: var(--success-600);">มีพัฒนาการดีขึ้น (๑๐๐%)</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-
-        <!-- 4 Pillars Academic Reference Banner -->
-        <div style="margin-top: 20px; background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 18px 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px;">
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="background: #eff6ff; color: #1e40af; padding: 5px; border-radius: 8px; display: inline-flex;"><i data-lucide="database" style="width: 18px; height: 18px;"></i></span>
-              <h4 style="margin: 0; font-family: 'Prompt', sans-serif; font-size: 1.05rem; color: #0f172a;">การเทียบเคียง ๔ เสาหลักระบบวิชาการดิจิทัล (Kru James Soncom)</h4>
-            </div>
-            <a href="https://krujamesoncom-website.vercel.app/admin" target="_blank" style="text-decoration: none; padding: 6px 12px; background: #1e40af; color: white; border-radius: 6px; font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-              <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> เข้าสู่ระบบบริหารวิชาการ
-            </a>
-          </div>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
-            <div style="background: #f8fafc; padding: 12px; border-radius: 8px; border-left: 3px solid #0284c7;">
-              <div style="font-weight: 700; font-size: 0.88rem; color: #0369a1; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
-                <i data-lucide="layers" style="width: 14px; height: 14px;"></i> ๑. หลักสูตร (Curriculum)
-              </div>
-              <p style="font-size: 0.8rem; color: #475569; margin: 0; line-height: 1.45;">โครงสร้างรายวิชา ว ๔.๒ ป.๑–ม.๓, คำอธิบายรายวิชา และแผนจัดเวลาเรียน ๒๕ คาบ/สัปดาห์ (ตัวชี้วัด ๑.๑)</p>
-            </div>
-            <div style="background: #f8fafc; padding: 12px; border-radius: 8px; border-left: 3px solid #2563eb;">
-              <div style="font-weight: 700; font-size: 0.88rem; color: #1d4ed8; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
-                <i data-lucide="book-open" style="width: 14px; height: 14px;"></i> ๒. แผนการจัดการเรียนรู้
-              </div>
-              <p style="font-size: 0.8rem; color: #475569; margin: 0; line-height: 1.45;">แผน Active Learning ๔ แผนประเด็นท้าทาย ป.๑ (แผน ๕–๘ รวม ๒๐๐ นาที) พร้อมสื่อสไลด์และใบงาน (ตัวชี้วัด ๑.๒, ๑.๔)</p>
-            </div>
-            <div style="background: #f8fafc; padding: 12px; border-radius: 8px; border-left: 3px solid #16a34a;">
-              <div style="font-weight: 700; font-size: 0.88rem; color: #15803d; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
-                <i data-lucide="clipboard-check" style="width: 14px; height: 14px;"></i> ๓. บันทึกหลังแผน
-              </div>
-              <p style="font-size: 0.8rem; color: #475569; margin: 0; line-height: 1.45;">บันทึกผลการสอน K-P-A รายชั่วโมง, สถิติเช็คชื่อ Real-time, ปัญหา/อุปสรรค และแนวทางแก้ไข (ตัวชี้วัด ๑.๓, ๑.๗)</p>
-            </div>
-            <div style="background: #f8fafc; padding: 12px; border-radius: 8px; border-left: 3px solid #d97706;">
-              <div style="font-weight: 700; font-size: 0.88rem; color: #b45309; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
-                <i data-lucide="file-spreadsheet" style="width: 14px; height: 14px;"></i> ๔. ผลการเรียน & ปพ.๕
-              </div>
-              <p style="font-size: 0.8rem; color: #475569; margin: 0; line-height: 1.45;">ระบบ GradeBook K/P/A, ผลประเมินทักษะเมาส์ ๔ ด้าน, และส่งออก ปพ.๕ ดิจิทัล PDF/Excel/CSV (ตัวชี้วัด ๑.๕, ๒.๑)</p>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top: 14px; padding: 12px 16px; background: #f8fafc; border-radius: var(--radius-sm); border: 1px solid var(--surface-border); font-size: 0.84rem; color: var(--text-muted); line-height: 1.6;">
-          <strong>🔒 การคุ้มครองข้อมูลส่วนบุคคล (PDPA Compliance):</strong> ตารางสรุปบนเว็บไซต์เผยแพร่โดยใช้เลขที่แทนชื่อ-นามสกุลจริง เพื่อคุ้มครองความเป็นส่วนตัวของผู้เรียน สำหรับแบบบันทึกการประเมิน แบบทดสอบวัดความรู้ ๑๐ ข้อ และบัญชีผลการเรียนรู้รายบุคคลฉบับเต็ม บันทึกไว้ในภาคผนวกเล่มรายงาน PA ๒๕๖๙ (ฉบับสมบูรณ์ ๓๕ หน้า) เพื่อเสนอต่อคณะกรรมการประเมิน
-        </div>
+  <div class="before-after-card-wrapper">
+    <div class="before-after-header">
+      <div class="before-after-title-group"><h3>ข้อมูลก่อนเรียนและผลติดตาม</h3><p>แยกข้อมูลที่ยืนยันแล้วออกจากหลักฐานที่ยังรอตรวจสอบ</p></div>
+      <div class="before-after-toggle-group" role="group" aria-label="ช่วงการรายงานผล">
+        <button type="button" class="ba-toggle-btn active" aria-pressed="true" onclick="switchBATab('both', this)">ภาพรวม</button>
+        <button type="button" class="ba-toggle-btn" aria-pressed="false" onclick="switchBATab('before', this)">ก่อนเรียน</button>
+        <button type="button" class="ba-toggle-btn" aria-pressed="false" onclick="switchBATab('after', this)">ผลติดตาม</button>
       </div>
+    </div>
+    <div id="baGrid" class="ba-grid-container">
+      <div id="baBeforePanel" class="ba-panel ba-panel-before">
+        <span class="ba-badge ba-badge-before">ข้อมูลตั้งต้น</span>
+        <h4>ประเด็นพัฒนา: ทักษะการใช้เมาส์เบื้องต้น</h4>
+        <p>กลุ่มเป้าหมายคือนักเรียนชั้นประถมศึกษาปีที่ 1 ปัจจุบัน จำนวน 11 คน ฝึกควบคุมตัวชี้ คลิกและดับเบิลคลิก ลากวาง และเลื่อนหน้าจอ</p>
+        <p class="evidence-empty">ยังไม่มีคะแนนก่อนเรียนและภาพก่อนเรียนที่ยืนยันวันและกลุ่มผู้เรียนตรงกัน จึงไม่ใช้ภาพเก่าหรือภาพต่างกลุ่มแทนหลักฐานก่อนเรียน</p>
+      </div>
+      <div id="baAfterPanel" class="ba-panel ba-panel-after">
+        <span class="ba-badge ba-badge-after">ผลติดตามที่มีแหล่งอ้างอิง</span>
+        <h4>ผ่านจุดประสงค์ 11 คน จาก 11 คน ตามระบบแผนที่ 8</h4>
+        <p>บันทึกหลังสอนในระบบระบุผู้เรียนทั้งหมด 11 คน ผ่าน 11 คน และไม่ผ่าน 0 คน</p>
+        <p>ครูผู้สอนรายงานว่าผู้เรียนใช้เมาส์ได้ดีขึ้นทุกคน ข้อมูลนี้เป็นข้อสังเกตของครู ไม่ใช่คะแนนเปรียบเทียบก่อน–หลัง</p>
+        <p class="evidence-empty">ค่าเฉลี่ย K และ P ในหน้าสรุปยังไม่ตรงกับข้อความหลังสอน จึงรอยืนยันจากไฟล์คะแนนต้นฉบับก่อนสรุปค่าเฉลี่ย ความก้าวหน้า หรือผลทดสอบทางสถิติ</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="missions-roadmap-wrapper reviewed-learning">
+    <h3>ลำดับแผนการจัดการเรียนรู้จากระบบ</h3>
+    <div class="evidence-table-scroll"><table>
+      <thead><tr><th scope="col">แผน</th><th scope="col">เรื่อง</th><th scope="col">วันที่ตามแผน</th><th scope="col">เวลา</th><th scope="col">สถานะในระบบ</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td>จับเมาส์และเคลื่อนตัวชี้</td><td>17 มิ.ย. 2569</td><td>50 นาที</td><td>สอนแล้ว</td></tr>
+        <tr><td>6</td><td>คลิกหนึ่งครั้งและดับเบิลคลิก</td><td>24 มิ.ย. 2569</td><td>50 นาที</td><td>สอนแล้ว</td></tr>
+        <tr><td>7</td><td>ลากและวางวัตถุ</td><td>1 ก.ค. 2569</td><td>50 นาที</td><td>สอนแล้ว</td></tr>
+        <tr><td>8</td><td>เลื่อนหน้าและภารกิจเมาส์ครบชุด</td><td>8 ก.ค. 2569</td><td>50 นาที</td><td>สอนแล้ว</td></tr>
+      </tbody>
+    </table></div>
+    <p>รวม 4 แผน 200 นาที วันที่ข้างต้นเป็นกำหนดการในแผน ส่วนภาพวันที่ 10 กันยายน 2569 เป็นภาพติดตามการฝึก ไม่ใช้ยืนยันวันสอนย้อนหลัง</p>
+    <a href="https://krujamesoncom-website.vercel.app/admin" target="_blank" rel="noopener noreferrer">ตรวจแผนและบันทึกหลังสอน (เฉพาะผู้มีสิทธิ์เข้าระบบ)</a>
+  </div>
+
+  <div class="voices-section-wrapper">
+    <h3>ข้อสังเกตจากครูผู้สอน</h3>
+    <p>ครูเจมส์แจ้งว่าผู้เรียน ป.1 จำนวน 11 คน ใช้เมาส์ได้ดีและมีพัฒนาการดีขึ้นทุกคน การรายงานผลเชิงตัวเลขเพิ่มเติมจะใช้แบบประเมินต้นฉบับประกอบ</p>
+    <p class="evidence-empty">ยังไม่แสดงคำรับรองจากนักเรียน ผู้ปกครอง หรือผู้บริหาร เนื่องจากยังไม่มีบันทึกคำรับรองที่ยืนยันแหล่งที่มา</p>
+  </div>
+</div>
 
     </div>
   </section>
@@ -6695,7 +6392,7 @@
                   <div style="font-size: 0.84rem; color: #64748b; margin-top: 2px;">ดำเนินงานครบถ้วน ถูกต้องและแล้วเสร็จภายในเวลาที่กำหนด (งานต่างๆ ในโรงเรียน)</div>
                 </td>
                 <td style="font-size: 0.85rem; color: #334155;">
-                  ปฏิบัติหน้าที่หัวหน้างาน ICT, Webmaster เว็บไซต์โรงเรียน (<a href="https://www.kmd.ac.th" target="_blank" style="color:#2563eb;font-weight:bold;">www.kmd.ac.th</a>), แอดมินเพจ Facebook โรงเรียนบ้านคลองมดแดง (๑.๒ พันคน), ผู้ดูแลและผลิตคอนเทนต์ TikTok (<a href="https://www.tiktok.com/@kmdschool198" target="_blank" style="color:#2563eb;font-weight:bold;">@kmdschool198</a>), YouTube (<a href="https://www.youtube.com/@KMDSchool" target="_blank" style="color:#2563eb;font-weight:bold;">@KMDSchool</a>), LINE สื่อสารสถานศึกษา, หัวหน้ากลุ่มสาระการงานอาชีพ, ครูเวรประจำวัน และงานพัสดุ OBEC Asset ครบถ้วน ๑๐๐%
+                  ปฏิบัติหน้าที่หัวหน้างาน ICT, Webmaster เว็บไซต์โรงเรียน (<a href="https://www.kmd.ac.th" target="_blank" style="color:#2563eb;font-weight:bold;">www.kmd.ac.th</a>), แอดมินเพจ Facebook โรงเรียนบ้านคลองมดแดง (๑.๒ พันคน), ผู้ดูแลและผลิตคอนเทนต์ TikTok (<a href="https://www.tiktok.com/@kmdschool198" target="_blank" style="color:#2563eb;font-weight:bold;">@kmdschool198</a>), YouTube (<a href="https://www.youtube.com/@KMDSchool" target="_blank" style="color:#2563eb;font-weight:bold;">@KMDSchool</a>), LINE สื่อสารสถานศึกษา, หัวหน้ากลุ่มสาระการงานอาชีพ, ครูเวรประจำวัน, ดูแลระบบสารสนเทศเพื่อการศึกษา (DMC/SGS/CCT) และงานสัมพันธ์ชุมชน ครบถ้วน ๑๐๐%
                 </td>
                 <td style="text-align: center;"><span class="tag-pill" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-size: 0.78rem; font-weight: 600;">มีหลักฐานเชิงประจักษ์</span></td>
               </tr>
@@ -8915,8 +8612,8 @@
                   <div><strong>ภาระงานสอน ๒๕ คาบ/สัปดาห์</strong> (เป็นไปตามเกณฑ์ที่ ก.ค.ศ. กำหนด) สอนวิทยาการคำนวณ ป.๑–ม.๓, วิทยาศาสตร์ ป.๔–๕, ทักษะอาชีพ ม.๑–๓</div>
                 </div>
                 <div style="display: flex; gap: 10px; align-items: flex-start;">
-                  <span style="background: #fef3c7; color: #92400e; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; white-space: nowrap; margin-top: 2px;">บริหารทั่วไป</span>
-                  <div><strong>ฝ่ายบริหารงานทั่วไป, พัสดุ OBEC Asset (เฉพาะอาคารเรียน) & โสตทัศนูปกรณ์</strong> ดูแลระบบสินทรัพย์อาคารเรียนสถานศึกษา ควบคุมระบบเครื่องเสียงและโสตทัศนูปกรณ์กิจกรรมหน้าเสาธง งานพิธีการราชการ และกิจกรรมลูกเสือ</div>
+                  <span style="background: #fef3c7; color: #92400e; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; white-space: nowrap; margin-top: 2px;">หน้าที่พิเศษ</span>
+                  <div><strong>หน้าที่พิเศษ ๔ ด้านสถานศึกษา :</strong> ดูแลระบบ ICT โรงเรียน, งานประชาสัมพันธ์ (เว็บ/เพจ/TikTok), งานสัมพันธ์ชุมชน และระบบสารสนเทศเพื่อการศึกษา (DMC/SGS/CCT) ปฏิบัติหน้าที่ครบถ้วน ๑๐๐%</div>
                 </div>
                 <div style="display: flex; gap: 10px; align-items: flex-start;">
                   <span style="background: #e0f2fe; color: #0369a1; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; white-space: nowrap; margin-top: 2px;">ไอซีที & สื่อ</span>
@@ -9946,8 +9643,10 @@
       const afterPanel = document.getElementById('baAfterPanel');
       const buttons = document.querySelectorAll('.ba-toggle-btn');
       
-      buttons.forEach(b => b.classList.remove('active'));
-      if (btn) btn.classList.add('active');
+      buttons.forEach(b => {
+        b.classList.toggle('active', b === btn);
+        b.setAttribute('aria-pressed', String(b === btn));
+      });
 
       if (!container || !beforePanel || !afterPanel) return;
 
