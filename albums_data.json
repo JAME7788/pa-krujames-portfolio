@@ -153,7 +153,7 @@
     "category": "comp1-teach",
     "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๑.๔",
     "title": "ข้อที่ ๑.๔ การสร้างและหรือพัฒนาสื่อนวัตกรรมฯ",
-    "desc": "การผลิตสื่อนวัตกรรม Gamification บทเรียนออนไลน์ Infographic และสตูดิโอบันทึกคลิป",
+    "desc": "การผลิตสื่อนวัตกรรม Gamification, ใบงานสื่อการสอนวิทยาการคำนวณ ป.๑ และห้องเรียนดิจิทัล (๗ รายการ)",
     "cover": "assets/evidence/media_pa/IMG_20260910_133646.jpg",
     "shared": true,
     "items": [
@@ -176,6 +176,21 @@
         "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg",
         "caption": "สตูดิโอบันทึกสื่อวิดีโอ Active Learning และการผลิตนวัตกรรมดิจิทัล (๑๙ มิ.ย. ๖๙)",
         "date": "๑๙ มิ.ย. ๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/worksheets/worksheet_p1_computer_devices.jpg",
+        "caption": "ใบงานวิชาวิทยาการคำนวณ ป.๑: รู้จักอุปกรณ์คอมพิวเตอร์เบื้องต้น กิจกรรมจับคู่ภาพอุปกรณ์และคำศัพท์ (๑ ก.ย. ๒๕๖๙)",
+        "date": "๑ ก.ย. ๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/worksheets/worksheet_hardware_software.jpg",
+        "caption": "ใบงานการเรียนรู้เรื่อง ฮาร์ดแวร์ หรือ ซอฟต์แวร์ การจำแนกอุปกรณ์และโปรแกรมประยุกต์ (๑ ก.ย. ๒๕๖๙)",
+        "date": "๑ ก.ย. ๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/worksheets/worksheet_create_folder.jpg",
+        "caption": "ใบงานขั้นตอนการสร้างและจัดการโฟลเดอร์ ห้องเรียนครูคอม เพื่อการจัดระเบียบไฟล์ดิจิทัล (๑ ก.ย. ๒๕๖๙)",
+        "date": "๑ ก.ย. ๒๕๖๙"
       }
     ]
   },
@@ -510,7 +525,7 @@
     "category": "comp1-challenge",
     "badge": "องค์ประกอบที่ ๑ · ประเด็นท้าทาย",
     "title": "PA ป.๑",
-    "desc": "การพัฒนาทักษะการใช้เมาส์และคอมพิวเตอร์เบื้องต้น ป.๑ ด้วยนวัตกรรมเกมมิฟิเคชัน (Gamification ๔ รายการ)",
+    "desc": "การพัฒนาทักษะการใช้เมาส์และคอมพิวเตอร์เบื้องต้น ป.๑ ด้วยนวัตกรรมเกมมิฟิเคชันและชุดใบงานเสริมทักษะ (๖ รายการ)",
     "cover": "assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg",
     "shared": false,
     "items": [
@@ -533,6 +548,16 @@
         "src": "assets/evidence/media_pa/IMG_20260910_133436.jpg",
         "caption": "นักเรียน ป.๑ ฝึกใช้เมาส์และการเขียนโปรแกรมแบบบล็อก Code.org (๑๐ ก.ย. ๒๕๖๙)",
         "date": "๑๐ ก.ย. ๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/worksheets/worksheet_p1_computer_devices.jpg",
+        "caption": "ใบงานฝึกทักษะวิทยาการคำนวณ ป.๑ รู้จักอุปกรณ์คอมพิวเตอร์เบื้องต้น เสริมการเรียนรู้ควบคู่เกมมิฟิเคชัน (๑ ก.ย. ๒๕๖๙)",
+        "date": "๑ ก.ย. ๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence/worksheets/worksheet_hardware_software.jpg",
+        "caption": "ใบงานจำแนกฮาร์ดแวร์และซอฟต์แวร์ กิจกรรมเสริมทักษะความรู้ความเข้าใจอุปกรณ์คอมพิวเตอร์ ป.๑ (๑ ก.ย. ๒๕๖๙)",
+        "date": "๑ ก.ย. ๒๕๖๙"
       }
     ]
   },
