@@ -7259,7 +7259,7 @@
       <div id="gallery-albums-view">
         <!-- Album Category Filters -->
         <div class="album-filter-nav">
-          <button class="album-filter-btn active" onclick="filterAlbums('all', this)">ทั้งหมด (๒๔ อัลบั้ม)</button>
+          <button class="album-filter-btn active" onclick="filterAlbums('all', this)">ทั้งหมด (๒๕ อัลบั้ม)</button>
           <button class="album-filter-btn" onclick="filterAlbums('comp1-teach', this)">ด้านการจัดการเรียนรู้ (ข้อ ๑.๑–๑.๘)</button>
           <button class="album-filter-btn" onclick="filterAlbums('comp1-support', this)">ด้านส่งเสริมและสนับสนุน (ข้อ ๒.๑–๒.๔)</button>
           <button class="album-filter-btn" onclick="filterAlbums('comp1-dev', this)">ด้านพัฒนาตนเอง/วิชาชีพ (ข้อ ๓.๑–๓.๓)</button>
@@ -9134,6 +9134,49 @@
       const targetPane = document.getElementById(tabId);
       if (targetPane) {
         targetPane.classList.add('active');
+      }
+    }
+
+    // Switch Gallery View (Albums Grid vs Stream)
+    function switchGalleryView(mode) {
+      const btnAlbums = document.getElementById('btn-view-albums');
+      const btnStream = document.getElementById('btn-view-stream');
+      const albumsView = document.getElementById('gallery-albums-view');
+      const streamView = document.getElementById('gallery-stream-view');
+
+      if (mode === 'stream') {
+        if (btnStream) btnStream.classList.add('active');
+        if (btnAlbums) btnAlbums.classList.remove('active');
+        if (streamView) streamView.style.display = 'block';
+        if (albumsView) albumsView.style.display = 'none';
+      } else {
+        if (btnAlbums) btnAlbums.classList.add('active');
+        if (btnStream) btnStream.classList.remove('active');
+        if (albumsView) albumsView.style.display = 'block';
+        if (streamView) streamView.style.display = 'none';
+      }
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    // Filter Albums by Category
+    function filterAlbums(category, btnElement) {
+      const allBtns = document.querySelectorAll('.album-filter-btn');
+      allBtns.forEach(b => b.classList.remove('active'));
+      if (btnElement) btnElement.classList.add('active');
+
+      const cards = document.querySelectorAll('#album-grid-container .album-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      if (window.lucide) {
+        lucide.createIcons();
       }
     }
 
