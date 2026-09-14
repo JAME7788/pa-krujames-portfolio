@@ -4,7 +4,7 @@
     "category": "comp1-dev",
     "badge": "เกียรติประวัติ & ผลงานดีเด่น",
     "title": "รางวัลและผลงานดีเด่น ๒๕๖๙",
-    "desc": "ประมวลโล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO, รางวัลเหรียญทอง Science Show และรางวัลเหรียญทองออกแบบคอมพิวเตอร์ ศิลปหัตถกรรม ครั้งที่ ๗๔",
+    "desc": "คัดเฉพาะโล่ ประกาศ เกียรติบัตร และภาพรับรางวัลที่ตรวจสอบความสอดคล้องแล้ว",
     "cover": "assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg",
     "shared": true,
     "items": [
@@ -64,110 +64,40 @@
         "date": "๒๕๖๙"
       },
       {
-        "src": "assets/evidence_pa_photos/IMG_20260811_093313.jpg",
-        "caption": "การเตรียมความพร้อมสื่อและนวัตกรรม The School CEO : คลิปสั้นปั้นธุรกิจ (๑๑ ส.ค. ๖๙)",
-        "date": "๑๑ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260811_093748.jpg",
-        "caption": "การซักซ้อมกระบวนการนำเสนอผลงานร่วมกับนักเรียนทีมงาน The School CEO (๑๑ ส.ค. ๖๙)",
-        "date": "๑๑ ส.ค. ๒๕๖๙"
-      },
-      {
         "src": "assets/evidence_pa_photos/IMG_20260904_074734.jpg",
         "caption": "บูธนิทรรศการและถ้วยรางวัลชนะเลิศระดับเหรียญทอง The School CEO สพป.กพ.๒ (๔ ก.ย. ๖๙)",
         "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260327_134251.jpg",
-        "caption": "ผลงานและการนำเสนอด้านเทคโนโลยีสารสนเทศที่ได้รับรางวัลดีเด่น (๒๗ มี.ค. ๖๙)",
-        "date": "๒๗ มี.ค. ๒๕๖๙"
       }
     ]
   },
   {
     "id": "album-1-1",
     "category": "comp1-teach",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๑.๑",
+    "badge": "ด้านที่ ๑ · ตัวชี้วัด ๑.๑",
     "title": "ข้อที่ ๑.๑ การสร้างและหรือพัฒนาหลักสูตร",
-    "desc": "การจัดทำโครงสร้างรายวิชาและคำอธิบายรายวิชา ๗ รายวิชา และหน่วยการเรียนรู้เทคโนโลยีห้องคอมพิวเตอร์",
-    "cover": "assets/google_photos_curated/ICT_01.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 1.1",
+    "cover": "assets/evidence_pa_photos/IMG_20260910_133433.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/ICT_01.jpg",
-        "caption": "ภาพกิจกรรมการเรียนรู้ในห้องปฏิบัติการคอมพิวเตอร์ตามโครงสร้างหลักสูตรเทคโนโลยี (Google Photos)",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/google_photos_curated/ICT_02.jpg",
-        "caption": "การจัดกระบวนการเรียนรู้ Coding และเทคโนโลยีดิจิทัลตามหลักสูตรสถานศึกษา (Google Photos)",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg",
-        "caption": "การจัดการเรียนรู้ตามโครงสร้างหลักสูตรเทคโนโลยี ในห้องคอมพิวเตอร์ (๑๐ ก.ย. ๖๙)",
+        "src": "assets/evidence_pa_photos/IMG_20260910_133433.jpg",
+        "caption": "นำหน่วยการเรียนรู้วิทยาการคำนวณตามหลักสูตรสถานศึกษาไปใช้จริง",
         "date": "๑๐ ก.ย. ๒๕๖๙"
       },
       {
-        "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/06_สื่อการสอน_องค์ประกอบหลักของระบบคอมพิวเตอร์.jpg",
-        "caption": "สื่อ Infographic โครงสร้างหลักสูตรคอมพิวเตอร์และระบบสารสนเทศ ๒๕๖๙",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/media_pa/IMG_20260202_104526.jpg",
-        "caption": "โครงสร้างซอฟต์แวร์เบื้องต้น & การใช้ห้องปฏิบัติการตามหลักสูตร (๒ ก.พ. ๖๙)",
-        "date": "๒ ก.พ. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/media_pa/IMG_20260202_104528.jpg",
-        "caption": "การฝึกปฏิบัติรายบุคคลตามหลักสูตรแกนกลางฯ สาระเทคโนโลยี (๒ ก.พ. ๖๙)",
-        "date": "๒ ก.พ. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_p1_computer_devices.jpg",
-        "caption": "ใบงานวิชาวิทยาการคำนวณ ป.๑: รู้จักอุปกรณ์คอมพิวเตอร์ ตามมาตรฐาน ว ๔.๒ มฐ.ป.๑/๑ (๑ ก.ย. ๒๕๖๙)",
-        "date": "๑ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_p3_flowchart.jpg",
-        "caption": "ใบงานวิทยาการคำนวณ ป.๓: ผังงานง่าย ๆ (Flowchart) การแก้ปัญหาอย่างเป็นขั้นตอน มาตรฐาน ว ๔.๒ ป.๓/๑ (๔ ก.ย. ๒๕๖๙)",
-        "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_p3_pattern_detective.jpg",
-        "caption": "ใบงานการคิดเชิงคำนวณ ป.๓: Pattern Detective การค้นหารูปแบบในชีวิตประจำวัน ตามหลักสูตรแกนกลางฯ (๔ ก.ย. ๒๕๖๙)",
-        "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20250923_081656.jpg",
-        "caption": "การจัดทำโครงสร้างรายวิชาและคำอธิบายรายวิชาเทคโนโลยี (๒๓ ก.ย. ๖๘)",
-        "date": "๒๓ ก.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20250925_085836.jpg",
-        "caption": "การจัดการเรียนรู้ตามหน่วยการเรียนรู้เทคโนโลยีดิจิทัล (๒๕ ก.ย. ๖๘)",
-        "date": "๒๕ ก.ย. ๒๕๖๘"
+        "src": "assets/evidence_pa_photos/IMG_20260224_111740.jpg",
+        "caption": "จัดการเรียนรู้ตามสาระเทคโนโลยีในห้องปฏิบัติการคอมพิวเตอร์",
+        "date": "๒๔ ก.พ. ๒๕๖๙"
       },
       {
         "src": "assets/evidence_pa_photos/IMG_20260202_084245.jpg",
-        "caption": "การเตรียมความพร้อมห้องปฏิบัติการคอมพิวเตอร์ตามหลักสูตรสถานศึกษา (๒ ก.พ. ๖๙)",
+        "caption": "นำสาระเทคโนโลยีไปจัดประสบการณ์เรียนรู้ให้ผู้เรียนช่วงชั้นต้น",
         "date": "๒ ก.พ. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence_pa_photos/IMG_20260202_084249.jpg",
-        "caption": "การฝึกปฏิบัติการใช้โปรแกรมประยุกต์ขั้นพื้นฐานตามหลักสูตรแกนกลางฯ (๒ ก.พ. ๖๙)",
+        "src": "assets/evidence_pa_photos/IMG_20260202_110800.jpg",
+        "caption": "ผู้เรียนเรียนรู้อุปกรณ์และการใช้งานคอมพิวเตอร์ตามหน่วยการเรียนรู้",
         "date": "๒ ก.พ. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260522_152942.jpg",
-        "caption": "การพัฒนาหน่วยการเรียนรู้ Coding และเทคโนโลยีสารสนเทศ (๒๒ พ.ค. ๖๙)",
-        "date": "๒๒ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260526_150304.jpg",
-        "caption": "การจัดการเรียนรู้สาระเทคโนโลยี วิทยาการคำนวณ ภาคเรียนที่ ๑/๒๕๖๙ (๒๖ พ.ค. ๖๙)",
-        "date": "๒๖ พ.ค. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipO9f1y2GS1sQ0398VGge0rFFEICxgRaXmW-Y994UNdyy7rScnQ_GD6NNnCB4YIe0Q?key=bldjX01MMlYyRkZvT2VCR3hydlZiVTBxVlJaTkdn"
@@ -175,86 +105,31 @@
   {
     "id": "album-1-2",
     "category": "comp1-teach",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๑.๒",
+    "badge": "ด้านที่ ๑ · ตัวชี้วัด ๑.๒",
     "title": "ข้อที่ ๑.๒ การออกแบบการจัดการเรียนรู้",
-    "desc": "การออกแบบแผนการจัดการเรียนรู้แบบ Active Learning และ Gamification เน้นผู้เรียนเป็นสำคัญ",
-    "cover": "assets/google_photos_curated/ICT_03.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 1.2",
+    "cover": "assets/evidence_pa_photos/MVIMG_20260514_151034.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/ICT_03.jpg",
-        "caption": "การออกแบบการจัดการเรียนรู้เชิงรุก Active Learning ด้วยระบบดิจิทัล (Google Photos)",
-        "date": "๒๕๖๙"
+        "src": "assets/evidence_pa_photos/MVIMG_20260514_151034.jpg",
+        "caption": "ครูสาธิตและจัดกิจกรรม Active Learning ตามแผนที่ออกแบบ",
+        "date": "๑๔ พ.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/google_photos_curated/ICT_04.jpg",
-        "caption": "นักเรียนลงมือฝึกปฏิบัติทักษะไอซีทีตามแผนการจัดการเรียนรู้ที่ออกแบบไว้ (Google Photos)",
-        "date": "๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260122_095316.jpg",
+        "caption": "จัดลำดับกิจกรรมจากการอธิบายสู่การฝึกปฏิบัติรายบุคคล",
+        "date": "๒๒ ม.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/media_pa/IMG_20260223_105728.jpg",
-        "caption": "การมีปฏิสัมพันธ์กับบทเรียนดิจิทัลและควิซออนไลน์ (๒๓ ก.พ. ๖๙)",
-        "date": "๒๓ ก.พ. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/media_pa/IMG_20260910_133436.jpg",
-        "caption": "Active Learning ปฏิบัติจริง ๑ คน ๑ เครื่องตามแผนการจัดการเรียนรู้ (๑๐ ก.ย. ๖๙)",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/comlab_active_mouse_p1.jpg",
-        "caption": "การออกแบบกิจกรรมฝึกกล้ามเนื้อมัดเล็กและการประสานสายตาด้วยเมาส์ ป.๑",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/media_pa/IMG_20260611_132439.jpg",
-        "caption": "Game-Based Learning พัฒนาทักษะการคิดเชิงคำนวณ (๑๑ มิ.ย. ๖๙)",
-        "date": "๑๑ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_p3_condition_if.jpg",
-        "caption": "การออกแบบกิจกรรมคิดเชิงคำนวณ: ใบงานเงื่อนไข ถ้าใช่ / ถ้าไม่ใช่ บูรณาการการตัดสินใจเชิงตรรกะ (๔ ก.ย. ๒๕๖๙)",
-        "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/cinematic/cinematic_camera_part1_shots.jpg",
-        "caption": "การออกแบบแผนการจัดการเรียนรู้ด้านสื่อดิจิทัล: สื่อการสอนขนาดภาพ Cinematic (EWS, WS, MS, CU, ECU) (๔ ก.ย. ๒๕๖๙)",
-        "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/cinematic/cinematic_camera_part2_angles.jpg",
-        "caption": "การออกแบบกิจกรรมการสื่อสารดิจิทัล: สื่อการสอนมุมกล้องทางภาพยนตร์และมัลติมีเดีย (Low, High, Bird's Eye, Dutch) (๔ ก.ย. ๒๕๖๙)",
-        "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251104_112900.jpg",
-        "caption": "การออกแบบกิจกรรมการเรียนรู้แบบ Active Learning เน้นผู้เรียนเป็นสำคัญ (๔ พ.ย. ๖๘)",
-        "date": "๔ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260206_125055.jpg",
-        "caption": "การจัดเตรียมสื่อดิจิทัลและกระบวนการเรียนรู้เชิงรุก (๖ ก.พ. ๖๙)",
-        "date": "๖ ก.พ. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20251205_100158.jpg",
+        "caption": "จัดกิจกรรมกลุ่มย่อยและหมุนเวียนให้ผู้เรียนลงมือปฏิบัติ",
+        "date": "๕ ธ.ค. ๒๕๖๘"
       },
       {
         "src": "assets/evidence_pa_photos/IMG_20260223_105753.jpg",
-        "caption": "การมีปฏิสัมพันธ์กับบทเรียนและการมีส่วนร่วมในห้องเรียนคอมพิวเตอร์ (๒๓ ก.พ. ๖๙)",
+        "caption": "ออกแบบกิจกรรมให้ผู้เรียนโต้ตอบกับสื่อและรับผลย้อนกลับทันที",
         "date": "๒๓ ก.พ. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260609_104115.jpg",
-        "caption": "การออกแบบกิจกรรม Gamification เพื่อกระตุ้นความสนใจของผู้เรียน (๙ มิ.ย. ๖๙)",
-        "date": "๙ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260610_092845.jpg",
-        "caption": "การจัดกิจกรรมการเรียนรู้การคิดเชิงคำนวณผ่านเกมคอมพิวเตอร์ (๑๐ มิ.ย. ๖๙)",
-        "date": "๑๐ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260610_100337.jpg",
-        "caption": "นักเรียนลงมือปฏิบัติกิจกรรมตามแผนการจัดการเรียนรู้ที่ออกแบบไว้ (๑๐ มิ.ย. ๖๙)",
-        "date": "๑๐ มิ.ย. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipO9f1y2GS1sQ0398VGge0rFFEICxgRaXmW-Y994UNdyy7rScnQ_GD6NNnCB4YIe0Q?key=bldjX01MMlYyRkZvT2VCR3hydlZiVTBxVlJaTkdn"
@@ -262,95 +137,30 @@
   {
     "id": "album-1-3",
     "category": "comp1-teach",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๑.๓",
+    "badge": "ด้านที่ ๑ · ตัวชี้วัด ๑.๓",
     "title": "ข้อที่ ๑.๓ การจัดกิจกรรมการเรียนรู้",
-    "desc": "การจัดกิจกรรม Active Learning ให้ผู้เรียนได้ลงมือปฏิบัติจริง ๑ คน ๑ เครื่อง และเทคนิคเพื่อนช่วยเพื่อน",
-    "cover": "assets/google_photos_curated/ICT_05.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 1.3",
+    "cover": "assets/evidence_pa_photos/IMG_20260716_114228.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/ICT_05.jpg",
-        "caption": "การจัดกิจกรรมการเรียนรู้ในห้องเรียนเทคโนโลยี Active Learning (Google Photos)",
-        "date": "๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260716_114228.jpg",
+        "caption": "กิจกรรม Coding แบบลงมือปฏิบัติและเรียนรู้ร่วมกัน",
+        "date": "๑๖ ก.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/google_photos_curated/CareerSkills_01.jpg",
-        "caption": "กิจกรรมการเรียนรู้แบบลงมือปฏิบัติจริงและการฝึกทักษะอาชีพ (Google Photos)",
-        "date": "๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260128_140013.jpg",
+        "caption": "ครูให้คำแนะนำรายกลุ่มระหว่างสร้างชิ้นงานดิจิทัล",
+        "date": "๒๘ ม.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/media_pa/IMG_20260910_133441_1_.jpg",
-        "caption": "Active Learning เทคนิคเพื่อนช่วยเพื่อน ปฏิบัติจริงในห้องคอมฯ (๑๐ ก.ย. ๖๙)",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/media_pa/IMG_20260910_133436.jpg",
-        "caption": "นักเรียน ป.๑ ปฏิบัติกิจกรรมจริง ๑ คน ๑ เครื่องอย่างมีความสุข (๑๐ ก.ย. ๖๙)",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/comlab_active_classroom.jpg",
-        "caption": "บรรยากาศการจัดกิจกรรม Active Learning ในห้องปฏิบัติการคอมพิวเตอร์",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/media_pa/IMG_20260611_132452.jpg",
-        "caption": "ความสุขและเจตคติเชิงบวกต่อการเรียนเทคโนโลยี (๑๑ มิ.ย. ๖๙)",
-        "date": "๑๑ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_students_action.jpg",
-        "caption": "การจัดกิจกรรม Active Learning เชิงประสบการณ์จริง: นักเรียนปฏิบัติการเตรียมวัตถุดิบและฝึกทักษะอาชีพ The School CEO (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_smoothie_action.jpg",
-        "caption": "การจัดกิจกรรมการเรียนรู้แบบลงมือปฏิบัติ: นักเรียนลงมือปั่นสมูทตี้อโวคาโดและบริหารจัดการร้านจริง (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_full_team.jpg",
-        "caption": "บรรยากาศกิจกรรมการเรียนรู้ภาคปฏิบัติและทีมงานนักเรียนในงานมหกรรม The School CEO สพป.กำแพงเพชร เขต ๒ (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260224_091508.jpg",
-        "caption": "Active Learning ปฏิบัติจริง ๑ คน ๑ เครื่องในห้องปฏิบัติการคอมพิวเตอร์ (๒๔ ก.พ. ๖๙)",
-        "date": "๒๔ ก.พ. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260224_091511.jpg",
-        "caption": "การจัดกิจกรรมกลุ่มและเทคนิคเพื่อนช่วยเพื่อนในการฝึกทักษะคอมพิวเตอร์ (๒๔ ก.พ. ๖๙)",
-        "date": "๒๔ ก.พ. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260224_093122.jpg",
-        "caption": "บรรยากาศการเรียนรู้ที่สนุกสนาน ผู้เรียนฝึกทักษะการใช้เมาส์อย่างคล่องแคล่ว (๒๔ ก.พ. ๖๙)",
-        "date": "๒๔ ก.พ. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260611_132457.jpg",
-        "caption": "การจัดกิจกรรมบูรณาการเทคโนโลยีดิจิทัลกับทักษะการคิดวิเคราะห์ (๑๑ มิ.ย. ๖๙)",
-        "date": "๑๑ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260611_132506.jpg",
-        "caption": "นักเรียนลงมือฝึกทักษะการคลิกและลากวางด้วยความมั่นใจ (๑๑ มิ.ย. ๖๙)",
-        "date": "๑๑ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260910_133427.jpg",
-        "caption": "การจัดกิจกรรมการเรียนรู้เชิงรุก Active Learning ในห้องคอมพิวเตอร์ (๑๐ ก.ย. ๖๙)",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260910_133433.jpg",
-        "caption": "นักเรียน ป.๑ ปฏิบัติกิจกรรมจริง ๑ คน ๑ เครื่องอย่างมีความสุข (๑๐ ก.ย. ๖๙)",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260130_121507.jpg",
+        "caption": "ผู้เรียนทดลองใช้เครื่องมือดิจิทัลร่วมกับการชี้แนะของครู",
+        "date": "๓๐ ม.ค. ๒๕๖๙"
       },
       {
         "src": "assets/evidence_pa_photos/IMG_20260910_133441.jpg",
-        "caption": "การฝึกปฏิบัติจริงตามขั้นตอนการจัดการเรียนรู้ของครูผู้สอน (๑๐ ก.ย. ๖๙)",
+        "caption": "ผู้เรียนลงมือทำภารกิจ Coding รายบุคคลและเรียนรู้ร่วมกัน",
         "date": "๑๐ ก.ย. ๒๕๖๙"
       }
     ],
@@ -359,106 +169,31 @@
   {
     "id": "album-1-4",
     "category": "comp1-teach",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๑.๔",
+    "badge": "ด้านที่ ๑ · ตัวชี้วัด ๑.๔",
     "title": "ข้อที่ ๑.๔ การสร้างและหรือพัฒนาสื่อนวัตกรรมฯ",
-    "desc": "การผลิตสื่อนวัตกรรม Gamification, ใบงานสื่อการสอนวิทยาการคำนวณ ป.๑ และห้องเรียนดิจิทัล (๙ รายการ)",
-    "cover": "assets/google_photos_curated/ICT_06.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 1.4",
+    "cover": "assets/evidence_pa_photos/IMG_20260803_084731.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/ICT_06.jpg",
-        "caption": "การใช้สื่อดิจิทัล นวัตกรรม และระบบการเรียนรู้ออนไลน์ในห้องเรียน (Google Photos)",
-        "date": "๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260803_084731.jpg",
+        "caption": "ใช้สื่อเกมดิจิทัลและ Gamification ประกอบการเรียนรู้",
+        "date": "๓ ส.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/google_photos_curated/ICT_07.jpg",
-        "caption": "นักเรียนมีปฏิสัมพันธ์กับสื่อและนวัตกรรมการเรียนรู้เทคโนโลยี (Google Photos)",
-        "date": "๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260819_143408.jpg",
+        "caption": "ใช้หูฟังและบทเรียนดิจิทัลให้ผู้เรียนเรียนรู้ตามจังหวะของตนเอง",
+        "date": "๑๙ ส.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/media_pa/IMG_20260910_133646.jpg",
-        "caption": "นวัตกรรม Gamification 'ภารกิจเมาส์แม่นยำ' บนจอคอมพิวเตอร์ ป.๑ (๑๐ ก.ย. ๖๙)",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260223_105749.jpg",
+        "caption": "ผู้เรียนโต้ตอบกับสื่อออนไลน์ผ่านหน้าจอสัมผัส",
+        "date": "๒๓ ก.พ. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/comlab_media_mouse_game.jpg",
-        "caption": "สื่อเกมดิจิทัลฝึกทักษะเมาส์และการตัดสินใจของนักเรียน",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/media_pa/IMG_20260611_132439.jpg",
-        "caption": "Game-Based Learning สื่อนวัตกรรมเกมคอมพิวเตอร์พัฒนาทักษะการคิดเชิงคำนวณและการใช้เมาส์ ป.๑ (๑๑ มิ.ย. ๖๙)",
-        "date": "๑๑ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg",
-        "caption": "สตูดิโอบันทึกสื่อวิดีโอ Active Learning และการผลิตนวัตกรรมดิจิทัล (๑๙ มิ.ย. ๖๙)",
-        "date": "๑๙ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_p1_computer_devices.jpg",
-        "caption": "ใบงานวิชาวิทยาการคำนวณ ป.๑: รู้จักอุปกรณ์คอมพิวเตอร์เบื้องต้น กิจกรรมจับคู่ภาพอุปกรณ์และคำศัพท์ (๑ ก.ย. ๒๕๖๙)",
-        "date": "๑ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_hardware_software.jpg",
-        "caption": "ใบงานการเรียนรู้เรื่อง ฮาร์ดแวร์ หรือ ซอฟต์แวร์ การจำแนกอุปกรณ์และโปรแกรมประยุกต์ (๑ ก.ย. ๒๕๖๙)",
-        "date": "๑ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_create_folder.jpg",
-        "caption": "ใบงานขั้นตอนการสร้างและจัดการโฟลเดอร์ ห้องเรียนครูคอม เพื่อการจัดระเบียบไฟล์ดิจิทัล (๑ ก.ย. ๒๕๖๙)",
-        "date": "๑ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/cinematic/cinematic_camera_part3_movement.jpg",
-        "caption": "สื่อนวัตกรรมดิจิทัลมัลติมีเดีย: Infographic การเคลื่อนกล้องเชิงภาพยนตร์ (Pan, Tilt, Tracking, Dolly, Drone) (๔ ก.ย. ๒๕๖๙)",
-        "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/cinematic/cinematic_camera_part4_modifiers.jpg",
-        "caption": "สื่อนวัตกรรมการถ่ายทำดิจิทัล: Infographic ปัจจัยและเทคนิคควบคุมภาพ (Lighting, Depth of Field, Slow Motion) (๔ ก.ย. ๒๕๖๙)",
-        "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260128_104225.jpg",
-        "caption": "การพัฒนาสื่อนวัตกรรมดิจิทัลเพื่อส่งเสริมการคิดเชิงคำนวณ (๒๘ ม.ค. ๖๙)",
-        "date": "๒๘ ม.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260128_132448.jpg",
-        "caption": "การประยุกต์ใช้สื่อเทคโนโลยีและบทเรียนออนไลน์ในห้องเรียน (๒๘ ม.ค. ๖๙)",
-        "date": "๒๘ ม.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260128_140013.jpg",
-        "caption": "การสาธิตการใช้สื่อนวัตกรรม Gamification บนจอแสดงผลหลัก (๒๘ ม.ค. ๖๙)",
-        "date": "๒๘ ม.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260609_145844.jpg",
-        "caption": "การผลิตสื่อการสอนคอมพิวเตอร์และการจัดทำสื่อ Infographic (๙ มิ.ย. ๖๙)",
-        "date": "๙ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260609_145847.jpg",
-        "caption": "สื่อนวัตกรรมเกมคอมพิวเตอร์พัฒนาทักษะการควบคุมเมาส์ ป.๑ (๙ มิ.ย. ๖๙)",
-        "date": "๙ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260901_152108.jpg",
-        "caption": "การบันทึกวิดีโอสาธิตการสอน Active Learning และสื่อนวัตกรรม (๑ ก.ย. ๖๙)",
-        "date": "๑ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260901_152243.jpg",
-        "caption": "การใช้สื่อดิจิทัลเพื่อการเรียนรู้แบบมีปฏิสัมพันธ์ของผู้เรียน (๑ ก.ย. ๖๙)",
-        "date": "๑ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260901_152305.jpg",
-        "caption": "การจัดการเรียนการสอนด้วยนวัตกรรมการศึกษาดิจิทัล (๑ ก.ย. ๖๙)",
-        "date": "๑ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260311_143717.jpg",
+        "caption": "ใช้สื่อ Coding แบบบล็อกคำสั่งเพื่อสร้างชิ้นงาน",
+        "date": "๑๑ มี.ค. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipO9f1y2GS1sQ0398VGge0rFFEICxgRaXmW-Y994UNdyy7rScnQ_GD6NNnCB4YIe0Q?key=bldjX01MMlYyRkZvT2VCR3hydlZiVTBxVlJaTkdn"
@@ -466,76 +201,31 @@
   {
     "id": "album-1-5",
     "category": "comp1-teach",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๑.๕",
+    "badge": "ด้านที่ ๑ · ตัวชี้วัด ๑.๕",
     "title": "ข้อที่ ๑.๕ การวัดและประเมินผลการเรียนรู้",
-    "desc": "การวัดและประเมินผลตามสภาพจริงด้วยแบบทดสอบภาคปฏิบัติ รูบริกส์ และเกณฑ์มาตรฐาน ๑๐๐%",
-    "cover": "assets/google_photos_curated/ICT_08.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 1.5",
+    "cover": "assets/evidence_pa_photos/IMG_20260611_132439.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/ICT_08.jpg",
-        "caption": "การประเมินผลการเรียนรู้ตามสภาพจริงผ่านการปฏิบัติการทางคอมพิวเตอร์ (Google Photos)",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/comlab_eval_mouse100_boy.jpg",
-        "caption": "การทดสอบภาคปฏิบัติการใช้เมาส์คอมพิวเตอร์ นักเรียนชาย ป.๑ บรรลุผลสัมฤทธิ์ ๑๐๐%",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/comlab_eval_mouse100_girl.jpg",
-        "caption": "การทดสอบภาคปฏิบัติการใช้เมาส์คอมพิวเตอร์ นักเรียนหญิง ป.๑ บรรลุผลสัมฤทธิ์ ๑๐๐%",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/media_pa/IMG_20260910_133655.jpg",
-        "caption": "การประเมินภาคปฏิบัติทักษะเมาส์ ป.๑ ในห้องคอมพิวเตอร์ (๑๐ ก.ย. ๖๙)",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/media_pa/IMG_20260611_132449.jpg",
-        "caption": "การประเมินทักษะการควบคุมเมาส์และจับจังหวะการคลิก (๑๑ มิ.ย. ๖๙)",
+        "src": "assets/evidence_pa_photos/IMG_20260611_132439.jpg",
+        "caption": "ผู้เรียนทำแบบประเมินและภารกิจดิจิทัลรายบุคคล",
         "date": "๑๑ มิ.ย. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/worksheets/worksheet_p3_essential_data.jpg",
-        "caption": "การวัดและประเมินผลตามสภาพจริง: ใบงาน ป.๓ ข้อมูลที่จำเป็นและไม่จำเป็น มาตรฐาน ว ๔.๒ ป.๓/๓ ผ่านเกณฑ์ผลสัมฤทธิ์ (๔ ก.ย. ๒๕๖๙)",
-        "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_hardware_software.jpg",
-        "caption": "เครื่องมือวัดผลการเรียนรู้: แบบประเมินความเข้าใจ ฮาร์ดแวร์ หรือ ซอฟต์แวร์ จำแนกเทคโนโลยีดิจิทัล (๑ ก.ย. ๒๕๖๙)",
-        "date": "๑ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260311_143237.jpg",
-        "caption": "การวัดและประเมินผลตามสภาพจริงผ่านการปฏิบัติการหน้าจอคอมพิวเตอร์ (๑๑ มี.ค. ๖๙)",
-        "date": "๑๑ มี.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260311_143425.jpg",
-        "caption": "การประเมินผลการเรียนรู้ด้วยแบบทดสอบภาคปฏิบัติและเกณฑ์รูบริกส์ (๑๑ มี.ค. ๖๙)",
-        "date": "๑๑ มี.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260311_143717.jpg",
-        "caption": "การตรวจผลงานและติดตามความก้าวหน้าทางการเรียนของผู้เรียน (๑๑ มี.ค. ๖๙)",
-        "date": "๑๑ มี.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260910_133649.jpg",
-        "caption": "การทดสอบภาคปฏิบัติการใช้เมาส์ ป.๑ นักเรียนผ่านเกณฑ์ ๑๐๐% (๑๐ ก.ย. ๖๙)",
+        "src": "assets/evidence_pa_photos/IMG_20260910_133427.jpg",
+        "caption": "ประเมินทักษะการใช้เมาส์และการปฏิบัติงานจริง",
         "date": "๑๐ ก.ย. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence_pa_photos/IMG_20260910_133655.jpg",
-        "caption": "การประเมินทักษะการคลิก ดับเบิลคลิก และการลากวางตามสภาพจริง (๑๐ ก.ย. ๖๙)",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260611_132449.jpg",
+        "caption": "เก็บหลักฐานผลการตอบแบบประเมินผ่านระบบออนไลน์",
+        "date": "๑๑ มิ.ย. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence_pa_photos/IMG_20260911_075620.jpg",
-        "caption": "การสรุปผลการประเมินผลสัมฤทธิ์ตามเกณฑ์มาตรฐาน ว PA (๑๑ ก.ย. ๖๙)",
-        "date": "๑๑ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/MVIMG_20260518_132242.jpg",
+        "caption": "ผู้เรียนทำแบบประเมินดิจิทัลเพื่อใช้เปรียบเทียบพัฒนาการ",
+        "date": "๑๘ พ.ค. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipO9f1y2GS1sQ0398VGge0rFFEICxgRaXmW-Y994UNdyy7rScnQ_GD6NNnCB4YIe0Q?key=bldjX01MMlYyRkZvT2VCR3hydlZiVTBxVlJaTkdn"
@@ -543,66 +233,31 @@
   {
     "id": "album-1-6",
     "category": "comp1-teach",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๑.๖",
+    "badge": "ด้านที่ ๑ · ตัวชี้วัด ๑.๖",
     "title": "ข้อที่ ๑.๖ การศึกษา วิเคราะห์ สังเคราะห์ฯ",
-    "desc": "การศึกษาวิจัยในชั้นเรียน วิเคราะห์ผลการเรียนรู้ และสังเคราะห์เพื่อแก้ปัญหาการใช้เมาส์ ป.๑",
-    "cover": "assets/google_photos_curated/ICT_09.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 1.6",
+    "cover": "assets/evidence_pa_photos/IMG_20260128_140738.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/ICT_09.jpg",
-        "caption": "การวิเคราะห์และสังเกตพฤติกรรมการเรียนรู้ของผู้เรียนเพื่อแก้ปัญหาการเรียน (Google Photos)",
-        "date": "๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260128_140738.jpg",
+        "caption": "สังเกตปัญหาและช่วยเหลือผู้เรียนระหว่างปฏิบัติ",
+        "date": "๒๘ ม.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/media_pa/IMG_20260910_133646.jpg",
-        "caption": "การเก็บข้อมูลวิจัยในชั้นเรียนและการประเมินพฤติกรรมการเรียนรู้ (๑๐ ก.ย. ๖๙)",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260122_095645.jpg",
+        "caption": "วิเคราะห์ข้อผิดพลาดและให้คำแนะนำเฉพาะจุดเป็นรายบุคคล",
+        "date": "๒๒ ม.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/comlab_eval_mouse100_boy.jpg",
-        "caption": "ผลสัมฤทธิ์ของกลุ่มเป้าหมายการวิจัย ป.๑ จำนวน ๑๑ คน ผ่านเกณฑ์ ๑๐๐%",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260128_140019.jpg",
+        "caption": "ให้ความช่วยเหลือเฉพาะกลุ่มตามปัญหาที่พบระหว่างเรียน",
+        "date": "๒๘ ม.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/media_pa/IMG_20260223_105728.jpg",
-        "caption": "การวิเคราะห์และสังเคราะห์ข้อมูลการเรียนรู้ดิจิทัลเพื่อแก้ปัญหารายบุคคล",
-        "date": "๒๓ ก.พ. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_create_folder.jpg",
-        "caption": "การวิเคราะห์และสังเคราะห์เพื่อแก้ปัญหาการเรียนรู้: ใบงานและแบบฝึกทักษะการสร้างและจัดระเบียบโฟลเดอร์สำหรับนักเรียน (๑ ก.ย. ๒๕๖๙)",
-        "date": "๑ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_store_overview.jpg",
-        "caption": "การสังเคราะห์ผลการเรียนรู้จากการปฏิบัติจริง: สรุปภาพรวมหน้าร้านและการประยุกต์ทักษะธุรกิจดิจิทัล The School CEO (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260302_084122.jpg",
-        "caption": "การศึกษาและวิเคราะห์ปัญหาการจัดการเรียนรู้เพื่อจัดทำวิจัยในชั้นเรียน (๒ มี.ค. ๖๙)",
-        "date": "๒ มี.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260302_085007.jpg",
-        "caption": "การรวบรวมข้อมูลเชิงประจักษ์เพื่อพัฒนากระบวนการแก้ปัญหาผู้เรียน (๒ มี.ค. ๖๙)",
-        "date": "๒ มี.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260302_091031.jpg",
-        "caption": "การวิเคราะห์ผลสัมฤทธิ์ทางการเรียนเพื่อปรับปรุงแผนการสอน (๒ มี.ค. ๖๙)",
-        "date": "๒ มี.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260611_132449.jpg",
-        "caption": "การเก็บข้อมูลวิจัยในชั้นเรียนแก้ปัญหาการใช้เมาส์ ป.๑ (๑๑ มิ.ย. ๖๙)",
-        "date": "๑๑ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260910_111013.jpg",
-        "caption": "การสังเคราะห์ข้อมูลผลการดำเนินงานตามข้อตกลง ว PA (๑๐ ก.ย. ๖๙)",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260122_101147.jpg",
+        "caption": "ติดตามวิธีคิดและปรับคำแนะนำให้เหมาะกับผู้เรียน",
+        "date": "๒๒ ม.ค. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipO9f1y2GS1sQ0398VGge0rFFEICxgRaXmW-Y994UNdyy7rScnQ_GD6NNnCB4YIe0Q?key=bldjX01MMlYyRkZvT2VCR3hydlZiVTBxVlJaTkdn"
@@ -610,86 +265,31 @@
   {
     "id": "album-1-7",
     "category": "comp1-teach",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๑.๗",
+    "badge": "ด้านที่ ๑ · ตัวชี้วัด ๑.๗",
     "title": "ข้อที่ ๑.๗ การจัดบรรยากาศที่ส่งเสริมและพัฒนาผู้เรียน",
-    "desc": "การจัดบรรยากาศห้องคอมพิวเตอร์ สะอาด ปลอดภัย มีป้ายคุณธรรม กฎระเบียบ และอุปกรณ์ ๑ คน ๑ เครื่อง",
-    "cover": "assets/google_photos_curated/ScienceDay_01.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 1.7",
+    "cover": "assets/evidence_pa_photos/IMG_20260910_111013.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/ScienceDay_01.jpg",
-        "caption": "บรรยากาศการจัดกิจกรรมค่ายวิชาการและวิทยาศาสตร์ที่ส่งเสริมการเรียนรู้ (Google Photos)",
-        "date": "๑๗ ก.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/google_photos_curated/ScienceDay_02.jpg",
-        "caption": "ผู้เรียนมีส่วนร่วมในกิจกรรมด้วยความกระตือรือร้นและมีความสุข (Google Photos)",
-        "date": "๑๗ ก.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg",
-        "caption": "สภาพแวดล้อมห้องปฏิบัติการคอมพิวเตอร์ สะอาด มีระเบียบ พร้อมใช้งาน ๑ คน ๑ เครื่อง",
+        "src": "assets/evidence_pa_photos/IMG_20260910_111013.jpg",
+        "caption": "ห้องปฏิบัติการที่เอื้อต่อการเรียนรู้แบบหนึ่งคนหนึ่งเครื่อง",
         "date": "๑๐ ก.ย. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/media_pa/IMG_20260910_133436.jpg",
-        "caption": "บรรยากาศการเรียนรู้ที่เป็นมิตร นักเรียนมีความสุขและปลอดภัยในการใช้เทคโนโลยี",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260224_111728.jpg",
+        "caption": "จัดสภาพแวดล้อมและอุปกรณ์พร้อมสำหรับการฝึกปฏิบัติ",
+        "date": "๒๔ ก.พ. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/media_pa/IMG_20260202_104526.jpg",
-        "caption": "มุมเรียนรู้และสื่อประกอบการสอน Smart TV สาธิตชัดเจน แผ่นรองโต๊ะผังแป้นพิมพ์",
-        "date": "๒ ก.พ. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260224_111732.jpg",
+        "caption": "ผู้เรียนมีพื้นที่และอุปกรณ์พร้อมสำหรับทำกิจกรรมอย่างทั่วถึง",
+        "date": "๒๔ ก.พ. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/media_pa/IMG_20260611_132444.jpg",
-        "caption": "บรรยากาศห้องคอมฯ สะอาด ปลอดภัย ป้ายคุณธรรมชัดเจน (๑๑ มิ.ย. ๖๙)",
-        "date": "๑๑ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/infographics/infographic_internet_cartoon_fun.jpg",
-        "caption": "การจัดป้ายนิเทศและสื่อบรรยากาศการเรียนรู้เชิงบวก: สื่อการ์ตูนข้อดี-ข้อเสียของอินเทอร์เน็ต เสริมสร้างบรรยากาศห้องเรียนคอมพิวเตอร์ (๘ ก.ย. ๒๕๖๙)",
-        "date": "๘ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_selfie_cheer.jpg",
-        "caption": "บรรยากาศการเรียนรู้ที่เต็มไปด้วยรอยยิ้ม ความมั่นใจ และกำลังใจในการปฏิบัติงานร่วมกันของนักเรียนและครู (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251120_121515.jpg",
-        "caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์ สะอาด มีระเบียบ พร้อมใช้งาน (๒๐ พ.ย. ๖๘)",
-        "date": "๒๐ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251120_124456.jpg",
-        "caption": "การจัดมุมเรียนรู้และสื่อส่งเสริมบรรยากาศทางเทคโนโลยี (๒๐ พ.ย. ๖๘)",
-        "date": "๒๐ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260202_110800.jpg",
-        "caption": "สภาพแวดล้อมที่เอื้อต่อการเรียนรู้ ๑ คนต่อ ๑ เครื่องอย่างปลอดภัย (๒ ก.พ. ๖๙)",
-        "date": "๒ ก.พ. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260819_070727.jpg",
-        "caption": "การจัดเตรียมห้องปฏิบัติการคอมพิวเตอร์และสิ่งอำนวยความสะดวกดิจิทัล (๑๙ ส.ค. ๖๙)",
-        "date": "๑๙ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260907_085214.jpg",
-        "caption": "บรรยากาศการเรียนรู้ที่เป็นมิตร นักเรียนมีความสุขและกระตือรือร้น (๗ ก.ย. ๖๙)",
-        "date": "๗ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260907_085235.jpg",
-        "caption": "มุมป้ายนิเทศและสื่อส่งเสริมคุณธรรม จริยธรรม ในห้องคอมพิวเตอร์ (๗ ก.ย. ๖๙)",
-        "date": "๗ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260907_085246.jpg",
-        "caption": "การจัดสภาพแวดล้อมที่ส่งเสริมความคิดสร้างสรรค์และการเรียนรู้เชิงบวก (๗ ก.ย. ๖๙)",
-        "date": "๗ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20251106_103307.jpg",
+        "caption": "จัดห้องเรียนเทคโนโลยีให้มีระเบียบและเอื้อต่อการมีส่วนร่วม",
+        "date": "๖ พ.ย. ๒๕๖๘"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipOWZc9VxaSDiYKzzES-bV4juFOaelV8VHrHQsfz_lKLWU9CklIH6jnFOCjY-m2tJw?key=aWZoSFRvT3EyZ2RhREdMY3FpUXQzc09oQl82TGln"
@@ -697,106 +297,31 @@
   {
     "id": "album-1-8",
     "category": "comp1-teach",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๑.๘",
+    "badge": "ด้านที่ ๑ · ตัวชี้วัด ๑.๘",
     "title": "ข้อที่ ๑.๘ การอบรมและพัฒนาคุณลักษณะที่ดีของผู้เรียน",
-    "desc": "การปลูกฝังคุณธรรม จริยธรรม พิธีไหว้ครู สวนสนามลูกเสือ ถวายเทียนพรรษา และจิตอาสา",
-    "cover": "assets/google_photos_curated/BigCleaning_01.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 1.8",
+    "cover": "assets/evidence_pa_photos/IMG_20260911_075634.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/BigCleaning_01.jpg",
-        "caption": "การอบรมและปลูกฝังจิตอาสา ความรับผิดชอบต่อส่วนรวมผ่านกิจกรรม Big Cleaning (Google Photos)",
-        "date": "๒ พ.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260911_075634.jpg",
+        "caption": "กิจกรรมส่งเสริมสมาธิ คุณธรรม และคุณลักษณะอันพึงประสงค์",
+        "date": "๑๑ ก.ย. ๒๕๖๙"
       },
       {
-        "src": "assets/google_photos_curated/ScienceDay_03.jpg",
-        "caption": "การส่งเสริมวินัย การทำงานเป็นทีม และคุณลักษณะอันพึงประสงค์ (Google Photos)",
-        "date": "๑๗ ก.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260723_082840.jpg",
+        "caption": "กิจกรรมกลุ่มสร้างความรับผิดชอบและการอยู่ร่วมกัน",
+        "date": "๒๓ ก.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/waikru_activity.jpg",
-        "caption": "ภาพกิจกรรมพิธีไหว้ครู ประจำปีการศึกษา ๒๕๖๙ ปลูกฝังความกตัญญูกตเวทิตา",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/waikru_memo_page1.jpg",
-        "caption": "บันทึกข้อความขออนุมัติจัดกิจกรรมและรายงานผลพิธีไหว้ครู ๒๕๖๙",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_01.jpg",
-        "caption": "การส่งเสริมจิตสาธารณะและคุณธรรมความรับผิดชอบผ่านกิจกรรม Big Cleaning",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260701_084943.jpg",
-        "caption": "พิธีทบทวนคำปฏิญาณและสวนสนาม วันคล้ายวันสถาปนาคณะลูกเสือแห่งชาติ (๑ ก.ค. ๖๙)",
-        "date": "๑ ก.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/infographics/infographic_responsible_tech.jpg",
-        "caption": "สื่ออบรมและพัฒนาคุณลักษณะ: การใช้เทคโนโลยีสารสนเทศอย่างมีความรับผิดชอบ ๖ ประการ (๘ ก.ย. ๒๕๖๙)",
-        "date": "๘ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/infographics/infographic_ai_cautious_guide.jpg",
-        "caption": "สื่อปลูกฝังจริยธรรมดิจิทัล: การใช้ AI อย่างระมัดระวัง รอบคอบ และมีวิจารณญาณ (๘ ก.ย. ๒๕๖๙)",
-        "date": "๘ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_netiquette.jpg",
-        "caption": "ใบงานกิจกรรมส่งเสริมจริยธรรม: มารยาทในการใช้อินเทอร์เน็ต (Netiquette) และการสื่อสารอย่างสร้างสรรค์ (๒๕ ส.ค. ๒๕๖๙)",
-        "date": "๒๕ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_internet_safety.jpg",
-        "caption": "ใบงานการใช้อินเทอร์เน็ตอย่างปลอดภัย: การรู้เท่าทันสื่อดิจิทัลและการป้องกันภัยไซเบอร์ (๒๕ ส.ค. ๒๕๖๙)",
-        "date": "๒๕ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/infographics/infographic_ai_safe_ethics.jpg",
-        "caption": "สื่ออินโฟกราฟิก: ใช้ AI ให้ปลอดภัยและมีจริยธรรม คุณธรรมทางเทคโนโลยีสำหรับเยาวชน (๘ ก.ย. ๒๕๖๙)",
-        "date": "๘ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251111_092051.jpg",
-        "caption": "กิจกรรมการเรียนการสอนลูกเสือ ปลูกฝังวินัยและความรับผิดชอบ (๑๑ พ.ย. ๖๘)",
-        "date": "๑๑ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251111_092212.jpg",
-        "caption": "การฝึกระเบียบแถวและคุณลักษณะอันพึงประสงค์ของผู้เรียน (๑๑ พ.ย. ๖๘)",
-        "date": "๑๑ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251204_085940.jpg",
-        "caption": "กิจกรรมจิตอาสาและบำเพ็ญประโยชน์เพื่อส่วนรวม เนื่องในวันพ่อแห่งชาติ (๔ ธ.ค. ๖๘)",
+        "src": "assets/evidence_pa_photos/IMG_20251204_095244.jpg",
+        "caption": "กิจกรรมปลูกต้นไม้ส่งเสริมความรับผิดชอบและจิตสาธารณะ",
         "date": "๔ ธ.ค. ๒๕๖๘"
       },
       {
-        "src": "assets/evidence_pa_photos/IMG_20251204_091544.jpg",
-        "caption": "การปลูกฝังความสามัคคีและการทำงานร่วมกันเป็นทีม (๔ ธ.ค. ๖๘)",
-        "date": "๔ ธ.ค. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260707_071030.jpg",
-        "caption": "กิจกรรมหล่อและถวายเทียนพรรษา ส่งเสริมคุณธรรม จริยธรรม วัฒนธรรมไทย (๗ ก.ค. ๖๙)",
-        "date": "๗ ก.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260707_081646.jpg",
-        "caption": "นักเรียนร่วมพิธีทางศาสนาและบำเพ็ญประโยชน์ ณ วัดในชุมชน (๗ ก.ค. ๖๙)",
-        "date": "๗ ก.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260812_085325.jpg",
-        "caption": "กิจกรรมเทิดพระคุณแม่ วันแม่แห่งชาติ ๑๒ สิงหาคม ปลูกฝังความกตัญญูกตเวทิตา (๑๒ ส.ค. ๖๙)",
-        "date": "๑๒ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260812_085523.jpg",
-        "caption": "การอบรมคุณลักษณะอันพึงประสงค์และมารยาทไทยแก่นักเรียน (๑๒ ส.ค. ๖๙)",
-        "date": "๑๒ ส.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260721_093801.jpg",
+        "caption": "กิจกรรมวันสำคัญทางศาสนาเพื่อปลูกฝังคุณธรรม",
+        "date": "๒๑ ก.ค. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipOedqR5xNu6SIpaU4XUGpgs5ByXNADe4u7KrNk487MmrGATh-QsqTvR4W_Kh60fHQ?key=TXFOaElJT1ZzaEI5cnM1OU9HX1hSRjFEbVRYakVn"
@@ -804,71 +329,31 @@
   {
     "id": "album-2-1",
     "category": "comp1-support",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๒.๑",
+    "badge": "ด้านที่ ๒ · ตัวชี้วัด ๒.๑",
     "title": "ข้อที่ ๒.๑ การจัดทำข้อมูลสารสนเทศของผู้เรียนและรายวิชา",
-    "desc": "การพัฒนาระบบสารสนเทศดิจิทัล การประมวลผลทะเบียน ปพ.๕ และสื่อผังระบบคอมพิวเตอร์",
-    "cover": "assets/google_photos_curated/ICT_10.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 2.1",
+    "cover": "assets/evidence_pa_photos/MVIMG_20260518_132255.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/ICT_10.jpg",
-        "caption": "การบริหารจัดการข้อมูลและสารสนเทศรายวิชาผ่านระบบคอมพิวเตอร์ (Google Photos)",
-        "date": "๒๕๖๙"
+        "src": "assets/evidence_pa_photos/MVIMG_20260518_132255.jpg",
+        "caption": "ใช้ระบบดิจิทัลบันทึกข้อมูลและติดตามความก้าวหน้ารายบุคคล",
+        "date": "๑๘ พ.ค. ๒๕๖๙"
       },
       {
-        "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260530_101743.jpg",
-        "caption": "การพัฒนาระบบสารสนเทศดิจิทัลและบริหารจัดการข้อมูลการเรียนการสอน (๓๐ พ.ค. ๖๙)",
-        "date": "๓๐ พ.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260611_132506.jpg",
+        "caption": "ตรวจสอบผลจากกิจกรรมออนไลน์เพื่อวางแผนพัฒนาผู้เรียน",
+        "date": "๑๑ มิ.ย. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/media_pa/IMG_20260223_105728.jpg",
-        "caption": "การประมวลผลสารสนเทศการวัดและประเมินผลการเรียนรู้ผ่านแพลตฟอร์มดิจิทัล",
-        "date": "๒๓ ก.พ. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260611_132457.jpg",
+        "caption": "บันทึกผลการทำภารกิจของผู้เรียนผ่านระบบสารสนเทศ",
+        "date": "๑๑ มิ.ย. ๒๕๖๙"
       },
       {
-        "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/06_สื่อการสอน_องค์ประกอบหลักของระบบคอมพิวเตอร์.jpg",
-        "caption": "สื่อสารสนเทศโครงสร้างระบบและฐานข้อมูลการจัดการเรียนรู้คอมพิวเตอร์",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_store_overview.jpg",
-        "caption": "การจัดทำข้อมูลสารสนเทศและบัญชีสรุปผลสัมฤทธิ์การดำเนินงาน ร้าน The School CEO (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_p3_essential_data.jpg",
-        "caption": "การประมวลผลข้อมูลสารสนเทศการเรียนรู้: ใบงานจำแนกข้อมูลจำเป็นสำหรับจัดระบบสารสนเทศนักเรียน (๔ ก.ย. ๒๕๖๙)",
-        "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251106_070823.jpg",
-        "caption": "การจัดทำระบบสารสนเทศทะเบียนนักเรียนและข้อมูลการเรียนรู้ (๖ พ.ย. ๖๘)",
-        "date": "๖ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251106_103307.jpg",
-        "caption": "การประมวลผลข้อมูลการเข้าเรียนและพฤติกรรมผู้เรียนผ่านระบบคอมพิวเตอร์ (๖ พ.ย. ๖๘)",
-        "date": "๖ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260126_104816.jpg",
-        "caption": "การตรวจสอบและจัดระเบียบฐานข้อมูลสารสนเทศรายวิชา (๒๖ ม.ค. ๖๙)",
-        "date": "๒๖ ม.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260529_090725.jpg",
-        "caption": "การพัฒนาระบบสารสนเทศดิจิทัลเพื่อการบริหารจัดการข้อมูลการเรียนการสอน (๒๙ พ.ค. ๖๙)",
-        "date": "๒๙ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260529_095504.jpg",
-        "caption": "การบันทึกข้อมูลผลสัมฤทธิ์ทางการเรียนและทะเบียน ปพ.๕ ในระบบดิจิทัล (๒๙ พ.ค. ๖๙)",
-        "date": "๒๙ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260825_105722.jpg",
-        "caption": "การจัดทำรายงานข้อมูลสารสนเทศเพื่อสนับสนุนการวัดและประเมินผล (๒๕ ส.ค. ๖๙)",
-        "date": "๒๕ ส.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/MVIMG_20260518_132305.jpg",
+        "caption": "จัดเก็บข้อมูลคำตอบรายบุคคลเพื่อใช้ติดตามและช่วยเหลือ",
+        "date": "๑๘ พ.ค. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipO9f1y2GS1sQ0398VGge0rFFEICxgRaXmW-Y994UNdyy7rScnQ_GD6NNnCB4YIe0Q?key=bldjX01MMlYyRkZvT2VCR3hydlZiVTBxVlJaTkdn"
@@ -876,86 +361,31 @@
   {
     "id": "album-2-2",
     "category": "comp1-support",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๒.๒",
+    "badge": "ด้านที่ ๒ · ตัวชี้วัด ๒.๒",
     "title": "ข้อที่ ๒.๒ การดำเนินการตามระบบดูแลช่วยเหลือนักเรียน",
-    "desc": "การประชุมกรรมการสถานศึกษา เยี่ยมบ้าน ประสานความร่วมมือผู้ปกครอง และดูแลเอาใจใส่นักเรียน",
-    "cover": "assets/google_photos_curated/Community_01.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 2.2",
+    "cover": "assets/evidence_pa_photos/MVIMG_20260519_164336.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/Community_01.jpg",
-        "caption": "การพบปะและประสานความร่วมมือกับผู้ปกครองเพื่อการดูแลช่วยเหลือนักเรียน (Google Photos)",
-        "date": "๒๓ พ.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/MVIMG_20260519_164336.jpg",
+        "caption": "เยี่ยมบ้านเพื่อศึกษาสภาพจริงและวางแนวทางช่วยเหลือผู้เรียน",
+        "date": "๑๙ พ.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/google_photos_curated/Community_02.jpg",
-        "caption": "การประชุมผู้ปกครองและเครือข่ายเพื่อแลกเปลี่ยนข้อมูลการพัฒนานักเรียน (Google Photos)",
-        "date": "๒๓ พ.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/MVIMG_20260520_163341.jpg",
+        "caption": "ครูและผู้ปกครองร่วมแลกเปลี่ยนข้อมูลระหว่างการเยี่ยมบ้าน",
+        "date": "๒๐ พ.ค. ๒๕๖๙"
       },
       {
-        "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260508_070014.jpg",
-        "caption": "การส่งเสริมความภาคภูมิใจในพหุวัฒนธรรมและอัตลักษณ์ท้องถิ่น ในระบบดูแลช่วยเหลือนักเรียน (๘ พ.ค. ๖๙)",
-        "date": "๘ พ.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/MVIMG_20260520_164914.jpg",
+        "caption": "บันทึกสภาพแวดล้อมและข้อมูลจำเป็นของผู้เรียนระหว่างเยี่ยมบ้าน",
+        "date": "๒๐ พ.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/general_admin_parent_meeting.jpg",
-        "caption": "การประชุมผู้ปกครองนักเรียน ภาคเรียนที่ ๑/๒๕๖๙ ชี้แจงระบบดูแลช่วยเหลือนักเรียนและทุนการศึกษา กสศ. (๖ พ.ค. ๖๙)",
-        "date": "๖ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260817_180451.jpg",
-        "caption": "การประสานความร่วมมือกับผู้ปกครองและชุมชน ในระบบดูแลช่วยเหลือนักเรียน (๑๗ ส.ค. ๖๙)",
-        "date": "๑๗ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_01.jpg",
-        "caption": "การดูแลเอาใจใส่สุขอนามัยและความเป็นอยู่ของนักเรียนในสถานศึกษา (๒ พ.ค. ๖๙)",
-        "date": "๒ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/infographics/infographic_tech_ethics_pdpa.jpg",
-        "caption": "ระบบดูแลคุ้มครองสิทธิและความเป็นส่วนตัว: สื่อความรู้ PDPA และการคุ้มครองข้อมูลส่วนบุคคลของนักเรียน (๘ ก.ย. ๒๕๖๙)",
-        "date": "๘ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/infographics/infographic_internet_pros_cons.jpg",
-        "caption": "การเฝ้าระวังและดูแลพฤติกรรมการใช้สื่อ: สื่อรู้เท่าทันประโยชน์และผลกระทบของอินเทอร์เน็ต (๘ ก.ย. ๒๕๖๙)",
-        "date": "๘ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/worksheets/worksheet_internet_caution.jpg",
-        "caption": "เครื่องมือคัดกรองและส่งเสริมความปลอดภัย: ใบงานข้อควรระวังในการใช้อินเทอร์เน็ตและการคุ้มครองตนเอง (๒๕ ส.ค. ๒๕๖๙)",
-        "date": "๒๕ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/MVIMG_20260506_085129.jpg",
-        "caption": "การประชุมผู้ปกครองนักเรียน ภาคเรียนที่ ๑/๒๕๖๙ ชี้แจงระบบดูแลช่วยเหลือนักเรียน (๖ พ.ค. ๖๙)",
-        "date": "๖ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/MVIMG_20260506_085132.jpg",
-        "caption": "การประสานงานข้อมูลทุนการศึกษา กสศ. และการคัดกรองนักเรียนรายบุคคล (๖ พ.ค. ๖๙)",
-        "date": "๖ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/MVIMG_20260506_085133.jpg",
-        "caption": "การแลกเปลี่ยนข้อมูลและรับฟังข้อเสนอแนะจากผู้ปกครองนักเรียน (๖ พ.ค. ๖๙)",
-        "date": "๖ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/MVIMG_20260507_151542_1.jpg",
-        "caption": "การเยี่ยมบ้านนักเรียนและการติดตามความเป็นอยู่ของผู้เรียนในชุมชน (๗ พ.ค. ๖๙)",
-        "date": "๗ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/MVIMG_20260508_065723.jpg",
-        "caption": "การส่งเสริมความเข้าใจในพหุวัฒนธรรมและอัตลักษณ์ชุมชนท้องถิ่น (๘ พ.ค. ๖๙)",
-        "date": "๘ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/MVIMG_20260817_180451.jpg",
-        "caption": "การประสานความร่วมมือกับผู้ปกครองและชุมชนอย่างต่อเนื่อง (๑๗ ส.ค. ๖๙)",
-        "date": "๑๗ ส.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/MVIMG_20260521_164311.jpg",
+        "caption": "ติดตามผู้เรียนถึงบ้านอย่างต่อเนื่องตามระบบดูแลช่วยเหลือ",
+        "date": "๒๑ พ.ค. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipMzCA_eXUG_NU3vZ-x9RHtb2JaOXq8UjiB3B6M9Bgs-YXwdlmTjnhPhMR5Zy_4AoA?key=d2x4Ykd6TzlLSEJaMVFLcVRTelEydGxHSm5NU3Nn"
@@ -963,86 +393,31 @@
   {
     "id": "album-2-3",
     "category": "comp1-support",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๒.๓",
+    "badge": "ด้านที่ ๒ · ตัวชี้วัด ๒.๓",
     "title": "ข้อที่ ๒.๓ การปฏิบัติงานวิชาการ และงานอื่น ๆ ของสถานศึกษา",
-    "desc": "หัวหน้างานสารสนเทศ ICT จัดกิจกรรมวันวิทยาศาสตร์ ดูแลเครือข่าย และบันทึกภาพประชาสัมพันธ์",
-    "cover": "assets/google_photos_curated/BigCleaning_02.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 2.3",
+    "cover": "assets/evidence_pa_photos/IMG_20260224_091508.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/BigCleaning_02.jpg",
-        "caption": "การร่วมปฏิบัติงานปรับปรุงภูมิทัศน์และอาคารสถานที่ของสถานศึกษา (Google Photos)",
-        "date": "๒ พ.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260224_091508.jpg",
+        "caption": "ดูแลระบบคอมพิวเตอร์และโครงสร้างพื้นฐานเพื่อสนับสนุนการเรียนรู้",
+        "date": "๒๔ ก.พ. ๒๕๖๙"
       },
       {
-        "src": "assets/google_photos_curated/SchoolBoard_01.jpg",
-        "caption": "การสนับสนุนและปฏิบัติงานฝ่ายบริหารทั่วไปของสถานศึกษา (Google Photos)",
-        "date": "๑๘ มิ.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260617_164612.jpg",
+        "caption": "ตรวจสอบและบำรุงรักษาเครื่องคอมพิวเตอร์ให้พร้อมใช้งาน",
+        "date": "๑๗ มิ.ย. ๒๕๖๙"
       },
       {
-        "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_02.jpg",
-        "caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ บูรณาการวิทยาศาสตร์และเทคโนโลยีดิจิทัล",
-        "date": "๑๗ ก.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20251118_105930.jpg",
+        "caption": "จัดระเบียบและตรวจความพร้อมของอุปกรณ์ห้องคอมพิวเตอร์",
+        "date": "๑๘ พ.ย. ๒๕๖๘"
       },
       {
-        "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_01.jpg",
-        "caption": "การจัดนิทรรศการฐานการเรียนรู้เทคโนโลยีและสะเต็มศึกษา",
-        "date": "๑๗ ก.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_03.jpg",
-        "caption": "กิจกรรมจิตอาสาและ Big Cleaning Day พัฒนาอาคารสถานที่และห้องปฏิบัติการ",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_01.jpg",
-        "caption": "การขับเคลื่อนกิจกรรมการงานอาชีพและทักษะชีวิต (แปลงเกษตร ม.๑)",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260624_170332.jpg",
-        "caption": "งานโสตทัศนูปกรณ์และประชาสัมพันธ์สถานศึกษา (๒๔ มิ.ย. ๖๙)",
-        "date": "๒๔ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_director_teachers.jpg",
-        "caption": "การปฏิบัติงานโครงการพัฒนาผู้เรียน: ผู้บริหาร คณะครู และครูเจมส์ ร่วมขับเคลื่อนงานมหกรรม The School CEO สพป.กำแพงเพชร เขต ๒ (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_store_overview.jpg",
-        "caption": "งานสนับสนุนนโยบายสถานศึกษาและการส่งเสริมทักษะอาชีพสู่การปฏิบัติจริง บูธจำหน่ายผลผลิตนักเรียน (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251222_153401.jpg",
-        "caption": "การปฏิบัติหน้าที่ดูแลระบบเครือข่ายอินเทอร์เน็ตและงานสารสนเทศ ICT (๒๒ ธ.ค. ๖๘)",
-        "date": "๒๒ ธ.ค. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260323_100544.jpg",
-        "caption": "การสนับสนุนงานวิชาการและการจัดสอบประเมินคุณภาพการศึกษา (๒๓ มี.ค. ๖๙)",
-        "date": "๒๓ มี.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/MVIMG_20260518_132237.jpg",
-        "caption": "การร่วมปฏิบัติงานปรับปรุงภูมิทัศน์และอาคารสถานที่ของสถานศึกษา (๑๘ พ.ค. ๖๙)",
-        "date": "๑๘ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260616_094345.jpg",
-        "caption": "การปฏิบัติงานฝ่ายกิจกรรมพัฒนาผู้เรียน พิธีไหว้ครู ประจำปี ๒๕๖๙ (๑๖ มิ.ย. ๖๙)",
-        "date": "๑๖ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260724_085632.jpg",
-        "caption": "การจัดนิทรรศการฐานการเรียนรู้วันวิทยาศาสตร์ของสถานศึกษา (๒๔ ก.ค. ๖๙)",
-        "date": "๒๔ ก.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260819_143408.jpg",
-        "caption": "การบำรุงรักษาอุปกรณ์เทคโนโลยีและระบบกระจายเสียงของโรงเรียน (๑๙ ส.ค. ๖๙)",
-        "date": "๑๙ ส.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260313_085710.jpg",
+        "caption": "ปรับปรุงระบบอุปกรณ์และเครือข่ายของสถานศึกษา",
+        "date": "๑๓ มี.ค. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipOedqR5xNu6SIpaU4XUGpgs5ByXNADe4u7KrNk487MmrGATh-QsqTvR4W_Kh60fHQ?key=TXFOaElJT1ZzaEI5cnM1OU9HX1hSRjFEbVRYakVn"
@@ -1050,70 +425,30 @@
   {
     "id": "album-2-4",
     "category": "comp1-support",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๒.๔",
+    "badge": "ด้านที่ ๒ · ตัวชี้วัด ๒.๔",
     "title": "ข้อที่ ๒.๔ การประสานความร่วมมือกับผู้ปกครอง ภาคีเครือข่าย",
-    "desc": "การประชุมร่วมกับคณะกรรมการสถานศึกษาขั้นพื้นฐาน ผู้ปกครอง และภาคีเครือข่ายเพื่อพัฒนาการศึกษา",
-    "cover": "assets/google_photos_curated/Community_03.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 2.4",
+    "cover": "assets/evidence_pa_photos/MVIMG_20260506_085132.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/Community_03.jpg",
-        "caption": "การประสานความร่วมมือกับชุมชนและภาคีเครือข่ายเพื่อพัฒนาการศึกษา (Google Photos)",
-        "date": "๒๓ พ.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/google_photos_curated/SchoolBoard_02.jpg",
-        "caption": "การร่วมประชุมคณะกรรมการสถานศึกษาเพื่อขับเคลื่อนนโยบายโรงเรียน (Google Photos)",
-        "date": "๑๘ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_01.jpg",
-        "caption": "การประชุมร่วมกับคณะกรรมการสถานศึกษาขั้นพื้นฐาน เพื่อวางแผนพัฒนาการจัดการเรียนรู้",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_02.jpg",
-        "caption": "การประสานความร่วมมือระหว่างโรงเรียน ผู้ปกครอง และชุมชนคลองมดแดง",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260817_180451.jpg",
-        "caption": "การพบปะผู้ปกครองนักเรียนเพื่อพัฒนาการเรียนรู้ร่วมกัน (๑๗ ส.ค. ๖๙)",
-        "date": "๑๗ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_full_team.jpg",
-        "caption": "การประสานพลังภาคีเครือข่ายทางการศึกษา: คณะครู บุคลากร และนักเรียน ร่วมมือจัดแสดงผลงานในระดับเขตพื้นที่การศึกษา (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_director_teachers.jpg",
-        "caption": "การสร้างเครือข่ายความร่วมมือทางวิชาการและสนับสนุนการพัฒนาผู้เรียนร่วมกับคณะผู้บริหารสถานศึกษา (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251110_130357.jpg",
-        "caption": "การประสานความร่วมมือกับผู้นำชุมชนและเครือข่ายการศึกษา (๑๐ พ.ย. ๖๘)",
-        "date": "๑๐ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/MVIMG_20260506_085417.jpg",
-        "caption": "การประชุมเครือข่ายผู้ปกครองเพื่อร่วมกันพัฒนาคุณภาพการศึกษา (๖ พ.ค. ๖๙)",
+        "src": "assets/evidence_pa_photos/MVIMG_20260506_085132.jpg",
+        "caption": "ประชุมผู้ปกครองเพื่อสื่อสารข้อมูลผู้เรียนและสร้างความร่วมมือ",
         "date": "๖ พ.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence_pa_photos/MVIMG_20260506_094422.jpg",
-        "caption": "การสร้างความร่วมมือระหว่างโรงเรียน บ้าน และชุมชน (๖ พ.ค. ๖๙)",
+        "src": "assets/evidence_pa_photos/IMG_20260907_141703.jpg",
+        "caption": "สื่อสารแนวทางดูแลผู้เรียนร่วมกับผู้ปกครองรายชั้นเรียน",
+        "date": "๗ ก.ย. ๒๕๖๙"
+      },
+      {
+        "src": "assets/evidence_pa_photos/MVIMG_20260506_085133.jpg",
+        "caption": "ชี้แจงแนวทางดำเนินงานและรับฟังความคิดเห็นจากผู้ปกครอง",
         "date": "๖ พ.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence_pa_photos/IMG_20260618_163409.jpg",
-        "caption": "การประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ร่วมกับผู้ทรงคุณวุฒิ (๑๘ มิ.ย. ๖๙)",
-        "date": "๑๘ มิ.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260618_173240.jpg",
-        "caption": "การรายงานผลการดำเนินงานและแผนงานพัฒนาการศึกษาต่อคณะกรรมการ (๑๘ มิ.ย. ๖๙)",
+        "src": "assets/evidence_pa_photos/IMG_20260618_173246.jpg",
+        "caption": "ร่วมประชุมกับคณะกรรมการสถานศึกษาและภาคีเครือข่าย",
         "date": "๑๘ มิ.ย. ๒๕๖๙"
       }
     ],
@@ -1122,81 +457,31 @@
   {
     "id": "album-3-1",
     "category": "comp1-dev",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๓.๑",
+    "badge": "ด้านที่ ๓ · ตัวชี้วัด ๓.๑",
     "title": "ข้อที่ ๓.๑ การพัฒนาตนเองอย่างเป็นระบบและต่อเนื่อง",
-    "desc": "การอบรมพัฒนาความรู้ด้าน AI กับ สสวท., AI Learning Hub และการรับรางวัลระดับเหรียญทอง",
-    "cover": "assets/google_photos_curated/CareerSkills_02.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 3.1",
+    "cover": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/CareerSkills_02.jpg",
-        "caption": "การพัฒนาตนเองอย่างต่อเนื่องด้านทักษะวิชาชีพและการถ่ายทอดองค์ความรู้ (Google Photos)",
-        "date": "๒๐ ก.พ. ๒๕๖๙"
-      },
-      {
         "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg",
-        "caption": "เกียรติบัตร AI Learning Hub สพป.กำแพงเพชร เขต ๒ (๗ มิ.ย. ๖๙)",
+        "caption": "เกียรติบัตรการพัฒนาความรู้ด้าน AI Learning Hub และ OBEC Content Center",
         "date": "๗ มิ.ย. ๒๕๖๙"
       },
       {
-        "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg",
-        "caption": "รางวัลชนะเลิศระดับเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/02_ประกาศสพป_กำแพงเพชรเขต2_TheSchoolCEO_ชนะเลิศเหรียญทอง.jpg",
-        "caption": "ประกาศเกียรติคุณ สพป.กำแพงเพชร เขต ๒ ยืนยันผลรางวัลชนะเลิศระดับเหรียญทอง",
-        "date": "๗ ส.ค. ๒๕๖๙"
-      },
-      {
         "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/messageImage_1783918653571.jpg",
-        "caption": "เกียรติบัตรครูผู้ฝึกสอนสร้างสื่อ AI อบจ.กำแพงเพชร (๒๖ มิ.ย. ๖๙)",
+        "caption": "เกียรติบัตรพัฒนาความรู้และฝึกสอนการสร้างสื่อด้วย AI",
         "date": "๒๖ มิ.ย. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/school_ceo/ceo_event_booth_award.jpg",
-        "caption": "ผลสัมฤทธิ์จากการพัฒนาทักษะวิชาชีพครู: ถ้วยรางวัลชนะเลิศ The School CEO สพป.กำแพงเพชร เขต ๒ (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
+        "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/Picture1.png",
+        "caption": "ผ่านการอบรมการจัดการเรียนรู้ปัญญาประดิษฐ์ ระดับมัธยมศึกษาปีที่ 1-3",
+        "date": "๗ พ.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/infographics/infographic_ai_cautious_mindmap.jpg",
-        "caption": "การพัฒนาองค์ความรู้ด้านปัญญาประดิษฐ์: ผังความคิด (Mind Map) หลักการใช้ AI อย่างรอบคอบเพื่อการศึกษา (๘ ก.ย. ๒๕๖๙)",
-        "date": "๘ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/Screenshot_2025-09-01-12-40-09-454_com.google.android.apps.docs-edit.jpg",
-        "caption": "หลักฐานการพัฒนาตนเองอย่างต่อเนื่อง: เอกสารเกียรติประวัติและการอบรมวิชาชีพ The Voice Within (๑ ก.ย. ๒๕๖๘)",
-        "date": "๑ ก.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251104_151728.jpg",
-        "caption": "การอบรมเชิงปฏิบัติการพัฒนาทักษะวิชาชีพครูและการจัดการเรียนรู้ดิจิทัล (๔ พ.ย. ๖๘)",
-        "date": "๔ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251104_160620.jpg",
-        "caption": "การศึกษาค้นคว้าองค์ความรู้ใหม่ด้านวิทยาการคำนวณและเทคโนโลยี (๔ พ.ย. ๖๘)",
-        "date": "๔ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251107_143017.jpg",
-        "caption": "การพัฒนาตนเองอย่างต่อเนื่องเพื่อนำมาประยุกต์ใช้ในการจัดการเรียนการสอน (๗ พ.ย. ๖๘)",
-        "date": "๗ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260115_093505.jpg",
-        "caption": "การอบรมและพัฒนาสมรรถนะดิจิทัลตามมาตรฐานวิชาชีพครู (๑๕ ม.ค. ๖๙)",
-        "date": "๑๕ ม.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260810_092437.jpg",
-        "caption": "การฝึกอบรมการสร้างสรรค์สื่อดิจิทัลและเทคโนโลยีปัญญาประดิษฐ์ AI (๑๐ ส.ค. ๖๙)",
-        "date": "๑๐ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260810_092710.jpg",
-        "caption": "การพัฒนาทักษะการตัดต่อวิดีโอและสื่อการสอนมัลติมีเดีย (๑๐ ส.ค. ๖๙)",
-        "date": "๑๐ ส.ค. ๒๕๖๙"
+        "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/Picture2.png",
+        "caption": "ผ่านการอบรมการจัดการเรียนรู้ปัญญาประดิษฐ์ ระดับประถมศึกษาปีที่ 4-6",
+        "date": "๗ พ.ค. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipPTpMy1ZQpJW3s4yZGTdFl0wDE2cRTSBxfNl8M5s564v8N7U9wCH9Hzc2hrXWbkYQ?key=S1ItOURUQ2N5MnBfMS1JdTRvbC1sWG1UZS1oUWJn"
@@ -1204,71 +489,31 @@
   {
     "id": "album-3-2",
     "category": "comp1-dev",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๓.๒",
+    "badge": "ด้านที่ ๓ · ตัวชี้วัด ๓.๒",
     "title": "ข้อที่ ๓.๒ การมีส่วนร่วมในการแลกเปลี่ยนเรียนรู้ทางวิชาชีพ (PLC)",
-    "desc": "การเข้าร่วมกลุ่ม PLC 'Play and Learn' แลกเปลี่ยนข้อคิดเห็นเพื่อแก้ปัญหาทักษะการใช้เมาส์ ป.๑ รวม ๑๓ ชั่วโมง",
-    "cover": "assets/google_photos_curated/SchoolBoard_03.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 3.2",
+    "cover": "assets/evidence_pa_photos/MVIMG_20260506_155728.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/SchoolBoard_03.jpg",
-        "caption": "การมีส่วนร่วมแลกเปลี่ยนเรียนรู้และปรึกษาหารือทางวิชาชีพและการบริหาร (Google Photos)",
-        "date": "๑๘ มิ.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/MVIMG_20260506_155728.jpg",
+        "caption": "ประชุมแลกเปลี่ยนเรียนรู้ทางวิชาชีพและร่วมวางแผนพัฒนาผู้เรียน",
+        "date": "๖ พ.ค. ๒๕๖๙"
       },
       {
-        "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_01.jpg",
-        "caption": "PLC ร่วมวางแผนจัดกิจกรรมวันวิทยาศาสตร์ บูรณาการวิทยาศาสตร์และเทคโนโลยี",
-        "date": "๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260105_173546.jpg",
+        "caption": "คณะครูร่วมประชุมสะท้อนผลและกำหนดแนวทางการทำงาน",
+        "date": "๕ ม.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence/media_pa/IMG_20260910_133441_1_.jpg",
-        "caption": "การนำเทคนิคเพื่อนช่วยเพื่อนจากข้อเสนอแนะในวง PLC มาใช้ในชั้นเรียน ป.๑",
-        "date": "๑๐ ก.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260610_162021.jpg",
+        "caption": "แลกเปลี่ยนข้อมูลการจัดการเรียนรู้และการดำเนินงานในที่ประชุมครู",
+        "date": "๑๐ มิ.ย. ๒๕๖๙"
       },
       {
-        "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_01.jpg",
-        "caption": "การนำเสนอแลกเปลี่ยนประเด็นการพัฒนาการศึกษาในวงประชุมทางวิชาการ",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_director_teachers.jpg",
-        "caption": "การแลกเปลี่ยนเรียนรู้ทางวิชาชีพ (PLC) ร่วมกับผู้บริหารและคณะครู ในการถอดบทเรียนโครงการ The School CEO (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/infographics/infographic_tech_responsible_rules.jpg",
-        "caption": "การนำข้อสรุปจากวง PLC สู่การสร้างข้อตกลงร่วมด้านจริยธรรมเทคโนโลยีในสถานศึกษา (๘ ก.ย. ๒๕๖๙)",
-        "date": "๘ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251118_105930.jpg",
-        "caption": "การประชุมชุมชนแห่งการเรียนรู้ทางวิชาชีพ (PLC) ระดับสถานศึกษา (๑๘ พ.ย. ๖๘)",
-        "date": "๑๘ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20251118_105948.jpg",
-        "caption": "การแลกเปลี่ยนเรียนรู้แนวทางการแก้ปัญหาการจัดการเรียนรู้ร่วมกับเพื่อนครู (๑๘ พ.ย. ๖๘)",
-        "date": "๑๘ พ.ย. ๒๕๖๘"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260122_095258.jpg",
-        "caption": "การสะท้อนคิด (Reflection) และปรับปรุงแผนการจัดการเรียนรู้คอมพิวเตอร์ (๒๒ ม.ค. ๖๙)",
-        "date": "๒๒ ม.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260122_095316.jpg",
-        "caption": "การระดมความคิดเห็นเพื่อพัฒนาสื่อนวัตกรรมและการจัดกิจกรรม Active Learning (๒๒ ม.ค. ๖๙)",
-        "date": "๒๒ ม.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260302_084122.jpg",
-        "caption": "การสังเคราะห์ผลการแก้ปัญหาผู้เรียนเพื่อนำไปปรับใช้ในชั้นเรียน (๒ มี.ค. ๖๙)",
-        "date": "๒ มี.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260617_164612.jpg",
-        "caption": "การร่วมแลกเปลี่ยนประสบการณ์การใช้นวัตกรรมดิจิทัลในกลุ่มสาระการเรียนรู้ (๑๗ มิ.ย. ๖๙)",
-        "date": "๑๗ มิ.ย. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260901_152108.jpg",
+        "caption": "ประชุมสะท้อนผลการดำเนินงานและวางแผนพัฒนาร่วมกัน",
+        "date": "๑ ก.ย. ๒๕๖๙"
       }
     ],
     "share_url": "https://photos.google.com/share/AF1QipMFHIkvy4ba29i77Dvzr4YYsboFfwH3_EVhDjQ1pYayeLdNPasknTRz72GstGL93g?key=SmFpQ2pvZHJ6ZzZPYkQzZTdESUE3QjJuYTdTd19n"
@@ -1276,85 +521,30 @@
   {
     "id": "album-3-3",
     "category": "comp1-dev",
-    "badge": "องค์ประกอบที่ ๑ · ข้อที่ ๓.๓",
+    "badge": "ด้านที่ ๓ · ตัวชี้วัด ๓.๓",
     "title": "ข้อที่ ๓.๓ การนำความรู้ความสามารถทักษะฯ มาใช้",
-    "desc": "การนำทักษะดิจิทัลและ AI มาพัฒนานักเรียนจนได้รับรางวัลเหรียญทอง Science Show และคลิปสั้น The School CEO",
-    "cover": "assets/google_photos_curated/ScienceDay_04.jpg",
+    "desc": "หลักฐานคัดเลือกเฉพาะรอบ 1 ต.ค. 2568 - 30 ก.ย. 2569 จำนวน 4 รายการ ตรงตามตัวชี้วัด 3.3",
+    "cover": "assets/evidence_pa_photos/IMG_20260724_085632.jpg",
     "shared": true,
     "items": [
       {
-        "src": "assets/google_photos_curated/ScienceDay_04.jpg",
-        "caption": "การนำองค์ความรู้และทักษะด้านเทคโนโลยีมาใช้จัดกิจกรรมพัฒนาผู้เรียน (Google Photos)",
-        "date": "๑๗ ก.ค. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260724_085632.jpg",
+        "caption": "นำความรู้ด้านสื่อสามมิติและเกมดิจิทัลมาประยุกต์ใช้",
+        "date": "๒๔ ก.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/google_photos_curated/CareerSkills_03.jpg",
-        "caption": "การนำทักษะวิชาชีพมาขยายผลเพื่อพัฒนาศักยภาพผู้เรียนและชุมชน (Google Photos)",
-        "date": "๒๐ ก.พ. ๒๕๖๙"
+        "src": "assets/evidence_pa_photos/IMG_20260803_085102.jpg",
+        "caption": "ผู้เรียนใช้สื่อ Gamification ที่ครูนำมาพัฒนากิจกรรม",
+        "date": "๓ ส.ค. ๒๕๖๙"
       },
       {
-        "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg",
-        "caption": "โล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/02_ประกาศสพป_กำแพงเพชรเขต2_TheSchoolCEO_ชนะเลิศเหรียญทอง.jpg",
-        "caption": "ประกาศ สพป.กำแพงเพชร เขต ๒ ชนะเลิศระดับเหรียญทอง (๗ ส.ค. ๖๙)",
-        "date": "๗ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/03_รางวัลเหรียญทอง_ScienceShow_ศิลปหัตถกรรมนักเรียน_ครั้งที่74.jpg",
-        "caption": "รางวัลเหรียญทอง Science Show ศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/04_รางวัลรองชนะเลิศอันดับ2_ภาพถ่ายต่อต้านการทุจริต_ราคาของการถูกลืม.jpg",
-        "caption": "รางวัลภาพถ่ายต่อต้านการทุจริต 'ราคาของการถูกลืม' สพป.กพ.๒",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_booth_award.jpg",
-        "caption": "การประยุกต์ใช้นวัตกรรมดิจิทัลและการตลาดออนไลน์ จนได้รับรางวัลชนะเลิศ The School CEO (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence/school_ceo/ceo_event_students_action.jpg",
-        "caption": "การถ่ายทอดทักษะดิจิทัลและการทำงานจริงสู่นักเรียน ฝึกปฏิบัติการบริหารจัดการผลิตภัณฑ์อโวคาโด (๒ ก.ย. ๒๕๖๙)",
-        "date": "๒ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/06c_รางวัลชมเชยวุฒิสภา_คลิปวิดีโอ_GreenCulture_เกียรติบัตร.jpg",
-        "caption": "เกียรติบัตรรางวัลชมเชยวุฒิสภา การสร้างสรรค์คลิปวิดีโอ Green Culture จากการนำทักษะดิจิทัลมาพัฒนาผู้เรียน",
-        "date": "๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260311_144802.jpg",
-        "caption": "การนำทักษะดิจิทัลมาพัฒนาสื่อการเรียนรู้เพื่อยกระดับคุณภาพผู้เรียน (๑๑ มี.ค. ๖๙)",
+        "src": "assets/evidence_pa_photos/IMG_20260311_143723.jpg",
+        "caption": "ประยุกต์ความรู้ด้าน Coding เป็นกิจกรรมสร้างชิ้นงานของผู้เรียน",
         "date": "๑๑ มี.ค. ๒๕๖๙"
       },
       {
-        "src": "assets/evidence_pa_photos/IMG_20260311_144852.jpg",
-        "caption": "การขยายผลองค์ความรู้เทคโนโลยีสารสนเทศแก่คณะครูและนักเรียน (๑๑ มี.ค. ๖๙)",
-        "date": "๑๑ มี.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260811_092032.jpg",
-        "caption": "การนำเทคโนโลยีดิจิทัลและ AI มาพัฒนานวัตกรรมการสอน The School CEO (๑๑ ส.ค. ๖๙)",
-        "date": "๑๑ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260811_092535.jpg",
-        "caption": "การฝึกทักษะการผลิตสื่อคลิปสั้นเชิงสร้างสรรค์ให้แก่นักเรียน (๑๑ ส.ค. ๖๙)",
-        "date": "๑๑ ส.ค. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260904_074734.jpg",
-        "caption": "การนำความรู้มาประยุกต์ใช้จนได้รับรางวัลชนะเลิศระดับเหรียญทอง (๔ ก.ย. ๖๙)",
-        "date": "๔ ก.ย. ๒๕๖๙"
-      },
-      {
-        "src": "assets/evidence_pa_photos/IMG_20260910_085619.jpg",
-        "caption": "การจัดระบบการเรียนรู้ดิจิทัลเพื่อการพัฒนาคุณภาพการศึกษาอย่างยั่งยืน (๑๐ ก.ย. ๖๙)",
+        "src": "assets/evidence_pa_photos/IMG_20260910_133655.jpg",
+        "caption": "ผู้เรียนใช้สื่อดิจิทัลที่ครูพัฒนาผ่านการฝึกปฏิบัติจริง",
         "date": "๑๐ ก.ย. ๒๕๖๙"
       }
     ],
