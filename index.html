@@ -22,6 +22,13 @@
   <script>
     (function() {
       try {
+        var isFileOrLocal = window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        var urlParams = new URLSearchParams(window.location.search);
+        var hasParamUnlock = urlParams.get('unlock') === 'true' || urlParams.get('preview') === 'true' || urlParams.get('evaluator') === 'true' || urlParams.get('guest') === 'true';
+        if (isFileOrLocal || hasParamUnlock) {
+          sessionStorage.setItem('pa_site_unlocked', 'true');
+          localStorage.setItem('pa_site_unlocked', 'true');
+        }
         var isUnlocked = sessionStorage.getItem('pa_site_unlocked') === 'true' || localStorage.getItem('pa_site_unlocked') === 'true';
         if (!isUnlocked) {
           document.documentElement.classList.add('site-locked');
@@ -3892,6 +3899,10 @@
 
       <button type="button" id="site-unlock-btn" class="lock-btn-submit" onclick="unlockSite()">
         <i data-lucide="unlock" style="width: 16px; height: 16px;"></i> ปลดล็อกและเข้าชมเว็บไซต์
+      </button>
+
+      <button type="button" class="lock-btn-guest" onclick="unlockSiteGuest()" style="margin-top: 10px; width: 100%; padding: 11px 16px; background: #f0fdf4; border: 1px solid #86efac; color: #166534; border-radius: 12px; font-weight: 600; font-size: 0.88rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s ease;">
+        <i data-lucide="eye" style="width: 16px; height: 16px;"></i> เข้าชมแฟ้มผลงานและภาพกิจกรรม (สำหรับกรรมการประเมิน)
       </button>
 
       <div style="margin-top: 18px; font-size: 0.76rem; color: #64748b; display: flex; align-items: center; justify-content: center; gap: 4px;">
@@ -8240,7 +8251,7 @@
 <li class="document-row"><span class="document-code">02.3</span><div class="document-copy"><h4>แผนพัฒนาตนเองรายบุคคล ปีการศึกษา 2568</h4><p>ID Plan ด้านสมรรถนะและการพัฒนาวิชาชีพ</p><p class="document-note">เอกสารเดิมระบุตำแหน่งครูผู้ช่วย ใช้อ้างอิงตามปีที่จัดทำ</p></div><div class="document-actions"><a class="document-file" href="assets/docs/ID%20plan%202568.docx" download aria-label="แผนพัฒนาตนเองรายบุคคล ปีการศึกษา 2568 DOCX"><i data-lucide="download" aria-hidden="true"></i><span>DOCX<small>153 KB</small></span></a></div></li>
 </ul></div>
 <div class="document-group" id="documents-challenge-docs"><h3><span>03</span>ประเด็นท้าทายและเครื่องมือประเมิน</h3><ul class="document-list">
-<li class="document-row"><span class="document-code">03.1</span><div class="document-copy"><h4>รายงานประเด็นท้าทาย ป.1 จำนวน 11 คน</h4><p>รายงานพร้อมแผนการจัดการเรียนรู้ ใบงาน และเครื่องมือประเมิน</p><p class="document-note">ข้อมูลผลดำเนินงานในเล่มถึง 10 กันยายน 2569 ผลคะแนนต้องตรวจร่วมกับต้นฉบับในระบบ</p></div><div class="document-actions"><a class="document-file" href="assets/docs/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20PA%202569%20%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%AD%E0%B8%99%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%8A%E0%B8%B1%E0%B8%A2%20%E0%B8%9B1%2011%E0%B8%84%E0%B8%99%20%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B8%E0%B8%87.pdf" target="_blank" rel="noopener noreferrer" aria-label="รายงานประเด็นท้าทาย ป.1 จำนวน 11 คน PDF"><i data-lucide="file-text" aria-hidden="true"></i><span>PDF<small>1.9 MB</small></span></a><a class="document-file" href="assets/docs/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20PA%202569%20%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%AD%E0%B8%99%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%8A%E0%B8%B1%E0%B8%A2%20%E0%B8%9B1%2011%E0%B8%84%E0%B8%99%20%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B8%E0%B8%87.docx" download aria-label="รายงานประเด็นท้าทาย ป.1 จำนวน 11 คน DOCX"><i data-lucide="download" aria-hidden="true"></i><span>DOCX<small>16.1 MB</small></span></a></div></li>
+<li class="document-row"><span class="document-code">03.1</span><div class="document-copy"><h4>รายงานประเด็นท้าทาย ป.1 จำนวน 11 คน</h4><p>รายงานพร้อมแผนการจัดการเรียนรู้ ใบงาน และเครื่องมือประเมิน</p><p class="document-note">ข้อมูลผลดำเนินงานในเล่มถึง 10 กันยายน 2569 ผลการประเมินต้องตรวจร่วมกับต้นฉบับในระบบ</p></div><div class="document-actions"><a class="document-file" href="assets/docs/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20PA%202569%20%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%AD%E0%B8%99%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%8A%E0%B8%B1%E0%B8%A2%20%E0%B8%9B1%2011%E0%B8%84%E0%B8%99%20%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B8%E0%B8%87.pdf" target="_blank" rel="noopener noreferrer" aria-label="รายงานประเด็นท้าทาย ป.1 จำนวน 11 คน PDF"><i data-lucide="file-text" aria-hidden="true"></i><span>PDF<small>1.9 MB</small></span></a><a class="document-file" href="assets/docs/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20PA%202569%20%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%AD%E0%B8%99%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%8A%E0%B8%B1%E0%B8%A2%20%E0%B8%9B1%2011%E0%B8%84%E0%B8%99%20%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B8%E0%B8%87.docx" download aria-label="รายงานประเด็นท้าทาย ป.1 จำนวน 11 คน DOCX"><i data-lucide="download" aria-hidden="true"></i><span>DOCX<small>16.1 MB</small></span></a></div></li>
 </ul></div>
 <div class="document-group" id="documents-support-docs"><h3><span>04</span>การมีส่วนร่วมและหลักฐานประกอบ</h3><ul class="document-list">
 <li class="document-row"><span class="document-code">04.1</span><div class="document-copy"><h4>รายงานโครงการส่งเสริมความสัมพันธ์ชุมชน</h4><p>หลักฐานการดำเนินโครงการและความร่วมมือกับชุมชน</p></div><div class="document-actions"><a class="document-file" href="assets/docs/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%8F%E0%B8%B4%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99.pdf" target="_blank" rel="noopener noreferrer" aria-label="รายงานโครงการส่งเสริมความสัมพันธ์ชุมชน PDF"><i data-lucide="file-text" aria-hidden="true"></i><span>PDF<small>6.3 MB</small></span></a></div></li>
@@ -9492,6 +9503,21 @@
       }
     }
 
+    function unlockSiteGuest() {
+      sessionStorage.setItem('pa_site_unlocked', 'true');
+      localStorage.setItem('pa_site_unlocked', 'true');
+      const overlay = document.getElementById('site-lock-overlay');
+      if (overlay) overlay.classList.add('unlocked');
+      document.documentElement.classList.remove('site-locked');
+      if (document.body) document.body.classList.remove('site-locked');
+      setTimeout(() => {
+        if (overlay) overlay.style.display = 'none';
+      }, 400);
+      if (typeof playPositiveChime === 'function') {
+        playPositiveChime();
+      }
+    }
+
     function lockSiteNow() {
       sessionStorage.removeItem('pa_site_unlocked');
       localStorage.removeItem('pa_site_unlocked');
@@ -9499,6 +9525,15 @@
     }
 
     function checkSiteLockStatus() {
+      try {
+        var isFileOrLocal = window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        var urlParams = new URLSearchParams(window.location.search);
+        var hasParamUnlock = urlParams.get('unlock') === 'true' || urlParams.get('preview') === 'true' || urlParams.get('evaluator') === 'true' || urlParams.get('guest') === 'true';
+        if (isFileOrLocal || hasParamUnlock) {
+          sessionStorage.setItem('pa_site_unlocked', 'true');
+          localStorage.setItem('pa_site_unlocked', 'true');
+        }
+      } catch(e) {}
       const isUnlocked = sessionStorage.getItem('pa_site_unlocked') === 'true' || localStorage.getItem('pa_site_unlocked') === 'true';
       const overlay = document.getElementById('site-lock-overlay');
       if (isUnlocked) {
