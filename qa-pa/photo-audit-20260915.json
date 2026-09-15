@@ -1,0 +1,3770 @@
+{
+  "review_date": "2026-09-15",
+  "source_catalog_count": 302,
+  "source": "tmp/รูปที่ใช้ในpa; ตรวจภาพจาก contact-01 ถึง contact-13",
+  "selected_images": 99,
+  "albums": 25,
+  "changes": [
+    {
+      "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/01_รางวัลชนะเลิศเหรียญทอง_TheSchoolCEO_คลิปสั้นปั้นธุรกิจ.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "โล่รางวัลชนะเลิศระดับเหรียญทอง The School CEO : คลิปสั้นปั้นธุรกิจ สพป.กำแพงเพชร เขต ๒",
+      "current_album": "album-awards",
+      "current_caption": "สื่อประชาสัมพันธ์รางวัล The School CEO ผลงานเสน่ห์ผ้าทอปกาเกอะญอ",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/02_ประกาศสพป_กำแพงเพชรเขต2_TheSchoolCEO_ชนะเลิศเหรียญทอง.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "ประกาศ สพป.กำแพงเพชร เขต ๒ ชนะเลิศระดับเหรียญทอง The School CEO (๗ ส.ค. ๖๙)",
+      "current_album": "album-awards",
+      "current_caption": "ประกาศผล The School CEO ระดับ ม.1–3 โรงเรียนบ้านคลองมดแดง ได้รับรางวัลชนะเลิศระดับเหรียญทอง",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "ครูเจมส์ถือโล่รางวัลชนะเลิศเหรียญทอง The School CEO ณ วันรับมอบรางวัล (๓ ก.ย. ๒๕๖๙)",
+      "current_album": "album-awards",
+      "current_caption": "ครูแสดงโล่และเกียรติบัตรรางวัล The School CEO ที่บูธผลงาน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/03_รางวัลเหรียญทอง_ScienceShow_ศิลปหัตถกรรมนักเรียน_ครั้งที่74.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "รางวัลเหรียญทอง Science Show ป.๔-๖ ศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔ กลุ่มคลองสวนหมาก",
+      "current_album": "album-awards",
+      "current_caption": "สื่อประชาสัมพันธ์รางวัลเหรียญทอง Science Show ป.4–6 งานศิลปหัตถกรรมนักเรียน ครั้งที่ 74",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence/award_computer_design_gold_m13.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "ประกาศแสดงความยินดี รางวัลเหรียญทอง การแข่งขันการออกแบบสิ่งของเครื่องใช้ด้วยโปรแกรมคอมพิวเตอร์ ระดับชั้น ม.๑-ม.๓ งานศิลปหัตถกรรมนักเรียน ครั้งที่ ๗๔ กลุ่มโรงเรียนคลองสวนหมาก",
+      "current_album": "album-awards",
+      "current_caption": "สื่อประชาสัมพันธ์รางวัลเหรียญทอง การออกแบบสิ่งของเครื่องใช้ด้วยโปรแกรมคอมพิวเตอร์ ม.1–3",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/04_รางวัลรองชนะเลิศอันดับ2_ภาพถ่ายต่อต้านการทุจริต_ราคาของการถูกลืม.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "รางวัลรองชนะเลิศอันดับ ๒ คุณภาพดีเยี่ยม ภาพถ่ายต่อต้านการทุจริต 'ราคาของการถูกลืม' สพป.กพ.๒",
+      "current_album": "album-awards",
+      "current_caption": "สื่อประชาสัมพันธ์รางวัลรองชนะเลิศอันดับ 2 ภาพถ่ายต่อต้านการทุจริต ราคาของการถูกลืม",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/05_รางวัลอันดับ5_ภาพยนตร์สั้นต่อต้านการทุจริต_TheFalseGoalประตูที่ถูกล็อก.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "รางวัลอันดับ ๕ ภาพยนตร์สั้นต่อต้านการทุจริต 'The False Goal' โครงการโรงเรียนสุจริต",
+      "current_album": "album-awards",
+      "current_caption": "สื่อประชาสัมพันธ์รางวัลอันดับ 5 ภาพยนตร์สั้นต่อต้านการทุจริต The False Goal",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/messageImage_1783918653571.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "เกียรติบัตรครูผู้ฝึกสอนสร้างสื่อ AI ม.๑–๓ อบจ.กำแพงเพชร (๒๖ มิ.ย. ๖๙)",
+      "current_album": "album-awards",
+      "current_caption": "เกียรติบัตรครูผู้ฝึกสอนนักเรียนเข้าร่วมประกวดสร้างสื่อด้วย AI ม.1–3",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "เกียรติบัตร AI Learning Hub และคลังสื่อ OBEC Content Center สพป.กำแพงเพชร เขต ๒ (๗ มิ.ย. ๖๙)",
+      "current_album": "album-3-1",
+      "current_caption": "เกียรติบัตรอบรม AI Learning Hub และ OBEC Content Center",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence/school_ceo/ceo_event_booth_award.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "ถ้วยรางวัลชนะเลิศและบูธนิทรรศการ The School CEO สพป.กำแพงเพชร เขต ๒ (๒ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/06c_รางวัลชมเชยวุฒิสภา_คลิปวิดีโอ_GreenCulture_เกียรติบัตร.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "เกียรติบัตรรางวัลชมเชยวุฒิสภา การประกวดคลิปวิดีโอ 'Green Culture' ส่งเสริมสิ่งแวดล้อมและวัฒนธรรม",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากรอบปัจจุบัน: เกียรติบัตรระบุ 5 สิงหาคม 2567"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260904_074734.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "บูธนิทรรศการและถ้วยรางวัลชนะเลิศระดับเหรียญทอง The School CEO สพป.กพ.๒ (๔ ก.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260810_092437.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๐ ส.ค. ๒๕๖๙)",
+      "current_album": "album-science-day",
+      "current_caption": "ผู้เรียนร่วมกิจกรรมหน้าป้ายสัปดาห์วิทยาศาสตร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260810_092710.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๐ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260810_103806.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๐ ส.ค. ๒๕๖๙)",
+      "current_album": "album-ict-project",
+      "current_caption": "ผู้เรียนฝึกตัดต่อวิดีโอด้วยโปรแกรมบนคอมพิวเตอร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260810_104108.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๐ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260810_110255.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๐ ส.ค. ๒๕๖๙)",
+      "current_album": "album-ict-project",
+      "current_caption": "ผู้เรียนทำงานตัดต่อวิดีโอร่วมกับอุปกรณ์บันทึกภาพ",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260811_092032.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๑ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260811_092535.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๑ ส.ค. ๒๕๖๙)",
+      "current_album": "album-science-day",
+      "current_caption": "ครูกล่าวหน้าป้ายสัปดาห์วิทยาศาสตร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260811_093313.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๑ ส.ค. ๒๕๖๙)",
+      "current_album": "album-science-day",
+      "current_caption": "ภาพหมู่ผู้ร่วมกิจกรรมสัปดาห์วิทยาศาสตร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260811_093619_1.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๑ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260811_093748.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๑ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260811_113748.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "การเข้าร่วมกิจกรรมวิชาการและการจัดแสดงผลงานเด่นของสถานศึกษา (๑๑ ส.ค. ๒๕๖๙)",
+      "current_album": "album-science-day",
+      "current_caption": "การแสดงบนเวทีสัปดาห์วิทยาศาสตร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260911_071752.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "ความสำเร็จและการได้รับรางวัลเกียรติยศระดับทอง The School CEO ๒๕๖๙ (๑๑ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260911_075525.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "ความสำเร็จและการได้รับรางวัลเกียรติยศระดับทอง The School CEO ๒๕๖๙ (๑๑ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260911_075620.jpg",
+      "previous_album": "album-awards",
+      "previous_caption": "ความสำเร็จและการได้รับรางวัลเกียรติยศระดับทอง The School CEO ๒๕๖๙ (๑๑ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_133433.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "นำหน่วยการเรียนรู้วิทยาการคำนวณตามหลักสูตรสถานศึกษาไปใช้จริง",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260224_111740.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "จัดการเรียนรู้ตามสาระเทคโนโลยีในห้องปฏิบัติการคอมพิวเตอร์",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260202_084245.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "นำสาระเทคโนโลยีไปจัดประสบการณ์เรียนรู้ให้ผู้เรียนช่วงชั้นต้น",
+      "current_album": "album-1-3",
+      "current_caption": "ผู้เรียนกลุ่มเล็กทำกิจกรรมร่วมกันที่คอมพิวเตอร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260202_110800.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "ผู้เรียนเรียนรู้อุปกรณ์และการใช้งานคอมพิวเตอร์ตามหน่วยการเรียนรู้",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20250923_081656.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การจัดทำโครงสร้างรายวิชาและคำอธิบายรายวิชาเทคโนโลยี (๒๓ ก.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออก: อยู่นอกช่วง 1 ต.ค. 2568 – 30 ก.ย. 2569"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20250923_150329.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การจัดทำโครงสร้างรายวิชาและคำอธิบายรายวิชาเทคโนโลยี (๒๓ ก.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออก: อยู่นอกช่วง 1 ต.ค. 2568 – 30 ก.ย. 2569"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20250925_085836.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การจัดทำโครงสร้างรายวิชาและคำอธิบายรายวิชาเทคโนโลยี (๒๕ ก.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออก: อยู่นอกช่วง 1 ต.ค. 2568 – 30 ก.ย. 2569"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20250925_093456.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การจัดทำโครงสร้างรายวิชาและคำอธิบายรายวิชาเทคโนโลยี (๒๕ ก.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออก: อยู่นอกช่วง 1 ต.ค. 2568 – 30 ก.ย. 2569"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20250925_093651.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การจัดทำโครงสร้างรายวิชาและคำอธิบายรายวิชาเทคโนโลยี (๒๕ ก.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออก: อยู่นอกช่วง 1 ต.ค. 2568 – 30 ก.ย. 2569"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251103_111436.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การเตรียมหน่วยการเรียนรู้และสื่อประกอบการสอนภาคเรียนที่ ๒ (๓ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251105_140828.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การเตรียมหน่วยการเรียนรู้และสื่อประกอบการสอนภาคเรียนที่ ๒ (๕ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260202_084249.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การนำหน่วยการเรียนรู้เทคโนโลยีสารสนเทศไปจัดกิจกรรมอย่างเป็นรูปธรรม (๒ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260202_110802.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การนำหน่วยการเรียนรู้เทคโนโลยีสารสนเทศไปจัดกิจกรรมอย่างเป็นรูปธรรม (๒ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260525_154845.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การจัดการเรียนรู้สาระเทคโนโลยี วิทยาการคำนวณ ตามหลักสูตรสถานศึกษา (๒๕ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260526_150304.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การจัดการเรียนรู้สาระเทคโนโลยี วิทยาการคำนวณ ตามหลักสูตรสถานศึกษา (๒๖ พ.ค. ๒๕๖๙)",
+      "current_album": "album-career-skills",
+      "current_caption": "ครูและผู้เรียนร่วมดูแลแปลงปลูกพืช",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260526_150425.jpg",
+      "previous_album": "album-1-1",
+      "previous_caption": "การจัดการเรียนรู้สาระเทคโนโลยี วิทยาการคำนวณ ตามหลักสูตรสถานศึกษา (๒๖ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260514_151034.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "ครูสาธิตและจัดกิจกรรม Active Learning ตามแผนที่ออกแบบ",
+      "current_album": "album-1-2",
+      "current_caption": "ครูอธิบายบทเรียนด้วยจอแสดงผลในห้องคอมพิวเตอร์",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260122_095316.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "จัดลำดับกิจกรรมจากการอธิบายสู่การฝึกปฏิบัติรายบุคคล",
+      "current_album": "album-1-2",
+      "current_caption": "ครูอธิบายหน้าชั้นเรียนระหว่างกิจกรรมคอมพิวเตอร์",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251205_100158.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "จัดกิจกรรมกลุ่มย่อยและหมุนเวียนให้ผู้เรียนลงมือปฏิบัติ",
+      "current_album": "album-1-7",
+      "current_caption": "บรรยากาศการทำงานเป็นกลุ่มย่อยในห้องคอมพิวเตอร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260223_105753.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "ออกแบบกิจกรรมให้ผู้เรียนโต้ตอบกับสื่อและรับผลย้อนกลับทันที",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251104_112900.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "การออกแบบการจัดการเรียนรู้เชิงรุก Active Learning ต้นภาคเรียน (๔ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251104_112901.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "การออกแบบการจัดการเรียนรู้เชิงรุก Active Learning ต้นภาคเรียน (๔ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251201_153353.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "การจัดกิจกรรมการเรียนรู้แบบมีส่วนร่วมและส่งเสริมทักษะคิดวิเคราะห์ (๑ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251201_153828.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "การจัดกิจกรรมการเรียนรู้แบบมีส่วนร่วมและส่งเสริมทักษะคิดวิเคราะห์ (๑ ธ.ค. ๒๕๖๘)",
+      "current_album": "album-2-2",
+      "current_caption": "กิจกรรมบริจาคและส่งมอบเสื้อผ้าเพื่อการช่วยเหลือ",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260206_125055.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "การออกแบบกิจกรรมการเรียนรู้ผ่านสื่อเทคโนโลยีที่สอดคล้องกับวัย (๖ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260206_125118.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "การออกแบบกิจกรรมการเรียนรู้ผ่านสื่อเทคโนโลยีที่สอดคล้องกับวัย (๖ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260303_091517.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "การสรุปผลและปรับปรุงแผนการจัดการเรียนรู้เพื่อพัฒนาต่อเนื่อง (๓ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260303_091520.jpg",
+      "previous_album": "album-1-2",
+      "previous_caption": "การสรุปผลและปรับปรุงแผนการจัดการเรียนรู้เพื่อพัฒนาต่อเนื่อง (๓ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260716_114228.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "กิจกรรม Coding แบบลงมือปฏิบัติและเรียนรู้ร่วมกัน",
+      "current_album": "album-ict-project",
+      "current_caption": "ผู้เรียนแสดงงานบล็อกคำสั่ง Scratch บนหน้าจอ",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260128_140013.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "ครูให้คำแนะนำรายกลุ่มระหว่างสร้างชิ้นงานดิจิทัล",
+      "current_album": "album-1-3",
+      "current_caption": "ครูแนะนำการใช้ชุดอุปกรณ์และโปรแกรมแก่ผู้เรียน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260130_121507.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "ผู้เรียนทดลองใช้เครื่องมือดิจิทัลร่วมกับการชี้แนะของครู",
+      "current_album": "album-1-3",
+      "current_caption": "ผู้เรียนทดลองใช้อุปกรณ์ร่วมกับคอมพิวเตอร์",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_133441.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "ผู้เรียนลงมือทำภารกิจ Coding รายบุคคลและเรียนรู้ร่วมกัน",
+      "current_album": "album-pa-p1",
+      "current_caption": "ผู้เรียนทำกิจกรรม Code.org ที่เครื่องคอมพิวเตอร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251104_151728.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "การจัดกิจกรรมการเรียนรู้ฝึกทักษะคอมพิวเตอร์รายบุคคล (๔ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251104_160620.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "การจัดกิจกรรมการเรียนรู้ฝึกทักษะคอมพิวเตอร์รายบุคคล (๔ พ.ย. ๒๕๖๘)",
+      "current_album": "album-ethics-volunteer",
+      "current_caption": "ผู้เรียนร่วมดูแลพื้นที่และสนามของโรงเรียน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251110_130357.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "การฝึกปฏิบัติตามแผนการจัดการเรียนรู้เทคโนโลยี (๑๐ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251110_175416.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "การฝึกปฏิบัติตามแผนการจัดการเรียนรู้เทคโนโลยี (๑๐ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251110_181112.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "การฝึกปฏิบัติตามแผนการจัดการเรียนรู้เทคโนโลยี (๑๐ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251126_093757_1.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "ผู้เรียนลงมือปฏิบัติกิจกรรมการเรียนรู้ในห้องคอมพิวเตอร์อย่างตั้งใจ (๒๖ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251126_093806.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "ผู้เรียนลงมือปฏิบัติกิจกรรมการเรียนรู้ในห้องคอมพิวเตอร์อย่างตั้งใจ (๒๖ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251126_150039.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "ผู้เรียนลงมือปฏิบัติกิจกรรมการเรียนรู้ในห้องคอมพิวเตอร์อย่างตั้งใจ (๒๖ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251126_150657.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "ผู้เรียนลงมือปฏิบัติกิจกรรมการเรียนรู้ในห้องคอมพิวเตอร์อย่างตั้งใจ (๒๖ พ.ย. ๒๕๖๘)",
+      "current_album": "album-career-skills",
+      "current_caption": "ครูและผู้เรียนร่วมดูแลพื้นที่ปลูกพืช",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251127_104234.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "ผู้เรียนลงมือปฏิบัติกิจกรรมการเรียนรู้ในห้องคอมพิวเตอร์อย่างตั้งใจ (๒๗ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251127_104235.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "ผู้เรียนลงมือปฏิบัติกิจกรรมการเรียนรู้ในห้องคอมพิวเตอร์อย่างตั้งใจ (๒๗ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260122_095258.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "กิจกรรมการเรียนรู้วิทยาการคำนวณแบบ Active Learning ปฏิบัติจริง (๒๒ ม.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260223_105728.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "การจัดกิจกรรมการเรียนรู้แบบกลุ่มร่วมมือและฝึกปฏิบัติจริง (๒๓ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260223_105818.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "การจัดกิจกรรมการเรียนรู้แบบกลุ่มร่วมมือและฝึกปฏิบัติจริง (๒๓ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260223_112748.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "การจัดกิจกรรมการเรียนรู้แบบกลุ่มร่วมมือและฝึกปฏิบัติจริง (๒๓ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260610_092845.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "กิจกรรมการเรียนรู้การคิดเชิงคำนวณผ่านการลงมือปฏิบัติจริง (๑๐ มิ.ย. ๒๕๖๙)",
+      "current_album": "album-1-8",
+      "current_caption": "ผู้เรียนร่วมพิธีไหว้ครู",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260610_100337.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "กิจกรรมการเรียนรู้การคิดเชิงคำนวณผ่านการลงมือปฏิบัติจริง (๑๐ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260716_114230.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "กิจกรรมเชิงปฏิบัติการ Coding และการสร้างชิ้นงานเทคโนโลยี (๑๖ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260716_114708.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "กิจกรรมเชิงปฏิบัติการ Coding และการสร้างชิ้นงานเทคโนโลยี (๑๖ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260716_151041_1.jpg",
+      "previous_album": "album-1-3",
+      "previous_caption": "กิจกรรมเชิงปฏิบัติการ Coding และการสร้างชิ้นงานเทคโนโลยี (๑๖ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260803_084731.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "ใช้สื่อเกมดิจิทัลและ Gamification ประกอบการเรียนรู้",
+      "current_album": "album-1-4",
+      "current_caption": "หน้าจอสื่อเกมคำถามที่ใช้ในห้องคอมพิวเตอร์",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260819_143408.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "ใช้หูฟังและบทเรียนดิจิทัลให้ผู้เรียนเรียนรู้ตามจังหวะของตนเอง",
+      "current_album": "album-1-4",
+      "current_caption": "ผู้เรียนใช้คอมพิวเตอร์และหูฟังระหว่างกิจกรรมดิจิทัล",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260223_105749.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "ผู้เรียนโต้ตอบกับสื่อออนไลน์ผ่านหน้าจอสัมผัส",
+      "current_album": "album-1-4",
+      "current_caption": "ผู้เรียนตอบคำถามบนหน้าจอสัมผัส",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260311_143717.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "ใช้สื่อ Coding แบบบล็อกคำสั่งเพื่อสร้างชิ้นงาน",
+      "current_album": "album-3-3",
+      "current_caption": "ผู้เรียนทำงานกับบล็อกคำสั่งในโปรแกรม Scratch",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260128_104225.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การใช้สื่อดิจิทัลและเทคโนโลยีเพื่อการศึกษาในการจัดการเรียนรู้ (๒๘ ม.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260128_132448.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การใช้สื่อดิจิทัลและเทคโนโลยีเพื่อการศึกษาในการจัดการเรียนรู้ (๒๘ ม.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260209_152605.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การใช้สื่อเกมการศึกษาเพื่อส่งเสริมทักษะการแก้ปัญหาเชิงคำนวณ (๙ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260209_154009.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การใช้สื่อเกมการศึกษาเพื่อส่งเสริมทักษะการแก้ปัญหาเชิงคำนวณ (๙ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260209_162837.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การใช้สื่อเกมการศึกษาเพื่อส่งเสริมทักษะการแก้ปัญหาเชิงคำนวณ (๙ ก.พ. ๒๕๖๙)",
+      "current_album": "album-3-2",
+      "current_caption": "การประชุมคณะครู วันที่ 9 กุมภาพันธ์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260210_110113.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การใช้สื่อเกมการศึกษาเพื่อส่งเสริมทักษะการแก้ปัญหาเชิงคำนวณ (๑๐ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260210_144635_2.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การใช้สื่อเกมการศึกษาเพื่อส่งเสริมทักษะการแก้ปัญหาเชิงคำนวณ (๑๐ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260210_144715.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การใช้สื่อเกมการศึกษาเพื่อส่งเสริมทักษะการแก้ปัญหาเชิงคำนวณ (๑๐ ก.พ. ๒๕๖๙)",
+      "current_album": "album-career-skills",
+      "current_caption": "ผู้เรียนร่วมขุดและเตรียมพื้นที่ดิน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260609_104115.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การสร้างและใช้สื่อเกมคอมพิวเตอร์พัฒนาทักษะการเรียนรู้ของผู้เรียน (๙ มิ.ย. ๒๕๖๙)",
+      "current_album": "album-1-3",
+      "current_caption": "ผู้เรียนทำงานประดิษฐ์จากกระดาษเป็นกลุ่ม",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260609_105237.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การสร้างและใช้สื่อเกมคอมพิวเตอร์พัฒนาทักษะการเรียนรู้ของผู้เรียน (๙ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260609_145844.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การสร้างและใช้สื่อเกมคอมพิวเตอร์พัฒนาทักษะการเรียนรู้ของผู้เรียน (๙ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260609_145847.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การสร้างและใช้สื่อเกมคอมพิวเตอร์พัฒนาทักษะการเรียนรู้ของผู้เรียน (๙ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260609_152739.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การสร้างและใช้สื่อเกมคอมพิวเตอร์พัฒนาทักษะการเรียนรู้ของผู้เรียน (๙ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260609_162804.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การสร้างและใช้สื่อเกมคอมพิวเตอร์พัฒนาทักษะการเรียนรู้ของผู้เรียน (๙ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260803_085119.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การนำสื่อ Gamification และเทคโนโลยีสารสนเทศมาเสริมการเรียนรู้ (๓ ส.ค. ๒๕๖๙)",
+      "current_album": "album-3-3",
+      "current_caption": "ผู้เรียนใช้สื่อเกมคำถามร่วมกันในห้องคอมพิวเตอร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260803_085129.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การนำสื่อ Gamification และเทคโนโลยีสารสนเทศมาเสริมการเรียนรู้ (๓ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260901_152305.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การจัดการเรียนการสอนด้วยนวัตกรรมการศึกษาดิจิทัลและวิดีโอสาธิตการสอน (๑ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260901_155246_1.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การจัดการเรียนการสอนด้วยนวัตกรรมการศึกษาดิจิทัลและวิดีโอสาธิตการสอน (๑ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260609_104125.jpg",
+      "previous_album": "album-1-4",
+      "previous_caption": "การสร้างและใช้สื่อเกมคอมพิวเตอร์พัฒนาทักษะการเรียนรู้ของผู้เรียน (๙ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/VID_20260901_152230.mp4",
+      "previous_album": "album-1-4",
+      "previous_caption": "การจัดการเรียนการสอนด้วยนวัตกรรมการศึกษาดิจิทัลและวิดีโอสาธิตการสอน (๑ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260611_132439.jpg",
+      "previous_album": "album-1-5",
+      "previous_caption": "ผู้เรียนทำแบบประเมินและภารกิจดิจิทัลรายบุคคล",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_133427.jpg",
+      "previous_album": "album-1-5",
+      "previous_caption": "ประเมินทักษะการใช้เมาส์และการปฏิบัติงานจริง",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260611_132449.jpg",
+      "previous_album": "album-1-5",
+      "previous_caption": "เก็บหลักฐานผลการตอบแบบประเมินผ่านระบบออนไลน์",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260518_132242.jpg",
+      "previous_album": "album-1-5",
+      "previous_caption": "ผู้เรียนทำแบบประเมินดิจิทัลเพื่อใช้เปรียบเทียบพัฒนาการ",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260225_144154.jpg",
+      "previous_album": "album-1-5",
+      "previous_caption": "การติดตามผลสัมฤทธิ์ทางการเรียนรู้ระหว่างจัดกิจกรรม (๒๕ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260311_143237.jpg",
+      "previous_album": "album-1-5",
+      "previous_caption": "การประเมินผลการเรียนรู้ภาคปฏิบัติตามเกณฑ์คุณภาพรูบริกส์ (๑๑ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260311_143425.jpg",
+      "previous_album": "album-1-5",
+      "previous_caption": "การประเมินผลการเรียนรู้ภาคปฏิบัติตามเกณฑ์คุณภาพรูบริกส์ (๑๑ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260311_144802.jpg",
+      "previous_album": "album-1-5",
+      "previous_caption": "การประเมินผลการเรียนรู้ภาคปฏิบัติตามเกณฑ์คุณภาพรูบริกส์ (๑๑ มี.ค. ๒๕๖๙)",
+      "current_album": "album-1-4",
+      "current_caption": "ตัวอย่างบล็อกคำสั่งและภาพจากกล้องในโปรแกรม Scratch",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260311_144852.jpg",
+      "previous_album": "album-1-5",
+      "previous_caption": "การประเมินผลการเรียนรู้ภาคปฏิบัติตามเกณฑ์คุณภาพรูบริกส์ (๑๑ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260311_144857.jpg",
+      "previous_album": "album-1-5",
+      "previous_caption": "การประเมินผลการเรียนรู้ภาคปฏิบัติตามเกณฑ์คุณภาพรูบริกส์ (๑๑ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260128_140738.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "สังเกตปัญหาและช่วยเหลือผู้เรียนระหว่างปฏิบัติ",
+      "current_album": "album-1-6",
+      "current_caption": "ครูเข้าช่วยเหลือผู้เรียนระหว่างใช้งานชุดอุปกรณ์",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260122_095645.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "วิเคราะห์ข้อผิดพลาดและให้คำแนะนำเฉพาะจุดเป็นรายบุคคล",
+      "current_album": "album-1-6",
+      "current_caption": "ครูให้คำแนะนำผู้เรียนขณะทำงานที่คอมพิวเตอร์",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260128_140019.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "ให้ความช่วยเหลือเฉพาะกลุ่มตามปัญหาที่พบระหว่างเรียน",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260122_101147.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "ติดตามวิธีคิดและปรับคำแนะนำให้เหมาะกับผู้เรียน",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260122_124208.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "การสังเกตและรวบรวมข้อมูลปัญหาการเรียนรู้เพื่อพัฒนางานวิจัยในชั้นเรียน (๒๒ ม.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260122_124422_1.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "การสังเกตและรวบรวมข้อมูลปัญหาการเรียนรู้เพื่อพัฒนางานวิจัยในชั้นเรียน (๒๒ ม.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260302_084122.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "การวิเคราะห์ข้อมูลและพัฒนาเครื่องมือวิจัยเพื่อแก้ปัญหาผู้เรียน (๒ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260302_085007.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "การวิเคราะห์ข้อมูลและพัฒนาเครื่องมือวิจัยเพื่อแก้ปัญหาผู้เรียน (๒ มี.ค. ๒๕๖๙)",
+      "current_album": "album-ethics-volunteer",
+      "current_caption": "ผู้เรียนร่วมตักบาตรในกิจกรรมของโรงเรียน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260302_091031.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "การวิเคราะห์ข้อมูลและพัฒนาเครื่องมือวิจัยเพื่อแก้ปัญหาผู้เรียน (๒ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260302_110324.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "การวิเคราะห์ข้อมูลและพัฒนาเครื่องมือวิจัยเพื่อแก้ปัญหาผู้เรียน (๒ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260302_110338.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "การวิเคราะห์ข้อมูลและพัฒนาเครื่องมือวิจัยเพื่อแก้ปัญหาผู้เรียน (๒ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260302_110344.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "การวิเคราะห์ข้อมูลและพัฒนาเครื่องมือวิจัยเพื่อแก้ปัญหาผู้เรียน (๒ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260302_110346.jpg",
+      "previous_album": "album-1-6",
+      "previous_caption": "การวิเคราะห์ข้อมูลและพัฒนาเครื่องมือวิจัยเพื่อแก้ปัญหาผู้เรียน (๒ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_111013.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "ห้องปฏิบัติการที่เอื้อต่อการเรียนรู้แบบหนึ่งคนหนึ่งเครื่อง",
+      "current_album": "album-1-7",
+      "current_caption": "ผู้เรียนใช้งานเครื่องคอมพิวเตอร์ที่จัดเรียงเป็นแถว",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260224_111728.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "จัดสภาพแวดล้อมและอุปกรณ์พร้อมสำหรับการฝึกปฏิบัติ",
+      "current_album": "album-1-7",
+      "current_caption": "การจัดโต๊ะและคอมพิวเตอร์สำหรับกิจกรรมในห้องเรียน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260224_111732.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "ผู้เรียนมีพื้นที่และอุปกรณ์พร้อมสำหรับทำกิจกรรมอย่างทั่วถึง",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251106_103307.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "จัดห้องเรียนเทคโนโลยีให้มีระเบียบและเอื้อต่อการมีส่วนร่วม",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/DSC00824.JPG",
+      "previous_album": "album-1-7",
+      "previous_caption": "ภาพบรรยากาศการดำเนินกิจกรรมและการจัดการเรียนรู้ (๑ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_0446.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "ภาพบรรยากาศการดำเนินกิจกรรมและการจัดการเรียนรู้ (๑ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251001_172609.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "การปรับปรุงสภาพแวดล้อมห้องปฏิบัติการคอมพิวเตอร์ช่วงปิดภาคเรียน (๑ ต.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251016_115413.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "การปรับปรุงสภาพแวดล้อมห้องปฏิบัติการคอมพิวเตอร์ช่วงปิดภาคเรียน (๑๖ ต.ค. ๒๕๖๘)",
+      "current_album": "album-career-skills",
+      "current_caption": "ครูและผู้เรียนฝึกจัดผ้าประดับโต๊ะ",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251016_115512.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "การปรับปรุงสภาพแวดล้อมห้องปฏิบัติการคอมพิวเตอร์ช่วงปิดภาคเรียน (๑๖ ต.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251106_103353.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "การจัดระเบียบห้องคอมพิวเตอร์ให้เอื้อต่อการเรียนรู้แบบ ๑ คน ๑ เครื่อง (๖ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251107_143017.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "การจัดระเบียบห้องคอมพิวเตอร์ให้เอื้อต่อการเรียนรู้แบบ ๑ คน ๑ เครื่อง (๗ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251107_144117.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "การจัดระเบียบห้องคอมพิวเตอร์ให้เอื้อต่อการเรียนรู้แบบ ๑ คน ๑ เครื่อง (๗ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251118_105948.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์พร้อมใช้งานและเป็นระเบียบ (๑๘ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251120_121515.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์พร้อมใช้งานและเป็นระเบียบ (๒๐ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251120_124456.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์พร้อมใช้งานและเป็นระเบียบ (๒๐ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251121_081920.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์พร้อมใช้งานและเป็นระเบียบ (๒๑ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260224_091511.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "การจัดบรรยากาศห้องเรียนที่กระตุ้นความสนใจและเอื้อต่อการเรียนรู้ (๒๔ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260224_093122.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "การจัดบรรยากาศห้องเรียนที่กระตุ้นความสนใจและเอื้อต่อการเรียนรู้ (๒๔ ก.พ. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260327_134251.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "ภาพบรรยากาศการดำเนินกิจกรรมและการจัดการเรียนรู้ (๒๗ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260907_085214.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์ที่พร้อมรับการประเมินและการเรียนรู้ (๗ ก.ย. ๒๕๖๙)",
+      "current_album": "album-1-5",
+      "current_caption": "ผู้เรียนทำงานบนกระดาษในห้องคอมพิวเตอร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260907_085235.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์ที่พร้อมรับการประเมินและการเรียนรู้ (๗ ก.ย. ๒๕๖๙)",
+      "current_album": "album-1-5",
+      "current_caption": "ผู้เรียนบันทึกคำตอบลงในกระดาษงานรายบุคคล",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260907_085246.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์ที่พร้อมรับการประเมินและการเรียนรู้ (๗ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260907_085256.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์ที่พร้อมรับการประเมินและการเรียนรู้ (๗ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260907_141542.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์ที่พร้อมรับการประเมินและการเรียนรู้ (๗ ก.ย. ๒๕๖๙)",
+      "current_album": "album-2-4",
+      "current_caption": "ผู้ปกครองร่วมประชุมในอาคารของโรงเรียน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260907_141721.jpg",
+      "previous_album": "album-1-7",
+      "previous_caption": "บรรยากาศห้องปฏิบัติการคอมพิวเตอร์ที่พร้อมรับการประเมินและการเรียนรู้ (๗ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260911_075634.jpg",
+      "previous_album": "album-1-8",
+      "previous_caption": "กิจกรรมส่งเสริมสมาธิ คุณธรรม และคุณลักษณะอันพึงประสงค์",
+      "current_album": "album-1-8",
+      "current_caption": "ผู้เรียนเข้าร่วมกิจกรรมทางศาสนาในศาสนสถาน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260723_082840.jpg",
+      "previous_album": "album-1-8",
+      "previous_caption": "กิจกรรมกลุ่มสร้างความรับผิดชอบและการอยู่ร่วมกัน",
+      "current_album": "album-1-8",
+      "current_caption": "ครูพูดคุยกับผู้เรียนที่นั่งรวมกลุ่มบริเวณอาคารเรียน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251204_095244.jpg",
+      "previous_album": "album-1-8",
+      "previous_caption": "กิจกรรมปลูกต้นไม้ส่งเสริมความรับผิดชอบและจิตสาธารณะ",
+      "current_album": "album-1-8",
+      "current_caption": "ครูและผู้เรียนร่วมปลูกต้นไม้",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260721_093801.jpg",
+      "previous_album": "album-1-8",
+      "previous_caption": "กิจกรรมวันสำคัญทางศาสนาเพื่อปลูกฝังคุณธรรม",
+      "current_album": "album-ethics-volunteer",
+      "current_caption": "ครูและผู้เรียนร่วมกิจกรรมทางศาสนา",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260616_094345.jpg",
+      "previous_album": "album-1-8",
+      "previous_caption": "พิธีไหว้ครู ส่งเสริมคุณธรรม ความกตัญญูกตเวทิตา และระเบียบวินัย (๑๖ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260616_111700.jpg",
+      "previous_album": "album-1-8",
+      "previous_caption": "พิธีไหว้ครู ส่งเสริมคุณธรรม ความกตัญญูกตเวทิตา และระเบียบวินัย (๑๖ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260616_145717.jpg",
+      "previous_album": "album-1-8",
+      "previous_caption": "พิธีไหว้ครู ส่งเสริมคุณธรรม ความกตัญญูกตเวทิตา และระเบียบวินัย (๑๖ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260518_132255.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "ใช้ระบบดิจิทัลบันทึกข้อมูลและติดตามความก้าวหน้ารายบุคคล",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260611_132506.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "ตรวจสอบผลจากกิจกรรมออนไลน์เพื่อวางแผนพัฒนาผู้เรียน",
+      "current_album": "album-1-5",
+      "current_caption": "ผู้เรียนตอบคำถามในแบบฟอร์มออนไลน์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260611_132457.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "บันทึกผลการทำภารกิจของผู้เรียนผ่านระบบสารสนเทศ",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260518_132305.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "จัดเก็บข้อมูลคำตอบรายบุคคลเพื่อใช้ติดตามและช่วยเหลือ",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251106_070823.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "การจัดเตรียมระบบสารสนเทศข้อมูลผู้เรียนภาคเรียนที่ ๒/๒๕๖๘ (๖ พ.ย. ๒๕๖๘)",
+      "current_album": "album-duty-scout",
+      "current_caption": "ครูดูแลผู้เรียนบริเวณทางเข้าโรงเรียน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260126_104816.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "การปรับปรุงฐานข้อมูลสารสนเทศการเรียนรู้ของผู้เรียน (๒๖ ม.ค. ๒๕๖๙)",
+      "current_album": "album-2-4",
+      "current_caption": "การส่งมอบสิ่งของสนับสนุนให้แก่สถานศึกษา",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260529_090725.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "การจัดทำสารสนเทศการเรียนรู้และทะเบียนข้อมูลผู้เรียนในระบบดิจิทัล (๒๙ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260529_095504.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "การจัดทำสารสนเทศการเรียนรู้และทะเบียนข้อมูลผู้เรียนในระบบดิจิทัล (๒๙ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260529_102240_1.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "การจัดทำสารสนเทศการเรียนรู้และทะเบียนข้อมูลผู้เรียนในระบบดิจิทัล (๒๙ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260825_105722.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "การประมวลผลข้อมูลสารสนเทศผู้เรียนและรายงานความก้าวหน้าทางการศึกษา (๒๕ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260826_080436.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "การประมวลผลข้อมูลสารสนเทศผู้เรียนและรายงานความก้าวหน้าทางการศึกษา (๒๖ ส.ค. ๒๕๖๙)",
+      "current_album": "album-duty-scout",
+      "current_caption": "ผู้บังคับบัญชาลูกเสือและผู้เรียนร่วมกิจกรรมหน้าเสาธง",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260827_082928.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "การประมวลผลข้อมูลสารสนเทศผู้เรียนและรายงานความก้าวหน้าทางการศึกษา (๒๗ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260828_192815.jpg",
+      "previous_album": "album-2-1",
+      "previous_caption": "การประมวลผลข้อมูลสารสนเทศผู้เรียนและรายงานความก้าวหน้าทางการศึกษา (๒๘ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260519_164336.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "เยี่ยมบ้านเพื่อศึกษาสภาพจริงและวางแนวทางช่วยเหลือผู้เรียน",
+      "current_album": "album-2-2",
+      "current_caption": "เยี่ยมบ้านนักเรียนร่วมกับครอบครัว วันที่ 19 พฤษภาคม",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260520_163341.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "ครูและผู้ปกครองร่วมแลกเปลี่ยนข้อมูลระหว่างการเยี่ยมบ้าน",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260520_164914.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "บันทึกสภาพแวดล้อมและข้อมูลจำเป็นของผู้เรียนระหว่างเยี่ยมบ้าน",
+      "current_album": "album-2-2",
+      "current_caption": "พบผู้เรียนและครอบครัวระหว่างการเยี่ยมบ้าน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260521_164311.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "ติดตามผู้เรียนถึงบ้านอย่างต่อเนื่องตามระบบดูแลช่วยเหลือ",
+      "current_album": "album-2-2",
+      "current_caption": "ติดตามผู้เรียนร่วมกับครอบครัวที่บ้าน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260520_084955.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนตามระบบดูแลช่วยเหลือนักเรียนอย่างทั่วถึง (๒๐ พ.ค. ๒๕๖๙)",
+      "current_album": "album-ict-project",
+      "current_caption": "ผู้เรียนทดลองใช้งานชุดอุปกรณ์หุ่นยนต์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260507_151542_1.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนเพื่อศึกษาสภาพจริงและวางแนวทางช่วยเหลือ (๗ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260507_151626.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนเพื่อศึกษาสภาพจริงและวางแนวทางช่วยเหลือ (๗ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260507_151845.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนเพื่อศึกษาสภาพจริงและวางแนวทางช่วยเหลือ (๗ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260507_152230.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนเพื่อศึกษาสภาพจริงและวางแนวทางช่วยเหลือ (๗ พ.ค. ๒๕๖๙)",
+      "current_album": "album-1-3",
+      "current_caption": "ผู้เรียนร่วมเขียนงานบนกระดาษแผ่นใหญ่",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260508_065723.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนเพื่อศึกษาสภาพจริงและวางแนวทางช่วยเหลือ (๘ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260508_145631.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนเพื่อศึกษาสภาพจริงและวางแนวทางช่วยเหลือ (๘ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260519_164338.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนตามระบบดูแลช่วยเหลือนักเรียนอย่างทั่วถึง (๑๙ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260519_164338_1.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนตามระบบดูแลช่วยเหลือนักเรียนอย่างทั่วถึง (๑๙ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260521_170346_1.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนตามระบบดูแลช่วยเหลือนักเรียนอย่างทั่วถึง (๒๑ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260521_173110.jpg",
+      "previous_album": "album-2-2",
+      "previous_caption": "การลงพื้นที่เยี่ยมบ้านนักเรียนตามระบบดูแลช่วยเหลือนักเรียนอย่างทั่วถึง (๒๑ พ.ค. ๒๕๖๙)",
+      "current_album": "album-2-2",
+      "current_caption": "คณะครูพบครอบครัวนักเรียนระหว่างการเยี่ยมบ้าน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260224_091508.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "ดูแลระบบคอมพิวเตอร์และโครงสร้างพื้นฐานเพื่อสนับสนุนการเรียนรู้",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260617_164612.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "ตรวจสอบและบำรุงรักษาเครื่องคอมพิวเตอร์ให้พร้อมใช้งาน",
+      "current_album": "album-2-3",
+      "current_caption": "ครูทำความสะอาดแป้นพิมพ์และอุปกรณ์คอมพิวเตอร์",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251118_105930.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "จัดระเบียบและตรวจความพร้อมของอุปกรณ์ห้องคอมพิวเตอร์",
+      "current_album": "album-2-3",
+      "current_caption": "ครูดูแลอุปกรณ์บริเวณโต๊ะคอมพิวเตอร์",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260313_085710.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "ปรับปรุงระบบอุปกรณ์และเครือข่ายของสถานศึกษา",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251218_084338.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การดูแลบำรุงรักษาระบบเครือข่ายและเทคโนโลยีสารสนเทศของสถานศึกษา (๑๘ ธ.ค. ๒๕๖๘)",
+      "current_album": "album-duty-scout",
+      "current_caption": "คณะผู้บังคับบัญชาลูกเสือในกิจกรรมค่าย",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251218_181312_1.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การดูแลบำรุงรักษาระบบเครือข่ายและเทคโนโลยีสารสนเทศของสถานศึกษา (๑๘ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251219_112910_3.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การดูแลบำรุงรักษาระบบเครือข่ายและเทคโนโลยีสารสนเทศของสถานศึกษา (๑๙ ธ.ค. ๒๕๖๘)",
+      "current_album": "album-duty-scout",
+      "current_caption": "ภาพรวมกิจกรรมชุมนุมลูกเสือกลางแจ้ง",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251222_153401.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การดูแลบำรุงรักษาระบบเครือข่ายและเทคโนโลยีสารสนเทศของสถานศึกษา (๒๒ ธ.ค. ๒๕๖๘)",
+      "current_album": "album-2-3",
+      "current_caption": "ครูตรวจอุปกรณ์คอมพิวเตอร์ในห้องเรียน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251222_153403.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การดูแลบำรุงรักษาระบบเครือข่ายและเทคโนโลยีสารสนเทศของสถานศึกษา (๒๒ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260309_090442.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การจัดเตรียมระบบอุปกรณ์เพื่อสนับสนุนการสอบประเมินคุณภาพ (๙ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260313_084524.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การบำรุงรักษาระบบคอมพิวเตอร์และเครือข่ายอินเทอร์เน็ตช่วงปิดภาคเรียน (๑๓ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260318_163606.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การบำรุงรักษาระบบคอมพิวเตอร์และเครือข่ายอินเทอร์เน็ตช่วงปิดภาคเรียน (๑๘ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260320_162320.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การบำรุงรักษาระบบคอมพิวเตอร์และเครือข่ายอินเทอร์เน็ตช่วงปิดภาคเรียน (๒๐ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260323_100544.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การปฏิบัติหน้าที่งานวิชาการสนับสนุนการบริหารสถานศึกษา (๒๓ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260323_100611.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การปฏิบัติหน้าที่งานวิชาการสนับสนุนการบริหารสถานศึกษา (๒๓ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260323_101446.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การปฏิบัติหน้าที่งานวิชาการสนับสนุนการบริหารสถานศึกษา (๒๓ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260323_101510.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การปฏิบัติหน้าที่งานวิชาการสนับสนุนการบริหารสถานศึกษา (๒๓ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260323_101528.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การปฏิบัติหน้าที่งานวิชาการสนับสนุนการบริหารสถานศึกษา (๒๓ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260617_164613_2.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การตรวจเช็คและซ่อมบำรุงอุปกรณ์คอมพิวเตอร์ให้พร้อมจัดการเรียนรู้ (๑๗ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260617_164628.jpg",
+      "previous_album": "album-2-3",
+      "previous_caption": "การตรวจเช็คและซ่อมบำรุงอุปกรณ์คอมพิวเตอร์ให้พร้อมจัดการเรียนรู้ (๑๗ มิ.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260506_085132.jpg",
+      "previous_album": "album-2-4",
+      "previous_caption": "ประชุมผู้ปกครองเพื่อสื่อสารข้อมูลผู้เรียนและสร้างความร่วมมือ",
+      "current_album": "album-2-4",
+      "current_caption": "ประชุมผู้ปกครองนักเรียน ภาคเรียนที่ 1 ปีการศึกษา 2569",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260907_141703.jpg",
+      "previous_album": "album-2-4",
+      "previous_caption": "สื่อสารแนวทางดูแลผู้เรียนร่วมกับผู้ปกครองรายชั้นเรียน",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260506_085133.jpg",
+      "previous_album": "album-2-4",
+      "previous_caption": "ชี้แจงแนวทางดำเนินงานและรับฟังความคิดเห็นจากผู้ปกครอง",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260618_173246.jpg",
+      "previous_album": "album-2-4",
+      "previous_caption": "ร่วมประชุมกับคณะกรรมการสถานศึกษาและภาคีเครือข่าย",
+      "current_album": "album-school-board",
+      "current_caption": "ผู้เข้าร่วมประชุมคณะกรรมการสถานศึกษาร่วมพิจารณาเอกสาร",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260819_143413.jpg",
+      "previous_album": "album-2-4",
+      "previous_caption": "การประสานความร่วมมือกับชุมชนและภาคีเครือข่ายเพื่อการศึกษา (๑๙ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260819_143417.jpg",
+      "previous_album": "album-2-4",
+      "previous_caption": "การประสานความร่วมมือกับชุมชนและภาคีเครือข่ายเพื่อการศึกษา (๑๙ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260506_085129.jpg",
+      "previous_album": "album-2-4",
+      "previous_caption": "การประชุมผู้ปกครองภาคเรียนที่ ๑/๒๕๖๙ ชี้แจงแนวทางการจัดการเรียนรู้ (๖ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260506_085417.jpg",
+      "previous_album": "album-2-4",
+      "previous_caption": "การประชุมผู้ปกครองภาคเรียนที่ ๑/๒๕๖๙ ชี้แจงแนวทางการจัดการเรียนรู้ (๖ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260506_094422.jpg",
+      "previous_album": "album-2-4",
+      "previous_caption": "การประชุมผู้ปกครองภาคเรียนที่ ๑/๒๕๖๙ ชี้แจงแนวทางการจัดการเรียนรู้ (๖ พ.ค. ๒๕๖๙)",
+      "current_album": "album-2-4",
+      "current_caption": "ครูพบผู้ปกครองและผู้เรียนในห้องเรียนหลังการประชุม",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260506_094429.jpg",
+      "previous_album": "album-2-4",
+      "previous_caption": "การประชุมผู้ปกครองภาคเรียนที่ ๑/๒๕๖๙ ชี้แจงแนวทางการจัดการเรียนรู้ (๖ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg",
+      "previous_album": "album-3-1",
+      "previous_caption": "เกียรติบัตรการพัฒนาความรู้ด้าน AI Learning Hub และ OBEC Content Center",
+      "current_album": "album-3-1",
+      "current_caption": "เกียรติบัตรอบรม AI Learning Hub และ OBEC Content Center",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/messageImage_1783918653571.jpg",
+      "previous_album": "album-3-1",
+      "previous_caption": "เกียรติบัตรพัฒนาความรู้และฝึกสอนการสร้างสื่อด้วย AI",
+      "current_album": "album-awards",
+      "current_caption": "เกียรติบัตรครูผู้ฝึกสอนนักเรียนเข้าร่วมประกวดสร้างสื่อด้วย AI ม.1–3",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/Picture1.png",
+      "previous_album": "album-3-1",
+      "previous_caption": "ผ่านการอบรมการจัดการเรียนรู้ปัญญาประดิษฐ์ ระดับมัธยมศึกษาปีที่ 1-3",
+      "current_album": "album-3-1",
+      "current_caption": "เกียรติบัตรอบรมการจัดการเรียนรู้ปัญญาประดิษฐ์ ม.1–3 จำนวน 20 ชั่วโมง",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/Picture2.png",
+      "previous_album": "album-3-1",
+      "previous_caption": "ผ่านการอบรมการจัดการเรียนรู้ปัญญาประดิษฐ์ ระดับประถมศึกษาปีที่ 4-6",
+      "current_album": "album-3-1",
+      "current_caption": "เกียรติบัตรอบรมการจัดการเรียนรู้ปัญญาประดิษฐ์ ป.4–6 จำนวน 8 ชั่วโมง",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260506_155728.jpg",
+      "previous_album": "album-3-2",
+      "previous_caption": "ประชุมแลกเปลี่ยนเรียนรู้ทางวิชาชีพและร่วมวางแผนพัฒนาผู้เรียน",
+      "current_album": "album-3-2",
+      "current_caption": "คณะครูประชุมร่วมกันรอบโต๊ะในห้องประชุม",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260105_173546.jpg",
+      "previous_album": "album-3-2",
+      "previous_caption": "คณะครูร่วมประชุมสะท้อนผลและกำหนดแนวทางการทำงาน",
+      "current_album": "album-3-2",
+      "current_caption": "คณะครูเข้าร่วมประชุม วันที่ 5 มกราคม",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260610_162021.jpg",
+      "previous_album": "album-3-2",
+      "previous_caption": "แลกเปลี่ยนข้อมูลการจัดการเรียนรู้และการดำเนินงานในที่ประชุมครู",
+      "current_album": "album-3-2",
+      "current_caption": "การประชุมคณะครู วันที่ 10 มิถุนายน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260901_152108.jpg",
+      "previous_album": "album-3-2",
+      "previous_caption": "ประชุมสะท้อนผลการดำเนินงานและวางแผนพัฒนาร่วมกัน",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260115_093505.jpg",
+      "previous_album": "album-3-2",
+      "previous_caption": "การประชุมกลุ่มย่อย PLC เพื่อแลกเปลี่ยนเรียนรู้แนวทางพัฒนาการสอน (๑๕ ม.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260123_165512.jpg",
+      "previous_album": "album-3-2",
+      "previous_caption": "การประชุมกลุ่มย่อย PLC เพื่อแลกเปลี่ยนเรียนรู้แนวทางพัฒนาการสอน (๒๓ ม.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260123_165708.jpg",
+      "previous_album": "album-3-2",
+      "previous_caption": "การประชุมกลุ่มย่อย PLC เพื่อแลกเปลี่ยนเรียนรู้แนวทางพัฒนาการสอน (๒๓ ม.ค. ๒๕๖๙)",
+      "current_album": "album-2-3",
+      "current_caption": "การจัดโต๊ะเอกสารและผลงานในห้องเรียน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260724_085632.jpg",
+      "previous_album": "album-3-3",
+      "previous_caption": "นำความรู้ด้านสื่อสามมิติและเกมดิจิทัลมาประยุกต์ใช้",
+      "current_album": "album-3-3",
+      "current_caption": "ผู้เรียนใช้โปรแกรมสร้างฉากสามมิติ CoSpaces",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260803_085102.jpg",
+      "previous_album": "album-3-3",
+      "previous_caption": "ผู้เรียนใช้สื่อ Gamification ที่ครูนำมาพัฒนากิจกรรม",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260311_143723.jpg",
+      "previous_album": "album-3-3",
+      "previous_caption": "ประยุกต์ความรู้ด้าน Coding เป็นกิจกรรมสร้างชิ้นงานของผู้เรียน",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_133655.jpg",
+      "previous_album": "album-3-3",
+      "previous_caption": "ผู้เรียนใช้สื่อดิจิทัลที่ครูพัฒนาผ่านการฝึกปฏิบัติจริง",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_04.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การจัดกิจกรรมฝึกทักษะการใช้เมาส์และคอมพิวเตอร์สำหรับนักเรียนชั้น ป.๑ (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_05.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "นักเรียน ป.๑ ฝึกปฏิบัติการควบคุมเมาส์ผ่านบทเรียนคอมพิวเตอร์อย่างตั้งใจ (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/comlab_p1_authentic_10sep2026_overview.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "นักเรียนชั้น ป.๑ (๑๑ คน) ในชุดพละสีส้ม ฝึกปฏิบัติการใช้เมาส์ ๑ คนต่อ ๑ เครื่อง (๑๐ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/comlab_eval_mouse100_girl.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การทดสอบภาคปฏิบัติการใช้เมาส์คอมพิวเตอร์ ผ่านเกณฑ์ผลสัมฤทธิ์ร้อยละ ๑๐๐ (๑๐ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/comlab_eval_mouse100_boy.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "ความคล่องแคล่วในการควบคุมเมาส์และจับจังหวะการคลิกผ่านเกมการศึกษา (๑๐ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/media_pa/IMG_20260910_133436.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "นักเรียน ป.๑ ฝึกใช้เมาส์และการเขียนโปรแกรมแบบบล็อก Code.org (๑๐ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/worksheets/worksheet_p1_computer_devices.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "ใบงานฝึกทักษะวิทยาการคำนวณ ป.๑ รู้จักอุปกรณ์คอมพิวเตอร์เบื้องต้น เสริมการเรียนรู้ควบคู่เกมมิฟิเคชัน (๑ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/worksheets/worksheet_hardware_software.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "ใบงานจำแนกฮาร์ดแวร์และซอฟต์แวร์ กิจกรรมเสริมทักษะความรู้ความเข้าใจอุปกรณ์คอมพิวเตอร์ ป.๑ (๑ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260223_105749.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การจัดกิจกรรมแก้ปัญหาทักษะการใช้เมาส์ของนักเรียนชั้น ป.๑ (๒๓ ก.พ. ๖๙)",
+      "current_album": "album-1-4",
+      "current_caption": "ผู้เรียนตอบคำถามบนหน้าจอสัมผัส",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260611_132439.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การใช้สื่อเกมคอมพิวเตอร์และ Gamification เพื่อฝึกกล้ามเนื้อมัดเล็ก (๑๑ มิ.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260611_132449.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การประเมินทักษะการจับเมาส์และการคลิกตามสภาพจริง (๑๑ มิ.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260901_152243.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การบันทึกวิดีโอกระบวนการจัดการเรียนรู้ตามประเด็นท้าทาย ป.๑ (๑ ก.ย. ๖๙)",
+      "current_album": "album-3-2",
+      "current_caption": "การประชุมครูโดยใช้จอแสดงข้อมูลประกอบ วันที่ 1 กันยายน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_133436.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "นักเรียน ป.๑ ทั้ง ๑๑ คน ปฏิบัติกิจกรรมจริง ๑ คน ๑ เครื่องอย่างคล่องแคล่ว (๑๐ ก.ย. ๖๙)",
+      "current_album": "album-pa-p1",
+      "current_caption": "ผู้เรียนฝึกใช้เมาส์กับกิจกรรมบล็อกคำสั่ง Code.org",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_133649.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การประเมินภาคปฏิบัติการใช้เมาส์ ป.๑ บรรลุผลสัมฤทธิ์ตามเกณฑ์ ๑๐๐% (๑๐ ก.ย. ๖๙)",
+      "current_album": "album-pa-p1",
+      "current_caption": "ผู้เรียนใช้เมาส์ควบคุมกิจกรรมบนเว็บไซต์ห้องเรียนครูเจมส์",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_133655.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "ภาพความสำเร็จของผู้เรียนชั้น ป.๑ ในการใช้เทคโนโลยีคอมพิวเตอร์อย่างมั่นใจ (๑๐ ก.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_085619.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การจัดกิจกรรมประเด็นท้าทาย ฝึกทักษะการใช้เมาส์ ป.๑ และประเมินภาคปฏิบัติ (๑๐ ก.ย. ๒๕๖๙)",
+      "current_album": "album-ethics-volunteer",
+      "current_caption": "คณะครูร่วมกิจกรรมเกี่ยวกับถังคัดแยกขยะ",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_085625.jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การจัดกิจกรรมประเด็นท้าทาย ฝึกทักษะการใช้เมาส์ ป.๑ และประเมินภาคปฏิบัติ (๑๐ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_133433(1).jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การจัดกิจกรรมประเด็นท้าทาย ฝึกทักษะการใช้เมาส์ ป.๑ และประเมินภาคปฏิบัติ (๑๐ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_133441(1).jpg",
+      "previous_album": "album-pa-p1",
+      "previous_caption": "การจัดกิจกรรมประเด็นท้าทาย ฝึกทักษะการใช้เมาส์ ป.๑ และประเมินภาคปฏิบัติ (๑๐ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_01.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "ภาพกิจกรรม Big cleaning 69 ร่วมพัฒนาสถานศึกษา ภาพที่ 1 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_02.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "ภาพกิจกรรม Big cleaning 69 ร่วมพัฒนาสถานศึกษา ภาพที่ 2 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_03.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "ภาพกิจกรรม Big cleaning 69 ร่วมพัฒนาสถานศึกษา ภาพที่ 3 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_04.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "ภาพกิจกรรม Big cleaning 69 ร่วมพัฒนาสถานศึกษา ภาพที่ 4 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_05.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "ภาพกิจกรรม Big cleaning 69 ร่วมพัฒนาสถานศึกษา ภาพที่ 5 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_06.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "ภาพกิจกรรม Big cleaning 69 ร่วมพัฒนาสถานศึกษา ภาพที่ 6 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_07.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "ภาพกิจกรรม Big cleaning 69 ร่วมพัฒนาสถานศึกษา ภาพที่ 7 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_08.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "ภาพกิจกรรม Big cleaning 69 ร่วมพัฒนาสถานศึกษา ภาพที่ 8 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_09.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "ภาพกิจกรรม Big cleaning 69 ร่วมพัฒนาสถานศึกษา ภาพที่ 9 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_10.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "ภาพกิจกรรม Big cleaning 69 ร่วมพัฒนาสถานศึกษา ภาพที่ 10 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_01.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "กิจกรรมบำเพ็ญประโยชน์ จิตอาสา Big Cleaning ๒๕๖๙ ภาพที่ 1",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_02.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "กิจกรรมบำเพ็ญประโยชน์ จิตอาสา Big Cleaning ๒๕๖๙ ภาพที่ 2",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_03.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "กิจกรรมบำเพ็ญประโยชน์ จิตอาสา Big Cleaning ๒๕๖๙ ภาพที่ 3",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_04.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "กิจกรรมบำเพ็ญประโยชน์ จิตอาสา Big Cleaning ๒๕๖๙ ภาพที่ 4",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_05.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "กิจกรรมบำเพ็ญประโยชน์ จิตอาสา Big Cleaning ๒๕๖๙ ภาพที่ 5",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_06.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "กิจกรรมบำเพ็ญประโยชน์ จิตอาสา Big Cleaning ๒๕๖๙ ภาพที่ 6",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_07.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "กิจกรรมบำเพ็ญประโยชน์ จิตอาสา Big Cleaning ๒๕๖๙ ภาพที่ 7",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_08.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "กิจกรรมบำเพ็ญประโยชน์ จิตอาสา Big Cleaning ๒๕๖๙ ภาพที่ 8",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260502_090653.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "กิจกรรม Big Cleaning Day รวมพลังทำความสะอาดและปรับปรุงภูมิทัศน์โรงเรียน (๒ พ.ค. ๖๙)",
+      "current_album": "album-big-cleaning",
+      "current_caption": "ร่วมฉีดน้ำและกวาดทำความสะอาดทางเดินอาคาร",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260502_094601.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "การพัฒนาอาคารสถานที่และบริเวณโดยรอบสถานศึกษาให้สะอาด ปลอดภัย (๒ พ.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260502_094648.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "การจัดระเบียบห้องเรียนและห้องปฏิบัติการคอมพิวเตอร์พร้อมรับเปิดเทอม (๒ พ.ค. ๖๙)",
+      "current_album": "album-big-cleaning",
+      "current_caption": "คณะครูร่วมล้างพื้นภายในอาคารเรียน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260502_094808.jpg",
+      "previous_album": "album-big-cleaning",
+      "previous_caption": "บรรยากาศจิตอาสาและความร่วมมือร่วมใจของคณะครูและบุคลากร (๒ พ.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ScienceDay_01.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ภาพกิจกรรมค่ายวิชาการ วันวิทยาศาสตร์ ๒๕๖๙ ภาพที่ 1 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ScienceDay_02.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ภาพกิจกรรมค่ายวิชาการ วันวิทยาศาสตร์ ๒๕๖๙ ภาพที่ 2 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ScienceDay_03.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ภาพกิจกรรมค่ายวิชาการ วันวิทยาศาสตร์ ๒๕๖๙ ภาพที่ 3 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ScienceDay_04.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ภาพกิจกรรมค่ายวิชาการ วันวิทยาศาสตร์ ๒๕๖๙ ภาพที่ 4 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ScienceDay_05.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ภาพกิจกรรมค่ายวิชาการ วันวิทยาศาสตร์ ๒๕๖๙ ภาพที่ 5 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ScienceDay_06.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ภาพกิจกรรมค่ายวิชาการ วันวิทยาศาสตร์ ๒๕๖๙ ภาพที่ 6 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ScienceDay_07.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ภาพกิจกรรมค่ายวิชาการ วันวิทยาศาสตร์ ๒๕๖๙ ภาพที่ 7 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ScienceDay_08.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ภาพกิจกรรมค่ายวิชาการ วันวิทยาศาสตร์ ๒๕๖๙ ภาพที่ 8 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ScienceDay_09.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ภาพกิจกรรมค่ายวิชาการ วันวิทยาศาสตร์ ๒๕๖๙ ภาพที่ 9 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ScienceDay_10.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ภาพกิจกรรมค่ายวิชาการ วันวิทยาศาสตร์ ๒๕๖๙ ภาพที่ 10 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_01.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 1",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_02.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 2",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_03.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 3",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_04.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 4",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_05.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 5",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_06.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 6",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_07.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 7",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_08.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 8",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_09.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 9",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_10.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 10",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_11.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 11",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ค่ายวิชาการ_ActiveLearning/camp_12.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมวันวิทยาศาสตร์ ๑๗ ก.ค. ๒๕๖๙ ฐานการเรียนรู้วิทยาศาสตร์และเทคโนโลยี ภาพที่ 12",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260721_083343.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "พิธีเปิดกิจกรรมสัปดาห์วิทยาศาสตร์และค่ายวิชาการสะเต็มศึกษา (๒๑ ก.ค. ๖๙)",
+      "current_album": "album-ethics-volunteer",
+      "current_caption": "ขบวนกิจกรรมทางศาสนาในชุมชน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260721_093801.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "การจัดนิทรรศการฐานการเรียนรู้นวัตกรรมและวิทยาศาสตร์ดิจิทัล (๒๑ ก.ค. ๖๙)",
+      "current_album": "album-ethics-volunteer",
+      "current_caption": "ครูและผู้เรียนร่วมกิจกรรมทางศาสนา",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260723_082840.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมการทดลองวิทยาศาสตร์แสนสนุก ผู้เรียนได้ลงมือปฏิบัติจริง (๒๓ ก.ค. ๖๙)",
+      "current_album": "album-1-8",
+      "current_caption": "ครูพูดคุยกับผู้เรียนที่นั่งรวมกลุ่มบริเวณอาคารเรียน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260723_082847.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "การมีส่วนร่วมของนักเรียนในกิจกรรมตอบปัญหาวิทยาศาสตร์ (๒๓ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260723_082859.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "ฐานการเรียนรู้เทคโนโลยีและการคิดเชิงคำนวณในวันวิทยาศาสตร์ (๒๓ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260724_085940.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "การจัดแสดงสิ่งประดิษฐ์และโครงงานวิทยาศาสตร์ของนักเรียน (๒๔ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260724_090027.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "การประกวดชุดรีไซเคิลและความคิดสร้างสรรค์ในสัปดาห์วิทยาศาสตร์ (๒๔ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260724_132025.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "บรรยากาศการมอบรางวัลและเกียรติบัตรกิจกรรมวันวิทยาศาสตร์ (๒๔ ก.ค. ๖๙)",
+      "current_album": "album-career-skills",
+      "current_caption": "ผู้เรียนรดน้ำและดูแลพื้นที่แปลงปลูก",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260721_105826.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมสัปดาห์วันวิทยาศาสตร์แห่งชาติ บูรณาการเทคโนโลยีดิจิทัล (๒๑ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260721_105953.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมสัปดาห์วันวิทยาศาสตร์แห่งชาติ บูรณาการเทคโนโลยีดิจิทัล (๒๑ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260722_072802.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมสัปดาห์วันวิทยาศาสตร์แห่งชาติ บูรณาการเทคโนโลยีดิจิทัล (๒๒ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260723_100028.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมสัปดาห์วันวิทยาศาสตร์แห่งชาติ บูรณาการเทคโนโลยีดิจิทัล (๒๓ ก.ค. ๒๕๖๙)",
+      "current_album": "album-1-4",
+      "current_caption": "ตัวอย่างฉากสามมิติในโปรแกรม CoSpaces",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260723_142302.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมสัปดาห์วันวิทยาศาสตร์แห่งชาติ บูรณาการเทคโนโลยีดิจิทัล (๒๓ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260724_132027.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมสัปดาห์วันวิทยาศาสตร์แห่งชาติ บูรณาการเทคโนโลยีดิจิทัล (๒๔ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260724_154620.jpg",
+      "previous_album": "album-science-day",
+      "previous_caption": "กิจกรรมสัปดาห์วันวิทยาศาสตร์แห่งชาติ บูรณาการเทคโนโลยีดิจิทัล (๒๔ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_01.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ภาพกิจกรรมการเรียนการสอนโครงการ ICT และห้องเรียนเทคโนโลยี ภาพที่ 1 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_02.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ภาพกิจกรรมการเรียนการสอนโครงการ ICT และห้องเรียนเทคโนโลยี ภาพที่ 2 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_03.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ภาพกิจกรรมการเรียนการสอนโครงการ ICT และห้องเรียนเทคโนโลยี ภาพที่ 3 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_04.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ภาพกิจกรรมการเรียนการสอนโครงการ ICT และห้องเรียนเทคโนโลยี ภาพที่ 4 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_05.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ภาพกิจกรรมการเรียนการสอนโครงการ ICT และห้องเรียนเทคโนโลยี ภาพที่ 5 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_06.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ภาพกิจกรรมการเรียนการสอนโครงการ ICT และห้องเรียนเทคโนโลยี ภาพที่ 6 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_07.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ภาพกิจกรรมการเรียนการสอนโครงการ ICT และห้องเรียนเทคโนโลยี ภาพที่ 7 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_08.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ภาพกิจกรรมการเรียนการสอนโครงการ ICT และห้องเรียนเทคโนโลยี ภาพที่ 8 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_09.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ภาพกิจกรรมการเรียนการสอนโครงการ ICT และห้องเรียนเทคโนโลยี ภาพที่ 9 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/ICT_10.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ภาพกิจกรรมการเรียนการสอนโครงการ ICT และห้องเรียนเทคโนโลยี ภาพที่ 10 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/06_ภาพเกียรติบัตรและรางวัล/LINE_ALBUM_อนันตชัย_260712_1.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "การสัมมนาแลกเปลี่ยนเรียนรู้ AI Learning Hub และระบบคลังสื่อเทคโนโลยี สพป.กำแพงเพชร เขต ๒",
+      "current_album": "album-3-1",
+      "current_caption": "เกียรติบัตรอบรม AI Learning Hub และ OBEC Content Center",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260530_101743.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "การพัฒนาระบบเครือข่ายและระบบสารสนเทศดิจิทัลสถานศึกษา",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/06_สื่อการสอน_องค์ประกอบหลักของระบบคอมพิวเตอร์.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "สื่อ Infographic องค์ประกอบหลักของระบบคอมพิวเตอร์",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260619_131355.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "สตูดิโอบันทึกสื่อวิดีโอและการผลิตคอนเทนต์ดิจิทัลเพื่อการศึกษา",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/media_pa/IMG_20260611_132506.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "สถานีคอมพิวเตอร์พร้อมใช้งานเต็มรูปแบบ ๑ คน ๑ เครื่อง",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260624_170332.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "งานโสตทัศนูปกรณ์และประชาสัมพันธ์สถานศึกษา (๒๔ มิ.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/kmd_facebook_page_admin.png",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ระบบบริหารจัดการเพจ Facebook โรงเรียนบ้านคลองมดแดง (๑.๒ พัน ผู้ติดตาม) แดชบอร์ดมืออาชีพและจัดการเพจทางการ",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/kmd_tiktok_channel_proof.png",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ช่องทางการเผยแพร่คลิปวิดีโอกิจกรรมสถานศึกษา TikTok KMDSchool (@kmdschool198) ผลิตและเผยแพร่วิดีโอการเรียนรู้",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/tiktok/tiktok_thumb_7607325599224384789.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "คลิป TikTok: เริ่มเขียนโค้ดกานน - การจัดกิจกรรม Coding & วิทยาการคำนวณ Active Learning (@anantachaiphetrri)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/tiktok/tiktok_thumb_7606317585637920020.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "คลิป TikTok: ฝึกพิมพ์ ค่อยๆเป็นค่อยๆไปเด็กๆ - ฝึกทักษะการพิมพ์สัมผัสและการใช้เมาส์ (@anantachaiphetrri)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/tiktok/tiktok_thumb_7678716067157413138.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "คลิป TikTok: MINI • VLOG | Today Activity บรรยากาศกิจกรรมการเรียนรู้และการปฏิบัติงานวิชาชีพครู (@anantachaiphetrri)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/tiktok/tiktok_thumb_7665629104816868615.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "คลิป TikTok: บรรยากาศการสอนในห้องปฏิบัติการคอมพิวเตอร์และสภาพแวดล้อมการเรียนรู้เชิงบวก (@anantachaiphetrri)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/tiktok/tiktok_thumb_7669739865117936903.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "คลิป TikTok: Do Hard มุ่งมั่นพัฒนาการศึกษา - ปฏิบัติงานและการสนับสนุนการจัดการเรียนรู้ (@anantachaiphetrri)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/tiktok/tiktok_thumb_7653159745699794183.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "คลิป TikTok: Mini | VLOG | November Recap ประมวลภาพรวมกิจกรรมการเรียนการสอน (@anantachaiphetrri)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20250923_150205.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "การวางแผนและพัฒนาโครงสร้างพื้นฐานเทคโนโลยีสารสนเทศ ICT (๒๓ ก.ย. ๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออก: อยู่นอกช่วง 1 ต.ค. 2568 – 30 ก.ย. 2569"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260202_084245.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "การจัดระบบคอมพิวเตอร์และเครือข่ายอินเทอร์เน็ตความเร็วสูงในสถานศึกษา (๒ ก.พ. ๖๙)",
+      "current_album": "album-1-3",
+      "current_caption": "ผู้เรียนกลุ่มเล็กทำกิจกรรมร่วมกันที่คอมพิวเตอร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260522_152942.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "การติดตั้งและทดสอบระบบคอมพิวเตอร์สำหรับการจัดการเรียนการสอน (๒๒ พ.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260529_100717.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "การบริหารจัดการคลังสื่อการเรียนรู้ดิจิทัลและระบบสารสนเทศโรงเรียน (๒๙ พ.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260819_070727.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "การบำรุงรักษาคอมพิวเตอร์และอุปกรณ์ไอซีทีให้พร้อมใช้งานอย่างสม่ำเสมอ (๑๙ ส.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_070803.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "ระบบสารสนเทศและห้องปฏิบัติการคอมพิวเตอร์พร้อมรับการประเมิน ว PA (๑๐ ก.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251228_091726.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "การพัฒนาระบบสื่อสารสนเทศและประชาสัมพันธ์ดิจิทัลของสถานศึกษา (๒๘ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251228_114502.jpg",
+      "previous_album": "album-ict-project",
+      "previous_caption": "การพัฒนาระบบสื่อสารสนเทศและประชาสัมพันธ์ดิจิทัลของสถานศึกษา (๒๘ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/CareerSkills_01.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ภาพกิจกรรมส่งเสริมอาชีพแก่ประชาชนและทักษะอาชีพ ภาพที่ 1 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/CareerSkills_02.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ภาพกิจกรรมส่งเสริมอาชีพแก่ประชาชนและทักษะอาชีพ ภาพที่ 2 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/CareerSkills_03.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ภาพกิจกรรมส่งเสริมอาชีพแก่ประชาชนและทักษะอาชีพ ภาพที่ 3 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/CareerSkills_04.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ภาพกิจกรรมส่งเสริมอาชีพแก่ประชาชนและทักษะอาชีพ ภาพที่ 4 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/CareerSkills_05.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ภาพกิจกรรมส่งเสริมอาชีพแก่ประชาชนและทักษะอาชีพ ภาพที่ 5 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/CareerSkills_06.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ภาพกิจกรรมส่งเสริมอาชีพแก่ประชาชนและทักษะอาชีพ ภาพที่ 6 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/CareerSkills_07.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ภาพกิจกรรมส่งเสริมอาชีพแก่ประชาชนและทักษะอาชีพ ภาพที่ 7 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/CareerSkills_08.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ภาพกิจกรรมส่งเสริมอาชีพแก่ประชาชนและทักษะอาชีพ ภาพที่ 8 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/CareerSkills_09.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ภาพกิจกรรมส่งเสริมอาชีพแก่ประชาชนและทักษะอาชีพ ภาพที่ 9 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/CareerSkills_10.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ภาพกิจกรรมส่งเสริมอาชีพแก่ประชาชนและทักษะอาชีพ ภาพที่ 10 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_01.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมอาชีพ แปลงเกษตร ม.๑ และทักษะชีวิต ภาพที่ 1",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_02.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมอาชีพ แปลงเกษตร ม.๑ และทักษะชีวิต ภาพที่ 2",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_03.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมอาชีพ แปลงเกษตร ม.๑ และทักษะชีวิต ภาพที่ 3",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_04.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมอาชีพ แปลงเกษตร ม.๑ และทักษะชีวิต ภาพที่ 4",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_05.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมอาชีพ แปลงเกษตร ม.๑ และทักษะชีวิต ภาพที่ 5",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_06.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมอาชีพ แปลงเกษตร ม.๑ และทักษะชีวิต ภาพที่ 6",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_07.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมอาชีพ แปลงเกษตร ม.๑ และทักษะชีวิต ภาพที่ 7",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_08.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมอาชีพ แปลงเกษตร ม.๑ และทักษะชีวิต ภาพที่ 8",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_09.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมอาชีพ แปลงเกษตร ม.๑ และทักษะชีวิต ภาพที่ 9",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_กิจกรรมส่งเสริมอาชีพ_ทักษะชีวิต/career_10.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมอาชีพ แปลงเกษตร ม.๑ และทักษะชีวิต ภาพที่ 10",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/school_ceo/ceo_event_students_action.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "การบูรณาการทักษะชีวิตและการงานอาชีพ: นักเรียนเตรียมผลผลิตอโวคาโดเพื่อแปรรูปสร้างมูลค่าเพิ่ม (๒ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/school_ceo/ceo_event_smoothie_action.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "การฝึกปฏิบัติทักษะอาชีพบาร์เครื่องดื่ม: นักเรียนลงมือปั่นสมูทตี้อโวคาโดตามขั้นตอนมาตรฐาน (๒ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/school_ceo/ceo_event_full_team.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "ทีมงานนักเรียนผู้ประกอบการรุ่นเยาว์ The School CEO กับความสำเร็จในการพัฒนาทักษะชีวิต (๒ ก.ย. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260514_151034.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมการเตรียมแปลงเกษตรเพื่อการเรียนรู้ทักษะอาชีพของนักเรียน ม.๑ (๑๔ พ.ค. ๖๙)",
+      "current_album": "album-1-2",
+      "current_caption": "ครูอธิบายบทเรียนด้วยจอแสดงผลในห้องคอมพิวเตอร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260518_132242.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "การลงมือปลูกผักสวนครัวและพืชผลทางการเกษตรตามแนวทางเศรษฐกิจพอเพียง (๑๘ พ.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260519_164336.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "การดูแล บำรุงรักษา และรดน้ำผลผลิตทางการเกษตรในสถานศึกษา (๑๙ พ.ค. ๖๙)",
+      "current_album": "album-2-2",
+      "current_caption": "เยี่ยมบ้านนักเรียนร่วมกับครอบครัว วันที่ 19 พฤษภาคม",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260520_162129.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "การฝึกทักษะการทำงานเป็นทีมและความรับผิดชอบผ่านกิจกรรมแปลงเกษตร (๒๐ พ.ค. ๖๙)",
+      "current_album": "album-2-2",
+      "current_caption": "เยี่ยมบ้านนักเรียน วันที่ 20 พฤษภาคม",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260521_162105.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "การเก็บเกี่ยวผลผลิตและการจำหน่ายสู่โครงการอาหารกลางวัน (๒๑ พ.ค. ๖๙)",
+      "current_album": "album-2-2",
+      "current_caption": "เยี่ยมบ้านและพบผู้ปกครอง วันที่ 21 พฤษภาคม",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260521_164311.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "การบูรณาการทักษะอาชีพและทักษะชีวิตเพื่อการพึ่งพาตนเองอย่างยั่งยืน (๒๑ พ.ค. ๖๙)",
+      "current_album": "album-2-2",
+      "current_caption": "ติดตามผู้เรียนร่วมกับครอบครัวที่บ้าน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260514_172626.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมทักษะอาชีพ การเกษตร และแปลงผัก ม.๑ (๑๔ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260514_172629.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมทักษะอาชีพ การเกษตร และแปลงผัก ม.๑ (๑๔ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260518_132237.jpg",
+      "previous_album": "album-career-skills",
+      "previous_caption": "กิจกรรมส่งเสริมทักษะอาชีพ การเกษตร และแปลงผัก ม.๑ (๑๘ พ.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/SchoolBoard_01.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "ภาพการประชุมคณะกรรมการสถานศึกษา ๑๘ มิถุนายน ๒๕๖๙ ภาพที่ 1 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/SchoolBoard_02.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "ภาพการประชุมคณะกรรมการสถานศึกษา ๑๘ มิถุนายน ๒๕๖๙ ภาพที่ 2 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/SchoolBoard_03.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "ภาพการประชุมคณะกรรมการสถานศึกษา ๑๘ มิถุนายน ๒๕๖๙ ภาพที่ 3 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/SchoolBoard_04.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "ภาพการประชุมคณะกรรมการสถานศึกษา ๑๘ มิถุนายน ๒๕๖๙ ภาพที่ 4 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/SchoolBoard_05.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "ภาพการประชุมคณะกรรมการสถานศึกษา ๑๘ มิถุนายน ๒๕๖๙ ภาพที่ 5 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/SchoolBoard_06.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "ภาพการประชุมคณะกรรมการสถานศึกษา ๑๘ มิถุนายน ๒๕๖๙ ภาพที่ 6 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/SchoolBoard_07.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "ภาพการประชุมคณะกรรมการสถานศึกษา ๑๘ มิถุนายน ๒๕๖๙ ภาพที่ 7 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/SchoolBoard_08.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "ภาพการประชุมคณะกรรมการสถานศึกษา ๑๘ มิถุนายน ๒๕๖๙ ภาพที่ 8 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/SchoolBoard_09.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "ภาพการประชุมคณะกรรมการสถานศึกษา ๑๘ มิถุนายน ๒๕๖๙ ภาพที่ 9 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/SchoolBoard_10.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "ภาพการประชุมคณะกรรมการสถานศึกษา ๑๘ มิถุนายน ๒๕๖๙ ภาพที่ 10 (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_01.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมและประสานงานคณะกรรมการสถานศึกษาขั้นพื้นฐาน ภาพที่ 1",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_02.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมและประสานงานคณะกรรมการสถานศึกษาขั้นพื้นฐาน ภาพที่ 2",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_03.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมและประสานงานคณะกรรมการสถานศึกษาขั้นพื้นฐาน ภาพที่ 3",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_04.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมและประสานงานคณะกรรมการสถานศึกษาขั้นพื้นฐาน ภาพที่ 4",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_05.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมและประสานงานคณะกรรมการสถานศึกษาขั้นพื้นฐาน ภาพที่ 5",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_06.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมและประสานงานคณะกรรมการสถานศึกษาขั้นพื้นฐาน ภาพที่ 6",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_07.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมและประสานงานคณะกรรมการสถานศึกษาขั้นพื้นฐาน ภาพที่ 7",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_คณะกรรมการสถานศึกษา_สัมพันธ์ชุมชน/board_08.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมและประสานงานคณะกรรมการสถานศึกษาขั้นพื้นฐาน ภาพที่ 8",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260506_155728.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมหารือความร่วมมือกับผู้นำชุมชนและคณะกรรมการสถานศึกษา (๖ พ.ค. ๖๙)",
+      "current_album": "album-3-2",
+      "current_caption": "คณะครูประชุมร่วมกันรอบโต๊ะในห้องประชุม",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260506_155731.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การแลกเปลี่ยนแนวทางการพัฒนาการศึกษาและการมีส่วนร่วมของชุมชน (๖ พ.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260618_163409.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน วางแผนยุทธศาสตร์การศึกษา (๑๘ มิ.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260618_173246.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การรายงานความก้าวหน้าและผลสัมฤทธิ์ทางการศึกษาต่อคณะกรรมการ (๑๘ มิ.ย. ๖๙)",
+      "current_album": "album-school-board",
+      "current_caption": "ผู้เข้าร่วมประชุมคณะกรรมการสถานศึกษาร่วมพิจารณาเอกสาร",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/MVIMG_20260817_180451.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประสานความร่วมมือระหว่างโรงเรียน บ้าน ชุมชน และภาคีเครือข่าย (๑๗ ส.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260618_173240.jpg",
+      "previous_album": "album-school-board",
+      "previous_caption": "การประชุมคณะกรรมการสถานศึกษาขั้นพื้นฐาน ร่วมพัฒนาคุณภาพการศึกษา (๑๘ มิ.ย. ๒๕๖๙)",
+      "current_album": "album-school-board",
+      "current_caption": "การประชุมคณะกรรมการสถานศึกษา วันที่ 18 มิถุนายน",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_03.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมบำเพ็ญประโยชน์และจิตอาสาเพื่อส่วนรวม (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/google_photos_curated/BigCleaning_04.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การร่วมดูแลรักษาสิ่งแวดล้อมและทรัพย์สินของสถานศึกษา (Google Photos)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260721_095340.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมส่งเสริมคุณธรรม จริยธรรม พิธีถวายเทียนพรรษาและฟังธรรม ณ วัดในชุมชน (๒๑ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/waikru_activity.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "พิธีไหว้ครู ๒๕๖๙ ปลูกฝังความกตัญญูกตเวทิตาและคุณธรรมแก่นักเรียน",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260728_073911_1.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "พิธีทำบุญตักบาตรและถวายสัตย์ปฏิญาณเพื่อเป็นข้าราชการที่ดี ๒๘ กรกฎาคม ๒๕๖๙",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260728_210402.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "พิธีถวายเครื่องราชสักการะ วางพานพุ่ม และจุดเทียนถวายพระพรชัยมงคล ณ ที่ว่าการอำเภอ (๒๘ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260603_134008.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "พิธีถวายพระพรชัยมงคล สมเด็จพระนางเจ้าฯ พระบรมราชินี ณ หอประชุมอำเภอแม่สรวย (๓ มิ.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260701_084943.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "พิธีทบทวนคำปฏิญาณและสวนสนาม วันสถาปนาคณะลูกเสือแห่งชาติ ปลูกฝังความเสียสละ (๑ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_01.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรม Big Cleaning ๒๕๖๙ จิตอาสาและจิตสาธารณะบำเพ็ญประโยชน์เพื่อสถานศึกษา",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_02.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การร่วมแรงร่วมใจทำความสะอาดและดูแลสภาพแวดล้อมโรงเรียน",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_03.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การปรับภูมิทัศน์และคัดแยกขยะเพื่อสุขอนามัยในสถานศึกษา",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_04.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การดูแลความสะอาดพื้นที่ส่วนรวมของนักเรียนและครู",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_05.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมสิ่งแวดล้อมน่าอยู่ น่าเรียน ด้วยพลังจิตอาสา",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_06.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การสร้างจิตสำนึกรักษ์สิ่งแวดล้อมและประหยัดพลังงาน",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_07.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การบำเพ็ญประโยชน์ร่วมกันเพื่อโรงเรียนที่สะอาดและปลอดภัย",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_BigCleaning_สนับสนุนสถานศึกษา/cleaning_08.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "พลังความร่วมมือครูและนักเรียนในการพัฒนาสิ่งแวดล้อมสถานศึกษา",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260508_070014.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การส่งเสริมความภาคภูมิใจในพหุวัฒนธรรมและอัตลักษณ์ท้องถิ่น (๘ พ.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence/media_pa/IMG_20260611_132444.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การจัดสภาพแวดล้อมห้องคอมฯ ส่งเสริมคุณลักษณะอันพึงประสงค์ วินัย และความพอเพียง",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251205_100158.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมน้อมรำลึกและบำเพ็ญกุศลเนื่องในวันพ่อแห่งชาติ ๕ ธันวาคม (๕ ธ.ค. ๖๘)",
+      "current_album": "album-1-7",
+      "current_caption": "บรรยากาศการทำงานเป็นกลุ่มย่อยในห้องคอมพิวเตอร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260603_134008.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมจิตอาสาบำเพ็ญสาธารณประโยชน์เนื่องในวันเฉลิมพระชนมพรรษา (๓ มิ.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260603_134012.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การปลูกจิตสำนึกอนุรักษ์สิ่งแวดล้อมและความสะอาดในชุมชน (๓ มิ.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260707_103450.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมวันสำคัญทางพระพุทธศาสนา พิธีถวายเทียนพรรษา (๗ ก.ค. ๖๙)",
+      "current_album": "album-1-4",
+      "current_caption": "หน้าจอเว็บไซต์ห้องเรียนครูเจมส์ที่ผู้เรียนกำลังใช้งาน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260707_103502.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การร่วมทำนุบำรุงพระพุทธศาสนาและสืบสานประเพณีอันดีงาม (๗ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260812_085559.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมเฉลิมพระเกียรติและวันแม่แห่งชาติ ๑๒ สิงหาคม (๑๒ ส.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260812_090051.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "การบำเพ็ญประโยชน์เพื่อสิ่งแวดล้อมและสังคมอย่างสม่ำเสมอ (๑๒ ส.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251204_085940.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมจิตอาสา บำเพ็ญประโยชน์ และส่งเสริมคุณธรรม วันพ่อแห่งชาติ (๔ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251204_091544.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมจิตอาสา บำเพ็ญประโยชน์ และส่งเสริมคุณธรรม วันพ่อแห่งชาติ (๔ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251204_091551.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมจิตอาสา บำเพ็ญประโยชน์ และส่งเสริมคุณธรรม วันพ่อแห่งชาติ (๔ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251204_091607_1.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมจิตอาสา บำเพ็ญประโยชน์ และส่งเสริมคุณธรรม วันพ่อแห่งชาติ (๔ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251204_093554.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมจิตอาสา บำเพ็ญประโยชน์ และส่งเสริมคุณธรรม วันพ่อแห่งชาติ (๔ ธ.ค. ๒๕๖๘)",
+      "current_album": "album-ethics-volunteer",
+      "current_caption": "ครูและผู้เรียนร่วมกิจกรรมตักบาตร",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251204_095918.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมจิตอาสา บำเพ็ญประโยชน์ และส่งเสริมคุณธรรม วันพ่อแห่งชาติ (๔ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251205_100211.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมจิตอาสา บำเพ็ญประโยชน์ และส่งเสริมคุณธรรม วันพ่อแห่งชาติ (๕ ธ.ค. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260707_071030.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมหล่อและแห่เทียนพรรษา ส่งเสริมประเพณีและวัฒนธรรมอันดีงาม (๗ ก.ค. ๒๕๖๙)",
+      "current_album": "album-1-8",
+      "current_caption": "ผู้เรียนแสดงความเคารพครูบริเวณอาคารเรียน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260707_081646.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมหล่อและแห่เทียนพรรษา ส่งเสริมประเพณีและวัฒนธรรมอันดีงาม (๗ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260708_091807.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "กิจกรรมหล่อและแห่เทียนพรรษา ส่งเสริมประเพณีและวัฒนธรรมอันดีงาม (๘ ก.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260812_085325.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "พิธีถวายพระพรชัยมงคลและกิจกรรมวันแม่แห่งชาติ ๑๒ สิงหาคม (๑๒ ส.ค. ๒๕๖๙)",
+      "current_album": "album-code-of-conduct",
+      "current_caption": "คณะครูร่วมพิธีรำลึกในอาคารโรงเรียน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260812_085523.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "พิธีถวายพระพรชัยมงคลและกิจกรรมวันแม่แห่งชาติ ๑๒ สิงหาคม (๑๒ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260814_115454.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "พิธีถวายพระพรชัยมงคลและกิจกรรมวันแม่แห่งชาติ ๑๒ สิงหาคม (๑๔ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260814_115459.jpg",
+      "previous_album": "album-ethics-volunteer",
+      "previous_caption": "พิธีถวายพระพรชัยมงคลและกิจกรรมวันแม่แห่งชาติ ๑๒ สิงหาคม (๑๔ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/MVIMG_20260701_084943.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "พิธีทบทวนคำปฏิญาณและสวนสนาม วันคล้ายวันสถาปนาคณะลูกเสือแห่งชาติ (๑ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260624_170332.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "ปฏิบัติหน้าที่ผู้บังคับบัญชาลูกเสือและบันทึกภาพสื่อสารสนเทศสถานศึกษา (๒๔ มิ.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260903_085548.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การปฏิบัติหน้าที่ครูเวรประจำวัน ตรวจเช็คความเรียบร้อยและความปลอดภัยของนักเรียน",
+      "current_album": "album-awards",
+      "current_caption": "ครูแสดงโล่และเกียรติบัตรรางวัล The School CEO ที่บูธผลงาน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_093258.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การฝึกระเบียบแถวและกิจกรรมลูกเสือสามัญรุ่นใหญ่ (๑๑ พ.ย. ๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251113_072706.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การปฏิบัติหน้าที่ครูเวรประจำวัน ต้อนรับนักเรียนหน้าประตูโรงเรียน (๑๓ พ.ย. ๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260701_093345.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "พิธีทบทวนคำปฏิญาณและสวนสนาม วันคล้ายวันสถาปนาคณะลูกเสือแห่งชาติ (๑ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260701_104536.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "กองลูกเสือโรงเรียนเข้าร่วมพิธีสวนสนามอย่างเข้มแข็งและสง่างาม (๑ ก.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260805_070903.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การปฏิบัติหน้าที่ดูแลความปลอดภัยและอำนวยความสะดวกแก่นักเรียน (๕ ส.ค. ๖๙)",
+      "current_album": "album-duty-scout",
+      "current_caption": "ครูในเครื่องแบบลูกเสือดูแลผู้เรียนบริเวณทางเข้า",
+      "decision": "คงไว้และตรวจคำบรรยาย"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260911_071749.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การกำกับดูแลแถวนักเรียนเคารพธงชาติและอบรมคุณธรรมตอนเช้า (๑๑ ก.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_092051.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การจัดกิจกรรมกองลูกเสือโรงเรียนและฝึกระเบียบแถว (๑๑ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_092212.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การจัดกิจกรรมกองลูกเสือโรงเรียนและฝึกระเบียบแถว (๑๑ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_093742.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การจัดกิจกรรมกองลูกเสือโรงเรียนและฝึกระเบียบแถว (๑๑ พ.ย. ๒๕๖๘)",
+      "current_album": "album-code-of-conduct",
+      "current_caption": "ครูลงนามในพิธีรำลึกภายในสถานศึกษา",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_093745.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การจัดกิจกรรมกองลูกเสือโรงเรียนและฝึกระเบียบแถว (๑๑ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_093746.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การจัดกิจกรรมกองลูกเสือโรงเรียนและฝึกระเบียบแถว (๑๑ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_094305.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การจัดกิจกรรมกองลูกเสือโรงเรียนและฝึกระเบียบแถว (๑๑ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_094308.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การจัดกิจกรรมกองลูกเสือโรงเรียนและฝึกระเบียบแถว (๑๑ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_113835.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การจัดกิจกรรมกองลูกเสือโรงเรียนและฝึกระเบียบแถว (๑๑ พ.ย. ๒๕๖๘)",
+      "current_album": "album-2-3",
+      "current_caption": "ครูและนักเรียนร่วมทาสีอุปกรณ์บริเวณสนาม",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_113837.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การจัดกิจกรรมกองลูกเสือโรงเรียนและฝึกระเบียบแถว (๑๑ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251111_113915.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การจัดกิจกรรมกองลูกเสือโรงเรียนและฝึกระเบียบแถว (๑๑ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251113_072722.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การปฏิบัติหน้าที่ครูเวรดูแลความปลอดภัยและวินัยนักเรียน (๑๓ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251113_074416.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การปฏิบัติหน้าที่ครูเวรดูแลความปลอดภัยและวินัยนักเรียน (๑๓ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20251114_160128.jpg",
+      "previous_album": "album-duty-scout",
+      "previous_caption": "การปฏิบัติหน้าที่ครูเวรดูแลความปลอดภัยและวินัยนักเรียน (๑๔ พ.ย. ๒๕๖๘)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_ภาพกิจกรรมจริง_GooglePhotos/IMG_20260802_152819.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "ข้าราชการครูในชุดเครื่องแบบปกติขาว ปฏิบัติหน้าที่ด้วยความซื่อสัตย์สุจริตและมีวินัย (๒ ส.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/04_รางวัลรองชนะเลิศอันดับ2_ภาพถ่ายต่อต้านการทุจริต_ราคาของการถูกลืม.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "รางวัลภาพถ่ายต่อต้านการทุจริต 'ราคาของการถูกลืม' โครงการโรงเรียนสุจริต สพป.กพ.๒",
+      "current_album": "album-awards",
+      "current_caption": "สื่อประชาสัมพันธ์รางวัลรองชนะเลิศอันดับ 2 ภาพถ่ายต่อต้านการทุจริต ราคาของการถูกลืม",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets_drop/2569_รางวัลและผลงานดีเด่น/05_รางวัลอันดับ5_ภาพยนตร์สั้นต่อต้านการทุจริต_TheFalseGoalประตูที่ถูกล็อก.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "เกียรติบัตรการประกวดภาพยนตร์สั้นต่อต้านการทุจริต ปลูกฝังค่านิยมความซื่อสัตย์สุจริต",
+      "current_album": "album-awards",
+      "current_caption": "สื่อประชาสัมพันธ์รางวัลอันดับ 5 ภาพยนตร์สั้นต่อต้านการทุจริต The False Goal",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260306_130104.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "การประพฤติปฏิบัติตนตามมาตรฐานวิชาชีพครูและความซื่อสัตย์สุจริต (๖ มี.ค. ๖๙)",
+      "current_album": "album-career-skills",
+      "current_caption": "ผู้เรียนฝึกประกอบอาหารด้วยเตาถ่าน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260803_084656.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "การอุทิศเวลาและความเสียสละเพื่อประโยชน์ทางการศึกษาของผู้เรียน (๓ ส.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260803_084707.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "การปฏิบัติตามกฎหมาย ระเบียบวินัยข้าราชการครู และข้อบังคับสถานศึกษา (๓ ส.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260805_071000.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "การเป็นแบบอย่างที่ดีในการตรงต่อเวลาและมีวินัยในตนเอง (๕ ส.ค. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260910_070803.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "ความมุ่งมั่นทุ่มเทในการปฏิบัติหน้าที่ด้วยความโปร่งใสและตรวจสอบได้ (๑๐ ก.ย. ๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260306_130105.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "การประพฤติปฏิบัติตนตามจรรยาบรรณวิชาชีพครูและการมีวินัย (๖ มี.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260804_102309.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "การปฏิบัติหน้าที่ด้วยความมุ่งมั่น เสียสละ และมีวินัยในตนเอง (๔ ส.ค. ๒๕๖๙)",
+      "current_album": "album-ict-project",
+      "current_caption": "ผู้เรียนทำกิจกรรมเกี่ยวกับชิ้นส่วนอุปกรณ์คอมพิวเตอร์",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260805_090519.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "การปฏิบัติหน้าที่ด้วยความมุ่งมั่น เสียสละ และมีวินัยในตนเอง (๕ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260805_110141.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "การปฏิบัติหน้าที่ด้วยความมุ่งมั่น เสียสละ และมีวินัยในตนเอง (๕ ส.ค. ๒๕๖๙)",
+      "current_album": "album-1-3",
+      "current_caption": "ผู้เรียนร่วมกันประกอบชุดอุปกรณ์บนพื้นห้องเรียน",
+      "decision": "ย้ายไปหมวดที่ตรงกับกิจกรรม"
+    },
+    {
+      "src": "assets/evidence_pa_photos/IMG_20260805_110144.jpg",
+      "previous_album": "album-code-of-conduct",
+      "previous_caption": "การปฏิบัติหน้าที่ด้วยความมุ่งมั่น เสียสละ และมีวินัยในตนเอง (๕ ส.ค. ๒๕๖๙)",
+      "current_album": null,
+      "current_caption": null,
+      "decision": "คัดออกจากเว็บ: ภาพมุมซ้ำ ภาพทั่วไป หรือบริบทยังไม่พอยืนยันหัวข้อเดิม"
+    }
+  ],
+  "static_removed": []
+}

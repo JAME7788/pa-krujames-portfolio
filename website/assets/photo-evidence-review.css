@@ -1,0 +1,15 @@
+.album-document-cover { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; height:100%; background:#eaf3ff; color:#1655a3; }
+.album-document-cover svg { width:48px; height:48px; }
+.album-evidence-links { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 20px; }
+.album-evidence-links a, .album-evidence-links button { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border:1px solid #bed4ef; border-radius:6px; color:#174b8c; background:#fff; font:inherit; text-decoration:none; cursor:pointer; text-align:left; }
+.album-evidence-links svg { width:18px; height:18px; flex-shrink:0; }
+.album-document-note { grid-column:1/-1; padding:18px; border-left:3px solid #2580d7; background:#f2f7fc; line-height:1.8; }
+.album-photo-thumb { object-fit:contain !important; background:#f3f6fa; }
+.album-photo-card { text-align:left; padding:0; font:inherit; cursor:pointer; color:inherit; }
+.album-photo-card:focus-visible { outline:3px solid #2580d7; outline-offset:3px; }
+.album-photo-caption { overflow-wrap:anywhere; }
+.album-photo-kind { display:block; font-size:12px; color:#56708c; margin-bottom:5px; }
+.album-modal-gp-btn[hidden] { display:none !important; }
+.timeline-card .reviewed-photo { margin:0; width:100%; }
+.timeline-card .reviewed-photo img { width:100%; aspect-ratio:4/3; object-fit:contain; }
+@media(max-width:600px) { .album-evidence-links { flex-direction:column; } .album-evidence-links a { width:100%; box-sizing:border-box; } }

@@ -10,7 +10,10 @@ node = 'C:/Users/KruJames/.cache/codex-runtimes/codex-primary-runtime/dependenci
 source = (root / 'index.html').read_text(encoding='utf-8')
 doc = html.fromstring(source)
 baseline = html.fromstring(subprocess.check_output(['git', 'show', 'HEAD:index.html'], cwd=root).decode('utf-8'))
-assert doc.xpath('//section/@id') == baseline.xpath('//section/@id'), 'Latest section order changed'
+expected_sections = baseline.xpath('//section/@id')
+if 'student-evidence' not in expected_sections and 'student-evidence' in doc.xpath('//section/@id'):
+    expected_sections.insert(expected_sections.index('gallery'), 'student-evidence')
+assert doc.xpath('//section/@id') == expected_sections, 'Latest section order changed'
 assert not [key for key, count in Counter(doc.xpath('//@id')).items() if count > 1], 'Duplicate IDs'
 blocks = doc.xpath('//div[@class="score-comparison-wrapper"]')
 assert len(blocks) == 1
