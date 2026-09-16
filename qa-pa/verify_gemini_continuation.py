@@ -11,6 +11,8 @@ source = (root / 'index.html').read_text(encoding='utf-8')
 doc = html.fromstring(source)
 baseline = html.fromstring(subprocess.check_output(['git', 'show', 'HEAD:index.html'], cwd=root).decode('utf-8'))
 expected_sections = baseline.xpath('//section/@id')
+if 'report-overview' not in expected_sections and 'report-overview' in doc.xpath('//section/@id'):
+    expected_sections.insert(expected_sections.index('workload'), 'report-overview')
 if 'student-evidence' not in expected_sections and 'student-evidence' in doc.xpath('//section/@id'):
     expected_sections.insert(expected_sections.index('gallery'), 'student-evidence')
 assert doc.xpath('//section/@id') == expected_sections, 'Latest section order changed'
