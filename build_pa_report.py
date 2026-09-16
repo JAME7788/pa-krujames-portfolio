@@ -81,7 +81,16 @@ def table(headers, rows, widths=None):
 
 def image(path, width=5.8, alt='ภาพประกอบรายงาน PA'):
     if path.exists():
-        par=doc.add_paragraph(); par.alignment=WD_ALIGN_PARAGRAPH.CENTER; par.add_run().add_picture(str(path), width=Inches(width))
+        import io
+        from PIL import Image as PILImage
+        par=doc.add_paragraph(); par.alignment=WD_ALIGN_PARAGRAPH.CENTER
+        try:
+            par.add_run().add_picture(str(path), width=Inches(width))
+        except Exception:
+            buf = io.BytesIO()
+            PILImage.open(path).convert('RGB').save(buf, format='JPEG', quality=95)
+            buf.seek(0)
+            par.add_run().add_picture(buf, width=Inches(width))
         doc.inline_shapes[-1]._inline.docPr.set('descr', alt)
 
 def page(): doc.add_page_break()
