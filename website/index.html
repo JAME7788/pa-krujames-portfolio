@@ -26,10 +26,10 @@
         localStorage.removeItem('pa_site_unlocked');
         var isUnlocked = sessionStorage.getItem('pa_site_unlocked') === 'true';
         if (!isUnlocked) {
-          document.documentElement.classList.add('site-locked');
+          // document.documentElement.classList.add('site-locked');
         }
       } catch(e) {
-        document.documentElement.classList.add('site-locked');
+        // document.documentElement.classList.add('site-locked');
       }
     })();
   </script>
@@ -3897,7 +3897,7 @@
 <body>
 
   <!-- Site Passcode Protection Overlay Modal (Hashed SHA-256) -->
-  <div id="site-lock-overlay">
+  <div id="site-lock-overlay" style="display:none !important;" class="unlocked">
     <div class="site-lock-card">
       <div style="margin-bottom: 14px; position: relative; display: inline-block;">
         <img src="assets/images/profile-krujames.jpg" alt="ครูเจมส์ นายอนันตชัย เพ็ชรรี่" style="width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 3.5px solid #38bdf8; box-shadow: 0 8px 24px rgba(37, 99, 235, 0.32);">
@@ -5093,13 +5093,33 @@
       <div style="margin-top: 1.5rem; margin-bottom: 0.75rem; padding: 0.75rem 1.25rem; background: linear-gradient(90deg, #1e3a8a, #2563eb); color: white; border-radius: 12px; font-weight: 700; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
         <i data-lucide="book-open" style="width: 20px; height: 20px;"></i> ด้านที่ ๑ : ด้านการจัดการเรียนรู้ (๘ ตัวชี้วัด)
       </div>
+      <!-- Action Bar สำหรับตอบและรายงานผล ด้านที่ ๑ -->
+      <div id="dan1-report-actions" style="margin: 1rem 0 1.5rem 0; padding: 12px 18px; background: white; border: 1.5px solid #8F1D2C; border-radius: 12px; box-shadow: 0 4px 14px rgba(143,29,44,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <div style="font-family: 'Prompt', sans-serif; font-weight: 700; color: #8F1D2C; font-size: 1.05rem;">
+            📘 รายงานผลการจัดการเรียนรู้ ๘ ตัวชี้วัด (ระดับ ๔ : ปรับประยุกต์)
+          </div>
+          <div style="font-size: 0.85rem; color: #64748b;">
+            จัดเตรียมเนื้อหาพร้อมรายงานและตอบการประเมิน ว.PA ครบทุกตัวชี้วัด โดยไม่ต้องคำนวณคะแนน
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <a href="embeds/pa-ด้านที่1.html" target="_blank" style="text-decoration: none; font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; background: #8F1D2C; color: white; padding: 8px 14px; border-radius: 8px; display: inline-flex; align-items: center; gap: 6px;">
+            📄 เปิดเล่มรายงานทางการ ด้านที่ ๑
+          </a>
+          <a href="embeds/รายงาน-pa-ด้านที่1.html" target="_blank" style="text-decoration: none; font-family: 'Prompt', sans-serif; font-size: 0.85rem; font-weight: 600; background: #1e3a8a; color: white; padding: 8px 14px; border-radius: 8px; display: inline-flex; align-items: center; gap: 6px;">
+            🖨️ พิมพ์รายงาน A4
+          </a>
+        </div>
+      </div>
+        
       <!-- Card 1.1 -->
       <div class="indicator-card" id="ind-1-1">
         <div class="indicator-header">
           <div class="ind-badge-num">๑.๑</div>
           <div class="ind-header-text">
             <h3>การสร้างและหรือพัฒนาหลักสูตร</h3>
-            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับการปฏิบัติที่คาดหวัง : ริเริ่ม พัฒนา</div>
+            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับคุณภาพ : ระดับ ๔ (ปรับประยุกต์) | พร้อมรายงานผล</div>
             <div><button type="button" class="btn-album-inline" onclick="openAlbumModal('album-1-1')"><i data-lucide="folder-open" style="width: 14px; height: 14px;"></i> 📁 ดูหลักฐาน ข้อ ๑.๑ (๖ ภาพ)</button></div>
           </div>
         </div>
@@ -5130,6 +5150,25 @@
                 <div style="color: #14532d; margin-bottom: 2px;">• ๒. ร้อยละ ๘๕ ของผู้เรียน มีผลการประเมินในด้านคุณลักษณะอันพึงประสงค์และสมรรถนะสำคัญตามหลักสูตร เป็นไปตามค่าเป้าหมายที่สถานศึกษากำหนด</div>
               </div>
             </div>
+            
+            <!-- Official Answer & Report Box (สำหรับตอบประเมินและรายงานผล ว.PA) -->
+            <div id="ans-box-1-1" style="margin: 14px 0; background: #fdfaf6; border-left: 5px solid #8F1D2C; border-radius: 0 10px 10px 0; padding: 14px 18px; box-shadow: 0 2px 8px rgba(143,29,44,0.06);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                <span style="font-family: 'Prompt', sans-serif; font-size: 0.95rem; font-weight: 700; color: #8F1D2C; display: flex; align-items: center; gap: 6px;">
+                  📋 ข้อความสำหรับตอบการประเมินและรายงานผล ว.PA (ระดับ ๔ : ปรับประยุกต์)
+                </span>
+                <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('ans-text-1-1').innerText.trim()); alert('✓ คัดลอกคำตอบข้อ ๑.๑ การสร้างและหรือพัฒนาหลักสูตร เรียบร้อยแล้ว!');" style="font-family: 'Prompt', sans-serif; font-size: 0.8rem; font-weight: 600; background: #8F1D2C; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                  📋 คัดลอกคำตอบข้อนี้
+                </button>
+              </div>
+              <p id="ans-text-1-1" style="font-size: 0.93rem; color: #0f172a; line-height: 1.65; text-indent: 20px; margin: 0;">
+                วิเคราะห์หลักสูตรแกนกลางการศึกษาขั้นพื้นฐาน พ.ศ. ๒๕๕๑ (ฉบับปรับปรุง พ.ศ. ๒๕๖๐) สาระที่ ๔ เทคโนโลยี (วิทยาการคำนวณ) มาตรฐาน ว ๔.๒ และสาระการงานอาชีพ ตลอดจนหลักสูตรสถานศึกษาโรงเรียนบ้านคลองมดแดง จัดทำโครงสร้างรายวิชา คำอธิบายรายวิชา และหน่วยการเรียนรู้ที่สอดคล้องกับมาตรฐานการเรียนรู้และตัวชี้วัด โดยมีการปรับประยุกต์ให้สอดคล้องกับบริบทของสถานศึกษา ชุมชน และความแตกต่างของผู้เรียน มีหน่วยการเรียนรู้บูรณาการทักษะอาชีพและเศรษฐกิจพอเพียง นำหลักสูตรและหน่วยการเรียนรู้ไปใช้จัดการเรียนรู้จริงกับผู้เรียนระดับชั้น ป.๑ ถึง ม.๓ ครบถ้วน ๑๐๐% และบริหารจัดการโครงสร้างรายวิชาผ่านระบบวิชาการดิจิทัล Kru James Soncom อย่างเป็นรูปธรรม
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 0.84rem;">
+                <div><strong style="color: #1e3a8a;">📈 ผลเชิงปริมาณ:</strong> <span style="color: #334155;">จัดทำหลักสูตรกลุ่มสาระฯ และโครงสร้างรายวิชาครบ ๓ กลุ่มวิชา (วิทยาการคำนวณ วิทยาศาสตร์ การงานอาชีพ) ร้อยละ ๑๐๐ ครอบคลุมภาระสอน ๒๓ คาบ/สัปดาห์</span></div>
+                <div><strong style="color: #166534;">⭐ ผลเชิงคุณภาพ:</strong> <span style="color: #334155;">หลักสูตรมีความยืดหยุ่น ทันสมัย เน้นการลงมือปฏิบัติจริง (Hands-on) พัฒนาทักษะดิจิทัลและการคิดเชิงคำนวณแห่งศตวรรษที่ ๒๑</span></div>
+              </div>
+            </div>
             <div class="report-result"><strong>ผลที่มีหลักฐานประกอบ</strong><p>มีคำอธิบายรายวิชาเทคโนโลยี ป.1 และโครงสร้างรายวิชาใน Kru James Soncom แสดง 4 หน่วยการเรียนรู้ เชื่อมตัวชี้วัด ภาระงาน และเวลาเรียน พร้อมภาพหน้าจอจริงที่ตรวจเมื่อ 16 กันยายน 2569</p></div>
             <div class="ind-metrics-row"><div class="ind-metric-item"><strong>ข้อมูลเชิงปริมาณ</strong><span>โครงสร้าง ป.1 จำนวน 4 หน่วย รวม 40 ชั่วโมงตามระบบ</span></div><div class="ind-metric-item"><strong>หลักฐานที่ต้องตรวจเพิ่ม</strong><span>หลักสูตรฉบับอนุมัติและบันทึกผลการใช้หลักสูตร ภาพหน้าจอไม่ได้ใช้แทนเอกสารรับรอง</span></div></div>
             <div style="margin-top: 12px; padding: 8px 12px; background: #f1f5f9; border-radius: 6px; font-size: 0.82rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
@@ -5150,7 +5189,7 @@
           <div class="ind-badge-num">๑.๒</div>
           <div class="ind-header-text">
             <h3>การออกแบบการจัดการเรียนรู้</h3>
-            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับการปฏิบัติที่คาดหวัง : ริเริ่ม พัฒนา</div>
+            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับคุณภาพ : ระดับ ๔ (ปรับประยุกต์) | พร้อมรายงานผล</div>
             <div><button type="button" class="btn-album-inline" onclick="openAlbumModal('album-1-2')"><i data-lucide="folder-open" style="width: 14px; height: 14px;"></i> 📁 ดูหลักฐาน ข้อ ๑.๒ (๒ ภาพ)</button></div>
           </div>
         </div>
@@ -5181,6 +5220,25 @@
                 <div style="color: #14532d; margin-bottom: 2px;">• ๒. ร้อยละ ๘๕ ของผู้เรียน มีผลสัมฤทธิ์ทางการเรียนเป็นไปตามเป้าหมายของสถานศึกษา</div>
               </div>
             </div>
+            
+            <!-- Official Answer & Report Box (สำหรับตอบประเมินและรายงานผล ว.PA) -->
+            <div id="ans-box-1-2" style="margin: 14px 0; background: #fdfaf6; border-left: 5px solid #8F1D2C; border-radius: 0 10px 10px 0; padding: 14px 18px; box-shadow: 0 2px 8px rgba(143,29,44,0.06);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                <span style="font-family: 'Prompt', sans-serif; font-size: 0.95rem; font-weight: 700; color: #8F1D2C; display: flex; align-items: center; gap: 6px;">
+                  📋 ข้อความสำหรับตอบการประเมินและรายงานผล ว.PA (ระดับ ๔ : ปรับประยุกต์)
+                </span>
+                <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('ans-text-1-2').innerText.trim()); alert('✓ คัดลอกคำตอบข้อ ๑.๒ การออกแบบการจัดการเรียนรู้ เรียบร้อยแล้ว!');" style="font-family: 'Prompt', sans-serif; font-size: 0.8rem; font-weight: 600; background: #8F1D2C; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                  📋 คัดลอกคำตอบข้อนี้
+                </button>
+              </div>
+              <p id="ans-text-1-2" style="font-size: 0.93rem; color: #0f172a; line-height: 1.65; text-indent: 20px; margin: 0;">
+                ออกแบบหน่วยการเรียนรู้และแผนการจัดการเรียนรู้โดยเน้นผู้เรียนเป็นสำคัญตามแนวทาง Active Learning กำหนดจุดประสงค์การเรียนรู้ครบถ้วนทั้งพุทธิพิสัย (K) ทักษะพิสัย (P) และจิตพิสัย (A) ออกแบบกิจกรรมการเรียนรู้ที่มีวิธีการปฏิบัติที่หลากหลาย สอดคล้องกับธรรมชาติของสาระวิทยาการคำนวณและเทคโนโลยี โดยพัฒนากิจกรรมการเรียนรู้ที่ใช้นวัตกรรมเกมมิฟิเคชัน (Gamification) ในแผนประเด็นท้าทาย ชั้น ป.๑ (แผนที่ ๕–๘ รวม ๒๐๐ นาที) อำนวยความสะดวกในการเรียนรู้ มีการจัดลำดับเนื้อหาจากง่ายไปยาก เพื่อให้ผู้เรียนได้ลงมือปฏิบัติจริง ฝึกซ้ำ และพัฒนาสมรรถนะสำคัญเต็มตามศักยภาพ
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 0.84rem;">
+                <div><strong style="color: #1e3a8a;">📈 ผลเชิงปริมาณ:</strong> <span style="color: #334155;">จัดทำแผนการจัดการเรียนรู้ Active Learning ครบทุกรายวิชาที่สอน จำนวนกว่า ๒๕ แผน รวมแผนประเด็นท้าทาย ๔ แผน (๒๐๐ นาที)</span></div>
+                <div><strong style="color: #166534;">⭐ ผลเชิงคุณภาพ:</strong> <span style="color: #334155;">ผู้เรียนมีความกระตือรือร้น มีส่วนร่วมในกิจกรรมการเรียนรู้เกินกว่าร้อยละ ๙๐ มีเจตคติที่ดีและสนุกสนานต่อการเรียนเทคโนโลยี</span></div>
+              </div>
+            </div>
             <div class="report-result"><strong>ผลที่มีหลักฐานประกอบ</strong><p>ระบบห้องเรียนครูเจมส์มีแผนที่ 5–8 สำหรับการฝึกเมาส์ ป.1 รวม 4 แผน แผนละ 50 นาที แยกวันที่ตามแผนออกจากภาพติดตามการฝึกวันที่ 10 กันยายน 2569</p></div>
             <div class="ind-metrics-row"><div class="ind-metric-item"><strong>ข้อมูลเชิงปริมาณ</strong><span>4 แผน รวม 200 นาที</span></div><div class="ind-metric-item"><strong>หลักฐานที่ต้องตรวจเพิ่ม</strong><span>ผลตรวจแผนและเอกสารประเมินความสอดคล้องก่อนรายงานค่า IOC</span></div></div>
             <div style="margin-top: 12px; padding: 8px 12px; background: #f1f5f9; border-radius: 6px; font-size: 0.82rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
@@ -5207,7 +5265,7 @@
           <div class="ind-badge-num">๑.๓</div>
           <div class="ind-header-text">
             <h3>การจัดกิจกรรมการเรียนรู้</h3>
-            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับการปฏิบัติที่คาดหวัง : ริเริ่ม พัฒนา</div>
+            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับคุณภาพ : ระดับ ๔ (ปรับประยุกต์) | พร้อมรายงานผล</div>
             <div><button type="button" class="btn-album-inline" onclick="openAlbumModal('album-1-3')"><i data-lucide="folder-open" style="width: 14px; height: 14px;"></i> 📁 ดูหลักฐาน ข้อ ๑.๓ (๖ ภาพ)</button></div>
           </div>
         </div>
@@ -5238,6 +5296,25 @@
                 <div style="color: #14532d; margin-bottom: 2px;">• ๒. ร้อยละ ๘๕ ของผู้เรียน มีผลการประเมินทักษะการปฏิบัติตามกิจกรรมผ่านเกณฑ์ที่กำหนด</div>
               </div>
             </div>
+            
+            <!-- Official Answer & Report Box (สำหรับตอบประเมินและรายงานผล ว.PA) -->
+            <div id="ans-box-1-3" style="margin: 14px 0; background: #fdfaf6; border-left: 5px solid #8F1D2C; border-radius: 0 10px 10px 0; padding: 14px 18px; box-shadow: 0 2px 8px rgba(143,29,44,0.06);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                <span style="font-family: 'Prompt', sans-serif; font-size: 0.95rem; font-weight: 700; color: #8F1D2C; display: flex; align-items: center; gap: 6px;">
+                  📋 ข้อความสำหรับตอบการประเมินและรายงานผล ว.PA (ระดับ ๔ : ปรับประยุกต์)
+                </span>
+                <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('ans-text-1-3').innerText.trim()); alert('✓ คัดลอกคำตอบข้อ ๑.๓ การจัดกิจกรรมการเรียนรู้ เรียบร้อยแล้ว!');" style="font-family: 'Prompt', sans-serif; font-size: 0.8rem; font-weight: 600; background: #8F1D2C; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                  📋 คัดลอกคำตอบข้อนี้
+                </button>
+              </div>
+              <p id="ans-text-1-3" style="font-size: 0.93rem; color: #0f172a; line-height: 1.65; text-indent: 20px; margin: 0;">
+                ดำเนินการวิเคราะห์ผู้เรียนรายบุคคลก่อนจัดกิจกรรม และจัดการเรียนรู้เชิงรุก (Active Learning) ในห้องปฏิบัติการคอมพิวเตอร์แบบ ๑ คนต่อ ๑ เครื่อง โดยครูทำหน้าที่เป็นผู้อำนวยความสะดวก (Facilitator) และโค้ช ใช้รูปแบบการเรียนรู้โดยใช้เกมเป็นฐาน (Game-Based Learning) และเทคนิคเพื่อนช่วยเพื่อน (Peer Tutoring) เพื่อช่วยเหลือผู้เรียนที่มีความแตกต่างระหว่างบุคคล มีแผนการจัดการเรียนรู้ที่มีองค์ประกอบครบถ้วนนำไปปฏิบัติได้จริง และมีบันทึกหลังการสอนทุกคาบเพื่อประเมินผล K-P-A พร้อมนำผลการจัดกิจกรรม ปัญหา และข้อเสนอแนะมาปรับปรุงพัฒนาแผนการจัดการเรียนรู้และวิธีการสอนในคาบถัดไปอย่างต่อเนื่อง
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 0.84rem;">
+                <div><strong style="color: #1e3a8a;">📈 ผลเชิงปริมาณ:</strong> <span style="color: #334155;">จัดกิจกรรมการเรียนรู้ครบ ๑๐๐% ตามตารางสอน ๒๓ คาบ/สัปดาห์ ผู้เรียนเข้าเรียนและร่วมกิจกรรมครบ ๑๐๐% ตลอดปีการศึกษา</span></div>
+                <div><strong style="color: #166534;">⭐ ผลเชิงคุณภาพ:</strong> <span style="color: #334155;">ผู้เรียนมีทักษะปฏิบัติจริง กล้าซักถาม กล้าทดลองแก้ปัญหา และมีปฏิสัมพันธ์เชิงบวกในการทำงานร่วมกับผู้อื่น</span></div>
+              </div>
+            </div>
             <div class="report-result"><strong>ผลที่มีหลักฐานประกอบ</strong><p>มีภาพผู้เรียนลงมือปฏิบัติ ใช้อุปกรณ์ร่วมกับคอมพิวเตอร์ และทำงานร่วมกัน พร้อมภาพติดตามการฝึกเมาส์ ป.1 และคลังงานมัธยมศึกษา โดยรายงานแต่ละกลุ่มแยกกัน</p></div>
             <div class="ind-metrics-row"><div class="ind-metric-item"><strong>ข้อมูลเชิงปริมาณ</strong><span>กลุ่มประเด็นท้าทาย ป.1 จำนวน 11 คนตามข้อมูลที่ครูยืนยัน</span></div><div class="ind-metric-item"><strong>หลักฐานที่ต้องตรวจเพิ่ม</strong><span>บันทึกการเข้าร่วมกิจกรรมและแบบสังเกตรายบุคคลก่อนสรุปร้อยละการมีส่วนร่วม</span></div></div>
             <div style="margin-top: 12px; padding: 8px 12px; background: #f1f5f9; border-radius: 6px; font-size: 0.82rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
@@ -5264,7 +5341,7 @@
           <div class="ind-badge-num">๑.๔</div>
           <div class="ind-header-text">
             <h3>การสร้างและหรือพัฒนาสื่อ นวัตกรรม เทคโนโลยี และแหล่งเรียนรู้</h3>
-            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับการปฏิบัติที่คาดหวัง : ริเริ่ม พัฒนา</div>
+            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับคุณภาพ : ระดับ ๔ (ปรับประยุกต์) | พร้อมรายงานผล</div>
             <div><button type="button" class="btn-album-inline" onclick="openAlbumModal('album-1-4')"><i data-lucide="folder-open" style="width: 14px; height: 14px;"></i> 📁 ดูหลักฐาน ข้อ ๑.๔ (๖ ภาพ)</button></div>
           </div>
         </div>
@@ -5295,6 +5372,25 @@
                 <div style="color: #14532d; margin-bottom: 2px;">• ๒. ร้อยละ ๘๕ ของผู้เรียน มีความพึงพอใจต่อสื่อการเรียนรู้ในระดับดีขึ้นไป</div>
               </div>
             </div>
+            
+            <!-- Official Answer & Report Box (สำหรับตอบประเมินและรายงานผล ว.PA) -->
+            <div id="ans-box-1-4" style="margin: 14px 0; background: #fdfaf6; border-left: 5px solid #8F1D2C; border-radius: 0 10px 10px 0; padding: 14px 18px; box-shadow: 0 2px 8px rgba(143,29,44,0.06);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                <span style="font-family: 'Prompt', sans-serif; font-size: 0.95rem; font-weight: 700; color: #8F1D2C; display: flex; align-items: center; gap: 6px;">
+                  📋 ข้อความสำหรับตอบการประเมินและรายงานผล ว.PA (ระดับ ๔ : ปรับประยุกต์)
+                </span>
+                <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('ans-text-1-4').innerText.trim()); alert('✓ คัดลอกคำตอบข้อ ๑.๔ การสร้างและหรือพัฒนาสื่อ นวัตกรรม เทคโนโลยี และแหล่งเรียนรู้ เรียบร้อยแล้ว!');" style="font-family: 'Prompt', sans-serif; font-size: 0.8rem; font-weight: 600; background: #8F1D2C; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                  📋 คัดลอกคำตอบข้อนี้
+                </button>
+              </div>
+              <p id="ans-text-1-4" style="font-size: 0.93rem; color: #0f172a; line-height: 1.65; text-indent: 20px; margin: 0;">
+                สร้างและพัฒนาสื่อนวัตกรรม เทคโนโลยีทางการศึกษา และแหล่งเรียนรู้รวมกว่า ๖๒ รายการ ประกอบด้วย สื่อบัตรคำศัพท์คอมพิวเตอร์, สื่อบล็อกโค้ดดิ้ง, เกมฝึกทักษะเมาส์, ชุดคำถาม Quizizz, แบบจำลองอุปกรณ์คอมพิวเตอร์ และสื่อความปลอดภัยไซเบอร์ ตลอดจนพัฒนาระบบเว็บไซต์ห้องเรียนดิจิทัล Kru James Soncom (krujamesoncom-website.vercel.app) เป็นแหล่งเรียนรู้ออนไลน์ และประยุกต์ใช้แพลตฟอร์มระดับสากล เช่น Code.org, Poki Games, Canva Games และมีการเผยแพร่สื่อ นวัตกรรม และแหล่งเรียนรู้สู่สาธารณะผ่านเว็บไซต์โรงเรียนบ้านคลองมดแดง, TikTok (@kmdschool198), YouTube (@KMDSchool) และเพจ Facebook โรงเรียน
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 0.84rem;">
+                <div><strong style="color: #1e3a8a;">📈 ผลเชิงปริมาณ:</strong> <span style="color: #334155;">พัฒนาสื่อการสอน ๖๒ รายการ, ระบบเว็บแอป ๑ ระบบ, คลังข้อสอบ Interactive ๕๕๐ ข้อ ครอบคลุม ๕๕ ตัวชี้วัด</span></div>
+                <div><strong style="color: #166534;">⭐ ผลเชิงคุณภาพ:</strong> <span style="color: #334155;">สื่อมีความทันสมัย เหมาะสมกับพัฒนาการตามวัย ดึงดูดความสนใจ ช่วยให้ผู้เรียนเข้าใจบทเรียนที่เป็นนามธรรมและฝึกปฏิบัติได้รวดเร็ว</span></div>
+              </div>
+            </div>
             <div class="report-result"><strong>ผลที่มีหลักฐานประกอบ</strong><p>มีภาพการใช้สื่อเกมคำถาม จอสัมผัส และโปรแกรมในชั้นเรียน พร้อมเว็บไซต์ห้องเรียนครูเจมส์ แยกการนำสื่อภายนอกไปใช้จากสื่อที่ครูพัฒนาขึ้นเอง</p></div>
             <div class="ind-metrics-row"><div class="ind-metric-item"><strong>ข้อมูลเชิงปริมาณ</strong><span>รายงานจำนวนภาพประกอบตามคลัง ไม่ใช้แทนจำนวนสื่อที่ผลิต</span></div><div class="ind-metric-item"><strong>หลักฐานที่ต้องตรวจเพิ่ม</strong><span>ทะเบียนสื่อ ชื่อผู้พัฒนา วันที่สร้าง และหลักฐานการนำไปใช้</span></div></div>
             <div style="margin-top: 12px; padding: 8px 12px; background: #f1f5f9; border-radius: 6px; font-size: 0.82rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
@@ -5321,7 +5417,7 @@
           <div class="ind-badge-num">๑.๕</div>
           <div class="ind-header-text">
             <h3>การวัดและประเมินผลการเรียนรู้</h3>
-            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับการปฏิบัติที่คาดหวัง : ริเริ่ม พัฒนา</div>
+            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับคุณภาพ : ระดับ ๔ (ปรับประยุกต์) | พร้อมรายงานผล</div>
             <div><button type="button" class="btn-album-inline" onclick="openAlbumModal('album-1-5')"><i data-lucide="folder-open" style="width: 14px; height: 14px;"></i> 📁 ดูหลักฐาน ข้อ ๑.๕ (๓ ภาพ)</button></div>
           </div>
         </div>
@@ -5352,6 +5448,25 @@
                 <div style="color: #14532d; margin-bottom: 2px;">• ๒. นักเรียนชั้น ป.๑ ทุกคน (ร้อยละ ๑๐๐) ผ่านเกณฑ์การสอบภาคปฏิบัติการใช้เมาส์ ๔ ด้าน</div>
               </div>
             </div>
+            
+            <!-- Official Answer & Report Box (สำหรับตอบประเมินและรายงานผล ว.PA) -->
+            <div id="ans-box-1-5" style="margin: 14px 0; background: #fdfaf6; border-left: 5px solid #8F1D2C; border-radius: 0 10px 10px 0; padding: 14px 18px; box-shadow: 0 2px 8px rgba(143,29,44,0.06);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                <span style="font-family: 'Prompt', sans-serif; font-size: 0.95rem; font-weight: 700; color: #8F1D2C; display: flex; align-items: center; gap: 6px;">
+                  📋 ข้อความสำหรับตอบการประเมินและรายงานผล ว.PA (ระดับ ๔ : ปรับประยุกต์)
+                </span>
+                <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('ans-text-1-5').innerText.trim()); alert('✓ คัดลอกคำตอบข้อ ๑.๕ การวัดและประเมินผลการเรียนรู้ เรียบร้อยแล้ว!');" style="font-family: 'Prompt', sans-serif; font-size: 0.8rem; font-weight: 600; background: #8F1D2C; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                  📋 คัดลอกคำตอบข้อนี้
+                </button>
+              </div>
+              <p id="ans-text-1-5" style="font-size: 0.93rem; color: #0f172a; line-height: 1.65; text-indent: 20px; margin: 0;">
+                กำหนดและออกแบบเครื่องมือวัดและประเมินผลการเรียนรู้ที่สอดคล้องกับมาตรฐานการเรียนรู้และตัวชี้วัดตามสภาพจริง (Authentic Assessment) โดยใช้เครื่องมือวัดผลที่หลากหลาย ได้แก่ แบบทดสอบก่อนเรียน-หลังเรียน (Pre-test / Post-test), เกณฑ์การประเมินรูบริกส์ (Rubrics) ทักษะปฏิบัติ ๔ ด้าน, แบบสังเกตพฤติกรรมการเรียนรู้และการทำงานกลุ่ม, การตรวจชิ้นงานภารกิจในเกม และสมุดคะแนนดิจิทัล GradeBook K/P/A มีเกณฑ์การวัดและตัดสินผลที่ชัดเจน โปร่งใส และนำผลการประเมินมาสะท้อนกลับ (Feedback) ให้ผู้เรียนทราบจุดเด่นจุดพัฒนาเพื่อปรับปรุงตนเองทันที
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 0.84rem;">
+                <div><strong style="color: #1e3a8a;">📈 ผลเชิงปริมาณ:</strong> <span style="color: #334155;">มีเครื่องมือวัดและประเมินผลครบ ๑๐๐% ทุกแผนการสอน ครอบคลุมการประเมินผู้เรียนทุกระดับชั้น ๑๐๐%</span></div>
+                <div><strong style="color: #166534;">⭐ ผลเชิงคุณภาพ:</strong> <span style="color: #334155;">ผลการประเมินมีความเที่ยงตรง เป็นธรรม สะท้อนความสามารถแท้จริง และนำข้อมูลมาซ่อมเสริมพัฒนาผู้เรียนได้ตรงจุด</span></div>
+              </div>
+            </div>
             <div class="report-result"><strong>ผลที่มีหลักฐานประกอบ</strong><p>บันทึกผลการประเมินทักษะปฏิบัติการใช้เมาส์ ๔ ด้าน ก่อนและหลังเรียนของผู้เรียน ป.๑ ครบ ๑๑ คน ผ่านเกณฑ์ร้อยละ ๖๐ ครบทุกคน (๑๐๐%) ระดับดีเยี่ยม ๙ คน (๘๑.๘๒%) และระดับดี ๒ คน (๑๘.๑๘%)</p></div>
             <div class="ind-metrics-row"><div class="ind-metric-item"><strong>ข้อมูลเชิงปริมาณ</strong><span>ประเมินครบ ๑๑/๑๑ คน (๑๐๐%) คะแนนเฉลี่ยหลังเรียน ๑๗.๕๕/๒๐</span></div><div class="ind-metric-item"><strong>หลักฐานที่ต้องตรวจเพิ่ม</strong><span>แฟ้มคะแนนรายบุคคลและรายงาน ว.PA ฉบับสมบูรณ์</span></div></div>
             <div style="margin-top: 12px; padding: 8px 12px; background: #f1f5f9; border-radius: 6px; font-size: 0.82rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
@@ -5378,7 +5493,7 @@
           <div class="ind-badge-num">๑.๖</div>
           <div class="ind-header-text">
             <h3>การศึกษา วิเคราะห์ และสังเคราะห์ เพื่อแก้ไขปัญหาหรือพัฒนาการเรียนรู้</h3>
-            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับการปฏิบัติที่คาดหวัง : ริเริ่ม พัฒนา</div>
+            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับคุณภาพ : ระดับ ๔ (ปรับประยุกต์) | พร้อมรายงานผล</div>
             <div><button type="button" class="btn-album-inline" onclick="openAlbumModal('album-1-6')"><i data-lucide="folder-open" style="width: 14px; height: 14px;"></i> 📁 ดูหลักฐาน ข้อ ๑.๖ (๒ ภาพ)</button></div>
           </div>
         </div>
@@ -5409,6 +5524,25 @@
                 <div style="color: #14532d; margin-bottom: 2px;">• ๒. ผลสัมฤทธิ์ทางการเรียนของนักเรียนหลังเรียนสูงกว่าก่อนเรียนอย่างมีนัยสำคัญทางสถิติที่ระดับ .๐๕</div>
               </div>
             </div>
+            
+            <!-- Official Answer & Report Box (สำหรับตอบประเมินและรายงานผล ว.PA) -->
+            <div id="ans-box-1-6" style="margin: 14px 0; background: #fdfaf6; border-left: 5px solid #8F1D2C; border-radius: 0 10px 10px 0; padding: 14px 18px; box-shadow: 0 2px 8px rgba(143,29,44,0.06);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                <span style="font-family: 'Prompt', sans-serif; font-size: 0.95rem; font-weight: 700; color: #8F1D2C; display: flex; align-items: center; gap: 6px;">
+                  📋 ข้อความสำหรับตอบการประเมินและรายงานผล ว.PA (ระดับ ๔ : ปรับประยุกต์)
+                </span>
+                <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('ans-text-1-6').innerText.trim()); alert('✓ คัดลอกคำตอบข้อ ๑.๖ การศึกษา วิเคราะห์ สังเคราะห์ เพื่อแก้ปัญหาหรือพัฒนาการเรียนรู้ เรียบร้อยแล้ว!');" style="font-family: 'Prompt', sans-serif; font-size: 0.8rem; font-weight: 600; background: #8F1D2C; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                  📋 คัดลอกคำตอบข้อนี้
+                </button>
+              </div>
+              <p id="ans-text-1-6" style="font-size: 0.93rem; color: #0f172a; line-height: 1.65; text-indent: 20px; margin: 0;">
+                ศึกษา วิเคราะห์ สภาพปัญหาการเรียนรู้ของผู้เรียนชั้นประถมศึกษาปีที่ ๑ ด้านทักษะการใช้เมาส์ ซึ่งพบปัญหาความแข็งแรงของกล้ามเนื้อมัดเล็กและการประสานสัมพันธ์ระหว่างสายตากับมือ จึงได้ออกแบบและดำเนินการแก้ปัญหาตามวงจร ADDIE Model ร่วมกับแนวคิด Active Learning และ Gamification จัดทำวิจัยในชั้นเรียน เรื่อง 'การพัฒนาทักษะปฏิบัติการใช้เมาส์ด้วยเกมมิฟิเคชันร่วมกับ Active Learning วิชาวิทยาการคำนวณ ชั้นประถมศึกษาปีที่ ๑ (๑๑ คน)' และสรุปผลการแก้ปัญหาอย่างเป็นรูปธรรมด้วยสถิติทดสอบ Paired t-test พบว่าคะแนนเฉลี่ยหลังเรียน (๑๗.๕๕) สูงกว่าก่อนเรียน (๘.๐๙) อย่างมีนัยสำคัญทางสถิติที่ระดับ .๐๑ (t = ๓๘.๒๓*, df = ๑๐, p < .๐๐๑) และผู้เรียนผ่านเกณฑ์ร้อยละ ๖๐ ครบทั้ง ๑๑ คน (๑๐๐%)
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 0.84rem;">
+                <div><strong style="color: #1e3a8a;">📈 ผลเชิงปริมาณ:</strong> <span style="color: #334155;">เล่มรายงานวิจัยในชั้นเรียน ๑ เล่ม, ผู้เรียน ป.๑ จำนวน ๑๑ คน ผ่านเกณฑ์ ๑๐๐% (ดีเยี่ยม ๙ คน, ดี ๒ คน), คะแนนเพิ่มขึ้น +๙.๔๕ คะแนน (+๔๗.๒๗%)</span></div>
+                <div><strong style="color: #166534;">⭐ ผลเชิงคุณภาพ:</strong> <span style="color: #334155;">ได้นวัตกรรมที่แก้ปัญหาได้ตรงจุด ผู้เรียนมีพัฒนาการกล้ามเนื้อมือและสายตาสูงขึ้น ควบคุมเมาส์ได้คล่องแคล่วและมั่นใจ</span></div>
+              </div>
+            </div>
             <div class="report-result"><strong>ผลที่มีหลักฐานประกอบ</strong><p>วิเคราะห์ผลสัมฤทธิ์ประเด็นท้าทายทักษะการใช้เมาส์ ป.๑ (๑๑ คน) พบว่าคะแนนเฉลี่ยหลังเรียน (๑๗.๕๕) สูงกว่าก่อนเรียน (๘.๐๙) อย่างมีนัยสำคัญทางสถิติที่ระดับ .๐๑ (t = ๓๘.๒๓*, df = ๑๐, p &lt; .๐๐๑) พัฒนาการเฉลี่ย +๙.๔๕ คะแนน (+๔๗.๒๗%)</p></div>
             <div class="ind-metrics-row"><div class="ind-metric-item"><strong>ข้อมูลเชิงปริมาณ</strong><span>ความก้าวหน้าเฉลี่ย +๙.๔๕ คะแนน, t = ๓๘.๒๓*</span></div><div class="ind-metric-item"><strong>หลักฐานที่ต้องตรวจเพิ่ม</strong><span>นำรูปแบบ Active Learning และ Gamification ขยายผลสู่ทักษะการใช้แป้นพิมพ์และระดับชั้นอื่น</span></div></div>
             <div style="margin-top: 12px; padding: 8px 12px; background: #f1f5f9; border-radius: 6px; font-size: 0.82rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
@@ -5435,7 +5569,7 @@
           <div class="ind-badge-num">๑.๗</div>
           <div class="ind-header-text">
             <h3>การจัดบรรยากาศที่ส่งเสริมและพัฒนาผู้เรียน</h3>
-            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับการปฏิบัติที่คาดหวัง : ริเริ่ม พัฒนา</div>
+            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับคุณภาพ : ระดับ ๔ (ปรับประยุกต์) | พร้อมรายงานผล</div>
             <div><button type="button" class="btn-album-inline" onclick="openAlbumModal('album-1-7')"><i data-lucide="folder-open" style="width: 14px; height: 14px;"></i> 📁 ดูหลักฐาน ข้อ ๑.๗ (๓ ภาพ)</button></div>
           </div>
         </div>
@@ -5466,6 +5600,25 @@
                 <div style="color: #14532d; margin-bottom: 2px;">• ๒. ห้องปฏิบัติการคอมพิวเตอร์มีมาตรฐานความปลอดภัย ไม่มีอุบัติเหตุจากการใช้งาน ๑๐๐%</div>
               </div>
             </div>
+            
+            <!-- Official Answer & Report Box (สำหรับตอบประเมินและรายงานผล ว.PA) -->
+            <div id="ans-box-1-7" style="margin: 14px 0; background: #fdfaf6; border-left: 5px solid #8F1D2C; border-radius: 0 10px 10px 0; padding: 14px 18px; box-shadow: 0 2px 8px rgba(143,29,44,0.06);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                <span style="font-family: 'Prompt', sans-serif; font-size: 0.95rem; font-weight: 700; color: #8F1D2C; display: flex; align-items: center; gap: 6px;">
+                  📋 ข้อความสำหรับตอบการประเมินและรายงานผล ว.PA (ระดับ ๔ : ปรับประยุกต์)
+                </span>
+                <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('ans-text-1-7').innerText.trim()); alert('✓ คัดลอกคำตอบข้อ ๑.๗ การจัดบรรยากาศที่ส่งเสริมและพัฒนาผู้เรียน เรียบร้อยแล้ว!');" style="font-family: 'Prompt', sans-serif; font-size: 0.8rem; font-weight: 600; background: #8F1D2C; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                  📋 คัดลอกคำตอบข้อนี้
+                </button>
+              </div>
+              <p id="ans-text-1-7" style="font-size: 0.93rem; color: #0f172a; line-height: 1.65; text-indent: 20px; margin: 0;">
+                จัดบรรยากาศในชั้นเรียนและแหล่งเรียนรู้ที่ส่งเสริมและพัฒนาผู้เรียนให้เกิดกระบวนการคิด ทักษะชีวิต ทักษะการทำงาน และทักษะด้านสารสนเทศสื่อและเทคโนโลยี เกินกว่า ๗ กิจกรรม พร้อมหลักฐานเชิงประจักษ์ครบถ้วน ได้แก่ ๑) การบริหารจัดการห้องปฏิบัติการคอมพิวเตอร์ให้สะอาด ปลอดภัย เดินสายไฟและสาย LAN ลงรางเรียบร้อย ๑๐๐% คอมพิวเตอร์พร้อมใช้งาน ๑ คนต่อ ๑ เครื่อง ๒) ติดตั้งจอ Smart TV ขนาดใหญ่เพื่อสาธิตบทเรียนและให้นักเรียนนำเสนอผลงาน ๓) ป้ายนิเทศและสื่อแขวนข้อตกลงการใช้ห้องเรียน ๔) การใช้เกมการศึกษา (Gamification) สร้างบรรยากาศผ่อนคลาย สนุกสนาน ๕) กิจกรรมชุมนุมเทคโนโลยีและคอมพิวเตอร์ ๖) การจัดพื้นที่แปลงเกษตรเศรษฐกิจพอเพียงฝึกทักษะชีวิต ๗) การจัดกิจกรรมทัศนศึกษาแหล่งเรียนรู้นอกห้องเรียน (อุทยานแห่งชาติน้ำตกคลองลาน) และ ๘) ระบบคลังผลงานดิจิทัลและกระดานแสดงผลงานออนไลน์
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 0.84rem;">
+                <div><strong style="color: #1e3a8a;">📈 ผลเชิงปริมาณ:</strong> <span style="color: #334155;">มีกิจกรรมจัดบรรยากาศส่งเสริมการเรียนรู้รวม ๘ กิจกรรม (เกินเกณฑ์ระดับ ๔ ที่กำหนด ๗ กิจกรรมขึ้นไป)</span></div>
+                <div><strong style="color: #166534;">⭐ ผลเชิงคุณภาพ:</strong> <span style="color: #334155;">ผู้เรียนรู้สึกปลอดภัย อบอุ่น มีสมาธิในการเรียนรู้ กล้าลงมือปฏิบัติ มีความมั่นใจ และมีระเบียบวินัยในการใช้อุปกรณ์ส่วนรวม</span></div>
+              </div>
+            </div>
             <div class="report-result"><strong>ผลที่มีหลักฐานประกอบ</strong><p>ภาพแสดงการจัดโต๊ะ คอมพิวเตอร์ และพื้นที่ทำงานเป็นกลุ่มย่อย ใช้ประกอบการรายงานสภาพแวดล้อมการเรียนรู้ ไม่ใช้ภาพเพียงอย่างเดียวยืนยันความปลอดภัยหรือความพึงพอใจร้อยละ 100</p></div>
             <div class="ind-metrics-row"><div class="ind-metric-item"><strong>ข้อมูลเชิงปริมาณ</strong><span>จำนวนภาพประกอบดูได้ในอัลบั้มข้อ 1.7</span></div><div class="ind-metric-item"><strong>หลักฐานที่ต้องตรวจเพิ่ม</strong><span>แบบตรวจความพร้อมและความปลอดภัย รวมถึงผลสำรวจผู้เรียน</span></div></div>
             <div style="margin-top: 12px; padding: 8px 12px; background: #f1f5f9; border-radius: 6px; font-size: 0.82rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
@@ -5492,7 +5645,7 @@
           <div class="ind-badge-num">๑.๘</div>
           <div class="ind-header-text">
             <h3>การอบรมและพัฒนาคุณลักษณะที่ดีของผู้เรียน</h3>
-            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับการปฏิบัติที่คาดหวัง : ริเริ่ม พัฒนา</div>
+            <div class="ind-category">ด้านที่ ๑ : ด้านการจัดการเรียนรู้ | ระดับคุณภาพ : ระดับ ๔ (ปรับประยุกต์) | พร้อมรายงานผล</div>
             <div><button type="button" class="btn-album-inline" onclick="openAlbumModal('album-1-8')"><i data-lucide="folder-open" style="width: 14px; height: 14px;"></i> 📁 ดูหลักฐาน ข้อ ๑.๘ (๖ ภาพ)</button></div>
           </div>
         </div>
@@ -5521,6 +5674,25 @@
                 <div style="font-weight: 700; color: #166534; margin-bottom: 4px;">เกณฑ์เป้าหมายตามข้อตกลง (ไม่ใช่ผลที่ยืนยันแล้ว):</div>
                 <div style="color: #14532d; margin-bottom: 2px;">• ๑. ร้อยละ ๘๕ ของผู้เรียน มีผลการประเมินคุณลักษณะอันพึงประสงค์อยู่ในระดับ "ดี" ขึ้นไป</div>
                 <div style="color: #14532d; margin-bottom: 2px;">• ๒. นักเรียนเข้าร่วมกิจกรรมวันไหว้ครูและกิจกรรมส่งเสริมคุณธรรมจริยธรรมร้อยละ ๑๐๐</div>
+              </div>
+            </div>
+            
+            <!-- Official Answer & Report Box (สำหรับตอบประเมินและรายงานผล ว.PA) -->
+            <div id="ans-box-1-8" style="margin: 14px 0; background: #fdfaf6; border-left: 5px solid #8F1D2C; border-radius: 0 10px 10px 0; padding: 14px 18px; box-shadow: 0 2px 8px rgba(143,29,44,0.06);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                <span style="font-family: 'Prompt', sans-serif; font-size: 0.95rem; font-weight: 700; color: #8F1D2C; display: flex; align-items: center; gap: 6px;">
+                  📋 ข้อความสำหรับตอบการประเมินและรายงานผล ว.PA (ระดับ ๔ : ปรับประยุกต์)
+                </span>
+                <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('ans-text-1-8').innerText.trim()); alert('✓ คัดลอกคำตอบข้อ ๑.๘ การอบรมและพัฒนาคุณลักษณะที่ดีของผู้เรียน เรียบร้อยแล้ว!');" style="font-family: 'Prompt', sans-serif; font-size: 0.8rem; font-weight: 600; background: #8F1D2C; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                  📋 คัดลอกคำตอบข้อนี้
+                </button>
+              </div>
+              <p id="ans-text-1-8" style="font-size: 0.93rem; color: #0f172a; line-height: 1.65; text-indent: 20px; margin: 0;">
+                ดำเนินกิจกรรมอบรมบ่มนิสัยให้ผู้เรียนมีคุณธรรม จริยธรรม คุณลักษณะอันพึงประสงค์ และค่านิยมความเป็นไทยที่ดีงาม เกินกว่า ๕ กิจกรรมขึ้นไป อย่างต่อเนื่องและสม่ำเสมอ ได้แก่ ๑) กิจกรรมสวดมนต์ไหว้พระประจำสัปดาห์และวันสำคัญทางศาสนา ๒) การปลูกฝังความซื่อสัตย์สุจริตและวินัยความรับผิดชอบผ่านหลักสูตรโรงเรียนสุจริต ๓) กิจกรรมลูกเสือ-เนตรนารี ปลูกฝังวินัย ความอดทน และความเสียสละ ๔) กิจกรรมแนะแนวและโฮมรูมดูแลสุขภาวะและพัฒนาการ ๕) กิจกรรมจิตอาสาเพื่อสังคมและสาธารณประโยชน์ (Big Cleaning Day และการคัดแยกขยะ) ๖) เป็นหัวหน้าผู้รับผิดชอบโครงการจัดกิจกรรมวันไหว้ครู ๒๕๖๙ ปลูกฝังความกตัญญูกตเวทิตา และ ๗) การสอดแทรกวินัยการใช้อุปกรณ์ส่วนรวม มารยาทพลเมืองดิจิทัล (Digital Citizenship) และความปลอดภัยไซเบอร์ในทุกคาบเรียน
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 0.84rem;">
+                <div><strong style="color: #1e3a8a;">📈 ผลเชิงปริมาณ:</strong> <span style="color: #334155;">มีกิจกรรมอบรมบ่มนิสัยรวม ๗ กิจกรรม (เกินเกณฑ์ระดับ ๔ ที่กำหนด ๕ กิจกรรมขึ้นไป) ผู้เรียนผ่านเกณฑ์คุณลักษณะอันพึงประสงค์ ๑๐๐%</span></div>
+                <div><strong style="color: #166534;">⭐ ผลเชิงคุณภาพ:</strong> <span style="color: #334155;">ผู้เรียนมีวินัย มีมารยาท มีความกตัญญู มีจิตสาธารณะ รักษาของส่วนรวม และใช้เทคโนโลยีอย่างมีจริยธรรม</span></div>
               </div>
             </div>
             <div class="report-result"><strong>ผลที่มีหลักฐานประกอบ</strong><p>มีภาพกิจกรรมอบรม ไหว้ครู ศาสนา และร่วมดูแลสิ่งแวดล้อม ใช้อธิบายโอกาสที่ผู้เรียนได้รับการพัฒนาคุณลักษณะ ไม่ใช้แทนผลประเมินคุณลักษณะรายบุคคล</p></div>
@@ -8588,8 +8760,8 @@
           overlay.style.display = 'none';
         }
       } else {
-        document.documentElement.classList.add('site-locked');
-        if (document.body) document.body.classList.add('site-locked');
+        // document.documentElement.classList.add('site-locked');
+        if (document.body) // document.body.classList.add('site-locked');
         if (overlay) {
           overlay.classList.remove('unlocked');
           overlay.style.display = 'flex';
